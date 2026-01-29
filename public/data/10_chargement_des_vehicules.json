@@ -1,0 +1,761 @@
+{
+  "id": "10_chargement_des_vehicules",
+  "name": "10 chargement des vehicules",
+  "totalQuestions": 45,
+  "questions": [
+    {
+      "id": 1,
+      "type": "yes_no",
+      "question": "Tous les documents dans la voiture, à l'exception de l'assurance, doivent être des documents originaux.",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Tous les documents (certificat d’immatriculation, certificat de conformité et dans la mesure où la voiture a plus de 4 ans ou a été modifiée, certificat de contrôle technique doivent être originaux.Seul la preuve d’assurance n’est pas soumise à cette obligation. Un PDF dans votre téléphone est aussi valable.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/17.jpg"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "question": "Qu'est-ce qui détermine si quelqu'un doit s'asseoir dans un siège enfant ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "L'âge"
+        },
+        {
+          "letter": "B",
+          "text": "La taille"
+        },
+        {
+          "letter": "C",
+          "text": "La taille et l'âge"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "Les enfants de moins de 18 ans et dont la taille est inférieure à 1m35, doivent voyager dans un dispositif de retenue pour enfants. (S'ils sont plus grands qu' 1m35, ils peuvent voyager dans un dispositif de retenue pour enfants ou juste avec la ceinture.)",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/31.jpg"
+    },
+    {
+      "id": 3,
+      "type": "number",
+      "question": "Ce signal routier indique que les conducteurs qui transportent certaines (...), ne peuvent pas franchir ce panneau.",
+      "correctAnswer": "B",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Accès interdit aux conducteurs de véhicules transportant des marchandises dangereuses peu importe le type de danger.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/19.jpg"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "question": "Quand est-il conseillé d’augmenter légèrement la pression des pneus ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Lorsque vous devez rouler dans les montagnes"
+        },
+        {
+          "letter": "B",
+          "text": "Lorsqu’il y a beaucoup de neige et de verglas"
+        },
+        {
+          "letter": "C",
+          "text": "Lorsque vous allez effectuer un long trajet avec des bagages et plusieurs passagers"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Seulement dans le cas d’un long trajet avec des bagages et plusieurs passagers, ou si vous devez transporter une lourde charge.(Pas quand il y a beaucoup de neige et de verglas sur la chaussée).Un pneu trop gonflé va avoir un « effet de ballon» et s’user fortement au centre.un pneu sous gonflé va s’effondrer au centre et s’user sur les bords gauche et droit de la bande de roulement.On peut vous demander à l’examen d’expliquer le problème de ces usures anormales !",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/9.jpg"
+    },
+    {
+      "id": 5,
+      "type": "multiple_choice",
+      "question": "Quelle est la largeur maximale d’un véhicule avec sa charge ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "2.45 mètres"
+        },
+        {
+          "letter": "B",
+          "text": "2.50 mètres"
+        },
+        {
+          "letter": "C",
+          "text": "2.55 mètres"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Un véhicule ainsi que son chargement ne peuvent pas être plus large que 2,55 mètres. (plus large = « transport exceptionnel »).",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/27.jpg"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "question": "Ce signal routier signifie : accès interdit aux conducteurs de véhicules dont la largeur, chargement compris, est supérieure à celle indiquée. De quelle catégorie de signal s’agit-il ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Signal d’obligation"
+        },
+        {
+          "letter": "B",
+          "text": "Signal d’interdiction"
+        },
+        {
+          "letter": "C",
+          "text": "Signal d’indication"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.C’est un signal d’interdiction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/10.jpg"
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "question": "Lequel de ces signaux indique que les conducteurs qui transportent certaines marchandises inflammatoires, ne peuvent pas franchir ce panneau?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Signal 1"
+        },
+        {
+          "letter": "B",
+          "text": "Signal 2"
+        },
+        {
+          "letter": "C",
+          "text": "Signal 3"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Signal 1: toutes les marchandises dangereuses.Signal 3: les marchandises dangereuses qui pourraient polluer l’eau de surface : rivière, canal, lacs,…ou la nappe d’eau souterraine.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/18.jpg"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "question": "Si la M.M.A. de la remorque est supérieure à 750 kg, un permis de conduire B est valable à condition que la M.M.A. de l’ensemble (voiture + remorque) ne dépasse pas (…) tonnes.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "3 500 kg ou 3,5 tonnes"
+        },
+        {
+          "letter": "B",
+          "text": "4 250 kg ou 4,25 tonnes"
+        },
+        {
+          "letter": "C",
+          "text": "4 350 kg ou 4,35 tonnes"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Le permis B permet de tracter une remorque avec une M.M.A. jusqu'à 750 kg.Si la M.M.A. de la remorque est supérieur à 750 kg, un permis de conduire B est valable à condition que la M.M.A. de l'ensemble (voiture + remorque) ne dépasse pas 3,5 tonnes.Avec un permis de conduire provisoire vous ne pouvez pas tracter une remorque.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/29.jpg"
+    },
+    {
+      "id": 9,
+      "type": "number",
+      "question": ".Les enfants de moins de (...) ans, qui mesurent moins de 1,35 mètre, doivent être transportés dans un dispositif de retenue pour enfants qui leur est adapté.",
+      "correctAnswer": "18",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Les enfants de moins de 18 ans et dont la taille est inférieure à 1m35 doivent voyager dans un dispositif de retenue pour enfants homologué.Homologué veut dire qu’il est conforme aux normes imposées par la CEE.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/14.jpg"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "question": "Jusqu’à quelle distance une charge indivisible peut-elle dépasser à l’arrière du véhicule, si elle est correctement signalée ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "3 mètres"
+        },
+        {
+          "letter": "B",
+          "text": "1,5 mètre"
+        },
+        {
+          "letter": "C",
+          "text": "1 mètre"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 10Une charge peut dépasser à l’arrière du véhicule de maximum 1 mètre.Si la charge est indivisible et ne peut pas être raccourcie ou repliée, elle peut dépasser jusqu’à 3 mètres à l’arrière, à condition d’être signalée correctement avec le panneau de signalisation réglementaire.Cette charge n’est pas signalée correctement.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/41.jpg"
+    },
+    {
+      "id": 11,
+      "type": "multiple_choice",
+      "question": "Ce signal d’interdiction s’applique :",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Uniquement aux camions"
+        },
+        {
+          "letter": "B",
+          "text": "Uniquement aux camions et aux autocars"
+        },
+        {
+          "letter": "C",
+          "text": "À tous les types de véhicules"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Accès interdit aux conducteurs de véhicules ou trains de véhicules ayant, chargement compris, une longueur supérieure à celle indiquée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/35.jpg"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "question": "Le permis B permet de tracter une remorque avec une M.M.A. jusqu’à (…) kg.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "750 kg"
+        },
+        {
+          "letter": "B",
+          "text": "1 200 kg"
+        },
+        {
+          "letter": "C",
+          "text": "3 500 kg"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Si la M.M.A. de la remorque est supérieur à 750 kg, un permis de conduire B est valable à condition que la M.M.A. de l'ensemble (voiture + remorque) ne dépasse pas 3,5 tonnes.Avec un permis de conduire provisoire vous ne pouvez pas tracter une remorque.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/28.jpg"
+    },
+    {
+      "id": 13,
+      "type": "number",
+      "question": ".Le conducteur doit disposez d’une largeur minimale de (...) cm.",
+      "correctAnswer": "55",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Conducteur : 55 cm.Passager à l’avant (chacun si 2 places) : 40 cm.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/2.jpg"
+    },
+    {
+      "id": 14,
+      "type": "number",
+      "question": "Ce signal routier indique que les conducteurs qui transportent certaines (...), ne peuvent pas franchir ce panneau.",
+      "correctAnswer": "A",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Accès interdit aux conducteurs de véhicules transportant des marchandises dangereuses qui pourraient polluer l’eau de surface : rivière, canal, lacs,…ou la nappe d’eau souterraine.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/20.jpg"
+    },
+    {
+      "id": 15,
+      "type": "number",
+      "question": ".Le chargement, sans signalisation spéciale, peut dépasser de (...) m. maximum l’extrémité arrière de la voiture.",
+      "correctAnswer": "1",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Jusqu'à 1 mètre.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/4.jpg"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "question": "Ce camion transporte des tonnes de poudre à lessiver.Peut-il passer ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 10Signification du signal routier C24a :Interdiction d’accès aux conducteurs de véhicules transportant des matières dangereuses.La poudre à lessiver n’est pas un produit dangereux.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/42.jpg"
+    },
+    {
+      "id": 17,
+      "type": "multiple_choice",
+      "question": "Un enfant de plus de 10 ans qui mesure 1m45.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Doit s'assoir dans un siège-enfant"
+        },
+        {
+          "letter": "B",
+          "text": "Peut s'assoir dans un siège-enfant"
+        },
+        {
+          "letter": "C",
+          "text": "Ne peut plus s'assoir dans un siège-enfant"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Les enfants de moins de 18 ans et dont la taille est inférieure à 1m35 doivent voyager dans un dispositif de retenue pour enfants.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/24.jpg"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "question": "Il faut signaler une charge indivisible à l’aide d’un panneau dès qu’elle dépasse plus de (…) derrière la voiture.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "1 mètre"
+        },
+        {
+          "letter": "B",
+          "text": "1.5 mètre"
+        },
+        {
+          "letter": "C",
+          "text": "3 mètres"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules.Si vous devez transporter une charge plus longue et indivisible. Et qui ne peut être ni pliée ni télescopée, alors cette charge peut dépasser de 3 mètres maximum l’extrémité arrière du véhicule.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/26.jpg"
+    },
+    {
+      "id": 19,
+      "type": "multiple_choice",
+      "question": "Quand un conducteur ne doit-il pas porter la ceinture de sécurité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Il doit toujours porter une ceinture"
+        },
+        {
+          "letter": "B",
+          "text": "S’il n’y a pas de passagers dans la voiture"
+        },
+        {
+          "letter": "C",
+          "text": "Lorsqu’il recule"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 10 En règle générale, le conducteur doit porter la ceinture de sécurité.La loi prévoit toutefois certaines exceptions.Sont dispensés du port de la ceinture :- le conducteur qui effectue une marche arrière ;- les chauffeurs de taxi pendant le transport de clients ;- les facteurs qui distribuent des colis de porte à porte   (cela ne concerne pas toutes les personnes qui livrent des colis ;)- les personnes habilitées et les services de secours, lorsque leur mission l’exige.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/44.jpg"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "question": "Ce chauffeur de DHL livre des colis.Doit-il porter la ceinture de sécurité lorsqu’il conduit ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 10En principe, un conducteur doit toujours porter la ceinture de sécurité.La loi prévoit toutefois certaines exceptions strictes.Sont dispensés du port de la ceinture :- le conducteur qui effectue une marche arrière ;- les chauffeurs de taxi pendant le transport de clients ;- les facteurs qui distribuent des colis de porte à porte.Cela ne s’applique pas aux livreurs de sociétés comme DHL, Amazon ou autres services de messagerie ;- les personnes habilitées et les services de secours, lorsque leur mission l’exige.➡️ Un chauffeur DHL n’est pas exempté et doit donc porter la ceinture de sécurité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/45.jpg"
+    },
+    {
+      "id": 21,
+      "type": "yes_no",
+      "question": "Vous disposez d'une licence provisoire B.Pouvez-vous conduire un train de véhicules ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Avec un permis de conduire provisoire vous ne pouvez pas tracter une remorque.il n’est donc pas possible de conduire un train de véhicules (voiture + remorque)",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/30.jpg"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "question": "Comment devriez-vous porter la ceinture de sécurité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Sous le bras"
+        },
+        {
+          "letter": "B",
+          "text": "Sur l’épaule"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Les femmes enceintes doivent obligatoirement porter la ceinture de sécurité.Seuls les conducteurs qui disposent d’une attestation de dispense du Ministère de la Santé en sont dispensés et ceux qui font marche arrière.D’autres cas d’exception existent mais ne sont pas demandés lors de l’examen du permis B.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/8.jpg"
+    },
+    {
+      "id": 23,
+      "type": "number",
+      "question": ".Si à l’arrière d’une voiture il y a 2 ceintures de sécurité, alors (...) personnes peuvent s’installer à l’arrière.",
+      "correctAnswer": "2",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Une ceinture de sécurité par personne.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/11.jpg"
+    },
+    {
+      "id": 24,
+      "type": "multiple_choice",
+      "question": "Ce conducteur possède un permis de conduire B définitif. La M.M.A. de la camionnette est de 2 700 kg. La remorque peut avoir une M.M.A. de …",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "700 kg"
+        },
+        {
+          "letter": "B",
+          "text": "750 kg"
+        },
+        {
+          "letter": "C",
+          "text": "800 kg"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 10Un véhicule dont la M.M.A. est de 3 500 kg peut tracter une remorque d’une M.M.A. maximale de 750 kg.Si la M.M.A. du véhicule tracteur est inférieure à 3 500 kg, la M.M.A. de la remorque peut être plus élevée, à condition que la somme des M.M.A. ne dépasse pas 3 500 kg.➡️ 2 700 kg + 800 kg = 3 500 kg → autorisé.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/43.jpg"
+    },
+    {
+      "id": 25,
+      "type": "number",
+      "question": ".Lorsque ce panneau est fixé, un chargement indivisible peut dépasser de maximum (...) mètres l’extrémité arrière de la voiture.",
+      "correctAnswer": "3",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Jusqu'à 3 mètres.La nuit ce panneau doit être éclairé et avoir des catadioptres orange sur le coté.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/15.jpg"
+    },
+    {
+      "id": 26,
+      "type": "multiple_choice",
+      "question": "Ce signal routier interdit l’accès aux véhicules dont la largeur est supérieure à 3,5 mètres.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Accès interdit aux conducteurs de véhicules ayant, chargement compris, une hauteur supérieure à celle indiquée.Bien regarder le sens des petites flèches (dessus/dessous = hauteur alors que gauche / droite = largeur).",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/7.jpg"
+    },
+    {
+      "id": 27,
+      "type": "multiple_choice",
+      "question": "Dans une camionnette, il y a à l’avant une banquette pouvant accueillir le conducteur et deux passagers. Quelle doit être la largeur minimale de cette banquette ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "125 cm"
+        },
+        {
+          "letter": "B",
+          "text": "130 cm"
+        },
+        {
+          "letter": "C",
+          "text": "135 cm"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.La largeur doit être suffisante pour :Conducteur : 55 cmChaque passager : 40 cmTotal : 55 + 40 + 40 = 135 cm.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/34.jpg"
+    },
+    {
+      "id": 28,
+      "type": "multiple_choice",
+      "question": "23) Un enfant de plus d’ 1m35 ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... peut s'assoir dans un siège-enfant"
+        },
+        {
+          "letter": "B",
+          "text": "... doit s'assoir dans un siège-enfant"
+        },
+        {
+          "letter": "C",
+          "text": "... ne peut plus s'assoir dans un siège-enfant"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Les enfants de moins de 18 ans et dont la taille est inférieure à 1m35 doivent voyager dans un dispositif de retenue pour enfants.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/23.jpg"
+    },
+    {
+      "id": 29,
+      "type": "number",
+      "question": ".Les enfants d'une taille supérieure à (...) cm ne doivent pas être transportés dans un siège-enfant adapté.",
+      "correctAnswer": "135",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Les enfants de moins de 18 ans et dont la taille est inférieure à 1m35 doivent voyager dans un dispositif de retenue pour enfants.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/22.jpg"
+    },
+    {
+      "id": 30,
+      "type": "number",
+      "question": "Les enfants de moins de 18 ans, qui mesurent moins de (...) centimètres, doivent être transportés dans un dispositif de retenue pour enfants qui leur est adapté.",
+      "correctAnswer": "A",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Les enfants de moins de 18 ans et dont la taille est inférieure à 1m35 doivent voyager dans un dispositif de retenue pour enfants.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/16.jpg"
+    },
+    {
+      "id": 31,
+      "type": "multiple_choice",
+      "question": "Où est-il conseillé de placer les vélos lorsque vous devez les transporter ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Sur le toit de la voiture"
+        },
+        {
+          "letter": "B",
+          "text": "À l’arrière de la voiture"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Les feux arrières, les clignotants et la plaque d’immatriculation doivent rester visibles.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/3.jpg"
+    },
+    {
+      "id": 32,
+      "type": "yes_no",
+      "question": "Un camion de plus de 8 mètres de long peut-il passer au-delà de ces signaux routiers ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Ces signaux ne disent rien sur la longueur d’un véhicule ou d’un train de véhicules.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/25.jpg"
+    },
+    {
+      "id": 33,
+      "type": "multiple_choice",
+      "question": "Votre voiture roule à l'essence ou au GPL. Pouvez-vous franchir ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        },
+        {
+          "letter": "C",
+          "text": "Oui, si vous passez du GPL à l'essence"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Le signal concerne le chargement transporté et non pas le carburant utilisé.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/21.jpg"
+    },
+    {
+      "id": 34,
+      "type": "multiple_choice",
+      "question": "Ce signal d’interdiction s’applique ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... à toutes les catégories de véhicules"
+        },
+        {
+          "letter": "B",
+          "text": "... seulement aux camions"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Accès interdit aux conducteurs de véhicules ou trains de véhicules ayant, chargement compris, une longueur supérieure à celle indiquée.Cela peut donc vous concerner, même en voiture et malgré le dessin d’un camion, si votre voiture, chargement compris dépasse la longueur ou si le train de véhicules que vous conduisez (votre voiture + une remorque = un train de véhicules) dépasse cette longueur.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/5.jpg"
+    },
+    {
+      "id": 35,
+      "type": "multiple_choice",
+      "question": "Ce garçon a 12 ans et mesure 1,45 mètre.Il est assis à l’arrière de la voiture et porte la ceinture de sécurité. Est-ce correct ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, car il mesure 1,45 mètre"
+        },
+        {
+          "letter": "B",
+          "text": "Non, il doit être installé dans un siège pour enfant, car il n’a que 12 ans"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 10Les enfants de moins de 18 ans et mesurant moins de 1,35 m doivent être transportés dans un dispositif de retenue pour enfants conforme aux normes prescrites.Un enfant de plus de 1,35 m peut encore être transporté dans un siège pour enfant spécial.Les enfants de moins de 18 ans ne peuvent pas être transportés à l’avant dans un siège orienté vers l’arrière, sauf s’il n’y a pas d’airbag à l’avant ou si celui-ci peut être désactivé.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/40.jpg"
+    },
+    {
+      "id": 36,
+      "type": "number",
+      "question": ".La hauteur d’une voiture, chargement inclus, peut être de (...) mètres maximum.",
+      "correctAnswer": "4",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.La hauteur d’un véhicule, chargement inclus, ne peut pas excéder 4 mètres.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/1.jpg"
+    },
+    {
+      "id": 37,
+      "type": "multiple_choice",
+      "question": "Le cycliste et le camion veulent tourner à droite à ce carrefour.Comment réagit le cycliste ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Il se dépêche pour tourner le premier"
+        },
+        {
+          "letter": "B",
+          "text": "Il tourne en même temps que le camion"
+        },
+        {
+          "letter": "C",
+          "text": "Il ralentit et laisse le camion tourner en premier"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 10Même si les rétroviseurs sont bien réglés, il existe toujours des zones à côté ou derrière le véhicule que le conducteur d’un camion ou d’une voiture ne peut pas voir.Ces zones s’appellent les angles morts.De nombreux accidents se produisent aux carrefours parce qu’un cycliste se trouve dans l’angle mort d’un camion.Un cycliste prudent laisse toujours le camion tourner en premier et reste derrière lui.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/38.jpg"
+    },
+    {
+      "id": 38,
+      "type": "multiple_choice",
+      "question": "Au-delà de quel signal routier pouvez-vous circuler avec une voiture de 7 mètres de long ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement au-delà du signal"
+        },
+        {
+          "letter": "B",
+          "text": "Seulement au-delà du signal"
+        },
+        {
+          "letter": "C",
+          "text": "Au-delà du signal A et du signal"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 10C27. Accès interdit aux conducteurs de véhicules dont la largeur, chargement compris, dépasse celle indiquée.C29. Accès interdit aux conducteurs de véhicules dont la hauteur, chargement compris, dépasse celle indiquée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/37.jpg"
+    },
+    {
+      "id": 39,
+      "type": "yes_no",
+      "question": "Les passagers à l’arrière de la voiture sont-ils également tenus de porter une ceinture de sécurité ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/33.jpg"
+    },
+    {
+      "id": 40,
+      "type": "multiple_choice",
+      "question": "De combien le chargement peut-il dépasser de l’extrémité avant de votre voiture ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Max. 1 mètre"
+        },
+        {
+          "letter": "B",
+          "text": "Pas du tout"
+        },
+        {
+          "letter": "C",
+          "text": "S’il s’agit d’un chargement indivisible : max 3 mètres"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.En aucun cas le chargement ne peut dépasser à l’avant l’extrémité du véhicule.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/6.jpg"
+    },
+    {
+      "id": 41,
+      "type": "multiple_choice",
+      "question": "Qui ne doit pas porter la ceinture de sécurité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Celui qui circule dans une zone 30"
+        },
+        {
+          "letter": "B",
+          "text": "Celui qui distribue des colis de porte en porte"
+        },
+        {
+          "letter": "C",
+          "text": "Celui qui fait marche arrière"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.Dans une Zone 30, vous devez également porter une ceinture.Seul un facteur (de la poste) qui distribue le courrier de porte en porte ne doit pas porter la ceinture de sécurité pendant la partie de la tournée de livraison des lettres et colis. Le livreur de DHL, UPS,…doit la mettre et vous aussi sauf quand vous reculer.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/13.jpg"
+    },
+    {
+      "id": 42,
+      "type": "multiple_choice",
+      "question": "Un passager assis sur le siège arrière d'une voiture équipée de ceintures à toutes les places.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... il est recommandé qu’il porte sa ceinture de sécurité"
+        },
+        {
+          "letter": "B",
+          "text": "... il doit porter  la ceinture de sécurité"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/12.jpg"
+    },
+    {
+      "id": 43,
+      "type": "multiple_choice",
+      "question": "Cette fille mesure 1,45 mètre.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Elle doit être installée dans un siège pour enfant adapté"
+        },
+        {
+          "letter": "B",
+          "text": "Elle peut être installée dans un siège pour enfant adapté"
+        },
+        {
+          "letter": "C",
+          "text": "Elle ne peut plus être installée dans un siège pour enfant adapté"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 10Les enfants de moins de 18 ans et mesurant moins de 1,35 m doivent être transportés dans un dispositif de retenue pour enfants conforme aux normes prescrites.Un enfant de plus de 1,35 m peut encore être transporté dans un siège pour enfant spécial.Les enfants de moins de 18 ans ne peuvent pas être transportés à l’avant dans un siège orienté vers l’arrière, sauf s’il n’y a pas d’airbag à l’avant ou si celui-ci peut être désactivé.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/39.jpg"
+    },
+    {
+      "id": 44,
+      "type": "multiple_choice",
+      "question": "Vous conduisez et plusieurs passagers sont dans la voiture.Pouvez-vous, en tant que conducteur, les obliger à mettre la ceinture de sécurité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Non, vous ne pouvez pas"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, vous devez le faire"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 10Tout le monde doit porter la ceinture de sécurité dans la voiture ou être installé dans un siège pour enfants adapté.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/36.jpg"
+    },
+    {
+      "id": 45,
+      "type": "multiple_choice",
+      "question": "Le système de détection des angles morts veille à ce qu’une lumière LED s’allume dans le rétroviseur extérieur lorsqu’un usager de la route se trouve dans l’angle mort.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 10 – ‘Chargement de véhicules’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/32.jpg"
+    }
+  ]
+}

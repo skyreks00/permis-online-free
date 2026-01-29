@@ -1,0 +1,994 @@
+{
+  "id": "4_lautoroute",
+  "name": "4 lautoroute",
+  "totalQuestions": 63,
+  "questions": [
+    {
+      "id": 1,
+      "type": "yes_no",
+      "question": "Les élèves possédant un permis de conduire provisoire B peuvent-ils s’entraîner sur l’autoroute ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Avec un permis de conduire provisoire, vous devez également pratiquer sur une autoroute.Conseil pour la pratique : Faites surtout des montées sur l’autoroute et des sorties de l’autoroute ainsi que des dépassements plutôt que juste des kms en ligne droite.Plus vous roulez vite, plus vous devez regarder loin car il faudra réagir à temps.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/3.jpg"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "question": "Ce signal routier indique le début d’une autoroute.De quel type de signal s’agit-il ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Un signal de vitesse"
+        },
+        {
+          "letter": "B",
+          "text": "Un signal d’indication"
+        },
+        {
+          "letter": "C",
+          "text": "Un signal de danger"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.C’est un signal d’indication.L’accès à l’autoroute fait partie de l’autoroute puisque vous avez franchi le signal de début d’autoroute. Vous n’avez toutefois pas de priorité pour vous insérer vu que vous avez toujours un triangle sur pointe dans l’accès.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/4.jpg"
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "question": "Qu'indique ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Une sortie"
+        },
+        {
+          "letter": "B",
+          "text": "Un échangeur de trafic"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 4 - «Autoroute».Un échangeur de trafic, car vous pouvez passer d'une autoroute à une autre sans aucun problème.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/42.jpg"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "question": "Quelle réponse est correcte concernant la vitesse sur l’autoroute ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous devez toujours conduire à au moins 70 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "Vous devez toujours rouler à 120 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "Vous devez adapter votre vitesse aux circonstances"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/45.jpg"
+    },
+    {
+      "id": 5,
+      "type": "multiple_choice",
+      "question": "Qu'indique ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Une sortie"
+        },
+        {
+          "letter": "B",
+          "text": "Un échangeur de trafic"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 4 - «Autoroute».Un échangeur de trafic, car vous pouvez passer d'une autoroute à une autre sans aucun problème.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/43.jpg"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "question": "Une autoroute.Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture rouge"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture bleue"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 4 - 'L'autoroute'.Quand vous entrez sur une autoroute, vous devez cédez le passage à ceux qui y circulent.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/39.jpg"
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Arrêt d’urgence"
+        },
+        {
+          "letter": "B",
+          "text": "Voie de secours"
+        },
+        {
+          "letter": "C",
+          "text": "Garage"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 4 - «Autoroute».Signal F98.Un panneau additionnel sur lequel sont reproduits les symboles ci-après indique que le garage est doté d'un téléphone d'appel d'urgence et d'un extincteur.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/46.jpg"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "question": "La photo est prise depuis la voiture que tu conduis.Tu veux t’insérer sur l’autoroute.Quelle affirmation est correcte ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Tu dois rouler jusqu’au bout de la voie d’insertion"
+        },
+        {
+          "letter": "B",
+          "text": "Tu dois céder le passage"
+        },
+        {
+          "letter": "C",
+          "text": "Tu as la priorité en t’insérant"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON  4Lorsque tu veux t’insérer sur la chaussée d’une autoroute via une voie d’insertion,tu dois céder le passage aux véhicules qui circulent déjà sur l’autoroute.C’est pour cette raison qu’un signal routier en forme de triangle inversé est placé.Tu n’es pas obligé d’aller jusqu’au bout de la voie d’insertion.Tu peux t’insérer dès que ta vitesse est suffisante et que cela peut se faire en toute sécurité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/63.jpg"
+    },
+    {
+      "id": 9,
+      "type": "number",
+      "question": ".Sur l’autoroute, la vitesse maximale autorisée est de (...) km/h.",
+      "correctAnswer": "120",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Sur l’autoroute on peut rouler jusqu’à 120 km/h.Vous devez rouler à une vitesse minimale de 70 km/h quand les conditions le permettent.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/2.jpg"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "question": "Pouvez-vous vous arrêter sur une autoroute à hauteur de ce panneau pour envoyer un message urgent ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Sur une autoroute, vous ne pouvez vous arrêter sur unr aire de secours qu’en cas de panne ou d’urgence réelle. Envoyer un message, même urgent, n’est pas une raison valable. S’arrêter sans nécessité est dangereux et interdit.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/55.jpg"
+    },
+    {
+      "id": 11,
+      "type": "multiple_choice",
+      "question": "Il y a beaucoup de circulation sur la voie d’accès à l’autoroute.Quand pouvez-vous vous insérer ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous pouvez vous insérer dès que cela peut se faire en sécurité"
+        },
+        {
+          "letter": "B",
+          "text": "Vous devez suivre les voitures devant vous jusqu’au bout de la voie d’accès avant de vous insérer"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Le principe de la tirette ne s’applique pas sur une voie d’accès à l’autoroute.Il n’est donc pas nécessaire d’attendre la fin de la voie d’accès pour s’insérer.Vous pouvez vous insérer là où c’est possible en toute sécurité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/52.jpg"
+    },
+    {
+      "id": 12,
+      "type": "yes_no",
+      "question": "La photo est prise depuis la voiture que vous conduisez.Pouvez-vous encore changer de bande vers la bande de circulation de droite pour accéder à la sortie ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.A votre droite se trouvent des lignes juxtaposées (l’une à coté de l’autre).Dans ce cas vous regardez la ligne qui se trouve de votre côté.On voit une ligne de couleur blanche discontinue. On peut donc la franchir.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/24.jpg"
+    },
+    {
+      "id": 13,
+      "type": "number",
+      "question": ".Quelle est la vitesse maximale à laquelle vous pouvez rouler avec des pneus cloutés sur l'autoroute ?",
+      "correctAnswer": "90",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Sur les autoroutes et, hors agglomération, sur les routes à 2 x 2 bandes séparées  autrement que par un marquage routier : maximum 90 km/h.Sur les autres routes ordinaires hors agglomération : maximum 60 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/27.jpg"
+    },
+    {
+      "id": 14,
+      "type": "number",
+      "question": ".Sur l’autoroute, en circonstances normales, vous devez rouler à une vitesse minimale de (...) km/h.",
+      "correctAnswer": "70",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Sur l’autoroute on peut rouler jusqu’à 120 km/h.Vous devez rouler à une vitesse minimale de 70 km/h quand les conditions le permettent.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/1.jpg"
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "question": "La voiture noire (cerclée de jaune) peut circuler à (…) km/h à cet endroit de l'autoroute.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "70 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "120 km/h"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Vous verrez à certaines soties sorties cette combinaison de panneauxsignaux routiers. Cela signifie que sur dans cette sortie vous ne pouvez rouler qu’à 70 km/h maximum.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/28.jpg"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "question": "Sur une autoroute, la voiture rouge roule à contresens.Que faites-vous ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous continuez lentement sur la bande d’arrêt d’urgence"
+        },
+        {
+          "letter": "B",
+          "text": "Vous vous arrêtez sur la bande d’arrêt d’urgence"
+        },
+        {
+          "letter": "C",
+          "text": "Vous continuez sur la bande de droite"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Vous adaptez votre vitesse à cette situation dangereuse et continuez prudemment en serrant à droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/34.jpg"
+    },
+    {
+      "id": 17,
+      "type": "number",
+      "question": ".Lors d’une panne ou d’un accident, vous placerez le triangle de danger à au moins (...) mètres en deçà du véhicule, de manière à être bien visible des usagers qui s’en approchent.",
+      "correctAnswer": "100",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Si vous vous arrêtez sur la bande d’arrêt d’urgence, vous devez immédiatement placer un triangle de danger à minimum 100 mètres en deçà de votre voiture. Il doit être placé de sorte qu’il soit visible à une distance de 50 mètres pour les conducteurs qui s’en approchent.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/13.jpg"
+    },
+    {
+      "id": 18,
+      "type": "yes_no",
+      "question": "Ces voitures peuvent-elles rouler sur la bande réservée aux heures de pointe ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.L’usage des bandes réservées aux heures de pointe est réglé par les signaux lumineux de circulation.Une flèche verte au-dessus de la bande, montre que vous êtes autorisé à conduire sur la cette bande. Si malgré l’heure de pointe vous êtes seul sur l’autoroute à cet endroit, vous DEVREZ circuler sur cette bande car vous devez rouler à droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/31.jpg"
+    },
+    {
+      "id": 19,
+      "type": "multiple_choice",
+      "question": "Vous voulez rejoindre une autoroute grâce à la bretelle d’accès.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous accélérez le plus possible dans la bretelle d’accès à l’autoroute"
+        },
+        {
+          "letter": "B",
+          "text": "Vous accélérez dès que vous circulerez sur la bande de droite de l’autoroute"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Vous accélérez le plus possible dans la bretelle d’accès.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/36.jpg"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "question": "Si la chaussée de l’autoroute compte au moins trois bandes de circulation, alors les conducteurs peuvent choisir librement la bande sur laquelle ils veulent circuler.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Sur l’autoroute, vous devez rouler sur la bande de circulation droite.Si un conducteur devant vous circule plus lentement que la vitesse maximale autorisée, vous pouvez le dépasser par la gauche mais devez ensuite reprendre votre place à droite.Vous ne devez toutefois pas circuler à droite quand il y a densité",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/17.jpg"
+    },
+    {
+      "id": 21,
+      "type": "multiple_choice",
+      "question": "Que voyez-vous sur ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le numéro d’une route internationale"
+        },
+        {
+          "letter": "B",
+          "text": "Le numéro d’une autoroute"
+        },
+        {
+          "letter": "C",
+          "text": "Le numéro d’une route ordinaire"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.C’est une route internationale.En Belgique : des autoroutes, mais à l’étranger, parfois des routes normales.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/6.jpg"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "question": "À quelle vitesse maximale la voiture bleue peut-elle rouler sur cette autoroute ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "À 50 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "À 90 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "À 120 km/h"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.La vitesse limite ne s’applique qu’à la bande de circulation réservée aux autobus.Le signal est placé au-dessus de cette bande et pas à droite de la chaussée et ne s’applique qu’à la bande au-dessus de laquelle il se trouve.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/33.jpg"
+    },
+    {
+      "id": 23,
+      "type": "multiple_choice",
+      "question": "Que signifie cette combinaison de signaux routiers ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La vitesse est limitée à 90 km/h maximum dans la sortie"
+        },
+        {
+          "letter": "B",
+          "text": "À partir de ce signal et jusqu’au début de la sortie, vitesse limitée à 90 km/h maximum"
+        },
+        {
+          "letter": "C",
+          "text": "À partir de ce signal, la vitesse est limitée à 90 km/h maximum. Vous devez quitter l’autoroute dès la prochaine sortie"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Cette limitation de vitesse ne s’applique qu’à la sortie.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/11.jpg"
+    },
+    {
+      "id": 24,
+      "type": "yes_no",
+      "question": "Vous souhaitez vous insérer sur une autoroute.Devez-vous continuer jusqu'au bout de la voie d'insertion ?",
+      "correctAnswer": "NON",
+      "explanation": "LECON 4 - 'Lautoroute'Attendre le dernier moment peut se révéler très dangereux si l’insertion se révèle alors impossible.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/41.jpg"
+    },
+    {
+      "id": 25,
+      "type": "yes_no",
+      "question": "Pouvez-vous vous arrêter sur la bande d’arrêt d’urgence pour offrir de l’aide si un accident s’est produit dans l’autre sens de circulation ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Non, il est interdit de marcher sur les bandes de circulation d’une autoroute, ou de traverser la berme.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/12.jpg"
+    },
+    {
+      "id": 26,
+      "type": "multiple_choice",
+      "question": "Si vous voulez entrer sur l'autoroute  ...A ... l'indicateur de direction doit être utilisé.B ... l'indicateur de direction peut être utilisé.",
+      "propositions": [],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Un changement de bande pour rejoindre l’autoroute est une manœuvre pour laquelle l’utilisation des clignotants est obligatoire.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/40.jpg"
+    },
+    {
+      "id": 27,
+      "type": "number",
+      "question": ".Sur l’autoroute, vous pouvez rouler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "120",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Sur l’autoroute on peut rouler jusqu’à 120 km/h.Vous devez rouler à une vitesse minimale de 70 km/h quand les conditions le permettent.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/7.jpg"
+    },
+    {
+      "id": 28,
+      "type": "multiple_choice",
+      "question": "À quelle vitesse maximale une voiture équipée de pneus cloutés peut-elle rouler sur une autoroute ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "70 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "90 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "120 km/h"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 4Les pneus cloutés peuvent être utilisés entre le 1er novembre et le 31 mars sur les véhicules dont la masse maximale autorisée ne dépasse pas 3,5 tonnes.Vitesse :– Autoroutes et routes comportant 2×2 voies séparées par un terre-plein central : maximum 90 km/h.– Routes ordinaires : maximum 60 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/61.jpg"
+    },
+    {
+      "id": 29,
+      "type": "multiple_choice",
+      "question": "Un accident s’est produit sur une autoroute. Le conducteur va placer le triangle de présignalisation.Où restent les passagers ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Dans la voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Derrière les rails de protection"
+        },
+        {
+          "letter": "C",
+          "text": "Sur la bande d’arrêt d’urgence"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Les passagers ne restent pas dans la voiture, mais restent derrière les rails de protection.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/37.jpg"
+    },
+    {
+      "id": 30,
+      "type": "multiple_choice",
+      "question": "Il y a un trafic immobilisé sur l’autoroute.Pouvez-vous circuler sur la bande d’arrêt d’urgence les derniers mètres avant une sortie ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Les 150 derniers mètres"
+        },
+        {
+          "letter": "B",
+          "text": "Les 50 derniers mètres"
+        },
+        {
+          "letter": "C",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 4 - «Autoroute».Vous n’êtes pas autorisé à circuler sur une bande d’arrêt d’urgence même pour une courte distance.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/50.jpg"
+    },
+    {
+      "id": 31,
+      "type": "multiple_choice",
+      "question": "Devez-vous actionner le clignotant lorsque vous vous engagez sur l’autoroute via la voie d’insertion ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non, puisque vous ne pouvez rouler que dans cette direction"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 4  Que dit l’article 13 du code de la route ?Avant d’effectuer une manœuvre ou un mouvement nécessitant un déplacement latéral ou un changement de direction, le conducteur doit indiquer son intention en temps utile au moyen des clignotants, lorsque le véhicule en est pourvu, ou à défaut et si possible, par un signal du bras. Cette indication doit cesser dès que le déplacement latéral ou le changement de direction est effectué.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/60.jpg"
+    },
+    {
+      "id": 32,
+      "type": "multiple_choice",
+      "question": "Lequel de ces signaux n’allez-vous pas rencontrer sur une autoroute ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Signal"
+        },
+        {
+          "letter": "B",
+          "text": "Signal"
+        },
+        {
+          "letter": "C",
+          "text": "Signal"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Signal A : Ce signal désigne une route ordinaire.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/19.jpg"
+    },
+    {
+      "id": 33,
+      "type": "multiple_choice",
+      "question": "Une autoroute à trois bandes dans votre sens de circulation.Entre quelles bandes les motocyclistes peuvent-ils circuler lorsqu'il y a de forts ralentissements ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Entre les bandes 1 et 2"
+        },
+        {
+          "letter": "B",
+          "text": "Entre  les bandes 2 et 3"
+        },
+        {
+          "letter": "C",
+          "text": "Ils peuvent choisir"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 4 - «Autoroute».En cas d’embouteillages, les conducteurs de motocyclettes peuvent :. Circuler entre les deux bandes de circulation les plus à gauche.. Circuler à une vitesse de maximum 20 km/h plus rapide que les autres véhicules.. Circuler à une vitesse maximale de 50 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/48.jpg"
+    },
+    {
+      "id": 34,
+      "type": "multiple_choice",
+      "question": "Le conducteur de cette voiture grise veut aller à Hasselt.Quelle bande de circulation doit-il emprunter ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Celle de gauche"
+        },
+        {
+          "letter": "B",
+          "text": "Celle de droite"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Sur l’autoroute, vous devez rouler le plus possible sur la bande de circulation droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/26.jpg"
+    },
+    {
+      "id": 35,
+      "type": "multiple_choice",
+      "question": "Lorsque vous franchissez ce signal routier, vous savez que ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... à partir d’ici et pendant 1500 mètres, vous ne pouvez rouler qu’à une vitesse maximale de 70 km/h sur la bande de circulation de droite"
+        },
+        {
+          "letter": "B",
+          "text": "... dans 1500 mètres plus loin, vous ne pourrez rouler qu’à une vitesse maximale de 70 km/h sur la bande de circulation de droite"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.La limitation de vitesse commence à 1500 mètres au vu de la mention qui se trouve en dessous.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/21.jpg"
+    },
+    {
+      "id": 36,
+      "type": "multiple_choice",
+      "question": "Vous roulez sur une autoroute et vous voulez prendre la sortie.Où devez-vous freiner?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Maximum 150 mètres avant la sortie"
+        },
+        {
+          "letter": "B",
+          "text": "Maximum 50 mètres avant la sortie"
+        },
+        {
+          "letter": "C",
+          "text": "Seulement dès que tu roules sur la sortie"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 4Il n’existe évidemment aucune règle qui t’oblige à rouler encore à 120 km/h juste avant la sortie. Tu peux donc déjà rouler un peu plus lentement avant la sortie. Mais freiner réellement, donc appuyer sur la pédale de frein, tu le fais seulement une fois sur la sortie.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/58.jpg"
+    },
+    {
+      "id": 37,
+      "type": "yes_no",
+      "question": "Embouteillage sur l'autoroute.Vous ne pouvez vous intégrer qu'à la fin de la bretelle d'accès.",
+      "correctAnswer": "NON",
+      "explanation": "",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/47.jpg"
+    },
+    {
+      "id": 38,
+      "type": "number",
+      "question": ".Sur une autoroute, en voiture, en circonstances normales, vous devez rouler à une vitesse minimale de (...) km/h.",
+      "correctAnswer": "70",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Sur l’autoroute on peut rouler jusqu’à 120 km/h.Vous devez rouler à une vitesse minimale de 70 km/h quand les conditions le permettent.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/18.jpg"
+    },
+    {
+      "id": 39,
+      "type": "yes_no",
+      "question": "Faut-il allumer le clignotant pour entrer sur l’autoroute ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 4 - «Autoroute».Toute personne qui s’engage sur une autoroute par la  bande d’insertion doit utiliser le clignotant et céder le passage aux conducteurs qui roulent déjà sur l’autoroute. Attention si sur la bande d’insertion, il y a un rétrécissement, il y aura la tirette.Il n’y a pas de tirette entre la bande d’insertion et la chaussée de l’autoroute.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/49.jpg"
+    },
+    {
+      "id": 40,
+      "type": "multiple_choice",
+      "question": "À quelle vitesse maximale pouvez-vous rouler en Wallonie sur une route ordinaire avec des pneus cloutés ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "60 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "70 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "90 km/h"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 4Les pneus cloutés peuvent être utilisés du 1er novembre au 31 mars sur les véhicules dont la masse maximale autorisée ne dépasse pas 3,5 tonnes.La vitesse maximale autorisée est :- sur les autoroutes et les routes à 2×2 voies séparées par un terre-plein : 90 km/h ;- sur les routes ordinaires dans toutes les régions : 60 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/59.jpg"
+    },
+    {
+      "id": 41,
+      "type": "multiple_choice",
+      "question": "Quand porter la veste rétro réfléchissante en cas de panne sur autoroute ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Uniquement de jour"
+        },
+        {
+          "letter": "B",
+          "text": "Seulement la nuit"
+        },
+        {
+          "letter": "C",
+          "text": "Toujours"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.La veste rétro réfléchissante est un accessoire obligatoire qui dois se trouver dans la voiture.   Le conducteur doit toujours la porter en cas de panne AVANT de sortir de la voiture.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/32.jpg"
+    },
+    {
+      "id": 42,
+      "type": "multiple_choice",
+      "question": "Où doit se trouver le gilet de sécurité réfléchissant ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "À l’intérieur de l’habitacle de la voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Dans le coffre de la voiture"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Le gilet de sécurité réfléchissant, aussi appelé le gilet jaune, doit se trouver à l’intérieur de l’habitacle du véhicule, à portée de main, et non dans le coffre. Il est recommandé de le ranger dans la boîte à gants, sous le siège du conducteur ou dans une poche de portière, afin qu’il soit immédiatement accessible au conducteur s’il doit quitter son véhicule sur une autoroute ou une route pour automobiles.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/51.jpg"
+    },
+    {
+      "id": 43,
+      "type": "yes_no",
+      "question": "Faut-il avoir un gilet de sécurité rétro-réfléchissant dans la voiture ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Les accessoires obligatoires sont . Un gilet de sécurité (pour le conducteur. Il doit être porté AVANT de sortir de la voiture   et donc accessible depuis l’habitacle ; pas dans le coffre !)). Le triangle de danger;. Un extincteur : (contenant 1 kg de poudre et accessible en 10 secondes;. Une trousse de premiers soins.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/5.jpg"
+    },
+    {
+      "id": 44,
+      "type": "multiple_choice",
+      "question": "Quand est-il autorisé de circuler sur la bande réservée aux heures de pointe en l’absence de la flèche verte au-dessus ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Il est interdit d’y circuler"
+        },
+        {
+          "letter": "B",
+          "text": "C’est autorisé pour quitter l'autoroute"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/53.jpg"
+    },
+    {
+      "id": 45,
+      "type": "multiple_choice",
+      "question": "Que voyez-vous sur ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le numéro d’une route internationale"
+        },
+        {
+          "letter": "B",
+          "text": "Le numéro d’une autoroute"
+        },
+        {
+          "letter": "C",
+          "text": "Le numéro d’une route ordinaire"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Le numéro d’une autoroute.Un signal d’indication.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/9.jpg"
+    },
+    {
+      "id": 46,
+      "type": "number",
+      "question": ".Lorsque vous placez un triangle de danger sur la bande d’arrêt d’urgence, il doit être visible à une distance de (...) mètres pour les conducteurs qui s’en approchent.",
+      "correctAnswer": "50",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Si vous vous arrêtez sur la bande d’arrêt d’urgence, vous devez immédiatement placer un triangle de danger 100 mètres en deçà de votre voiture. Il doit être place de sorte qu’il soit visible à une distance de 50 mètres pour les conducteurs qui s’en approchent.Si c’est le conducteur qui le place, il DOIT revêtir sa veste réfléchissante avant de sortir de la voiture. Si le conducteur reste dans la voiture et qu’un passager la place, il est souhaitable mais pas obligatoire que ce dernier porte la veste réfléchissante.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/23.jpg"
+    },
+    {
+      "id": 47,
+      "type": "number",
+      "question": ".Si vous avez besoin d’aide, et qu’il n’y a pas de borne d’appel à proximité, vous composez alors le numéro d’appel d’urgence international (...).",
+      "correctAnswer": "112",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Le numéro d’appel d’urgence international 112, c’est un numéro que vous devez bien connaître.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/14.jpg"
+    },
+    {
+      "id": 48,
+      "type": "yes_no",
+      "question": "Il est interdit de remorquer une voiture au moyen d’une attache de fortune sur l’autoroute.",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.(C'est interdit depuis le 1er mars 2014.)",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/15.jpg"
+    },
+    {
+      "id": 49,
+      "type": "multiple_choice",
+      "question": "Le conducteur de la voiture bleue veut s’ insérer.Le conducteur de la voiture rouge :",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... doit circuler sur la bande de gauche pendant un moment"
+        },
+        {
+          "letter": "B",
+          "text": "... peut circuler sur la bande de gauche pendant un moment"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 4- «Autoroute».Si la bande de gauche est libre, il peut emprunter cette bande pendant un moment pour faciliter l'insertion. Mais il ne doit pas le faire. (comportement de conduite courtois).",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/44.jpg"
+    },
+    {
+      "id": 50,
+      "type": "yes_no",
+      "question": "Le conducteur de cette voiture se rend compte qu'il s'est trompé de chemin.Peut-il encore reculer ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Reculer sur une autoroute est une infraction grave.Il s’agit d’une infraction qui vous conduit d’office au Tribunal de Police.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/22.jpg"
+    },
+    {
+      "id": 51,
+      "type": "yes_no",
+      "question": "Pouvez-vous vous arrêter un instant sur la bande d’arrêt d’urgence pour envoyer un SMS ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Sur la bande d’arrêt d’urgence, vous ne pouvez :. ni circuler,. ni vous arrêter,. ni stationner.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/8.jpg"
+    },
+    {
+      "id": 52,
+      "type": "multiple_choice",
+      "question": "S’il y a de la circulation fortement ralentie sur la bretelle d’accès à l’autoroute …",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "… il faut appliquer le principe de la tirette"
+        },
+        {
+          "letter": "B",
+          "text": "… il ne faut pas appliquer le principe de la tirette"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Sur la bretelle d’accès de l’autoroute il ne faut pas appliquer le principe de la tirette.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/30.jpg"
+    },
+    {
+      "id": 53,
+      "type": "multiple_choice",
+      "question": "Je suis sur une bretelle d’autoroute pour entrer sur l’autoroute, mais j’ai oublié de lancer mon GP",
+      "propositions": [
+        {
+          "letter": "S",
+          "text": "Puis-je m’arrêter derrière la bande blanche ?"
+        },
+        {
+          "letter": "A",
+          "text": "Je peux m’arrêter derrière la bande blanche, car je ne suis pas encore sur l’autoroute"
+        },
+        {
+          "letter": "B",
+          "text": "Je ne peux pas m’arrêter derrière la bande blanche, car je suis déjà sur l’autoroute"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.La bretelle d’accès fait partie de l’autoroute. S’arrêter ou stationner sur la bretelle est interdit.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/54.jpg"
+    },
+    {
+      "id": 54,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Fin d’autoroute"
+        },
+        {
+          "letter": "B",
+          "text": "Fin de route pour automobiles"
+        },
+        {
+          "letter": "C",
+          "text": "Fin de limite maximale 120 km/h"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Signal d’indication.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/16.jpg"
+    },
+    {
+      "id": 55,
+      "type": "multiple_choice",
+      "question": "Il y a un embouteillage. La voiture grise roule sur la bande de gauche de cette autoroute. Une motocyclette veut dépasser entre la bande de gauche et celle au milieu. Où le conducteur de la voiture grise doit-il circuler ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le plus possible à gauche dans sa bande"
+        },
+        {
+          "letter": "B",
+          "text": "Au milieu de sa bande"
+        },
+        {
+          "letter": "C",
+          "text": "Le plus possible à droite dans sa bande"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.En cas d’embouteillages, les conducteurs de motocyclettes peuvent :. Circuler entre les deux bandes de circulation les plus à gauche.. Circuler à une vitesse de maximum 20 km/h plus rapide que les autres véhicules.. Circuler à une vitesse maximale de 50 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/35.jpg"
+    },
+    {
+      "id": 56,
+      "type": "multiple_choice",
+      "question": "Comment devez-vous réagir lorsque vous circulez sur une autoroute à hauteur de travaux ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Rouler à maximum 30 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "Laisser une distance latérale de 2 mètres"
+        },
+        {
+          "letter": "C",
+          "text": "Rouler prudemment afin de ne pas mettre les ouvriers en danger"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 4Lorsque vous circulez à proximité de travaux sur une autoroute, vous devez :- respecter les limitations de vitesse en vigueur ;- garder une distance suffisante ;- redoubler de prudence (présence d’ouvriers, de matériel et de véhicules à l’arrêt) ;- veiller à ne gêner ni mettre personne en danger.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/62.jpg"
+    },
+    {
+      "id": 57,
+      "type": "multiple_choice",
+      "question": "Qu'y a-t-il 1600 mètres plus loin ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Un échangeur autoroutier"
+        },
+        {
+          "letter": "B",
+          "text": "Un carrefour"
+        },
+        {
+          "letter": "C",
+          "text": "La fin de l'autoroute"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Les échangeurs sont annoncés en blanc, les sorties en vert.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/29.jpg"
+    },
+    {
+      "id": 58,
+      "type": "yes_no",
+      "question": "Pouvez-vous vous arrêter brièvement sur l’accès de l’autoroute pour laisser monter un collègue qui veut vous accompagner ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.La bande d'accès fait partie de l’autoroute.Sur l’autoroute, vous ne pouvez pas vous arrêter en dehors des parkings désignés.  C’est donc interdit, même brièvement pour laisser monter un collègue qui veut vous accompagner.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/25.jpg"
+    },
+    {
+      "id": 59,
+      "type": "yes_no",
+      "question": "L’ambulance dans laquelle se trouve votre père, roule à 140 km/h.Pouvez-vous la suivre ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Sur l’autoroute on peut rouler jusqu’à 120 km/h.Vous devez rouler à une vitesse minimale de 70 km/h quand les conditions le permettent.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/10.jpg"
+    },
+    {
+      "id": 60,
+      "type": "yes_no",
+      "question": "Vous n’avez pas suivi de leçons de conduite à l’auto-école, mais votre père vous apprend à conduire. Pouvez-vous aussi vous entrainer sur l’autoroute ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Avec un permis de conduire provisoire, vous devez également vous entrainer à rouler sur une autoroute",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/20.jpg"
+    },
+    {
+      "id": 61,
+      "type": "multiple_choice",
+      "question": "Il y a un embouteillage. Quand faut-il former un couloir de secours ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Uniquement sur les autoroutes lorsque les services de secours approchent"
+        },
+        {
+          "letter": "B",
+          "text": "Toujours sur toutes les routes comptant au moins 2 voies dans le même sens de circulation"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 4En cas d’embouteillage, les conducteurs circulant sur une chaussée comportant deux voies ou plus dans leur direction doivent former préventivement un couloir de secours pour les services de secours. Cela doit être fait avant que la circulation ne s’immobilise.Sur une chaussée à deux voies : entre la voie de gauche et la voie de droite.Sur une chaussée à trois voies : entre la voie de gauche et la voie du milieu.Les conducteurs de la voie de droite ne peuvent pas se déporter sur la bande d’arrêt d’urgence, la bande réservée aux bus ou la voie réservée spéciale pour bus.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/56.jpg"
+    },
+    {
+      "id": 62,
+      "type": "multiple_choice",
+      "question": "La sortie se trouve à 500m. A quel endroit voulez-vous emprunter la sortie  ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Dès le début de la sortie"
+        },
+        {
+          "letter": "B",
+          "text": "Environ au milieu de la sortie"
+        },
+        {
+          "letter": "C",
+          "text": "A la fin de la sortie"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 4 – ‘L’autoroute’.Au début de la sortie.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/38.jpg"
+    },
+    {
+      "id": 63,
+      "type": "yes_no",
+      "question": "Les services de remorquage peuvent-ils rouler sur la bande d’arrêt d’urgence pendant leur intervention ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 4La police, les services de secours et les services de remorquage (pendant leur intervention) peuvent circuler sur la bande d’arrêt d’urgence.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/68/57.jpg"
+    }
+  ]
+}

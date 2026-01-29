@@ -1,0 +1,641 @@
+{
+  "id": "26_arrt_et_stationnement_2",
+  "name": "26 arrt et stationnement 2",
+  "totalQuestions": 41,
+  "questions": [
+    {
+      "id": 1,
+      "type": "yes_no",
+      "question": "Le signal routier qui met fin à toute interdiction locale : impose-t-il également la fin des signaux de stationnement ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Le signal routier barré d’une bande noire oblique indique aux usagers de la route la fin de toutes les prescriptions qui ont fait précédemment l'objet d'une signalisation, sauf celles concernant l’arrêt et le stationnement.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/34.jpg"
+    },
+    {
+      "id": 2,
+      "type": "yes_no",
+      "question": "La voiture bleue ne peut pas stationner à cet endroit.Mais peut-elle s’y arrêter ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Là où la chaussée est trop étroite, vous devez laisser au moins 3 mètres de passage libre.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/28.jpg"
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "question": "Quel signal routier concerne la chaussée et l’accotement ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement le premier signal"
+        },
+        {
+          "letter": "B",
+          "text": "Seulement le deuxième signal"
+        },
+        {
+          "letter": "C",
+          "text": "Le premier et le deuxième signal"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Sans chiffres : le signal s’applique autant à la chaussée qu’à l’accotement. Avec des chiffres: le signal s’applique à l’accotement.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/19.jpg"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "question": "En agglomération.À cet endroit, la voiture bleue ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Peut seulement s’arrêter"
+        },
+        {
+          "letter": "B",
+          "text": "Peut s’arrêter et stationner"
+        },
+        {
+          "letter": "C",
+          "text": "Ne peut ni s’arrêter ni stationner"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/25.jpg"
+    },
+    {
+      "id": 5,
+      "type": "yes_no",
+      "question": "Pouvez-vous stationner sur l’accotement avant ce signal routier ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Sans chiffres : le signal s’applique autant à la chaussée qu’à l’accotement. Avec des chiffres: le signal s’applique à l’accotement.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/24.jpg"
+    },
+    {
+      "id": 6,
+      "type": "yes_no",
+      "question": "La voiture peut-elle stationner sur la chaussée de cette voie prioritaire ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Hors agglomération sur la chaussée d’une voie prioritaire vous ne pouvez pas stationner. Mais vous pouvez vous arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/18.jpg"
+    },
+    {
+      "id": 7,
+      "type": "number",
+      "question": "Vous ne pouvez pas stationner à moins de (…) mètres en deçà et au-delà d’un signal routier qui indique un arrêt d’autobus.",
+      "correctAnswer": "15",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.15 mètres en deçà et au-delà d’un signal routier qui indique un arrêt d’autobus.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/10.jpg"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "question": "À cet endroit, cette voiture peut...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... s'arrêter"
+        },
+        {
+          "letter": "B",
+          "text": "... s'arrêter et stationner"
+        },
+        {
+          "letter": "C",
+          "text": "... ni s'arrêter, ni stationner"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Vous ne pouvez pas vous stationner, mais vous pouvez vous arrêter devant l’accès carrossable d’une propriété.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/1.jpg"
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "question": "Vous n’avez pas de carte pour personnes handicapées valable dans la voiture.À cet endroit, vous ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... pouvez vous arrêter"
+        },
+        {
+          "letter": "B",
+          "text": "... pouvez vous arrêter et stationner"
+        },
+        {
+          "letter": "C",
+          "text": "... ne pouvez ni vous arrêter ni stationner"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Emplacement de stationnement réservé aux personnes handicapées. Mais vous pouvez vous arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/9.jpg"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "question": "À cet endroit, la voiture bleue peut...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement s’arrêter"
+        },
+        {
+          "letter": "B",
+          "text": "S’arrêter et stationner"
+        },
+        {
+          "letter": "C",
+          "text": "Ni stationner ni s’arrêter"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Hors agglomération sur la chaussée d’une voie prioritaire vous ne pouvez pas stationner. Mais vous pouvez vous arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/22.jpg"
+    },
+    {
+      "id": 11,
+      "type": "multiple_choice",
+      "question": "Une voie prioritaire en dehors d’une agglomération.Sur quel accotement pouvez-vous stationner ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement sur l’accotement de plain-pied"
+        },
+        {
+          "letter": "B",
+          "text": "Seulement sur l’accotement surélevé"
+        },
+        {
+          "letter": "C",
+          "text": "Sur tout accotement"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 26En dehors de l’agglomération, vous pouvez stationner sur tout accotement d’une voie prioritaire, sauf si cela est interdit par des signaux routiers ou par la police locale. De plus, il est interdit de s’arrêter ou de stationner à moins de 5 mètres d’un carrefour et à moins de 20 mètres de feux de circulation.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/35.jpg"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "question": "La voiture rouge peut-elle stationner à cet endroit en agglomération ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 26Le signal (E1) indique qu’il est interdit de stationner sur la chaussée et sur l’accotement de ce côté de la route.La flèche blanche sous le panneau indique que l’interdiction commence à partir d’ici.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/39.jpg"
+    },
+    {
+      "id": 13,
+      "type": "multiple_choice",
+      "question": "La conductrice de cette voiture attend son amie dans cette zone résidentielle.La voiture est-elle bien stationnée ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, car la voiture est devant le signal routier"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 26Dans une zone résidentielle, il est uniquement permis de stationner dans les emplacements prévus à cet effet.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/36.jpg"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "question": "Lequel de ces signaux routiers s’applique autant à la chaussée qu’à l’accotement ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement signal"
+        },
+        {
+          "letter": "B",
+          "text": "Seulement signal"
+        },
+        {
+          "letter": "C",
+          "text": "Les signaux A et"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Sans chiffres : le signal s’applique autant à la chaussée qu’à l’accotement. Avec des chiffres: le signal s’applique à l’accotement.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/26.jpg"
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "question": "Nous sommes le 22 mai.La voiture rouge peut-elle stationner à cet endroit ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 26Ce signal signifie que du 1er au 15 du mois, il est interdit de stationner de ce côté de la chaussée.Il faut alors stationner de l’autre côté de la route.Attention : cette interdiction concerne uniquement la chaussée, pas l’accotement. On peut donc se garer sur l’accotement s’il existe.La flèche blanche sous le panneau indique que l’interdiction commence à partir d’ici.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/40.jpg"
+    },
+    {
+      "id": 16,
+      "type": "yes_no",
+      "question": "La voiture blanche peut-elle stationner à cet endroit ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Flèche vers le haut : l’interdiction commence après le signal routier.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/20.jpg"
+    },
+    {
+      "id": 17,
+      "type": "multiple_choice",
+      "question": "Cette motocyclette peut-elle aussi être garée après le signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 26Ce signal indique que le stationnement est autorisé pour une voiture particulière, une voiture mixte, un minibus et une motocyclette.Un petit camion n’est pas autorisé à y stationner.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/41.jpg"
+    },
+    {
+      "id": 18,
+      "type": "yes_no",
+      "question": "Pouvez-vous stationner là où se trouve le point d’interrogation ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Sans chiffres : le panneau s’applique autant à la chaussée qu’à l’accotement. Avec des chiffres: le panneau s’applique à l’accotement.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/27.jpg"
+    },
+    {
+      "id": 19,
+      "type": "yes_no",
+      "question": "Est-ce correct ?Au-delà de ce signal routier, vous ne pouvez ni vous arrêter ni stationner sur la chaussée et sur l’accotement.",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Flèche vers le bas : l’interdiction est applicable jusqu’au signal routier.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/11.jpg"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "question": "La voiture rouge est stationnée à cet endroit.Est-ce autorisé ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 26Ce signal indique qu’il est interdit de stationner de ce côté de la chaussée et également sur l’accotement.Le panneau additionnel avec la flèche noire vers le bas signifie que l’interdiction de stationnement prend fin au niveau du signal.➡️ Cependant : au-delà du signal, la chaussée est divisée en deux bandes de circulation par une ligne blanche discontinue.Dans ce cas, le stationnement sur la chaussée est interdit.➡️ L’arrêt (par exemple pour faire monter ou descendre un passager) est autorisé.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/43.jpg"
+    },
+    {
+      "id": 21,
+      "type": "multiple_choice",
+      "question": "Lequel de ces signaux routiers s’applique autant à la chaussée qu’à l’accotement ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement le premier signal"
+        },
+        {
+          "letter": "B",
+          "text": "Seulement le deuxième signal"
+        },
+        {
+          "letter": "C",
+          "text": "Le premier et le deuxième signal"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Sans chiffres : le signal routier s’applique autant à la chaussée qu’à l’accotement. Avec des chiffres: le signal routier s’applique à l’accotement.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/16.jpg"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "question": "Il y a une ligne blanche sur le bord de la chaussée.À cet endroit, la voiture bleue peut…",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... seulement s’arrêter"
+        },
+        {
+          "letter": "B",
+          "text": "... s’arrêter et stationner"
+        },
+        {
+          "letter": "C",
+          "text": "... ni s’arrêter ni stationner"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Cette linge indique uniquement le bord extérieur de la chaussée. Elle n’a aucune autre signification.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/30.jpg"
+    },
+    {
+      "id": 23,
+      "type": "yes_no",
+      "question": "En agglomération. La voiture peut-elle stationner sur la chaussée de cette voie prioritaire ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Hors agglomération sur la chaussée d’une voie prioritaire vous ne pouvez pas stationner. Mais vous pouvez vous arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/12.jpg"
+    },
+    {
+      "id": 24,
+      "type": "multiple_choice",
+      "question": "Nous sommes le 12 février.Que peut faire la voiture à cet endroit ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "S’arrêter et stationner"
+        },
+        {
+          "letter": "B",
+          "text": "S’arrêter uniquement"
+        },
+        {
+          "letter": "C",
+          "text": "Ne pas s’arrêter et ne pas stationner"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 26Ce signal indique qu’il est interdit de stationner de ce côté de la chaussée du 1er au 15 du mois.Le panneau additionnel avec une flèche vers le bas signifie que l’interdiction est valable jusqu’au signal.➡️ Au-delà du signal, la voiture peut s’arrêter et stationner.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/42.jpg"
+    },
+    {
+      "id": 25,
+      "type": "yes_no",
+      "question": "La voiture bleue peut-elle stationner à cet endroit ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.C’est interdit. Il y a une ligne blanche continue.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/7.jpg"
+    },
+    {
+      "id": 26,
+      "type": "yes_no",
+      "question": "La voiture peut-elle stationner à cet endroit ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Une ligne jaune discontinue : vous ne pouvez pas stationner. Mais vous pouvez vous arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/21.jpg"
+    },
+    {
+      "id": 27,
+      "type": "multiple_choice",
+      "question": "Une voie prioritaire hors agglomération.La voiture bleue peut-elle s’arrêter sur la chaussée pour faire monter un passager ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 26En agglomération, il est permis de s’arrêter sur la chaussée et aussi d’y stationner si elle n’est pas divisée en bandes de circulation.Hors agglomération, on peut s’arrêter sur la chaussée, mais on ne peut pas y stationner.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/38.jpg"
+    },
+    {
+      "id": 28,
+      "type": "yes_no",
+      "question": "Cette photo a été prise en agglomération.Pouvez-vous stationner sur la chaussée au-delà de ce signal routier ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Hors agglomération sur la chaussée d’une voie prioritaire vous ne pouvez pas stationner. Mais vous pouvez vous arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/29.jpg"
+    },
+    {
+      "id": 29,
+      "type": "multiple_choice",
+      "question": "Ce signal routier est placé au-dessus du signal: début d'une agglomération. C'est le 7 mars. Où pouvez-vous vous garer ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Sur le côté des immeubles portant des numéros impairs"
+        },
+        {
+          "letter": "B",
+          "text": "Sur le côté des immeubles portant des numéros pairs"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Le signal de stationnement bimensuel n'est en fait plus utilisé. C'est pourquoi ce n'est plus sur nos pages de théorie. Si vous avez encore des questions à ce sujet, voici l'explication: Le stationnement alterné semi-mensuel est obligatoire sur toutes les chaussées d'une agglomération lorsque ce est placé au-dessus des signaux marquant le commencement de cette agglomération. Le stationnement sur la chaussée n'est alors autorisé du 1 au 15 mois que du côté des immeubles portant des numéros impairs et du 16 à la fin du mois que du côté des immeubles portant des numéros pairs.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/31.jpg"
+    },
+    {
+      "id": 30,
+      "type": "number",
+      "question": "Si vous stationnez votre voiture sur la chaussée, il doit rester au moins (…) mètres d'espace libre.",
+      "correctAnswer": "3",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Là où la chaussée est trop étroite, vous devez laisser au moins 3 mètres de passage libre.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/3.jpg"
+    },
+    {
+      "id": 31,
+      "type": "yes_no",
+      "question": "Pouvez-vous vous arrêter sur l’arrêt d’autobus pour laisser monter ou descendre un passager ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/17.jpg"
+    },
+    {
+      "id": 32,
+      "type": "multiple_choice",
+      "question": "De 11h30 à 19h30, l’arrêt et le stationnement sont interdits.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement sur la chaussée"
+        },
+        {
+          "letter": "B",
+          "text": "Sur la chaussée et sur l’accotement"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 26Le signal routier interdit l’arrêt et le stationnement sur la chaussée et sur l’accotement.S’il y a des chiffres dans le signal routier, l’interdiction ne concerne que la chaussée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/33.jpg"
+    },
+    {
+      "id": 33,
+      "type": "multiple_choice",
+      "question": "Vous pouvez vous arrêter sur la chaussée d'une voie prioritaire...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... en agglomération"
+        },
+        {
+          "letter": "B",
+          "text": "... hors agglomération"
+        },
+        {
+          "letter": "C",
+          "text": "... en agglomération et hors agglomération"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Hors agglomération sur la chaussée d’une voie prioritaire vous ne pouvez pas stationner. Mais vous pouvez vous arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/4.jpg"
+    },
+    {
+      "id": 34,
+      "type": "yes_no",
+      "question": "Nous sommes le 26 mars.Pouvez-vous stationner avant ce signal routier ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Ce signal routier signifie que vous ne pouvez pas stationner de ce côté de la chaussée du 1er au 15 du mois.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/13.jpg"
+    },
+    {
+      "id": 35,
+      "type": "yes_no",
+      "question": "Une ligne jaune discontinue au bord de la chaussée.Cette voiture peut s’arrêter pour faire descendre quelqu’un.Mais le conducteur peut-il aussi y stationner ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Lorsqu’une ligne jaune discontinue est peinte au bord de la chaussée, vous ne pouvez que vous arrêter.Le stationnement sur la chaussée est interdit.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/32.jpg"
+    },
+    {
+      "id": 36,
+      "type": "multiple_choice",
+      "question": "Un obstacle sur la piste cyclable.Vous ne pouvez ni vous arrêter ni stationner à moins de 5 mètres en deçà et au-delà de l’endroit où les cyclistes doivent emprunter la chaussée.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.La piste cyclable ne se termine pas. C’est un obstacle.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/14.jpg"
+    },
+    {
+      "id": 37,
+      "type": "multiple_choice",
+      "question": "Dans quel cas le propriétaire de la maison peut-il stationner devant sa porte de garage ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Toujours"
+        },
+        {
+          "letter": "B",
+          "text": "S’il a reproduit visiblement sa plaque d’immatriculation sur la porte"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Vous ne pouvez pas stationner devant une porte de garage. Mais vous pouvez vous arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/15.jpg"
+    },
+    {
+      "id": 38,
+      "type": "multiple_choice",
+      "question": "À cet endroit, cette voiture peut...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "S’arrêter et stationner"
+        },
+        {
+          "letter": "B",
+          "text": "S’arrêter"
+        },
+        {
+          "letter": "C",
+          "text": "Ni s’arrêter ni stationner"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Une ligne jaune discontinue : vous ne pouvez pas stationner.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/5.jpg"
+    },
+    {
+      "id": 39,
+      "type": "multiple_choice",
+      "question": "Quelle flèche indique que l'interdiction de stationnement commence à partir de la flèche ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Flèche 1"
+        },
+        {
+          "letter": "B",
+          "text": "Flèche 2"
+        },
+        {
+          "letter": "C",
+          "text": "Flèche 3"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Flèche vers le bas : l’interdiction est applicable jusqu’au signal routier.Flèche vers le haut et vers le bas : l’interdiction est applicable de part et d’autre du signal routier.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/2.jpg"
+    },
+    {
+      "id": 40,
+      "type": "multiple_choice",
+      "question": "L’interdiction de stationnement jusqu’au carrefour suivant s’applique ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... seulement à la chaussée"
+        },
+        {
+          "letter": "B",
+          "text": "... à la chaussée et à l’accotement"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.Il est interdit de stationner sur la chaussée et sur l’accotement, jusqu’au carrefour suivant. Mais vous pouvez vous arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/6.jpg"
+    },
+    {
+      "id": 41,
+      "type": "multiple_choice",
+      "question": "Nous sommes le 24 mars.Quelle affirmation est correcte ?Au-delà de ce signal routier, de ce côté de la chaussée  ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... je peux m’arrêter sur l’accotement"
+        },
+        {
+          "letter": "B",
+          "text": "... je ne peux ni stationner sur la chaussée ni sur l’accotement"
+        },
+        {
+          "letter": "C",
+          "text": "... je peux stationner et m’arrêter sur la chaussée et sur l’accotement"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 26 – ‘Arrêt et stationnement’.  Ce signal routier signifie que vous ne pouvez pas stationner de ce côté de la chaussée du 16 à la fin du mois.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/90/23.jpg"
+    }
+  ]
+}

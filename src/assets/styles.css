@@ -1,0 +1,590 @@
+/* Modern design system for Code Route App */
+/* 1) Reset & base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 2) Theme variables */
+:root {
+  --bg: #0b1020;
+  --bg-elev: #121832;
+  --surface: #151b3a;
+  --surface-2: #1a2248;
+  --text: #e6e9f5;
+  --muted: #aab0c0;
+  --primary: #0ea5e9;
+  --primary-700: #0284c7;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --border: #273056;
+  --radius: 12px;
+  --space-1: 6px;
+  /* 6 */
+  --space-2: 10px;
+  /* 10 */
+  --space-3: 14px;
+  /* 14 */
+  --space-4: 18px;
+  /* 18 */
+  --space-5: 24px;
+  /* 24 */
+  --space-6: 32px;
+  /* 32 */
+}
+
+[data-theme='light'] {
+  --bg: #f7f8fb;
+  --bg-elev: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f2f4f8;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: #e2e8f0;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    color-scheme: light;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+  }
+}
+
+/* 3) Page background */
+body {
+  color: var(--text);
+  background: var(--bg);
+  background-attachment: fixed;
+}
+
+#root {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.container {
+  width: min(1100px, calc(100% - 32px));
+  margin-inline: auto;
+  padding: var(--space-5) 0 var(--space-6);
+}
+
+/* 4) Typography */
+h1,
+h2,
+h3 {
+  margin: 0 0 var(--space-3);
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: clamp(26px, 2.4vw, 36px);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 600;
+}
+
+p {
+  margin: 0 0 var(--space-3);
+  color: var(--muted);
+}
+
+/* 5) Cards */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+/* 6) Buttons */
+button {
+  --bpad-x: 14px;
+  --bpad-y: 10px;
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  padding: var(--bpad-y) var(--bpad-x);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+button:hover {
+  background: var(--bg-elev);
+  border-color: var(--muted);
+}
+
+button:active {
+  background: var(--surface-2);
+}
+
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-700);
+  border-color: var(--primary-700);
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--muted);
+}
+
+.btn-ghost:hover {
+  color: var(--text);
+  background: var(--surface-2);
+}
+
+.btn-danger {
+  border-color: var(--danger);
+  color: white;
+  background: var(--danger);
+}
+
+.btn-danger:hover {
+  background: color-mix(in oklab, var(--danger) 80%, black);
+}
+
+/* 7) Inputs */
+.input,
+input[type='text'],
+input[type='search'] {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-elev);
+  color: var(--text);
+  outline: none;
+}
+
+.input::placeholder,
+input::placeholder {
+  color: var(--muted);
+}
+
+input:focus {
+  border-color: var(--primary);
+}
+
+input[type='checkbox'] {
+  accent-color: var(--primary);
+}
+
+/* 8) App / Theme toggle */
+.theme-toggle {
+  /* Position handled by TopControls in App.jsx */
+}
+
+/* 9) Theme selector page */
+.page {
+  padding-top: var(--space-6);
+}
+
+.page .page-title {
+  margin-bottom: var(--space-2);
+}
+
+.search {
+  margin: var(--space-3) 0 var(--space-4);
+}
+
+.search .input {
+  max-width: 520px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: var(--space-3);
+}
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.theme-btn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 14px 16px;
+  text-align: left;
+  gap: 4px;
+}
+
+.theme-btn .theme-name {
+  font-weight: 600;
+}
+
+.theme-btn .theme-meta {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* 10) Quiz */
+.quiz {
+  width: min(1100px, calc(100% - 32px));
+  margin: 24px auto;
+}
+
+.quiz-topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: var(--space-3);
+}
+
+.quiz-topbar .exit-btn {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: var(--muted);
+  border: 1px solid transparent;
+}
+
+.toggle:hover {
+  border-color: var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.toggle span {
+  font-size: 14px;
+}
+
+/* 11) Question Card */
+.question-card {
+  padding: var(--space-5);
+}
+
+.question-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.question-title {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.question-progress {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.question-main {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 18px;
+}
+
+@media (max-width: 880px) {
+  .question-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+.question-image {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+}
+
+.question-image img {
+  width: 100%;
+  height: auto;
+}
+
+.question-image.placeholder {
+  background: var(--surface-2);
+}
+
+.question-text {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+  margin-bottom: var(--space-3);
+}
+
+.question-text-inner {
+  font-size: 16px;
+}
+
+.answers {
+  display: grid;
+  gap: 10px;
+}
+
+.answer-btn {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  text-align: left;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.answer-btn:hover {
+  background: var(--bg-elev);
+}
+
+.answer-letter {
+  font-weight: 700;
+  color: var(--muted);
+  width: 22px;
+  display: inline-block;
+}
+
+.answer-text {
+  flex: 1;
+}
+
+.answer-btn.correct {
+  border-color: var(--success);
+  background: color-mix(in oklab, var(--success) 10%, var(--surface));
+}
+
+.answer-btn.incorrect {
+  border-color: var(--danger);
+  background: color-mix(in oklab, var(--danger) 10%, var(--surface));
+}
+
+/* Neutral selection */
+.answer-btn.selected {
+  border-color: var(--primary);
+  background: color-mix(in oklab, var(--primary) 10%, var(--surface));
+}
+
+.answer-btn.dimmed {
+  opacity: 0.5;
+}
+
+.number-wrap {
+  display: grid;
+  gap: 8px;
+}
+
+.number-field {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.number-input {
+  flex: 1;
+}
+
+.number-submit {
+  min-width: 64px;
+}
+
+.number-field.selected .number-input {
+  border-color: var(--primary);
+}
+
+.number-feedback {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.dots-bar {
+  display: grid;
+  place-items: center;
+  margin-top: var(--space-3);
+  color: var(--muted);
+}
+
+.dots {
+  letter-spacing: 6px;
+}
+
+.explanation {
+  margin-top: var(--space-4);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+}
+
+.explanation-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.explanation-text {
+  color: var(--muted);
+}
+
+/* 12) Results */
+.results {
+  width: min(900px, calc(100% - 32px));
+  margin: 24px auto;
+}
+
+.results .results-actions {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0 var(--space-3);
+}
+
+.review .review-item {
+  padding: 12px 0;
+}
+
+.review hr {
+  border: none;
+  height: 1px;
+  background: var(--border);
+  margin: 12px 0;
+}
+
+/* 13) Utility */
+.mt-1 {
+  margin-top: var(--space-1);
+}
+
+.mt-2 {
+  margin-top: var(--space-2);
+}
+
+.mt-3 {
+  margin-top: var(--space-3);
+}
+
+.mt-4 {
+  margin-top: var(--space-4);
+}
+
+.mt-5 {
+  margin-top: var(--space-5);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* 14) Countdown bar */
+.countdown {
+  margin-top: var(--space-3);
+}
+
+.countdown-track {
+  position: relative;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+
+.countdown-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 100%;
+  background: var(--primary);
+  transition: width 100ms linear;
+}
+
+/* 15) Timed out state */
+.question-card.timed-out .answers .answer-btn {
+  opacity: 0.5;
+  filter: grayscale(1);
+}
+
+.question-card.timed-out .answers .answer-btn:hover {
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+.question-card.timed-out .number-field {
+  opacity: 0.6;
+}
+
+/* 16) Global Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 5px;
+  border: 2px solid var(--bg);
+  /* Create padding effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}

@@ -1,0 +1,763 @@
+{
+  "id": "22_train_-_tram_-_autobus",
+  "name": "22 train - tram - autobus",
+  "totalQuestions": 50,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "question": "Comment s’appelle le marquage au sol que vous voyez ici ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Des marques en damiers"
+        },
+        {
+          "letter": "B",
+          "text": "Une zone d’évitement"
+        },
+        {
+          "letter": "C",
+          "text": "Des marques en mosaïques"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Les marques en damiers indiquent l’endroit où les conducteurs se trouvant sur des carrefours peuvent rouler sur le site spécial franchissable.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/12.jpg"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "question": "Qu’indique ce signal ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Un passage à niveau sans barrières"
+        },
+        {
+          "letter": "B",
+          "text": "Un passage à niveau à deux ou plusieurs voies"
+        },
+        {
+          "letter": "C",
+          "text": "Des rails de train traversent la chaussée"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Signal de danger : un passage à niveau à deux ou plusieurs voies.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/5.jpg"
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "question": "Pouvez-vous dépasser un cyclomoteur par la gauche à ce passage à niveau ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Non, le dépassement par la gauche est interdit,"
+        },
+        {
+          "letter": "B",
+          "text": "Non, seulement un cycliste"
+        },
+        {
+          "letter": "C",
+          "text": "Oui"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 22 - Train, tram, bus'.Il y a des barrières et la lumière blanche est allumée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/40.jpg"
+    },
+    {
+      "id": 4,
+      "type": "yes_no",
+      "question": "Ce conducteur peut-il circuler sur l’arrêt de bus ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Vous pouvez circuler sur un arrêt de bus.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/21.jpg"
+    },
+    {
+      "id": 5,
+      "type": "yes_no",
+      "question": "Un passage à niveau avec barrières ouvertes et lumières. Mais les lumières sont éteintes.Êtes-vous autorisé à dépasser un véhicule à gauche ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Les lumières ne fonctionnent pas mais les barrières sont ouvertes.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/38.jpg"
+    },
+    {
+      "id": 6,
+      "type": "yes_no",
+      "question": "Cette photo a été prise, depuis la voiture que vous conduisez.Vous voulez faire le plein. Pouvez-vous emprunter la bande à votre droite dès maintenant ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Un site spécial franchissable ne fait pas partie de la chaussée. C’est interdit d’y rouler, d’y stationner ou d’y arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/26.jpg"
+    },
+    {
+      "id": 7,
+      "type": "yes_no",
+      "question": "Le tram vient de la gauche.La voiture doit-elle donner la priorité ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 22 - «Train Tram Bus».Un tram a toujours la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/41.jpg"
+    },
+    {
+      "id": 8,
+      "type": "number",
+      "question": ".Vous ne pouvez pas stationner sur la chaussée jusqu’à (...) mètres avant et après un panneau indiquant un arrêt de bus.",
+      "correctAnswer": "15",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Le stationnement est interdit jusqu'à 15 mètres avant et après le signal.L’arrêt est autorisé.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/4.jpg"
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "question": "Sur une bande bus le stationnement est interdit.Mais vous pouvez y circuler pour croiser ou dépasser en toute sécurité.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Vous ne pouvez pas y circuler pour croiser ou dépasser une voiture en toute sécurité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/9.jpg"
+    },
+    {
+      "id": 10,
+      "type": "yes_no",
+      "question": "Est-il permis de faire demi-tour sur un marquage en damier à une intersection routière ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/35.jpg"
+    },
+    {
+      "id": 11,
+      "type": "yes_no",
+      "question": "Est-il vrai que votre permis de conduire peut être retiré immédiatement si vous franchissez les feux clignotants rouges d’un passage à niveau ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Franchir les feux rouges est une infraction grave et votre permis peut être retiré sur le champ.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/3.jpg"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "question": "En agglomération.Un bus touristique s’est arrêté à l’arrêt de bus pour embarquer quelques retraités.Le conducteur veut quitter l’arrêt et allume son clignotant.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous devez lui céder le passage"
+        },
+        {
+          "letter": "B",
+          "text": "Vous ne devez pas lui céder le passage"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Vous ne devez pas donner la priorité à un bus touristique.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/19.jpg"
+    },
+    {
+      "id": 13,
+      "type": "multiple_choice",
+      "question": "Entrez un chiffre :La police t’autorise à circuler sur une voie franchissable spéciale.Quel signal lumineux a la même signification qu’un feu vert ?",
+      "propositions": [],
+      "correctAnswer": "1",
+      "explanation": "LEÇON 18 + 22Sur une voie franchissable spéciale, les signaux signifient :1️⃣  Un triangle inversé → même signification qu’un feu vert.2️⃣  Un cercle → même signification qu’un feu orange fixe.3️⃣  Une barre horizontale → même signification qu’un feu rouge.4️⃣  Une barre oblique vers la gauche → autorisation de circuler uniquement dans cette direction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/49.jpg"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal de danger ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Passage à niveau"
+        },
+        {
+          "letter": "B",
+          "text": "Passage à niveau avec barrières"
+        },
+        {
+          "letter": "C",
+          "text": "Passage à niveau fermé"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Signal de danger : passage à niveau avec barrières.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/10.jpg"
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "question": "Lequel de ces signaux routiers annonce une bande de circulation réservée aux autobus ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Uniquement le signal 1"
+        },
+        {
+          "letter": "B",
+          "text": "Uniquement les signaux 1, et 2"
+        },
+        {
+          "letter": "C",
+          "text": "Signaux 1, 2, et 3"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Signal 1 : bande de circulation réservée aux autobus.Signal 2+3 : tram-bus site spécial franchissable.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/31.jpg"
+    },
+    {
+      "id": 16,
+      "type": "yes_no",
+      "question": "La voiture bleue peut-elle circuler sur la bande bus pour stationner sur l'accotement ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Traverser cette bande n’est est pas la même que conduire sur cette bande.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/29.jpg"
+    },
+    {
+      "id": 17,
+      "type": "yes_no",
+      "question": "Faut-il, en dehors d’une agglomération, céder le passage à un autobus qui quitte un arrêt ?",
+      "correctAnswer": "NON",
+      "explanation": "Vous devez céder le passage à l’intérieur d’une agglomération. Vous ne devez jamais céder le passage à un autocar qui quitte un arrêt.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/46.jpg"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "question": "Ce conducteur veut tourner à droite dans ce carrefour.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture doit se trouver là"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture peut également se trouver sur la bande à sa droite"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Un site spécial franchissable ne fait pas partie de la chaussée. C’est interdit d’y rouler, stationner ou arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/32.jpg"
+    },
+    {
+      "id": 19,
+      "type": "multiple_choice",
+      "question": "Le feu rouge est déjà allumé, mais la barrière est toujours ouverte.Êtes-vous autorisé à conduire plus loin ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, mais soigneusement"
+        },
+        {
+          "letter": "B",
+          "text": "Non, vous devez vous arrêter"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 22 - Train, tram, bus'.La lumière rouge et le son de la cloche signifie s'arrêter, même si la barrière est toujours ouverte.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/42.jpg"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "question": "Quelle est la réponse la plus correcte ?Sur une bande bus vous pouvez ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... vous arrêter"
+        },
+        {
+          "letter": "B",
+          "text": "... vous arrêter et stationner"
+        },
+        {
+          "letter": "C",
+          "text": "... ni vous arrêter, ni stationner, ni circuler"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Vous pouvez y circuler les derniers mètres d'une intersection si vous voulez tourner.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/6.jpg"
+    },
+    {
+      "id": 21,
+      "type": "multiple_choice",
+      "question": "Entrez un chiffre :La police t’autorise à circuler sur une voie franchissable spéciale.Quel signal lumineux a la même signification qu’un feu rouge ?",
+      "propositions": [],
+      "correctAnswer": "3",
+      "explanation": "LEÇON 18 + 22Sur une voie franchissable spéciale, les signaux signifient :1️⃣  Un triangle inversé → même signification qu’un feu vert.2️⃣  Un cercle → même signification qu’un feu orange fixe.3️⃣  Une barre horizontale → même signification qu’un feu rouge.4️⃣  Une barre oblique vers la gauche → autorisation de circuler uniquement dans cette direction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/50.jpg"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "question": "À quel endroit pouvez-vous emprunter les derniers mètres d’une bande de circulation réservée aux autobus pour vous placer correctement selon la direction à suivre ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Partout"
+        },
+        {
+          "letter": "B",
+          "text": "Seulement en agglomération"
+        },
+        {
+          "letter": "C",
+          "text": "Seulement hors agglomération"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Partout.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/25.jpg"
+    },
+    {
+      "id": 23,
+      "type": "multiple_choice",
+      "question": "Vous roulez en voiture sur la bande de circulation de droite de cette autoroute. Quelle est la vitesse maximale à laquelle vous pouvez circuler ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "50 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "120 km/h"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.La limite de vitesse sur les autoroutes est de 120 km par heure.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/33.jpg"
+    },
+    {
+      "id": 24,
+      "type": "multiple_choice",
+      "question": "La voiture rouge n’a pas cédé le passage à l’autobus qui démarre.Il devrait céder le passage ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... toujours"
+        },
+        {
+          "letter": "B",
+          "text": "... toujours en agglomération"
+        },
+        {
+          "letter": "C",
+          "text": "... seulement hors agglomération"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Dans une agglomération et le signal de retour est activé, vous devez donner la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/22.jpg"
+    },
+    {
+      "id": 25,
+      "type": "yes_no",
+      "question": "Sur les derniers mètres avant le carrefour, la voiture bleue peut-elle rouler sur la bande à sa droite pour choisir sa direction ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Un site spécial franchissable ne fait pas partie de la chaussée. C’est interdit d’y rouler, stationner ou arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/27.jpg"
+    },
+    {
+      "id": 26,
+      "type": "multiple_choice",
+      "question": "Vous entendez le signal, mais les barrières sont encore complètement ouvertes.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous pouvez encore continuer votre route"
+        },
+        {
+          "letter": "B",
+          "text": "Vous devez vous arrêter"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Vous devez vous arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/34.jpg"
+    },
+    {
+      "id": 27,
+      "type": "multiple_choice",
+      "question": "Dans quel ordre ces conducteurs peuvent-ils s’engager dans le carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Tram - Voiture rouge - Voiture bleue"
+        },
+        {
+          "letter": "B",
+          "text": "Voiture rouge - tram - Voiture bleue"
+        },
+        {
+          "letter": "C",
+          "text": "Tram - Voiture bleue - Voiture rouge"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Un tram a toujours priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/18.jpg"
+    },
+    {
+      "id": 28,
+      "type": "yes_no",
+      "question": "Est-il autorisé de dépasser par la gauche un cyclomotoriste sur ce passage à niveau ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Si le feu blanc lunaire clignote, vous pouvez dépasser par la gauche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/36.jpg"
+    },
+    {
+      "id": 29,
+      "type": "multiple_choice",
+      "question": "Quel signal routier indique ce passage à niveau ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Signal 1"
+        },
+        {
+          "letter": "B",
+          "text": "Signal 2"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.1. Signal de danger : passage à niveau sans barrières. 2. Signal de danger : passage à niveau avec barrières.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/17.jpg"
+    },
+    {
+      "id": 30,
+      "type": "yes_no",
+      "question": "Vous passez devant ce signal en voiture.Pouvez-vous dépasser une moto par la droite ici ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Le signal se trouve à 150 mètres du passage à niveau. Vous roulez ici sur une chaussée ordinaire.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/43.jpg"
+    },
+    {
+      "id": 31,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal de danger ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Passage à niveau"
+        },
+        {
+          "letter": "B",
+          "text": "Passage à niveau avec barrières"
+        },
+        {
+          "letter": "C",
+          "text": "Passage à niveau sans barrières"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Signal de danger : passage à niveau sans barrières.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/8.jpg"
+    },
+    {
+      "id": 32,
+      "type": "multiple_choice",
+      "question": "Le conducteur de tram doit respecter... 1. Les injonctions d’un agent qualifié.2. Les feux de signalisation.3. Les règles de priorité.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement le 1"
+        },
+        {
+          "letter": "B",
+          "text": "Seulement le 1 et le 2"
+        },
+        {
+          "letter": "C",
+          "text": "Le 1, le 2, et le 3"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Un conducteur de tram doit respecter : 1. les injonctions d’un agent qualifié.2. les feux de signalisation.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/16.jpg"
+    },
+    {
+      "id": 33,
+      "type": "multiple_choice",
+      "question": "Que pouvez-vous faire sur la chaussée à hauteur de ce panneau ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous pouvez vous arrêter"
+        },
+        {
+          "letter": "B",
+          "text": "Vous pouvez vous arrêter et stationner"
+        },
+        {
+          "letter": "C",
+          "text": "Vous ne pouvez ni vous arrêter ni stationner"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Ce panneau indique un arrêt de bus.Le stationnement est interdit jusqu’à 15 mètres avant et 15 mètres après le panneau.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/44.jpg"
+    },
+    {
+      "id": 34,
+      "type": "multiple_choice",
+      "question": "L'arrêt pour embarquer ou débarquer des personnes est permis...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "… seulement à un arrêt de bus"
+        },
+        {
+          "letter": "B",
+          "text": "… seulement à un arrêt de bus et sur une bande de circulation réservée aux autobus"
+        },
+        {
+          "letter": "C",
+          "text": "… à un arrêt de bus, sur une bande de circulation réservée aux autobus et sur un site spécial franchissable"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Il est uniquement permis de s’arrêter à un arrêt de bus pour faire monter ou descendre des personnes.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/45.jpg"
+    },
+    {
+      "id": 35,
+      "type": "yes_no",
+      "question": "Ce signal de danger signifie: Croisement de la voie publique par une ou plusieurs voies ferrées établies sur la chaussée. Le conducteur de tram doit-il respecter les feux de signalisation ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Signal de danger.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/11.jpg"
+    },
+    {
+      "id": 36,
+      "type": "multiple_choice",
+      "question": "La sonnette ne retentit pas.Quand pouvez-vous dépasser un véhicule par la gauche à ce passage à niveau ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement si la barrière est ouverte ET que la lumière blanche lunaire brûle en même temps"
+        },
+        {
+          "letter": "B",
+          "text": "Si la barrière est ouverte et que la lumière blanche lunaire ne brûle pas, parce qu’elle est défectueuse"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 22Vous pouvez dépasser un véhicule par la gauche à ce passage à niveaulorsque la barrière est complètement ouverte et que la lumière blanche lunaire brûle en même temps.Mais si la sonnette ne retentit pas, que la barrière est ouverte, mais que les feux sont défectueux, vous pouvez aussi dépasser un véhicule par la gauche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/47.jpg"
+    },
+    {
+      "id": 37,
+      "type": "multiple_choice",
+      "question": "Cet autobus veut quitter l’arrêt en agglomération.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture a priorité"
+        },
+        {
+          "letter": "B",
+          "text": "L’autobus a priorité"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Dans une agglomération, et le signal de retour est activé, vous devez donner la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/7.jpg"
+    },
+    {
+      "id": 38,
+      "type": "multiple_choice",
+      "question": "Que faites-vous quand un bus s'arrête à cet arrêt de bus ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Attendre jusqu'à ce que le bus part"
+        },
+        {
+          "letter": "B",
+          "text": "Conduire prudemment"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Vous ne devez pas vous arrêter, mais vous pouvez conduire prudemment.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/39.jpg"
+    },
+    {
+      "id": 39,
+      "type": "yes_no",
+      "question": "Pouvez-vous traverser une bande de circulation réservée aux autobus en voiture pour rejoindre votre propriété ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Traverser cette bande n’est est pas la même que conduire sur cette bande.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/23.jpg"
+    },
+    {
+      "id": 40,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal de danger ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Passage à niveau à voie unique"
+        },
+        {
+          "letter": "B",
+          "text": "Passage à niveau avec barrières et feux"
+        },
+        {
+          "letter": "C",
+          "text": "Passage à niveau sans feux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Signal de danger : Passage à niveau à voie unique.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/14.jpg"
+    },
+    {
+      "id": 41,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le tram"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Un tram a toujours priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/1.jpg"
+    },
+    {
+      "id": 42,
+      "type": "yes_no",
+      "question": "Les cyclomoteurs peuvent-ils aussi emprunter le site spécial franchissable ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Dans ce cas les motos peuvent emprunter le site spécial franchissable.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/2.jpg"
+    },
+    {
+      "id": 43,
+      "type": "yes_no",
+      "question": "L’arrêt et l'embarquement des personnes sont permis à un arrêt de bus.",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/37.jpg"
+    },
+    {
+      "id": 44,
+      "type": "multiple_choice",
+      "question": "Le conducteur de cet autobus a mis son clignotant gauche et veut quitter l’arrêt de bus, hors agglomération.Dois-tu lui céder le passage ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 22En agglomération, tu dois céder le passage à un autobus qui quitte un arrêt si son clignotant est allumé.⚠️ Cette règle ne s’applique pas aux :• autocars,• bus scolaires ou bus transportant des travailleurs.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/48.jpg"
+    },
+    {
+      "id": 45,
+      "type": "yes_no",
+      "question": "La voiture bleue peut-elle traverser la partie de voie publique portant la mention \"BUS\" pour stationner sur l'accotement ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Un site spécial franchissable ne fait pas partie de la chaussée. C’est interdit d’y rouler, stationner ou arrêter. Traverser cette bande n’est est pas la même que conduire sur cette bande.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/30.jpg"
+    },
+    {
+      "id": 46,
+      "type": "multiple_choice",
+      "question": "Le train est passé et les barrières se lèvent.Si vous vous engagez maintenant avec votre voiture ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... ce n’est pas vraiment une infraction"
+        },
+        {
+          "letter": "B",
+          "text": "... c’est une légère infraction"
+        },
+        {
+          "letter": "C",
+          "text": "... votre permis de conduire peut vous être retiré immédiatement"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Dans ce cas votre permis de conduire peut vous être retiré immédiatement.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/24.jpg"
+    },
+    {
+      "id": 47,
+      "type": "yes_no",
+      "question": "La voiture bleue peut-elle traverser la bande de circulation réservée aux autobus pour stationner sur l'accotement ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Vous pouvez circuler sur une bande réservée aux autobus, les derniers mètres avant un carrefour.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/28.jpg"
+    },
+    {
+      "id": 48,
+      "type": "multiple_choice",
+      "question": "De quel type de signal routier s’agit-il ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Un signal de danger"
+        },
+        {
+          "letter": "B",
+          "text": "Un signal d’indication"
+        },
+        {
+          "letter": "C",
+          "text": "Un signal qui concerne les véhicules sur rails"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Signal de danger : un passage à niveau à deux ou plusieurs voies.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/20.jpg"
+    },
+    {
+      "id": 49,
+      "type": "yes_no",
+      "question": "En attendant l’arrivée du bus dans lequel se trouve votre amie, pouvez-vous rester avec votre voiture à l’arrêt pendant quelques instants ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Attendre = stationnement.Vous pouvez vous y arrêter pour embarquer ou débarquer un passager.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/13.jpg"
+    },
+    {
+      "id": 50,
+      "type": "multiple_choice",
+      "question": "À partir de quel endroit devez-vous rouler à une vitesse maximale de 50 km/h ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Dès que vous franchissez ces signaux"
+        },
+        {
+          "letter": "B",
+          "text": "100 mètres au-delà de ces signaux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 22 – ‘Train – tram -autobus’.Dès que vous franchissez ces signaux.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/86/15.jpg"
+    }
+  ]
+}

@@ -1,0 +1,730 @@
+{
+  "id": "2_bandes_de_circulation",
+  "name": "2 bandes de circulation",
+  "totalQuestions": 43,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Signal de préavis annonçant un évitement"
+        },
+        {
+          "letter": "B",
+          "text": "Signal de préavis annonçant une traversée de la berme centrale"
+        },
+        {
+          "letter": "C",
+          "text": "Signal de préavis annonçant la réduction du nombre de bandes de circulation"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’. Signification : Signal de préavis annonçant un évitement.Signal temporaire car orange.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/1.jpg"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "question": "Comment s’appelle la partie de la voie publique où vous voyez le point d’interrogation ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La chaussée"
+        },
+        {
+          "letter": "B",
+          "text": "La bande de circulation"
+        },
+        {
+          "letter": "C",
+          "text": "La voie publique"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’. Le marquage routier divise la chaussée en deux bandes de circulation.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/2.jpg"
+    },
+    {
+      "id": 3,
+      "type": "number",
+      "question": "Combien de bandes de circulation voyez-vous sur cette route pour automobile  ?",
+      "correctAnswer": "C",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’. Sur l’image, vous voyez trois bandes de circulation et la bande d’arrêt d’urgence.Sur une route pour automobile ou sur une autoroute, la partie à droite est une bande d’arrêt d’urgence ; Sur une route ordinaire c’est une bande de stationnement.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/3.jpg"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "question": "À quelle vitesse maximale pouvez-vous circuler sur une voie publique ordinaire en Flandre ?",
+      "propositions": [],
+      "correctAnswer": "70",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’. En Flandre la vitesse maximale hors agglomération est de 70 km/h (sauf si les  signaux routiers  ou règles imposent une limite de vitesse différente.En Wallonie, dans les mêmes conditions la vitesse maximale est de 90 km/heure.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/4.jpg"
+    },
+    {
+      "id": 5,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Signal de préavis annonçant un évitement"
+        },
+        {
+          "letter": "B",
+          "text": "Signal de préavis annonçant la réduction du nombre de bandes de circulation"
+        },
+        {
+          "letter": "C",
+          "text": "Signal de préavis annonçant une traversée de la berme centrale"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’. Signification: Signal de préavis annonçant la réduction du nombre de bandes de circulation.Signal d’indication temporaire car orange.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/5.jpg"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "question": "Comment s’appelle la partie de la voie publique où vous voyez le point d’interrogation ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La bande de circulation"
+        },
+        {
+          "letter": "B",
+          "text": "La chaussée"
+        },
+        {
+          "letter": "C",
+          "text": "La voie publique"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’. C’est la chaussée.Cette chaussée a deux bandes de circulation.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/6.jpg"
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "question": "Ce signal routier signifie : travaux.À quelle catégorie de signaux appartient-il ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Signal d’obligation"
+        },
+        {
+          "letter": "B",
+          "text": "Signal d’indication"
+        },
+        {
+          "letter": "C",
+          "text": "Signal de danger"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’. La majorité des signaux triangulaires avec une bordure rouge sont des signaux de danger.Les signaux de danger sont placés à une distance approximative de 150 m de l'endroit dangereux.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/7.jpg"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "question": "Les marquages routiers jaunes ou orange ont la même signification que les marques routières blanches.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’. Lors de travaux sur la voie publique, des lignes provisoires de couleur jaune/orange, continues ou discontinues, sont souvent peintes au sol. C’est marques ont la même signification que celles de couleur blanche.Bon à savoirSi vous observez des lignes blanches et des lignes jaune/orange, ne tenez compte que des lignes provisoires oranges car celles-ci annulent la validité des blanches.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/8.jpg"
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "question": "Quels conducteurs peuvent aussi emprunter la bande de circulation réservée aux autobus ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement les conducteurs de motocyclettes"
+        },
+        {
+          "letter": "B",
+          "text": "Seulement les motocyclettes et les cyclomoteurs"
+        },
+        {
+          "letter": "C",
+          "text": "Motocyclettes, cyclomoteurs et bicyclettes"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’. Seulement les conducteurs de motocyclettes.ExplicationIl y a un signal blanc qui autorise ces conducteurs, les autres proposés dans la question ne sont pas repris sur le signal et ne sont dès lors pas autorisés.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/9.jpg"
+    },
+    {
+      "id": 10,
+      "type": "yes_no",
+      "question": "La voiture blanche peut-elle franchir la ligne discontinue pour dépasser la voiture rouge ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’.Explication, la ligne est discontinue, elle peut être franchie pour dépasser mais il faudra ensuite reprendre sa place à droite (sauf exceptions)  mais souvenez vous, vous ne pouvez pas franchir une ligne continue pour dépasser une voiture par la gauche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/10.jpg"
+    },
+    {
+      "id": 11,
+      "type": "multiple_choice",
+      "question": "À quelle catégorie appartient ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Signal de danger"
+        },
+        {
+          "letter": "B",
+          "text": "Signal d’indication"
+        },
+        {
+          "letter": "C",
+          "text": "Signal d’obligation"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’.Signal annonçant des flèches sur la chaussée et prescrivant le choix d’une bande de circulation. Ce signal peut indiquer les différentes directions auxquelles chacune des bandes donnent accès.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/11.jpg"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal d’indication ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Signal de préavis annonçant une traversée de la berme centrale"
+        },
+        {
+          "letter": "B",
+          "text": "Signal de préavis annonçant un évitement"
+        },
+        {
+          "letter": "C",
+          "text": "Circulation admise dans les deux sens sur une section de chaussée à sens unique"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’.Signification : Signal de préavis annonçant une traversée de la berme centrale.Signal d’indication temporaire.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/12.jpg"
+    },
+    {
+      "id": 13,
+      "type": "multiple_choice",
+      "question": "Sur ces marquages routiers, vous ne pouvez ni circuler, ni vous arrêter, ni stationner.Comment s’appellent ces marquages routiers ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Zone d’évitement"
+        },
+        {
+          "letter": "B",
+          "text": "Marques en damier"
+        },
+        {
+          "letter": "C",
+          "text": "Zone d’interdiction"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’.Sur une zone d’évitement vous ne pouvez pas circuler, vous arrêter ou stationner.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/13.jpg"
+    },
+    {
+      "id": 14,
+      "type": "yes_no",
+      "question": "Pouvez-vous vous arrêter sur une bande bus pour laisser descendre un passager ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’.La bande bus ne fait pas partie de la chaussée. Vous ne pouvez pas y circuler (sauf cas particuliers (cfr leçon) et donc l’arrêt n’y est pas autorisé vu qu’il faut y circuler pour pouvoir s’arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/14.jpg"
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal d’indication ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Signal de préavis annonçant une traversée de la berme centrale"
+        },
+        {
+          "letter": "B",
+          "text": "Circulation admise dans les deux sens sur une section de chaussée à sens unique"
+        },
+        {
+          "letter": "C",
+          "text": "Signal de préavis annonçant la réduction du nombre de bandes de circulation"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’.Signification : Circulation admise dans les deux sens sur une section de chaussée à sens unique.Signal d’indication temporaire.Explication, on se trouve déjà en double sens dans la chaussée habituellement en sens unique et en sens contraire.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/15.jpg"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "question": "Quels conducteurs peuvent aussi emprunter la bande de circulation réservée aux autobus ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement les cyclistes"
+        },
+        {
+          "letter": "B",
+          "text": "Seulement les cyclistes et les cyclomoteurs de classe"
+        },
+        {
+          "letter": "C",
+          "text": "Les cyclistes et les cyclomoteurs de classe A et"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’.Le signal routier indique que les cyclistes peuvent rouler sur la bande réservée aux bus.Explication:Il y a un signal blanc qui autorise les cyclistes et ceux qui doivent suivre les règles des cyclistes (certains engins de déplacement) , les autres proposés dans la question ne sont pas repris sur le signal et ne sont dès lors pas autorisés.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/16.jpg"
+    },
+    {
+      "id": 17,
+      "type": "yes_no",
+      "question": "Le conducteur de la voiture peut-il tourner à gauche pour aller faire le plein d’essence ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’.Une ligne blanche ou jaune discontinue, vous pouvez franchir.Attention, devant certains garage ou entrée carrossable, la ligne est continue et donc la circulation n’est possible que dans un sens quand on quitte ou qu’on rentre dans cette propriété.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/17.jpg"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "question": "À quelle catégorie appartient ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Signal d’indication"
+        },
+        {
+          "letter": "B",
+          "text": "Signal de danger"
+        },
+        {
+          "letter": "C",
+          "text": "Signal d’obligation"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’.Signification : signal indiquant un rétrécissement ayant l’importance d’une bande de circulation.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/18.jpg"
+    },
+    {
+      "id": 19,
+      "type": "multiple_choice",
+      "question": "Quelle partie de la voie publique est indiquée ci-contre par la ligne jaune ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voie publique"
+        },
+        {
+          "letter": "B",
+          "text": "La chaussée"
+        },
+        {
+          "letter": "C",
+          "text": "La bande de circulation"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’.La chaussée.Cette chaussée n’est pas divisée en bandes de circulation.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/19.jpg"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "question": "Comment appelle-t-on la partie de la route indiquée par le point d’interrogation ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "L’autoroute"
+        },
+        {
+          "letter": "B",
+          "text": "La chaussée"
+        },
+        {
+          "letter": "C",
+          "text": "La bande de circulation"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’.C’est une bande de circulation.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/20.jpg"
+    },
+    {
+      "id": 21,
+      "type": "yes_no",
+      "question": "Le conducteur de la voiture peut-il tourner à gauche pour rejoindre l’accès à sa maison ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’.Il est interdit de franchir une ligne blanche continue même pour entrer dans sa propriété. C’est une infraction grave qui implique une perte de 5 points à la théorie et une déchéance du droit de conduire pour un jeune conducteur.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/21.jpg"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "question": "Sur cette photo, la ligne jaune indique une chaussée divisée en deux bandes de circulation.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’.Cette chaussée n’est pas divisée en bandes de circulation, car il n’y a aucune line blanche continue ou discontinue au milieu de la chaussée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/22.jpg"
+    },
+    {
+      "id": 23,
+      "type": "multiple_choice",
+      "question": "Si la chaussée de l’autoroute compte au moins trois bandes de circulation, alors les conducteurs peuvent choisir librement la bande sur laquelle ils veulent circuler.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’. Même lorsque l’autoroute a trois bandes de circulation, en conditions normales, les conducteurs doivent rouler sur la bande de droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/23.jpg"
+    },
+    {
+      "id": 24,
+      "type": "yes_no",
+      "question": "La voiture blanche peut-elle dépasser la voiture bleue par la gauche ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’. Il y a une ligne jaune continue au milieu de la chaussée.La ligne jaune est continue et les lignes jaunes annulent les marquages blancs.C’est une infraction grave qui implique une perte de 5 points à la théorie et une déchéance du droit de conduire pour un jeune conducteur.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/24.jpg"
+    },
+    {
+      "id": 25,
+      "type": "yes_no",
+      "question": "La photo est prise depuis le véhicule que vous conduisez.Pouvez-vous encore vous rabattre vers la bande de droite ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’. C’est autorisé, car il y a une ligne blanche discontinue entre les bandes. Il faut toutefois changer de bande avant la ligne continue.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/25.jpg"
+    },
+    {
+      "id": 26,
+      "type": "yes_no",
+      "question": "Pouvez-vous vous arrêter sur les marquages au sol à votre droite pour laisser descendre un passager ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’. Sur une zone d’évitement, vous ne pouvez ni circuler, ni s’ arrêter ni stationner.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/26.jpg"
+    },
+    {
+      "id": 27,
+      "type": "multiple_choice",
+      "question": "Qu’indique cette ligne jaune ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voie publique"
+        },
+        {
+          "letter": "B",
+          "text": "La chaussée"
+        },
+        {
+          "letter": "C",
+          "text": "La bande de circulation"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’.C’est la chaussée. Avec ce marquage routier elle est divisée en deux bandes de circulation ; toutefois comme on montre les deux bandes, cela concerne toute la partie désignée qui est la chaussée",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/27.jpg"
+    },
+    {
+      "id": 28,
+      "type": "yes_no",
+      "question": "La voiture A peut-elle se déplacer vers la gauche ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’.ExplicationIl s’agit d’un changement de bande. Vous ne pouvez pas franchir une ligne blanche continue.C’est une infraction grave qui implique une perte de 5 points à la théorie et une déchéance du droit de conduire pour un jeune conducteur.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/28.jpg"
+    },
+    {
+      "id": 29,
+      "type": "yes_no",
+      "question": "La photo est prise depuis le véhicule que vous conduisez.Pouvez-vous encore vous déplacer vers la gauche ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’.Oui, car il y a une ligne blanche discontinue à votre gauche.Il s’agit d’un changement de bandeIl faut toutefois changer de bande avant la ligne continue.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/29.jpg"
+    },
+    {
+      "id": 30,
+      "type": "yes_no",
+      "question": "Vous vous êtes trompé de sortie.Pouvez-vous encore rouler vers la gauche ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’.Sur une zone d’évitement, vous ne pouvez pas circuler, vous arrêter ou stationner.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/30.jpg"
+    },
+    {
+      "id": 31,
+      "type": "multiple_choice",
+      "question": "La circulation est dense et il y a une réduction du nombre de bandes de circulation.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "L'insertion selon le principe de la tirette est obligatoire"
+        },
+        {
+          "letter": "B",
+          "text": "L'insertion selon le principe de la tirette n'est pas obligatoire, juste conseillée et courtoise"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’.Le principe de la tirette est obligatoire quand la circulation est ralentie et qu’il y a des bandes.Les conducteurs qui, lorsque la circulation est fortement ralentie, circulent sur une bande de circulation qui prend fin ou sur laquelle la circulation est interrompue, peuvent s’intercaler sur la bande libre adjacente seulement juste devant le rétrécissement.Les conducteurs qui circulent sur cette bande libre, doivent céder tour à tour, juste devant le rétrécissement, la priorité à un conducteur qui s’intercale; si la circulation est interrompue aussi bien sur la bande de gauche que sur celle de droite, la priorité doit être cédée à un conducteur qui se trouve sur la bande de droite et ensuite à un conducteur qui se trouve sur la bande de gauche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/31.jpg"
+    },
+    {
+      "id": 32,
+      "type": "multiple_choice",
+      "question": "Circulation dense. Deux bandes de circulation disparaissent.Dans quel ordre les voitures peuvent-elles continuer ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Rouge - Noire - Bleue"
+        },
+        {
+          "letter": "B",
+          "text": "Noire - Rouge - Bleue"
+        },
+        {
+          "letter": "C",
+          "text": "Rouge - Bleue - Noire"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’.Le principe de la tirette est obligatoire quand la circulation est ralentie et qu’il y a des bandes..Les conducteurs qui, lorsque la circulation est fortement ralentie, circulent sur une bande de circulation qui prend fin ou sur laquelle la circulation est interrompue, peuvent s’intercaler sur la bande libre adjacente seulement juste devant le rétrécissement.Les conducteurs qui circulent sur cette bande libre, doivent céder tour à tour, juste devant le rétrécissement, la priorité à un conducteur qui s’intercale; si la circulation est interrompue aussi bien sur la bande de gauche que sur celle de droite, la priorité doit être cédée à un conducteur qui se trouve sur la bande de droite et ensuite à un conducteur qui se trouve sur la bande de gauche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/32.jpg"
+    },
+    {
+      "id": 33,
+      "type": "multiple_choice",
+      "question": "Les bandes de gauche et de droite sont fermées.La voiture B passe en premier. Qui peut alors suivre ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Voiture A sur la bande du milieu"
+        },
+        {
+          "letter": "B",
+          "text": "Voiture C sur la bande de gauche"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’.La voiture A doit céder la priorité à la voiture qui circule sur la bande de droite, puis la priorité à la voiture sur la bande de gauche.ExplicationLe principe de la tirette est obligatoire quand la circulation est ralentie et qu’il y a des bandes..Les conducteurs qui, lorsque la circulation est fortement ralentie, circulent sur une bande de circulation qui prend fin ou sur laquelle la circulation est interrompue, peuvent s’intercaler sur la bande libre adjacente seulement juste devant le rétrécissement.Les conducteurs qui circulent sur cette bande libre, doivent céder tour à tour, juste devant le rétrécissement, la priorité à un conducteur qui s’intercale; si la circulation est interrompue aussi bien sur la bande de gauche que sur celle de droite, la priorité doit être cédée à un conducteur qui se trouve sur la bande de droite et ensuite à un conducteur qui se trouve sur la bande de gauche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/33.jpg"
+    },
+    {
+      "id": 34,
+      "type": "yes_no",
+      "question": "Dans une agglomération, vous circulez sur une voie publique à deux chaussées qui comporte deux bandes dans votre direction.Pouvez-vous circuler dans celle de gauche ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’.Explication Les conditions préalables suivantes sont réuniesa) nous sommes en agglomérationb) il y a des bandes de circulationLe choix de la bande est donc possible car nous sommes sur une chaussée à sens unique (pas de signal mais bien une voie publique à deux chaussées distinctes)Dans les agglomérations les conducteurs peuvent emprunter la bande qui convient le mieux à leur destination.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/34.jpg"
+    },
+    {
+      "id": 35,
+      "type": "multiple_choice",
+      "question": "Quel signal routier indique une rétrécissement de la chaussée à droite ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Signal 1"
+        },
+        {
+          "letter": "B",
+          "text": "Signal 2"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Signal 1: Signal de danger.Signal 2: Signal indiquant un rétrécissement ayant l'importance d'une bande de circulation.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/35.jpg"
+    },
+    {
+      "id": 36,
+      "type": "multiple_choice",
+      "question": "Il faut faire la tirette. Où devez-vous vous insérer ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Dès que possible"
+        },
+        {
+          "letter": "B",
+          "text": "Dès que vous le pouvez en toute sécurité"
+        },
+        {
+          "letter": "C",
+          "text": "Juste avant la fin de la bande de circulation"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 2 – ‘Bandes de circulation’. Le principe de la tirette est obligatoire lorsqu'une bande de circulation disparaît et que la circulation est fortement ralentie ou à l'arrêt (embouteillage). Vous devez vous insérer juste avant la fin de la bande supprimée.Lorsque vous entrez sur une autoroute, il ne faut pas faire la tirette, mais céder le passage aux conducteurs qui circulent déjà sur l’autoroute.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/36.jpg"
+    },
+    {
+      "id": 37,
+      "type": "multiple_choice",
+      "question": "La photo est prise depuis la voiture que vous conduisez.Vous voulez tourner à droite au carrefour.Pouvez-vous rouler ici sur la bande bus ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Non"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, c’est permis"
+        },
+        {
+          "letter": "C",
+          "text": "Ici, vous devez le faire"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "À l’approche d’un carrefour, vous pouvez rouler sur la bande bus si vous voulez tourner à droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/37.jpg"
+    },
+    {
+      "id": 38,
+      "type": "multiple_choice",
+      "question": "Cette voiture peut-elle se rabattre sur la bande de droite ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 2La ligne blanche continue est de son côté. Il ne peut pas la franchir.Après un dépassement, une voiture peut cependant franchir la ligne continue pour revenir sur la bande de droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/38.jpg"
+    },
+    {
+      "id": 39,
+      "type": "yes_no",
+      "question": "Une chaussée subdivisée en bandes de circulation.La voiture noire peut-elle dépasser la grise par la gauche ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 2On ne peut pas franchir une ligne blanche continue entre les bandes de circulation pour dépasser un véhicule.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/39.jpg"
+    },
+    {
+      "id": 40,
+      "type": "multiple_choice",
+      "question": "À quelle vitesse maximale la voiture blanche peut-elle rouler sur cette route ordinaire située en Région wallonne ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "120 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "90 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "70 km/h"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 2Sur une route ordinaire, dans des conditions normales, la vitesse maximale autorisée en Région wallonne est de 90 km/h.En Région flamande et en Région de Bruxelles-Capitale, elle est de 70 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/40.jpg"
+    },
+    {
+      "id": 41,
+      "type": "multiple_choice",
+      "question": "À quelle vitesse maximale la voiture rougee peut-elle rouler sur cette route ordinaire située en Région de Bruxelles-Capitale ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "120 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "90 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "70 km/h"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 2Sur une route ordinaire, dans des conditions normales, la vitesse maximale autorisée en Région wallonne est de 90 km/h.En Région flamande et en Région de Bruxelles-Capitale, elle est de 70 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/41.jpg"
+    },
+    {
+      "id": 42,
+      "type": "multiple_choice",
+      "question": "Le conducteur se rend compte qu’il roule dans la mauvaise direction.Peut-il faire demi-tour ici ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, s’il ne gêne pas les autres conducteurs"
+        },
+        {
+          "letter": "C",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 2Il est interdit de franchir une ligne blanche continue, que ce soit pour tourner ou pour faire demi-tour.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/42.jpg"
+    },
+    {
+      "id": 43,
+      "type": "multiple_choice",
+      "question": "Pourquoi devez-vous appliquer le principe de la tirette ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Pour la sécurité, afin d’éviter des accidents"
+        },
+        {
+          "letter": "B",
+          "text": "Pour fluidifier la circulation"
+        },
+        {
+          "letter": "C",
+          "text": "Pour être courtois dans la circulation"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 2Le principe de la tirette est obligatoire en cas de trafic très lent ou de file lorsque l’une des voies disparaît.Vous ne pouvez vous insérer sur la voie libre qu’à l’approche immédiate du rétrécissement de la chaussée",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/43.jpg"
+    }
+  ]
+}

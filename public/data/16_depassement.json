@@ -1,0 +1,1083 @@
+{
+  "id": "16_depassement",
+  "name": "16 depassement",
+  "totalQuestions": 81,
+  "questions": [
+    {
+      "id": 1,
+      "type": "yes_no",
+      "question": "Au-delà de ce signal routier, le conducteur d’une motocyclette peut-il dépasser une voiture par la gauche ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/8.jpg"
+    },
+    {
+      "id": 2,
+      "type": "yes_no",
+      "question": "La voiture bleue peut-elle dépasser le camion par la gauche ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Mais un camion ne peut pas dépasser par la gauche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/9.jpg"
+    },
+    {
+      "id": 3,
+      "type": "yes_no",
+      "question": "Le conducteur d’une voiture veut dépasser une autre par la gauche.Peut-il le faire ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  200 mètres plus loin, il ne peut pas.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/3.jpg"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "question": "La voiture grise reste sur la bande du milieu. Pouvez-vous la dépasser de manière à suivre cette flèche ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Non"
+        },
+        {
+          "letter": "B",
+          "text": "Oui"
+        },
+        {
+          "letter": "C",
+          "text": "Oui, mais seulement s’il y a 3 bandes de circulation dans votre sens de marche"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Vous devez dépasser par la gauche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/5.jpg"
+    },
+    {
+      "id": 5,
+      "type": "multiple_choice",
+      "question": "Vous conduisez la voiture bleue. Le chauffeur devant vous roule à 70 km/h. Vous pouvez dépasser ce chauffeur par la gauche ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, c’est autorisé"
+        },
+        {
+          "letter": "B",
+          "text": "Non, parce que la vitesse est limitée à 70 km/h"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  La vitesse maximale sur votre bande est de 120 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/44.jpg"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "question": "La voiture rouge roule sur l'autoroute. La voiture A roule à droite devant lui et la voiture B à gauche. La voiture rouge veut dépasser la voiture",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le conducteur ralentit, roule derrière la voiture B et klaxonne brièvement pour que la voiture B dévie vers la droite"
+        },
+        {
+          "letter": "B",
+          "text": "Le conducteur dépasse la voiture"
+        },
+        {
+          "letter": "C",
+          "text": "Le conducteur roule derrière la voiture B et attend qu'elle vire à droite"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Lors du dépassement d'un conducteur, vous pouvez donner un bref avertissement avec le klaxon si nécessaire. Ici, vous ne dépassez pas, mais vous voulez forcer quelqu'un à changer de voie avec le klaxon, ce qui peut entraîner une agression de la circulation",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/12.jpg"
+    },
+    {
+      "id": 7,
+      "type": "yes_no",
+      "question": "Pouvez-vous dépasser par la gauche ici ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  C’est interdit de dépasser par la gauche : un véhicule attelé, un véhicule à plus de deux roues ou un véhicule à moteur à deux roues, sauf s’il y a des barrières ou si le feu blanc clignote.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/25.jpg"
+    },
+    {
+      "id": 8,
+      "type": "yes_no",
+      "question": "Vous avez le permis de conduire provisoire B.Pouvez-vous dépasser un camion au-delà de ce signal routier ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  200 m plus loin, il est interdit.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/31.jpg"
+    },
+    {
+      "id": 9,
+      "type": "yes_no",
+      "question": "Peut-on dépasser un cyclomoteur à deux roues par la gauche sur un dispositif surélevé ?",
+      "correctAnswer": "NON",
+      "explanation": "On ne peut dépasser qu’un cycliste.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/58.jpg"
+    },
+    {
+      "id": 10,
+      "type": "yes_no",
+      "question": "Une chaussée divisée en bandes de circulation hors agglomération.Le camion rouge peut-il dépasser la voiture blanche ?",
+      "correctAnswer": "NON",
+      "explanation": "Ce signal d’interdiction indique que les camions ou les véhicules avec une M.M.A. de plus de 3500 kg ne peuvent pas dépasser :- un attelage,- ou un véhicule ayant plus de deux roues.L’interdiction de dépasser est valable :- jusqu’au prochain carrefour inclus,- ou elle se termine plus tôt si vous voyez le panneau « fin d’interdiction de dépasser ».Un conducteur de voiture particulière peut donc dépasser un camion par la gauche après ce panneau.Un autobus peut également dépasser, car ce n’est pas un camion.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/77.jpg"
+    },
+    {
+      "id": 11,
+      "type": "yes_no",
+      "question": "La voiture bleue peut-elle dépasser la rouge par la gauche ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.   Ce n’est pas interdit.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/41.jpg"
+    },
+    {
+      "id": 12,
+      "type": "yes_no",
+      "question": "Peut une voiture dépasser un cyclomoteur par la gauche?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/46.jpg"
+    },
+    {
+      "id": 13,
+      "type": "yes_no",
+      "question": "Sur cette route à sens unique, à l’approche du sommet d’une côte, il y a deux bandes de circulation dans votre sens de marche.Pouvez-vous dépasser une voiture par la gauche ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Vous pouvez dépasser par la gauche, quand la chaussée est divisée en voies et vous ne traversez pas la ligne blanche continue.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/19.jpg"
+    },
+    {
+      "id": 14,
+      "type": "yes_no",
+      "question": "Vous roulez sur une route où vous voyez ce signal routier.Pouvez-vous dépasser une voiture par la gauche lors du prochain carrefour, si cela peut-être fait en toute sécurité ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Il est interdit aux intersections où vous devez donner la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/17.jpg"
+    },
+    {
+      "id": 15,
+      "type": "yes_no",
+      "question": "En dehors d'une agglomération.Lorsque vous dépassez ce vélo par la gauche, vous devez maintenir une distance de sécurité latérale de 1,5 mètre.",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Si vous voulez dépasser un cycliste par la gauche, vous devez laisser un espace latéral de sécurité de 1,5 mètre.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/36.jpg"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "question": "Où ne pouvez-vous pas dépasser un cycliste par la gauche ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Dans un virage dangereux sans visibilité"
+        },
+        {
+          "letter": "B",
+          "text": "À une intersection avec priorité de droite"
+        },
+        {
+          "letter": "C",
+          "text": "Sur une voie prioritaire"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 16Dans ou avant un virage dangereux, il est interdit de dépasser par la gauche un attelage (par exemple cheval avec charrette), un véhicule à plus de deux roues ou un véhicule motorisé à deux roues.Mais si la visibilité est très mauvaise, il est également interdit de dépasser un cycliste.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/66.jpg"
+    },
+    {
+      "id": 17,
+      "type": "yes_no",
+      "question": "Une chaussée non divisée en bandes de circulation dans une agglomération.La voiture rouge peut-elle dépasser la voiture blanche ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 16Ce signal d’interdiction indique que les camions ou les véhicules avec une M.M.A. de plus de 3500 kg ne peuvent pas dépasser :- un attelage,- ou un véhicule ayant plus de deux roues.L’interdiction de dépasser est valable :- jusqu’au prochain carrefour inclus,- ou elle se termine plus tôt si vous voyez le panneau « fin d’interdiction de dépasser ».Un conducteur de voiture particulière peut donc dépasser un camion par la gauche après ce panneau.Un autobus peut également dépasser, car ce n’est pas un camion.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/76.jpg"
+    },
+    {
+      "id": 18,
+      "type": "yes_no",
+      "question": "Le conducteur de la voiture bleue roule plus vite que la rouge dans cet exemple.Est-ce permis ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Ce qui n’est pas considéré comme un dépassement par le code de la route est mentionné dans le film de cette leçon.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/33.jpg"
+    },
+    {
+      "id": 19,
+      "type": "multiple_choice",
+      "question": "Pouvez-vous dépasser par la gauche la moto à ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, si vous laissez une distance latérale suffisante"
+        },
+        {
+          "letter": "C",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Aux carrefours où vous avez la priorité, vous pouvez dépasser d’autres conducteurs par la gauche.- Priorité au prochain carrefour.- Route prioritaire.- Feu vert.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/63.jpg"
+    },
+    {
+      "id": 20,
+      "type": "yes_no",
+      "question": "La moto peut-elle dépasser la moto par la gauche ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 16Le signal routier rond rouge indique qu’il est interdit aux conducteurs de :- dépasser un attelage, ou- dépasser un véhicule ayant plus de deux roues.L’interdiction de dépasser est valable :- jusqu’au prochain carrefour inclus, ou- elle se termine plus tôt si vous rencontrez le panneau de fin d’interdiction.Un automobiliste peut donc dépasser une motocyclette à deux roues.Mais le conducteur de la moto ne peut pas dépasser une voiture, car une voiture a plus de deux roues.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/74.jpg"
+    },
+    {
+      "id": 21,
+      "type": "yes_no",
+      "question": "La voiture brune roule à 35 km/h.La voiture bleue peut-elle la dépasser par la gauche ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  La vitesse maximale dans une agglomération en Wallonnie est de 50 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/14.jpg"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "question": "Un carrefour sans feux de signalisation et sans panneaux réglant la priorité.La voiture bleue peut-elle dépasser un cyclomoteur à deux roues par la gauche ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Il s’agit d’un carrefour où la priorité de droite s’applique.À ce carrefour, cette voiture ne peut dépasser que les cyclistes par la gauche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/59.jpg"
+    },
+    {
+      "id": 23,
+      "type": "yes_no",
+      "question": "Est ce que en agglomération, la voiture bleue peut dépasser par la droite la voiture brune?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.En agglomération les conducteurs sont autorisés à conduire sur la voie qu'ils choisissent:  . soit sur une rue à sens unique qui est divisé en voies, . soit sur une rue à quatre voies ou plus, dont au moins deux pour chaque direction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/47.jpg"
+    },
+    {
+      "id": 24,
+      "type": "yes_no",
+      "question": "La voiture noire peut-elle dépasser la voiture grise par la gauche ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Aux intersections où on a la priorité de droite, le dépassement par la gauche est interdit",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/1.jpg"
+    },
+    {
+      "id": 25,
+      "type": "yes_no",
+      "question": "Vous avez le permis de conduire provisoire B.En voiture, pouvez-vous dépasser un cheval attelé par la gauche ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/32.jpg"
+    },
+    {
+      "id": 26,
+      "type": "yes_no",
+      "question": "Le conducteur de la voiture brune peut-il dépasser la bleue par la gauche ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Il est permis parce que le feu est vert.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/30.jpg"
+    },
+    {
+      "id": 27,
+      "type": "multiple_choice",
+      "question": "Vous conduisez derrière un camion poubelle, difficile à dépasser.Que faites-vous?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous donnez un bref signal avec votre klaxon"
+        },
+        {
+          "letter": "B",
+          "text": "Vous continuez à suivre patiemment"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/42.jpg"
+    },
+    {
+      "id": 28,
+      "type": "yes_no",
+      "question": "Il n’y a pas de cyclistes sur ou près du passage.La voiture bleue peut-elle dépasser la brune par la gauche ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Il est interdit de dépasser sur ou près du passage pour cyclistes ou piétons.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/18.jpg"
+    },
+    {
+      "id": 29,
+      "type": "yes_no",
+      "question": "Cette photo est prise depuis la voiture que vous conduisez.Pouvez-vous dépasser le cycliste par la gauche dans ce carrefour ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.Le dépassement par la gauche a) d'un véhicule attelé,b) d'un véhicule à moteur à deux roues ouc) d'un véhicule à plus de deux rouesest interdit:2° a) dans les carrefours où la priorité de droite est applicable;",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/28.jpg"
+    },
+    {
+      "id": 30,
+      "type": "yes_no",
+      "question": "Pouvez-vous dépasser un vélo par la gauche dans ces carrefours ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Dépasser un vélo par la gauche n’est pas interdit aux intersections où vous devez donner la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/39.jpg"
+    },
+    {
+      "id": 31,
+      "type": "multiple_choice",
+      "question": "La voiture bleue (A) continue à rouler sur la voie de gauche.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Ceci est permis"
+        },
+        {
+          "letter": "B",
+          "text": "Ce n'est pas autorisé"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’. En agglomération les conducteurs sont autorisés à conduire sur la voie qu'ils choisissent:  . soit sur une rue à sens unique qui est divisé en voies, . soit sur une rue à quatre voies ou plus, dont au moins deux pour chaque direction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/49.jpg"
+    },
+    {
+      "id": 32,
+      "type": "multiple_choice",
+      "question": "La lumière d'angle mort dans le rétroviseur latéral donne un avertissement.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Je fais confiance uniquement au signal d'angle mort"
+        },
+        {
+          "letter": "B",
+          "text": "Je regarde uniquement dans le rétroviseur latéral"
+        },
+        {
+          "letter": "C",
+          "text": "Je regarde dans le rétroviseur latéral et par-dessus l'épaule"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "Les angles morts sont des zones que le conducteur ne peut voir (en vision directe) du fait de la structure de la voiture ni en vision indirecte (utilisation des rétroviseurs) et où il devra faire une vérification préalable en regardant loin devant lui ou en tournant la tête pour regarder par la fenêtre du passager de droite ou par sa propre fenêtre latérale (de coté).",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/57.jpg"
+    },
+    {
+      "id": 33,
+      "type": "multiple_choice",
+      "question": "Vous devez dépasser ce tram par la droite.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Dans des conditions normales, vous devez dépasser les trams par la droite",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/20.jpg"
+    },
+    {
+      "id": 34,
+      "type": "multiple_choice",
+      "question": "Peut-on dépasser un cyclomotoriste par la gauche sur un dispositif surélevé à l’intérieur d’une agglomération ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, toujours"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, en laissant un mètre d’espace latéral de sécurité"
+        },
+        {
+          "letter": "C",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 16Sur un dispositif surélevé, tu ne peux dépasser qu’un cycliste par la gauche.(Lors de l’entrée en vigueur du nouveau code de la route fin 2026, cela sera aussi interdit.)",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/71.jpg"
+    },
+    {
+      "id": 35,
+      "type": "yes_no",
+      "question": "La voiture peut-elle dépasser le camion par la gauche ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 16Ce signal d’interdiction indique que les camions ou les véhicules avec une M.M.A. de plus de 3500 kg ne peuvent pas dépasser :- un attelage,- ou un véhicule ayant plus de deux roues.L’interdiction de dépasser est valable :- jusqu’au prochain carrefour inclus,- ou elle se termine plus tôt si vous voyez le panneau « fin d’interdiction de dépasser ».Un conducteur de voiture particulière peut donc dépasser un camion par la gauche après ce panneau.Un autobus peut également dépasser, car ce n’est pas un camion.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/75.jpg"
+    },
+    {
+      "id": 36,
+      "type": "multiple_choice",
+      "question": "Le camion peut-il dépasser la voiture bleue par la gauche ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, car un camion n’est pas une voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 16Le signal routier rond rouge indique qu’il est interdit aux conducteurs de :- dépasser un attelage, ou- dépasser un véhicule ayant plus de deux roues.L’interdiction de dépasser est valable :- jusqu’au prochain carrefour inclus,- ou elle se termine plus tôt si vous voyez le panneau « fin d’interdiction de dépasser ».Un automobiliste peut donc dépasser une motocyclette à deux roues,mais le motocycliste ne peut pas dépasser une voiture, car une voiture a plus de deux roues.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/78.jpg"
+    },
+    {
+      "id": 37,
+      "type": "yes_no",
+      "question": "Le conducteur de la voiture rouge peut-il dépasser la bleue par la gauche ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Une ligne continue et une ligne discontinue de couleur blanche sont peintes l’une à côté de l’autre. Si la ligne discontinue se trouve de votre côté de la chaussée, vous pouvez la franchir pour dépasser par la gauche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/27.jpg"
+    },
+    {
+      "id": 38,
+      "type": "number",
+      "question": ". Vous souhaitez doubler une voiture. Que fais-tu en premier ? 1. Vous mettez votre clignotant en marche. 2. Vous regardez par-dessus votre épaule. 3. Vous vous regardez dans le rétroviseur extérieur. 4. Vous regardez dans le rétroviseur.",
+      "correctAnswer": "4",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.Vérifiez toujours d'abord dans le rétroviseur.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/55.jpg"
+    },
+    {
+      "id": 39,
+      "type": "yes_no",
+      "question": "La voiture bleue peut-elle dépasser la brune par la gauche ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  C'est interdit aux intersections où vous devez donner la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/22.jpg"
+    },
+    {
+      "id": 40,
+      "type": "multiple_choice",
+      "question": "Dans une agglomération.Si vous voulez dépasser le cycliste par la gauche, vous devez laisser un espace latéral de sécurité de ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... 1 mètre"
+        },
+        {
+          "letter": "B",
+          "text": "... 1,5 mètre"
+        },
+        {
+          "letter": "C",
+          "text": "... 2 mètres"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.   Si vous voulez dépasser le cycliste par la gauche en dehors des agglomérations, vous devez laisser un espace latéral de sécurité de 1,5 mètre.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/29.jpg"
+    },
+    {
+      "id": 41,
+      "type": "multiple_choice",
+      "question": "La voiture peut-elle dépasser la charrette par la gauche ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 16Le panneau rond rouge indique qu’il est interdit aux conducteurs de :- dépasser un attelage, ou- dépasser un véhicule ayant plus de deux roues.L’interdiction de dépasser est valable :- jusqu’au prochain carrefour inclus,- ou elle se termine plus tôt si vous voyez le panneau « fin d’interdiction de dépasser ».Un automobiliste peut donc dépasser une motocyclette à deux roues,mais le motocycliste ne peut pas dépasser une voiture, car une voiture a plus de deux roues.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/79.jpg"
+    },
+    {
+      "id": 42,
+      "type": "yes_no",
+      "question": "En dehors d'une agglomération.Si vous dépassez ce cyclomoteur par la gauche, vous devez maintenir une distance de sécurité latérale de 1,5 mètre.",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Si vous voulez dépasser un cyclomoteur par la gauche, vous devez laisser un espace latéral de sécurité de 1,5 mètre.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/37.jpg"
+    },
+    {
+      "id": 43,
+      "type": "yes_no",
+      "question": "La voiture peut-elle dépasser le camion par la gauche ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 16Le panneau rond rouge indique qu’il est interdit aux conducteurs de :- dépasser un attelage, ou- dépasser un véhicule ayant plus de deux roues.L’interdiction de dépasser est valable :- jusqu’au prochain carrefour inclus, ou- elle se termine plus tôt si vous rencontrez le panneau de fin d’interdiction.Un automobiliste peut donc dépasser une motocyclette à deux roues.Mais le conducteur de la moto ne peut pas dépasser une voiture, car une voiture a plus de deux roues.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/72.jpg"
+    },
+    {
+      "id": 44,
+      "type": "yes_no",
+      "question": "Sur cette route, pouvez-vous dépasser une voiture par la gauche si vous roulez vous-même en voiture ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/38.jpg"
+    },
+    {
+      "id": 45,
+      "type": "multiple_choice",
+      "question": "Le feu blanc lunaire est allumé à ce passage à niveau à double voie.Quels véhicules pouvez-vous dépasser par la gauche si c’est possible en toute sécurité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Uniquement les cyclistes et assimilés"
+        },
+        {
+          "letter": "B",
+          "text": "Uniquement les cyclistes et les cyclomoteurs à deux roues"
+        },
+        {
+          "letter": "C",
+          "text": "Tous les véhicules"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Tant que les feux rouges ne clignotent pas, vous pouvez vous approcher du passage à niveau.Lorsque les feux rouges clignotent alternativement, vous devez vous arrêter et il est interdit de vous engager sur le passage à niveau.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/60.jpg"
+    },
+    {
+      "id": 46,
+      "type": "multiple_choice",
+      "question": "Pouvez-vous dépasser par la gauche la moto à ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, si vous laissez une distance latérale suffisante"
+        },
+        {
+          "letter": "C",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.Aux carrefours où il n’y a pas de signaux qui règlent la priorité, ou à ceux où vous trouvez ce signal routier et où la priorité de droite s’applique, il est interdit de dépasser par la gauche :un véhicule attelé,un véhicule à plus de deux roues,ou un véhicule à moteur à deux roues.(Un cycliste n’est pas un véhicule à moteur, vous pouvez donc le dépasser. Vous pouvez également dépasser un engin de déplacement.)",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/62.jpg"
+    },
+    {
+      "id": 47,
+      "type": "yes_no",
+      "question": "Pouvez-vous pendant les heures qui sont écrites sur la plaque d'indication, avec une voiture dépasser une autre voiture par la gauche ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.Ce signal routier ne concerne que les conducteurs de véhicules de plus de 3,5 tonnes, utilisés pour le transport de marchandises.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/51.jpg"
+    },
+    {
+      "id": 48,
+      "type": "multiple_choice",
+      "question": "La barrière de ce passage à niveau est ouverte et aucune sonnerie ne retentit.Cependant, les feux sont défectueux.Pouvez-vous dépasser une cyclomoteur par la gauche ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Aux passages à niveau signalés par ce panneau, il est interdit de dépasser par la gauche : un attelage ; un véhicule ayant plus de deux roues ; ou un véhicule à moteur à deux roues, sauf s’il y a des barrières ou si le feu blanc lunaire est allumé.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/64.jpg"
+    },
+    {
+      "id": 49,
+      "type": "yes_no",
+      "question": "Vous approchez d’un virage dangereux.Pouvez-vous dépasser par la gauche un cycliste qui roule sur la chaussée ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Le dépassement par la gauche est interdit lorsque le conducteur ne peut apercevoir les usagers venant en sens inverse à une distance suffisante pour effectuer le dépassement sans risque d'accident.Dans ou avant un virage dangereux ou la visibilité est insuffisante, il est interdit de dépasser par la gauche : un véhicule attelé, un véhicule à plus de deux roues ou un véhicule à moteur à deux roues.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/23.jpg"
+    },
+    {
+      "id": 50,
+      "type": "yes_no",
+      "question": "Tu passes avec ta voiture devant ce signal routier.Est-ce que tu peux dépasser une moto avec side-car par la gauche ?",
+      "correctAnswer": "NON",
+      "explanation": "Le signal rond rouge signifie qu’il est interdit aux conducteurs de dépasser par la gauche un attelage ou un véhicule ayant plus de deux roues. Cette interdiction de dépasser s’applique jusqu’au prochain carrefour, ou prend fin plus tôt si vous voyez le signal ‘Fin’.Ainsi, un automobiliste peut dépasser une moto à deux roues, mais pas une moto avec side-car.Inversement, un motard ne peut pas dépasser une voiture, car une voiture a plus de deux roues.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/65.jpg"
+    },
+    {
+      "id": 51,
+      "type": "multiple_choice",
+      "question": "Quelle distance latérale le conducteur doit-il laisser lorsqu'il dépasse le cycliste ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "0,5 mètre"
+        },
+        {
+          "letter": "B",
+          "text": "1 mètre"
+        },
+        {
+          "letter": "C",
+          "text": "1,5 mètres"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.Dans une agglomération: 1 mètre.En dehors d'une agglomération: 1,5 mètre.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/53.jpg"
+    },
+    {
+      "id": 52,
+      "type": "multiple_choice",
+      "question": "Le conducteur de la voiture bleue peut-il dépasser la voiture blanche pendant que celle-ci dépasse un cyclomoteur ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 16Sur une chaussée à double sens, il est autorisé de dépasser une voiture qui dépasse un cyclomoteur ou une moto.MAIS : il est interdit de dépasser une voiture qui est elle-même en train de dépasser une autre voiture.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/80.jpg"
+    },
+    {
+      "id": 53,
+      "type": "yes_no",
+      "question": "Les voitures sur les voies de circulation à gauche et à droite roulent très lentement. La voiture noire qui roule au milieu peut-elle dépasser par la gauche la voiture qui roule sur la bande droite ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Vous devez dépasser par la gauche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/43.jpg"
+    },
+    {
+      "id": 54,
+      "type": "yes_no",
+      "question": "Au-delà de ce signal routier, le conducteur d’une voiture peut-il dépasser un camion par la gauche ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Mais un camion ne peut pas dépasser par la gauche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/6.jpg"
+    },
+    {
+      "id": 55,
+      "type": "multiple_choice",
+      "question": "La voiture bleue ralentit.La voiture grise peut-elle dépasser par la gauche ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Non"
+        },
+        {
+          "letter": "B",
+          "text": "Oui"
+        },
+        {
+          "letter": "C",
+          "text": "Oui, s’il n’y a pas de piéton"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Il est interdit de dépasser sur ou près du passage pour cyclistes ou piétons.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/26.jpg"
+    },
+    {
+      "id": 56,
+      "type": "multiple_choice",
+      "question": "Quelle réponse est correcte ?Au-delà de ce signal routier ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... une voiture peut dépasser une moto par la gauche"
+        },
+        {
+          "letter": "B",
+          "text": "... une moto peut dépasser une voiture par la gauche"
+        },
+        {
+          "letter": "C",
+          "text": "... ni une moto ni une voiture peut dépasser par la gauche"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/48.jpg"
+    },
+    {
+      "id": 57,
+      "type": "yes_no",
+      "question": "Un passage à niveau muni de barrières. La lumière blanche clignote.Une voiture peut-elle dépasser un camion sur ce passage à niveau?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  C’est interdit de dépasser par la gauche : un véhicule attelé, un véhicule à plus de deux roues ou un véhicule à moteur à deux roues, sauf s’il y a des barrières ou si le feu blanc clignote.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/15.jpg"
+    },
+    {
+      "id": 58,
+      "type": "multiple_choice",
+      "question": "Si à cet endroit, je me dirige vers Bruxelles et je dépasse la voiture grise par la droite parce que je roule plus vite,  je n'effectue pas un dépassement.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Fausse"
+        },
+        {
+          "letter": "B",
+          "text": "Vraie"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Ce qui n’est pas considéré comme un dépassement par le code de la route est mentionné dans le film de cette leçon.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/24.jpg"
+    },
+    {
+      "id": 59,
+      "type": "multiple_choice",
+      "question": "Au-delà duquel de ces signaux routiers pouvez-vous dépasser une autre voiture par la gauche ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Signal 1"
+        },
+        {
+          "letter": "B",
+          "text": "Signal 2"
+        },
+        {
+          "letter": "C",
+          "text": "Signaux 1 et 2"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.   Dépasser une voiture par la gauche n’est pas interdit aux intersections où vous voyez ces signaux routiers.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/40.jpg"
+    },
+    {
+      "id": 60,
+      "type": "multiple_choice",
+      "question": "La voiture brune est stationnée.La voiture bleue...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... passe devant la voiture brune par la gauche"
+        },
+        {
+          "letter": "B",
+          "text": "... dépasse la brune par la gauche"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Vous ne pouvez pas dépasser un véhicule qui ne bouge pas.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/4.jpg"
+    },
+    {
+      "id": 61,
+      "type": "yes_no",
+      "question": "La voiture brune roule à 48 km/h. La voiture bleue peut-elle la dépasser par la gauche ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  La vitesse maximale dans une agglomération est de 50 km par heure.Le dépassement doit pouvoir avoir lieu suffisamment rapidement.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/7.jpg"
+    },
+    {
+      "id": 62,
+      "type": "yes_no",
+      "question": "Peut-on dépasser un cycliste par la gauche avec une voiture sur un dispositif surélevé ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 16Depuis des années, on a le droit de dépasser par la droite un cycliste qui s'apprête à tourner à gauche. Depuis 2023, le dépassement d'un cycliste par la gauche est également autorisé.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/69.jpg"
+    },
+    {
+      "id": 63,
+      "type": "yes_no",
+      "question": "Sur cette route ordinaire, la voiture bleue peut-elle dépasser ces deux voitures en même temps ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Si vous ne pouvez pas revenir en toute sécurité à droite vous pouvez dépasser les deux.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/11.jpg"
+    },
+    {
+      "id": 64,
+      "type": "yes_no",
+      "question": "Dans un carrefour muni de feux de signalisation, le feu devant vous est vert. Cependant, sous le feu vert, vous voyez ce signal routier.Dans ce carrefour, pouvez-vous dépasser par la gauche si c’est possible en toute sécurité?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Il est interdit aux intersections où vous devez donner la priorité. Les feux de signalisation fonctionnent.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/21.jpg"
+    },
+    {
+      "id": 65,
+      "type": "multiple_choice",
+      "question": "Au-delà de quel signal routier vous ne pouvez dépasser un cycliste sur la gauche ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Signal"
+        },
+        {
+          "letter": "B",
+          "text": "Signal"
+        },
+        {
+          "letter": "C",
+          "text": "Signal"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/54.jpg"
+    },
+    {
+      "id": 66,
+      "type": "yes_no",
+      "question": "Le conducteur de la voiture brune peut-il dépasser la voiture bleue par la gauche ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Il est autorisé sur une voie prioritaire.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/34.jpg"
+    },
+    {
+      "id": 67,
+      "type": "yes_no",
+      "question": "Peut-on dépasser par la droite un cycliste qui s’apprête à tourner à gauche sur un dispositif surélevé ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 16Depuis des années, on a le droit de dépasser par la droite un cycliste qui s'apprête à tourner à gauche. Depuis 2023, le dépassement d'un cycliste par la gauche est également autorisé.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/70.jpg"
+    },
+    {
+      "id": 68,
+      "type": "multiple_choice",
+      "question": "Quelle distance latérale le conducteur doit-il laisser lorsqu'il dépasse le cycliste ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "0,5 mètre"
+        },
+        {
+          "letter": "B",
+          "text": "1 mètre"
+        },
+        {
+          "letter": "C",
+          "text": "1,5 mètres"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.Dans une agglomération: 1 mètre.En dehors d'une agglomération: 1,5 mètre.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/52.jpg"
+    },
+    {
+      "id": 69,
+      "type": "multiple_choice",
+      "question": "Vous approchez d'une intersection et vous voyez un de ces signaux routiers.À quelle intersection pouvez-vous dépasser un cycliste par la gauche?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Intersection 1"
+        },
+        {
+          "letter": "B",
+          "text": "Intersection 2"
+        },
+        {
+          "letter": "C",
+          "text": "Intersection 1 et 2"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.Dépasser un vélo par la gauche n’est pas interdit aux intersections où vous devez donner la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/50.jpg"
+    },
+    {
+      "id": 70,
+      "type": "yes_no",
+      "question": "Au-delà de ces signaux routiers, une motocyclette peut-elle dépasser une voiture par la gauche ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/13.jpg"
+    },
+    {
+      "id": 71,
+      "type": "yes_no",
+      "question": "La moto peut-elle dépasser le camion par la gauche ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 16Le signal routier rond rouge indique qu’il est interdit aux conducteurs de :- dépasser un attelage, ou- dépasser un véhicule ayant plus de deux roues.L’interdiction de dépasser est valable :- jusqu’au prochain carrefour inclus, ou- elle se termine plus tôt si vous rencontrez le panneau de fin d’interdiction.Un automobiliste peut donc dépasser une motocyclette à deux roues.Mais le conducteur de la moto ne peut pas dépasser une voiture, car une voiture a plus de deux roues.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/73.jpg"
+    },
+    {
+      "id": 72,
+      "type": "multiple_choice",
+      "question": "Quelle distance latérale le conducteur de la voiture doit-il garder en dépassant le cyclomotoriste ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "1 mètre"
+        },
+        {
+          "letter": "B",
+          "text": "1,5 mètre"
+        },
+        {
+          "letter": "C",
+          "text": "Une distance suffisante"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 15   Lors du dépassement d’un cycliste ou d’un cyclomotoriste en agglomération, il faut garder 1 mètre de distance latérale.Hors agglomération, cette distance doit être d’au moins 1,5 mètre.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/68.jpg"
+    },
+    {
+      "id": 73,
+      "type": "multiple_choice",
+      "question": "Où est-il permis de dépasser un cyclomoteur par la gauche à une intersection ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Sur une route prioritaire"
+        },
+        {
+          "letter": "B",
+          "text": "Sur une route avec priorité à droite"
+        },
+        {
+          "letter": "C",
+          "text": "Sur une route prioritaire et une route avec priorité à droite"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/56.jpg"
+    },
+    {
+      "id": 74,
+      "type": "yes_no",
+      "question": "Sur cette chaussée à sens unique, la voiture brune veut tourner à gauche.La voiture bleue peut-elle dépasser la voiture brune par la droite ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  La voiture bleue est passée un signe qui interdit le dépassement par la gauche.Le signe n'interdit pas dépasser par la droite.Dans ce cas, la voiture bleue peut dépasser par la droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/2.jpg"
+    },
+    {
+      "id": 75,
+      "type": "multiple_choice",
+      "question": "Une rue à sens unique dans une agglomération.La voiture bleue peut-elle continuer à rouler sur cette bande de circulation ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 15Dans une agglomération, les conducteurs peuvent choisir la bande de circulation qui convient le mieux à leur destination, à condition que :- la chaussée soit divisée en bandes de circulation, et- l’on se trouve dans une agglomération.Cela est autorisé dans deux cas :- sur les routes à sens unique avec bandes de circulation ;- sur les routes à double sens comportant au moins quatre bandes, dont au moins deux par sens.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/81.jpg"
+    },
+    {
+      "id": 76,
+      "type": "multiple_choice",
+      "question": "Dépasser une voiture par la gauche alors que celle-ci en dépasse une autre par la gauche, s’appelle ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... un dépassement triple"
+        },
+        {
+          "letter": "B",
+          "text": "... redoubler"
+        },
+        {
+          "letter": "C",
+          "text": "... tritser"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  C’est tripler.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/16.jpg"
+    },
+    {
+      "id": 77,
+      "type": "multiple_choice",
+      "question": "Quelle distance latérale le conducteur de la voiture doit-il garder en dépassant le cyclomotoriste ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "1 mètre"
+        },
+        {
+          "letter": "B",
+          "text": "1,5 mètre"
+        },
+        {
+          "letter": "C",
+          "text": "Une distance suffisante"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 15   Lors du dépassement d’un cycliste ou d’un cyclomotoriste en agglomération, il faut garder 1 mètre de distance latérale.Hors agglomération, cette distance doit être d’au moins 1,5 mètre.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/67.jpg"
+    },
+    {
+      "id": 78,
+      "type": "yes_no",
+      "question": "Sur une chaussée divisée en bandes, vous vous approchez une montée à forte inclinaison. Pouvez-vous dépasser par la gauche un cyclomoteur ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  Vous pouvez dépasser par la gauche, quand la route est divisée en voies et vous ne traversez pas la ligne blanche continue.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/45.jpg"
+    },
+    {
+      "id": 79,
+      "type": "multiple_choice",
+      "question": "Désignez la réponse la plus correcte.Sur un dispositif surélevé, le conducteur d’une voiture...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... peut dépasser un cycliste par la gauche"
+        },
+        {
+          "letter": "B",
+          "text": "... peut dépasser un cyclomoteur et un cycliste par la gauche"
+        },
+        {
+          "letter": "C",
+          "text": "... ne peut ni dépasser un cycliste ni un cyclomoteur par la gauche"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.Sur un dispositif surélevé, le conducteur d’une voiture peut dépasser un cycliste par la gauche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/35.jpg"
+    },
+    {
+      "id": 80,
+      "type": "yes_no",
+      "question": "Un passage à niveau sans feu blanc et sans barrières.  Une voiture peut-elle y dépasser une motocyclette ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  C’est interdit de dépasser par la gauche : un véhicule attelé, un véhicule à plus de deux roues ou un véhicule à moteur à deux roues, sauf s’il y a des barrières ou si le feu blanc clignote.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/10.jpg"
+    },
+    {
+      "id": 81,
+      "type": "multiple_choice",
+      "question": "Vous ne pouvez pas dépasser cette voiture à ce carrefour.Mais qui pouvez-vous dépasser ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Un cycliste seulement"
+        },
+        {
+          "letter": "B",
+          "text": "Un cycliste et un cyclomoteur de classe A seulement"
+        },
+        {
+          "letter": "C",
+          "text": "Un cycliste, un cyclomoteur de classe A et une moto"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 15+16 – ‘Le dépassement’.  À un carrefour où la priorité de droite est d’application, vous ne pouvez dépasser que les cyclistes et assimilés, comme une trottinette électrique, par la gauche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/80/61.jpg"
+    }
+  ]
+}

@@ -1,0 +1,653 @@
+{
+  "id": "21_les_maneuvres",
+  "name": "21 les maneuvres",
+  "totalQuestions": 33,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "question": "Qui peut s’engager en premier dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture bleue"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture brune"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 21 – ‘Tourner à droite ou à gauche’.Le conducteur qui veut rouler tout droit à priorité.Le conducteur qui veut tourner à gauche accorde la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/1.jpg"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "question": "Dans quel ordre les conducteurs peuvent-ils s’engager dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Moto - Voiture bleue - Voiture brune"
+        },
+        {
+          "letter": "B",
+          "text": "Voiture bleue - Moto – Voiture brune"
+        },
+        {
+          "letter": "C",
+          "text": "Voiture bleue - Voiture brune - Moto"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 21 – ‘Tourner à droite ou à gauche’.Le signal routier à côté de la moto dit qu’il a la priorité.Suivant la voiture bleue, parce que le conducteur continue tout droit.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/2.jpg"
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "question": "Qui peut s’engager en premier dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture bleue"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture brune"
+        },
+        {
+          "letter": "C",
+          "text": "Moto"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 21 – ‘Tourner à droite ou à gauche’.L’agent indique que seule la moto peut conduire.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/3.jpg"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "question": "Qui peut s'engager d'abord dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture brune"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture bleue"
+        },
+        {
+          "letter": "C",
+          "text": "La moto"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 21 – ‘Tourner à droite ou à gauche’.L’agent indique que le moteur doit s’arrêter.Le conducteur qui désire conduire tout droit a la priorité.Le conducteur qui veut tourner à gauche, doit donner la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/4.jpg"
+    },
+    {
+      "id": 5,
+      "type": "multiple_choice",
+      "question": "Qui peut s’engager en premier dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture brune"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture bleue"
+        },
+        {
+          "letter": "C",
+          "text": "La moto"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 21 – ‘Tourner à droite ou à gauche’.L’agent indique que la voiture bleue doit s’arrêter.Le conducteur qui désire conduire tout droit a la priorité.Le conducteur qui veut tourner à gauche, doit donner la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/5.jpg"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "question": "Qui peut s’engager en premier dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture brune"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture bleue"
+        },
+        {
+          "letter": "C",
+          "text": "La moto"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 21 – ‘Tourner à droite ou à gauche’.L’agent indique que la voiture bleue doit s’arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/6.jpg"
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "question": "Dans quel ordre les conducteurs peuvent-ils s’engager dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Voiture bleue - Voiture brune - Moto"
+        },
+        {
+          "letter": "B",
+          "text": "Voiture bleue - Moto - Voiture brune"
+        },
+        {
+          "letter": "C",
+          "text": "Voiture brune - Voiture bleue - Moto"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 21 – ‘Tourner à droite ou à gauche’.La voiture bleue et la voiture brune ont le feu vert.Le conducteur qui désire conduire tout droit, a la priorité.Le conducteur qui veut tourner à gauche, doit donner la priorité.La moto doit attendre que le feu passe au vert.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/7.jpg"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "question": "Dans quel ordre les conducteurs peuvent-ils s’engager dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Voiture bleue - Voiture brune - Moto"
+        },
+        {
+          "letter": "B",
+          "text": "Voiture bleue - Moto - Voiture brune"
+        },
+        {
+          "letter": "C",
+          "text": "Moto - Voiture bleue - Voiture brune"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 21 – ‘Tourner à droite ou à gauche’.La motocyclette roule sur une route prioritaire et peut aller tout d’abord.Le conducteur qui désire conduire tout droit a la priorité.Le conducteur qui veut tourner à gauche, doit donner la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/8.jpg"
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "question": "Dans quel ordre les conducteurs peuvent-ils s’engager dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Voiture bleue - Voiture brune - Moto"
+        },
+        {
+          "letter": "B",
+          "text": "Voiture bleue - Moto - Voiture brune"
+        },
+        {
+          "letter": "C",
+          "text": "Voiture brune - Voiture bleue - Moto"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 21 – ‘Tourner à droite ou à gauche’.La voiture bleue et la moto roulent sur une route prioritaire.La voiture bleue veut tourner à droite ou faire un petit tournant et a la priorité.La moto qui fait un long tournant, accorde la priorité.Dès que l’intersection est libre, la voiture brune continue.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/9.jpg"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "question": "Dans quel ordre les conducteurs peuvent-ils s’engager dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Voiture bleue - Voiture brune - Moto"
+        },
+        {
+          "letter": "B",
+          "text": "Voiture bleue - Moto - Voiture brune"
+        },
+        {
+          "letter": "C",
+          "text": "Voiture brune - Voiture bleue - Moto"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 21 – ‘Tourner à droite ou à gauche’.Priorité de droite.La voiture bleue vient de la droite de la voiture brune et la voiture brune vient de la droite de la moto.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/10.jpg"
+    },
+    {
+      "id": 11,
+      "type": "multiple_choice",
+      "question": "Qui peut s’engager en premier dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 21 – ‘Tourner à droite ou à gauche’.La voiture rouge et la voiture bleue doivent stopper avant la ligne d’arrêt.La voiture grise conduit tout droit et a la priorité de la voiture verte qui veut tourner à gauche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/11.jpg"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "question": "Qui peut s’engager en premier dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 21 – ‘Tourner à droite ou à gauche’.Le conducteur qui désire conduire tout droit a la priorité.Le conducteur qui veut tourner à gauche, doit donner la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/12.jpg"
+    },
+    {
+      "id": 13,
+      "type": "yes_no",
+      "question": "Vous approchez ce carrefour que vous souhaitez traverser. Le véhicule venant en sens inverse veut tourner à gauche. Faut-il lui céder le passage ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 21 – ‘Tourner à droite ou à gauche’.Si les feux fonctionnent, le panneau sous les lumières n’a aucune signification.Le feu est vert, donc vous êtes autorisé à conduire tout droit.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/13.jpg"
+    },
+    {
+      "id": 14,
+      "type": "yes_no",
+      "question": "Vous approchez ce carrefour que vous souhaitez traverser. Le véhicule venant en sens inverse veut tourner à gauche. Faut-il lui céder le passage ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 21 – ‘Tourner à droite ou à gauche’.Si les feux fonctionnent, le panneau sous les lumières n’a aucune signification.Le feu est vert, donc vous êtes autorisé à conduire tout droit.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/14.jpg"
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture rouge"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture blanche"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 21 – ‘Tourner à droite ou à gauche’.La voiture rouge qui veut tourner à droite ou fait le tour le plus court, a la priorité.La voiture blanche qui veut tourner à gauche, ou fait le tour plus long, doit donner la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/15.jpg"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture rouge"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture blanche"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 21 – ‘Tourner à droite ou à gauche’.Le conducteur de la voiture blanche qui veut continuer tout droit a la priorité.Le conducteur qui veut tourner à gauche, doit donner la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/16.jpg"
+    },
+    {
+      "id": 17,
+      "type": "multiple_choice",
+      "question": "À une intersection, vous voulez tourner à gauche.Que faites-vous ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Freiner –  Allumer le feu indicateur de direction – Regarder dans le miroir"
+        },
+        {
+          "letter": "B",
+          "text": "Allumer le feu indicateur de direction – Un coup d’oeil dans le miroir – Freiner"
+        },
+        {
+          "letter": "C",
+          "text": "Regarder dans le miroir – Allumer le feu indicateur de direction – Freiner"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 21 – ‘Tourner à droite ou à gauche’.Regardez si une voiture arrive derrière vous qui vous rattrape. Allumez le feu indicateur de direction. Ralentir et tourner.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/17.jpg"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "question": "Quand y a-t-il un problème d’angle mort ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Toujours"
+        },
+        {
+          "letter": "B",
+          "text": "Seulement si les miroirs sont mal réglés"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 21 – ‘Tourner à droite ou à gauche’.Les miroirs doivent être toujours correctement ajustés avant vous partez.Mais il y a toujours un point que vous ne pouvez pas voir dans les miroirs : l’angle mort.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/18.jpg"
+    },
+    {
+      "id": 19,
+      "type": "multiple_choice",
+      "question": "Une intersection sans signalisation.Dans quelle situation le piéton est prioritaire ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement dessin"
+        },
+        {
+          "letter": "B",
+          "text": "Seulement dessin"
+        },
+        {
+          "letter": "C",
+          "text": "Dessin A +"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 21 – ‘Tourner à droite ou à gauche’.Une voiture qui change de direction, devrait donner la priorité aux piétons qui traversent la route où la voiture veut aller.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/19.jpg"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "question": "Une intersection avec signalisation.Dans quelle situation le piéton est prioritaire ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement dessin"
+        },
+        {
+          "letter": "B",
+          "text": "Seulement dessin"
+        },
+        {
+          "letter": "C",
+          "text": "Dessin A +"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 21 – ‘Tourner à droite ou à gauche’.Une voiture qui change de direction, devrait donner la priorité aux piétons qui traversent la route où la voiture veut aller.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/20.jpg"
+    },
+    {
+      "id": 21,
+      "type": "multiple_choice",
+      "question": "Le conducteur de la voiture bleue veut tourner à droite.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Il doit emprunter la première voie de droite (1)"
+        },
+        {
+          "letter": "B",
+          "text": "Il doit emprunter la deuxième voie de droite (2)"
+        },
+        {
+          "letter": "C",
+          "text": "Il peut choisir entre la première ou la deuxième voie"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 21 – ‘Tourner à droite ou à gauche’.Dans une agglomération, il peut choisir la voie sur laquelle il veut rouler.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/21.jpg"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "question": "Lorsqu’un conducteur effectue une manœuvre avec sa voiture, il sait :",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Qu’il recevra la priorité des autres usagers de la route"
+        },
+        {
+          "letter": "B",
+          "text": "Qu’il doit céder la priorité aux autres conducteurs"
+        },
+        {
+          "letter": "C",
+          "text": "Qu’il doit céder la priorité aux autres usagers de la route"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 21 – ‘Tourner à droite ou à gauche’.Avant d’effectuer une manœuvre, il est important de :1. Vérifier attentivement si cela peut se faire en toute sécurité.2. Annoncer la manœuvre à l’aide du clignotant.3. Céder la priorité aux autres usagers de la route.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/22.jpg"
+    },
+    {
+      "id": 23,
+      "type": "multiple_choice",
+      "question": "Je roule sur cette chaussée à sens unique et je veux tourner à gauche. Où dois-je me placer ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Sur la bande de gauche (1)"
+        },
+        {
+          "letter": "B",
+          "text": "Sur la bande du milieu (2)"
+        },
+        {
+          "letter": "C",
+          "text": "Je garde la bande de droite et je tourne à gauche depuis celle-ci"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/23.jpg"
+    },
+    {
+      "id": 24,
+      "type": "multiple_choice",
+      "question": "Dans quelle direction les roues d’une voiture doivent-elles être orientées lorsqu’un conducteur veut tourner à gauche, mais que le carrefour n’est pas encore libre ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vers la gauche"
+        },
+        {
+          "letter": "B",
+          "text": "Tout droit"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 21 – ‘Tourner à droite ou à gauche’.Si vous tournez déjà les roues vers la gauche et qu’un véhicule vous heurte par l’arrière, votre voiture risque d’être projetée dans le carrefour et de percuter les véhicules qui y circulent. C’est pourquoi les roues doivent rester droites tant que vous n’avez pas la possibilité de vous engager en toute sécurité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/24.jpg"
+    },
+    {
+      "id": 25,
+      "type": "multiple_choice",
+      "question": "Doit-on activer le clignotant gauche lorsqu’on est déjà bien placé pour tourner à gauche ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, toujours, et l’arrêter dès que le mouvement est accompli"
+        },
+        {
+          "letter": "B",
+          "text": "Non, parce qu’on est déjà bien positionné"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 21 – ‘Tourner à droite ou à gauche’.Un clignotant est là pour indiquer tes intentions, même si tu es déjà bien positionné.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/25.jpg"
+    },
+    {
+      "id": 26,
+      "type": "multiple_choice",
+      "question": "Vous circulez sur une route à sens unique avec trois bandes de circulation et vous voulez tourner à gauche.Où devez-vous vous placer correctement ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Sur la bande de droite"
+        },
+        {
+          "letter": "B",
+          "text": "Sur la bande du milieu"
+        },
+        {
+          "letter": "C",
+          "text": "Sur la bande de gauche"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 21Lorsque vous voulez tourner à gauche, vous devez vous placer le plus à gauche possible sur la chaussée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/26.jpg"
+    },
+    {
+      "id": 27,
+      "type": "multiple_choice",
+      "question": "Un carrefour sans signaux routiers.La voiture blanche veut tourner à gauche.La voiture grise veut tourner à droite.Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture blanche"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture grise"
+        },
+        {
+          "letter": "C",
+          "text": "Celui qui prend le virage en premier a automatiquement la priorité"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 21La voiture grise tourne à droite et prend un petit virage. Elle a la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/27.jpg"
+    },
+    {
+      "id": 28,
+      "type": "multiple_choice",
+      "question": "Un carrefour sans signaux routiers.La voiture blanche veut continuer tout droit.La voiture grise veut tourner à gauche.Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture blanche"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture grise"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 21Le véhicule qui va tout droit a la priorité sur celui qui tourne.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/28.jpg"
+    },
+    {
+      "id": 29,
+      "type": "multiple_choice",
+      "question": "Comment devez-vous placer vos roues lorsque vous êtes à l’arrêt à un carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Avec les roues orientées dans la direction où vous souhaitez tourner"
+        },
+        {
+          "letter": "B",
+          "text": "Avec les roues dirigées tout droit"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 21Lorsque vous êtes arrêté à un carrefour et que vous souhaitez tourner, vous devez garder vos roues droites jusqu’au moment où vous commencez réellement à tourner. Cela évite qu’en cas de choc ou de poussée inattendue, votre véhicule ne roule directement dans la rue transversale, ce qui pourrait créer un danger ou vous obliger à céder le passage. Vous ne tournez que lorsque la manœuvre peut être effectuée en toute sécurité, en tenant compte des autres usagers et des piétons.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/29.jpg"
+    },
+    {
+      "id": 30,
+      "type": "multiple_choice",
+      "question": "Cette photo est prise depuis la voiture que vous conduisez.Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture bleue qui quitte l’accès privé de son habitation"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 20La priorité de droite ne s’applique pas à la jonction d’une sortie privée avec la chaussée.Le conducteur qui quitte une sortie privée doit s’arrêter et céder le passage à tous les usagers de la voie publique (y compris les piétons).Ce conducteur effectue en effet une manœuvre.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/30.jpg"
+    },
+    {
+      "id": 31,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité à ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le tracteur qui va tout droit"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture qui tourne à gauche"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 21La règle générale veut que le trafic allant tout droit ait priorité sur le trafic qui tourne.Cependant, cette règle ne s’applique pas lorsque le véhicule qui va tout droit circule sur un chemin de terre.Le conducteur qui vient d’un chemin de terre doit céder le passage aux véhicules circulant sur la chaussée, même s’il va tout droit.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/31.jpg"
+    },
+    {
+      "id": 32,
+      "type": "multiple_choice",
+      "question": "La voiture blanche veut reculer pour entrer dans un emplacement de stationnement.Qu’est-ce qui est correct ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le conducteur doit céder le passage à tous les usagers de la route"
+        },
+        {
+          "letter": "B",
+          "text": "Le conducteur doit céder le passage à tous les conducteurs"
+        },
+        {
+          "letter": "C",
+          "text": "Les conducteurs qui arrivent doivent s’arrêter et céder le passage à la voiture blanche"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 21Sont considérées comme des manœuvres :• changer de bande de circulation ;• traverser la chaussée ;• entrer dans une place de stationnement ;• quitter une place de stationnement ;• quitter une propriété ;• faire demi-tour ;• reculer.Lorsque vous effectuez une manœuvre, vous devez :• agir avec une extrême prudence ;• ne pas mettre en danger les autres usagers de la route (y compris les piétons) ;• céder le passage à tous les usagers de la route.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/32.jpg"
+    },
+    {
+      "id": 33,
+      "type": "multiple_choice",
+      "question": "Une chaussée à double sens de circulation.Le conducteur de la voiture blanche veut tourner à gauche. Il se place à gauche sur la chaussée.Agit-il correctement ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, les véhicules qui suivent peuvent ainsi le dépasser par la droite"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 21La chaussée sur laquelle circule la voiture blanche n’est pas une voie à sens unique.- Pour tourner à gauche, le conducteur se place le plus près possible de l’axe central de la chaussée.- Pour tourner à droite, il doit se placer le plus à droite possible sur la chaussée.➡️ Sur une voie à sens unique, le conducteur qui veut tourner à gauche doit se placer tout à gauche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/85/33.jpg"
+    }
+  ]
+}

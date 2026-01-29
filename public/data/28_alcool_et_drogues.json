@@ -1,0 +1,691 @@
+{
+  "id": "28_alcool_et_drogues",
+  "name": "28 alcool et drogues",
+  "totalQuestions": 40,
+  "questions": [
+    {
+      "id": 1,
+      "type": "yes_no",
+      "question": "Un test de l’haleine ou une analyse de l’haleine peuvent-ils aussi être imposés aux cavaliers sur la voie publique ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.     Les cavaliers sur la voie publique sont des conducteurs.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/16.jpg"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "question": "A quel moment avez-vous un taux d'alcoolémie punissable?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "À 0,22 mg ou plus d'alcool par litre d'air expiré"
+        },
+        {
+          "letter": "B",
+          "text": "À plus de 0,22 mg d'alcool par litre d'air expiré"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.Moins de 0,22 mg/l : vous pouvez partir.0,22 mg/l ou plus mais moins de 0,35 mg/l : attendre 3 heures.0,35 mg/l ou plus : attendre 6 heures.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/31.jpg"
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "question": "Le fait de souffler dans un appareil qui peut indiquer que vous avez bu de l’alcool, s’appelle ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... un test de l’haleine"
+        },
+        {
+          "letter": "B",
+          "text": "... une analyse de l’haleine"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.     C’est un test de l’haleine.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/1.jpg"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "question": "La police peut demander à tout conducteur de passer un test d’alcoolémie.Est-ce aussi le cas pour un test salivaire ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, un test salivaire peut être imposé à tout conducteur"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, s’il existe, sur la base de constatations objectives, une suspicion de consommation de drogues"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 28En Belgique, il existe une tolérance zéro pour les drogues au volant. La police effectue régulièrement des contrôles de drogue afin de vérifier si vous avez certaines substances interdites dans l’organisme.Mais un test salivaire ne peut être effectué que si la police soupçonne que vous êtes sous l’influence de drogues, et ce soupçon doit être basé sur des constatations objectives.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/37.jpg"
+    },
+    {
+      "id": 5,
+      "type": "multiple_choice",
+      "question": "Le résultat de l’analyse de l’haleine est inférieur à 0,22 milligramme d’alcool par litre d’air expiré. Quelles sont les conséquences ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous pouvez continuer votre route"
+        },
+        {
+          "letter": "B",
+          "text": "Vous serez soumis à une analyse de l’haleine"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.Moins de 0,22 mg/l : vous pouvez partir.0,22 mg/l ou plus mais moins de 0,35 mg/l : attendre 3 heures.0,35 mg/l ou plus : attendre 6 heures.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/12.jpg"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "question": "Si vous conduisez en état d'ébriété, la distance de reaction sera ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... plus longue"
+        },
+        {
+          "letter": "B",
+          "text": "... plus courte"
+        },
+        {
+          "letter": "C",
+          "text": "... la même qu'en étant sobre"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.     La distance de réaction sera plus longue.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/32.jpg"
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "question": "Existe-t-il un médicament pour diminuer la concentration d'alcool dans le sang ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, un médecin peut en prescrire un"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, cela se vend en pharmacie"
+        },
+        {
+          "letter": "C",
+          "text": "Non, cela n'existe pas"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/36.jpg"
+    },
+    {
+      "id": 8,
+      "type": "yes_no",
+      "question": "Pouvez-vous demander un délai de 15 minutes avant de commencer le test de l’haleine.",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.Depuis le 1er mai 2024, cela n'est plus possible",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/22.jpg"
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "question": "Que faites-vous si vous devez conduire la nuit ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Boire du café régulièrement"
+        },
+        {
+          "letter": "B",
+          "text": "Buvez beaucoup d'eau"
+        },
+        {
+          "letter": "C",
+          "text": "Faites une pause toutes les deux heures"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/23.jpg"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "question": "Le test qui mesure avec précision le taux d’alcoolémie dans l’air expiré, s’appelle…",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... le test de l’haleine"
+        },
+        {
+          "letter": "B",
+          "text": "... l’analyse de l’haleine"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.     C’est l’analyse de l’haleine.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/21.jpg"
+    },
+    {
+      "id": 11,
+      "type": "multiple_choice",
+      "question": "Le conducteur d’une voiture sort d’un parking payant. Un agent de police lui demande de passer le test de l’haleine, mais le conducteur refuse.  L’agent de police lui imposera une interdiction de conduire de (…) heures.",
+      "propositions": [],
+      "correctAnswer": "6",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.     Si vous refusez de subir un test de l’haleine, vous êtes considéré comme étant (P)ositif et vous ne pouvez plus conduire pendant 6 heures.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/15.jpg"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "question": "Le résultat d’une analyse de l’haleine est compris entre 0,22 et 0,35 milligrammes d’alcool par litre d’air expiré.Quelles sont les conséquences ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Une interdiction de conduire immédiate pendant six heures"
+        },
+        {
+          "letter": "B",
+          "text": "Une interdiction de conduire immédiate pendant trois heures"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.     Moins de 0,22 mg/l : vous pouvez partir.À partir de 0,22 mg/l et moins de 0,35 mg/l : attendre 3 heures.0,35 mg/l ou plus : attendre 6 heures.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/4.jpg"
+    },
+    {
+      "id": 13,
+      "type": "yes_no",
+      "question": "Peut-on vous soumettre à une analyse de l’haleine avant un test de l’haleine ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/18.jpg"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "question": "Lors d’un contrôle d’alcoolémie, le policier vous demande également le certificat d’immatriculation de votre voiture.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous ne devez pas l’avoir dans votre voiture et vous ne devez donc pas le présenter"
+        },
+        {
+          "letter": "B",
+          "text": "Vous donnez le document original"
+        },
+        {
+          "letter": "C",
+          "text": "Vous donnez l’original ou une photocopie couleurs"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.     Vous donnez le document original.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/27.jpg"
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "question": "Le résultat d’une analyse de l’haleine indique qu’il y a 0,40 mg d’alcool dans l’air expiré. Recevez-vous une interdiction de conduire ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Non, car vous êtes sous la limite"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, pendant 3 heures"
+        },
+        {
+          "letter": "C",
+          "text": "Oui, pendant 15 jours"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.     Moins de 0,22 mg/l : vous pouvez partir.0,22 mg/l ou plus mais moins de 0,35 mg/l : attendre 3 heures.0,35 mg/l ou plus : 15 jours (depuis septembre 2025)",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/30.jpg"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "question": "Vous dites à l’agent de police que vous avez des problèmes respiratoires et vous refusez de vous soumettre au test de l’haleine.Quelles sont les conséquences ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous pouvez continuer votre route"
+        },
+        {
+          "letter": "B",
+          "text": "Vous recevez immédiatement une interdiction de conduire pendant 3 heures"
+        },
+        {
+          "letter": "C",
+          "text": "Vous recevez immédiatement une interdiction de conduire pendant 6 heures"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.Si vous refusez de subir un test de l’haleine, vous êtes considéré comme étant (P)ositif et vous ne pouvez plus conduire pendant 6 heures.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/14.jpg"
+    },
+    {
+      "id": 17,
+      "type": "multiple_choice",
+      "question": "Vous vous montrez audacieux et vous refusez de coopérer lors d’un contrôle d’alcoolémie. Vous recevrez immédiatement une interdiction de conduire pendant (…) heures.",
+      "propositions": [],
+      "correctAnswer": "6",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.     Si vous refusez de subir un test de l’haleine, vous êtes considéré comme étant (P)ositif et vous ne pouvez plus conduire pendant 6 heures.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/28.jpg"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "question": "Vous refusez un test de salive.Combien d'heures vous ne pouvez pas conduire?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "3 heures"
+        },
+        {
+          "letter": "B",
+          "text": "6 heures"
+        },
+        {
+          "letter": "C",
+          "text": "12 heures"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.     Vous ne pouvez pas conduire pendant 12 heures.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/34.jpg"
+    },
+    {
+      "id": 19,
+      "type": "yes_no",
+      "question": "Un piéton en état d’ivresse victime d’un accident qu’il a peut-être causé, peut-il être soumis à un test de l’haleine ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.     L’auteur (présumé) d’un accident peut aussi être contrôlé, même s’il s’agit d’un piéton.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/13.jpg"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "question": "Une analyse de l’haleine a indiqué que le taux d’alcool dans l’air expiré était d’au moins 0,33 mg/litre et vous avez reçu une interdiction de conduire de 3 heures. Que se passe-t-il après ces 3 heures ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "L’interdiction temporaire est terminée. Vous pouvez partir"
+        },
+        {
+          "letter": "B",
+          "text": "Vous devez vous soumettre de nouveau à un test de l’haleine ou à une analyse de l’haleine"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.Moins de 0,22 mg/l : vous pouvez partir.0,22 mg/l ou plus mais moins de 0,35 mg/l : attendre 3 heures.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/17.jpg"
+    },
+    {
+      "id": 21,
+      "type": "yes_no",
+      "question": "Les drogues peuvent-elles empirer les effets nocifs de l’alcool ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.     La combinaison de drogues avec l’alcool est bien sûr plus grave que seulement de l’alcool.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/25.jpg"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "question": "Lorsque vous avez pris des médicaments et que vous buvez de l’alcool, les effets de l’alcool peuvent être augmentés.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.     Certains médicaments ont déjà des effets néfastes sur la conduite. L’alcool les aggravera d’autant plus.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/11.jpg"
+    },
+    {
+      "id": 23,
+      "type": "multiple_choice",
+      "question": "Le fait de souffler dans un appareil qui mesure avec précision le taux d’alcool dans l’air expiré, s’appelle ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... le test de l’haleine"
+        },
+        {
+          "letter": "B",
+          "text": "... l’analyse de l’haleine"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.     C’est l’analyse de l’haleine.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/9.jpg"
+    },
+    {
+      "id": 24,
+      "type": "yes_no",
+      "question": "Vous avez bu beaucoup de bière. On dit que quelques tasses de café fort réduisent le taux d’alcool dans le sang.Est-ce vrai ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/6.jpg"
+    },
+    {
+      "id": 25,
+      "type": "multiple_choice",
+      "question": "Lors d’un test de l’haleine, la lettre S apparaît sur l’écran.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous devez faire une analyse de l’haleine"
+        },
+        {
+          "letter": "B",
+          "text": "Vous recevez une interdiction de conduire provisoire de 3 heures"
+        },
+        {
+          "letter": "C",
+          "text": "Vous pouvez continuer votre route"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.     Vous pouvez continuer votre route.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/26.jpg"
+    },
+    {
+      "id": 26,
+      "type": "multiple_choice",
+      "question": "Le résultat du test de l’haleine n’est pas SAF",
+      "propositions": [
+        {
+          "letter": "E",
+          "text": "Quelles sont les conséquences?"
+        },
+        {
+          "letter": "A",
+          "text": "Vous pouvez continuer votre route"
+        },
+        {
+          "letter": "B",
+          "text": "Vous serez soumis à une analyse de l’haleine"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.     Vous serez soumis à une analyse de l’haleine.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/3.jpg"
+    },
+    {
+      "id": 27,
+      "type": "multiple_choice",
+      "question": "Le résultat d’une analyse de l’haleine indique qu’il y a 0,25 mg d’alcool dans l’air expiré. Recevez-vous une interdiction de conduire ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Non, car vous êtes sous la limite"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, pendant 3 heures"
+        },
+        {
+          "letter": "C",
+          "text": "Oui, pendant 6 heures"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.     Moins de 0,22 mg/l : vous pouvez partir.0,22 mg/l ou plus mais moins de 0,35 mg/l : attendre 3 heures.0,35 mg/l ou plus : attendre 6 heures.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/29.jpg"
+    },
+    {
+      "id": 28,
+      "type": "yes_no",
+      "question": "Pouvez-vous demander un délai de 15 minutes si vous devez vous soumettre à une analyse de l’haleine?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.Depuis le 1er mai 2024, cela n'est plus possible",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/5.jpg"
+    },
+    {
+      "id": 29,
+      "type": "multiple_choice",
+      "question": "Le résultat d'un test de salive est positif.Combien d'heures vous ne pouvez pas conduire?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "6 heures"
+        },
+        {
+          "letter": "B",
+          "text": "12 heures"
+        },
+        {
+          "letter": "C",
+          "text": "24 heures"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.Vous ne pouvez pas conduire pendant 12 heures.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/33.jpg"
+    },
+    {
+      "id": 30,
+      "type": "multiple_choice",
+      "question": "Qui peut être soumis à un test de l’haleine?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Quelqu’un qui s’apprête à conduire un véhicule sur le parking d’un supermarché"
+        },
+        {
+          "letter": "B",
+          "text": "Un cycliste qui pousse son vélo sur la voie publique"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.     Un cycliste qui pousse son vélo sur la voie publique est considéré comme un piéton.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/8.jpg"
+    },
+    {
+      "id": 31,
+      "type": "multiple_choice",
+      "question": "Un test de l’haleine peut être demandé ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... à toutes les personnes qui se trouvent sur la voie publique"
+        },
+        {
+          "letter": "B",
+          "text": "... à un piéton sur la voie publique"
+        },
+        {
+          "letter": "C",
+          "text": "... à quelqu’un qui conduit un véhicule sur la voie publique"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.     Un test de l’haleine peut être demandé à quelqu’un qui conduit un véhicule sur la voie publique.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/7.jpg"
+    },
+    {
+      "id": 32,
+      "type": "multiple_choice",
+      "question": "À partir de quel taux d’alcool dans l’air expiré êtes-vous en infraction ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "À partir de 0,22 mg/l"
+        },
+        {
+          "letter": "B",
+          "text": "À partir de 0,25 mg/l"
+        },
+        {
+          "letter": "C",
+          "text": "À partir de 0,35 mg/l"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 28- Si vous avez moins de 0,22 mg/l, vous pouvez continuer à circuler.- Si le résultat est de 0,22 mg/l ou plus, mais inférieur à 0,35 mg/l, vous devez remettre votre permis pendant 3 heures.C’est une infraction et vous recevrez une amende.- Si vous avez 0,35 mg/l ou plus, vous devez remettre votre permis pendant 6 heures.Une retrait immédiat du permis est également possible, et vous recevrez une amende.Après ces 6 heures, une nouvelle épreuve respiratoire sera effectuée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/39.jpg"
+    },
+    {
+      "id": 33,
+      "type": "multiple_choice",
+      "question": "Le résultat de l’analyse de l’haleine indique qu’il y a un taux de 0,30 mg/l d’alcool dans l’air expiré.Est-ce que l’on vous imposera une interdiction de conduire ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Non, car vous êtes sous la limite"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, pendant 3 heures"
+        },
+        {
+          "letter": "C",
+          "text": "Oui, pendant 6 heures"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.Moins de 0,22 mg/l : vous pouvez partir.0,22 mg/l ou plus mais moins de 0,35 mg/l : attendre 3 heures.0,35 mg/l ou plus : attendre 6 heures.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/24.jpg"
+    },
+    {
+      "id": 34,
+      "type": "multiple_choice",
+      "question": "Après avoir bu beaucoup d’alcool, quelles astuces peuvent réellement faire baisser ton taux d’alcool dans le sang ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Prendre des médicaments prescrits par mon pharmacien"
+        },
+        {
+          "letter": "B",
+          "text": "Boire du café"
+        },
+        {
+          "letter": "C",
+          "text": "Attendre, seul le temps permet de diminuer le taux d’alcool"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 28Il n’existe aucun médicament ni remède permettant de faire baisser le taux d’alcool dans le sang. La seule solution est d’attendre que ton corps élimine l’alcool et que tu sois à nouveau sobre.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/38.jpg"
+    },
+    {
+      "id": 35,
+      "type": "multiple_choice",
+      "question": "Vous êtes impliqué dans un accident.La police peut-elle vous demander de passer un test salivaire ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Uniquement en cas de fort soupçon de consommation de drogues"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, en cas d’accident, toujours"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 28En principe, un test salivaire ne peut être effectué que si la police soupçonne une consommation de drogues.MAIS ATTENTION : en cas d’accident, la police peut toujours imposer un test salivaire.Si le résultat dépasse la valeur autorisée :- le permis de conduire doit être immédiatement remis pour 12 heures ;- un retrait immédiat du permis est également possible ;- après les 12 heures, un nouveau test salivaire est effectué.Les contrevenants risquent en outre de lourdes amendes et un retrait du droit de conduire pouvant aller jusqu’à 5 ans.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/40.jpg"
+    },
+    {
+      "id": 36,
+      "type": "multiple_choice",
+      "question": "Qui effectue un prélèvement sanguin ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La police"
+        },
+        {
+          "letter": "B",
+          "text": "Par un médecin désigné par la police"
+        },
+        {
+          "letter": "C",
+          "text": "Par un médecin au choix du patient"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.     Par un médecin désigné par la police.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/19.jpg"
+    },
+    {
+      "id": 37,
+      "type": "multiple_choice",
+      "question": "Comment s’appelle le test qui vérifie si vous avez pris de la drogue?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le test de drogues"
+        },
+        {
+          "letter": "B",
+          "text": "Le test de la salive"
+        },
+        {
+          "letter": "C",
+          "text": "Le thermotest"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.C’est le test de la salive.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/20.jpg"
+    },
+    {
+      "id": 38,
+      "type": "yes_no",
+      "question": "Vous avez maintenant votre permis de conduire depuis deux ans.La police fera-t-elle aussi un alcootest à votre passager?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 28 - 'L'alcool'.Ce passager n'est pas un enseignant ou un superviseur du conducteur.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/35.jpg"
+    },
+    {
+      "id": 39,
+      "type": "multiple_choice",
+      "question": "Lors d’un contrôle de police, on vous demande de faire un test de l’haleine. Quel délai pouvez-vous demander avant de souffler ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous devez souffler immédiatement"
+        },
+        {
+          "letter": "B",
+          "text": "15 minutes"
+        },
+        {
+          "letter": "C",
+          "text": "1 heure"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.Depuis le 1er mai 2024, cela n'est plus possible",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/2.jpg"
+    },
+    {
+      "id": 40,
+      "type": "number",
+      "question": "Le résultat de l’analyse de l’haleine est de 0,30 mg/l. Vous recevez immédiatement une interdiction de conduire de (...) heures.",
+      "correctAnswer": "3",
+      "explanation": "LEÇON 28 – ‘Alcool et drogues’.     Moins de 0,22 mg/l : vous pouvez partir.0,22 mg/l ou plus mais moins de 0,35 mg/l : attendre 3 heures.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/92/10.jpg"
+    }
+  ]
+}

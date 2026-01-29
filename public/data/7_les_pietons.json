@@ -1,0 +1,379 @@
+{
+  "id": "7_les_pietons",
+  "name": "7 les pietons",
+  "totalQuestions": 24,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "question": "Quels cyclomoteurs peuvent franchir ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Classe"
+        },
+        {
+          "letter": "B",
+          "text": "Classe"
+        },
+        {
+          "letter": "C",
+          "text": "Aucun cyclomoteur"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 7 – ‘Les piétons’.Piétons et la bicyclette se trouvent l’un au-dessus de l’autre : aucun cyclomoteur.Piétons et la bicyclette côte à côte : cyclomoteurs de classe A.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/5.jpg"
+    },
+    {
+      "id": 2,
+      "type": "number",
+      "question": ".Ce signal de danger est placé à (...) mètres en deçà du passage pour piétons.",
+      "correctAnswer": "150",
+      "explanation": "LEÇON 7 – ‘Les piétons’.Les piétons qui traversent sur le passage pour piétons, ou ont l’intention de l’emprunter, ont toujours priorité et un conducteur ne peut pas passer devant eux",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/13.jpg"
+    },
+    {
+      "id": 3,
+      "type": "number",
+      "question": ".Vous ne pouvez ni vous arrêter ni stationner sur la chaussée à moins de (...) mètres en-deçà du passage pour piétons.",
+      "correctAnswer": "5",
+      "explanation": "LEÇON 7 – ‘Les piétons’.Vous ne pouvez ni vous arrêter ni stationner :- sur la chaussée ou sur l'accotement, sur un passage pour piétons ;- Piétons et la bicyclette côte à côte : uniquement les cyclomoteurs de classe A.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/3.jpg"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "question": "Une jeune fille pousse un cyclomoteur sur la chaussée. Selon le code de la route elle est un ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "...  conductrice"
+        },
+        {
+          "letter": "B",
+          "text": "...  piétonne"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 7 – ‘Les piétons’.Quelqu’un qui pousse une voiture ou une motocyclette est un conducteur.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/15.jpg"
+    },
+    {
+      "id": 5,
+      "type": "number",
+      "question": ".S’il y a un passage pour piétons à une distance de (...) mètres, les piétons sont tenus de l’utiliser.",
+      "correctAnswer": "20",
+      "explanation": "LEÇON 7 – ‘Les piétons’.Les piétons doivent traverser la chaussée perpendiculairement à son axe; ils ne peuvent s'y attarder, ni s'y arrêter sans nécessité.Quand il existe un passage pour piétons à une distance de moins de 20 mètres environ, les piétons sont tenus de l'emprunter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/12.jpg"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "question": "La vitesse maximale autorisée dans cette agglomération est de 30 km/h.Devez-vous céder le passage si des piétons traversent la chaussée ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, car la vitesse est limitée à 30 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "Non, ils n’ont la priorité que sur un passage pour piétons"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 7Un piéton qui veut traverser la chaussée à un endroit où il n’y a pas de passage pour piétons doit céder le passage lui-même.Cependant, le conducteur doit toujours faire preuve de prudence.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/21.jpg"
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "question": "La voiture peut-elle s’arrêter à cet endroit, en agglomération, pour faire monter un passager ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 7Il est interdit de stationner ou de s’arrêter sur un passage pour piétons, même pour faire monter ou descendre quelqu’un.Il est également interdit de stationner ou de s’arrêter sur la chaussée à moins de 5 mètres avant le passage (mais c’est permis sur l’accotement si c’est possible).La même règle s’applique aux passages pour cyclistes et cyclomoteurs à deux roues.Après le passage, le stationnement et l’arrêt sont autorisés, sauf indication contraire des signaux routiers.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/22.jpg"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "question": "Ce signal routier de danger annonce qu’un passage pour piétons se trouve plus loin.Cette piétonne peut-elle traverser la chaussée ici ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 7S’il y a un passage pour piétons dans un rayon de 20 mètres, les piétons doivent l’utiliser.Le signal routier de danger indique qu’un passage pour piétons se trouve à environ 150 mètres.➡️ La piétonne peut traverser ici.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/18.jpg"
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "question": "L’homme qui marche à côté du cheval est ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... un piéton"
+        },
+        {
+          "letter": "B",
+          "text": "... un conducteur"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 7 – ‘Les piétons’.Un cavalier ou une personne qui guide un cheval sur la voie publique, n’est pas un piéton, mais un conducteur.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/10.jpg"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal de danger ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "École"
+        },
+        {
+          "letter": "B",
+          "text": "Endroit spécialement fréquenté par des enfants"
+        },
+        {
+          "letter": "C",
+          "text": "Les enfants peuvent marcher sur la chaussée"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 7 – ‘Les piétons’.Signification : endroit spécialement fréquenté par des enfants.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/4.jpg"
+    },
+    {
+      "id": 11,
+      "type": "multiple_choice",
+      "question": "Celui qui pousse un cyclomoteur est un ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... piéton"
+        },
+        {
+          "letter": "B",
+          "text": "... conducteur"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 7 – ‘Les piétons’.Celui qui pousse un cyclomoteur est un piéton.Il doit se déplacer sur le trottoir.Celui qui pousse une moto ou une voiture, est un conducteur.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/1.jpg"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "question": "Un chien qui marche sur la voie publique est considéré, selon le code de la route, comme ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... un piéton"
+        },
+        {
+          "letter": "B",
+          "text": "... un usager de la route"
+        },
+        {
+          "letter": "C",
+          "text": "... ni l’un ni l’autre"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 7 – ‘Les piétons’.Les usagers de la route sont des personnes. Un animal comme un cheval ou un chien, ou un objet tel qu’un vélo ou une voiture ne sont pas des usagers de la route.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/11.jpg"
+    },
+    {
+      "id": 13,
+      "type": "multiple_choice",
+      "question": "Un accompagnateur veut traverser la chaussée avec de jeunes enfants.Quelle est votre réaction ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous continuez votre route, car il n’y a pas de passage pour piétons"
+        },
+        {
+          "letter": "B",
+          "text": "Vous vous arrêtez et laissez les enfants traverser calmement"
+        },
+        {
+          "letter": "C",
+          "text": "Vous redoublez d’attention et êtes prêt à freiner si un enfant s’engage sur la chaussée"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "CONDUITE DÉFENSIVELes enfants peuvent avoir un comportement imprévisible et s’engager soudainement sur la chaussée.Vous adaptez votre vitesse, gardez la situation sous contrôle et êtes prêt à freiner immédiatement.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/24.jpg"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal d’interdiction ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Accès interdit aux piétons"
+        },
+        {
+          "letter": "B",
+          "text": "Des piétons peuvent traverser la chaussée"
+        },
+        {
+          "letter": "C",
+          "text": "Accès interdit à tous les usagers, sauf les piétons"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 7 – ‘Les piétons’.Signification : accès interdit aux piétons.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/7.jpg"
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "question": "Un bus scolaire s’arrête hors agglomération, non pas à un arrêt de bus, mais sur la chaussée, devant une maison. Le conducteur allume les quatre feux de détresse.Comment réagissez-vous ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous continuez simplement, car ce n’est pas un arrêt de bus"
+        },
+        {
+          "letter": "B",
+          "text": "Vous ralentissez fortement et vous vous arrêtez si nécessaire car des enfants peuvent descendre"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Les véhicules de transport scolaire sont reconnaissables à un panneau jaune (au moins 0,40 m), bien visible à l’avant et à l’arrière du véhicule. Ce panneau doit être enlevé ou recouvert lorsque le véhicule n’est pas utilisé pour le transport scolaire.Soyez particulièrement prudent et réduisez votre vitesse.Arrêtez-vous si nécessaire lorsque vous voyez un véhicule de transport scolaire qui allume ses indicateurs de direction ou ses feux de détresse, ce qui signifie que des enfants vont monter ou descendre. Cela vaut aussi bien pour les véhicules à l’arrêt que pour ceux qui s’arrêtent sur la chaussée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/20.jpg"
+    },
+    {
+      "id": 16,
+      "type": "yes_no",
+      "question": "Aucun piéton qui n’emprunte ou ne  se trouve à proximité du passage pour piétons.La voiture brune peut-elle dépasser la rouge par la gauche ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 7 – ‘Les piétons’.Vous ne pouvez jamais dépasser (ni par la gauche ni par la droite) une voiture lorsqu’elle s'approche de ou s'arrête devant un passage pour piétons ou un passage pour cyclistes aux endroits où la circulation n'est pas réglée par un agent qualifié ou par des signaux lumineux de circulation.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/6.jpg"
+    },
+    {
+      "id": 17,
+      "type": "yes_no",
+      "question": "Au-delà de ces signaux routiers, un enfant veut traverser la route à un endroit où il n'y a pas de passage pour piétons. Devez-vous arrêter et céder le passage à l'enfant ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 7 – ‘Les piétons’.Un piéton qui veut traverser la route à un endroit où il n'y a pas de passage pour piétons, doit vous céder le passage. Toutefois le code précise qu’en présence d’enfants  vous devez redoubler depridence.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/17.jpg"
+    },
+    {
+      "id": 18,
+      "type": "yes_no",
+      "question": "Le piéton n’est pas encore sur le passage pour piétons.Le conducteur de la voiture doit-il s’arrêter ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 7 – ‘Les piétons’.Les piétons qui traversent sur le passage pour piétons, ou ont l’intention de l’emprunter, ont toujours priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/8.jpg"
+    },
+    {
+      "id": 19,
+      "type": "multiple_choice",
+      "question": "Une voiture ne peut pas stationner sur la chaussée à moins de 5 mètres avant un passage pour piétons ou cyclistes.Mais le conducteur peut-il s’y arrêter pour faire monter quelqu’un ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 7Il est interdit de stationner ou de s’arrêter sur un passage pour piétons, même pour faire monter ou descendre quelqu’un.Il est également interdit de stationner ou de s’arrêter sur la chaussée à moins de 5 mètres avant le passage (mais c’est permis sur l’accotement si c’est possible).La même règle s’applique aux passages pour cyclistes et cyclomoteurs à deux roues.Après le passage, le stationnement et l’arrêt sont autorisés, sauf indication contraire des panneaux.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/23.jpg"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "question": "Le piéton s’apprête à traverser la chaussée.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture doit céder le passage"
+        },
+        {
+          "letter": "B",
+          "text": "Le piéton doit céder le passage"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 7 – ‘Les piétons’.Les piétons qui traversent sur le passage pour piétons, ou ont l’intention de l’emprunter, ont toujours priorité.Un piéton qui veut traverser la chaussée à un endroit où il n’y a pas de passage pour piétons, doit céder le passage.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/2.jpg"
+    },
+    {
+      "id": 21,
+      "type": "multiple_choice",
+      "question": "Lorsque vous roulez derrière ce bus, vous savez ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... que des enfants peuvent aussi se trouver dans ce bus"
+        },
+        {
+          "letter": "B",
+          "text": "... qu’il s’agit d’un bus scolaire"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 7 – ‘Les piétons’.Les véhicules de transport scolaire sont reconnaissables à un panneau jaune (au moins 0,40 m), bien visible à l’avant et à l’arrière du véhicule. Ce panneau doit être enlevé ou recouvert lorsque le véhicule n’est pas utilisé pour le transport scolaire.Soyez particulièrement prudent et réduisez votre vitesse.Arrêtez-vous si nécessaire lorsque vous voyez un véhicule de transport scolaire qui allume ses indicateurs de direction, ce qui signifie que des enfants vont monter ou descendre. Cela vaut aussi bien pour les véhicules à l’arrêt que pour ceux qui s’arrêtent sur la chaussée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/19.jpg"
+    },
+    {
+      "id": 22,
+      "type": "yes_no",
+      "question": "Le piéton n’est pas encore sur le passage pour piétons.La voiture grise peut-elle dépasser la bleue par la gauche ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 7 – ‘Les piétons’.Les piétons qui marchent sur le passage pour piétons, ou ont l’intention de l’emprunter, ont toujours priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/14.jpg"
+    },
+    {
+      "id": 23,
+      "type": "yes_no",
+      "question": "Votre amie vit dans une zone piétonne.Pouvez-vous rendre jusque chez elle avec votre voiture ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 7 – ‘Les piétons’.L'accès aux zones piétonnes est réservé aux piétons.Toutefois:1° peuvent accéder à ces zones:b) les véhicules de surveillance, de contrôle et d'entretien de cette zone et les véhicules affectés au ramassage des immondices;c) les véhicules prioritaires, lorsque la nature de leur mission le justifie;d) les véhicules des services réguliers de transport en commun;e) les conducteurs de véhicules dont le garage est situé à l'intérieur de ces zones et qui n'est accessible qu'en traversant ces zones;f) en cas d'absolue nécessité, les véhicules appartenant à des entreprises commerciales établies dans ces zones et uniquement accessible qu'en les traversant, lorsque ces véhicules sont affectés à des livraisons et si ces livraisons constituent une activité principale de ces entreprises;g) en cas d'absolue nécessité, les véhicules destinés à effectuer des travaux dans ces zones;h) les trains miniatures touristiques et les trains de véhicules composés d’un véhicule tracteur et d’un chariot bâché, les véhicules attelés, les cycles-taxis;i) les véhicules employés dans le cadre d'activités médicales ou de soins à domicile;Dans les cas visés sous e) à i), les bénéficiaires doivent apposer sur la face interne du pare-brise de leur véhicule, un laisser-passer délivré par le bourgmestre ou son délégué; pour les véhicules attelés et les cycles taxis, le conducteur doit détenir ce laissez-passer.2° peuvent accéder à ces zones lorsque la signalisation routière le prévoit et selon les restrictions qui y figurent:a) les véhicules qui doivent charger ou décharger dans lesdites zones;b) les taxis qui ont une destination déterminée à l'intérieur de ces zones pour l'embarquement ou le débarquement de personnes;c) les cyclistes.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/16.jpg"
+    },
+    {
+      "id": 24,
+      "type": "multiple_choice",
+      "question": "Le signal d’indication se trouve à proximité du passage pour piétons.Lequel de ces signaux routiers est le signal d’indication?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le signal rouge"
+        },
+        {
+          "letter": "B",
+          "text": "Le signal bleu"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 7 – ‘Les piétons’.Le signal rouge est un signal de danger et se trouve à environ 150 mètres en deçà du passage pour piétons.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/9.jpg"
+    }
+  ]
+}

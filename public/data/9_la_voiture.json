@@ -1,0 +1,377 @@
+{
+  "id": "9_la_voiture",
+  "name": "9 la voiture",
+  "totalQuestions": 21,
+  "questions": [
+    {
+      "id": 1,
+      "type": "yes_no",
+      "question": "Vous avez un permis de conduire provisoire B.Pouvez-vous traverser ce pont avec une camionnette ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.Une camionnette est un véhicule avec une M.M.A. jusqu'à 3500 kg.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/14.jpg"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "question": "Cette combinaison d'un signal routier et un panneau concerne ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... la"
+        },
+        {
+          "letter": "B",
+          "text": "... la"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.À partir ce signal routier jusqu'à la prochaine intersection, il est interdit pour les véhicules avec une M.M.A. de plus de 3,5 tonnes de circuler plus rapidement que  la vitesse reprise sur le signal de limitation.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/7.jpg"
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "question": "Qu’est-ce qui ne doit pas obligatoirement se trouver dans la voiture ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "N° 1"
+        },
+        {
+          "letter": "B",
+          "text": "N° 2"
+        },
+        {
+          "letter": "C",
+          "text": "N° 3"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.Les accessoires obligatoires sonta) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondesc) un gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas)d) une trousse de secours.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/11.jpg"
+    },
+    {
+      "id": 4,
+      "type": "yes_no",
+      "question": "Vous avez un permis de conduire provisoire de catégorie B. Votre père a un minibus. Pouvez-vous apprendre à conduire avec son véhicule ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.Un minibus est un bus dans lequel un maximum de 8 passagers peuvent prendre place.il peut être conduit avec un permis B",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/17.jpg"
+    },
+    {
+      "id": 5,
+      "type": "multiple_choice",
+      "question": "Qu’est-ce qui ne doit pas obligatoirement se trouver dans la voiture ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "1"
+        },
+        {
+          "letter": "B",
+          "text": "2"
+        },
+        {
+          "letter": "C",
+          "text": "3"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.a) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondesc) un – gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas)d) – une trousse de secours.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/1.jpg"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "question": "Qu'est-ce que c'est : voitures partagées ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Un véhicule qu’on partage avec d’autres personnes pour atteindre la même destination"
+        },
+        {
+          "letter": "B",
+          "text": "Un véhicule utilisé de manière occasionnelle via une application de partage et de réservation"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/18.jpg"
+    },
+    {
+      "id": 7,
+      "type": "yes_no",
+      "question": "Un conducteur titulaire d’un permis de conduire B peut-il conduire une camionnette ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.Une camionnette est un véhicule avec une M.M.A. jusqu'à 3500 kg.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/13.jpg"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "question": "Que devez-vous obligatoirement avoir dans votre voiture ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "N° 1"
+        },
+        {
+          "letter": "B",
+          "text": "N° 2"
+        },
+        {
+          "letter": "C",
+          "text": "N° 3"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 9 – ‘La M.M.A. et le M.E.C.’.a) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondesc) un – gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas)d) – une trousse de secours.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/12.jpg"
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "question": "Ce signal routier concerne ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... la masse en charge"
+        },
+        {
+          "letter": "B",
+          "text": "... la masse maximale autorisée"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.La Masse en Charge M.E.C.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/15.jpg"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "question": "Lequel de ces signaux se rapporte à la M.M.A., c’est-à-dire à la Masse Maximale Autorisée d’un véhicule ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "1 + 2"
+        },
+        {
+          "letter": "B",
+          "text": "2 + 3 + 4"
+        },
+        {
+          "letter": "C",
+          "text": "3 + 4"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.signal 1 à la M.E.C.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/16.jpg"
+    },
+    {
+      "id": 11,
+      "type": "number",
+      "question": ".Cette route pour automobiles a 2 x 2 bandes de circulation, qui est divisée par une berne centrale.Au-delà de ces panneaux, la voiture bleue peut rouler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "90",
+      "explanation": "LEÇON 9 – ‘La M.M.A. et Le M.E.C.’.Maximum de  90 km/h pour les voitures.Véhicules avec une  M.M.A. de plus de 3,5 tonnes : maximum de 70 km/heure.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/8.jpg"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "question": "Le poids réel d’une voiture, y compris le chargement et ses occupants lorsqu’il est mesuré sur une balance, s’appelle...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... la masse maximale autorisée"
+        },
+        {
+          "letter": "B",
+          "text": "... la masse en charge"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.La Masse en Charge M.E.C.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/9.jpg"
+    },
+    {
+      "id": 13,
+      "type": "multiple_choice",
+      "question": "La M.M.A. d’une voiture est déterminée par ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... le constructeur"
+        },
+        {
+          "letter": "B",
+          "text": "... le gouvernement"
+        },
+        {
+          "letter": "C",
+          "text": "... le garagiste"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.Le constructeur, car Il le fabricant connait toutes les normes techniques du véhicule : sa solidité, sa résistance, le poids qu’il pourra supporter,… sait à quel point la voiture est solide.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/6.jpg"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "question": "Que devez-vous obligatoirement avoir dans votre voiture ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "1"
+        },
+        {
+          "letter": "B",
+          "text": "2"
+        },
+        {
+          "letter": "C",
+          "text": "3"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.Les accessoires obligatoires sonta) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondesc) un – gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas).d) – une trousse de secours.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/2.jpg"
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "question": "Lors d’un contrôle, la police demande le certificat d’immatriculation du véhicule.Sous quelle forme ce document doit-il être présenté ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "L’original. B: L'original ou une copie en couleur"
+        },
+        {
+          "letter": "C",
+          "text": "Une copie suffit, à condition de se présenter ultérieurement avec l’original"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 9Doivent se trouver dans le véhicule :- Certificat d’immatriculation (original)- Certificat de conformité (original)- Attestation d’assurance (original, copie ou version numérique sur smartphone)- Certificat de contrôle technique (original), dès que le véhicule a 4 ans",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/3.jpg"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "question": "La",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "d’une voiture ne peut pas être supérieure à (...) kg"
+        }
+      ],
+      "correctAnswer": "3500",
+      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.Jusqu'à 3500 kg.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/5.jpg"
+    },
+    {
+      "id": 17,
+      "type": "multiple_choice",
+      "question": "Que devez-vous obligatoirement avoir dans votre voiture ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "N° 1"
+        },
+        {
+          "letter": "B",
+          "text": "N° 2"
+        },
+        {
+          "letter": "C",
+          "text": "N° 3"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.a) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondesc) un – gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas)d) – une trousse de secours.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/4.jpg"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "question": "Vous êtes en possession d'un permis B et vous conduisez une voiture avec une M.M.A. de 2500 kg. Quelle est la M.M.A. maximale de la remorque ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "750 kg"
+        },
+        {
+          "letter": "B",
+          "text": "1000 kg"
+        },
+        {
+          "letter": "C",
+          "text": "1500 kg"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’. Si la M.M.A. de la remorque est supérieur à 750 kg, un permis de conduire B est bon à condition que la M.M.A. de l'ensemble (voiture + remorque) ne dépasse pas 3,5 tonnes.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/19.jpg"
+    },
+    {
+      "id": 19,
+      "type": "multiple_choice",
+      "question": "La police te demande ton permis de conduire lors d’un contrôle.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Tu dois toujours avoir le permis de conduire original avec toi"
+        },
+        {
+          "letter": "B",
+          "text": "Tu as 24 heures pour présenter le permis de conduire original"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.Si vous conduisez, vous devez avoir votre permis de conduire original avec vous.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/20.jpg"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "question": "Cette combinaison d'un signal routier et un panneau concerne ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... la"
+        },
+        {
+          "letter": "B",
+          "text": "... la"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.Signification: stationnement autorisé. Lorsqu’une masse est indiquée sur le panneau additionnel l’admission n’est applicable qu’aux véhicules dont la masse maximale autorisée excède la limite fixée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/10.jpg"
+    },
+    {
+      "id": 21,
+      "type": "multiple_choice",
+      "question": "Vous devez présenter votre voiture au contrôle technique pour la première fois lorsqu’elle a (…) ans.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "2 ans"
+        },
+        {
+          "letter": "B",
+          "text": "3 ans"
+        },
+        {
+          "letter": "C",
+          "text": "4 ans"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 9À partir de ce moment, le certificat de contrôle original doit toujours se trouver dans la voiture.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/21.jpg"
+    }
+  ]
+}

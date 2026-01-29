@@ -1,0 +1,645 @@
+{
+  "id": "11_les_feux",
+  "name": "11 les feux",
+  "totalQuestions": 37,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "question": "Il neige fortement en Wallonie et la visibilité est de 80 mètres.Quels feux doivent obligatoirement être allumés ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Les feux de croisement et les feux antibrouillard avant et arrière"
+        },
+        {
+          "letter": "B",
+          "text": "Uniquement les feux de croisement"
+        },
+        {
+          "letter": "C",
+          "text": "Les feux de croisement et le feu antibrouillard arrière"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 11Les feux antibrouillard avant ne sont pas obligatoires sur un véhicule. Ils ne doivent donc jamais être obligatoirement allumés.Un véhicule doit par contre être équipé d’un ou deux feux antibrouillard arrière rouges, qui doivent obligatoirement être allumés :- en cas de brouillard, lorsque la visibilité est inférieure à ± 100 mètres ;- en cas de chute de neige, lorsque la visibilité est inférieure à ± 100 mètres ;- en cas de fortes pluies, ils doivent toujours être allumés en Belgique.Les feux de croisement doivent être allumés de jour lorsque la visibilité est inférieure à 200 mètres.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/37.jpg"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "question": "Il y a du brouillard et la visibilité n’est que de 90 mètres.La voiture blanche est en stationnement.Quels feux doivent obligatoirement être allumés ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Les feux de position à l’avant et à l’arrière un ou deux feux rouges"
+        },
+        {
+          "letter": "B",
+          "text": "Les feux de croisement"
+        },
+        {
+          "letter": "C",
+          "text": "Les feux de croisement et le feu arrière de brouillard"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 11Lorsque vous êtes à l’arrêt ou en stationnement sur la chaussée ou sur l’accotement : entre la tombée de la nuit et le lever du jour ; et dans toutes les circonstances où il n’est plus possible de voir clairement à environ 200 mètres, doivent être allumés :à l’avant : un ou deux feux de position blancs ou jaunesà l’arrière : un ou deux feux rouges.Si vous vous arrêtez ou stationnez en cas de brouillard, chute de neige ou forte pluie, vous pouvez utiliser les feux de croisement ou les feux de brouillard avant, mais ce n'est pas obligatoire.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/30.jpg"
+    },
+    {
+      "id": 3,
+      "type": "number",
+      "question": "En cas de chute de neige, le feu de brouillard doit être allumé si la visibilité est réduite à moins de (...) mètres.",
+      "correctAnswer": "100",
+      "explanation": "LEÇON 11Les feux antibrouillard avant ne sont pas obligatoires sur un véhicule. Ils ne doivent donc jamais être obligatoirement allumés.Un véhicule doit par contre être équipé d’un ou deux feux antibrouillard arrière rouges, qui doivent obligatoirement être allumés :- en cas de brouillard, lorsque la visibilité est inférieure à ± 100 mètres ;- en cas de chute de neige, lorsque la visibilité est inférieure à ± 100 mètres ;- en cas de fortes pluies, ils doivent toujours être allumés en Belgique.Les feux de croisement doivent être allumés de jour lorsque la visibilité est inférieure à 200 mètres.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/7.jpg"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "question": "Il y a une forte pluie et la visibilité est réduite à 130 mètres. Les feux de brouillard arrière doivent-ils être allumés ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, toujours en cas de forte pluie"
+        },
+        {
+          "letter": "B",
+          "text": "Non, car la visibilité est supérieure à 100 mètres"
+        },
+        {
+          "letter": "C",
+          "text": "Les feux de brouillard arrière ne sont jamais obligatoires"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 11Les feux arrière de brouillard doivent être allumés :en cas de brouillard, si la visibilité est inférieure à environ 100 mètres ;en cas de chutes de neige, si la visibilité est inférieure à environ 100 mètres ;en cas de forte pluie, ils doivent toujours être allumés en Belgique, quelle que soit la visibilité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/20.jpg"
+    },
+    {
+      "id": 5,
+      "type": "multiple_choice",
+      "question": "Il y a de la fumée épaisse dans un tunnel et vous vous arrêtez. Quelle est l’erreur ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous quittez le tunnel via la sortie de secours"
+        },
+        {
+          "letter": "B",
+          "text": "Vous laissez la clé sur le contact"
+        },
+        {
+          "letter": "C",
+          "text": "Vous verrouillez la voiture"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 11 – ‘Les feux’.Vous quittez le tunnel par la sortie de secours.Vous ne bloquez pas les portes de la voiture et vous laissez la cle dans le contact.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/15.jpg"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "question": "Il fait nuit, en dehors d’une agglomération.Pendant que la voiture bleue dépasse, le conducteur distrait de la voiture blanche dévie soudain vers la gauche.Que peut faire le conducteur de la voiture bleue ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Il peut seulement utiliser les feux de route, car c’est la nuit"
+        },
+        {
+          "letter": "B",
+          "text": "Il peut utiliser le klaxon pour éviter un accident"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 11Quand peut-on utiliser l’avertisseur sonore ?Pendant la journée :À l’intérieur et en dehors d’une agglomération : pour avertir les autres et éviter un accident.En dehors d’une agglomération : pour avertir le conducteur que l’on veut dépasser.Entre la tombée du jour et le lever du jour :Seulement en cas de danger imminent.Dans les autres cas, il faut faire des appels de phares plutôt que d’utiliser le klaxon.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/34.jpg"
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "question": "Pouvez-vous utiliser le klaxon la nuit en cas de danger imminent ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, c’est permis"
+        },
+        {
+          "letter": "B",
+          "text": "Non, la nuit il faut plutôt faire clignoter les feux de route"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 11 – ‘Les feux’.Uniquement en cas de danger imminent, par exemple lorsqu’une voiture change soudainement de bande, il est permis d’utiliser le klaxon la nuit.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/26.jpg"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "question": "Il y a du brouillard épais et vous stationnez votre voiture sur la chaussée.Quelle est l’erreur ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le feu antibrouillard arrière doit être allumé"
+        },
+        {
+          "letter": "B",
+          "text": "Les feux de position doivent être allumés"
+        },
+        {
+          "letter": "C",
+          "text": "Les feux antibrouillard avant peuvent être allumés"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 11 – ‘Les feux’.Si vous stationnez votre voiture, le croisement ou les feux-brouillard avant ne doivent pas être allumés. Mais il n’est pas interdit.Lisez bien: \"Quelle est l'erreur?\"Beaucoup d’échecs à la théorie proviennent d’une lecture trop rapide ou d’une mauvaise compréhension de la question. Ne faites plus cette erreur.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/14.jpg"
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "question": "Lorsque vous stationnez à un endroit où cela est interdit, vous devez allumer vos quatre feux indicateurs de direction.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 11 – ‘Les feux’.Si vous faites cela, vous commettez une double infraction : le stationnement illégal et l’usage abusif des feux.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/3.jpg"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "question": "En route, il a plu fortement. Enfin, ce conducteur atteint le tunnel. Avec quels feux circule-t-il dans le tunnel ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Les feux de croisement"
+        },
+        {
+          "letter": "B",
+          "text": "Les feux de croisement et le feu arrière de brouillard"
+        },
+        {
+          "letter": "C",
+          "text": "Les feux de croisement, le feu arrière de brouillard et les feux de brouillard avant"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 11Dans le tunnel, il fait assez sombre et la visibilité est inférieure à 200 mètres. Vous roulez donc avec les feux de croisement allumés.À l’intérieur du tunnel, il ne pleut pas. Les feux de brouillard ne sont donc pas utilisés.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/27.jpg"
+    },
+    {
+      "id": 11,
+      "type": "multiple_choice",
+      "question": "Quels feux doivent être allumés lorsque vous roulez dans un tunnel ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Les feux ne sont pas obligatoires"
+        },
+        {
+          "letter": "B",
+          "text": "Les feux antibrouillard"
+        },
+        {
+          "letter": "C",
+          "text": "Les feux de croisement"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 11 – ‘Les feux’.La photo montre un tunnel éclairé où la visibilité est suffisante et donc il n’est légalement pas obligatoire d’allumer les pharesSi vous ne voyez pas à minimum 200 mètres loinvous devez allumer les feux de croisement  pour circuler dans le tunnel.Si la visibilité est suffisante du faait de l’éclairage du tunnel vous pouvez les allumer et dans ce cas il est conseillé de le faire avant d’entrer dans le tunnel afin que le conducteur derrière vous ne pense pas que vous freinez.Ne vous laissez pas surprendre par les allumages automatiques des feux dès l’entrée du tunnel quand les capteurs détectent la réduction de luminosité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/16.jpg"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "question": "En cas de forte pluie, quand le feu de brouillard arrière doit-il être allumé ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Quand la visibilité est réduite à moins de 200 mètres"
+        },
+        {
+          "letter": "B",
+          "text": "Quand la visibilité est réduite à moins de 100 mètres"
+        },
+        {
+          "letter": "C",
+          "text": "Toujours"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 11 – ‘Les feux’.En raison de brouillard ou de neige, lorsque la visibilité est réduite à moins de 100 mètres.En raison de fortes pluies, toujours en Belgique.En effet les pneus de la voiture projettent de l’eau vers le conducteur qui vous suit et ce dernier ne vous voit plus distinctement.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/6.jpg"
+    },
+    {
+      "id": 13,
+      "type": "multiple_choice",
+      "question": "À partir de quand le feu antibrouillard avant doit-il être allumé en cas de fort brouillard ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Lorsque la visibilité est inférieure à 200 mètres"
+        },
+        {
+          "letter": "B",
+          "text": "Lorsque la visibilité est inférieure à 100 mètres"
+        },
+        {
+          "letter": "C",
+          "text": "Jamais"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 11Une voiture ne doit pas obligatoirement être équipée de feux antibrouillard avant.Il n’existe donc aucune règle de circulation qui impose leur utilisation.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/36.jpg"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "question": "Il fait crépuscule dans une agglomération.Avant de commencer à dépasser, le conducteur de la voiture blanche a fait un bref appel de phares.En avait-il le droit ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non, car il circule dans une agglomération"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 11Quand peut-on utiliser l’avertisseur sonore ?De jour :En et hors agglomération : pour avertir les autres usagers et éviter un accident.Hors agglomération : pour prévenir le conducteur que l’on veut dépasser.Entre la tombée du jour et le lever du jour :Uniquement en cas de danger imminent.Dans les autres cas, on doit, au lieu de klaxonner, faire des appels de phares (alterner feux de route et feux de croisement).",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/35.jpg"
+    },
+    {
+      "id": 15,
+      "type": "yes_no",
+      "question": "Vous devez éteindre vos feux de route quand un conducteur roule en sens inverse.",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 11 – ‘Les feux’.à l'approche d'un usager venant en sens inverse, à la distance nécessaire pour que celui-ci puisse continuer sa marche aisément et sans danger, et en tout cas, dès qu'un conducteur allume et éteint successivement et rapidement ses feux de route pour faire comprendre qu'il est ébloui;",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/2.jpg"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "question": "Il neige. Quand devez-vous allumer les feux de croisement ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Toujours lorsqu’il neige"
+        },
+        {
+          "letter": "B",
+          "text": "Dès que la visibilité est inférieure à 100 mètres"
+        },
+        {
+          "letter": "C",
+          "text": "Dès que la visibilité est inférieure à 200 mètres"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 11Pendant la journée, vous devez allumer les feux de croisement :- lorsqu’il pleut et que la visibilité est inférieure à 200 mètres ;- en cas de brouillard, lorsque la visibilité est inférieure à 200 mètres ;- en cas de chute de neige, lorsque la visibilité est inférieure à 200 mètres ;- ou dans d’autres circonstances (par exemple fumée due à un incendie) lorsque la visibilité est inférieure à 200 mètres.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/32.jpg"
+    },
+    {
+      "id": 17,
+      "type": "multiple_choice",
+      "question": "Le brouillard disparaît lentement. La visibilité est maintenant de 110 mètres.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le feu de brouillard arrière doit être allumé"
+        },
+        {
+          "letter": "B",
+          "text": "Le feu de brouillard arrière peut être allumé"
+        },
+        {
+          "letter": "C",
+          "text": "Le feu de brouillard arrière ne peut pas être allumé"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 11Le feu de brouillard arrière doit être allumé en cas de chute de neige et de brouillard, lorsque la visibilité est inférieure à 100 mètres.En cas de fortes pluies, il doit toujours être allumé.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/29.jpg"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "question": "Quels feux s’allument toujours simultanément avec les feux de croisement ? 1. Deux feux rouges arrière. 2. Deux feux de position.3. Les deux feux de brouillard avant.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement 1"
+        },
+        {
+          "letter": "B",
+          "text": "Seulement 1 et 2"
+        },
+        {
+          "letter": "C",
+          "text": "1, 2 et 3"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 11 – ‘Les feux’.Simultanément avec les feux de croisement, les deux feux arrière rouges et deux feux de position s’allument.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/4.jpg"
+    },
+    {
+      "id": 19,
+      "type": "yes_no",
+      "question": "Pouvez-vous allumer les feux de détresse pour avertir un véhicule derrière vous que vous entrez dans un embouteillage ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 11 – ‘Les feux’.Vous pouvez utiliser les feux d’avertissement pour signaliser :. un autobus scolaire dont les enfants sortent.. un véhicule en panne ou immobilisé après un accident.. une situation dangereuse, comme par exemple un ralentissement soudain du véhicule devant vous, la formation de files, un gros trou dans la chaussée ou une perte de chargement,….",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/22.jpg"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "question": "Vous roulez et il y a un brouillard épais.Quels phares doivent obligatoirement être allumés ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Les feux de brouillard avant et arrière"
+        },
+        {
+          "letter": "B",
+          "text": "Les feux de brouillard avant"
+        },
+        {
+          "letter": "C",
+          "text": "Les feux de brouillard arrière"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 11 – ‘Les feux’.Les feux de brouillard avant ne doit pas être sur une voiture.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/24.jpg"
+    },
+    {
+      "id": 21,
+      "type": "yes_no",
+      "question": "La nuit tombe et vous stationnez votre voiture sur la chaussée ou sur l’accotement.Pouvez-vous laisser les feux de croisement allumés ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 11 – ‘Les feux’.Ils peuvent continuer à brûler. Mais les feux de position sont suffisants.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/10.jpg"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "question": "Pouvez-vous donner un signal d'avertissement avec le klaxon de votre voiture lorsque vous voulez dépasser un autre conducteur ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, pendant la journée en dehors d’une agglomération"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, pendant la journée dans une agglomération"
+        },
+        {
+          "letter": "C",
+          "text": "Oui, jour et nuit, hors agglomération"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 11 – ‘Les feux’.Vous pouvez utiliser le klaxon pendant la journée:En dehors des agglomérations (en journée uniquement) : pour avertir un conducteur que vous voulez  le dépasser.Peu importe l’endroit, de jour comme de nuit : pour avertir les autres d’un danger immédiat et d’ainsi d’éviter un accident.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/23.jpg"
+    },
+    {
+      "id": 23,
+      "type": "multiple_choice",
+      "question": "Un bus scolaire s'est arrêté et les quatre (feux) clignotants fonctionnent. Que faites-vous ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous vous arrêtez"
+        },
+        {
+          "letter": "B",
+          "text": "Vous ralentissez et si nécessaire vous vous arrêtez"
+        },
+        {
+          "letter": "C",
+          "text": "Vous poursuivez votre route"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 11 – ‘Les feux’.Si un bus scolaire s’arrête afin que les élèves peuvent sortir, le conducteur du bus scolaire doit allumer ses feux de détresse.Les autres véhicules qui circulent sont obligés de réduire fortement la vitesse et de s’arrêter si necessaire,Leurs conducteurs doivent redoubler de prudence dans ces circonstance.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/19.jpg"
+    },
+    {
+      "id": 24,
+      "type": "multiple_choice",
+      "question": "Vous stationnez votre voiture le soir sur une chaussée qui n’est pas éclairée.Quels feux doivent être allumés ?1. Les feux de position.2. Les deux feux arrière rouges.3. Les feux de croisement.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement 1"
+        },
+        {
+          "letter": "B",
+          "text": "1 et 2"
+        },
+        {
+          "letter": "C",
+          "text": "1, 2 et 3"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 11 – ‘Les feux’.Il est impossible d’allumer les feux rouges arrières seuls.Vous devez donc allumer les feux de position.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/9.jpg"
+    },
+    {
+      "id": 25,
+      "type": "multiple_choice",
+      "question": "De nuit, en dehors d’une agglomération.Avant de commencer à dépasser, le conducteur de la voiture blanche a donné un bref signal sonore. Mais en avait-il le droit ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Non, car c’est la nuit"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, car c’est en dehors d’une agglomération"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 11Quand peut-on utiliser l’avertisseur sonore ?- Pendant la journée :À l’intérieur et en dehors d’une agglomération : pour avertir les autres et éviter un accident.En dehors d’une agglomération : pour avertir le conducteur que l’on veut dépasser.- Entre la tombée du jour et le lever du jour :Seulement en cas de danger imminent.Dans les autres cas, il faut faire des appels de phares plutôt que d’utiliser le klaxon.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/33.jpg"
+    },
+    {
+      "id": 26,
+      "type": "multiple_choice",
+      "question": "Quelle est votre réaction lorsque vous entrez soudainement dans un banc de brouillard ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous freinez brusquement"
+        },
+        {
+          "letter": "B",
+          "text": "Vous freinez progressivement"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 11 – ‘Les feux’.Vous ne devez certainement pas freiner brusquement.Vous pouvez allumer brièvement vos feux de détresse (danger immédiat)Vous devez allumer vos feux de brouillard arrière.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/17.jpg"
+    },
+    {
+      "id": 27,
+      "type": "number",
+      "question": "Vous devez allumer vos feux de croisement du coucher au lever du soleil, ou de jour en cas de pluie, brouillard, neige ou autres circonstances qui limitent la visibilité à (...) mètres.",
+      "correctAnswer": "200",
+      "explanation": "LEÇON 11 – ‘Les feux’.200 mètres.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/1.jpg"
+    },
+    {
+      "id": 28,
+      "type": "number",
+      "question": "Vous devez allumer vos feux de croisement de jour lorsqu’il neige et la visibilité est réduite à moins de (...) mètres.",
+      "correctAnswer": "200",
+      "explanation": "LEÇON 11Les feux antibrouillard avant ne sont pas obligatoires sur un véhicule. Ils ne doivent donc jamais être obligatoirement allumés.Un véhicule doit par contre être équipé d’un ou deux feux antibrouillard arrière rouges, qui doivent obligatoirement être allumés :- en cas de brouillard, lorsque la visibilité est inférieure à ± 100 mètres ;- en cas de chute de neige, lorsque la visibilité est inférieure à ± 100 mètres ;- en cas de fortes pluies, ils doivent toujours être allumés en Belgique.Les feux de croisement doivent être allumés de jour lorsque la visibilité est inférieure à 200 mètres.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/5.jpg"
+    },
+    {
+      "id": 29,
+      "type": "number",
+      "question": "En cas de forte pluie, de jour, vous devez allumer vos feux de croisement si la visibilité est réduite à moins de (...) mètres.",
+      "correctAnswer": "200",
+      "explanation": "LEÇON 11 – ‘Les feux’.200 mètres.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/8.jpg"
+    },
+    {
+      "id": 30,
+      "type": "multiple_choice",
+      "question": "Quand un conducteur, lorsqu’il fait assez sombre hors agglomération, peut-il garder les feux de route allumés ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Lorsqu’un véhicule vient en sens inverse"
+        },
+        {
+          "letter": "B",
+          "text": "Lorsqu’une autre voiture roule à moins de 50 mètres devant lui"
+        },
+        {
+          "letter": "C",
+          "text": "Lorsqu’il dépasse la voiture qui le précède"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 11Article 30/1Les feux de route doivent être remplacés par les feux de croisement :a) à l’approche d’un usager venant en sens inverse,b) à l’approche d’un véhicule ferroviaire ou d’un bateau dont le conducteur pourrait être ébloui,c) lorsqu’on suit un autre véhicule à moins de 50 mètres, sauf en cas de dépassement,d) lorsque la chaussée est continuellement et suffisamment éclairée pour voir clairement à environ 100 mètres.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/28.jpg"
+    },
+    {
+      "id": 31,
+      "type": "multiple_choice",
+      "question": "Votre voiture est stationnée.Dans quel cas le feu de brouillard arrière peut-il rester allumé ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement en cas de brouillard"
+        },
+        {
+          "letter": "B",
+          "text": "Seulement en cas de brouillard et de chute de neige"
+        },
+        {
+          "letter": "C",
+          "text": "En cas de brouillard, de chute de neige, et pluie forte"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 11 – ‘Les feux’.Lorsque vous stationnez votre voiture, le feu antibrouillard peut rester allumé en cas de brouillard, de chute de neige ou de pluie forte.Il n’est pas  obligatoire.Les feux de position seront eux obligatoires dans de telles circonstances mais peut-être pas suffisants pour rendre votre voiture bien visible.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/18.jpg"
+    },
+    {
+      "id": 32,
+      "type": "yes_no",
+      "question": "Il y a un brouillard épais.Les feux de brouillard avant doivent-ils être allumés ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 11 – ‘Les feux’.Les feux de brouillard avant ne  sont pas obligatoires sur une voiture.De ce fait, on ne peut vous obliger à utiliser ce que vous n’avez pas Donc, vous n'êtes jamais tenu (obligé) de les utiliser mais c’est conseillé si votre voiture est équipée de ces feux de brouillard avant.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/21.jpg"
+    },
+    {
+      "id": 33,
+      "type": "multiple_choice",
+      "question": "Sur les chaussées peu éclairées, vous pouvez utiliser les feux de route au lieu des feux de croisement si vous ne gênez personne.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 11 – ‘Les feux’.Vous avez le choix d’utiliser les feux de croisement ou les feux de route. Ces derniers assureront une meilleure visibilité vers l’avant.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/12.jpg"
+    },
+    {
+      "id": 34,
+      "type": "multiple_choice",
+      "question": "Sur cette chaussée en agglomération,  vous pouvez utiliser les feux de route au lieu des feux de croisement.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 11 – ‘Les feux’.Vous ne pouvez pas les utiliser, parce que la chaussée est suffisamment éclairée, ainsi vous pouvez facilement voir à 100 mètres plus loin.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/13.jpg"
+    },
+    {
+      "id": 35,
+      "type": "multiple_choice",
+      "question": "Il fait nuit. Un conducteur dépasse une autre voiture.Les feux de route peuvent-ils rester allumés pendant le dépassement ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 11Les feux de route ne peuvent pas être allumés :- lorsque la route est continuellement et suffisamment éclairée pour voir à 100 mètres ;- lorsque tu risques d’éblouir un usager venant en sens inverse ;- lorsqu’un véhicule roule à moins de 50 mètres devant toi et que tu ne comptes pas le dépasser immédiatement. Si tu dépasses, tu peux les utiliser.- lorsque tu t’approches d’un véhicule ferroviaire ou d’un bateau.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/31.jpg"
+    },
+    {
+      "id": 36,
+      "type": "yes_no",
+      "question": "Il y a un accident sans blessés.Pouvez-vous allumer les 4 feux indicateurs de direction?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 11 – ‘Les feux’.Les quatre feux indicateurs de direction d’une voiture ne puissent être allumés que sur le moment :. votre voiture est en panne ou un accident.. afin d’avertir les autres usagers de la route d’un réel danger.. un autobus scolaire quand les élèves deviennent dedans ou dehors.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/11.jpg"
+    },
+    {
+      "id": 37,
+      "type": "yes_no",
+      "question": "Il ne neige plus. Le feu antibrouillard arrière peut-il rester allumé pendant un certain temps ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 11 – ‘Les feux’.L’utilisation est obligatoire pendant les chutes de neige, pas en cas de présence de neige sans précipitations..",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/75/25.jpg"
+    }
+  ]
+}
