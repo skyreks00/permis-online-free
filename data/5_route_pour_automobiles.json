@@ -1,0 +1,379 @@
+{
+  "id": "5_route_pour_automobiles",
+  "name": "5 route pour automobiles",
+  "totalQuestions": 27,
+  "questions": [
+    {
+      "id": 1,
+      "type": "yes_no",
+      "question": "Pouvez-vous circuler sur une route pour automobiles avec un cyclomoteur de classe B ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’.Les véhicules à moteur et leur remorque peuvent circuler sur une route pour automobiles, sauf :. cyclomoteurs,. véhicules agricoles,. quadricycles à moteur sans habitacle,. et des véhicules de forains.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/12.jpg"
+    },
+    {
+      "id": 2,
+      "type": "number",
+      "question": ".À quelle vitesse maximale (... km/h) une voiture peut-elle rouler sur cette route pour automobiles composée de 2 x 3 bandes de circulation hors agglomération ?",
+      "correctAnswer": "120",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’. Sur les routes pour automobiles, hors agglomération, vous pouvez circuler à 120 km/h :. si chaque sens de circulation est composé d’au moins 2 bandes de circulation,. et les sens de circulation sont divisés par une berme centrale.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/15.jpg"
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "question": "À quelle vitesse maximale la voiture blanche peut-elle circuler sur cette route pour automobiles dans la région de Bruxelles ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "50 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "70 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "90 km/h"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 5Il s’agit d’une chaussée ordinaire divisée en deux bandes de circulation.La vitesse maximale autorisée dans les Régions flamande et bruxelloise est de 70 km/h.Dans la Région wallonne, elle est de 90 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/26.jpg"
+    },
+    {
+      "id": 4,
+      "type": "number",
+      "question": ".Sur cette route pour automobiles en Région wallonne, le conducteur de la voiture bleue, peut circuler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "50",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’.La route pour automobiles est dans l'agglomération.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/5.jpg"
+    },
+    {
+      "id": 5,
+      "type": "number",
+      "question": ".Sur cette route pour automobiles en Flandre, comptant 2 x 2 bandes de circulation, une voiture peut rouler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "70",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’. La vitesse maximale sur cette route est…… en Wallonie 90 km/h… en Flandre: 70 km/h.Cette route compte 4 bandes, 2x2 mais les sens sont séparés uniquement par de la peinture.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/7.jpg"
+    },
+    {
+      "id": 6,
+      "type": "number",
+      "question": ".Sur cette route pour automobiles en Flandre, le conducteur de la voiture bleue peut circuler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "70",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’. La vitesse maximale sur une route ordinaire est…… en Wallonne  90 km/h;… en Flandre et Bruxelles-capitale: 70 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/3.jpg"
+    },
+    {
+      "id": 7,
+      "type": "number",
+      "question": ".Si vous avez besoin d’aide, et s'il n’y a pas de borne d’appel à proximité, alors vous composez le numéro d’appel d’urgence international (...).",
+      "correctAnswer": "112",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’.112 est le numéro d’urgence international.(Important pour l’examen).",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/4.jpg"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "question": "Quel numéro d'urgence composez-vous en cas d'accident sur une route pour automobiles ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "112"
+        },
+        {
+          "letter": "B",
+          "text": "121"
+        },
+        {
+          "letter": "C",
+          "text": "905"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’.112 est le numéro d’appel d’urgence international.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/24.jpg"
+    },
+    {
+      "id": 9,
+      "type": "yes_no",
+      "question": "Cette voiture peut-elle tourner à droite ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’. Fin de route pour automobiles.Signal d’indication.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/19.jpg"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "question": "Qui doit porter un gilet de sécurité en sortant de la voiture, sur un endroit où l’arrêt et le stationnement sont interdits ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le conducteur uniquement"
+        },
+        {
+          "letter": "B",
+          "text": "Le conducteur et les passagers"
+        },
+        {
+          "letter": "C",
+          "text": "Sur une route pour automobiles, personne"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’. Le conducteur doit porter un gilet de sécurité. Mais il est préférable que les passagers le fassent aussi.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/10.jpg"
+    },
+    {
+      "id": 11,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal d’indication ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Fin de route pour automobiles"
+        },
+        {
+          "letter": "B",
+          "text": "Accès interdit pour les voitures"
+        },
+        {
+          "letter": "C",
+          "text": "Fin d’autoroute"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’. Signal d’indication.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/20.jpg"
+    },
+    {
+      "id": 12,
+      "type": "number",
+      "question": ".Sur cette route en Wallonie, comptant 2 x 2 bandes de circulation, une voiture peut rouler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "90",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’. La vitesse maximale sur une route ordinaire est…… en Wallonne: 90 km/h;… en Flandre et Région bruxelloise: 70 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/22.jpg"
+    },
+    {
+      "id": 13,
+      "type": "number",
+      "question": ".À quelle vitesse maximale une voiture peut-elle rouler sur cette route pour automobiles ?",
+      "correctAnswer": "120",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’. Sur les routes pour automobiles, hors agglomération, vous pouvez circuler à 120 km/h :. si chaque sens de circulation est composé d’au moins 2 bandes de circulation,. et si les sens de circulation sont divisés autrement que par de la peinture.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/16.jpg"
+    },
+    {
+      "id": 14,
+      "type": "yes_no",
+      "question": "Le conducteur de la voiture brune continue de rouler sur la bande de gauche.La voiture bleue peut-elle la dépasser par la droite ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’.Le dépassement doit se faire par la gauche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/13.jpg"
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "question": "Ce signal routier interdit l’accès aux voitures.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’.Signification : fin de route pour automobiles.Signal d’indication.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/1.jpg"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "question": "Que signifient ces signaux routiers ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Début d’une agglomération"
+        },
+        {
+          "letter": "B",
+          "text": "Début d’une zone touristique"
+        },
+        {
+          "letter": "C",
+          "text": "Début d’un centre-ville"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’.Signal d’indication.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/6.jpg"
+    },
+    {
+      "id": 17,
+      "type": "multiple_choice",
+      "question": "Ce signal routier annonce le début d’une route pour automobiles. De quel type de signal s’agit-il ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Un signal d’indication"
+        },
+        {
+          "letter": "B",
+          "text": "Un signal d’obligation"
+        },
+        {
+          "letter": "C",
+          "text": "Un signal de danger"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’.Signification : route pour automobiles.Signal d’indication.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/11.jpg"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "question": "Vous voulez tester votre voiture et vous roulez à 167 km/h sur cette route pour automobiles.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "C’est une infraction qui vous vaudra une amende"
+        },
+        {
+          "letter": "B",
+          "text": "C’est une infraction qui pourrait vous valoir le retrait immédiat de votre permis de conduire"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’Lisez très bien le chapitre 12 sur notre site ou le PDF.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/18.jpg"
+    },
+    {
+      "id": 19,
+      "type": "multiple_choice",
+      "question": "Après quel signal routier devez-vous, si les conditions le permettent, rouler à minimum 70 km/h ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Après le signal 1"
+        },
+        {
+          "letter": "B",
+          "text": "Après le signal 2"
+        },
+        {
+          "letter": "C",
+          "text": "Après le signal 1 et 2"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’.Seule sur une autoroute (signal 1), une vitesse minimale de 70 km/h est obligatoire si les conditions le permettent. Sur une route pour automobiles (signal 2), cette obligation n’existe pas.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/25.jpg"
+    },
+    {
+      "id": 20,
+      "type": "number",
+      "question": ".Lors d’une panne ou d’un accident sur cette route pour automobiles, vous placerez le triangle de danger à  quelle distance minimale (...) mètres en deçà du véhicule, de manière à ce qu’il soit bien visible  des usagers qui s’en approchent à minimum 50 mètres.",
+      "correctAnswer": "30",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’. Autoroute : 100 mètres.Route pour automobiles et routes ordinaires : 30 mètres.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/8.jpg"
+    },
+    {
+      "id": 21,
+      "type": "multiple_choice",
+      "question": "Sur une autoroute, seul un dépanneur agrée appelé par la police peut remorquer une voiture.Qu'est-ce qui se passe sur une route pour automobiles ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous pouvez demander à un ami de tracter votre voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Un  dépanneur de votre choix peut le faire"
+        },
+        {
+          "letter": "C",
+          "text": "La police contactera aussi un service de dépannage"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’. Si votre voiture tombe en panne sur une autoroute ou une route pour automobiles, la police appelle un service de dépannage agrée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/21.jpg"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "question": "Où doit se trouver le gilet réfléchissant ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Dans l’habitacle"
+        },
+        {
+          "letter": "B",
+          "text": "Dans le coffre"
+        },
+        {
+          "letter": "C",
+          "text": "Dans l’habitacle ou dans le coffre"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 5Lorsque le véhicule s’arrête sur une autoroute ou une route pour automobiles et que le conducteur descend à un endroit où le stationnement est interdit, il doit porter un gilet de sécurité réfléchissant.Ce gilet doit se trouver dans l’habitacle et non dans le coffre, afin de pouvoir être enfilé avant de quitter le véhicule.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/27.jpg"
+    },
+    {
+      "id": 23,
+      "type": "number",
+      "question": ".À quelle vitesse maximale (... km/h) une voiture peut-elle rouler sur cette route pour automobiles dans un agglomération bruxelloise ?",
+      "correctAnswer": "30",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’.A Bruxelles, sauf mention contraire, la vitesse en agglomération est limitée à 30 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/14.jpg"
+    },
+    {
+      "id": 24,
+      "type": "yes_no",
+      "question": "Votre voiture est en panne. Votre ami peut-il remorquer votre voiture sur une route pour automobiles ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/23.jpg"
+    },
+    {
+      "id": 25,
+      "type": "multiple_choice",
+      "question": "Sur une route pour automobiles, vous devez rouler à une vitesse minimale de 70 km/h.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’.Ce n’est que sur les autoroutes que vous devez rouler , dans des circonstances normales, à au moins 70 km/heure.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/2.jpg"
+    },
+    {
+      "id": 26,
+      "type": "number",
+      "question": ".Sur cette route pour automobiles, comptant 2 x 2 bandes de circulation, une voiture peut rouler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "120",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’. Sur les routes pour automobiles, hors agglomération, vous pouvez circuler à 120 km/h :. si chaque sens de circulation est composé d’au moins 2 bandes de circulation,. et les sens de circulation sont divisés  autrement que par de la peinture.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/9.jpg"
+    },
+    {
+      "id": 27,
+      "type": "number",
+      "question": ".À quelle vitesse maximale une voiture peut-elle rouler sur cette route pour automobiles en Flandre ?",
+      "correctAnswer": "120",
+      "explanation": "LEÇON 5 – ‘La route pour automobiles’. Sur les routes pour automobiles, hors agglomération, vous pouvez circuler à 120 km/h :. si chaque sens de circulation est composé d’au moins 2 bandes de circulation,. et si les sens de circulation sont divisés autrement que par de la peinture.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/69/17.jpg"
+    }
+  ]
+}

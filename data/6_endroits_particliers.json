@@ -1,0 +1,685 @@
+{
+  "id": "6_endroits_particliers",
+  "name": "6 endroits particliers",
+  "totalQuestions": 44,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "question": "Tu as une autorisation pour circuler avec ta voiture dans une rue de jeux.Un enfant veut traverser la chaussée à un endroit sans passage pour piétons.Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "L’enfant"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 6Dans une rue de jeux, les enfants peuvent utiliser toute la chaussée.Celui qui y circule doit rouler au pas.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/43.jpg"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "question": "Dans une zone cyclable, les voitures ne peuvent pas dépasser les cyclistes.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.Dans une zone cyclable les voitures ne peuvent pas dépasser les cyclistes.La vitesse maximale autorisée est de 30 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/33.jpg"
+    },
+    {
+      "id": 3,
+      "type": "yes_no",
+      "question": "Pouvez-vous traverser un site spécial franchissable en voiture pour accéder à votre domicile ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’. Les autres conducteurs peuvent traverser le site spécial franchissable :. pour rejoindre ou quitter un emplacement de stationnement qui se trouve le long de ce site ;. pour rejoindre une propriété ou la quitter ;. et dans les carrefours.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/18.jpg"
+    },
+    {
+      "id": 4,
+      "type": "number",
+      "question": ".Avec quelle limite de vitesse peut-on conduire en Région wallonne, sur une route ordinaire en-dehors d’une agglomération ?",
+      "correctAnswer": "90",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/1.jpg"
+    },
+    {
+      "id": 5,
+      "type": "multiple_choice",
+      "question": "Ce signal routier indique le commencement d’une agglomération.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.Le signal routier jaune à bord rouge indique seulement la frontière administrative d’une commune et n’a aucune signification au niveau du code de la route.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/6.jpg"
+    },
+    {
+      "id": 6,
+      "type": "number",
+      "question": ".Après avoir franchi ce panneau en Flandre, en voiture, vous pouvez rouler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "70",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.Le signal jaune n’indique pas le début d’une agglomération.En Flandre  et Bruxelles-capitale region: 70 km/heure (sauf si les signaux de signalisation ou règles imposent une limite de vitesse différente.Dans la Région wallonne la vitesse maximale est: 90 km/heure.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/17.jpg"
+    },
+    {
+      "id": 7,
+      "type": "number",
+      "question": ".Quelle est la limite de vitesse en agglomération dans la région bruxelloise ?",
+      "correctAnswer": "30",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/26.jpg"
+    },
+    {
+      "id": 8,
+      "type": "number",
+      "question": ".Après avoir franchi ces signaux routiers, en voiture, vous pouvez rouler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "70",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.Jusqu'à 70 km/heure jusqu’au prochain croisement.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/20.jpg"
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "question": "Lorsque vous quittez cette agglomération, la vitesse maximale autorisée est de 70 km/h jusqu’au carrefour suivant.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.La vitesse de 70 s'applique jusqu'au signal routier de fin de zone 70.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/23.jpg"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "question": "Ce signal de zone s’applique ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... seulement lorsqu’il est allumé"
+        },
+        {
+          "letter": "B",
+          "text": "... de jour et de nuit"
+        },
+        {
+          "letter": "C",
+          "text": "... jusqu’au carrefour suivant"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.L’obligation n’est valable que lorsque ce signal est illuminé.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/24.jpg"
+    },
+    {
+      "id": 11,
+      "type": "multiple_choice",
+      "question": "Vous avez le permis de conduire provisoire",
+      "propositions": [
+        {
+          "letter": "B",
+          "text": "Vous franchissez ce signal routier à 48 km/h. Quelles sont les conséquences ?"
+        },
+        {
+          "letter": "A",
+          "text": "Vous devrez payer une amende"
+        },
+        {
+          "letter": "B",
+          "text": "Le juge vous condamnera probablement à repasser votre examen théorique et pratique"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.La limite était de 30 kms/h Vous êtes 18 kms/h au-dessus de la limiteC’est plus de 30 km/h en agglomération.Conseil d’examen : lisez très bien dans  la leçon la différence entre un retrait immédiat, une interdiction temporaire et une déchéance du droit de conduire un véhicule à moteur (leçon 12).",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/27.jpg"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "question": "Après avoir franchi ces signaux routiers, vous pouvez rouler à une vitesse maximale de 90 km/h, jusqu’à ce que vous quittiez la commune.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.90 km/heure jusqu’au prochain croisement.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/15.jpg"
+    },
+    {
+      "id": 13,
+      "type": "multiple_choice",
+      "question": "Qu'indique cette combinaison de signaux routiers ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Zone où la priorité de la droite s'applique partout"
+        },
+        {
+          "letter": "B",
+          "text": "Abords d'école"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.Le terme \"Abords d'école\" désigne une zone constituée d'une ou de plusieurs voies publiques, ou parties de voie publique, incluant un accès à une école et dont le début et la fin sont délimités par des signaux F4a et F4b. Le signal A23 est associé au signal F4a.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/2.jpg"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "question": "Quelle réponse est correcte ?Dans une zone résidentielle...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... la vitesse maximale autorisée est de 25 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "... les voitures sont autorisées à stationner à gauche et à droite dans le sens de la marche"
+        },
+        {
+          "letter": "C",
+          "text": "... les piétons et les cyclistes peuvent utiliser  toute la largeur de la voirie"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’La vitesse maximale autorisée est de 20 km/h.Les piétons peuvent utiliser toute la largeur de la voie publique mais pas les cyclistes !",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/36.jpg"
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "question": "Quelle est la vitesse maximale autorisée dans une \"rue scolaire\"?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Au pas"
+        },
+        {
+          "letter": "B",
+          "text": "Max. 20 km / heure"
+        },
+        {
+          "letter": "C",
+          "text": "Max. 30 km / heure"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.Les véhicules autorisés à circuler dans une rue scolaire doivent le faire à l'allure du pas.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/38.jpg"
+    },
+    {
+      "id": 16,
+      "type": "number",
+      "question": "En Flandre.Après avoir franchi ce signal routier, en voiture, vous pouvez rouler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "50",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.Le signal routier indique le début d’une agglomération.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/25.jpg"
+    },
+    {
+      "id": 17,
+      "type": "multiple_choice",
+      "question": "Dans une zone 30, la priorité de droite s’applique partout.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.Ce n’est pas une règle du code de la route.La priorité de droite s’applique sauf si un signal modifie la règle.Le signal de zone 30 affecte la vitesse maximale mais pas la règle de priorité",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/21.jpg"
+    },
+    {
+      "id": 18,
+      "type": "number",
+      "question": ".En Flandre.Après avoir franchi ces signal routier, en voiture, vous pouvez rouler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "70",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.Le signal routier indique la fin d’une agglomération.La vitesse maximale en dehors des agglomérations est :- dans les Régions flamande et bruxelloise : 70 km/h- dans la Région wallonne : 90 km/h",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/14.jpg"
+    },
+    {
+      "id": 19,
+      "type": "multiple_choice",
+      "question": "Au-delà de ce signal routier ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... vous pouvez vous stationner à gauche ou à droite dans les emplacements de stationnement désignés à cet effet"
+        },
+        {
+          "letter": "B",
+          "text": "... la vitesse maximale autorisée est de 30 km / heure"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 6 - 'Endroits particuliers'.Dans une zone résidentielle (max 20 km/h), les voitures peuvent se stationner à gauche et à droite mais uniquement sur les emplacements de stationnement désignés à cet effet.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/39.jpg"
+    },
+    {
+      "id": 20,
+      "type": "number",
+      "question": ".Après avoir franchi ces signaux routiers en Flandre, en voiture, vous pouvez rouler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "50",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.Vous êtes dans une agglomération.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/10.jpg"
+    },
+    {
+      "id": 21,
+      "type": "number",
+      "question": ".En agglomération: Après avoir franchi ce signal routier, vous pouvez rouler à une vitesse maximale de (...) km/h dans cette rue en Flandre.",
+      "correctAnswer": "50",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.Vous êtes dans une agglomération.La vitesse maximale autorisée est de 50 km/h.Bruxelles-capitale: 30 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/8.jpg"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Fin d’une zone résidentielle"
+        },
+        {
+          "letter": "B",
+          "text": "Fin d’une zone de jeu"
+        },
+        {
+          "letter": "C",
+          "text": "Fin d’une plaine de jeu"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.Signification : une zone résidentielle.Signal d’indication.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/16.jpg"
+    },
+    {
+      "id": 23,
+      "type": "number",
+      "question": ".Dans une zone résidentielle, vous pouvez rouler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "20",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.Dans une zone résidentielle…. les piétons peuvent emprunter la chaussée.. les enfants peuvent jouer sur la chaussée.. la vitesse maximale autorisée est de 20 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/7.jpg"
+    },
+    {
+      "id": 24,
+      "type": "number",
+      "question": "Les conducteurs qui peuvent circuler dans cette rue, peuvent le faire à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "B",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.Certaines voiries sont réservées à certaines catégories d’usagers.Les logos sur le panneau montrent quels usagers peuvent emprunter cette voirie.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/34.jpg"
+    },
+    {
+      "id": 25,
+      "type": "multiple_choice",
+      "question": "Quelle voiture est stationnée correctement dans cette zone résidentielle ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement la voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Seulement la voiture"
+        },
+        {
+          "letter": "C",
+          "text": "Les deux"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.Dans une zone résidentielle, vous pouvez stationner votre voiture à gauche et à droite de votre sens de circulation mais uniquement sur les emplacements de stationnement indiqués.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/35.jpg"
+    },
+    {
+      "id": 26,
+      "type": "yes_no",
+      "question": "Pouvez-vous passer ce signal routier en voiture ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.Les emblèmes sur le signal montrent quels usagers peuvent emprunter cette route.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/5.jpg"
+    },
+    {
+      "id": 27,
+      "type": "multiple_choice",
+      "question": "À quelle vitesse maximale cette voiture peut-elle rouler, dans une agglomération dans la Région wallonne, après ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "30 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "50 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "70 km/h"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 6Ce signal routier indique, à l’intérieur d’une agglomération, la fin d’une zone 30.La voiture circule donc toujours dans l’agglomération.La vitesse maximale autorisée à l’intérieur d’une agglomération est :- dans les Régions flamande et wallonne : 50 km/h- dans la Région de Bruxelles-Capitale : 30 km/h",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/44.jpg"
+    },
+    {
+      "id": 28,
+      "type": "multiple_choice",
+      "question": "Dans cette rue, vous pouvez rouler à une vitesse maximale de 30 km/h jusqu’au carrefour suivant.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.Jusqu'à ce que vous voyez le signal fin de la Zone.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/4.jpg"
+    },
+    {
+      "id": 29,
+      "type": "multiple_choice",
+      "question": "Dans l'agglomération Bruxelloise, vous devez...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... rouler à minimum à 30 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "... rouler à minimum à 20 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "... adapter votre vitesse aux conditions de circulation"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.La vitesse maximale autorisée dans l'agglomération est de 30 km/h. Mais vous n'êtes pas obligé de rouler à 30 km/h. Souvent, vous ne pourrez pas atteindre cette vitesse.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/13.jpg"
+    },
+    {
+      "id": 30,
+      "type": "multiple_choice",
+      "question": "Quelle réponse est incorrecte ?Dans une zone résidentielle ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... les enfants peuvent jouer sur la chaussée"
+        },
+        {
+          "letter": "B",
+          "text": "... vous pouvez rouler en voiture à une vitesse maximale de 25 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "... vous ne pouvez stationner que dans les emplacements prévus à cet effet"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.Nous n’avons pas demandé ‘ce qui est juste’  mais ‘quelle est l’erreur’.Dans une zoner résidentielle, la vitesse maximale autorisée est de 20 km/heure.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/19.jpg"
+    },
+    {
+      "id": 31,
+      "type": "yes_no",
+      "question": "Vous avez stationné votre voiture dans cette rue.Le lendemain, au moment de partir, c'est une rue  scolaire.Pouvez-vous quitter cette rue en voiture ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.À certaines heures reprises sur la signalisation ou en cas de barrières placées sur la voirie, vous n'êtes pas autorisé à entrer dans cette rue (accès interdit). Vous pouvez toutefois la quitter en voiture.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/29.jpg"
+    },
+    {
+      "id": 32,
+      "type": "multiple_choice",
+      "question": "Vous vous rendez aux Pays-Bas en voiture.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous suivez les règles de vitesse de ce pays"
+        },
+        {
+          "letter": "B",
+          "text": "Vous suivez les règles belges"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 6 - 'Endroits particuliers'.Chaque pays a ses propres règles.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/40.jpg"
+    },
+    {
+      "id": 33,
+      "type": "multiple_choice",
+      "question": "À quelle vitesse maximale cette voiture peut-elle rouler, dans une agglomération dans la Région wallonne, après ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "30 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "50 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "70 km/h"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.C’est un excès de vitesse de plus de 20 km/h en agglomération.Conseil d’examen : lisez très bien la différence entre un retrait immédiat de votre permis de conduire  et une déchéance du droit de conduire un véhicule à moteur (leçon 12).",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/30.jpg"
+    },
+    {
+      "id": 34,
+      "type": "multiple_choice",
+      "question": "Quelle est la vitesse maximale à laquelle vous pouvez circuler dans une rue réservée au jeu?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Au pas"
+        },
+        {
+          "letter": "B",
+          "text": "20 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "30 km/h"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.Dans une rue réservée au jeu toute la largeur de la voie publique est réservée pour les jeux.Les conducteurs qui circulent dans les rues réservées au jeu doivent le faire à l’allure du pas. Il faut être dans les conditions d’accès pour y circuler.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/31.jpg"
+    },
+    {
+      "id": 35,
+      "type": "number",
+      "question": ".Après avoir franchi ces signaux routiers, vous pouvez rouler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "30",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.Au-delà du deuxième signal vous êtes dans une ZONE 30.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/3.jpg"
+    },
+    {
+      "id": 36,
+      "type": "multiple_choice",
+      "question": "Vous avez un accident sur une route ordinaire dans une agglomération. Devez-vous porter un gilet de sécurité réfléchissant ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, si vous sortez de votre voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 6 - 'Endroits particuliers'.Le gilet doit obligatoirement se trouver dans la voiture. Vous ne devez le porter que si vous quittez le véhicule sur une autoroute ou une route pour automobiles.Attention le mettre est une bonne idée mais ici la question disait « devez-vous » ce qui implique une obligation. Il n’y a pas d’obligation légale en agglomération.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/41.jpg"
+    },
+    {
+      "id": 37,
+      "type": "multiple_choice",
+      "question": "À quelle vitesse une voiture peut-elle rouler dans cette agglomération ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Max. 70 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "Max. 50 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "Adapté aux circonstances"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.En cas de forte pluie, de brouillard, de neige  (...), le conducteur doit adapter sa vitesse en fonction des circonstances.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/37.jpg"
+    },
+    {
+      "id": 38,
+      "type": "number",
+      "question": ".Après avoir franchi ces panneaux, en voiture, vous pouvez rouler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "50",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.Vous quittez l’agglomération. Mais le signal supérieur vous dites que la vitesse maximale autorisée est de 50 km/heure jusqu’au prochain croisement.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/9.jpg"
+    },
+    {
+      "id": 39,
+      "type": "multiple_choice",
+      "question": "Quelle est la vitesse maximale à laquelle vous pouvez circuler dans une zone cyclable?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Au pas"
+        },
+        {
+          "letter": "B",
+          "text": "20 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "30 km/h"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.Dans une zone cyclable les voitures ne peuvent pas dépasser les cyclistes.La vitesse maximale autorisée est de 30 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/32.jpg"
+    },
+    {
+      "id": 40,
+      "type": "number",
+      "question": ".Vous avez un permis de conduire B. A quelle vitesse pouvez-vous conduire en Région bruxelloise, sur une route ordinaire en dehors de l'agglomération ?",
+      "correctAnswer": "70",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/28.jpg"
+    },
+    {
+      "id": 41,
+      "type": "multiple_choice",
+      "question": "Lorsque vous voyez ces signaux routiers ensemble, vous savez que la limite de vitesse ne s’applique que les jours d’école.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.Si vous circulez dans une zone, les obligations imposées à l’accès de la zone restent valables, jour et nuit La combinaison de ces signaux signifie « abords d’école ».",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/22.jpg"
+    },
+    {
+      "id": 42,
+      "type": "multiple_choice",
+      "question": "À quelle vitesse maximale êtes-vous autorisé à circuler dans une agglomération en Wallonie après le signal routier indiquant un passage pour piétons ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Maximum 20 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "Maximum 30 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "Maximum 50 km/h"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "Le panneau indiquant un passage pour piétons ne fixe pas de limitation de vitesse.Dans les agglomérations :- Flandre et Wallonie : maximum 50 km/h.- Région de Bruxelles-Capitale : maximum 30 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/42.jpg"
+    },
+    {
+      "id": 43,
+      "type": "number",
+      "question": ".La voiture, sur cette image, peut rouler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "70",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.La voiture quitte une agglomération. Mais il y a un signal qui dit que la vitesse maximale autorisée est de 70 km/heure.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/11.jpg"
+    },
+    {
+      "id": 44,
+      "type": "multiple_choice",
+      "question": "Vous pouvez franchir un site spécial franchissable pour accéder à votre propriété.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 6 – ‘Endroits particuliers’.Les autres conducteurs peuvent traverser le site spécial franchissable :. pour rejoindre ou quitter un emplacement de stationnement qui se trouve le long de ce site ;. pour rejoindre une propriété ou la quitter ;. et dans les carrefours.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/12.jpg"
+    }
+  ]
+}

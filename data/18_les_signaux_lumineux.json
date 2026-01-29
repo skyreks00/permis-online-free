@@ -1,0 +1,772 @@
+{
+  "id": "18_les_signaux_lumineux",
+  "name": "18 les signaux lumineux",
+  "totalQuestions": 50,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "question": "Qui peut s’engager dans le carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture verte et la voiture bleue"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture brune et la motocyclette"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.   L’agent de police donne l’ordre que la voiture brune et la moto doivent s’arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/3.jpg"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "question": "Le feu est vert, donc ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... vous pouvez toujours vous engager dans le carrefour"
+        },
+        {
+          "letter": "B",
+          "text": "... vous pouvez vous engager dans le carrefour s’il est dégagé"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.   Vous pouvez passer un feu vert, si l’intersection est libre.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/8.jpg"
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "question": "Le conducteur de la voiture brune veut tourner à gauche.Il peut s’engager dans le carrefour.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.   Il peut tourner à gauche ou à droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/7.jpg"
+    },
+    {
+      "id": 4,
+      "type": "yes_no",
+      "question": "Les barrières sont déjà ouvertes, mais le feu rouge est toujours allumé.Puis-je déjà traverser le passage à niveau ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 18 - «Feux de circulation».Il est interdit de circuler sur le passage à niveau tant que le feu rouge clignotant est allumé, même si les barrières sont ouvertes.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/46.jpg"
+    },
+    {
+      "id": 5,
+      "type": "yes_no",
+      "question": "Vous attendez dans votre voiture lorsque le feu de circulation est rouge.Pouvez-vous donner constamment un peu de gaz pour maintenir au chaud le moteur ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/32.jpg"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "question": "Ce feu pour un tram a la même signification que …",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "… un feu rouge"
+        },
+        {
+          "letter": "B",
+          "text": "… un feu vert"
+        },
+        {
+          "letter": "C",
+          "text": "… un feu orange"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.Un triangle inversé a la même signification que celle d'un feu vert.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/31.jpg"
+    },
+    {
+      "id": 7,
+      "type": "yes_no",
+      "question": "Le feu de circulation est rouge.Êtes-vous autorisé à lire les messages sur votre téléphone portable pendant que vous attendez ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 18 - «Feux de circulation».Même à l’arrêt devant un feu rouge, vous êtes toujours considéré comme un usager de la route et vous n’êtes pas autorisé à tenir ou utiliser un téléphone mobile, sauf s’il est placé dans un support prévu à cet effet.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/47.jpg"
+    },
+    {
+      "id": 8,
+      "type": "yes_no",
+      "question": "Le conducteur de la voiture bleue doit-il céder le passage au piéton ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.   La flèche verte indique que vous pouvez tourner à droite. Mais vous devez donner la priorité aux autres usagers de la route.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/19.jpg"
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "question": "Qu'est-ce que la lumière blanche / jaune clignotante au centre des lumières d'un tramway signifie ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Tram doit conduire très lentement à cause de dysfonctionnement des voies de tram"
+        },
+        {
+          "letter": "B",
+          "text": "Vous pouvez passer le feu avec double précaution et vous devez respecter les règles de priorité"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.  Important: à double prudence et en tenant compte des règles de priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/33.jpg"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "question": "Le feu devient orange.Pouvez-vous encore franchir le carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, s'il n'est plus possible de s'arrêter dans des conditions de sécurité suffisante"
+        },
+        {
+          "letter": "C",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.le feu jaune-orange fixe signifie interdiction de franchir la ligne d'arrêt ou, à défaut de ligne d'arrêt le signal même, à moins qu'au moment où il s'allume le conducteur ne s'en trouve si près qu'il ne puisse plus s'arrêter dans des conditions de sécurité suffisante; toutefois, si le signal est placé à un carrefour, le conducteur qui, dans de telles circonstances, a franchi la ligne d'arrêt ou le signal, ne peut traverser le carrefour qu'à la condition de ne pas mettre en danger les autres usagers;",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/40.jpg"
+    },
+    {
+      "id": 11,
+      "type": "multiple_choice",
+      "question": "Le chauffeur de la voiture brune veut tourner à gauche. Peut-il s’engager dans le carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, le feu est vert"
+        },
+        {
+          "letter": "B",
+          "text": "Non, le carrefour n’est pas libre"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.Bien que la lumière est verte, le conducteur de la voiture brune ne peut pas conduire sur la traversée. Il doit attendre jusqu'à ce que l'intersection est libre.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/28.jpg"
+    },
+    {
+      "id": 12,
+      "type": "yes_no",
+      "question": "Le conducteur de la voiture doit-il s’arrêter avant de pouvoir entrer dans cette intersection ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 18 - 'Feux de circulation'Non, car le feu de circulation fonctionne et est vert.Si les lumières sont défectueuses, il doit s’arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/41.jpg"
+    },
+    {
+      "id": 13,
+      "type": "yes_no",
+      "question": "Les barrières sont encore ouvertes, mais l'alarme est clairement audible.Pouvez-vous encore conduire sur le passage ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/39.jpg"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "question": "Entrer dans un passage à niveau alors que les feux rouges clignotent, est...A .... une infraction au troisième degré.B. ... une infraction au quatrième degré.",
+      "propositions": [],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 18 - «Feux de circulation».",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/48.jpg"
+    },
+    {
+      "id": 15,
+      "type": "yes_no",
+      "question": "Un passage à niveau sans barrières, mais avec des lumières. Les lumières sont défectueuses.Une voiture peut-elle dépasser un cyclomoteur à gauche ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 18 - «Feux de circulation».S'il y a des barrières ou des lumières qui fonctionnent, c'est autorisé.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/44.jpg"
+    },
+    {
+      "id": 16,
+      "type": "yes_no",
+      "question": "Le conducteur de la voiture brune veut s’engager dans le carrefour.Doit-il respecter le feu rouge ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.Non. car le feu rouge est à sa gauche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/9.jpg"
+    },
+    {
+      "id": 17,
+      "type": "multiple_choice",
+      "question": "Quel véhicule peut s’engager dans le carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La motocyclette"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.   Les ordres d'un officier de police sont plus importants que les feux de signalisation.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/16.jpg"
+    },
+    {
+      "id": 18,
+      "type": "yes_no",
+      "question": "Le conducteur de la motocyclette peut-il tourner à gauche ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.Le conducteur de la motocyclette peut aller tout droit ou tourner à gauche ou tourner à droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/23.jpg"
+    },
+    {
+      "id": 19,
+      "type": "yes_no",
+      "question": "La flèche verte d’évacuation est allumée.Le conducteur de la voiture bleue peut-il encore s’engager dans le carrefour et tourner à gauche ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.Les voitures au carrefour peuvent partir.La voiture bleue ne peut pas franchir le feu rouge.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/21.jpg"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "question": "Qui peut s’engager dans le carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture brune"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture bleue"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.   Le conducteur de la voiture bleue voit un feu vert.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/1.jpg"
+    },
+    {
+      "id": 21,
+      "type": "multiple_choice",
+      "question": "Vous vous arrêtez derrière une voiture qui est arrêtée à un feu rouge.Quand gardez-vous une distance de sécurité suffisante ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Lorsque vous voyez encore la plaque d’immatriculation"
+        },
+        {
+          "letter": "B",
+          "text": "Lorsque vous voyez encore les pneus arrière"
+        },
+        {
+          "letter": "C",
+          "text": "La distance de sécurité n’a pas d’importance"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 18Il est toujours prudent de garder une distance suffisante. Dans les auto-écoles, on enseigne qu’il est sûr de s’arrêter de façon à voir encore les pneus arrière du véhicule qui vous précède.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/50.jpg"
+    },
+    {
+      "id": 22,
+      "type": "yes_no",
+      "question": "Peut-on prendre son GSM en main dans la voiture lorsqu’on attend que le feu rouge passe au vert ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 18 - «Feux de circulation».Même à l’arrêt devant un feu rouge, vous êtes toujours considéré comme un usager de la route et vous n’êtes pas autorisé à tenir ou utiliser un téléphone mobile, sauf s’il est placé dans un support prévu à cet effet.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/49.jpg"
+    },
+    {
+      "id": 23,
+      "type": "multiple_choice",
+      "question": "Qui doit s’arrêter ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture brune"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture bleue"
+        },
+        {
+          "letter": "C",
+          "text": "La voiture brune et la voiture bleue"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.Les ordres d'un officier de police sont plus importants que les feux de signalisation.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/12.jpg"
+    },
+    {
+      "id": 24,
+      "type": "multiple_choice",
+      "question": "Vous voyez ce feu à votre droite.Que pouvez-vous faire ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement tourner à droite"
+        },
+        {
+          "letter": "B",
+          "text": "Continuer tout droit ou tourner à droite"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.La flèche verte indique que vous pouvez tourner à droite.Mais vous devez donner la priorité aux conducteurs venant des autres directions et aussi aux piétons.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/26.jpg"
+    },
+    {
+      "id": 25,
+      "type": "multiple_choice",
+      "question": "La photo est prise depuis la voiture que vous conduisez. Que faites-vous ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous pouvez suivre la voiture grise"
+        },
+        {
+          "letter": "B",
+          "text": "Vous vous arrêtez"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.Le feu orange allumé et donc vous devez vous arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/24.jpg"
+    },
+    {
+      "id": 26,
+      "type": "multiple_choice",
+      "question": "Le conducteur d’une voiture ne doit pas respecter les feux spéciaux pour piétons.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.   Seuls les piétons doivent en tenir compte.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/13.jpg"
+    },
+    {
+      "id": 27,
+      "type": "multiple_choice",
+      "question": "Ce feu pour un tram signifie :",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "On peut seulement continuer tout droit"
+        },
+        {
+          "letter": "B",
+          "text": "On peut continuer dans toutes les directions"
+        },
+        {
+          "letter": "C",
+          "text": "Il faut s’arrêter"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.On peut seulement continuer tout droit.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/30.jpg"
+    },
+    {
+      "id": 28,
+      "type": "multiple_choice",
+      "question": "Si vous voyez trois flèches vertes au-dessus des bandes de circulation, vous pouvez toujours choisir la bande de circulation sur laquelle vous voulez rouler.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.   Vous devez conduire autant que possible, sur la voie de droite.Mais Lorsque la densité de la circulation le justifie, celle-ci peut s'effectuer en plusieurs files:1° sur les chaussées à deux sens de circulation divisées en quatre bandes de circulation ou plus, à condition de n'emprunter que les bandes affectées à la circulation dans le sens suivi;2° sur les chaussées à sens unique;",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/2.jpg"
+    },
+    {
+      "id": 29,
+      "type": "yes_no",
+      "question": "Le feu de signalisation est vert.Devez-vous tout de même respecter le signal routier additionnel ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.Vous devez prendre en compte le signal routier additionnel, lorsque les feux de circulation sont défectueux.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/4.jpg"
+    },
+    {
+      "id": 30,
+      "type": "multiple_choice",
+      "question": "Vous approchez d'un feu rouge.Vous appuyez sur la pédale d'embrayage pour ralentir.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 18 - «Feux de circulation».N'appuyez jamais sur la pédale d'embrayage pour ralentir.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/45.jpg"
+    },
+    {
+      "id": 31,
+      "type": "multiple_choice",
+      "question": "Ce feu pour un tram, a la même signification que …",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "… un feu rouge"
+        },
+        {
+          "letter": "B",
+          "text": "… un feu vert"
+        },
+        {
+          "letter": "C",
+          "text": "… un feu orange"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.Un triangle inversé a la même signification que celle d'un feu vert.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/43.jpg"
+    },
+    {
+      "id": 32,
+      "type": "multiple_choice",
+      "question": "Un feu jaune-orange clignote...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... vous ne pouvez pas le franchir"
+        },
+        {
+          "letter": "B",
+          "text": "... vous pouvez le franchir et vous avez priorité"
+        },
+        {
+          "letter": "C",
+          "text": "... vous pouvez le franchir en respectant les règles de priorité normales"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.Cela signifie que les feux sont défectueux.Important: « double prudence » et vous devez suivre les règles de priorité normales.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/10.jpg"
+    },
+    {
+      "id": 33,
+      "type": "multiple_choice",
+      "question": "Les feux de circulation sont défectueux. Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture verte"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture bleue"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.  Si les feux sont défectueux, vous devez appliquer les règles de priorité normale.Il n'y a aucun signe sous les lumières.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/34.jpg"
+    },
+    {
+      "id": 34,
+      "type": "yes_no",
+      "question": "Pouvez-vous envoyer un SMS pendant que vous attendez dans la voiture à un feu rouge ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.C'est interdit.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/36.jpg"
+    },
+    {
+      "id": 35,
+      "type": "multiple_choice",
+      "question": "Le feu de signalisation passe à l’orange.La voiture bleue...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... doit toujours s’arrêter"
+        },
+        {
+          "letter": "B",
+          "text": "... peut franchir le feu orange si elle ne peut plus s’arrêter en toute sécurité"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.Normalement, le conducteur doit s’arrêter, sauf s’il n’est vraiment pas sécuritaire.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/5.jpg"
+    },
+    {
+      "id": 36,
+      "type": "multiple_choice",
+      "question": "Si la flèche d’évacuation verte est allumée …",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... tous les autres feux à l'intersection sont rouges"
+        },
+        {
+          "letter": "B",
+          "text": "... le trafic en sens inverse a un feu rouge"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 18 - 'Feux de circulation'.La circulation en sens inverse a un feu rouge.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/42.jpg"
+    },
+    {
+      "id": 37,
+      "type": "yes_no",
+      "question": "Le feu est vert, mais le carrefour n’est pas libre.Pouvez-vous, pendant que vous attendez, rester sur le passage pour piétons ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.  Vous pouvez conduire sur le passage, lorsque la lumière est verte et la jonction est libre. Mais vous ne pouvez pas bloquer le passage pour piétons pendant que vous attendez.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/35.jpg"
+    },
+    {
+      "id": 38,
+      "type": "multiple_choice",
+      "question": "Les barrières descendent.Vous pouvez franchir la lumière clignotante rouge et passer sous les barrières uniquement si vous ne pouvez plus vous arrêter en toute sécurité.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.C'est une infraction grave. Votre permis de conduire peut être révoquée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/11.jpg"
+    },
+    {
+      "id": 39,
+      "type": "multiple_choice",
+      "question": "Une flèche jaune au-dessus d’une bande de circulation signifie que ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... vous devez quitter la bande de circulation"
+        },
+        {
+          "letter": "B",
+          "text": "... vous devez sortir dès la prochaine sortie"
+        },
+        {
+          "letter": "C",
+          "text": "... la prochaine sortie est fermée"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.   Vous ne pouvez plus conduire sur cette bande de circulation.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/6.jpg"
+    },
+    {
+      "id": 40,
+      "type": "multiple_choice",
+      "question": "Cette photo est prise depuis la voiture que vous conduisez.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous devez vous arrêter"
+        },
+        {
+          "letter": "B",
+          "text": "Vous devez céder le passage si nécessaire"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.Les feux de circulation ne s’appliquent pas à votre voie.Le signal routier indique que vous devrez donner la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/25.jpg"
+    },
+    {
+      "id": 41,
+      "type": "yes_no",
+      "question": "Le feu circulaire à votre droite est vert et vous voulez tourner à gauche mais la flèche d'évacuation n'est pas encore allumée.Pouvez-vous quand même vous engager dans le carrefour ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.Flèche d'évacuation d'un carrefour.Une flèche verte orientée vers la gauche et placée seule à la sortie d'un carrefour, signifie que la circulation venant en sens inverse sur la chaussée que les conducteurs qui tournent à gauche s'apprêtent à quitter, est arrêtée par un feu rouge afin de faciliter l'évacuation du carrefour.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/37.jpg"
+    },
+    {
+      "id": 42,
+      "type": "multiple_choice",
+      "question": "Vous vous aprochez d'un feu rouge avec votre voiture.Vous vous arrêtez avant ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... la première ligne d’arrêt"
+        },
+        {
+          "letter": "B",
+          "text": "... la deuxième ligne d’arrêt"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.La première ligne d’arrêt est la ligne d’arrêt qu’un conducteur voit la première.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/20.jpg"
+    },
+    {
+      "id": 43,
+      "type": "multiple_choice",
+      "question": "Ce signal routier annonce que 150 mètres plus loin, il y a des feux de circulation.Ce signal est ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "… un signal de danger"
+        },
+        {
+          "letter": "B",
+          "text": "… un signal relatif à la priorité"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.  Les signaux de danger sont placés à une distance approximative de 150 m de l'endroit dangereux.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/38.jpg"
+    },
+    {
+      "id": 44,
+      "type": "multiple_choice",
+      "question": "Quand devez-vous tenir compte de ce signal routier STOP ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Jamais"
+        },
+        {
+          "letter": "B",
+          "text": "Quand le feu est au orange"
+        },
+        {
+          "letter": "C",
+          "text": "Quand le feu orange clignote"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.Si le feu orange clignote, cela signifie que les lumières sont défectueux.Si les feux sont défectueux, alors vous devriez considérer les règles et les signaux de priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/27.jpg"
+    },
+    {
+      "id": 45,
+      "type": "multiple_choice",
+      "question": "Quel conducteur ne peut pas s’engager dans le carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement celui de la voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Seulement celui de la motocyclette"
+        },
+        {
+          "letter": "C",
+          "text": "Ni celui de la voiture ni celui de la motocyclette"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.Voiture bleue: feu rouge (= arrêt).Moto: feu orange (= arrêt).",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/18.jpg"
+    },
+    {
+      "id": 46,
+      "type": "multiple_choice",
+      "question": "La flèche que vous voyez ici est une flèche verte d’évacuation qui indique que les conducteurs qui se trouvent dans le carrefour peuvent tourner à gauche en toute sécurité.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/22.jpg"
+    },
+    {
+      "id": 47,
+      "type": "yes_no",
+      "question": "Vous voulez tourner à droite.Devez-vous marquer l’arrêt avant de vous engager dans le carrefour ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.Les signaux routiers aux feux de circulation ne sont pas applicables si les lumières fonctionnent.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/17.jpg"
+    },
+    {
+      "id": 48,
+      "type": "multiple_choice",
+      "question": "Ce feu pour un tram a la même signification que …",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "… un feu rouge"
+        },
+        {
+          "letter": "B",
+          "text": "… un feu vert"
+        },
+        {
+          "letter": "C",
+          "text": "… un feu orange"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/29.jpg"
+    },
+    {
+      "id": 49,
+      "type": "multiple_choice",
+      "question": "Qui peut s’engager dans le carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture brune"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture bleue"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/14.jpg"
+    },
+    {
+      "id": 50,
+      "type": "yes_no",
+      "question": "Le conducteur d’une voiture doit-il respecter les feux spéciaux pour cyclistes.",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 18 – ‘les feux de circulation’.Les cyclistes et les cyclomotoristes doivent tenir compte de ce feu de circulation.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/82/15.jpg"
+    }
+  ]
+}

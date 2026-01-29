@@ -1,0 +1,773 @@
+{
+  "id": "20_la_priorite_de_droite",
+  "name": "20 la priorite de droite",
+  "totalQuestions": 44,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture rouge"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture verte"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.    Signal routier : carrefour où la priorité de droite est applicable.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/30.jpg"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le cyclomoteur"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.Un carrefour où la priorité de droite est applicable.          La voiture vient de la droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/1.jpg"
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "question": "Qui doit s’engager dans le carrefour en dernier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le piéton"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture verte"
+        },
+        {
+          "letter": "C",
+          "text": "La voiture bleue"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.1. Le piéton - 2. La voiture verte - 3. La voiture bleue.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/4.jpg"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le vélo"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.  Un cycliste est également un conducteur.Le cycliste vient de la droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/28.jpg"
+    },
+    {
+      "id": 5,
+      "type": "multiple_choice",
+      "question": "Vous voulez tourner à droite.Devez-vous céder le passage si une voiture arrive de la gauche ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, car c’est un rond-point"
+        },
+        {
+          "letter": "B",
+          "text": "Non, car vous avez la priorité de droite"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 20Ce n’est pas un rond-point. Il n’y a pas non plus de signaux routiers qui règlent la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/41.jpg"
+    },
+    {
+      "id": 6,
+      "type": "yes_no",
+      "question": "Dans ce carrefour, la voiture rouge (= flèche rouge) peut-elle dépasser la jaune (= flèche jaune) par la gauche ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’. Dépasser une voiture par la gauche est interdit aux carrefours où le passage est réglé par : ‘la priorité de droite’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/25.jpg"
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "question": "La voiture noire s’est arrêtée par sécurité avant le carrefour.Quelle voiture peut s’engager la première sur le carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture grise, car la noire s’est arrêtée"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture noire, car elle vient de droite"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 20À un carrefour où la priorité n’est pas réglée par un agent qualifié, des feux de signalisation ou des signaux routier, la priorité de droite s’applique.Même si le conducteur venant de droite s’arrête d’abord, il conserve tout de même sa priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/44.jpg"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "question": "Vous approchez de ce carrefour et vous voulez tourner à droite.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous avez la priorité sur les conducteurs venant de gauche"
+        },
+        {
+          "letter": "B",
+          "text": "Vous devez céder la priorité aux conducteurs venant de gauche"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 20Ce n’est pas un rond-point. Il n’y a pas de signaux réglant la priorité. C’est donc la priorité de droite qui s’applique.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/42.jpg"
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Voiture 1"
+        },
+        {
+          "letter": "B",
+          "text": "Voiture 2"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.  Signal routier : carrefour où la priorité de droite est applicable.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/33.jpg"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le bus"
+        },
+        {
+          "letter": "B",
+          "text": "Vous (= flèche jaune)"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.   Le bus vient de la droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/22.jpg"
+    },
+    {
+      "id": 11,
+      "type": "multiple_choice",
+      "question": "Le conducteur de la voiture peut-il dépasser par la gauche le conducteur du cyclomoteur sur ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, toujours si la sécurité est garantie"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, seulement s’il y a un espace d’un mètre"
+        },
+        {
+          "letter": "C",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.    Dépasser une voiture par la gauche est interdit aux carrefours où le passage est réglé par : ‘la priorité de droite’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/36.jpg"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "question": "Dans quel ordre ces conducteurs peuvent-ils s’engager dans le carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Cyclomoteur – Voiture bleue – Voiture brune"
+        },
+        {
+          "letter": "B",
+          "text": "Voiture bleue - Cyclomoteur - Voiture brune"
+        },
+        {
+          "letter": "C",
+          "text": "Voiture brune - Voiture bleue – Cyclomoteur"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’. La voiture bleue a la priorité de droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/2.jpg"
+    },
+    {
+      "id": 13,
+      "type": "multiple_choice",
+      "question": "La voiture grise a reculé rapidement à ce carrefour, parce que la voiture blanche arrive à grande vitesse.Mais qui a la priorité ici ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture blanche, car elle continue tout droit"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture grise, car elle vient de droite"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 20À un carrefour où ni agent qualifié, ni feux de signalisation, ni signaux routiers ne règlent la priorité, c’est la priorité de droite qui s’applique.La voiture grise vient de droite et a donc la priorité. La voiture blanche devait s’arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/43.jpg"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Le cycliste"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.Un cycliste est également un conducteur.Le cycliste vient de la droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/12.jpg"
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture rouge"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture bleue"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.   Un carrefour où la priorité de droite est applicable.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/32.jpg"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "question": "Qui peut s’engager en premier dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture rouge"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture bleue"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’. Vous ne devez pas céder le passage à un conducteur venant de votre droite s’il débouche d’un sens interdit.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/18.jpg"
+    },
+    {
+      "id": 17,
+      "type": "multiple_choice",
+      "question": "Vous approchez avec votre voiture cette intersection.Pouvez-vous dépasser par la gauche une moto à deux roues ou un cyclomoteur à cette intersection ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, si aucun conducteur vient de la droite"
+        },
+        {
+          "letter": "C",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.La priorité de droite : il est interdit de dépasser par la gauche : un véhicule attelé, un véhicule à plus de deux roues ou un véhicule à moteur à deux roues.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/39.jpg"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "question": "Qui peut s'engager dans le carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La motocyclette"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.   Aux carrefours où le passage est réglé par une personne qualifiée, la règle ‘priorité de droite’ n’est pas applicable.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/34.jpg"
+    },
+    {
+      "id": 19,
+      "type": "multiple_choice",
+      "question": "La voiture rouge veut quitter une place de stationnement.Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture rouge qui vient de droite"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture blanche"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 20Le conducteur qui quitte une place de stationnement doit céder le passage à tous les usagers de la voie publique, y compris les piétons.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/45.jpg"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le cyclomoteur"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’. Un carrefour où la priorité de droite est applicable.          La voiture vient de la droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/5.jpg"
+    },
+    {
+      "id": 21,
+      "type": "multiple_choice",
+      "question": "Les vélos se sont arrêtés.Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Les vélos"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.  Un cycliste est également un conducteur.Le cycliste vient de la droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/29.jpg"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture verte"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture grise"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.C’est un rond-point. La règle ‘priorité de droite’ n'est pas appliquée ici.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/10.jpg"
+    },
+    {
+      "id": 23,
+      "type": "multiple_choice",
+      "question": "La voiture A quitte la propriété.Qui a la priorité?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Voiture"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.Un conducteur qui quitte l’accès carrossable prive doit s’arrêter et céder le passage aux usagers (y compris aux piétons) qui se trouvent sur la chaussée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/9.jpg"
+    },
+    {
+      "id": 24,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Le cyclomoteur"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.La priorité de droite ne s’applique pas à l’intersection d’une route ordinaire avec un sentier ou un chemin de terre.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/7.jpg"
+    },
+    {
+      "id": 25,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le piéton"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.Carrefour où la priorité de droite est applicable.Un piéton n’est pas un conducteur et il n'y a pas un passage pour piétons.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/37.jpg"
+    },
+    {
+      "id": 26,
+      "type": "multiple_choice",
+      "question": "La priorité de droite s’applique-t-elle sur ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, pour tout conducteur qui vient de droite"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, pour tout conducteur qui vient de droite, sauf pour les cyclistes"
+        },
+        {
+          "letter": "C",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’. Signal routier : carrefour où la priorité de droite est applicable.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/35.jpg"
+    },
+    {
+      "id": 27,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Voiture"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.À cette intersection la priorité de droite ne s’applique pas.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/6.jpg"
+    },
+    {
+      "id": 28,
+      "type": "multiple_choice",
+      "question": "Qui doit s’engager en dernier dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le cycliste"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture"
+        },
+        {
+          "letter": "C",
+          "text": "Le camion"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.1. Le cycliste - 2 la voiture – 3 le camion.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/16.jpg"
+    },
+    {
+      "id": 29,
+      "type": "yes_no",
+      "question": "En raison de travaux, la voiture bleue ne peut pas tourner à droite.Doit-il donner la priorité à la voiture verte ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.La voiture verte ne provient pas d'un sens de conduite interdit.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/40.jpg"
+    },
+    {
+      "id": 30,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture sur le chemin de terre"
+        },
+        {
+          "letter": "B",
+          "text": "Le vélo sur la chaussée"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.   La priorité de droite ne s’applique pas à l’intersection d’une route ordinaire avec un sentier ou un chemin de terre.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/26.jpg"
+    },
+    {
+      "id": 31,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le tram"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.Les véhicules sur rails ne doivent pas respecter la priorité de droite. Le tram ne doit pas donner la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/3.jpg"
+    },
+    {
+      "id": 32,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le piéton"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.Carrefour où la priorité de droite est applicable.Un piéton n’est pas un conducteur mais il y a un passage pour piétons.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/38.jpg"
+    },
+    {
+      "id": 33,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Les cyclistes"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.Un cycliste est également un conducteur.Le cycliste vient de la droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/14.jpg"
+    },
+    {
+      "id": 34,
+      "type": "multiple_choice",
+      "question": "Un signal routier indiquant un rétrécissement d'une voie de circulation.Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture bleue"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture brune"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.  La voiture brune vient de la droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/20.jpg"
+    },
+    {
+      "id": 35,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous (= flèche jaune)"
+        },
+        {
+          "letter": "B",
+          "text": "Le bus"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.  Le bus vient de la droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/23.jpg"
+    },
+    {
+      "id": 36,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture rouge"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture bleue"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.La voiture rouge vient de la droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/15.jpg"
+    },
+    {
+      "id": 37,
+      "type": "multiple_choice",
+      "question": "Le piéton traverse la chaussée en dehors d'un passage pour piétons.La voiture grise sort d'une route en pavé et va tourner à gauche.Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "L’enfant sur les patins"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.   Dans ce cas vous devez comprendre:a) que ce n'est pas un chemin de terre.b) que dans ce cas le changement de direction n'a pas d'impact sur la priorité,c) que l'enfant est un piéton en dehors d'un passage.d) que la partie sur laquelle il circule n'est pas une piste cyclable (pas de signal, pas dit dans la question) et que de toute manière elle n'est pas traversante.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/19.jpg"
+    },
+    {
+      "id": 38,
+      "type": "yes_no",
+      "question": "La priorité de droite, s'applique-t-elle à cette intersection?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/31.jpg"
+    },
+    {
+      "id": 39,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le tram"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.  Les véhicules sur rails ne doivent pas respecter la priorité de droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/27.jpg"
+    },
+    {
+      "id": 40,
+      "type": "multiple_choice",
+      "question": "Un rétrécissement de la chaussée.Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Voiture"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.La voiture B vient de la droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/11.jpg"
+    },
+    {
+      "id": 41,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le tram"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.Un tram a toujours la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/13.jpg"
+    },
+    {
+      "id": 42,
+      "type": "yes_no",
+      "question": "La priorité de droite s'applique dans ce carrefour.",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’. Le signal routier indique que vous avez priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/24.jpg"
+    },
+    {
+      "id": 43,
+      "type": "yes_no",
+      "question": "La priorité de droite s'applique-t-elle à cette intersection ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’. Dans ce carrefour s’applique la priorité de droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/21.jpg"
+    },
+    {
+      "id": 44,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Voiture"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 20 – ‘La priorité de droite’.Le signal routier indique que la voiture B doit donner la priorité et si nécessaire s’arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/8.jpg"
+    }
+  ]
+}

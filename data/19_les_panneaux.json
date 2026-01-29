@@ -1,0 +1,1013 @@
+{
+  "id": "19_les_panneaux",
+  "name": "19 les panneaux",
+  "totalQuestions": 58,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "question": "Si vous suivez la route vers la gauche, vous avez priorité dans le prochain carrefour.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Le signal bleu indique que la route principale fléchit vers la gauche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/25.jpg"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "question": "Qui peut s'engager en premier dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le piéton"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Un STOP signifie que vous devez arrêter et céder le passage aux conducteurs (pas aux piétions) qui circulent sur la voie que vous allez emprunterUn piéton n’est pas un conducteur et il n'y a pas un passage pour piétons.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/44.jpg"
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "question": "Qui peut s’engager en premier dans le carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture marron"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture verte"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.La voiture brune se trouve sur une route prioritaire.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/24.jpg"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "question": "Lorsque vous roulez sur cette route, vous pouvez dépasser un véhicule par la gauche si cela peut être fait en toute sécurité.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Signification: route prioritaire.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/14.jpg"
+    },
+    {
+      "id": 5,
+      "type": "multiple_choice",
+      "question": "Quelle voiture peut s'engager en premier dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Voiture"
+        },
+        {
+          "letter": "C",
+          "text": "Voiture"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.La voiture 'C' est à côté d'un signal d'arrêt.La voiture 'A' a la priorité de droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/37.jpg"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "question": "Quelle voiture peut s’engager en premier dans le carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La verte"
+        },
+        {
+          "letter": "B",
+          "text": "La bleue"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/15.jpg"
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "question": "Qui peut s'engager en premier dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Voiture"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Le signal routier à côté de la voiture B indique que le conducteur a la priorité à ce carrefour.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/38.jpg"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "question": "Qui peut s'engager en premier dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le piéton"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Un triangle sur sa pointe signifie que vous devez céder le passage aux conducteurs (pas aux piétions) qui circulent sur la voie que vous allez emprunter, et que vous devez éventuellement vous arrêter. Il n'y a pas un passage pour piétons.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/43.jpg"
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "question": "Qui doit céder le passage ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture marron"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture bleue"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.La voiture brune est sur une route prioritaire.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/2.jpg"
+    },
+    {
+      "id": 10,
+      "type": "yes_no",
+      "question": "Vous voulez suivre la chaussée qui tourne à gauche.Devez-vous allumer le clignotant gauche ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/45.jpg"
+    },
+    {
+      "id": 11,
+      "type": "yes_no",
+      "question": "La voiture bleue peut-elle dépasser la marron par la gauche ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Il est permis, parce que le conducteur a la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/21.jpg"
+    },
+    {
+      "id": 12,
+      "type": "yes_no",
+      "question": "La voiture rouge peut-elle dépasser une autre par la gauche dans ce carrefour ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.À une intersection où la priorité est contrôlée par ce signal routier, vous pouvez dépasser une autre voiture par la gauche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/32.jpg"
+    },
+    {
+      "id": 13,
+      "type": "multiple_choice",
+      "question": "Qui peut s’engager en premier dans le carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Voiture"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.A droite du véhicule B est un signal routier qui indique que le conducteur doit donner la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/16.jpg"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "question": "Vous approchez de ce carrefour et vous voulez tourner à droite.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous avez la priorité sur les conducteurs venant de gauche"
+        },
+        {
+          "letter": "B",
+          "text": "Vous devez céder la priorité aux conducteurs venant de gauche"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 19Ce n’est pas un rond-point. Il n’y a pas de signaux réglant la priorité. C’est donc la priorité de droite qui s’applique.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/49.jpg"
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "question": "À quel signal routier correspond le marquage au sol appelé dents de requin ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Au signal 1"
+        },
+        {
+          "letter": "B",
+          "text": "Au signal 2"
+        },
+        {
+          "letter": "C",
+          "text": "Au signal 3"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 19Un triangle inversé signifie que vous devez céder le passage aux conducteurs circulant sur la voie publique que vous allez rejoindre et que, si nécessaire, vous devez vous arrêter.S’il n’y a pas de conducteurs sur la route transversale, vous ne devez pas vous arrêter et pouvez vous engager dans l’intersection.Une ligne formée de triangles inversés, appelés dents de requin, indique l’endroit où vous devez vous arrêter si c’est nécessaire.Si ce n’est pas nécessaire, vous ne devez pas marquer un arrêt complet.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/54.jpg"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "question": "Qui doit céder le passage ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Voiture"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.A droite du véhicule B est un signal routier qui indique que le conducteur doit céder le passage.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/22.jpg"
+    },
+    {
+      "id": 17,
+      "type": "yes_no",
+      "question": "Dans ce carrefour, vous devez céder le passage, sauf aux cyclistes et aux cyclomoteurs.",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Vous devez également donner la priorité aux cyclistes et aux motocyclistes qui peuvent venir dans les deux directions.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/7.jpg"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "question": "Introduisez un chiffre.Après quel panneau avez-vous la priorité ?",
+      "propositions": [],
+      "correctAnswer": "4",
+      "explanation": "LEÇON 191. Priorité de droite.2. Travaux.3. Circulation à double sens.4. Priorité au rétrécissement de la chaussée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/48.jpg"
+    },
+    {
+      "id": 19,
+      "type": "multiple_choice",
+      "question": "Vous approchez d’un carrefour.Que devez-vous faire dans 100 mètres ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Céder le passage et éventuellement vous arrêter"
+        },
+        {
+          "letter": "B",
+          "text": "Vous arrêter et céder le passage"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/19.jpg"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "question": "Quelle est la phrase correcte ?Vous devez utiliser votre indicateur de direction lorsque ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... vous quittez un rond-point"
+        },
+        {
+          "letter": "B",
+          "text": "... vous vous engagez dans un rond-point"
+        },
+        {
+          "letter": "C",
+          "text": "… vous quittez ou vous vous engagez dans un rond-point"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.En sortant d'un rond-point, vous devez activer votre clignotant.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/34.jpg"
+    },
+    {
+      "id": 21,
+      "type": "multiple_choice",
+      "question": "Qui peut s'engager en premier dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le piéton"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Un triangle sur sa pointe signifie que vous devez céder le passage aux conducteurs (pas aux piétions) qui circulent sur la voie que vous allez emprunter, et que vous devez éventuellement vous arrêter. Mais il y a un passage pour piétons, de sorte que le piéton doit d'abord.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/42.jpg"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "question": "Ce conducteur veut tourner à gauche à ce carrefour.Même s’il n’y a pas d’autres usagers, le conducteur doit d’abord s’arrêter complètement avant d’entrer sur le carrefour.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 19Le panneau triangulaire inversé signifie que vous devez céder le passage aux autres conducteurs et, si nécessaire, vous arrêter complètement.S’il n’y a pas d’autres conducteurs, vous ne devez pas vous arrêter complètement et pouvez vous engager dans le carrefour.S’il y a un panneau STOP, vous devez par contre vous arrêter complètement.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/56.jpg"
+    },
+    {
+      "id": 23,
+      "type": "multiple_choice",
+      "question": "Qui peut s’engager en premier dans le carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Voiture"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Le signal routier indique que le conducteur de la voiture A a la priorité à cette intersection.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/23.jpg"
+    },
+    {
+      "id": 24,
+      "type": "multiple_choice",
+      "question": "Un rond-point.Quand devez-vous obligatoirement actionner le clignotant droit ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "En abordant un rond-point"
+        },
+        {
+          "letter": "B",
+          "text": "En quittant un rond-point"
+        },
+        {
+          "letter": "C",
+          "text": "En abordant et en quittant un rond-point"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 19En quittant un rond-point, vous devez obligatoirement actionner le clignotant droit.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/53.jpg"
+    },
+    {
+      "id": 25,
+      "type": "yes_no",
+      "question": "Si vous suivez la route vers la gauche, vous avez priorité dans le carrefour suivant.",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Le signal ci-dessous indique la direction de la route.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/8.jpg"
+    },
+    {
+      "id": 26,
+      "type": "multiple_choice",
+      "question": "Qui peut s'engager en premier dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Voiture"
+        },
+        {
+          "letter": "C",
+          "text": "Voiture"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Voiture A est à côté d'un signal d'arrêt.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/39.jpg"
+    },
+    {
+      "id": 27,
+      "type": "multiple_choice",
+      "question": "Quelle voiture peut s'engager en premier dans le carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture bleue"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture blanche"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.La voiture bleue se trouve avant une ligne d'arrêt.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/26.jpg"
+    },
+    {
+      "id": 28,
+      "type": "multiple_choice",
+      "question": "Vous approchez de ce carrefour. Où devez-vous vous arrêter ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Juste avant la ligne d’arrêt"
+        },
+        {
+          "letter": "B",
+          "text": "À 1 mètre avant la ligne d’arrêt"
+        },
+        {
+          "letter": "C",
+          "text": "Juste avant le signal routier"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Vous devez toujours vous arrêter complètement lorsqu’il y a un signal STOP, même s’il n’y a pas d’autres usagers. L’arrêt se fait juste avant la ligne d’arrêt. S’il n’y en a pas, vous vous arrêtez à hauteur du signal STOP. Vous devez céder le passage aux autres conducteurs circulant sur la chaussée que vous souhaitez emprunter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/47.jpg"
+    },
+    {
+      "id": 29,
+      "type": "multiple_choice",
+      "question": "Quelle voiture doit utiliser son clignotant droit  ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement la voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Seulement la voiture"
+        },
+        {
+          "letter": "C",
+          "text": "Ni la voiture A, ni la voiture"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Lorsque vous entrez dans un rond-point, l'indicateur ne doit pas allumer.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/29.jpg"
+    },
+    {
+      "id": 30,
+      "type": "multiple_choice",
+      "question": "Quel signal routier verrez-vous lorsque vous voulez accéder à l’autoroute par la bande d’insertion ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Signal 1"
+        },
+        {
+          "letter": "B",
+          "text": "Signal 2"
+        },
+        {
+          "letter": "C",
+          "text": "Signal 3"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 19      Pour accéder à l’autoroute, vous devez céder le passage (et, si nécessaire, vous arrêter) aux conducteurs qui circulent déjà sur l’autoroute.Il n’est pas obligatoire de rouler jusqu’au bout de la bande d’insertion. Vous pouvez vous insérer dès que cela est possible en toute sécurité.(Lorsqu’on accède à l’autoroute, il n’y a pas de système de tirette).",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/50.jpg"
+    },
+    {
+      "id": 31,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture noire"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture blanche"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Le signal routier à la droite de lui, indique que le conducteur de la voiture noire a la priorité à ce carrefour.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/33.jpg"
+    },
+    {
+      "id": 32,
+      "type": "multiple_choice",
+      "question": "Lorsque le feu de signalisation est rouge, les cyclistes et conducteurs de cyclomoteurs s’arrêtent ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... avant la première ligne d’arrêt"
+        },
+        {
+          "letter": "B",
+          "text": "... avant la deuxième ligne d’arrêt"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.D'autres véhicules s'arrêtent avant la première ligne d’arrêt.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/12.jpg"
+    },
+    {
+      "id": 33,
+      "type": "multiple_choice",
+      "question": "Lorsque vous voyez ce signal routier, vous savez que...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... vous devez vous arrêter"
+        },
+        {
+          "letter": "B",
+          "text": "... vous avez priorité"
+        },
+        {
+          "letter": "C",
+          "text": "... vous devez céder le passage et vous arrêter si nécessaire"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Signification: donner la priorité et si nécessaire arrêt.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/1.jpg"
+    },
+    {
+      "id": 34,
+      "type": "multiple_choice",
+      "question": "Ce signal routier s’applique ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... jusqu’au carrefour suivant"
+        },
+        {
+          "letter": "B",
+          "text": "... jusqu’à ce que vous voyez le panneau Fin de Zone de Priorité"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Signification: Priorité à la prochaine intersection.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/13.jpg"
+    },
+    {
+      "id": 35,
+      "type": "multiple_choice",
+      "question": "Ce conducteur veut tourner à droite à ce carrefour.Aucun autre usager n’est visible.Doit-il alors actionner le clignotant droit ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, il faut toujours le faire"
+        },
+        {
+          "letter": "B",
+          "text": "Non, s’il n’y a personne, cela ne sert à rien"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 21Tout changement de direction ou déplacement latéral doit être annoncé à l’aide du clignotant.Peu importe qu’il y ait ou non d’autres conducteurs.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/57.jpg"
+    },
+    {
+      "id": 36,
+      "type": "multiple_choice",
+      "question": "Si vous traversez ce carrefour (en direction de la flèche), vous avez priorité sur les conducteurs qui viennent de droite et de gauche.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Le signal bleu indique que la route principale fléchit vers la droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/31.jpg"
+    },
+    {
+      "id": 37,
+      "type": "multiple_choice",
+      "question": "Le conducteur de cette voiture n’a vu aucun autre conducteur et est entré prudemment dans l’intersection sans s’arrêter.Avait-il le droit de le faire ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, car il n’y a pas de ligne d’arrêt sur la chaussée"
+        },
+        {
+          "letter": "B",
+          "text": "Non, il doit d’abord s’arrêter"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 21Un STOP signifie que vous devez vous arrêter complètement à la ligne d’arrêt et céder le passage aux conducteurs qui circulent sur la voie publique que vous voulez rejoindre.S’il n’y a pas de ligne d’arrêt sur la chaussée, vous vous arrêtez au signal routier.Même s’il n’y a pas de conducteurs sur la route transversale, vous devez d’abord marquer un arrêt complet avant d’entrer dans l’intersection.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/52.jpg"
+    },
+    {
+      "id": 38,
+      "type": "multiple_choice",
+      "question": "Ce signal routier signifie ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Fin d’une zone jaune"
+        },
+        {
+          "letter": "B",
+          "text": "Fin de la route prioritaire"
+        },
+        {
+          "letter": "C",
+          "text": "Fin des travaux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Signification: Fin de la route prioritaire.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/11.jpg"
+    },
+    {
+      "id": 39,
+      "type": "multiple_choice",
+      "question": "Ce conducteur veut tourner à droite à ce carrefour.Même s’il n’y a pas d’autres usagers, le conducteur doit d’abord s’arrêter complètement avant d’entrer sur le carrefour.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 19S’il y a un panneau STOP, vous devez vous arrêter complètement.Le panneau triangulaire inversé signifie que vous devez céder le passage aux autres conducteurs et, si nécessaire, vous arrêter complètement.S’il n’y a pas d’autres conducteurs, vous ne devez pas vous arrêter complètement et pouvez vous engager dans le carrefour.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/55.jpg"
+    },
+    {
+      "id": 40,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Obligation de suivre la direction de la flèche"
+        },
+        {
+          "letter": "B",
+          "text": "Priorité dans le prochain carrefour"
+        },
+        {
+          "letter": "C",
+          "text": "Voie prioritaire"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Priorité dans le prochain carrefour.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/4.jpg"
+    },
+    {
+      "id": 41,
+      "type": "yes_no",
+      "question": "Devez-vous utiliser votre clignotant en quittant ce carrefour ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Ce n’est pas un rond-point.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/41.jpg"
+    },
+    {
+      "id": 42,
+      "type": "number",
+      "question": "Si vous voyez ces signaux, vous savez que vous devez (...) au prochain  prochain carrefour",
+      "correctAnswer": "B",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/10.jpg"
+    },
+    {
+      "id": 43,
+      "type": "yes_no",
+      "question": "La voiture verte peut-elle dépasser par la gauche à ce carrefour ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.C’est un carrefour où vous avez la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/6.jpg"
+    },
+    {
+      "id": 44,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Voiture"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Un conducteur qui veut conduire sur un rond-point doit donner la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/20.jpg"
+    },
+    {
+      "id": 45,
+      "type": "multiple_choice",
+      "question": "Mettez un chiffre.Après quel signal routier circulez-vous sur une route prioritaire ?",
+      "propositions": [],
+      "correctAnswer": "2",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Le signal 2 indique que vous circulez sur une route prioritaire. Vous avez donc la priorité à toutes les intersections tant que ce panneau reste valable.Le signal 1 signifie que vous avez la priorité uniquement au prochain carrefour.Le signal 3 ne dit rien sur la priorité, il indique seulement une circulation à sens unique.Le signal 4 indique uniquement la direction obligatoire, sans rapport avec la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/46.jpg"
+    },
+    {
+      "id": 46,
+      "type": "multiple_choice",
+      "question": "Qui peut s'engager en premier dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Voiture"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Un signal d'arrêt se trouve à côté de la voiture B.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/36.jpg"
+    },
+    {
+      "id": 47,
+      "type": "multiple_choice",
+      "question": "La photo est prise depuis la voiture avec laquelle vous sortez du rond-point.  En sortant, vous devez céder le passage aux vélos et aux cyclomoteurs de la piste cyclable.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Le signal routier indique que vous devez céder le passage et que les cyclistes et les cyclomotoristes peuvent venir de deux directions.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/28.jpg"
+    },
+    {
+      "id": 48,
+      "type": "multiple_choice",
+      "question": "Si vous voyez ces signaux, vous savez que vous devez ... au prochain carrefour",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... vous arrêter"
+        },
+        {
+          "letter": "B",
+          "text": "... céder le passage et si nécessaire vous arrêter"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Le signal ‘STOP 150 m’ indique qu'il y a un signal d'arrêt à l'intersection.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/5.jpg"
+    },
+    {
+      "id": 49,
+      "type": "multiple_choice",
+      "question": "Les triangles sur leur pointe devant la voiture bleue s’appellent également ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... des dents de requin"
+        },
+        {
+          "letter": "B",
+          "text": "... des bords de fossé"
+        },
+        {
+          "letter": "C",
+          "text": "... des coins d’arrêt"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Les dents de requin indiquent l'endroit où, si nécessaire, vous devez vous arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/9.jpg"
+    },
+    {
+      "id": 50,
+      "type": "multiple_choice",
+      "question": "Si les feux sont en panne à ce carrefour, la priorité de droite s'applique t'elle ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Sous le feu, il y a un signal \"céder le passage\" qui indique que vous devez céder le passage à gauche et à droite en cas de panne des feux.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/27.jpg"
+    },
+    {
+      "id": 51,
+      "type": "multiple_choice",
+      "question": "Je suis sur la bande intérieure d’un rond-point à deux bandes. Que dois-je faire pour en sortir ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "M’arrêter et attendre que les voitures sur la bande extérieure soient passées"
+        },
+        {
+          "letter": "B",
+          "text": "Passer, j’ai priorité sur les voitures de la bande extérieure"
+        },
+        {
+          "letter": "C",
+          "text": "Continuer à tourner jusqu’à ce que la bande extérieure soit libre pour sortir"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 19Pour sortir d’un rond-point à deux bandes en étant sur la bande intérieure, vous devez d’abord vous déporter vers la bande extérieure en utilisant votre clignotant droit. Vous devez céder le passage aux véhicules déjà engagés sur la bande extérieure. Si vous n’y parvenez pas à temps, il est plus sûr de faire un tour supplémentaire afin de ne pas bloquer la circulation et d’éviter une situation dangereuse.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/51.jpg"
+    },
+    {
+      "id": 52,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture n°1"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture n°2"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Le conducteur de la voiture 2 voit un signal d'arrêt.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/3.jpg"
+    },
+    {
+      "id": 53,
+      "type": "multiple_choice",
+      "question": "À quelle vitesse maximale cette voiture peut-elle rouler après le panneau jaune, à l’intérieur d’une agglomération de la Région de Bruxelles-Capitale ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "30 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "50 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "70 km/h"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 12C’est une chaussée située à l’intérieur d’une agglomération.En Région wallonne et en Région flamande, la vitesse maximale autorisée en agglomération est de 50 km/h.En Région de Bruxelles-Capitale, elle est de 30 km/h.Le panneau jaune n’a rien à voir avec la vitesse : c’est un panneau de priorité indiquant que vous circulez sur une route prioritaire.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/58.jpg"
+    },
+    {
+      "id": 54,
+      "type": "multiple_choice",
+      "question": "Vous voulez entrer dans un rond-point et vous voyez ce triangle rouge.Que faites-vous ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous entrez simplement dans le rond-point"
+        },
+        {
+          "letter": "B",
+          "text": "Vous vous arrêtez"
+        },
+        {
+          "letter": "C",
+          "text": "Vous vous arrêtez lorsque cela est nécessaire"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/18.jpg"
+    },
+    {
+      "id": 55,
+      "type": "multiple_choice",
+      "question": "Dans le carrefour suivant, vous pouvez dépasser une voiture avec votre voiture.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Il est permis, parce que vous roulez sur une route prioritaire.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/35.jpg"
+    },
+    {
+      "id": 56,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture noire"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture jaune (indiquée par la ligne jaune)"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Le signal routier indique que la voiture jaune à la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/30.jpg"
+    },
+    {
+      "id": 57,
+      "type": "multiple_choice",
+      "question": "Quelles marques routières retrouvez-vous souvent auprès de ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Ligne de triangles sur leur pointe"
+        },
+        {
+          "letter": "B",
+          "text": "Ligne d’arrêt"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/17.jpg"
+    },
+    {
+      "id": 58,
+      "type": "multiple_choice",
+      "question": "Qui peut s'engager en premier dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Voiture"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 19 – ‘Une intersection et les signaux routiers’.Voiture A est à côté d'un signal d'arrêt.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/40.jpg"
+    }
+  ]
+}

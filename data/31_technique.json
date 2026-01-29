@@ -1,0 +1,1193 @@
+{
+  "id": "31_technique",
+  "name": "31 technique",
+  "totalQuestions": 63,
+  "questions": [
+    {
+      "id": 1,
+      "type": "yes_no",
+      "question": "Sur sol sec la distance de freinage avec ABS peut être un peut plus longue que sans ABS.",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 31 – ‘Technique’.La distance de freinage avec ABC peut être un peu plus longe que sans ABS.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/8.jpg"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "question": "Que signifie le 55 sur ce pneu?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La largeur du pneu en mm"
+        },
+        {
+          "letter": "B",
+          "text": "Le rapport hauteur/largeur"
+        },
+        {
+          "letter": "C",
+          "text": "Le diamètre de la jante en pouces"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 31 – ‘Technique’.205 : La largeur du pneu en mm.55 : Le rapport hauteur/largeur.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/26.jpg"
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "question": "Sur un pneu, vous lisez: 165/70 R 14 81 T. Le R signifie que c’est un pneu de structure radiale. Que signifie le 165 ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "C’est l’indice de vitesse"
+        },
+        {
+          "letter": "B",
+          "text": "C’est la largeur du pneu en mm"
+        },
+        {
+          "letter": "C",
+          "text": "C’est le diamètre de la jante en pouces"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 31 – ‘Technique’.165 c'est la largeur en mm 165 mm de la bande de roulement (du pneu donc)14 c'est le diamètre de la jante.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/20.jpg"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "question": "Comment s’appelle l’équipement qui empêche la voiture de déraper lorsque vous devez vous dévier brutalement?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "ESP ou Electronic Stability Program"
+        },
+        {
+          "letter": "B",
+          "text": "ABS ou Système anti blocage"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 31 – ‘Technique’.ESP ou Electro-Stabilisateur Programmé.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/12.jpg"
+    },
+    {
+      "id": 5,
+      "type": "multiple_choice",
+      "question": "Après avoir changé une roue, dans quel ordre devez-vous serrer les boulons?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "dans le sens des aiguilles d'une montre"
+        },
+        {
+          "letter": "B",
+          "text": "contre le sens des aiguilles d'une montre"
+        },
+        {
+          "letter": "C",
+          "text": "en croisé"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 31 – ‘Technique’.Vous devez serrer les boulons en croisé.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/23.jpg"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "question": "Vous roulez à une vitesse trop petite.La consommation de carburant ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... diminue"
+        },
+        {
+          "letter": "B",
+          "text": "... ne change pas"
+        },
+        {
+          "letter": "C",
+          "text": "... augmente"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 31 – ‘Technique’.La consommation de carburant augmente.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/16.jpg"
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "question": "Ce que fait le liquide de refroidissement ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Avec le radiateur évacuer la chaleur du moteur"
+        },
+        {
+          "letter": "B",
+          "text": "Assurez-vous que le climatiseur peut refroidir suffisamment"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 31 – ‘Technique’.En collaboration avec le radiateur, le liquide de refroidissement s’assure que la chaleur est drainée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/38.jpg"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "question": "On parle d’aquaplanage lorsque, en raison de l’eau, les quatre pneus ne peuvent pas toucher la surface de la route.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 31 – ‘Technique’.Le résultat est que la voiture va « flotter ». En effet, la voiture est temporairement ingérable.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/41.jpg"
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "question": "Quand pouvez-vous utiliser les chaines à neige?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Lorsqu’il y a de la neige ou du verglas sur la chaussée"
+        },
+        {
+          "letter": "B",
+          "text": "Du 1er novembre au 31 mars"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 31 – ‘Technique’.Du 1 Novembre au 31 Mars: pneus cloutés.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/5.jpg"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "question": "Peut-on utiliser un smartphone comme GPS dans la voiture ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Non, c’est interdit"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, toujours"
+        },
+        {
+          "letter": "C",
+          "text": "Oui, s’il est placé dans un support fixe"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 31L’utilisation d’un smartphone comme GPS est autorisée, à condition que l’appareil soit placé dans un support fixe.Tu peux évidemment prendre le smartphone en main uniquement lorsque tu es à l’arrêt ou stationné.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/58.jpg"
+    },
+    {
+      "id": 11,
+      "type": "multiple_choice",
+      "question": "Où mettez-vous votre pied gauche après avoir changé de vitesse?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Juste au-dessus de la pédale d’embrayage"
+        },
+        {
+          "letter": "B",
+          "text": "Juste en dessous de la pédale d’embrayage"
+        },
+        {
+          "letter": "C",
+          "text": "À gauche de la pédale d’embrayage"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 31 – ‘Technique’.À gauche de la pédale d’embrayage.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/17.jpg"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "question": "Quelle est la vitesse maximale autorisée sur une autoroute avec des pneus cloutés ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Maximum 70 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "Maximum 90 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "Maximum 100 km/h"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sur une route normale: 60 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/50.jpg"
+    },
+    {
+      "id": 13,
+      "type": "multiple_choice",
+      "question": "C'est le 6 avril. Une tempête de neige balaie le pays.Avec quoi pouvez-vous conduire?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Uniquement avec des chaînes à neige"
+        },
+        {
+          "letter": "B",
+          "text": "Uniquement avec des pneus cloutés"
+        },
+        {
+          "letter": "C",
+          "text": "Avec des chaînes à neige ou des pneus cloutés"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 31 – ‘Technique’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/28.jpg"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "question": "Il faut tourner à gauche. Quel ordre respecteriez-vous ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Mettre les clignotants – regarder dans les miroirs – freiner"
+        },
+        {
+          "letter": "B",
+          "text": "Freiner – mettre les clignotants – regarder dans les miroirs"
+        },
+        {
+          "letter": "C",
+          "text": "Regarder dans les miroirs – mettre les clignotants – freiner"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 31 – ‘Technique’.Regarder dans les miroirs – mettre les clignotants – freiner.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/36.jpg"
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "question": "Que signifie le 205 sur ce pneu?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La largeur du pneu en mm"
+        },
+        {
+          "letter": "B",
+          "text": "Le rapport hauteur/largeur"
+        },
+        {
+          "letter": "C",
+          "text": "Le diamètre de la jante en pouces"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 31 – ‘Technique’.205 : La largeur du pneu en mm.55 : Le rapport hauteur/largeur.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/25.jpg"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "question": "Que devez-vous faire si vous remarquez une fuite d’huile sous votre voiture ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Continuer à rouler jusqu’à la prochaine révision"
+        },
+        {
+          "letter": "B",
+          "text": "Vous rendre au garage dès que possible"
+        },
+        {
+          "letter": "C",
+          "text": "Vérifier le niveau d’huile avant chaque trajet et en rajouter si nécessaire"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 31 – ‘Technique’.Une fuite d’huile peut endommager gravement le moteur. Même si vous ajoutez de l’huile régulièrement, le problème persiste. Il faut faire réparer la fuite dans un garage au plus vite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/54.jpg"
+    },
+    {
+      "id": 17,
+      "type": "multiple_choice",
+      "question": "Que fais-tu lorsque tu dois monter une pente raide ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Tu continues simplement en roulant plus lentement"
+        },
+        {
+          "letter": "B",
+          "text": "Tu passes à une vitesse supérieure"
+        },
+        {
+          "letter": "C",
+          "text": "Tu passes à une vitesse inférieure"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 31Lors d’une forte montée ou d’une forte descente, il est conseillé de rétrograder.Cela permet de conserver suffisamment de puissance et un meilleur contrôle du véhicule.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/63.jpg"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "question": "Comment devez-vous freiner avec l'ABS?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "En pompant sur la pédale de frein"
+        },
+        {
+          "letter": "B",
+          "text": "En appuyant doucement sur la pédale de frein"
+        },
+        {
+          "letter": "C",
+          "text": "En appuyant fortement sur la pédale de frein"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 31 – ‘Technique’.En appuyant fortement sur la pédale de frein.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/29.jpg"
+    },
+    {
+      "id": 19,
+      "type": "multiple_choice",
+      "question": "Tu dois descendre une longue pente. Que fais-tu ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Tu laisses la voiture descendre au point mort"
+        },
+        {
+          "letter": "B",
+          "text": "Tu engages une vitesse inférieure"
+        },
+        {
+          "letter": "C",
+          "text": "Tu continues à freiner régulièrement"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 31Même en descendant, tu engages une vitesse inférieure.Règle pratique : on descend dans le même rapport que celui utilisé pour monter la même pente.Ainsi, tu freines avec le moteur et tu ménages les freins.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/6.jpg"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "question": "Pour vérifier le niveau d’huile, la voiture doit être stationnée à l’horizontale.Mais quand faut-il vérifier le niveau d’huile ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Quand le moteur est froid"
+        },
+        {
+          "letter": "B",
+          "text": "Après avoir roulé quelques kilomètres, pour que l’huile soit chaude"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 31 – ‘Technique’.L’huile moteur est un des liquides les plus importants du véhicule. Elle lubrifie les pièces en mouvement, évite la surchauffe et l’usure, et garde le moteur propre.Pour obtenir une mesure fiable, il faut vérifier le niveau quand le moteur est froid et que la voiture est à l’horizontale. Si l’huile est encore chaude, elle n’est pas totalement redescendue dans le carter, ce qui fausse la mesure.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/3.jpg"
+    },
+    {
+      "id": 21,
+      "type": "multiple_choice",
+      "question": "Pourquoi une voiture est ingérable à cause de l'aquaplanage?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous ne conduisez pas sur la piste de la voiture devant vous"
+        },
+        {
+          "letter": "B",
+          "text": "Les pneus de votre voiture n’ont aucun contact avec la surface de la route"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 31 – ‘Technique’.On parle d’aquaplanage lorsque, en raison de l’eau, les quatre pneus ne peuvent pas toucher la surface de la route.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/42.jpg"
+    },
+    {
+      "id": 22,
+      "type": "number",
+      "question": "La profondeur minimale des rainures d’un pneu doit être de (...) mm.",
+      "correctAnswer": "A",
+      "explanation": "LEÇON 31 – ‘Technique’.Au moins 1,6 mm.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/4.jpg"
+    },
+    {
+      "id": 23,
+      "type": "multiple_choice",
+      "question": "Nous sommes en hiver et il neige constamment.Que devez-vous faire avec vos pneus ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Augmenter légèrement la pression"
+        },
+        {
+          "letter": "B",
+          "text": "Diminuer légèrement la pression"
+        },
+        {
+          "letter": "C",
+          "text": "Ne pas changer la pression"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 31 – ‘Technique’.Ne pas changer la pression.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/10.jpg"
+    },
+    {
+      "id": 24,
+      "type": "multiple_choice",
+      "question": "À quoi sert l'huile moteur?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Uniquement à lubrifier le moteur"
+        },
+        {
+          "letter": "B",
+          "text": "Uniquement à lubrifier et refroidir le moteur"
+        },
+        {
+          "letter": "C",
+          "text": "À lubrifier, refroidir et nettoyer le moteur"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 31 – ‘Technique’.L’huile moteur a plusieurs fonctions : elle lubrifie, elle nettoie, elle étanchéifie, elle refroidit, elle protège, elle diminue la consommation de carburant.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/22.jpg"
+    },
+    {
+      "id": 25,
+      "type": "multiple_choice",
+      "question": "La piste de détresse est l'endroit…",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... où vous conduisez si vous ne pouvez pas vous arrêter"
+        },
+        {
+          "letter": "B",
+          "text": "… où vous vous arrêtez en cas de malchance"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/45.jpg"
+    },
+    {
+      "id": 26,
+      "type": "multiple_choice",
+      "question": "Qu’y a-t-il sous le bouchon bleu ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Du liquide de refroidissement"
+        },
+        {
+          "letter": "B",
+          "text": "Du liquide de frein"
+        },
+        {
+          "letter": "C",
+          "text": "De l'huile moteur"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 31 – ‘Technique’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/39.jpg"
+    },
+    {
+      "id": 27,
+      "type": "multiple_choice",
+      "question": "L’alternateur a pour but de1. fournir de l’électricité électrique pendant que la voiture roule.2. recharger la batterie de la voiture.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement 1"
+        },
+        {
+          "letter": "B",
+          "text": "Seulement 2"
+        },
+        {
+          "letter": "C",
+          "text": "Aussi bien 1 que 2"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 31 – ‘Technique’.L’alternateur a pour but de fournir de l’électricité électrique pendant que la voiture roule et de recharger la batterie de la voiture.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/35.jpg"
+    },
+    {
+      "id": 28,
+      "type": "multiple_choice",
+      "question": "Votre voiture commence à déraper.  Que faites-vous ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous donnez des petits coups de volant (à gauche et à droite)"
+        },
+        {
+          "letter": "B",
+          "text": "Vous relâchez l’accélérateur et appuyez sur la pédale d’embrayage"
+        },
+        {
+          "letter": "C",
+          "text": "Vous freinez de manière uniforme"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 31 – ‘Technique’.Vous lâchez l’accélérateur et vous appuyez sur la pédale d’embrayage.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/14.jpg"
+    },
+    {
+      "id": 29,
+      "type": "multiple_choice",
+      "question": "Votre voiture commence à glisser.Dans quelle direction regardez-vous?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Où vous glissez"
+        },
+        {
+          "letter": "B",
+          "text": "Où vous voulez conduire"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/44.jpg"
+    },
+    {
+      "id": 30,
+      "type": "multiple_choice",
+      "question": "Il est important de changer les pneus de place tous les 10.000 à 15.000 km.Mais de quelle manière faut-il les changer?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "En croisé"
+        },
+        {
+          "letter": "B",
+          "text": "Dans la direction du soleil"
+        },
+        {
+          "letter": "C",
+          "text": "Par axe"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 31 – ‘Technique’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/21.jpg"
+    },
+    {
+      "id": 31,
+      "type": "multiple_choice",
+      "question": "Votre voiture a les chaînes à neige.Dans une agglomération, la vitesse maximale autorisée est de (…) km par heure.",
+      "propositions": [],
+      "correctAnswer": "50",
+      "explanation": "LEÇON 31 – ‘Technique’.Vous ne pouvez utiliser les chaînes à neige que s’il y a de la neige ou du verglas sur la chaussée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/43.jpg"
+    },
+    {
+      "id": 32,
+      "type": "multiple_choice",
+      "question": "Sur un pneu, vous lisez: 165/70 R 14 81 T. Le R signifie que c’est un pneu de structure radiale. Que signifie le 14 à côté du R ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "C’est l’indice de vitesse"
+        },
+        {
+          "letter": "B",
+          "text": "C’est l’indice de charge"
+        },
+        {
+          "letter": "C",
+          "text": "C’est le diamètre de la jante"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 31 – ‘Technique’.165 c'est la largeur en mm 165 mm de la bande de roulement (du pneu donc)14 c'est le diamètre de la jante.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/19.jpg"
+    },
+    {
+      "id": 33,
+      "type": "multiple_choice",
+      "question": "Vous approchez d’un virage. Quand freinez-vous?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous freinez suffisamment avant le virage"
+        },
+        {
+          "letter": "B",
+          "text": "Vous freinez au moment de prendre le virage"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 31 – ‘Technique’.Vous devez freiner avant les virages.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/13.jpg"
+    },
+    {
+      "id": 34,
+      "type": "multiple_choice",
+      "question": "Quelle est la vitesse maximale autorisée sur une route normale avec des pneus cloutés ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Maximum 60 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "Maximum 70 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "Maximum 90 km/h"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 31 – ‘Technique’.Sur une autoroute: 90 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/51.jpg"
+    },
+    {
+      "id": 35,
+      "type": "number",
+      "question": ".La fonction de l’huile moteur.1. Elle assure uniquement un fonctionnement souple du moteur.2. Elle empêche uniquement les parties en mouvement de se toucher.3. Elle empêche uniquement le moteur de se bloquer.4. Tous les éléments ci-dessus sont corrects.",
+      "correctAnswer": "4",
+      "explanation": "LEÇON 31 – ‘Technique’.L’huile moteur a plusieurs fonctions : elle lubrifie, elle nettoie, elle étanchéifie, elle refroidit, elle protège, elle diminue la consommation de carburant.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/18.jpg"
+    },
+    {
+      "id": 36,
+      "type": "multiple_choice",
+      "question": "L'indicateur ABS reste allumé lorsque vous roulez, il indique une défaillance.Quelle est votre réaction?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous vous arrêtez immédiatement et appellez le dépannage"
+        },
+        {
+          "letter": "B",
+          "text": "Vous pouvez continuer à rouler sans problème"
+        },
+        {
+          "letter": "C",
+          "text": "Vous allez à votre garage"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 31 – ‘Technique’.Vous allez à votre garage.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/24.jpg"
+    },
+    {
+      "id": 37,
+      "type": "yes_no",
+      "question": "Si un filtre à air est sale, est-ce que cela augmente la consommation d’essence ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 31Les filtres à air obstrués ou sales peuvent entraîner une diminution du débit d’air vers le moteur, ce qui augmente la quantité de carburant nécessaire pour maintenir les performances du véhicule.L’encrassement du filtre à air a donc un impact important sur votre consommation de carburant, quel que soit le type de motorisation (essence ou diesel).Selon le type de véhicule et de carburant utilisé, la surconsommation peut aller de 10 % à 25 %.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/59.jpg"
+    },
+    {
+      "id": 38,
+      "type": "multiple_choice",
+      "question": "Vous pouvez regraver les pneus usés à condition d’obtenir une profondeur de rainure d’au moins 1,6 mm.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 31 – ‘Technique’.Il est interdit de regraver les rainures dans des pneus usés.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/1.jpg"
+    },
+    {
+      "id": 39,
+      "type": "multiple_choice",
+      "question": "Le réservoir de liquide lave-glace est vide. Cela peut nuire à la visibilité du conducteur.Que faites-vous ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "S’arrêter immédiatement et faire l’appoint"
+        },
+        {
+          "letter": "B",
+          "text": "Aller au garage le plus proche"
+        },
+        {
+          "letter": "C",
+          "text": "Faire l’appoint le plus vite possible"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 31 – ‘Technique’.Si vous entendez un ronflement ou un bourdonnement lorsque vous actionnez le lave-glace mais qu’aucun liquide n’est projeté sur le pare-brise, le réservoir est vide. Il faut faire l’appoint le plus vite possible, car sans liquide lave-glace, votre visibilité peut être fortement réduite, surtout par temps de pluie ou en cas d’éclaboussures. Tout comme le niveau d’huile moteur, le niveau de liquide lave-glace doit être contrôlé régulièrement.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/55.jpg"
+    },
+    {
+      "id": 40,
+      "type": "multiple_choice",
+      "question": "Quel est le régime conseillé pour changer de vitesse avec un moteur à essence ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "2000 tours"
+        },
+        {
+          "letter": "B",
+          "text": "2500 tours"
+        },
+        {
+          "letter": "C",
+          "text": "3000 tours"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 31 – ‘Technique’.Un moteur diesel : 2000 tours.Un moteur à essence : 2500 tours.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/15.jpg"
+    },
+    {
+      "id": 41,
+      "type": "multiple_choice",
+      "question": "Le témoin d’huile s’allume. Pouvez-vous continuer à rouler ainsi ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, mais pas à grande vitesse"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, mais il vaut mieux aller dans un garage"
+        },
+        {
+          "letter": "C",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 31Si le témoin d’huile s’éteint dès que le moteur tourne, tout va bien. Mais s’il reste allumé, il y a un problème. Arrêtez immédiatement le moteur et ne redémarrez pas, mais vérifiez le niveau d’huile. S’il est trop bas, ajoutez de l’huile recommandée dans le manuel de votre voiture.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/56.jpg"
+    },
+    {
+      "id": 42,
+      "type": "multiple_choice",
+      "question": "S'il y a des pneus radiaux sur la voiture à l'avant, quels pneus devraient être à l'arrière?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Radiaux"
+        },
+        {
+          "letter": "B",
+          "text": "Diagonaux"
+        },
+        {
+          "letter": "C",
+          "text": "Radiaux ou diagonaux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "- LES PNEUS RADIAUX sont autorisés à l'avant et à l'arrière.- Les PNEUS DIAGONAUX sont autorisés à l'avant et à l'arrière.- DIAGONAL à l'avant et RADIAL à l'arrière est autorisé.- Le RADIAL à l'avant et le DIAGINAL à l'arrière ne sont PAS autorisés.(parce que: vous ne pouvez placer des pneus radiaux à l'avant que s'il y a aussi des pneus radiaux à l'arrière.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/47.jpg"
+    },
+    {
+      "id": 43,
+      "type": "multiple_choice",
+      "question": "Quelle est la conséquence si votre pression des pneus est basse ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Une consommation de carburant plus élevée"
+        },
+        {
+          "letter": "B",
+          "text": "L’usage rapide des pneus"
+        },
+        {
+          "letter": "C",
+          "text": "Une consommation de carburant plus élevée et l’usage rapide des pneus"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 31 – ‘Technique’.La conséquence est une consommation de carburant plus élevée et l’usage rapide des pneus.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/30.jpg"
+    },
+    {
+      "id": 44,
+      "type": "multiple_choice",
+      "question": "Les indicateurs d’usure ou de profondeur de rainures indiquent quand les pneus devraient être changés.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 31 – ‘Technique’.Les rainures profondes doivent être d'au moins 1,6 mm.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/2.jpg"
+    },
+    {
+      "id": 45,
+      "type": "multiple_choice",
+      "question": "Vous devez effectuer un très long trajet.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous augmentez légèrement la pression des pneus"
+        },
+        {
+          "letter": "B",
+          "text": "Vous diminuez légèrement la pression des pneus"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 31 – ‘Technique’.Vous augmentez légèrement la pression des pneus.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/7.jpg"
+    },
+    {
+      "id": 46,
+      "type": "multiple_choice",
+      "question": "Le voyant ABS est allumé.Que faites-vous ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous devez vous arrêter immédiatement, car vous n'avez plus de freins"
+        },
+        {
+          "letter": "B",
+          "text": "Vous continuez à rouler, mais vous le faites vérifier au garage"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/52.jpg"
+    },
+    {
+      "id": 47,
+      "type": "multiple_choice",
+      "question": "Quel est le système d'assistance qui vous empêche de glisser, et vous permet de garder le contrôle lorsque vous devez freiner brusquement?",
+      "propositions": [],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 31 – ‘Technique’.Le système de freins antiblocage, plus connu sous l'abréviation : ABS.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/27.jpg"
+    },
+    {
+      "id": 48,
+      "type": "multiple_choice",
+      "question": "Votre voiture commence à déraper.Dans quelle direction devez-vous regarder ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "En direction du danger"
+        },
+        {
+          "letter": "B",
+          "text": "En direction de l’endroit où vous vouliez aller"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 31Même si votre premier réflexe est de freiner, il faut éviter de freiner trop fort, car cela bloque les roues et diminue l’adhérence.Que faire alors ?Regardez dans la direction où vous voulez aller. Inconsciemment, vous dirigez votre véhicule vers l’endroit où se porte votre regard. Vous comprenez donc le risque si vous continuez à regarder le danger.Contre-braquer.Appuyer sur l’embrayage et relâcher l’accélérateur.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/57.jpg"
+    },
+    {
+      "id": 49,
+      "type": "yes_no",
+      "question": "Le temps d’hiver a-t-il une influence sur le fonctionnement de la batterie d’une voiture?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 31 – ‘Technique’.Les batteries auto tombent plus souvent en panne l’hiver.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/34.jpg"
+    },
+    {
+      "id": 50,
+      "type": "yes_no",
+      "question": "ESP est l'abréviation de Electronic Stability Program.En français, on dit : Électro-Stabilisateur Programme.",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 31 – ‘Technique’. Electronic Stability Program = Électro-Stabilisateur Programmé.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/11.jpg"
+    },
+    {
+      "id": 51,
+      "type": "multiple_choice",
+      "question": "Le rôle du catalyseur dans une voiture …",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "… est de diminuer la pollution dans l'air en réduisant ou en détruisant les gaz polluants"
+        },
+        {
+          "letter": "B",
+          "text": "… est de limiter la consommation de carburant"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 31 – ‘Technique’.Le rôle principal du catalyseur d'échappement est de diminuer la pollution dans l'air en réduisant ou en détruisant les gaz polluants grâce à un système de catalyse. .En revanche, pour un moteur essence, le catalyseur transforme tout simplement le monoxyde de carbone et le dioxyde d'azote en substance non polluante.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/31.jpg"
+    },
+    {
+      "id": 52,
+      "type": "multiple_choice",
+      "question": "Qu'est-ce qui n'est PAS autorisé?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Pneus radiaux avant et arrière"
+        },
+        {
+          "letter": "B",
+          "text": "Pneus radiaux avant et arrière diagonaux"
+        },
+        {
+          "letter": "C",
+          "text": "Pneus diagonaux avant et radiaux arrière"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 31 – ‘Technique’. - LES PNEUS RADIAUX sont autorisés à l'avant et à l'arrière.- Les PNEUS DIAGONAUX sont autorisés à l'avant et à l'arrière.- DIAGONAL à l'avant et RADIAL à l'arrière est autorisé.- Le RADIAL à l'avant et le DIAGINAL à l'arrière ne sont PAS autorisés.(parce que: vous ne pouvez placer des pneus radiaux à l'avant que s'il y a aussi des pneus radiaux à l'arrière.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/32.jpg"
+    },
+    {
+      "id": 53,
+      "type": "multiple_choice",
+      "question": "Quelle est l’influence d’une pression excessive des pneus sur l’emplacement sur la chaussée ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture se comporte mieux sur la route"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture est moins bonne sur la route"
+        },
+        {
+          "letter": "C",
+          "text": "La pression des pneus n’affecte pas cela"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/49.jpg"
+    },
+    {
+      "id": 54,
+      "type": "multiple_choice",
+      "question": "Nous sommes le 25 mars et il neige fortement. La visibilité est de 80 mètres.Cette voiture peut-elle rouler avec des pneus cloutés ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Non"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, uniquement hors agglomération"
+        },
+        {
+          "letter": "C",
+          "text": "Oui, en agglomération et hors agglomération"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 31Les pneus cloutés peuvent être utilisés du 1er novembre au 31 mars, en agglomération et hors agglomération.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/61.jpg"
+    },
+    {
+      "id": 55,
+      "type": "multiple_choice",
+      "question": "Quand devriez-vous vérifier la pression des pneus?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Lorsque les pneus sont chauds"
+        },
+        {
+          "letter": "B",
+          "text": "Lorsque les pneus sont froids"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 31 - «Technologie».Vous pouvez vérifier la pression des pneus lorsque les pneus sont froids et que la voiture est horizontale.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/46.jpg"
+    },
+    {
+      "id": 56,
+      "type": "multiple_choice",
+      "question": "Quand pouvez-vous utiliser les pneus cloutés?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Lorsqu’il y a de la neige ou du verglas sur la chaussée"
+        },
+        {
+          "letter": "B",
+          "text": "Du 1er novembre au 31 mars compris"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 31 – ‘Technique’.Du 1er novembre au 31 mars compris.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/9.jpg"
+    },
+    {
+      "id": 57,
+      "type": "multiple_choice",
+      "question": "Les quatre chiffres qui suivent la mention DOT sur le flanc d’un pneu indiquent la date de fabrication du pneu.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Les deux premiers chiffres indiquent la semaine et les deux derniers l’année"
+        },
+        {
+          "letter": "B",
+          "text": "Les deux premiers chiffres indiquent l’année et les deux derniers la semaine"
+        },
+        {
+          "letter": "C",
+          "text": "Les quatre chiffres n’ont rien à voir avec la date de fabrication"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 31 – ‘Technique’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/53.jpg"
+    },
+    {
+      "id": 58,
+      "type": "multiple_choice",
+      "question": "Nous sommes le 30 novembre.À quelle vitesse maximale est-il autorisé de circuler avec des pneus à clous dans une agglomération de la Région de Bruxelles-Capitale ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Il est interdit de rouler avec des pneus à clous"
+        },
+        {
+          "letter": "B",
+          "text": "Maximum 60 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "Maximum 30 km/h"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 31Les pneus à clous peuvent être utilisés du 1er novembre au 31 mars sur les véhicules d’une MMA jusqu’à 3,5 tonnes.Vitesse avec pneus à clous :- Autoroutes et routes à 2×2 bandes séparées par un terre-plein : maximum 90 km/h.- Routes ordinaires : maximum 60 km/h.- En agglomération : la vitesse maximale autorisée à cet endroit.En Région de Bruxelles-Capitale, cette vitesse est de 30 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/62.jpg"
+    },
+    {
+      "id": 59,
+      "type": "multiple_choice",
+      "question": "Quelle réponse est FAUSSE ?Nous sommes le 1er mars. Il neige fortement dans cette agglomération et la visibilité n’est que de 60 mètres.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture peut rouler avec des pneus cloutés"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture peut rouler avec des chaînes à neige"
+        },
+        {
+          "letter": "C",
+          "text": "Les feux de brouillard avant et arrière doivent obligatoirement être allumés"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "La question était : « quelle réponse est fausse ».A. Correct. Les pneus cloutés sont autorisés du 1er novembre au 31 mars.B. Correct. Les chaînes à neige sont toujours autorisées lorsqu’il y a de la neige sur la chaussée.C. Faux. Seuls les feux de brouillard arrière doivent obligatoirement être allumés.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/60.jpg"
+    },
+    {
+      "id": 60,
+      "type": "multiple_choice",
+      "question": "Si la pression des pneus est trop faible, la voiture roule ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... aussi bien sur la route"
+        },
+        {
+          "letter": "B",
+          "text": "... encore mieux sur la route"
+        },
+        {
+          "letter": "C",
+          "text": "... moins bien sur la route"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 31 – ‘Technique’.Trop basse pression des pneus provoque :. moins bonne position sur la route.. plus d'usure de la bande.. une plus grande consommation de carburant.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/37.jpg"
+    },
+    {
+      "id": 61,
+      "type": "multiple_choice",
+      "question": "Votre voiture commence à déraper.Dans quelle direction regardez-vous?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La direction du danger"
+        },
+        {
+          "letter": "B",
+          "text": "La direction dans laquelle vous voulez aller"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/48.jpg"
+    },
+    {
+      "id": 62,
+      "type": "yes_no",
+      "question": "Vous voyez que les feux sont rouges.Pouvez-vous rouler au point mort jusqu'à l'intersection ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 31 – ‘Technique’.Il est interdit, lorsque vous êtes au volant, de garder la pédale d’embrayage enfoncée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/40.jpg"
+    },
+    {
+      "id": 63,
+      "type": "multiple_choice",
+      "question": "Plus le pneu est vieux, plus il est …",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "tendre"
+        },
+        {
+          "letter": "B",
+          "text": "dur"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 31 – ‘Technique’.Plus le pneu est vieux, plus il est dur.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/33.jpg"
+    }
+  ]
+}

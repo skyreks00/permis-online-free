@@ -1,0 +1,513 @@
+{
+  "id": "23_sens_interdit",
+  "name": "23 sens interdit",
+  "totalQuestions": 39,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "question": "Quelle est la vitesse maximale à laquelle vous pouvez franchir ces signaux routiers avec une voiture ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "50 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "90 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "Une voiture ne peut pas franchir ces signaux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Vitesse maximale: 50 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/14.jpg"
+    },
+    {
+      "id": 2,
+      "type": "yes_no",
+      "question": "Après avoir franchi ce signal routier, pouvez-vous de nouveau faire demi-tour ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.A partir du signal jusqu'au prochain carrefour inclus, interdiction de faire demi-tour. Signal d’interdiction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/25.jpg"
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "question": "Quels véhicules sont autorisés à conduire après ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vélos"
+        },
+        {
+          "letter": "B",
+          "text": "Vélos et vélos électriques (pedelecs)"
+        },
+        {
+          "letter": "C",
+          "text": "Vélos, vélos électriques (pedelecs) et cyclomoteurs classe"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Si sur le panneau blanc les lettres A et P sont écrites, les cyclomoteurs classe A peuvent franchir ce signal. S'il n'y a que la lettre P :  les vélos et les vélos électriques (pedelecs).",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/35.jpg"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "question": "Quand pouvez-vous circuler sur une zone d’évitement ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Jamais"
+        },
+        {
+          "letter": "B",
+          "text": "Pour rejoindre votre propriété"
+        },
+        {
+          "letter": "C",
+          "text": "Pour rejoindre votre propriété ou tourner dans un carrefour"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Vous ne pouvez pas conduire sur une zone d’évitement’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/8.jpg"
+    },
+    {
+      "id": 5,
+      "type": "yes_no",
+      "question": "Pouvez-vous franchir ce signal routier en voiture ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 23 – ‘Sens interdits’Ces signaux disent que les véhicules agricoles avec une M.E.C. de plus de 5,5 tonnes, peuvent continuer.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/24.jpg"
+    },
+    {
+      "id": 6,
+      "type": "yes_no",
+      "question": "Pouvez-vous franchir ces panneaux en voiture, pour visiter un membre de votre famille qui habite dans cette rue ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Il ya un panneau additionnel: \"uitgezonderd plaatselijk verkeer\" (sauf pour le trafic local).",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/2.jpg"
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Accès interdit aux quadricycles légers et aux quads"
+        },
+        {
+          "letter": "B",
+          "text": "Accès interdit aux quads"
+        },
+        {
+          "letter": "C",
+          "text": "Accès interdit aux quads et aux motocyclettes"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Accès interdit aux conducteurs de véhicules à moteur à quatre roues, construits pour terrain non praticable, avec une carrosserie ouverte, un guidon comme sur une motocyclette et une selle.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/32.jpg"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "question": "Quels véhicules sont autorisés à conduire après ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vélos"
+        },
+        {
+          "letter": "B",
+          "text": "Vélos et vélos électriques (pedelecs)"
+        },
+        {
+          "letter": "C",
+          "text": "Vélos, vélos électriques (pedelecs) et cyclomoteurs classe"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Si sur le panneau blanc les lettres A et P sont écrites, les cyclomoteurs classe A peuvent franchir ce signal. S'il n'y a que la lettre P :  les vélos et les vélos électriques (pedelecs).",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/34.jpg"
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "question": "Votre réservoir est vide.Quel véhicule pouvez-vous pousser dans la rue à droite, pour aller chercher du carburant ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement un cyclomoteur à deux roues"
+        },
+        {
+          "letter": "B",
+          "text": "Un cyclomoteur à deux roues ou une motocyclette"
+        },
+        {
+          "letter": "C",
+          "text": "Ni un cyclomoteur ni une motocyclette"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Quelqu'un qui pousse un cyclomoteur est un piéton.Quelqu'un qui pousse une moto est un conducteur.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/27.jpg"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "question": "À quel signal routier les voitures peuvent-elles venir de l'autre sens de circulation ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "1"
+        },
+        {
+          "letter": "B",
+          "text": "1 et 2"
+        },
+        {
+          "letter": "C",
+          "text": "1, 2, 3"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/12.jpg"
+    },
+    {
+      "id": 11,
+      "type": "yes_no",
+      "question": "Des voitures venant du sens inverse peuvent-elles arriver ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Sens interdit pour tout conducteur.Signal d’interdiction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/29.jpg"
+    },
+    {
+      "id": 12,
+      "type": "yes_no",
+      "question": "La voiture brune peut-elle déboucher de cette rue ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Accès interdit aux conducteurs de véhicules à moteur à plus de deux roues et de motocyclettes avec side-car.Signal d’interdiction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/17.jpg"
+    },
+    {
+      "id": 13,
+      "type": "multiple_choice",
+      "question": "Vous tombez en panne d’essence et le garage se trouve un peu plus loin dans la rue de droite. Pouvez-vous pousser votre voiture vers la droite ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Non, car vous êtes encore un conducteur"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, car dans ce cas vous êtes un piéton"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Il est interdit.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/13.jpg"
+    },
+    {
+      "id": 14,
+      "type": "yes_no",
+      "question": "Pouvez-vous franchir ce signal routier avec votre voiture ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Oui, car une voiture qu'un conducteur qui a un permis de conduire peut conduire, est une voiture avec un M.M.A. jusqu'à 3,5 tonnes.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/3.jpg"
+    },
+    {
+      "id": 15,
+      "type": "yes_no",
+      "question": "Un cycliste peut-il franchir ce signal routier ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Accès interdit, dans les deux sens, à tout conducteur.Signal d’interdiction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/18.jpg"
+    },
+    {
+      "id": 16,
+      "type": "yes_no",
+      "question": "Pouvez-vous franchir ce panneau, avec un vélo électrique (pedelec) ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Un vélo électrique est un cyclomoteur.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/33.jpg"
+    },
+    {
+      "id": 17,
+      "type": "yes_no",
+      "question": "Pouvez-vous franchir ce signal routier en voiture ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 23 – ‘Sens interdits’Voie sans issue.Signal d’indication.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/6.jpg"
+    },
+    {
+      "id": 18,
+      "type": "yes_no",
+      "question": "Cette route est un raccourci pour aller à votre travail.Pouvez-vous continuer ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Seul le trafic local est autorisé.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/30.jpg"
+    },
+    {
+      "id": 19,
+      "type": "yes_no",
+      "question": "Pouvez-vous franchir ce signal routier ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Le panneau bleu ci-dessous indique que 50 mètres plus loin il est interdit de conduire dans cette direction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/36.jpg"
+    },
+    {
+      "id": 20,
+      "type": "yes_no",
+      "question": "Vous ne pouvez pas franchir ce signal routier en voiture.Mais pouvez-vous déboucher de cette rue en voiture ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Accès interdit aux conducteurs de véhicules à moteur à plus de deux roues et de motocyclettes avec side-car. Signal d’interdiction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/4.jpg"
+    },
+    {
+      "id": 21,
+      "type": "multiple_choice",
+      "question": "Le conducteur de cette voiture peut ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... tourner à gauche"
+        },
+        {
+          "letter": "B",
+          "text": "... tourner à droite"
+        },
+        {
+          "letter": "C",
+          "text": "... continuer tout droit"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Les signaux disent que tourner à gauche et continuer tout droit sont interdits.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/23.jpg"
+    },
+    {
+      "id": 22,
+      "type": "yes_no",
+      "question": "La voiture bleue peut-elle tourner à droite ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Sens interdit pour tout conducteur.Signal d’interdiction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/5.jpg"
+    },
+    {
+      "id": 23,
+      "type": "yes_no",
+      "question": "Pouvez-vous passer au-delà de ce signal routier pour stationner votre voiture ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Sens interdit pour tout conducteur.Signal d’interdiction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/26.jpg"
+    },
+    {
+      "id": 24,
+      "type": "multiple_choice",
+      "question": "Ce signal routier concerne ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... seulement les camions"
+        },
+        {
+          "letter": "B",
+          "text": "... toutes les catégories de véhicules"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Accès interdit aux conducteurs de véhicules ou trains de véhicules ayant, chargement compris, une longueur supérieure à celle indiquée.Signal d’interdiction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/15.jpg"
+    },
+    {
+      "id": 25,
+      "type": "multiple_choice",
+      "question": "À quoi ce signal routier fait-il référence ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La Masse En Charge -"
+        },
+        {
+          "letter": "B",
+          "text": "La Masse Maximale Autorisée -"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Accès interdit aux conducteurs de véhicules dont la masse en charge dépasse la masse indiquée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/7.jpg"
+    },
+    {
+      "id": 26,
+      "type": "yes_no",
+      "question": "Pouvez-vous franchir ce signal routier en voiture ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Une voiture ordinaire a une M.M.A. jusqu'à 3,5 tonnes.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/22.jpg"
+    },
+    {
+      "id": 27,
+      "type": "yes_no",
+      "question": "Le conducteur de la voiture A peut-il tourner à droite dans le carrefour ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Au prochain carrefour, interdiction de tourner dans le sens indiqués par la flèche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/31.jpg"
+    },
+    {
+      "id": 28,
+      "type": "yes_no",
+      "question": "La signification de ce signal routier est : Fin de toutes les interdictions.",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/39.jpg"
+    },
+    {
+      "id": 29,
+      "type": "multiple_choice",
+      "question": "À l'approche de ce carrefour, en voiture ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... vous pouvez tourner à droite"
+        },
+        {
+          "letter": "B",
+          "text": "... vous pouvez traverser le carrefour"
+        },
+        {
+          "letter": "C",
+          "text": "... vous devez faire demi-tour"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Sens interdit pour tout conducteur.Signal d’interdiction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/28.jpg"
+    },
+    {
+      "id": 30,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Absence de circulation en sens inverse"
+        },
+        {
+          "letter": "B",
+          "text": "À partir du signal jusqu'au prochain carrefour, interdiction de faire demi-tour"
+        },
+        {
+          "letter": "C",
+          "text": "Interdiction de tourner à gauche"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.A partir du signal jusqu'au prochain carrefour inclus, interdiction de faire demi-tour. Signal d’interdiction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/10.jpg"
+    },
+    {
+      "id": 31,
+      "type": "yes_no",
+      "question": "Pouvez-vous franchir ce signal routier en voiture ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Sens interdit pour tout conducteur.Signal d’interdiction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/16.jpg"
+    },
+    {
+      "id": 32,
+      "type": "yes_no",
+      "question": "Pouvez-vous franchir ce signal routier en voiture ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Sens interdit pour tout conducteur.Sauf pour les vélos et les vélos électriques (pedelecs) et cyclomoteurs classe A.Signal d’interdiction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/11.jpg"
+    },
+    {
+      "id": 33,
+      "type": "multiple_choice",
+      "question": "Qui peut déboucher de cette rue ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement des motocyclettes et des cyclistes"
+        },
+        {
+          "letter": "B",
+          "text": "N’importe quel véhicule"
+        },
+        {
+          "letter": "C",
+          "text": "Personne"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Accès interdit aux conducteurs de véhicules à moteur à plus de deux roues et de motocyclettes sans ou avec side-car.Signal d’interdiction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/9.jpg"
+    },
+    {
+      "id": 34,
+      "type": "yes_no",
+      "question": "La voiture bleue peut-elle traverser le carrefour ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Accès interdit aux conducteurs de motocyclettes.Signal d’interdiction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/19.jpg"
+    },
+    {
+      "id": 35,
+      "type": "multiple_choice",
+      "question": "Ce signal routier concerne...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... la M.M.A. (Masse Maximale Autorisée)"
+        },
+        {
+          "letter": "B",
+          "text": "... la M.E.C. (Masse En Charge)"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.La M.E.C. (Masse En Charge).",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/20.jpg"
+    },
+    {
+      "id": 36,
+      "type": "yes_no",
+      "question": "Pouvez-vous déboucher de cette rue en voiture ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Sens interdit pour tout conducteur.Signal d’interdiction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/1.jpg"
+    },
+    {
+      "id": 37,
+      "type": "yes_no",
+      "question": "Vous ne pouvez évidemment pas franchir ces signaux en voiture.Mais une voiture peut-elle sortir de cette rue ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.Accès interdit, dans les deux sens, à tout conducteur.Hors vélos et vélos électriques = pedelecsSignal d’interdiction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/21.jpg"
+    },
+    {
+      "id": 38,
+      "type": "yes_no",
+      "question": "La boulangerie est dans cette rue.Pouvez-vous conduire votre voiture dans cette rue ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 23 – ‘Sens interdits’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/37.jpg"
+    },
+    {
+      "id": 39,
+      "type": "yes_no",
+      "question": "Travaux.Votre ami vit dans cette rue. Pouvez-vous conduire chez lui ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 22 - 'Direction interdite'Vous pouvez parce que vous êtes le trafic local.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/38.jpg"
+    }
+  ]
+}

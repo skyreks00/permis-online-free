@@ -1,0 +1,432 @@
+{
+  "id": "24_direction_obligatoire",
+  "name": "24 direction obligatoire",
+  "totalQuestions": 27,
+  "questions": [
+    {
+      "id": 1,
+      "type": "yes_no",
+      "question": "Ces signaux routiers ont-ils la même signification ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.Ils ont la même signification.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/20.jpg"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité dans ce carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture brune"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture bleue"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.La voiture bleue a la priorité à droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/8.jpg"
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "question": "Qui a la priorité ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture brune"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture bleue"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.La voiture brune a la priorité à droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/10.jpg"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "question": "La photo est prise depuis la voiture que vous conduisez.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous ne pouvez que vous diriger vers la gauche"
+        },
+        {
+          "letter": "B",
+          "text": "Vous ne pouvez que vous diriger vers la droite"
+        },
+        {
+          "letter": "C",
+          "text": "Vous pouvez vous diriger vers la gauche ou vers la droite"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.Vous pouvez conduire dans les deux sens.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/19.jpg"
+    },
+    {
+      "id": 5,
+      "type": "yes_no",
+      "question": "Au centre de cette photo voyez-vous un rond-point.",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.Il n'y a aucun signal indiquant qu'il s'agit d'un rond-point.C'est un îlot directionnel.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/18.jpg"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "question": "Le conducteur de la voiture brune ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Peut seulement tourner à gauche"
+        },
+        {
+          "letter": "B",
+          "text": "Peut seulement tourner à droite"
+        },
+        {
+          "letter": "C",
+          "text": "Peut tourner à gauche et à droite"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.Le conducteur peut tourner dans les deux directions.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/6.jpg"
+    },
+    {
+      "id": 7,
+      "type": "yes_no",
+      "question": "Pouvez-vous passer cette colonne par la gauche et par la droite ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.La flèche indique que vous pouvez conduire par la gauche ou par la droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/9.jpg"
+    },
+    {
+      "id": 8,
+      "type": "yes_no",
+      "question": "Il n’y a pas de rond-point.Pouvez-vous contourner l’obstacle en suivant la flèche ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.Non, vous devez passer l'obstacle à droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/7.jpg"
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "question": "Ce panneau additionnel est également applicable aux :",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vélos"
+        },
+        {
+          "letter": "B",
+          "text": "Vélos et speed pedelecs"
+        },
+        {
+          "letter": "C",
+          "text": "Vélos et speed pedelecs et cyclomoteurs classe"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.Les lettres P et A sont écrites sur le panneau.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/25.jpg"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "question": "Quel signal routier peut être placé à la place du signal bleu d’obligation pour obtenir le même résultat ?A: Signal 1.B: Signal 2.C: Signal 3.",
+      "propositions": [],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 241 = Signal de danger : succession de virages dangereux.2 = Signal d’interdiction : interdiction de tourner à droite.3 = Signal de danger : circulation autorisée dans les deux sens après une partie de la voie à sens unique.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/28.jpg"
+    },
+    {
+      "id": 11,
+      "type": "yes_no",
+      "question": "La voiture bleue est-elle autorisée à tourner à gauche à cette jonction ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.Le signal routier bleu indique qu'il s'agit d'une voie à sens unique.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/11.jpg"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "question": "Quelle direction devez-vous prendre en voiture ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Direction"
+        },
+        {
+          "letter": "B",
+          "text": "Direction"
+        },
+        {
+          "letter": "C",
+          "text": "Direction A ou"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.La flèche indique que vous devez conduire vers la droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/1.jpg"
+    },
+    {
+      "id": 13,
+      "type": "yes_no",
+      "question": "La voiture brune peut-elle tourner à droite ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.Il n'y a aucun signal que c'est interdit.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/13.jpg"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "question": "Cette voiture ne peut tourner qu’à droite.Le conducteur doit-il utiliser le clignotant ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.Le signal routier bleu indique que le conducteur doit tourner à droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/3.jpg"
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "question": "La voiture bleue ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... peut continuer tout droit"
+        },
+        {
+          "letter": "B",
+          "text": "... doit tourner à gauche"
+        },
+        {
+          "letter": "C",
+          "text": "... peut continuer tout droit ou tourner à gauche"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.Le signal routier à côté de la voiture indique que le conducteur doit conduire tout droit.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/2.jpg"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "question": "Quel signaux routiers vous informe qu'il n'y a en principe pas de trafic en sens inverse ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement signal 1"
+        },
+        {
+          "letter": "B",
+          "text": "Seulement signal 2"
+        },
+        {
+          "letter": "C",
+          "text": "signal 1 et 2"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/14.jpg"
+    },
+    {
+      "id": 17,
+      "type": "multiple_choice",
+      "question": "Quel signal routier indique que vous circulez dans une rue à sens unique ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Signal 1"
+        },
+        {
+          "letter": "B",
+          "text": "Signal 2"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.Signal routier 1: Route avec circulation à sens unique.Signal routier 2. Le conducteur doit suivre cette direction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/5.jpg"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "question": "Quels véhicules peuvent venir en sens inverse ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Aucun véhicule"
+        },
+        {
+          "letter": "B",
+          "text": "Vélos et speed pedelecs"
+        },
+        {
+          "letter": "C",
+          "text": "Vélos et cyclomoteurs et speed pedelecs"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.La lettre P est écrite sur le panneau.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/26.jpg"
+    },
+    {
+      "id": 19,
+      "type": "multiple_choice",
+      "question": "Que ne peut pas faire le conducteur de la voiture bleue ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Continuer tout droit"
+        },
+        {
+          "letter": "B",
+          "text": "Tourner à droite"
+        },
+        {
+          "letter": "C",
+          "text": "Tourner à gauche"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.Le signal routier bleu indique qu’il doit aller tout droit ou tourner à gauche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/15.jpg"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "question": "Si un conducteur voit ce signal routier, il peut conduire ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... juste à droite"
+        },
+        {
+          "letter": "B",
+          "text": "... juste à droite ou tout droit"
+        },
+        {
+          "letter": "C",
+          "text": "... à gauche ou à droite ou tout droit"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.Il ne peut pas tourner à gauche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/21.jpg"
+    },
+    {
+      "id": 21,
+      "type": "multiple_choice",
+      "question": "Vous passez en voiture devant le premier signal routier.Quel signal verrez-vous probablement ensuite ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Signal 1"
+        },
+        {
+          "letter": "B",
+          "text": "Signal 2"
+        },
+        {
+          "letter": "C",
+          "text": "Signal 3"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 24Le premier signal routier signifie : Fin de route prioritaire.Vous devrez donc céder la priorité au premier carrefour suivant.Signal 1 : Direction obligatoire.Signal 2 : Rue à sens unique.Signal 3 : Priorité de droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/27.jpg"
+    },
+    {
+      "id": 22,
+      "type": "yes_no",
+      "question": "Le conducteur de la voiture bleue peut-il traverser le carrefour ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.Le signal routier rouge indique qu'il est interdit de conduire après le signe dans cette direction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/17.jpg"
+    },
+    {
+      "id": 23,
+      "type": "yes_no",
+      "question": "La voiture brune peut-elle tourner à gauche ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.La voiture brune peut tourner à droite ou à gauche ou tout droit.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/4.jpg"
+    },
+    {
+      "id": 24,
+      "type": "yes_no",
+      "question": "Devez-vous (la voiture bleue) aussi céder la priorité à droite, lorsque vous conduisez sur une route à sens unique.",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.Si vous conduisez sur une route à sens unique, vous devez également donner la priorité à droite, sauf bien sûr quand il y a un signal routier indiquant que vous avez la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/22.jpg"
+    },
+    {
+      "id": 25,
+      "type": "multiple_choice",
+      "question": "Lequel de ces signaux routiers est un signal d’indication ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement signal 1"
+        },
+        {
+          "letter": "B",
+          "text": "Seulement signal 2"
+        },
+        {
+          "letter": "C",
+          "text": "Signal 1 et signal 2"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.Signal 1: Route avec circulation à sens unique.Signal 2. Le conducteur doit suivre cette direction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/12.jpg"
+    },
+    {
+      "id": 26,
+      "type": "yes_no",
+      "question": "Ce panneau additionnel est également applicable aux pedelecs.",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.Oui parce que la lettre P est écrite sur le panneau.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/23.jpg"
+    },
+    {
+      "id": 27,
+      "type": "multiple_choice",
+      "question": "Ce panneau additionnel est également applicable :",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Aux vélos"
+        },
+        {
+          "letter": "B",
+          "text": "Aux vélos et speed pedelecs"
+        },
+        {
+          "letter": "C",
+          "text": "Aux vélos et speed pedelecs et cyclomoteurs classe"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 24 – ‘Direction obligatoire’.La lettre P est écrite sur le panneau.La lettre A n'est pas écrite sur le panneau.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/88/24.jpg"
+    }
+  ]
+}

@@ -1,0 +1,565 @@
+{
+  "id": "30_consommation_de_carburant",
+  "name": "30 consommation de carburant",
+  "totalQuestions": 29,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "question": "Vous revenez de vacances.Que devriez-vous retirer du toit de votre voiture?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement le coffre de toit"
+        },
+        {
+          "letter": "B",
+          "text": "Le coffre et la galerie de toit"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 30 – ‘Consommation de carburant’.Ne roulez pas avec une galerie vide sur le toit de la voiture.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/1.jpg"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "question": "Vous devez transporter des vélos.Il est conseillé de les fixer ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... à l’arrière de la voiture"
+        },
+        {
+          "letter": "B",
+          "text": "... sur le toit de la voiture"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 30 – ‘Consommation de carburant’.Il est conseillé de ne pas fixer les vélos sur le toit de la voiture.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/2.jpg"
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "question": "Quel est le carburant qui pollue le moins?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Essence"
+        },
+        {
+          "letter": "B",
+          "text": "Diesel"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 30 – ‘Consommation de carburant’.GPL est le carburant qui pollue le moins.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/3.jpg"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "question": "Rouler avec les fenêtres ouvertes consomme moins de carburant que de rouler avec les fenêtres fermées.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 30 – ‘Consommation de carburant’.Rouler avec les fenêtres fermées consomme moins de carburant que de rouler avec les fenêtres ouvertes.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/4.jpg"
+    },
+    {
+      "id": 5,
+      "type": "multiple_choice",
+      "question": "Vous roulez au diesel.Quel est le régime conseillé pour changer de vitesse ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "1000–1500"
+        },
+        {
+          "letter": "B",
+          "text": "1500–2000"
+        },
+        {
+          "letter": "C",
+          "text": "2000–2500"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 30 – ‘Consommation de carburant’.La plage de régime idéale pour changer de vitesse avec un moteur diesel est 1500–2000 tours/minute.Ordre des actions lors du changement de vitesse :1. Appuyez à fond sur l’embrayage et relâchez simultanément l’accélérateur.2. Passez à la vitesse appropriée.3. Relevez l’embrayage jusqu’au point de patinage et appuyez doucement sur l’accélérateur.4. Relâchez complètement l’embrayage et placez votre pied gauche à côté de la pédale.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/5.jpg"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "question": "Si vous devez vous arrêter devant un pont levant, il est conseillé d’éteindre le moteur.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 30 – ‘Consommation de carburant’.Si vous devez attendre plus de 30 secondes, coupez le moteur.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/6.jpg"
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "question": "Pouvez-vous regraver les pneus usés d’une voiture ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, une fois maximum"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, si l’on peut approfondir les rainures de plus de 1,6 mm"
+        },
+        {
+          "letter": "C",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 30 – ‘Consommation de carburant’.Ne roulez pas avec des pneus usés. Vous ne pouvez pas approfondir les rainures.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/7.jpg"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "question": "Les gaz d’échappement qui entrent en contact avec les rayons du soleil se transforment en…",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... benzène"
+        },
+        {
+          "letter": "B",
+          "text": "... azote"
+        },
+        {
+          "letter": "C",
+          "text": "... ozone"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 30 – ‘Consommation de carburant’.Les gaz d’échappement qui entrent en contact avec les rayons du soleil se transforment en ozone.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/8.jpg"
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "question": "Quand une voiture est-elle la plus écologique ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Avec un Eco score élevé"
+        },
+        {
+          "letter": "B",
+          "text": "Avec un Eco score faible"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 30 – « Environnement ».Le Eco score  est exprimé par un nombre compris entre 1 et 100.Le plus élevé, le plus respectueux de l'environnement.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/9.jpg"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "question": "Un filtre à air sale dans votre moteur ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... augmente la consommation de carburant"
+        },
+        {
+          "letter": "B",
+          "text": "... n’a pas d’effet sur la consommation de carburant"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 30 – ‘Consommation de carburant’.Un filtre à air sale dans votre moteur augmente la consommation de carburant.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/10.jpg"
+    },
+    {
+      "id": 11,
+      "type": "multiple_choice",
+      "question": "Rouler trop longtemps à une trop petite vitesse ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... n’a pas d’effet sur la consommation de carburant"
+        },
+        {
+          "letter": "B",
+          "text": "... diminue la consommation de carburant"
+        },
+        {
+          "letter": "C",
+          "text": "... augmente la consommation de carburant"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 30 – ‘Consommation de carburant’.Rouler trop longtemps à une trop petite vitesse augmente la consommation de carburant.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/11.jpg"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "question": "L’air conditionné dans la voiture est allumé.En conséquence ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... la consommation de carburant augmente"
+        },
+        {
+          "letter": "B",
+          "text": "... la consommation de carburant diminue"
+        },
+        {
+          "letter": "C",
+          "text": "... il n’y a pas d’effet sur la consommation de carburant"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 30 – ‘Consommation de carburant’.Plus vous utilisez de courant dans la voiture, plus le moteur doit fournir de courant et plus vous consommez de carburant.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/12.jpg"
+    },
+    {
+      "id": 13,
+      "type": "multiple_choice",
+      "question": "Comment s’appelle l’équipement qui empêche la voiture de déraper lorsque vous devez vous dévier brutalement?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "ESP ou Electronic Stability Program"
+        },
+        {
+          "letter": "B",
+          "text": "ABS ou Système anti blocage"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 30 – ‘Consommation de carburant’.Le correcteur électronique de trajectoire (en anglais Electronic Stability Program, ESP ou Electronic Stability Control, ESC ou Dynamic stability control, DSC) est un équipement de sécurité active d'antidérapage destiné à améliorer le contrôle de trajectoire d'un véhicule automobile.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/13.jpg"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "question": "Le carburant de votre voiture est de l’essence. Quel est le régime recommandé pour changer de vitesse ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "2000 tours"
+        },
+        {
+          "letter": "B",
+          "text": "2500 tours"
+        },
+        {
+          "letter": "C",
+          "text": "3000 tours"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 30 – ‘Consommation de carburant’.Diesel : 2000 tours. L’essence : 2500 tours.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/14.jpg"
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "question": "Quel diesel est le plus écologique?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le diesel blanc"
+        },
+        {
+          "letter": "B",
+          "text": "Le diesel rouge"
+        },
+        {
+          "letter": "C",
+          "text": "Le diesel avec une teneur de soufre réduite"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 30 – ‘Consommation de carburant’.Le diesel avec une teneur de soufre réduite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/15.jpg"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "question": "Le rôle du catalyseur dans une voiture …",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "… est de diminuer la pollution dans l'air en réduisant ou en détruisant les gaz polluants"
+        },
+        {
+          "letter": "B",
+          "text": "… est de limiter la consommation de carburant"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 30 – ‘Consommation de carburant’.Le rôle principal du catalyseur d'échappement est de diminuer la pollution dans l'air en réduisant ou en détruisant les gaz polluants grâce à un système de catalyse. .En revanche, pour un moteur essence, le catalyseur transforme tout simplement le monoxyde de carbone et le dioxyde d'azote en substance non polluante.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/16.jpg"
+    },
+    {
+      "id": 17,
+      "type": "multiple_choice",
+      "question": "Vous attendez avec le moteur de votre véhicule en position neutre.Pouvez-vous donner un peu de gaz à plusieurs reprises?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Non"
+        },
+        {
+          "letter": "B",
+          "text": "Oui"
+        },
+        {
+          "letter": "C",
+          "text": "Oui, seulement en hiver pour garder au chaud le moteur"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 30 – 'Consommation du carburant'.Par exemple, si vous attendez à un feu rouge avec un moteur en mode roue libre, il est interdit de pousser à plusieurs reprises sur la pédale de gaz  (brum brum ... ... broeoemm ...).",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/17.jpg"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "question": "Quel carburant est la plus polluante?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Diesel blanc"
+        },
+        {
+          "letter": "B",
+          "text": "Diesel rouge"
+        },
+        {
+          "letter": "C",
+          "text": "Diesel de faible teneur en soufre"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 30 – 'Consommation du carburant'.Diesel rouge est le plus polluant.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/18.jpg"
+    },
+    {
+      "id": 19,
+      "type": "yes_no",
+      "question": "Voitures partagées est l'utilisation systématique et à tour de rôle par des personnes préalablement déterminées d'une ou de plusieurs voitures contre paiement par le biais d'une association de voitures partagées, à l'exception de l'utilisation de véhicules destinés à la simple location ou location-vente.",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 30 – 'Consommation du carburant'.En néerlandais: Autodelen.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/19.jpg"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "question": "Quand le signe début d’une zone de basses émissions. s'applique-t-il ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Toujours"
+        },
+        {
+          "letter": "B",
+          "text": "Jusqu'à 19 heures les jours ouvrables"
+        },
+        {
+          "letter": "C",
+          "text": "Tous les jours jusqu'à 19 heures"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 30 – 'Consommation du carburant'.Une zone de basses émissions est une zone dont l’accès aux véhicules motorisés fait l’objet d’une politique d’accès sélective en fonction des nuisances environnementales causées par ces véhicules, justifiée par des motifs liés à la qualité de vie, en particulier en vue de réduire les nuisances sur l’environnement et la santé causées par la mauvaise qualité de l’air.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/20.jpg"
+    },
+    {
+      "id": 21,
+      "type": "multiple_choice",
+      "question": "Où puis-je trouver la norme Euro de ma voiture?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Sur la carte d'inspection du véhicule"
+        },
+        {
+          "letter": "B",
+          "text": "Sur le certificat d'enregistrement (carte grise)"
+        },
+        {
+          "letter": "C",
+          "text": "Sur le document d'assurance"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "La norme Euro de tout véhicule est indiquée sur la carte grise du véhicule. D’autres informations s’y retrouvent également comme la catégorie de véhicule, le carburant et la date de la première immatriculation du véhicule.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/21.jpg"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "question": "Si vous avez une voiture très écologique, êtes-vous au-dessus ou en dessous de la norme Euro?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Au-dessus"
+        },
+        {
+          "letter": "B",
+          "text": "En dessous"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/22.jpg"
+    },
+    {
+      "id": 23,
+      "type": "yes_no",
+      "question": "Ce panneau signifie : borne de recharge pour voitures électriques à gauche et à droite.",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 30",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/23.jpg"
+    },
+    {
+      "id": 24,
+      "type": "multiple_choice",
+      "question": "À quoi fait référence le E5 ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "L’indice d’octane de l’essence"
+        },
+        {
+          "letter": "B",
+          "text": "Le bioéthanol ajouté"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Depuis 2019, le carburant est principalement désigné par un nom qui indique la quantité maximale de bioéthanol ajoutée. Le bioéthanol est un alcool fabriqué par fermentation de sucre, de maïs ou de blé. Il s’agit donc d’une forme d’énergie renouvelable.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/24.jpg"
+    },
+    {
+      "id": 25,
+      "type": "multiple_choice",
+      "question": "La norme européenne",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Plus le niveau est élevé, mieux c'est pour l'environnement"
+        },
+        {
+          "letter": "B",
+          "text": "Plus le niveau est bas, mieux c'est pour l'environnement"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/25.jpg"
+    },
+    {
+      "id": 26,
+      "type": "multiple_choice",
+      "question": "Que faites-vous après avoir démarré le moteur de la voiture ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous partez immédiatement"
+        },
+        {
+          "letter": "B",
+          "text": "Vous attendez environ 30 secondes"
+        },
+        {
+          "letter": "C",
+          "text": "Vous attendez longtemps que le moteur chauffe"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LESSON 30Pour limiter l’impact environnemental et l’usure du moteur, il faut attendre environ 30 secondes après le démarrage, le temps que l’huile se répartisse correctement. Ensuite, il vaut mieux rouler doucement pendant les premiers kilomètres. Laisser tourner le moteur longtemps à l’arrêt entraîne une surconsommation et un risque de mauvaise lubrification.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/26.jpg"
+    },
+    {
+      "id": 27,
+      "type": "multiple_choice",
+      "question": "Il a neigé.Que devez-vous faire avant de prendre la route avec votre voiture ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous nettoyez le pare-brise et les rétroviseurs"
+        },
+        {
+          "letter": "B",
+          "text": "Vous nettoyez les rétroviseurs et toutes les vitres"
+        },
+        {
+          "letter": "C",
+          "text": "Vous enlevez la neige de toute la voiture"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "En Belgique, en cas de neige, il est obligatoire de nettoyer l’intégralité de la voiture. Commencez par les vitres (pare-brise, lunette arrière, vitres latérales) et les rétroviseurs afin d’assurer une bonne visibilité, puis enlevez la neige du toit, du capot et du reste de la carrosserie. Cela relève de la sécurité et de la légalité, car la neige qui tombe du toit peut gêner ou mettre en danger les autres conducteurs.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/27.jpg"
+    },
+    {
+      "id": 28,
+      "type": "multiple_choice",
+      "question": "Conduire à un régime moteur trop élevé est-il également nuisible à l’environnement ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Non"
+        },
+        {
+          "letter": "B",
+          "text": "Oui"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 30Lorsque vous faites inutilement tourner le moteur à haut régime, il consomme plus de carburant et émet davantage de CO₂ et d’oxydes d’azote. Cela nuit à l’environnement et augmente l’usure du moteur, entraînant des coûts d’entretien plus élevés.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/28.jpg"
+    },
+    {
+      "id": 29,
+      "type": "multiple_choice",
+      "question": "Quand devez-vous tenir compte de ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Uniquement les jours ouvrables, 24 h sur 24"
+        },
+        {
+          "letter": "B",
+          "text": "Uniquement les jours ouvrables, samedi compris, de 06 h à 20 h"
+        },
+        {
+          "letter": "C",
+          "text": "Tous les jours de la semaine, 24 h sur 24"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 30Ces signaux routiers indiquent le début et la fin d’une zone de basses émissions (LEZ).Une LEZ est une zone délimitée dans laquelle certains véhicules ne sont pas autorisés à circuler en raison de leurs émissions polluantes.Une LEZ est valable tous les jours, 24 heures sur 24, sauf indication contraire.Chaque ville ou commune peut décider où une LEZ est instaurée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/29.jpg"
+    }
+  ]
+}

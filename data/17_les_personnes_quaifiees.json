@@ -1,0 +1,552 @@
+{
+  "id": "17_les_personnes_quaifiees",
+  "name": "17 les personnes quaifiees",
+  "totalQuestions": 31,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "question": "Dans un carrefour muni de feux de signalisation, les capitaines de route ont la même autorité qu'un agent qualifié.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.Ils peuvent seulement donner des directives et n’ont aucune autorisation.À un carrefour avec feux de circulation, ils ne peuvent rien faire.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/1.jpg"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "question": "Le conducteur de la voiture noire veut tourner à gauche.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Il peut le faire"
+        },
+        {
+          "letter": "B",
+          "text": "Il peut uniquement continuer tout droit"
+        },
+        {
+          "letter": "C",
+          "text": "Il doit s'arrêter"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.Le conducteur peut traverser tout droit ou tourner à gauche ou à droite.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/2.jpg"
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "question": "Qui peut s'engager dans le carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture verte"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture bleue"
+        },
+        {
+          "letter": "C",
+          "text": "Le cyclomoteur"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.Les voitures se dirigent vers le ventre et le dos de l’agent et doivent s'arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/3.jpg"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "question": "Un véhicule de police a le gyrophare bleu et la sirène allumés.Que faites-vous ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous cédez le passage"
+        },
+        {
+          "letter": "B",
+          "text": "Vous accélérez, pour rester devant lui"
+        },
+        {
+          "letter": "C",
+          "text": "Vous continuez votre route comme si de rien n’était"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.C’est un véhicule prioritaire et vous devez donner la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/4.jpg"
+    },
+    {
+      "id": 5,
+      "type": "multiple_choice",
+      "question": "Qui peut s'engager dans le carrefour?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture bleue et la voiture verte"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture brune et le cyclomoteur"
+        },
+        {
+          "letter": "C",
+          "text": "Personne"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.La voiture bleue et la voiture verte se dirigent vers la main de l’agent et peuvent s’engager dans le carrefour.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/5.jpg"
+    },
+    {
+      "id": 6,
+      "type": "yes_no",
+      "question": "Un véhicule de police avec le gyrophare allumé s'approche du carrefour.Le conducteur de la voiture grise doit-il lui céder le passage ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.Il n’y a aucun signal d’alarme sonore.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/6.jpg"
+    },
+    {
+      "id": 7,
+      "type": "yes_no",
+      "question": "La voiture rouge peut-elle s'engager dans le carrefour?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.Les usagers qui se dirigent vers le ventre ou vers le dos de l’agent doivent s’arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/7.jpg"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "question": "L'agent tend le bras vers le haut. Qui doit s'arrêter ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement la voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Seulement la voiture"
+        },
+        {
+          "letter": "C",
+          "text": "La voiture A et la voiture"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.Lorsqu’un officier lève un bras verticalement, tous les usagers de la route, y compris les piétons, doivent s’arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/8.jpg"
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "question": "Quel est le numéro d'appel d'urgence international ?",
+      "propositions": [],
+      "correctAnswer": "112",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.112 est le numéro d’urgence international.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/9.jpg"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "question": "Lorsqu'un agent siffle sur son sifflet, les conducteurs doivent s'arrêter.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.Cela signifie que vous devez regarder à lui et à la commande qu’il donne ou va donner.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/10.jpg"
+    },
+    {
+      "id": 11,
+      "type": "multiple_choice",
+      "question": "Le conducteur de tram ne doit pas tenir compte des injonctions d'un agent qualifié.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.Les conducteurs de tram ne doivent pas suivre les règlements de la circulation, sauf les ordres d’une personne autorisée et les feux.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/11.jpg"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "question": "Deux bras tendus horizontalement signifient la même chose qu'un bras tendu horizontalement.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.La commande est la même.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/12.jpg"
+    },
+    {
+      "id": 13,
+      "type": "yes_no",
+      "question": "La voiture bleue peut-elle s'engager dans le carrefour ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.Oui, parce que le conducteur conduit en direction des doigts de l’agent.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/13.jpg"
+    },
+    {
+      "id": 14,
+      "type": "yes_no",
+      "question": "L'ambulance avec le gyrophare et la sirène allumés doit-elle s'arrêter ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.Les ordres d'un agent de police priment sur tout.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/14.jpg"
+    },
+    {
+      "id": 15,
+      "type": "multiple_choice",
+      "question": "Qui peut s'engager dans le carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Les voitures bleue et verte"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture brune"
+        },
+        {
+          "letter": "C",
+          "text": "Ni la voiture bleue ni la voiture brune"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.Les voitures conduisent en direction des doigts de l’agent.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/15.jpg"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "question": "Qui doit s'arrêter ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voiture bleue"
+        },
+        {
+          "letter": "B",
+          "text": "Tout le monde"
+        },
+        {
+          "letter": "C",
+          "text": "La voiture rouge et la motocyclette"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.La motocyclette roule vers le ventre et la voiture rouge vers le dos.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/16.jpg"
+    },
+    {
+      "id": 17,
+      "type": "yes_no",
+      "question": "La voiture bleue peut-elle encore tourner à gauche ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.Lorsqu’un officier lève un bras verticalement, tous les usagers de la route, y compris les piétons, doivent s’arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/17.jpg"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "question": "Qui peut s'engager dans le carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Personne"
+        },
+        {
+          "letter": "B",
+          "text": "La motocyclette"
+        },
+        {
+          "letter": "C",
+          "text": "La voiture brune"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.L’agent donne l’ordre que la motocyclette doit s’arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/18.jpg"
+    },
+    {
+      "id": 19,
+      "type": "multiple_choice",
+      "question": "Quelle injonction cet agent donne-t-il ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Le conducteur doit s'arrêter à côté de la chaussée"
+        },
+        {
+          "letter": "B",
+          "text": "le conducteur doit tourner à gauche"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.Vous devez vous arrêter (pour un contrôle).",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/19.jpg"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "question": "Le conducteur de cette voiture doit s'arrêter.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.Le conducteur conduit vers le dos de l’agent, qui tend les bras horizontalement.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/20.jpg"
+    },
+    {
+      "id": 21,
+      "type": "multiple_choice",
+      "question": "Le conducteur de cette motocyclette ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... peut continuer tout droit"
+        },
+        {
+          "letter": "B",
+          "text": "... doit tourner à gauche"
+        },
+        {
+          "letter": "C",
+          "text": "... doit s'arrêter"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.Il se dirige vers le ventre de l’agent et doit s’arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/21.jpg"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "question": "Les feux de croisement de ce véhicule de police sont allumés.Comment réagissez-vous ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous continuez votre route"
+        },
+        {
+          "letter": "B",
+          "text": "Vous cédez le passage"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.Uniquement lorsque les feux bleus clignotent et vous entendez le signal d’alarme, vous devez donner priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/22.jpg"
+    },
+    {
+      "id": 23,
+      "type": "multiple_choice",
+      "question": "En voiture, vous vous approchez de cet agent.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous pouvez vous engager dans le carrefour"
+        },
+        {
+          "letter": "B",
+          "text": "Vous devez vous arrêter"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.Vous voyez le bout des doigts de l’agent, alors vous êtes autorisé à traverser la jonction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/23.jpg"
+    },
+    {
+      "id": 24,
+      "type": "yes_no",
+      "question": "À l'approche de ce carrefour.Devez-vous vous arrêter ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.Dans les carrefours qui ne disposent pas de feux de signalisation, une personne autorisée peut arrêter la circulation, à condition d’être identifiable et de tendre vers le haut un signal C3 fixe sur une manche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/24.jpg"
+    },
+    {
+      "id": 25,
+      "type": "multiple_choice",
+      "question": "Les feux de signalisation sont en panne.Qui peut s'engager dans le carrefour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La motocyclette"
+        },
+        {
+          "letter": "B",
+          "text": "La voiture brune"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.La voiture brune se dirige vers le ventre de l’agent et doit s’arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/25.jpg"
+    },
+    {
+      "id": 26,
+      "type": "multiple_choice",
+      "question": "La voiture bleue s'approche de dos de l’agent.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Il doit s’arrêter"
+        },
+        {
+          "letter": "B",
+          "text": "Il peut tourner à droite"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.Quand un agent tend un bras ou les deux bras horizontalement, les usagers qui se dirigent vers son ventre ou vers son dos doivent s’arrêter.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/26.jpg"
+    },
+    {
+      "id": 27,
+      "type": "multiple_choice",
+      "question": "Quel est l’ordre hiérarchique ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "1 – 2 – 3"
+        },
+        {
+          "letter": "B",
+          "text": "3 – 2 – 1"
+        },
+        {
+          "letter": "C",
+          "text": "3 – 1 – 2"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 17 – ‘Les personnes qualifiées’.D’abord l’agent de police.Ensuite les signaux lumineux de circulation.Puis les signaux routiers.Et enfin les règles de circulation.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/27.jpg"
+    },
+    {
+      "id": 28,
+      "type": "multiple_choice",
+      "question": "Un pompier peut-il régler la circulation et donner des ordres à l’endroit où les pompiers interviennent ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Non, seule la police peut le faire"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, un pompier peut donner des ordres"
+        },
+        {
+          "letter": "C",
+          "text": "Oui, il peut donner des ordres et dresser un procès-verbal"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 17L’arrêté royal du 27 avril 2007 accorde à tous les membres des services d’incendie présents sur le lieu d’une intervention la compétence de régler la circulation routière.Les pompiers peuvent donner des ordres contraignants aux usagers de la route, mais ils ne peuvent en aucun cas dresser un procès-verbal ni placer de signaux routiers. Si un usager refuse d’obéir aux instructions des pompiers, le fait doit être signalé ensuite à la police, qui établira un procès-verbal.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/28.jpg"
+    },
+    {
+      "id": 29,
+      "type": "multiple_choice",
+      "question": "Vous vous engagez sur un carrefour. Soudain, un agent lève le bras.Que faites-vous ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous vous arrêtez"
+        },
+        {
+          "letter": "B",
+          "text": "Vous vous arrêtez et reculez"
+        },
+        {
+          "letter": "C",
+          "text": "Vous quittez le carrefour"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 17Lorsqu’un agent lève le bras, cela signifie que tous les véhicules doivent s’arrêter.Les véhicules déjà engagés sur le carrefour doivent le quitter le plus rapidement possible, dans la direction qu’ils voulaient suivre.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/29.jpg"
+    },
+    {
+      "id": 30,
+      "type": "multiple_choice",
+      "question": "Vous êtes déjà engagé sur le carrefour, lorsqu’un agent de police lève le bras à la verticale.Que faites-vous ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous ralentissez et attendez l’ordre qu’il va donner"
+        },
+        {
+          "letter": "B",
+          "text": "Vous vous arrêtez"
+        },
+        {
+          "letter": "C",
+          "text": "Vous continuez à avancer et vous quittez le carrefour"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 17Lorsqu’un agent lève un bras à la verticale sur un carrefour, tous les usagers doivent s’arrêter.Ceux qui se trouvent déjà sur le carrefour doivent le quitter le plus rapidement possible.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/30.jpg"
+    },
+    {
+      "id": 31,
+      "type": "multiple_choice",
+      "question": "Vous approchez d’un carrefour où un agent se tient avec un bras tendu horizontalement.Quel ordre donne l’agent ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous devez tourner à gauche"
+        },
+        {
+          "letter": "B",
+          "text": "Vous pouvez continuer à avancer, mais sans tourner à gauche"
+        },
+        {
+          "letter": "C",
+          "text": "Vous devez vous arrêter"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 17Lorsqu’un agent tend un ou deux bras horizontalement, les usagers qui arrivent vers son ventre ou vers son dos doivent s’arrêter.Les usagers qui arrivent vers ses doigts ou vers son côté peuvent continuer à s’engager dans le carrefour pour aller tout droit, tourner à gauche ou à droite.Un agent avec deux bras tendus horizontalement donne exactement le même ordre qu’avec un seul bras tendu horizontalement.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/31.jpg"
+    }
+  ]
+}

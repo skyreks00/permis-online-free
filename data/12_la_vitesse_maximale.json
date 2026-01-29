@@ -1,0 +1,923 @@
+{
+  "id": "12_la_vitesse_maximale",
+  "name": "12 la vitesse maximale",
+  "totalQuestions": 62,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "question": "Sur un dispositif surélevé. la vitesse maximale autorisée est de 30 km/h. Quel chauffeur pouvez-vous dépasser par la gauche?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement un cycliste"
+        },
+        {
+          "letter": "B",
+          "text": "Un cycliste et un cyclomoteur à deux roues"
+        },
+        {
+          "letter": "C",
+          "text": "Pas de cycliste et pas de cyclomoteurs"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "C'est interdit de depasser par la gauche (1/4/2023):o un véhicule attelé;o un véhicule à plus de deux roues;o un véhicule à moteur à deux roues.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/3.jpg"
+    },
+    {
+      "id": 2,
+      "type": "number",
+      "question": ".Quelle est la vitesse maximale à laquelle cette voiture peut rouler?",
+      "correctAnswer": "70",
+      "explanation": "LEÇON 12 – ‘La vitesse’.Jusqu'à 70 km par heure.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/34.jpg"
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "question": "Ce panneau de zone s’applique ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... seulement pendant les heures scolaires"
+        },
+        {
+          "letter": "B",
+          "text": "... de jour et de nuit"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 12 – ‘La vitesse’.Un signe de zone solide s’applique jour et nuit.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/9.jpg"
+    },
+    {
+      "id": 4,
+      "type": "number",
+      "question": ".Au-delà de ces panneaux en Flandre, en voiture vous pouvez rouler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "70",
+      "explanation": "LEÇON 12 – ‘La vitesse’.La vitesse maximale sur une route ordinaire est…… en Wallonne: 90 km/h;… en Flandre et Bruxelles-capitale region: 70 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/6.jpg"
+    },
+    {
+      "id": 5,
+      "type": "multiple_choice",
+      "question": "En agglomération.Sur un dispositif surélevé, un cycliste indique son intention de tourner à gauche avec un signe du bras et se déplace à gauche.Pouvez-vous doubler ce cycliste à la droite?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, à condition de laisser une distance latérale de 1 mètre"
+        },
+        {
+          "letter": "C",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/50.jpg"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "question": "La voiture verte peut conduire maximum 70 km par heure?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, partout en Belgique"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, en Flandre"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 12 – ‘La vitesse’. La vitesse maximale sur une route ordinaire est…… en Wallonnie: 90 km/h;… en Flandre: 70 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/47.jpg"
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "question": "Pouvez-vous dépasser par la gauche avec une voiture un cycliste dans une rue cyclable?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, si vous pouvez obtenir 1 mètre écart en toute sécurité"
+        },
+        {
+          "letter": "C",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 12 – ‘La vitesse’.La vitesse maximale autorisée est de 30 km/h. Vous ne pouvez pas y dépasser les cyclistes.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/46.jpg"
+    },
+    {
+      "id": 8,
+      "type": "number",
+      "question": ".À cet endroit, la voiture noire peut rouler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "50",
+      "explanation": "LEÇON 12 – ‘La vitesse’.Jusqu'à 50 km par heure.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/13.jpg"
+    },
+    {
+      "id": 9,
+      "type": "yes_no",
+      "question": "Peut-on dépasser par la gauche, avec une voiture, un cycliste sur un dispositif surélevé ?",
+      "correctAnswer": "OUI",
+      "explanation": "Depuis des années, on a le droit de dépasser par la droite un cycliste qui s'apprête à tourner à gauche.Depuis 2023, le dépassement d'un cycliste par la gauche est également autorisé.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/54.jpg"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "question": "Cette limite de vitesse est applicable jusqu’au carrefour suivant.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 12 – ‘La vitesse’.Jusqu'à ce que vous passez le panneau Fin de la Zone.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/2.jpg"
+    },
+    {
+      "id": 11,
+      "type": "number",
+      "question": ".Quelle est la vitesse maximale à laquelle vous pouvez rouler en voiture sur cette voie publique?",
+      "correctAnswer": "90",
+      "explanation": "LEÇON 12 – ‘La vitesse’.Jusqu'à 90 km par heure.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/36.jpg"
+    },
+    {
+      "id": 12,
+      "type": "number",
+      "question": ".Sur cette route pour automobiles, la voiture bleue peut rouler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "120",
+      "explanation": "LEÇON 12 – ‘La vitesse’.Jusqu'à 50 km par heure, du fait que les directions d'entraînement sont séparées par une berme.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/14.jpg"
+    },
+    {
+      "id": 13,
+      "type": "yes_no",
+      "question": "Peut-on dépasser par la droite, avec une voiture, un cycliste sur un dispositif surélevé ?",
+      "correctAnswer": "OUI",
+      "explanation": "Depuis des années, on a le droit de dépasser par la droite un cycliste qui s'apprête à tourner à gauche.Depuis 2023, le dépassement d'un cycliste par la gauche est également autorisé.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/55.jpg"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "question": "Sur une route ordinaire, vous pouvez rouler avec des pneus cloutés à une vitesse maximale de 60 km/h. Mais quand-est-ce autorisé?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "En hiver"
+        },
+        {
+          "letter": "B",
+          "text": "Seulement en cas de neige ou verglas"
+        },
+        {
+          "letter": "C",
+          "text": "Du premier novembre jusqu'au 31 mars"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 12 – ‘La vitesse’.Du premier novembre jusqu'au 31 mars.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/41.jpg"
+    },
+    {
+      "id": 15,
+      "type": "number",
+      "question": ".Quelle est la vitesse maximale (... km/h) à laquelle vous pouvez rouler à cet endroit?",
+      "correctAnswer": "30",
+      "explanation": "LEÇON 12 – ‘La vitesse’.La vitesse maximale sur un dispositif surélevé est de 30 km / h.Vous ne pouvez même dépasser les cyclistes par la gauche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/22.jpg"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "question": "Cette limite de vitesse ne s’applique...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... qu’aux véhicules avec une remorque"
+        },
+        {
+          "letter": "B",
+          "text": "... qu’à la sortie"
+        },
+        {
+          "letter": "C",
+          "text": "... qu’au moment de s’incorporer à l’autoroute"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 12 – ‘La vitesse’.Cette combinaison de panneaux signifie que sur cette sortie vous ne pouvez rouler qu’à 50 km/h maximum.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/5.jpg"
+    },
+    {
+      "id": 17,
+      "type": "multiple_choice",
+      "question": "Quelle est la vitesse maximale à laquelle vous pouvez circuler dans une rue réservée au jeu?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "20 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "30 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "Au pas"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 12 – ‘La vitesse’.La vitesse maximale à laquelle vous pouvez circuler dans une rue réservée au jeu est : au pas.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/43.jpg"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "question": "Quelle est la vitesse maximale à laquelle vous pouvez circuler dans une zone cyclable?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "20 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "30 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "Au pas"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 12 – ‘La vitesse’.La vitesse maximale autorisée est de 30 km/h. Vous ne pouvez pas y dépasser les cyclistes.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/42.jpg"
+    },
+    {
+      "id": 19,
+      "type": "number",
+      "question": ".Sur cette route en Wallonie, en voiture, vous pouvez rouler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "90",
+      "explanation": "LEÇON 12 – ‘La vitesse’.La vitesse maximale sur une route ordinaire est…… en Wallonnie: 90 km/h;… en Flandre: 70 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/11.jpg"
+    },
+    {
+      "id": 20,
+      "type": "number",
+      "question": ".Quelle est la vitesse maximale (... km/h) à laquelle cette voiture peut rouler à cet endroit en Flandre?",
+      "correctAnswer": "50",
+      "explanation": "LEÇON 12 – ‘La vitesse’.La vitesse en agglomération : jusqu'à 50 km / h.Bruxelles-capitale region: 30 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/23.jpg"
+    },
+    {
+      "id": 21,
+      "type": "number",
+      "question": ".Au-delà de ce panneau en Flandre, en voiture vous pouvez rouler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "50",
+      "explanation": "LEÇON 12 – ‘La vitesse’.La vitesse en agglomération : jusqu'à 50 km / h.Bruxelles-capitale region: 30 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/4.jpg"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "question": "La police t’arrête en agglomération en Flandre parce que tu roulais à 75 km/h. Quelles sont les conséquences ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Tu reçois une amende"
+        },
+        {
+          "letter": "B",
+          "text": "Tu subis un retrait immédiat et temporaire du permis de conduire"
+        },
+        {
+          "letter": "C",
+          "text": "Tu devras comparaître devant le tribunal"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 12Tu risques un retrait immédiat du permis dès que tu dépasses de plus de 30 km/h la vitesse maximale sur les autoroutes, routes pour automobiles et routes ordinaires.Mais en agglomération, en zone 30 ou dans une zone résidentielle, tu risques déjà un retrait immédiat si tu dépasses de plus de 20 km/h.Tu risques une déchéance du droit de conduire dès que tu dépasses de plus de 40 km/h la vitesse maximale sur les autoroutes, routes pour automobiles et routes ordinaires.En agglomération, en zone 30 ou dans une zone résidentielle, tu reçois déjà une déchéance dès que tu dépasses de plus de 30 km/h.Cette décision est prise par le juge, et non par la police.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/62.jpg"
+    },
+    {
+      "id": 23,
+      "type": "multiple_choice",
+      "question": "La police t’a arrêté parce que tu roulais à 67 km/h dans une agglomération de la Région de Bruxelles-Capitale.Quelles sont les conséquences ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Tu dois uniquement payer une amende"
+        },
+        {
+          "letter": "B",
+          "text": "Ton permis de conduire sera retiré temporairement"
+        },
+        {
+          "letter": "C",
+          "text": "Tu devras comparaître devant le tribunal"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 12La vitesse maximale autorisée dans une agglomération de la Région de Bruxelles-Capitale est de 30 km/h.Tu roulais donc à 36 km/h au-dessus de la limite.Une déchéance du droit de conduire est prévue dès que tu dépasses la vitesse autorisée de plus de 40 km/h sur les autoroutes, routes pour automobiles ou routes ordinaires.Mais si tu roules dans une agglomération, une zone 30 ou une zone résidentielle, tu risques déjà une déchéance dès que tu dépasses la limite de plus de 30 km/h.Cela ne se fait pas par la police, mais par le juge lors du jugement au tribunal.Selon la décision, tu ne pourras plus conduire pendant au moins 8 jours et jusqu’à 5 ans, même un véhicule ne nécessitant pas de permis.Pour les conducteurs débutants (moins de 2 ans de permis B), la règle est encore un peu plus stricte.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/59.jpg"
+    },
+    {
+      "id": 24,
+      "type": "number",
+      "question": "Les véhicules autorisés à franchir ce panneau peuvent parcourir un maximum de (...) km par heure.",
+      "correctAnswer": "30",
+      "explanation": "",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/53.jpg"
+    },
+    {
+      "id": 25,
+      "type": "number",
+      "question": ".Quelle est la vitesse maximale (... km/h) à laquelle cette voiture peut rouler sur cette autoroute?",
+      "correctAnswer": "120",
+      "explanation": "LEÇON 12 – ‘La vitesse’.La vitesse maximale autorisée sur une autoroute: 120 km par heure.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/28.jpg"
+    },
+    {
+      "id": 26,
+      "type": "multiple_choice",
+      "question": "Au-delà de ce panneau vous circulez dans une Zone 30.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 12 – ‘La vitesse’.Ce n'est pas une zone. La limite de vitesse est de 30 km par heure jusqu'a la prochaine intersection.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/39.jpg"
+    },
+    {
+      "id": 27,
+      "type": "multiple_choice",
+      "question": "Le panneau bleu “200 m” s’applique ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... seulement au signal relatif à la vitesse"
+        },
+        {
+          "letter": "B",
+          "text": "... seulement au signal relatif au dépassement"
+        },
+        {
+          "letter": "C",
+          "text": "... aux deux panneaux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 12 – ‘La vitesse’.Le panneau bleu “200 m” s’applique seulement au signal relatif à la vitesse.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/30.jpg"
+    },
+    {
+      "id": 28,
+      "type": "number",
+      "question": ".Quelle est la vitesse maximale (... km/h) à laquelle ces voitures peuvent rouler à cet endroit dans la région wallonne ?",
+      "correctAnswer": "90",
+      "explanation": "LEÇON 12 – ‘La vitesse’. La vitesse maximale sur une route ordinaire est…… en Wallonne: 90 km/h;… en Flandre: 70 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/26.jpg"
+    },
+    {
+      "id": 29,
+      "type": "yes_no",
+      "question": "Pouvez-vous dépasser un cycliste par la gauche sur un dispositif élevé?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 12 – ‘La vitesse’.La vitesse maximale sur un dispositif surélevé est de 30 km / h.Vous pouvez dépasser les cyclistes par la gauche (A.R. 12/3/2023).",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/45.jpg"
+    },
+    {
+      "id": 30,
+      "type": "multiple_choice",
+      "question": "Vous devez vous arrêter, parce que vous conduisiez dans une agglomération en Flandre à plus de 75 km/h.Quelles sont les conséquences?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous devez payer une amende à la police"
+        },
+        {
+          "letter": "B",
+          "text": "Votre permis de conduire peut être retiré sur-le-champ"
+        },
+        {
+          "letter": "C",
+          "text": "Vous devez apparaître dans les 14 jours devant le juge"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 12 – ‘La vitesse’. Apprenez très bien la différence entre:- retrait immédiat temporaire de votre permis de conduire.- une déchéance du droit de conduire un véhicule à moteur.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/48.jpg"
+    },
+    {
+      "id": 31,
+      "type": "number",
+      "question": ".Quelle est la vitesse maximale (... km/h) en région wallonne, à laquelle les voitures peuvent rouler sur cette route pour automobiles en agglomération?",
+      "correctAnswer": "50",
+      "explanation": "LEÇON 12 – ‘La vitesse’.La vitesse maximale en agglomération : jusqu'à 50 km / h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/29.jpg"
+    },
+    {
+      "id": 32,
+      "type": "number",
+      "question": ".La voiture sur cette photo peut rouler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "70",
+      "explanation": "LEÇON 12 – ‘La vitesse’.La vitesse en agglomération : jusqu'à 50 km / h. Mais un panneau indique que la vitesse maximale autorisée est 70 km/h jusqu'à la prochaine intersection.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/8.jpg"
+    },
+    {
+      "id": 33,
+      "type": "multiple_choice",
+      "question": "Dans une zone cyclable, vous ne pouvez pas y dépasser un cycliste à gauche.Mais pouvez-vous y dépasser un cycliste à droite?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, à condition de laisser une distance latérale de 1 mètre"
+        },
+        {
+          "letter": "C",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 12 – ‘La vitesse’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/51.jpg"
+    },
+    {
+      "id": 34,
+      "type": "number",
+      "question": ".Sur cette route pour automobiles en Flandre, la voiture bleue peut rouler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "70",
+      "explanation": "LEÇON 12 – ‘La vitesse’.La vitesse maximale sur une route ordinaire est…… en Wallonne: 90 km/h;… en Flandre: 70 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/10.jpg"
+    },
+    {
+      "id": 35,
+      "type": "multiple_choice",
+      "question": "Que signifie cette combinaison de panneaux?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "À partir d’ici jusque 200 mètres plus loin, maximum 50 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "200 mètres plus loin, maximum 50 km/h"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 12 – ‘La vitesse’. 200 mètres plus loin, maximum 50 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/16.jpg"
+    },
+    {
+      "id": 36,
+      "type": "multiple_choice",
+      "question": "Si un membre de votre famille se trouve dans l’ambulance, et celle-ci dépasse la vitesse maximale autorisée, vous pouvez malgré tout la suivre.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 12 – ‘La vitesse’.Vous ne pouvez pas conduire plus vite que la vitesse maximale autorisée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/20.jpg"
+    },
+    {
+      "id": 37,
+      "type": "multiple_choice",
+      "question": "À quelle vitesse maximale pouvez-vous rouler sur cette route en agglomération en région bruxelloise après avoir passé le dispositif surélevé ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "30 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "50 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "70 km/h"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 12 – ‘La vitesse’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/44.jpg"
+    },
+    {
+      "id": 38,
+      "type": "multiple_choice",
+      "question": "Vous roulez à 47 km/h dans une zone résidentielle en Wallonie. Quelles en sont les conséquences ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous recevez une amende"
+        },
+        {
+          "letter": "B",
+          "text": "Vous subissez un retrait immédiat et temporaire du permis de conduire"
+        },
+        {
+          "letter": "C",
+          "text": "Vous devrez comparaître devant le tribunal"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 12Vous risquez un retrait immédiat du permis dès que vous dépassez la vitesse maximale autorisée de plus de 30 km/h sur les autoroutes, les routes pour automobiles et les routes ordinaires.Mais dans une agglomération, une zone 30 ou une zone résidentielle, vous risquez déjà un retrait immédiat si vous dépassez la vitesse maximale de plus de 20 km/h.Vous risquez une déchéance du droit de conduire dès que vous dépassez la vitesse maximale de plus de 40 km/h sur les autoroutes, les routes pour automobiles et les routes ordinaires.En agglomération, en zone 30 ou en zone résidentielle, vous recevez déjà une déchéance dès que vous dépassez la vitesse maximale de plus de 30 km/h.Cette décision n’est pas prise par la police, mais par le juge, lors de votre passage au tribunal.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/61.jpg"
+    },
+    {
+      "id": 39,
+      "type": "number",
+      "question": ".Quelle est la vitesse maximale (... km/h) à laquelle l’on peut rouler en voiture sur cette route?",
+      "correctAnswer": "50",
+      "explanation": "LEÇON 12 – ‘La vitesse’. Jusqu'à 50 km par heure.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/31.jpg"
+    },
+    {
+      "id": 40,
+      "type": "number",
+      "question": ".Au-delà de ce panneau de zone dans la région wallonne,  en voiture, vous pouvez rouler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "90",
+      "explanation": "LEÇON 12 – ‘La vitesse’. La vitesse maximale sur une route ordinaire est…… en Wallonnie: 90 km/h;… en Flandre: 70 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/18.jpg"
+    },
+    {
+      "id": 41,
+      "type": "multiple_choice",
+      "question": "Cette limite de vitesse s’applique...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... jusqu’au carrefour suivant"
+        },
+        {
+          "letter": "B",
+          "text": "... jusqu’à ce que vous voyez le panneau “Fin de Zone”"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 12 – ‘La vitesse’. Jusqu’au carrefour suivant.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/7.jpg"
+    },
+    {
+      "id": 42,
+      "type": "multiple_choice",
+      "question": "Une chaussée ordinaire en Wallonie divisée en deux bandes de circulation.Tu roules avec cette voiture à 110 km/h. La police t’arrête.Quelles sont les conséquences ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Tu reçois une amende"
+        },
+        {
+          "letter": "B",
+          "text": "Ton permis de conduire est immédiatement retiré temporairement"
+        },
+        {
+          "letter": "C",
+          "text": "Tu devras t’expliquer devant le tribunal"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 12Tu risques un retrait immédiat de ton permis de conduire dès que tu dépasses la vitesse autorisée de plus de 30 km/h sur les autoroutes, les routes pour automobiles et les routes ordinaires.Si tu roules dans une agglomération, une zone 30 ou une zone résidentielle à plus de 20 km/h au-dessus de la limite, tu risques également un retrait immédiat.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/58.jpg"
+    },
+    {
+      "id": 43,
+      "type": "number",
+      "question": "Quelle est la limite de vitesse dans une agglomération de la Région de Bruxelles-Capitale ?",
+      "correctAnswer": "30",
+      "explanation": "LEÇON 12 – ‘La vitesse’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/24.jpg"
+    },
+    {
+      "id": 44,
+      "type": "multiple_choice",
+      "question": "Peut-il être dangereux d’utiliser tout le temps le régulateur de vitesse ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 12Le régulateur de vitesse est une option présente sur la plupart des véhicules récents, utilisée pour adopter une conduite plus sûre et économique, en réduisant la consommation de carburant.Une fois activé, il permet au conducteur de maintenir une vitesse constante sans avoir à utiliser la pédale d'accélération.Cependant, il ne tient pas compte des mauvaises conditions de la route.En cas de neige, de verglas ou de sol glissant, si les roues du véhicule perdent de l’adhérence, le régulateur continue de maintenir la vitesse présélectionnée, ce qui peut provoquer une perte de contrôle ou un dérapage, surtout si le conducteur freine brusquement pour le désactiver.Dans ces conditions, les experts recommandent de ne pas utiliser le régulateur de vitesse, afin de garder une maîtrise totale du véhicule.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/60.jpg"
+    },
+    {
+      "id": 45,
+      "type": "multiple_choice",
+      "question": "Les routes N sont ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... des routes pour automobiles"
+        },
+        {
+          "letter": "B",
+          "text": "... des autoroutes"
+        },
+        {
+          "letter": "C",
+          "text": "... des routes ordinaires"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 12 – ‘La vitesse’.La vitesse maximale sur une route ordinaire est…… en Wallonnie: 90 km/h;… en Flandre: 70 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/12.jpg"
+    },
+    {
+      "id": 46,
+      "type": "multiple_choice",
+      "question": "Une zone 30 commence au-delà de ce panneau.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 12 – ‘La vitesse’.Le signe indique: début d'une zone.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/32.jpg"
+    },
+    {
+      "id": 47,
+      "type": "number",
+      "question": ".Quelle est la vitesse maximale à laquelle vous pouvez rouler en voiture à ce carrefour ?",
+      "correctAnswer": "30",
+      "explanation": "LEÇON 12 – ‘La vitesse’.La vitesse maximale sur un dispositif surélevé est de 30 km / h.Vous ne pouvez même dépasser les cyclistes par la gauche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/35.jpg"
+    },
+    {
+      "id": 48,
+      "type": "number",
+      "question": ".Dans une zone résidentielle, vous pouvez rouler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "20",
+      "explanation": "LEÇON 12 – ‘La vitesse’.Les piétons peuvent y aller à pied sur la chaussée et les enfants sont autorisés à jouer là-bas.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/1.jpg"
+    },
+    {
+      "id": 49,
+      "type": "multiple_choice",
+      "question": "Ce signe signifie: fin de toutes les interdictions locales imposées aux véhicules en mouvement.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 12 – ‘La vitesse’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/49.jpg"
+    },
+    {
+      "id": 50,
+      "type": "multiple_choice",
+      "question": "Les routes N sont ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... des routes régionales"
+        },
+        {
+          "letter": "B",
+          "text": "... des routes internationales"
+        },
+        {
+          "letter": "C",
+          "text": "... des routes ordinaires"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 12 – ‘La vitesse’. La vitesse maximale sur une route ordinaire est…… en Wallonne: 90 km/h;… en Flandre et région bruxellois (hors agglomeration): 70 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/33.jpg"
+    },
+    {
+      "id": 51,
+      "type": "multiple_choice",
+      "question": "Quelle est la vitesse maximale à laquelle cette voiture peut rouler ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Maximum 70 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "Maximum 90 km/h"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 12 – ‘La vitesse’.Le panneau de signalisation est à droite du conducteur.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/27.jpg"
+    },
+    {
+      "id": 52,
+      "type": "multiple_choice",
+      "question": "Quelle est la vitesse maximale autorisée sur une route ordinaire en dehors d'une agglomeration dans la Région de Bruxelles-Capitale ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "70 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "90 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "120 km/h"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 12 – ‘La vitesse’.Wallonie: 90 km/h.Flandre: 70 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/52.jpg"
+    },
+    {
+      "id": 53,
+      "type": "multiple_choice",
+      "question": "Au-delà de ce panneau,  en voiture, en circonstance normales, vous devez rouler à une vitesse minimale de 70 km/h.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 12 – ‘La vitesse’.Seulement sur une autoroute, il y a une vitesse minimale obligatoire.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/25.jpg"
+    },
+    {
+      "id": 54,
+      "type": "number",
+      "question": "A partir de combien de km/h d’excès de vitesse, hors agglomeration, la police peut-elle retirer temporairement votre permis de conduire ?",
+      "correctAnswer": "B",
+      "explanation": "LEÇON 12 – ‘La vitesse’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/37.jpg"
+    },
+    {
+      "id": 55,
+      "type": "number",
+      "question": ".Sur l’autoroute, si les conditions le permettent, vous devez rouler à une vitesse minimale de (...) km/h.",
+      "correctAnswer": "70",
+      "explanation": "LEÇON 12 – ‘La vitesse’.Sur une autoroute: au moins 70 km / h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/15.jpg"
+    },
+    {
+      "id": 56,
+      "type": "multiple_choice",
+      "question": "Vous voulez quitter l’autoroute.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous ne commencez à freiner qu’une fois sur la sortie"
+        },
+        {
+          "letter": "B",
+          "text": "Vous freinez suffisamment sur la bande de circulation"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 12 – ‘La vitesse’.  Vous ne commencez à freiner qu’une fois sur la sortie.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/19.jpg"
+    },
+    {
+      "id": 57,
+      "type": "number",
+      "question": ".Quelle était la vitesse maximale autorisée avant que vous ne franchissiez ces panneaux?",
+      "correctAnswer": "50",
+      "explanation": "LEÇON 12 – ‘La vitesse’.Vous étiez dans une agglomération.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/38.jpg"
+    },
+    {
+      "id": 58,
+      "type": "number",
+      "question": ".Sur l’autoroute, en voiture, vous franchissez ce panneau. Sur la bande de circulation de gauche vous pouvez rouler à une vitesse maximale de (...) km/h.",
+      "correctAnswer": "120",
+      "explanation": "LEÇON 12 – ‘La vitesse’.La limite de vitesse commence 1500 mètres plus loin.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/21.jpg"
+    },
+    {
+      "id": 59,
+      "type": "multiple_choice",
+      "question": "Vous roulez à 105 km/h sur une route ordinaire en Flandre.Quelle est la conséquence ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Une amende"
+        },
+        {
+          "letter": "B",
+          "text": "Un retrait immédiat de votre permis de conduire"
+        },
+        {
+          "letter": "C",
+          "text": "Vous devrez comparaître devant le tribunal"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 12La vitesse maximale autorisée sur une route ordinaire en Flandre est de 70 km/h. Vous roulez donc 35 km/h trop vite.1. Retrait temporaire immédiat du permis de conduire.-Vous risquez un retrait immédiat de votre permis dès que vous dépassez la vitesse autorisée de plus de 30 km/h sur autoroutes, routes pour automobiles et routes ordinaires.2. Déchéance du droit de conduire un véhicule à moteur.-Vous risquez une déchéance du droit de conduire dès que vous dépassez la vitesse autorisée de plus de 40 km/h sur ces mêmes routes.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/56.jpg"
+    },
+    {
+      "id": 60,
+      "type": "multiple_choice",
+      "question": "Le juge est obligé de prononcer une déchéance du droit de conduire un véhicule à moteur pour un excès de vitesse dans une zone résidentielle de plus de …",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "20 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "30 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "40 km/h"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 12Lorsque vous dépassez la vitesse maximale autorisée de plus de 40 km/h sur une autoroute, une route pour automobiles ou une route ordinaire, vous vous exposez à la déchéance du droit de conduire un véhicule à moteur.De plus, si vous excédez de plus de 30 km/h la vitesse maximale en agglomération, dans une zone 30 ou dans une zone résidentielle, vous risquez également une déchéance du droit de conduire un véhicule à moteur.Ce n’est pas une décision de la police, mais celle d’un juge au tribunal, lorsque votre affaire est jugée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/57.jpg"
+    },
+    {
+      "id": 61,
+      "type": "number",
+      "question": "Vous roulez trop vite en Zone 30.A partir de combien de km/h d’excès de vitesse la POLICE peut-elle vous retirer votre permis sur-le- champ?",
+      "correctAnswer": "A",
+      "explanation": "LEÇON 12 – ‘La vitesse’.À partir d’un excès de 20 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/40.jpg"
+    },
+    {
+      "id": 62,
+      "type": "multiple_choice",
+      "question": "Cette combinaison de panneaux signifie que 150 mètres plus loin ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... il y a un dispositif surélevé long de 500 mètres"
+        },
+        {
+          "letter": "B",
+          "text": "... il y a différents dispositifs surélevés sur une distance de 500 mètres"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 12 – ‘La vitesse’.Les petites flèches disent : il y a différents dispositifs surélevés sur une distance de 500 mètres.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/17.jpg"
+    }
+  ]
+}

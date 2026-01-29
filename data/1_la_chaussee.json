@@ -1,0 +1,1009 @@
+{
+  "id": "1_la_chaussee",
+  "name": "1 la chaussee",
+  "totalQuestions": 54,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "question": "Sur une route ordinaire où la vitesse est limitée à 90 km/h, vous roulez à 120 km/h.Quelles sont les conséquences ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous recevrez une amende"
+        },
+        {
+          "letter": "B",
+          "text": "Votre permis sera temporairement retiré"
+        },
+        {
+          "letter": "C",
+          "text": "Vous devrez repasser votre examen théorique et pratique"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 1 – ‘La voie publique’.Un excès de plus de 40 km/h que la vitesse maximale permise sur des routes ordinaires, hors agglomération est puni par le juge qui prononce ladéchéance du droit de conduire pour une durée d'au moins huit jours et au maximum cinq ans.Pour l’examen : bien lire l’explication dans la leçon 12.Ici nous sommes hors agglomération et donc ce sera juste une amende car la vitesse autorisée est dépassée de 30 kms/h. Même un jeune conducteur pour qui les règles sont plus strictes n’aurait pas de déchéance car c’est 30 kms/h au-dessus de la limite et lui serait déchu à plus de 30 kms, donc à 121 kms/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/25.jpg"
+    },
+    {
+      "id": 2,
+      "type": "yes_no",
+      "question": "Est-ce que le conducteur de cette voiture a les mains correctement sur le volant ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 1 – ‘La voie publique’.Pendant la conduite, placez les deux mains sur le volant, à la position prévue à cet effet entre 09 :15 et 10 :10 là où vous pouvez facilement atteindre les commandes des clignotants et des essuies glaces.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/11.jpg"
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Descente dangereuse"
+        },
+        {
+          "letter": "B",
+          "text": "Montée à forte inclinaison"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 1 – ‘La voie publique’.Le signal avec un % vers le bas: descente dangereuse.C'est un signal de danger.Pour info, le pourcentage indique qu’on descend de 10m de haut sur une distance de 100m (on ne vous interroge pas sur cet aspect)",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/3.jpg"
+    },
+    {
+      "id": 4,
+      "type": "yes_no",
+      "question": "Le code de la route s’applique-t-il dans un chemin privé ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 1 – ‘La voie publique’.Les routes où figure le signe \"privé\", ne font pas partie de la voie publique. Ici le code de la route ne s'applique pas, SAUF si c'est un chemin privé qui peut être accessible à tous.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/5.jpg"
+    },
+    {
+      "id": 5,
+      "type": "number",
+      "question": "À quelle vitesse maximale pouvez-vous circuler sur une voie publique ordinaire en Wallonie?",
+      "correctAnswer": "90",
+      "explanation": "LEÇON 1 – ‘La voie publique’.La vitesse maximale sur une voie ordinaire est…… en Flandre et Bruxelles-capitale: 70 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/19.jpg"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "question": "À quelle vitesse maximale cette voiture rouge peut-elle circuler sur une route ordinaire dans la région de Bruxelles-Capitale ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "50 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "70 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "90 km/h"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 1En Flandre et dans la région de Bruxelles-Capitale, la vitesse maximale autorisée sur une route ordinaire est de 70 km/h.En Wallonie, elle est de 90 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/52.jpg"
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "question": "Tu as suivi 20 heures de cours pratiques dans une auto-école agréée et tu as reçu une « attestation de compétence ».À partir de quel âge peux-tu désormais conduire seul pour t’exercer ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "À partir de 17 ans"
+        },
+        {
+          "letter": "B",
+          "text": "À partir de 17 ans et 9 mois"
+        },
+        {
+          "letter": "C",
+          "text": "À partir de 18 ans"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "INFO - PERMIS DE CONDUIRETu dois avoir suivi 20 heures de cours pratiques et avoir 18 ans pour pouvoir conduire seul avec un permis provisoire 18M.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/46.jpg"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "question": "Lequel de ces deux signaux routiers annonce un dispositif surélevé à 150m ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Signal"
+        },
+        {
+          "letter": "B",
+          "text": "Signal"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 1 – ‘La voie publique’.Les deux signaux routiers sont des signaux de danger.La signification du signal de A est cassis ou dos d'âne.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/6.jpg"
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "question": "Ce signal routier de danger signifie 'danger'.Mais où se situe le danger ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "À partir d’ici et sur 100 mètres"
+        },
+        {
+          "letter": "B",
+          "text": "À 100 mètres"
+        },
+        {
+          "letter": "C",
+          "text": "À 150 mètres"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 1Les signaux routiers de danger ont une forme triangulaire avec un bord rouge.Ils sont placés en principe à environ 150 mètres avant le danger.(En agglomération, cette distance peut être plus courte.)",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/54.jpg"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal de danger ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Risque de dérapage"
+        },
+        {
+          "letter": "B",
+          "text": "Succession de virages dangereux"
+        },
+        {
+          "letter": "C",
+          "text": "La chaussée se dévie vers la droite"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 1 – ‘La voie publique’.Signal de danger : double virage ou succession de plus de deux virages, le premier à droite.Presque tous signaux routiers triangulaire avec un bord rouge sont des signaux de danger. Les signaux de danger sont placés à une distance approximative de 150 m de l'endroit dangereux.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/27.jpg"
+    },
+    {
+      "id": 11,
+      "type": "multiple_choice",
+      "question": "Qu’est-ce qu’une station-service ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Une voie publique"
+        },
+        {
+          "letter": "B",
+          "text": "Un terrain public"
+        },
+        {
+          "letter": "C",
+          "text": "Un terrain privé"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 1Un terrain public, comme le parking d’un restaurant ou une station-service, est un lieu public où l’on ne circule qu’en cas de nécessité, c’est-à-dire uniquement si l’on doit vraiment s’y rendre.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/50.jpg"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "question": "Comment s’appelle la partie de la voie publique, indiquée par la ligne jaune ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voie publique"
+        },
+        {
+          "letter": "B",
+          "text": "La chaussée"
+        },
+        {
+          "letter": "C",
+          "text": "La bande de circulation"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 1 – ‘La voie publique’.C’est la chaussée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/24.jpg"
+    },
+    {
+      "id": 13,
+      "type": "multiple_choice",
+      "question": "Les bandes d’herbe que vous voyez sur cette image font-elles partie de la voie publique ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 1 – ‘La voie publique’.La piste cyclable, l'accotement de plein pied ou en saillie, la bande de stationnement, les trottoirs et les bandes d’herbe font partie de la voie publique. La voie publique s’étend jusqu'au fossé, talus ou la limite d'une propriété privée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/29.jpg"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "question": "Vous avez le permis de conduire provisoire B.À Noël, pouvez-vous rouler en voiture pendant la journée ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Non"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, entre 06h00 et 22h00"
+        },
+        {
+          "letter": "C",
+          "text": "Oui, entre 08h00 et 18h00"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 1 – ‘La voie publique’.Vous ne pouvez pas conduire avec un permis provisoire sur la voie publique:. Du vendredi soir 22h00 à samedi matin 6h00;. Du samedi soir 22h00 à dimanche matin 6h00;. Du dimanche soir 22h00 à lundi matin 6h00;. Le soir avant un jour férié 22h00 au matin de ce jour férié 6h00;. Le soir du jour férié 22h00 au matin du lendemain 6h00.Nous sommes un jour férié et la conduite n’est pas autorisée avant 6hle lendemain matin.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/34.jpg"
+    },
+    {
+      "id": 15,
+      "type": "yes_no",
+      "question": "Vous avez le permis de conduire provisoire B. Pouvez-vous conduire une voiture dimanche soir après 22h ?",
+      "correctAnswer": "NON",
+      "explanation": "INFO - PERMIS DE CONDUIREVous ne pouvez pas conduire avec un permis provisoire sur la voie publique:. Du vendredi soir 22h00 à samedi matin 6h00;. Du samedi soir 22h00 à dimanche matin 6h00;. Du dimanche soir 22h00 à lundi matin 6h00;. Le soir avant un jour férié 22h00 au matin de ce jour férié 6h00;. Le soir du jour férié 22h00 au matin du lendemain 6h00.Nous sommes un dimanche et la conduite n’est pas autorisée avant 6h lundi matin.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/33.jpg"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal de danger ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Ornières"
+        },
+        {
+          "letter": "B",
+          "text": "Aquaplanage"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Les ornières, ces traces que les roues des véhicules creusent sur la route, peuvent nuire à la sécurité des automobilistes.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/40.jpg"
+    },
+    {
+      "id": 17,
+      "type": "multiple_choice",
+      "question": "De quel type de signal routier s’agit-il ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Signal de danger"
+        },
+        {
+          "letter": "B",
+          "text": "Signal d’obligation"
+        },
+        {
+          "letter": "C",
+          "text": "Signal d’interdiction"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 1 – ‘La voie publique’.Presque tous signaux routiers triangulaire avec une bordure rouge sont des signaux de danger. Les signaux de danger sont placés à une distance approximative de 150 m de l'endroit dangereux sauf mention contraire sur un panneau bleu placé sous le signal.La signification: rétrécissement de la chaussée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/10.jpg"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "question": "Cette combinaison d'un signal routier et un panneau signifie que sur une distance de 7,5 km, la voie publique peut être rendue glissante en raison du verglas ou de la neige.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 1 – ‘La voie publique’.Chaussée glissante. Le panneau additionnel du modèle suivant peut être employé pour indiquer que la voie publique peut être rendue glissante en raison du verglas ou de la neige.Presque tous signaux routiers triangulaire avec un bord rouge sont des signaux de danger. Les signaux de danger sont placés à une distance approximative de 150 m de l'endroit dangereux et le panneau additionnel s’applique au signal au-dessus duquel il se trouve.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/35.jpg"
+    },
+    {
+      "id": 19,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Prendre le ferry pour traverser"
+        },
+        {
+          "letter": "B",
+          "text": "Débouché sur un quai ou une berge"
+        },
+        {
+          "letter": "C",
+          "text": "Fossé profond au bord de la route"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 1 – ‘La voie publique’.C'est un signal de danger.La signification: débouché sur un quai ou une berge.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/8.jpg"
+    },
+    {
+      "id": 20,
+      "type": "yes_no",
+      "question": "Vous avez le permis de conduire provisoire B.C’est le jour de l’an et vous avez dormi jusque midi.Pouvez-vous ensuite vous rendre en voiture chez vos grands parents seul si vous avez le M12 ou avec votre guide si vous avez le M36 ?",
+      "correctAnswer": "OUI",
+      "explanation": "INFO - PERMIS DE CONDUIREVous ne pouvez pas conduire avec un permis provisoire sur la voie publique:. Du vendredi soir 22h00 à samedi matin 6h00;. Du samedi soir 22h00 à dimanche matin 6h00;. Du dimanche soir 22h00 à lundi matin 6h00;. Le soir avant un jour férié 22h00 au matin de ce jour férié 6h00;. Le soir du jour férié 22h00 au matin du lendemain 6h00.Nous sommes un jour férié et donc la conduite est autorisée entre 6h00 et 22h00 mais il faut être accompagné de notre guide en M36, alors que rouler seul(e) est autorisé en M18. Le M12 (permis avec guide) requiert aussi la présence du guide. Ce permis est obtenu après 6h d’auto-école après expiration (depuis moins de 3 ans) du M18 ou du M36.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/30.jpg"
+    },
+    {
+      "id": 21,
+      "type": "multiple_choice",
+      "question": "Quelle est la durée de validité d’un permis de conduire belge au format carte bancaire ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "1 an"
+        },
+        {
+          "letter": "B",
+          "text": "5 ans"
+        },
+        {
+          "letter": "C",
+          "text": "10 ans"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "INFO - PERMIS DE CONDUIREUn permis de conduire belge au format carte bancaire est valable 10 ans. Après 10 ans, vous devez le renouveler auprès de votre commune, sans devoir repasser d’examen.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/38.jpg"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "question": "Cette combinaison de signaux routiers signifie que la chaussée...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Peut être glissante"
+        },
+        {
+          "letter": "B",
+          "text": "Peut être glissante à cause de la neige ou de la glace sur la chaussée"
+        },
+        {
+          "letter": "C",
+          "text": "Peut être glissante à cause de la neige ou de la glace sur la chaussée ou des déversements d'huile"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 1 – ‘La voie publique’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/26.jpg"
+    },
+    {
+      "id": 23,
+      "type": "multiple_choice",
+      "question": "Vous avez le permis de conduire provisoire B.Nous sommes le 2 janvier.À partir de quelle heure pouvez-vous conduire une voiture ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Toute la journée"
+        },
+        {
+          "letter": "B",
+          "text": "À partir de 06h00"
+        },
+        {
+          "letter": "C",
+          "text": "À partir de 08h00"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "INFO - PERMIS DE CONDUIREVous ne pouvez pas conduire avec un permis provisoire sur la voie publique:. Du vendredi soir 22h00 à samedi matin 6h00;. Du samedi soir 22h00 à dimanche matin 6h00;. Du dimanche soir 22h00 à lundi matin 6h00;. Le soir avant un jour férié 22h00 au matin de ce jour férié 6h00;. Le soir du jour férié 22h00 au matin du lendemain 6h00.Nous sommes le lendemain d’un jour férié et la conduite n’est pas autorisée avant 6h, toutefois si le 2 janvier est un lundi, mardi, mercredi ou jeudi, on pourra conduire après 22h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/32.jpg"
+    },
+    {
+      "id": 24,
+      "type": "multiple_choice",
+      "question": "Quel âge faut-il avoir pour pouvoir présenter l’examen théorique du permis B ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "17 ans"
+        },
+        {
+          "letter": "B",
+          "text": "17 ans et 9 mois"
+        },
+        {
+          "letter": "C",
+          "text": "18 ans"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "INFO : PERMIS DE CONDUIREDès que tu as 17 ans, tu peux passer l’examen théorique dans un centre d’examen. Pour réussir, il faut obtenir au moins 41 points sur 50.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/47.jpg"
+    },
+    {
+      "id": 25,
+      "type": "multiple_choice",
+      "question": "Commettez-vous une infraction si vous configurez l'application de navigation de votre téléphone mobile pendant que vous conduisez ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non,"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 1 – ‘La voie publique’.Ce n’est pas une bonne idée car lors de la configuration d'une application, votre attention se porte sur quelque chose de complètement différent de la circulation sur la chaussée.Le code ne spécifie toutefois pas que la configuration est interdite.8.4. Sauf lorsque son véhicule est à l’arrêt ou en stationnement, le conducteur ne peut utiliser, tenir en main ni manipuler aucun appareil électronique mobile doté d’un écran, à moins qu’il ne soit fixé au véhicule dans un support destiné à cette fin.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/21.jpg"
+    },
+    {
+      "id": 26,
+      "type": "multiple_choice",
+      "question": "Comment réagissez-vous si, en voiture, vous approchez d’un cheval avec cavalier et que le cheval se cabre de peur ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous continuez à rouler"
+        },
+        {
+          "letter": "B",
+          "text": "Vous ralentissez"
+        },
+        {
+          "letter": "C",
+          "text": "Vous vous arrêtez"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 1Si un cheval sur la chaussée prend peur d’une voiture et se cabre, le conducteur doit arrêter son véhicule et surtout éviter tout mouvement brusque, afin que le cavalier puisse calmer le cheval et reprendre le contrôle de la situation avant qu’elle ne dégénère.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/44.jpg"
+    },
+    {
+      "id": 27,
+      "type": "multiple_choice",
+      "question": "Ce conducteur se sent en sécurité en roulant au milieu de la chaussée.Mais est-ce qu’il en a le droit ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 1Les conducteurs roulent à droite de la chaussée si c’est possible.Rouler sans raison au milieu ou à gauche de la chaussée constitue une infraction.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/45.jpg"
+    },
+    {
+      "id": 28,
+      "type": "multiple_choice",
+      "question": "À partir de quel âge peut-on passer l’examen pratique du permis de conduire B en Belgique ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "17 ans"
+        },
+        {
+          "letter": "B",
+          "text": "17 ans et 9 mois"
+        },
+        {
+          "letter": "C",
+          "text": "18 ans"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "INFO - PERMIS DE CONDUIREDès que vous avez 18 ans, vous pouvez présenter l’examen pratique du permis de conduire B dans un centre d’examen, à condition que votre période de stage remplisse les exigences légales.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/49.jpg"
+    },
+    {
+      "id": 29,
+      "type": "multiple_choice",
+      "question": "Les conducteurs de tram ne doivent pas suivre les règles de la circulation.Ils doivent toutefois tenir compte des injonctions des agents qualifiés et des feux lumineux de circulation",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 1 – ‘La voie publique’.Les conducteurs de tram ne doivent pas non plus tenir compte du code de la route, sauf les injonctions des agents qualifiés et les feux lumineux de circulation.Dans une leçon suivante, nous apprendrons qu’un tram a toujours la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/22.jpg"
+    },
+    {
+      "id": 30,
+      "type": "multiple_choice",
+      "question": "Quelle partie de la route est indiquée par la ligne jaune ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voie publique"
+        },
+        {
+          "letter": "B",
+          "text": "La chaussée"
+        },
+        {
+          "letter": "C",
+          "text": "La bande de circulation"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 1 – ‘La voie publique’.La chaussée est la partie de la voie publique aménagée pour la circulations des véhicules  comme les voitures, les camions, les bus et les motocyclettes.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/4.jpg"
+    },
+    {
+      "id": 31,
+      "type": "multiple_choice",
+      "question": "Vous avez le permis de conduire provisoire B. À partir de quelle heure le vendredi soir ne pouvez-vous plus conduire une voiture ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "À partir de 18h00"
+        },
+        {
+          "letter": "B",
+          "text": "À partir de 20h00"
+        },
+        {
+          "letter": "C",
+          "text": "À partir de 22h00"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "INFO - PERMIS DE CONDUIREVous ne pouvez pas conduire avec un permis provisoire sur la voie publique:. Du vendredi soir 22h00 à samedi matin 6h00;. Du samedi soir 22h00 à dimanche matin 6h00;. Du dimanche soir 22h00 à lundi matin 6h00;. Le soir avant un jour férié 22h00 au matin de ce jour férié 6h00;. Le soir du jour férié 22h00 au matin du lendemain 6h00.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/31.jpg"
+    },
+    {
+      "id": 32,
+      "type": "multiple_choice",
+      "question": "Lors d’un contrôle de police, tu remarques que tu as oublié ton portefeuille avec ton permis de conduire à la maison. Quelles sont les conséquences ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Tu ne peux plus continuer à rouler"
+        },
+        {
+          "letter": "B",
+          "text": "Tu reçois seulement une amende pour une infraction de premier degré"
+        },
+        {
+          "letter": "C",
+          "text": "Tu dois présenter ton permis de conduire dans un commissariat dans les 5 jours"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "INFO -PERMIS DE CONDUIRELe fait de ne pas avoir son permis de conduire sur soi n’est pas une infraction grave. Tu recevras une amende administrative limitée et tu peux en principe continuer à circuler.Cependant, tu dois présenter ton permis dans un commissariat dans les 5 jours.En cas de perte ou de vol, tu ne peux pas conduire tant que tu n’as pas reçu ton nouveau permis. L’attestation de perte ou de vol n’est pas suffisante pour conduire.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/53.jpg"
+    },
+    {
+      "id": 33,
+      "type": "multiple_choice",
+      "question": "Quel signal routier un conducteur rencontrera-t-il sur cette route ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Signal 1"
+        },
+        {
+          "letter": "B",
+          "text": "Signal 2"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 1 – ‘La voie publique’.La signification du premier signal routier : descente dangereuse.La signification du deuxième signal routier : montée à forte inclinaison.Presque tous signaux routiers triangulaire avec un bord rouge sont des signaux de danger. Les signaux de danger sont placés à une distance approximative de 150 m de l'endroit dangereux.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/28.jpg"
+    },
+    {
+      "id": 34,
+      "type": "multiple_choice",
+      "question": "Quelle est la vitesse maximale autorisée sur une chaussée à voie centrale en Région wallonne ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "30 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "70 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "90 km/h"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 1 – ‘La voie publique’.70 km/h en Belgique.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/37.jpg"
+    },
+    {
+      "id": 35,
+      "type": "multiple_choice",
+      "question": "Vous roulez sur cette chaussée à voie centrale.Vous souhaitez configurer votre GPS.Où pouvez-vous vous immobiliser ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Sur la voie centrale"
+        },
+        {
+          "letter": "B",
+          "text": "Sur la bande latérale"
+        },
+        {
+          "letter": "C",
+          "text": "Vous n’avez pas le droit de vous arrêter"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 1 – ‘La voie publique’.Vous n’êtes pas autorisé à stationner sur une chaussée à voie centrale et c’est aussi interdit sur la bande latérale.Vous apprendrez dans une autre leçon la différence entre l’arrêt et le stationnement.Configurer un GPS est  du stationnement.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/36.jpg"
+    },
+    {
+      "id": 36,
+      "type": "multiple_choice",
+      "question": "Une personne sujette à des crises d’épilepsie peut-elle conduire une voiture ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Jamais, car elle peut toujours avoir une crise"
+        },
+        {
+          "letter": "C",
+          "text": "Seulement après une période sans crise, un médecin peut autoriser la conduite"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "INFO - PERMIS DE CONDUIREEn principe, une personne qui fait des crises d’épilepsie n’a pas le droit de conduire.Après une première crise, il y a une interdiction de conduire pendant 6 mois.Une personne souffrant d’épilepsie chronique qui, après traitement, reste 1 an sans crise peut, sur avis d’un médecin spécialisé, récupérer le droit de conduire.En cas de nouvelle crise, une interdiction d’1 an s’applique à nouveau.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/43.jpg"
+    },
+    {
+      "id": 37,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal de danger?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Succession de virages dangereux"
+        },
+        {
+          "letter": "B",
+          "text": "Aquaplaning"
+        },
+        {
+          "letter": "C",
+          "text": "Chaussée glissante"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 1 – ‘La voie publique’.La signification: chaussée glissante.Les signaux de danger sont placés à une distance approximative de 150 m de l'endroit dangereux, sauf mention contraire sur un panneau bleu placé sous le signal.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/12.jpg"
+    },
+    {
+      "id": 38,
+      "type": "multiple_choice",
+      "question": "Cette combinaison d'un signal routier et un panneau indique un danger potentiel lorsqu'il y a de la neige ou de la glace sur la chaussée.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 1 – ‘La voie publique’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/2.jpg"
+    },
+    {
+      "id": 39,
+      "type": "multiple_choice",
+      "question": "Lorsqu’un chemin de terre est revêtu de béton ou d’asphalte sur les derniers mètres avant de rejoindre une autre voie publique, il n’est plus considéré comme un chemin de terre mais comme une chaussée.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 1 – ‘La voie publique’.Lorsqu’un chemin de terre est pavé de béton ou d’asphalte sur les derniers mètres avant de rejoindre une autre voie publique, il n’est pas considéré comme une chaussée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/7.jpg"
+    },
+    {
+      "id": 40,
+      "type": "multiple_choice",
+      "question": "À partir de quel âge peut-on commencer les cours pratiques ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "À 18 ans et 3 mois"
+        },
+        {
+          "letter": "B",
+          "text": "À 17 ans et 3 mois"
+        },
+        {
+          "letter": "C",
+          "text": "À 18 ans ou dès 17 ans avec un guide"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "INFO - PERMIS DE CONDUIREAvec le document de demande ‘pour un permis provisoire,  vous pouvez aller à la commune pour obtenir un permis B provisoire et donc apprendre à conduire dès l’âge de 17 ans. La formation pratique peut être donnée par un guide (PP 36 mois) ou par un moniteur d’auto-école.À 18 ans, si vous avez suivi 20 heures de cours pratiques dans une auto-école agréée et obtenu une attestation de compétence, vous pouvez demander à la commune un PP18 mois, afin de vous exercer seul (sans guide).  Ce type de permis ne peut être obtenu qu’une seule fois et est valable pendant 18 mois.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/39.jpg"
+    },
+    {
+      "id": 41,
+      "type": "multiple_choice",
+      "question": "Vous êtes médicalement inapte à la conduite.Dans quel délai devez vous informer la commune ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "le lendemain"
+        },
+        {
+          "letter": "B",
+          "text": "4 jours"
+        },
+        {
+          "letter": "C",
+          "text": "7 jours"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "INFO - PERMIS DE CONDUIRESi vous êtes physiquement ou mentalement inapte à conduire un véhicule, vous devez rendre votre permis à votrecommune dans les 4 jours ouvrables Il est du devoir du médecin généraliste, du spécialiste et du médecin du travail d'avertir le patient qu'une affection ayant été diagnostiquée le rend inapte à la conduite. Il est ensuite de la responsabilité du conducteur de remettre son permis de conduire à la commune: en effet tout détenteur d’un permis doit le présenter à l'autorité qui l'a délivré pour retrait endéans les 4 jours ouvrables suivant le jour où il apprend être atteint d’un des défauts physiques ou affections le rendant inapte à la conduite d’un véhicule.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/13.jpg"
+    },
+    {
+      "id": 42,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal de danger ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Projections de gravillons"
+        },
+        {
+          "letter": "B",
+          "text": "Éclaboussures d’eau"
+        },
+        {
+          "letter": "C",
+          "text": "Aquaplanage"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 1 – ‘La voie publique’.Presque tous es signaux routiers rectangulaires avec une bordure rouge sont des signaux de danger. Les signaux de danger sont placés à une distance approximative de 150 m de l'endroit dangereux, sauf mention contraire sur un panneau bleu placé sous le signal.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/17.jpg"
+    },
+    {
+      "id": 43,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous approchez d’un arrêt de tram"
+        },
+        {
+          "letter": "B",
+          "text": "Des rails de tram se trouvent sur la chaussée"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 1 – ‘La voie publique’Ce panneau est un panneau de danger.Attention au tram, qui a toujours la priorité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/42.jpg"
+    },
+    {
+      "id": 44,
+      "type": "yes_no",
+      "question": "Le code de la route s’applique-t-il aussi aux véhicules sur rails qui empruntent la voie publique ?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 1 – ‘La voie publique’Les conducteurs de tram ne doivent pas tenir compte du code de la route, sauf les ordres d'une personne autorisée et toutefois ils doivent respecter les injonctions des agents qualifiés et les feux lumineux de circulation.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/1.jpg"
+    },
+    {
+      "id": 45,
+      "type": "yes_no",
+      "question": "La partie où vous voyez les lignes jaunes fait-elle partie de la voie publique ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 1 – ‘La voie publique’.Les accotements en herbe font partie de la voie publique.La voie publique s’étend jusqu'à ce que un canal fossé ou à une propriété.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/14.jpg"
+    },
+    {
+      "id": 46,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal routier ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Traversée de bétail"
+        },
+        {
+          "letter": "B",
+          "text": "Donner la priorité au bétail"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 1 – ‘La voie publique’.Signal de danger : Traversée de bétailLes signaux de danger sont placés à une distance approximative de 150 m de l'endroit dangereux sauf mention contraire sur un panneau bleu placé sous le signal.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/23.jpg"
+    },
+    {
+      "id": 47,
+      "type": "multiple_choice",
+      "question": "À partir de quel âge peut-on apprendre à conduire une voiture en Belgique ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "17 ans"
+        },
+        {
+          "letter": "B",
+          "text": "17 ans et 9 mois"
+        },
+        {
+          "letter": "C",
+          "text": "18 ans"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "INFO : PERMIS DE CONDUIREDès l’âge de 17 ans, et après avoir réussi l’examen théorique, vous pouvez apprendre à conduire une voiture avec une auto-école ou avec un guide.L’examen pratique peut être présenté à partir de 18 ans, après avoir effectué le nombre d’heures de stage requis.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/48.jpg"
+    },
+    {
+      "id": 48,
+      "type": "yes_no",
+      "question": "Votre portefeuille avec votre permis de conduire provisoire a été volé et vous avez fait une déclaration à la police.Vous avez encore une copie couleur de votre permis.Pouvez-vous conduire avec cette copie en attendant un nouveau permis ?",
+      "correctAnswer": "NON",
+      "explanation": "INFO : PERMIS DE CONDUIREVous devez toujours avoir le permis de conduire original sur vous.Même avec le document de la police prouvant que vous avez déclaré le vol, vous ne pouvez pas conduire.Une copie, même en couleur, n’a aucune valeur légale comme permis de conduire.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/51.jpg"
+    },
+    {
+      "id": 49,
+      "type": "multiple_choice",
+      "question": "Votre portefeuille contenant votre permis de conduire est introuvable. Vous soupçonnez un vol. Que faites-vous ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous devez avertir la police"
+        },
+        {
+          "letter": "B",
+          "text": "Vous devez avertir la maison communale"
+        },
+        {
+          "letter": "C",
+          "text": "Vous devez avertir le centre d’examen"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "INFO : PERMIS DE CONDUIRESi votre permis de conduire est volé, vous devez faire une déclaration à la police.Si vous l’avez perdu, vous devez en faire la déclaration à la police, soit numériquement, soit auprès de la commune.Attention : sans véritable permis, vous ne pouvez PAS conduire.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/41.jpg"
+    },
+    {
+      "id": 50,
+      "type": "number",
+      "question": "À quelle vitesse maximale pouvez-vous circuler sur une voie publique ordinaire en Flandre ?",
+      "correctAnswer": "70",
+      "explanation": "LEÇON 1 – ‘La chaussée’. La vitesse maximale sur une route ordinaire est…… en Wallonne : 90 km/h;… en Flandre : 70 km/h.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/18.jpg"
+    },
+    {
+      "id": 51,
+      "type": "multiple_choice",
+      "question": "Ce signal routier signifie : voie sans issue ...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... pour les piétons et les cyclistes"
+        },
+        {
+          "letter": "B",
+          "text": "... sauf pour les piétons et les cyclistes"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 1 – ‘La voie publique’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/15.jpg"
+    },
+    {
+      "id": 52,
+      "type": "multiple_choice",
+      "question": "Que signifie ce signal d’indication ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Obligation de tourner à droite"
+        },
+        {
+          "letter": "B",
+          "text": "Voie sans issue"
+        },
+        {
+          "letter": "C",
+          "text": "Accès interdit"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 1 – ‘La voie publique’.La signification de ce signal routier : voie sans issue (pour tout usager).C'est un signal d'indication.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/20.jpg"
+    },
+    {
+      "id": 53,
+      "type": "multiple_choice",
+      "question": "Quel signal de danger indique une montée à forte inclinaison ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Signal 1"
+        },
+        {
+          "letter": "B",
+          "text": "Signal 2"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 1 – ‘La voie publique’.La signification du deuxième signal routier : descente dangereuse.Les signaux de danger sont placés à une distance approximative de 150 m de l'endroit dangereux . sauf mention contraire sur un panneau bleu placé sous le signal.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/16.jpg"
+    },
+    {
+      "id": 54,
+      "type": "multiple_choice",
+      "question": "Comment s’appelle la partie de la voie publique indiquée par la ligne jaune ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "La voie publique"
+        },
+        {
+          "letter": "B",
+          "text": "La bande de circulation"
+        },
+        {
+          "letter": "C",
+          "text": "La chaussée"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 1 – ‘La voie publique’.Le code de la route s’applique sur la voie publique.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/9.jpg"
+    }
+  ]
+}

@@ -1,0 +1,1023 @@
+{
+  "id": "29_un_accident",
+  "name": "29 un accident",
+  "totalQuestions": 59,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "question": "Devez-vous informer la police, dans un accident avec seulement des dégâts matériels?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, toujours"
+        },
+        {
+          "letter": "B",
+          "text": "Oui en cas de désaccord, et quelqu'un ne veut pas signer"
+        },
+        {
+          "letter": "C",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 29 – ‘Accident’.Un accident avec blessées : toujours.Un accident sans blessées: en cas de désaccord.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/38.jpg"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "question": "Qui doit offrir de l’aide lors d’un accident avec blessés?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seul le conducteur est obligé"
+        },
+        {
+          "letter": "B",
+          "text": "Autant le conducteur que les passagers"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 29 – ‘Accident’.Autant le conducteur que les passagers.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/20.jpg"
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "question": "Une fois chez vous, vous vous rendez compte que vous avez oublié de dessiner quelque chose d’important sur le croquis de la situation.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous pouvez encore le corriger"
+        },
+        {
+          "letter": "B",
+          "text": "Vous ne pouvez rien changer sur le constat"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 29 – ‘Accident’.Recto du formulaire : doit être rempli et signe par les deux partis.En signant vous confirmez que vous êtes d’accord avec les informations complétées.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/17.jpg"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "question": "Un cycliste a été percuté à un carrefour et gît inconscient au sol.Pouvez-vous dégager le carrefour et porter le cycliste prudemment sur le côté de la route ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, il faut dégager le carrefour"
+        },
+        {
+          "letter": "B",
+          "text": "Non, il faut laisser un blessé sur place"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 29En cas d’accident avec blessés, vous laissez les blessés sur place et vous appelez les services de secours.S’il y a des blessés, la police doit également venir pour effectuer les constatations.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/59.jpg"
+    },
+    {
+      "id": 5,
+      "type": "multiple_choice",
+      "question": "Lors d’un accident, la tête du conducteur a heurté le pare-brise et il a perdu conscience.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous le sortez délicatement de la voiture"
+        },
+        {
+          "letter": "B",
+          "text": "Vous le laissez dans la voiture"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 29 – ‘Accident’.Les déplacements inutiles de la victime doivent être évités.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/15.jpg"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "question": "Je réponds à un appel avec mon téléphone fixé sur un support.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Je ne risque rien"
+        },
+        {
+          "letter": "B",
+          "text": "Je dois redoubler d’attention et rester vigilant"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Le support ne supprime pas la distraction potentielle. Vous devez rester concentré sur la circulation.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/51.jpg"
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "question": "Vous avez renversé un cycliste.Que faites-vous après avoir placé le triangle de danger et averti les services de secours ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous le déplacez de la chaussée"
+        },
+        {
+          "letter": "B",
+          "text": "Vous posez un pansement compressif sur son bras qui saigne"
+        },
+        {
+          "letter": "C",
+          "text": "Vous ne faites rien et attendez les secours"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 29On laisse toujours un blessé sur place. On ne lui donne ni à boire ni à manger. En cas de saignement, on applique un pansement compressif sur la plaie.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/55.jpg"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "question": "Une ambulance avec le gyrophare bleu et la sirène.Que faites-vous?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous continuez votre route"
+        },
+        {
+          "letter": "B",
+          "text": "Vous vous écartez et vous cédez le passage"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 29 – ‘Accident’.Les véhicules prioritaires sont des véhicules munis d’un feu bleu clignotant et d’un sonore spécial.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/8.jpg"
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "question": "Un accident avec seulement des dommages mineurs et aucun blessé. Qu'êtes-vous obligé de montrer à l'autre conducteur s'il le demande ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Les documents de votre voiture, votre permis de conduire et votre carte d'identité"
+        },
+        {
+          "letter": "B",
+          "text": "Votre permis de conduire et votre carte d'identité"
+        },
+        {
+          "letter": "C",
+          "text": "Uniquement votre carte d'identité"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 29 - AccidentVous devez bien sûr avoir votre permis de conduire et les documents originaux avec vous. Mais vous ne devez pas le montrer ou le remettre à l'autre conducteur.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/45.jpg"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "question": "Quel est le numéro européen d’appel d’urgence?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "100"
+        },
+        {
+          "letter": "B",
+          "text": "109"
+        },
+        {
+          "letter": "C",
+          "text": "112"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 29 – ‘Accident’.112 est le numéro européen d’appel d’urgence.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/4.jpg"
+    },
+    {
+      "id": 11,
+      "type": "yes_no",
+      "question": "Devez-vous écrire les noms des rues sur le constat européen d’accident ?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 29 – ‘Accident’.. la situation routière et le nom de la rue;. sens de marche et position des véhicules; . position des véhicules. les feux, les panneaux, les indications routières.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/41.jpg"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "question": "Un blessé a des difficultés à respirer.Que faites-vous?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous obtenez le vomi de la bouche"
+        },
+        {
+          "letter": "B",
+          "text": "Vous attendez l'ambulance"
+        },
+        {
+          "letter": "C",
+          "text": "Vous priez pour le blessé"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 29 – ‘Accident’.Vous obtenez le vomi de la bouche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/39.jpg"
+    },
+    {
+      "id": 13,
+      "type": "multiple_choice",
+      "question": "Lorsque vous téléphonez avec le kit mains-libres, votre concentration à l'égard de la circulation ne diminue pas.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vrai"
+        },
+        {
+          "letter": "B",
+          "text": "Faux"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 29 – ‘Accident’.Votre concentration à l'égard de la circulation diminue aussi.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/23.jpg"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "question": "Un accident sans blessés sur l'autoroute.Où devez-vous remplir le constat à l'amiable?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Derrière la glissière"
+        },
+        {
+          "letter": "B",
+          "text": "Sur la bande d'arrêt d'urgence"
+        },
+        {
+          "letter": "C",
+          "text": "Dans l'une des voitures"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 29 – ‘Accident’.Derrière la glissière.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/28.jpg"
+    },
+    {
+      "id": 15,
+      "type": "yes_no",
+      "question": "Ce signal routier peut être vu dans les tunnels et signifie : 'sortie de secours' ou 'issue de secours'.",
+      "correctAnswer": "OUI",
+      "explanation": "",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/47.jpg"
+    },
+    {
+      "id": 16,
+      "type": "number",
+      "question": "Lorsque vous voyez ce panneau, vous savez que le tunnel a une longueur d'au moins (...) mètres.",
+      "correctAnswer": "500",
+      "explanation": "LEÇON 29 – ‘Accident’.Si le tunnel est plus longe que 500 mètres, il est indiqué sur le panneau.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/21.jpg"
+    },
+    {
+      "id": 17,
+      "type": "multiple_choice",
+      "question": "Vous êtes impliqué(e) dans un accident. Vous êtes obligé(e) de montrer votre carte d’identité aux autres personnes concernées  ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui, toujours"
+        },
+        {
+          "letter": "B",
+          "text": "Non, seulement lorsqu’il s’agit d’un accident avec des blessés"
+        },
+        {
+          "letter": "C",
+          "text": "Non, jamais"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 29 – ‘Accident’.Les personnes âgées de 15 ans et plus doivent montrer leur carte d’identité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/33.jpg"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "question": "Qui doit remplir le constat amiable d’accident automobile européen ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Les conducteurs concernés"
+        },
+        {
+          "letter": "B",
+          "text": "Les témoins"
+        },
+        {
+          "letter": "C",
+          "text": "La police"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 29 – ‘Accident’.Les conducteurs concernés.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/31.jpg"
+    },
+    {
+      "id": 19,
+      "type": "multiple_choice",
+      "question": "À partir de quelle distance (… mètres) un triangle de danger doit-être visible pour les véhicules qui s’en approchent?",
+      "propositions": [],
+      "correctAnswer": "50",
+      "explanation": "LEÇON 29 – ‘Accident’.Route ordinaire : à une distance d’au moins 30 mètres de l’accident.Autoroute : à une distance d’au moins 100 mètres.Il doit être visible à une distance de 50 mètres.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/14.jpg"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "question": "Vous êtes impliqué dans un petit accident sans blessés dans un carrefour. Que devez-vous faire en premier?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Remplir le constat"
+        },
+        {
+          "letter": "B",
+          "text": "Prévenir la police"
+        },
+        {
+          "letter": "C",
+          "text": "Désencombrer le carrefour"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 29 – ‘Accident’.Désencombrer le carrefour et si cela est impossible placer le triangle de danger.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/29.jpg"
+    },
+    {
+      "id": 21,
+      "type": "multiple_choice",
+      "question": "À combien (…) de mètres du véhicule en panne devez-vous placer le triangle de danger sur la bande d'arrêt d'urgence de l'autoroute?",
+      "propositions": [],
+      "correctAnswer": "100",
+      "explanation": "LEÇON 29 – ‘Accident’.Route ordinaire : à une distance d’au moins 30 mètres de l’accident.Autoroute : à une distance d’au moins 100 mètres.Il doit être visible à une distance de 50 mètres",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/27.jpg"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "question": "Il s’est produit un accident avec des blessés. Que faites-vous d’abord ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous emmenez la victime à un endroit sûr et vous offrez de l’aide"
+        },
+        {
+          "letter": "B",
+          "text": "Vous offrez de l’aide à l’endroit de l’accident"
+        },
+        {
+          "letter": "C",
+          "text": "Vous prévenez les services de secours et vous donnez de l’eau au blessé"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 29 – ‘Accident’.1. placer le triangle de danger. 2. Vous offrez de l’aide à l’endroit de l’accident.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/36.jpg"
+    },
+    {
+      "id": 23,
+      "type": "multiple_choice",
+      "question": "À qui dois-je présenter ma carte d’identité lors d’un accident ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "À toutes les personnes impliquées dans l’accident si elles me le demandent, ainsi qu’à l’agent qualifié"
+        },
+        {
+          "letter": "B",
+          "text": "À l’agent qualifié uniquement"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 29 – ‘Accident’.Lors d’un accident avec uniquement des dégâts matériels et si vous avez plus de 15 ans, vous devez présenter votre carte d’identité aux autres personnes impliquées si elles la demandent. En cas de blessures ou dommages graves, les autorités peuvent également l’exiger.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/50.jpg"
+    },
+    {
+      "id": 24,
+      "type": "multiple_choice",
+      "question": "Vous avez renversé un piéton avec votre voiture.Que faites-vous en premier?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous regardez s’il saigne"
+        },
+        {
+          "letter": "B",
+          "text": "Vous appelez les services d’urgence"
+        },
+        {
+          "letter": "C",
+          "text": "Vous placez le triangle de danger"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 29 – ‘Accident’.Vous placez le triangle de danger.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/7.jpg"
+    },
+    {
+      "id": 25,
+      "type": "multiple_choice",
+      "question": "Quand devez-vous avertir la police?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "De préférence lors de chaque accident"
+        },
+        {
+          "letter": "B",
+          "text": "Seulement lors d’un accident avec blessés"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 29 – ‘Accident’.Seulement lors d’un accident avec blessés.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/12.jpg"
+    },
+    {
+      "id": 26,
+      "type": "number",
+      "question": "Combien de vestes de sécurité fluorescentes doivent être dans votre voiture?",
+      "correctAnswer": "A",
+      "explanation": "LEÇON 29 – ‘Accident’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/34.jpg"
+    },
+    {
+      "id": 27,
+      "type": "multiple_choice",
+      "question": "En cas d’accident, comment un conducteur doit-il avertir les autres usagers du danger ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Il porte sa veste rétro-réfléchissante"
+        },
+        {
+          "letter": "B",
+          "text": "Il place le triangle de danger"
+        },
+        {
+          "letter": "C",
+          "text": "Il appelle les secours"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 29 – ‘Accident’.Toujours placer un triangle de danger.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/46.jpg"
+    },
+    {
+      "id": 28,
+      "type": "multiple_choice",
+      "question": "Sur l'autoroute, vous voyez qu'il y a un accident dans l'autre sens de circulation. Que faites-vous?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous prenez contact avec 112"
+        },
+        {
+          "letter": "B",
+          "text": "Vous vous arrêtez sur la bande d'arrêt d'urgence, vous prenez votre kit de premiers secours et vous allez les aider"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 29 – ‘Accident’.(B) est interdit.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/26.jpg"
+    },
+    {
+      "id": 29,
+      "type": "multiple_choice",
+      "question": "L’horloge biologique.Entre quelles heures la combinaison de la fatigue, de la baisse des performances cognitives, et des fluctuations physiologiques rend-elle le corps plus vulnérable, ce qui peut contribuer à une augmentation des accidents ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Entre 23h00 et 02h00"
+        },
+        {
+          "letter": "B",
+          "text": "Entre 02h00 et 05h00"
+        },
+        {
+          "letter": "C",
+          "text": "Entre 05h00 et 08h00"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Explanation:Research shows that accident frequency rises during the night’s low hours, especially between 2:00 and 5:00 a.m. This is because the body’s circadian rhythm affects alertness, concentration, and reaction times. During this time window, fatigue and physiological weakness are at their peak, leading to slower responses and a higher likelihood of mistakes.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/54.jpg"
+    },
+    {
+      "id": 30,
+      "type": "yes_no",
+      "question": "Un blessé dans une voiture demande un médicament.Pouvez-vous le lui donner?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 29 – ‘Accident’.Ne donnez pas à boire, ni à manger à la victime.Il est également déconseillé de lui donner de médicaments.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/5.jpg"
+    },
+    {
+      "id": 31,
+      "type": "multiple_choice",
+      "question": "Il y a un incendie dans un tunnel.Pouvez-vous faire demi-tour ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Oui, seulement s’il y a deux bandes dans votre direction"
+        },
+        {
+          "letter": "C",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 29En cas d’incendie, garez la voiture à droite sur la chaussée. Laissez les clés sur le contact et quittez le tunnel par la sortie de secours.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/56.jpg"
+    },
+    {
+      "id": 32,
+      "type": "number",
+      "question": "Vous vous endormez toujours derrière le volant et votre médecin généraliste est d’avis que vous n’êtes plus capable de conduire de façon sûre. Dans combien de jours vous devez aller à la commune muni de votre permis ?",
+      "correctAnswer": "C",
+      "explanation": "LEÇON 29 – ‘Accident’.4 jours.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/37.jpg"
+    },
+    {
+      "id": 33,
+      "type": "multiple_choice",
+      "question": "Dans votre rétroviseur latéral, vous voyez une ambulance avec le gyrophare allumé mais vous n’entendez pas la sirène.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous continuez votre route"
+        },
+        {
+          "letter": "B",
+          "text": "Vous vous écartez pour qu’elle puisse vous dépasser plus facilement"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 29 – ‘Accident’.Les véhicules prioritaires sont des véhicules munis d’un feu bleu clignotant et d’un sonore spécial.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/11.jpg"
+    },
+    {
+      "id": 34,
+      "type": "multiple_choice",
+      "question": "Embouteillage à cause d'un accident sur la bande de circulation de droite.Qui a la priorité pour circuler sur la bande de droite?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Voiture 1"
+        },
+        {
+          "letter": "B",
+          "text": "Voiture 2"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 29 – ‘Accident’.L'explication dans la leçon 2.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/30.jpg"
+    },
+    {
+      "id": 35,
+      "type": "multiple_choice",
+      "question": "Quelle partie du constat européen d'accident devez-vous remplir ensemble avec l'autre personne?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Seulement le recto de la feuille"
+        },
+        {
+          "letter": "B",
+          "text": "Le recto et le verso de la feuille"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 29 – ‘Accident’.Recto du formulaire : doit être rempli et signe par les deux partis.En signant vous confirmez que vous êtes d’accord avec les informations complétées.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/24.jpg"
+    },
+    {
+      "id": 36,
+      "type": "multiple_choice",
+      "question": "Il y a un accident dans un tunnel, mais pas de fumée ni de feu. Comment prévenez-vous les services d’urgence?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "De préférence avec votre téléphone portable"
+        },
+        {
+          "letter": "B",
+          "text": "De préférence avec la borne d’appel d’urgence dans le tunnel"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 29 – ‘Accident’.De préférence avec la borne d’appel d’urgence dans le tunnel.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/18.jpg"
+    },
+    {
+      "id": 37,
+      "type": "multiple_choice",
+      "question": "Lorsque vous voyez ce signal routier, vous savez...",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "... que vous approchez d’un tunnel"
+        },
+        {
+          "letter": "B",
+          "text": "... que vous approchez d’un tunnel de plus de 200 mètres"
+        },
+        {
+          "letter": "C",
+          "text": "... que vous approchez d’un tunnel de plus de 500 mètres"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 29 – ‘Accident’.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/49.jpg"
+    },
+    {
+      "id": 38,
+      "type": "multiple_choice",
+      "question": "Que faites-vous en premier auprès d’un blessé grave?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Appeler le numéro d’appel d’urgence 112"
+        },
+        {
+          "letter": "B",
+          "text": "Retirer le vomi de sa bouche"
+        },
+        {
+          "letter": "C",
+          "text": "Le déplacer pour qu’il puisse s’assoir en toute sécurité"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 29 – ‘Accident’.Retirer le vomi de sa bouche.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/19.jpg"
+    },
+    {
+      "id": 39,
+      "type": "multiple_choice",
+      "question": "Un jeune cycliste est impliqué dans un accident.À partir de quel âge (… ans) ce cycliste doit-il montrer sa carte d’identité?",
+      "propositions": [],
+      "correctAnswer": "15",
+      "explanation": "LEÇON 29 – ‘Accident’.Les personnes âgées de 15 ans et plus doivent montrer leur carte d’identité.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/13.jpg"
+    },
+    {
+      "id": 40,
+      "type": "multiple_choice",
+      "question": "Un bras saigne.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous l’entourez d’un bandage"
+        },
+        {
+          "letter": "B",
+          "text": "Vous posez un garrot sur la partie supérieure du bras"
+        },
+        {
+          "letter": "C",
+          "text": "Vous posez un garrot sur la partie inférieure du bras"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 29 – ‘Accident’.Couvrez la plaie à l’aide d’un mouchoir propre ou entourez-la d’un bandage.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/9.jpg"
+    },
+    {
+      "id": 41,
+      "type": "multiple_choice",
+      "question": "Sur une route ordinaire, un triangle de danger doit être placé à (…) mètres en deçà du véhicule.",
+      "propositions": [],
+      "correctAnswer": "30",
+      "explanation": "LEÇON 29 – ‘Accident’.Route ordinaire : à une distance d’au moins 30 mètres de l’accident.Autoroute : à une distance d’au moins 100 mètres.Il doit être visible à une distance de 50 mètres.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/6.jpg"
+    },
+    {
+      "id": 42,
+      "type": "multiple_choice",
+      "question": "Un accident sans blessés avec un camion. Une substance chimique sort du camion. Que faites-vous?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Remplir le constat européen d’accident suffit"
+        },
+        {
+          "letter": "B",
+          "text": "Appelez le numéro 112"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 29 – ‘Accident’.Le liquide chimique peut être très dangereux.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/40.jpg"
+    },
+    {
+      "id": 43,
+      "type": "multiple_choice",
+      "question": "Un accident sans blessés à un carrefour en agglomération.Vous avez déjà placé un triangle de danger.Que faites-vous ensuite ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous essayez de stationner les voitures dans un endroit sûr"
+        },
+        {
+          "letter": "B",
+          "text": "Vous avertissez la police"
+        },
+        {
+          "letter": "C",
+          "text": "Vous laissez les voitures sur place et remplissez le constat européen d’accident"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 29En cas d’accident léger sans blessés, essayez de libérer le carrefour.Si cela est vraiment impossible et que les voitures bloquent le carrefour, alors vous avertissez la police.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/58.jpg"
+    },
+    {
+      "id": 44,
+      "type": "yes_no",
+      "question": "Pouvez-vous suivre l’ambulance qui transporte votre père grèvement blessé, si elle dépasse la vitesse maximale autorisée?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 29 – ‘Accident’.Vous ne pouvez pas conduire plus vite que la vitesse maximale autorisée.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/10.jpg"
+    },
+    {
+      "id": 45,
+      "type": "multiple_choice",
+      "question": "En arrivant près d’un accident, que faites-vous d’abord ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous vous mettez en sécurité"
+        },
+        {
+          "letter": "B",
+          "text": "Vous prévenez les services de secours"
+        },
+        {
+          "letter": "C",
+          "text": "Vous complétez le constat amiable d’accident automobile européen"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 29 – ‘Accident’.Vous vous mettez en sécurité et placez le triangle de danger.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/35.jpg"
+    },
+    {
+      "id": 46,
+      "type": "yes_no",
+      "question": "Doit-il y avoir obligatoirement une trousse de secours dans la voiture?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 29 – ‘Accident’.. un gilet de sécurité réfléchissant.. un triangle de danger.. un extincteur.. une trousse de secours.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/2.jpg"
+    },
+    {
+      "id": 47,
+      "type": "multiple_choice",
+      "question": "Le conducteur d’un cyclomoteur est tombé par terre.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous retirez délicatement le casque de sa tête"
+        },
+        {
+          "letter": "B",
+          "text": "Vous laissez le casque sur sa tête"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 29 – ‘Accident’.Vous laissez le casque sur sa tête.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/3.jpg"
+    },
+    {
+      "id": 48,
+      "type": "multiple_choice",
+      "question": "Un accident avec une personne blessée.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Si possible, déplacez la voiture pour dégager la voie"
+        },
+        {
+          "letter": "B",
+          "text": "Vous laissez la voiture sur place"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 29 - «Accident».Si des personnes sont blessées, les véhicules resteront en place et la police doit venir.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/44.jpg"
+    },
+    {
+      "id": 49,
+      "type": "multiple_choice",
+      "question": "Qu’écrivez-vous dans la grande case blanche du constat d’accident?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous faites un croquis clair de la situation"
+        },
+        {
+          "letter": "B",
+          "text": "Vous notez le nom des témoins"
+        },
+        {
+          "letter": "C",
+          "text": "Vous dessinez les signaux routiers qui se trouvent sur l’endroit de l’accident"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 29 – ‘Accident’.La situation routière et le nom de la rue. Le sens de marche et position des véhicules.Les feux, les panneaux et les indications routières.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/16.jpg"
+    },
+    {
+      "id": 50,
+      "type": "multiple_choice",
+      "question": "Quelle réponse est correcte ?Vous entrez dans un tunnel, que faites-vous ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous portez vos lunettes de soleil"
+        },
+        {
+          "letter": "B",
+          "text": "Vous allumez toujours vos feux de croisement"
+        },
+        {
+          "letter": "C",
+          "text": "Vous gardez la distance raisonnable avec les autres véhicules"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "Les feux de croisement ne sont nécessaires que lorsque la visibilité est inférieure à 200 mètres.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/48.jpg"
+    },
+    {
+      "id": 51,
+      "type": "multiple_choice",
+      "question": "Que faites-vous en cas de feu intense dans un tunnel?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous faites marche arrière pour sortir du tunnel"
+        },
+        {
+          "letter": "B",
+          "text": "Vous quittez le tunnel par une sortie de secours"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 29 – ‘Accident’.Vous quittez le tunnel par une sortie de secours. Vous devez laisser la clef sur le contact.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/22.jpg"
+    },
+    {
+      "id": 52,
+      "type": "multiple_choice",
+      "question": "Comment réagir en cas d’incendie dans un tunnel ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous quittez votre véhicule en le protégeant du vol"
+        },
+        {
+          "letter": "B",
+          "text": "Vous quittez votre véhicule en laissant les clés sur le contact"
+        },
+        {
+          "letter": "C",
+          "text": "Vous envoyez un message à vos proches que vous les aimez"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "LEÇON 29Vous arrêtez le véhicule le plus à droite possible, vous laissez la clé sur le contact et vous quittez le tunnel par la sortie de secours.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/53.jpg"
+    },
+    {
+      "id": 53,
+      "type": "yes_no",
+      "question": "Un accident sans blessés.Les partis concernés remplissent un constat européen d’accident, est-ce suffisant?",
+      "correctAnswer": "OUI",
+      "explanation": "LEÇON 29 – ‘Accident’.Un accident sans blessés : la police ne doit pas venir.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/1.jpg"
+    },
+    {
+      "id": 54,
+      "type": "multiple_choice",
+      "question": "Un accident avec très peu de dégât matériel. Que faites-vous d’abord ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Prévenir la police"
+        },
+        {
+          "letter": "B",
+          "text": "Compléter le constat amiable d’accident automobile européen"
+        },
+        {
+          "letter": "C",
+          "text": "Garer les véhicules"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 29 – ‘Accident’.Désencombrer le carrefour et si cela est impossible placer le triangle de danger.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/32.jpg"
+    },
+    {
+      "id": 55,
+      "type": "number",
+      "question": "Vous avez endommagé une autre voiture en vous garant. Vous ne savez pas qui en est le propriétaire.Combien de temps avez-vous pour faire une déclaration au commissariat de police ?",
+      "correctAnswer": "C",
+      "explanation": "LEÇON 29 – ‘Accident’.Si vous endommagez la propriété de quelqu’un et que la police ne peut pas se déplacer, vous devez faire une déclaration le plus vite possible dans un commissariat ou en ligne via Police-on-Web (en cas de petits dégâts). Plus vous faites la déclaration rapidement, plus les faits pourront être établis correctement. Assurez-vous d’avoir toutes les informations nécessaires, comme le lieu et l’heure de l’incident, la plaque d’immatriculation du véhicule endommagé et des photos des dégâts.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/52.jpg"
+    },
+    {
+      "id": 56,
+      "type": "multiple_choice",
+      "question": "Lorsque vous voyez ces panneaux devant un tunnel, vous pouvez être sûr:",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Que le tunnel mesure au moins 500 mètres de long"
+        },
+        {
+          "letter": "B",
+          "text": "Que le tunnel ne mesure que 3,5 mètres de haut partout"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "LEÇON 29Le premier panneau indique qu'il s'agit d'un tunnel de 500 mètres (ou plus).Le deuxième signe indique que votre véhicule ne peut pas être plus haut. Le tunnel peut être plus haut à certains endroits.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/43.jpg"
+    },
+    {
+      "id": 57,
+      "type": "multiple_choice",
+      "question": "Un accident avec uniquement des dégâts matériaux.Il y a désaccord. Que faites-vous?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Prévenir votre assureur"
+        },
+        {
+          "letter": "B",
+          "text": "Le mentionner sur le constat"
+        },
+        {
+          "letter": "C",
+          "text": "Faire venir la police"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/25.jpg"
+    },
+    {
+      "id": 58,
+      "type": "multiple_choice",
+      "question": "Après quel signal routier sais-tu que le tunnel a une longueur de 700 mètres ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Après les deux signaux"
+        },
+        {
+          "letter": "B",
+          "text": "Après le premier signal"
+        },
+        {
+          "letter": "C",
+          "text": "Après le deuxième signal"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "LEÇON 29Le premier signal indique qu’à 700 mètres commence un tunnel d’une longueur de 500 mètres.La longueur exacte du tunnel peut être indiquée sur le signal lui-même. Dans ce cas-ci, 700 mètres.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/57.jpg"
+    },
+    {
+      "id": 59,
+      "type": "yes_no",
+      "question": "À la maison, vous voyez que vous avez oublié un panneau sur le constat européen d’accident.  Pouvez-vous encore ajouter ce panneau?",
+      "correctAnswer": "NON",
+      "explanation": "LEÇON 29 – ‘Accident’.Vous ne pouvez pas changer quoi que ce soit.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/42.jpg"
+    }
+  ]
+}
