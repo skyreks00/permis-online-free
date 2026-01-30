@@ -114,7 +114,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "   Seules les voitures électriques.",
+      "explanation": "Seules les voitures électriques.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/91/27.jpg"
     },
     {
@@ -454,7 +454,7 @@
       "type": "number",
       "question": "Combien de minutes pouvez-vous stationner?",
       "correctAnswer": "A",
-      "explanation": "  .  Une durée maximale de stationnement différent peut être mentionnée.",
+      "explanation": ".  Une durée maximale de stationnement différent peut être mentionnée.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/91/26.jpg"
     },
     {

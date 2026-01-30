@@ -262,7 +262,7 @@
       "type": "yes_no",
       "question": "Vous avez le permis de conduire provisoire B. Pouvez-vous conduire une voiture dimanche soir après 22h ?",
       "correctAnswer": "NON",
-      "explanation": "INFO - PERMIS DE CONDUIREVous ne pouvez pas conduire avec un permis provisoire sur la voie publique:. Du vendredi soir 22h00 à samedi matin 6h00;. Du samedi soir 22h00 à dimanche matin 6h00;. Du dimanche soir 22h00 à lundi matin 6h00;. Le soir avant un jour férié 22h00 au matin de ce jour férié 6h00;. Le soir du jour férié 22h00 au matin du lendemain 6h00.Nous sommes un dimanche et la conduite n’est pas autorisée avant 6h lundi matin.",
+      "explanation": "Vous ne pouvez pas conduire avec un permis provisoire sur la voie publique:. Du vendredi soir 22h00 à samedi matin 6h00;. Du samedi soir 22h00 à dimanche matin 6h00;. Du dimanche soir 22h00 à lundi matin 6h00;. Le soir avant un jour férié 22h00 au matin de ce jour férié 6h00;. Le soir du jour férié 22h00 au matin du lendemain 6h00.Nous sommes un dimanche et la conduite n’est pas autorisée avant 6h lundi matin.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/33.jpg"
     },
     {
@@ -350,7 +350,7 @@
       "type": "yes_no",
       "question": "Vous avez le permis de conduire provisoire B.C’est le jour de l’an et vous avez dormi jusque midi.Pouvez-vous ensuite vous rendre en voiture chez vos grands parents seul si vous avez le M12 ou avec votre guide si vous avez le M36 ?",
       "correctAnswer": "OUI",
-      "explanation": "INFO - PERMIS DE CONDUIREVous ne pouvez pas conduire avec un permis provisoire sur la voie publique:. Du vendredi soir 22h00 à samedi matin 6h00;. Du samedi soir 22h00 à dimanche matin 6h00;. Du dimanche soir 22h00 à lundi matin 6h00;. Le soir avant un jour férié 22h00 au matin de ce jour férié 6h00;. Le soir du jour férié 22h00 au matin du lendemain 6h00.Nous sommes un jour férié et donc la conduite est autorisée entre 6h00 et 22h00 mais il faut être accompagné de notre guide en M36, alors que rouler seul(e) est autorisé en M18. Le M12 (permis avec guide) requiert aussi la présence du guide. Ce permis est obtenu après 6h d’auto-école après expiration (depuis moins de 3 ans) du M18 ou du M36.",
+      "explanation": "Vous ne pouvez pas conduire avec un permis provisoire sur la voie publique:. Du vendredi soir 22h00 à samedi matin 6h00;. Du samedi soir 22h00 à dimanche matin 6h00;. Du dimanche soir 22h00 à lundi matin 6h00;. Le soir avant un jour férié 22h00 au matin de ce jour férié 6h00;. Le soir du jour férié 22h00 au matin du lendemain 6h00.Nous sommes un jour férié et donc la conduite est autorisée entre 6h00 et 22h00 mais il faut être accompagné de notre guide en M36, alors que rouler seul(e) est autorisé en M18. Le M12 (permis avec guide) requiert aussi la présence du guide. Ce permis est obtenu après 6h d’auto-école après expiration (depuis moins de 3 ans) du M18 ou du M36.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/30.jpg"
     },
     {
@@ -372,7 +372,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "INFO - PERMIS DE CONDUIREUn permis de conduire belge au format carte bancaire est valable 10 ans. Après 10 ans, vous devez le renouveler auprès de votre commune, sans devoir repasser d’examen.",
+      "explanation": "Un permis de conduire belge au format carte bancaire est valable 10 ans. Après 10 ans, vous devez le renouveler auprès de votre commune, sans devoir repasser d’examen.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/38.jpg"
     },
     {
@@ -416,7 +416,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "INFO - PERMIS DE CONDUIREVous ne pouvez pas conduire avec un permis provisoire sur la voie publique:. Du vendredi soir 22h00 à samedi matin 6h00;. Du samedi soir 22h00 à dimanche matin 6h00;. Du dimanche soir 22h00 à lundi matin 6h00;. Le soir avant un jour férié 22h00 au matin de ce jour férié 6h00;. Le soir du jour férié 22h00 au matin du lendemain 6h00.Nous sommes le lendemain d’un jour férié et la conduite n’est pas autorisée avant 6h, toutefois si le 2 janvier est un lundi, mardi, mercredi ou jeudi, on pourra conduire après 22h.",
+      "explanation": "Vous ne pouvez pas conduire avec un permis provisoire sur la voie publique:. Du vendredi soir 22h00 à samedi matin 6h00;. Du samedi soir 22h00 à dimanche matin 6h00;. Du dimanche soir 22h00 à lundi matin 6h00;. Le soir avant un jour férié 22h00 au matin de ce jour férié 6h00;. Le soir du jour férié 22h00 au matin du lendemain 6h00.Nous sommes le lendemain d’un jour férié et la conduite n’est pas autorisée avant 6h, toutefois si le 2 janvier est un lundi, mardi, mercredi ou jeudi, on pourra conduire après 22h.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/32.jpg"
     },
     {
@@ -518,7 +518,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "INFO - PERMIS DE CONDUIREDès que vous avez 18 ans, vous pouvez présenter l’examen pratique du permis de conduire B dans un centre d’examen, à condition que votre période de stage remplisse les exigences légales.",
+      "explanation": "Dès que vous avez 18 ans, vous pouvez présenter l’examen pratique du permis de conduire B dans un centre d’examen, à condition que votre période de stage remplisse les exigences légales.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/49.jpg"
     },
     {
@@ -580,7 +580,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "INFO - PERMIS DE CONDUIREVous ne pouvez pas conduire avec un permis provisoire sur la voie publique:. Du vendredi soir 22h00 à samedi matin 6h00;. Du samedi soir 22h00 à dimanche matin 6h00;. Du dimanche soir 22h00 à lundi matin 6h00;. Le soir avant un jour férié 22h00 au matin de ce jour férié 6h00;. Le soir du jour férié 22h00 au matin du lendemain 6h00.",
+      "explanation": "Vous ne pouvez pas conduire avec un permis provisoire sur la voie publique:. Du vendredi soir 22h00 à samedi matin 6h00;. Du samedi soir 22h00 à dimanche matin 6h00;. Du dimanche soir 22h00 à lundi matin 6h00;. Le soir avant un jour férié 22h00 au matin de ce jour férié 6h00;. Le soir du jour férié 22h00 au matin du lendemain 6h00.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/31.jpg"
     },
     {
@@ -686,7 +686,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "INFO - PERMIS DE CONDUIREEn principe, une personne qui fait des crises d’épilepsie n’a pas le droit de conduire.Après une première crise, il y a une interdiction de conduire pendant 6 mois.Une personne souffrant d’épilepsie chronique qui, après traitement, reste 1 an sans crise peut, sur avis d’un médecin spécialisé, récupérer le droit de conduire.En cas de nouvelle crise, une interdiction d’1 an s’applique à nouveau.",
+      "explanation": "En principe, une personne qui fait des crises d’épilepsie n’a pas le droit de conduire.Après une première crise, il y a une interdiction de conduire pendant 6 mois.Une personne souffrant d’épilepsie chronique qui, après traitement, reste 1 an sans crise peut, sur avis d’un médecin spécialisé, récupérer le droit de conduire.En cas de nouvelle crise, une interdiction d’1 an s’applique à nouveau.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/43.jpg"
     },
     {
@@ -766,7 +766,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "INFO - PERMIS DE CONDUIREAvec le document de demande ‘pour un permis provisoire,  vous pouvez aller à la commune pour obtenir un permis B provisoire et donc apprendre à conduire dès l’âge de 17 ans. La formation pratique peut être donnée par un guide (PP 36 mois) ou par un moniteur d’auto-école.À 18 ans, si vous avez suivi 20 heures de cours pratiques dans une auto-école agréée et obtenu une attestation de compétence, vous pouvez demander à la commune un PP18 mois, afin de vous exercer seul (sans guide).  Ce type de permis ne peut être obtenu qu’une seule fois et est valable pendant 18 mois.",
+      "explanation": "Avec le document de demande ‘pour un permis provisoire,  vous pouvez aller à la commune pour obtenir un permis B provisoire et donc apprendre à conduire dès l’âge de 17 ans. La formation pratique peut être donnée par un guide (PP 36 mois) ou par un moniteur d’auto-école.À 18 ans, si vous avez suivi 20 heures de cours pratiques dans une auto-école agréée et obtenu une attestation de compétence, vous pouvez demander à la commune un PP18 mois, afin de vous exercer seul (sans guide).  Ce type de permis ne peut être obtenu qu’une seule fois et est valable pendant 18 mois.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/39.jpg"
     },
     {
@@ -788,7 +788,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "INFO - PERMIS DE CONDUIRESi vous êtes physiquement ou mentalement inapte à conduire un véhicule, vous devez rendre votre permis à votrecommune dans les 4 jours ouvrables Il est du devoir du médecin généraliste, du spécialiste et du médecin du travail d'avertir le patient qu'une affection ayant été diagnostiquée le rend inapte à la conduite. Il est ensuite de la responsabilité du conducteur de remettre son permis de conduire à la commune: en effet tout détenteur d’un permis doit le présenter à l'autorité qui l'a délivré pour retrait endéans les 4 jours ouvrables suivant le jour où il apprend être atteint d’un des défauts physiques ou affections le rendant inapte à la conduite d’un véhicule.",
+      "explanation": "Si vous êtes physiquement ou mentalement inapte à conduire un véhicule, vous devez rendre votre permis à votrecommune dans les 4 jours ouvrables Il est du devoir du médecin généraliste, du spécialiste et du médecin du travail d'avertir le patient qu'une affection ayant été diagnostiquée le rend inapte à la conduite. Il est ensuite de la responsabilité du conducteur de remettre son permis de conduire à la commune: en effet tout détenteur d’un permis doit le présenter à l'autorité qui l'a délivré pour retrait endéans les 4 jours ouvrables suivant le jour où il apprend être atteint d’un des défauts physiques ou affections le rendant inapte à la conduite d’un véhicule.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/13.jpg"
     },
     {

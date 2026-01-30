@@ -506,7 +506,7 @@
       "type": "yes_no",
       "question": "Travaux.Votre ami vit dans cette rue. Pouvez-vous conduire chez lui ?",
       "correctAnswer": "OUI",
-      "explanation": " - 'Direction interdite'Vous pouvez parce que vous êtes le trafic local.",
+      "explanation": "- 'Direction interdite'Vous pouvez parce que vous êtes le trafic local.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/87/38.jpg"
     }
   ]

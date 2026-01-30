@@ -340,7 +340,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***Pouvez-vous déboucher de cette rue en voiture ?",
       "correctAnswer": "OUI",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 23 – ‘Sens interdits’.Sens interdit pour tout conducteur.Signal d’interdiction.",
+      "explanation": "Sens interdit pour tout conducteur.Signal d’interdiction.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/636.jpg"
     },
     {
@@ -572,7 +572,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]La commande d'un agent passe avant tout.",
+      "explanation": "La commande d'un agent passe avant tout.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/934.jpg"
     },
     {
@@ -602,7 +602,7 @@
       "type": "number",
       "question": "Sur cette route pour automobiles en Wallonie, comptant 2 x 2 bandes de circulation, une voiture peut rouler à une vitesse maximale de (...) km/h.",
       "correctAnswer": "90",
-      "explanation": " La vitesse maximale sur une route ordinaire est…… en Wallonne: 90 km/h;… en Flandre et Bruxelles capitale: 70 km/h.",
+      "explanation": "La vitesse maximale sur une route ordinaire est…… en Wallonne: 90 km/h;… en Flandre et Bruxelles capitale: 70 km/h.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/147.jpg"
     },
     {
@@ -710,7 +710,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 18 – ‘les feux de circulation’.   Le conducteur de la voiture bleue voit un feu vert.",
+      "explanation": "Le conducteur de la voiture bleue voit un feu vert.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/455.jpg"
     },
     {
@@ -728,7 +728,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]La commande est la même.",
+      "explanation": "La commande est la même.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/439.jpg"
     },
     {
@@ -916,7 +916,7 @@
       "type": "yes_no",
       "question": "Un bus s'est arrêté à un arrêt de bus, mais le clignotant gauche est activé.Pouvez-vous dépasser le bus ?",
       "correctAnswer": "NON",
-      "explanation": " - 'Train tram bus'.Vous ne pouvez pas parce que l'indicateur de direction est allumé.",
+      "explanation": "- 'Train tram bus'.Vous ne pouvez pas parce que l'indicateur de direction est allumé.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/958.jpg"
     },
     {
@@ -1124,7 +1124,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***Une route qui n’est pas divisée en deux voies.Une moto dépasse la voiture brune.La voiture bleue peut-elle dépasser la moto et la voiture brune ?",
       "correctAnswer": "NON",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 15+16 – ‘Le dépassement’.",
+      "explanation": "",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/952.jpg"
     },
     {
@@ -1164,7 +1164,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": " - 'Piste cyclable et cyclistes'.",
+      "explanation": "- 'Piste cyclable et cyclistes'.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1014.jpg"
     },
     {
@@ -1458,7 +1458,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 6 – ‘Endroits particuliers’.La vitesse maximale autorisée est de 20 km/h.Les piétons peuvent utiliser toute la largeur de la voie publique mais pas les cyclistes !",
+      "explanation": "La vitesse maximale autorisée est de 20 km/h.Les piétons peuvent utiliser toute la largeur de la voie publique mais pas les cyclistes !",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/183.jpg"
     },
     {
@@ -1552,7 +1552,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 22 – ‘Train – tram -autobus’.Vous devez vous arrêter.",
+      "explanation": "Vous devez vous arrêter.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/630.jpg"
     },
     {
@@ -1582,7 +1582,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***Introduisez un nombre.Quelle est la vitesse maximale (... km/h) à laquelle les voitures peuvent rouler sur cette route pour automobiles en agglomération en Walonne ?",
       "correctAnswer": "50",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 12 – ‘La vitesse’.La vitesse maximale en agglomération : jusqu'à 50 km / h.",
+      "explanation": "La vitesse maximale en agglomération : jusqu'à 50 km / h.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/317.jpg"
     },
     {
@@ -1892,7 +1892,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***Vous devez éteindre vos feux de route quand un conducteur roule en sens inverse.",
       "correctAnswer": "OUI",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 11 – ‘Les feux’.A l'approche d'un usager venant en sens inverse, à la distance nécessaire pour que celui-ci puisse continuer sa marche aisément et sans danger, et en tout cas, dès qu'un conducteur allume et éteint successivement et rapidement ses feux de route pour faire comprendre qu'il est ébloui;",
+      "explanation": "A l'approche d'un usager venant en sens inverse, à la distance nécessaire pour que celui-ci puisse continuer sa marche aisément et sans danger, et en tout cas, dès qu'un conducteur allume et éteint successivement et rapidement ses feux de route pour faire comprendre qu'il est ébloui;",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/266.jpg"
     },
     {
@@ -2008,7 +2008,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 11 – ‘Les feux’.La photo montre un tunnel éclairé où la visibilité est suffisante et donc il n’est légalement pas obligatoire d’allumer les pharesSi vous ne voyez pas à minimum 200 mètres loinvous devez allumer les feux de croisement  pour circuler dans le tunnel.Si la visibilité est suffisante du faait de l’éclairage du tunnel vous pouvez les allumer et dans ce cas il est conseillé de le faire avant d’entrer dans le tunnel afin que le conducteur derrière vous ne pense pas que vous freinez.Ne vous laissez pas surprendre par les allumages automatiques des feux dès l’entrée du tunnel quand les capteurs détectent la réduction de luminosité.",
+      "explanation": "La photo montre un tunnel éclairé où la visibilité est suffisante et donc il n’est légalement pas obligatoire d’allumer les pharesSi vous ne voyez pas à minimum 200 mètres loinvous devez allumer les feux de croisement  pour circuler dans le tunnel.Si la visibilité est suffisante du faait de l’éclairage du tunnel vous pouvez les allumer et dans ce cas il est conseillé de le faire avant d’entrer dans le tunnel afin que le conducteur derrière vous ne pense pas que vous freinez.Ne vous laissez pas surprendre par les allumages automatiques des feux dès l’entrée du tunnel quand les capteurs détectent la réduction de luminosité.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/280.jpg"
     },
     {
@@ -2118,7 +2118,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***L’ambulance dans laquelle se trouve votre père, roule à 155 km/h.Pouvez-vous la suivre ?",
       "correctAnswer": "NON",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 4 – ‘L’autoroute’.Sur l’autoroute on peut rouler jusqu’à 120 km/h.Vous devez rouler à une vitesse minimale de 70 km/h quand les conditions le permettent.",
+      "explanation": "autoroute’.Sur l’autoroute on peut rouler jusqu’à 120 km/h.Vous devez rouler à une vitesse minimale de 70 km/h quand les conditions le permettent.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/97.jpg"
     },
     {
@@ -2140,7 +2140,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": " Si vous roulez en agglomération, dans une zone 30 ou dans une zone résidentielle à plus de 20 km/h au-dessus de la limite, vous risquez un retrait immédiat de votre permis. Ce retrait est effectué par la police, car il s’agit d’une infraction grave. Pour toute infraction grave, votre permis peut être retiré immédiatement.2. En agglomération, en zone 30 ou en zone résidentielle, si vous dépassez de plus de 30 km/h la vitesse autorisée, vous risquez une déchéance du droit de conduire prononcée par le juge au tribunal. Selon le jugement, vous pourrez être interdit de conduire tout véhicule motorisé (même ceux qui ne nécessitent pas de permis) pour une durée allant de 8 jours minimum à 5 ans maximum. Pour les conducteurs débutants (&lt; 2 ans de permis définitif B), la réglementation est encore plus stricte.",
+      "explanation": "Si vous roulez en agglomération, dans une zone 30 ou dans une zone résidentielle à plus de 20 km/h au-dessus de la limite, vous risquez un retrait immédiat de votre permis. Ce retrait est effectué par la police, car il s’agit d’une infraction grave. Pour toute infraction grave, votre permis peut être retiré immédiatement.2. En agglomération, en zone 30 ou en zone résidentielle, si vous dépassez de plus de 30 km/h la vitesse autorisée, vous risquez une déchéance du droit de conduire prononcée par le juge au tribunal. Selon le jugement, vous pourrez être interdit de conduire tout véhicule motorisé (même ceux qui ne nécessitent pas de permis) pour une durée allant de 8 jours minimum à 5 ans maximum. Pour les conducteurs débutants (&lt; 2 ans de permis définitif B), la réglementation est encore plus stricte.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1309.jpg"
     },
     {
@@ -2198,7 +2198,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "   Dépasser une voiture par la gauche est interdit aux carrefours où le passage est réglé par : ‘la priorité de droite’.",
+      "explanation": "Dépasser une voiture par la gauche est interdit aux carrefours où le passage est réglé par : ‘la priorité de droite’.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/574.jpg"
     },
     {
@@ -2476,7 +2476,7 @@
       "type": "number",
       "question": "Au-delà de ce panneau de zone en Flandre,  en voiture vous pouvez rouler à une vitesse maximale de (...) km/h.",
       "correctAnswer": "70",
-      "explanation": " La vitesse maximale sur une route ordinaire est…… en Wallonne: 90 km/h;… en Flandre et Bruxelles-capitale region: 70 km/h.",
+      "explanation": "La vitesse maximale sur une route ordinaire est…… en Wallonne: 90 km/h;… en Flandre et Bruxelles-capitale region: 70 km/h.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/306.jpg"
     },
     {
@@ -2600,7 +2600,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "  Que dit l’article 13 du code de la route ?Avant d’effectuer une manœuvre ou un mouvement nécessitant un déplacement latéral ou un changement de direction, le conducteur doit indiquer son intention en temps utile au moyen des clignotants, lorsque le véhicule en est pourvu, ou à défaut et si possible, par un signal du bras. Cette indication doit cesser dès que le déplacement latéral ou le changement de direction est effectué.",
+      "explanation": "Que dit l’article 13 du code de la route ?Avant d’effectuer une manœuvre ou un mouvement nécessitant un déplacement latéral ou un changement de direction, le conducteur doit indiquer son intention en temps utile au moyen des clignotants, lorsque le véhicule en est pourvu, ou à défaut et si possible, par un signal du bras. Cette indication doit cesser dès que le déplacement latéral ou le changement de direction est effectué.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1531.jpg"
     },
     {
@@ -2630,7 +2630,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***Une route qui n'est pas subdivisée en voies.La voiture brune dépasse une moto à deux roues.La voiture bleue peut-elle dépasser la voiture brune et la moto?",
       "correctAnswer": "OUI",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 15+16 – ‘Le dépassement’.",
+      "explanation": "",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/950.jpg"
     },
     {
@@ -2652,7 +2652,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": " - «Cargo et sièges».Les enfants de moins de 18 ans et de moins de 1m35 DOIVENT être transportés dans un siège de sécurité approprié ou un système de retenue pour enfant conforme aux règles prescrites.",
+      "explanation": "- «Cargo et sièges».Les enfants de moins de 18 ans et de moins de 1m35 DOIVENT être transportés dans un siège de sécurité approprié ou un système de retenue pour enfant conforme aux règles prescrites.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/963.jpg"
     },
     {
@@ -2688,7 +2688,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 18 – ‘les feux de circulation’.C'est une infraction grave. Votre permis de conduire peut être révoquée.",
+      "explanation": "C'est une infraction grave. Votre permis de conduire peut être révoquée.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/465.jpg"
     },
     {
@@ -2956,7 +2956,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***Entrez un nombre aussi long et aussi bas que possible (p. Ex., 1356 et non 6531), composé des numéros des panneaux dont la vitesse maximale autorisée en Wallonie est de 30 km / heure.",
       "correctAnswer": "456",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 12 – ‘La vitesse’.",
+      "explanation": "",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/932.jpg"
     },
     {
@@ -3088,7 +3088,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": " - 'Les piétons'.La fille qui marche à côté du vélo est un piéton.Les piétons qui veulent entrer dans un passage pour piétons ont la priorité.",
+      "explanation": "- 'Les piétons'.La fille qui marche à côté du vélo est un piéton.Les piétons qui veulent entrer dans un passage pour piétons ont la priorité.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/964.jpg"
     },
     {
@@ -3128,7 +3128,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 15+16 – ‘Le dépassement’.  Il est interdit de dépasser sur ou près du passage pour cyclistes ou piétons.",
+      "explanation": "Il est interdit de dépasser sur ou près du passage pour cyclistes ou piétons.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/402.jpg"
     },
     {
@@ -3158,7 +3158,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***En dehors d'une agglomération.Lorsque vous dépassez ce vélo par la gauche, vous devez maintenir une distance de sécurité latérale de 1,5 mètre.",
       "correctAnswer": "OUI",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 15+16 – ‘Le dépassement’.  Si vous voulez dépasser un cycliste par la gauche, vous devez laisser un espace latéral de sécurité de 1,5 mètre.",
+      "explanation": "Si vous voulez dépasser un cycliste par la gauche, vous devez laisser un espace latéral de sécurité de 1,5 mètre.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/412.jpg"
     },
     {
@@ -3226,7 +3226,7 @@
       "type": "number",
       "question": "À quelle vitesse maximale une voiture peut-elle rouler sur cette route pour automobiles ?",
       "correctAnswer": "120",
-      "explanation": " Sur les routes pour automobiles, hors agglomération, vous pouvez circuler à 120 km/h :. si chaque sens de circulation est composé d’au moins 2 bandes de circulation,. et si les sens de circulation sont divisés autrement que par de la peinture.",
+      "explanation": "Sur les routes pour automobiles, hors agglomération, vous pouvez circuler à 120 km/h :. si chaque sens de circulation est composé d’au moins 2 bandes de circulation,. et si les sens de circulation sont divisés autrement que par de la peinture.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/141.jpg"
     },
     {
@@ -3814,7 +3814,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 10 – ‘Chargement de véhicules’.Signal 1: toutes les marchandises dangereuses.Signal 3: les marchandises dangereuses qui pourraient polluer l’eau de surface : rivière, canal, lacs,…ou la nappe d’eau souterraine.",
+      "explanation": "Signal 1: toutes les marchandises dangereuses.Signal 3: les marchandises dangereuses qui pourraient polluer l’eau de surface : rivière, canal, lacs,…ou la nappe d’eau souterraine.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/252.jpg"
     },
     {
@@ -4008,7 +4008,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***Votre amie vit dans une zone piétonne.Pouvez-vous rendre jusque chez elle avec votre voiture?",
       "correctAnswer": "NON",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 7 – ‘Les piétons’.L'accès aux zones piétonnes est réservé aux piétons.Toutefois:1° peuvent accéder à ces zones:b) les véhicules de surveillance, de contrôle et d'entretien de cette zone et les véhicules affectés au ramassage des immondices;c) les véhicules prioritaires, lorsque la nature de leur mission le justifie;d) les véhicules des services réguliers de transport en commun;e) les conducteurs de véhicules dont le garage est situé à l'intérieur de ces zones et qui n'est accessible qu'en traversant ces zones;f) en cas d'absolue nécessité, les véhicules appartenant à des entreprises commerciales établies dans ces zones et uniquement accessible qu'en les traversant, lorsque ces véhicules sont affectés à des livraisons et si ces livraisons constituent une activité principale de ces entreprises;g) en cas d'absolue nécessité, les véhicules destinés à effectuer des travaux dans ces zones;h) les trains miniatures touristiques et les trains de véhicules composés d’un véhicule tracteur et d’un chariot bâché, les véhicules attelés, les cycles-taxis;i) les véhicules employés dans le cadre d'activités médicales ou de soins à domicile;Dans les cas visés sous e) à i), les bénéficiaires doivent apposer sur la face interne du pare-brise de leur véhicule, un laisser-passer délivré par le bourgmestre ou son délégué; pour les véhicules attelés et les cycles taxis, le conducteur doit détenir ce laissez-passer.2° peuvent accéder à ces zones lorsque la signalisation routière le prévoit et selon les restrictions qui y figurent:a) les véhicules qui doivent charger ou décharger dans lesdites zones;b) les taxis qui ont une destination déterminée à l'intérieur de ces zones pour l'embarquement ou le débarquement de personnes;c) les cyclistes.",
+      "explanation": "L'accès aux zones piétonnes est réservé aux piétons.Toutefois:1° peuvent accéder à ces zones:b) les véhicules de surveillance, de contrôle et d'entretien de cette zone et les véhicules affectés au ramassage des immondices;c) les véhicules prioritaires, lorsque la nature de leur mission le justifie;d) les véhicules des services réguliers de transport en commun;e) les conducteurs de véhicules dont le garage est situé à l'intérieur de ces zones et qui n'est accessible qu'en traversant ces zones;f) en cas d'absolue nécessité, les véhicules appartenant à des entreprises commerciales établies dans ces zones et uniquement accessible qu'en les traversant, lorsque ces véhicules sont affectés à des livraisons et si ces livraisons constituent une activité principale de ces entreprises;g) en cas d'absolue nécessité, les véhicules destinés à effectuer des travaux dans ces zones;h) les trains miniatures touristiques et les trains de véhicules composés d’un véhicule tracteur et d’un chariot bâché, les véhicules attelés, les cycles-taxis;i) les véhicules employés dans le cadre d'activités médicales ou de soins à domicile;Dans les cas visés sous e) à i), les bénéficiaires doivent apposer sur la face interne du pare-brise de leur véhicule, un laisser-passer délivré par le bourgmestre ou son délégué; pour les véhicules attelés et les cycles taxis, le conducteur doit détenir ce laissez-passer.2° peuvent accéder à ces zones lorsque la signalisation routière le prévoit et selon les restrictions qui y figurent:a) les véhicules qui doivent charger ou décharger dans lesdites zones;b) les taxis qui ont une destination déterminée à l'intérieur de ces zones pour l'embarquement ou le débarquement de personnes;c) les cyclistes.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/199.jpg"
     },
     {
@@ -4048,7 +4048,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 21 – ‘Tourner à droite ou à gauche’.",
+      "explanation": "",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/935.jpg"
     },
     {
@@ -4056,7 +4056,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***Le conducteur de la voiture bleue doit-il céder le passage au piéton ?",
       "correctAnswer": "OUI",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 18 – ‘les feux de circulation’.   La flèche verte indique que vous pouvez tourner à droite. Mais il faut donner la priorité aux autres usagers de la route.",
+      "explanation": "La flèche verte indique que vous pouvez tourner à droite. Mais il faut donner la priorité aux autres usagers de la route.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/473.jpg"
     },
     {
@@ -4082,7 +4082,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***La voiture bleue peut-t-elle encore tourner à gauche ?",
       "correctAnswer": "NON",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]Lorsqu’un officier lève un bras verticalement, tous les usagers de la route, y compris les piétons, doivent s’arrêter.",
+      "explanation": "Lorsqu’un officier lève un bras verticalement, tous les usagers de la route, y compris les piétons, doivent s’arrêter.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/444.jpg"
     },
     {
@@ -4546,7 +4546,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 21 – ‘Tourner à droite ou à gauche’.",
+      "explanation": "",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/936.jpg"
     },
     {
@@ -4748,7 +4748,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***Au-delà de ces signaux routiers, une motocyclette peut-elle dépasser une voiture par la gauche ?",
       "correctAnswer": "NON",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 15+16 – ‘Le dépassement’.  Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues.",
+      "explanation": "Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/389.jpg"
     },
     {
@@ -4858,7 +4858,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***À quelle vitesse maximale pouvez-vous circuler sur une route publique ordinaire en Flandre ?",
       "correctAnswer": "70",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 2 – ‘Bandes de circulation’. En Flandre la vitesse maximale hors agglomération est de 70 km/h (sauf si les  signaux routiers  ou règles imposent une limite de vitesse différente.(En Wallonie, dans les mêmes conditions la vitesse maximale est de 90 km/heure).",
+      "explanation": "En Flandre la vitesse maximale hors agglomération est de 70 km/h (sauf si les  signaux routiers  ou règles imposent une limite de vitesse différente.(En Wallonie, dans les mêmes conditions la vitesse maximale est de 90 km/heure).",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/39.jpg"
     },
     {
@@ -4940,7 +4940,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "  S'arrêter et stationner sur la chaussée.",
+      "explanation": "S'arrêter et stationner sur la chaussée.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/701.jpg"
     },
     {
@@ -5022,7 +5022,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***Introduisez un nombre.Après avoir franchi ce panneau en Wallonie, en voiture vous pouvez rouler à une vitesse maximale de (...) km/h.",
       "correctAnswer": "90",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 6 – ‘Endroits particuliers’.Fin d’une agglomération. La vitesse maximale autorisée en Flandre et Bruxelles-capitale est de 70 km/h.",
+      "explanation": "Fin d’une agglomération. La vitesse maximale autorisée en Flandre et Bruxelles-capitale est de 70 km/h.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/161.jpg"
     },
     {
@@ -5132,7 +5132,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": " - 'Endroits particuliers'.Le gilet doit obligatoirement se trouver dans la voiture. Vous ne devez le porter que si vous quittez le véhicule sur une autoroute ou une route pour automobiles.Attention le mettre est une bonne idée mais ici la question disait « devez-vous » ce qui implique une obligation. Il n’y a pas d’obligation légale en agglomération.",
+      "explanation": "- 'Endroits particuliers'.Le gilet doit obligatoirement se trouver dans la voiture. Vous ne devez le porter que si vous quittez le véhicule sur une autoroute ou une route pour automobiles.Attention le mettre est une bonne idée mais ici la question disait « devez-vous » ce qui implique une obligation. Il n’y a pas d’obligation légale en agglomération.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1110.jpg"
     },
     {
@@ -5172,7 +5172,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": " Signal de danger : passage à niveau sans barrières. 2. Signal de danger : passage à niveau avec barrières.",
+      "explanation": "Signal de danger : passage à niveau sans barrières. 2. Signal de danger : passage à niveau avec barrières.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/613.jpg"
     },
     {
@@ -5378,7 +5378,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***Pouvez-vous envoyer un SMS pendant que vous attendez dans la voiture à un feu rouge ?",
       "correctAnswer": "NON",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 18 – ‘les feux de circulation’.C'est interdit.",
+      "explanation": "C'est interdit.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/490.jpg"
     },
     {
@@ -5400,7 +5400,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]Le conducteur peut traverser tout droit ou tourner à gauche ou à droite.",
+      "explanation": "Le conducteur peut traverser tout droit ou tourner à gauche ou à droite.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/429.jpg"
     },
     {
@@ -5484,7 +5484,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": " - 'La vitesse'.",
+      "explanation": "- 'La vitesse'.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1015.jpg"
     },
     {
@@ -5648,7 +5648,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": " Le signal routier bleu indique qu’il faut stationner en partie sur la chaussée et en partie sur l’accotement.",
+      "explanation": "Le signal routier bleu indique qu’il faut stationner en partie sur la chaussée et en partie sur l’accotement.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1491.jpg"
     },
     {
@@ -5696,7 +5696,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***La voiture brune ralentit.La voiture bleue peut-elle dépasser la brune par la gauche ?",
       "correctAnswer": "NON",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 15+16 – ‘Le dépassement’.  Il est interdit de dépasser sur ou près du passage pour cyclistes ou piétons.",
+      "explanation": "Il est interdit de dépasser sur ou près du passage pour cyclistes ou piétons.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/394.jpg"
     },
     {
@@ -5704,7 +5704,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***Entrez un nombre.À quelle vitesse maximale (... km/h) une voiture peut-elle rouler sur cette route pour automobiles dans une agglomération en Flandre ?",
       "correctAnswer": "50",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 5 – ‘La route pour automobiles’.Dans une agglomération : 50 km/h.Bruxelles-capitale: 30 kn/h.",
+      "explanation": "Dans une agglomération : 50 km/h.Bruxelles-capitale: 30 kn/h.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/139.jpg"
     },
     {
@@ -5756,7 +5756,7 @@
       "type": "number",
       "question": "Vous avez un permis de conduire B. A quelle vitesse pouvez-vous conduire en Région bruxelloise, sur une route ordinaire en dehors de l'agglomération.",
       "correctAnswer": "70",
-      "explanation": " – ‘Endroits particuliers’",
+      "explanation": "– ‘Endroits particuliers’",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/997.jpg"
     },
     {
@@ -5774,7 +5774,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "  Aux carrefours où le passage est réglé par une personne qualifiée, la règle ‘priorité de droite’ n’est pas applicable.",
+      "explanation": "Aux carrefours où le passage est réglé par une personne qualifiée, la règle ‘priorité de droite’ n’est pas applicable.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/572.jpg"
     },
     {
@@ -5902,7 +5902,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "  Carrefour où la priorité de droite est applicable.",
+      "explanation": "Carrefour où la priorité de droite est applicable.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/570.jpg"
     },
     {
@@ -5960,7 +5960,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "  La priorité de droite ne s’applique pas à l’intersection d’une route ordinaire avec un sentier ou un chemin de terre.",
+      "explanation": "La priorité de droite ne s’applique pas à l’intersection d’une route ordinaire avec un sentier ou un chemin de terre.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/564.jpg"
     },
     {
@@ -6004,7 +6004,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 12 – ‘La vitesse’.La vitesse maximale autorisée est de 30 km/h. Vous ne pouvez pas y dépasser les cyclistes.",
+      "explanation": "La vitesse maximale autorisée est de 30 km/h. Vous ne pouvez pas y dépasser les cyclistes.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/330.jpg"
     },
     {
@@ -6146,7 +6146,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 14 – ‘Le croisement des véhicules’.Une bande cyclable suggérée n’est pas une piste cyclable ; elle fait partie de la chaussée et le conducteur doit circuler le plus à droite possible, donc sur la partie rouge.",
+      "explanation": "Une bande cyclable suggérée n’est pas une piste cyclable ; elle fait partie de la chaussée et le conducteur doit circuler le plus à droite possible, donc sur la partie rouge.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/368.jpg"
     },
     {
@@ -6242,7 +6242,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": " Un cycliste est également un conducteur.Le cycliste vient de la droite.",
+      "explanation": "Un cycliste est également un conducteur.Le cycliste vient de la droite.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/566.jpg"
     },
     {
@@ -6272,7 +6272,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***Entrez un nombre.Sur un dispositif surélevé, vous pouvez rouler à une vitesse maximale de (...) km/h.",
       "correctAnswer": "30",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 12 – ‘La vitesse’.Dispositif surélevé: jusqu'à 30 km / h.Vous ne pouvez même pas dépasser les cyclistes par la gauche.",
+      "explanation": "Dispositif surélevé: jusqu'à 30 km / h.Vous ne pouvez même pas dépasser les cyclistes par la gauche.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/291.jpg"
     },
     {
@@ -6684,7 +6684,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": " La vitesse maximale sur une route ordinaire est…… en Wallonne: 90 km/h;… en Flandre et Bruxelles-capitale: 70 km/h.",
+      "explanation": "La vitesse maximale sur une route ordinaire est…… en Wallonne: 90 km/h;… en Flandre et Bruxelles-capitale: 70 km/h.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/321.jpg"
     },
     {
@@ -6890,7 +6890,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": " Jusqu’au carrefour suivant.",
+      "explanation": "Jusqu’au carrefour suivant.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/295.jpg"
     },
     {
@@ -6920,7 +6920,7 @@
       "type": "yes_no",
       "question": "La maison de votre père se trouve dans cette rue.Pouvez-vous conduire dans cette rue avec votre voiture ?",
       "correctAnswer": "NON",
-      "explanation": " - 'Les piétons'.Les piétons peuvent utiliser toute la largeur de la route dans une zone piétonne. Les cyclistes sont autorisés à conduire dans la zone si le panneau de zone le permet, mais seulement au pas sans gêner ou mettre en danger les piétons. Les voitures ne peuvent entrer dans la zone qu'avec une autorisation spéciale. Le stationnement dans une zone piétonne est interdit.",
+      "explanation": "- 'Les piétons'.Les piétons peuvent utiliser toute la largeur de la route dans une zone piétonne. Les cyclistes sont autorisés à conduire dans la zone si le panneau de zone le permet, mais seulement au pas sans gêner ou mettre en danger les piétons. Les voitures ne peuvent entrer dans la zone qu'avec une autorisation spéciale. Le stationnement dans une zone piétonne est interdit.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/965.jpg"
     },
     {
@@ -7218,7 +7218,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 14 – ‘Le croisement des véhicules’.A un carrefour ou aucune flèche n’est tracée sur la chaussée, le croisement s’effectue par la droite = l’un derrière l’autre !.",
+      "explanation": "A un carrefour ou aucune flèche n’est tracée sur la chaussée, le croisement s’effectue par la droite = l’un derrière l’autre !.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/371.jpg"
     },
     {
@@ -7354,7 +7354,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 18 – ‘les feux de circulation’.   Vous ne pouvez plus conduire sur cette bande de circulation.",
+      "explanation": "Vous ne pouvez plus conduire sur cette bande de circulation.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/460.jpg"
     },
     {
@@ -7398,7 +7398,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 6 – ‘Endroits particuliers’.Nous n’avons pas demandé ‘ce qui est juste’  mais ‘quelle est l’erreur’.Dans une zoner résidentielle, la vitesse maximale autorisée est de 20 km/heure.",
+      "explanation": "Nous n’avons pas demandé ‘ce qui est juste’  mais ‘quelle est l’erreur’.Dans une zoner résidentielle, la vitesse maximale autorisée est de 20 km/heure.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/166.jpg"
     },
     {
@@ -7406,7 +7406,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***Une route divisée en deux voies.Une moto à deux roues dépasse la voiture brune.La voiture bleue peut-elle dépasser la moto à deux roues et la voiture brune ?",
       "correctAnswer": "NON",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 15+16 – ‘Le dépassement’.",
+      "explanation": "",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/951.jpg"
     },
     {
@@ -7516,7 +7516,7 @@
       "type": "yes_no",
       "question": "Le conducteur de cette voiture se rend compte qu'il s'est trompé.Peut-il encore conduire en arrière ?",
       "correctAnswer": "NON",
-      "explanation": " - 'Autoroute'.Conduire en arrière sur une autoroute est une infraction grave.",
+      "explanation": "- 'Autoroute'.Conduire en arrière sur une autoroute est une infraction grave.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1036.jpg"
     },
     {
@@ -7608,7 +7608,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***Les enfants de moins de 18 ans, qui mesurent moins de (...) mètre, doivent être transportés dans un dispositif de retenue pour enfants qui leur est adapté.",
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 10 – ‘Chargement de véhicules’.Les enfants de moins de 18 ans et dont la taille est inférieure à 1m35 doivent voyager dans un dispositif de retenue pour enfants.",
+      "explanation": "Les enfants de moins de 18 ans et dont la taille est inférieure à 1m35 doivent voyager dans un dispositif de retenue pour enfants.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/250.jpg"
     },
     {
@@ -7664,7 +7664,7 @@
       "type": "yes_no",
       "question": "La voiture bleue peut-elle dépasser la brune par la gauche ?",
       "correctAnswer": "OUI",
-      "explanation": " Ce n’est pas interdit.",
+      "explanation": "Ce n’est pas interdit.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/417.jpg"
     },
     {
@@ -7948,7 +7948,7 @@
       "type": "yes_no",
       "question": "En agglomération.Une voiture peut-elle être stationnée sur le trottoir indiqué par la flèche jaune ?",
       "correctAnswer": "NON",
-      "explanation": " – ‘Arrêt et stationnement’.",
+      "explanation": "– ‘Arrêt et stationnement’.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/699.jpg"
     },
     {
@@ -7966,7 +7966,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "  Important: à double prudence et en tenant compte des règles de priorité.",
+      "explanation": "Important: à double prudence et en tenant compte des règles de priorité.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/487.jpg"
     },
     {
@@ -8068,7 +8068,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 12 – ‘La vitesse’. Apprenez très bien la différence entre:- retrait immédiat temporaire de votre permis de conduire.- une déchéance du droit de conduire un véhicule à moteur.",
+      "explanation": "Apprenez très bien la différence entre:- retrait immédiat temporaire de votre permis de conduire.- une déchéance du droit de conduire un véhicule à moteur.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/336.jpg"
     },
     {
@@ -8194,7 +8194,7 @@
       "type": "number",
       "question": "Quel numéro indique le bouchon du liquide d’essuie-glasces ?",
       "correctAnswer": "5",
-      "explanation": " = huile.2 = liquide de frein3 = liquide de refroidissement.4 = jauge d'huile.5 = essuie-glaces.",
+      "explanation": "= huile.2 = liquide de frein3 = liquide de refroidissement.4 = jauge d'huile.5 = essuie-glaces.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/985.jpg"
     },
     {
@@ -8246,7 +8246,7 @@
       "type": "yes_no",
       "question": "Les speed pedelecs peuvent-ils circuler dans les deux sens dans cette rue ?",
       "correctAnswer": "OUI",
-      "explanation": " - 'Sens interdit'Le signal routier supérieur signifie qu’il est interdit aux conducteurs de passer dans ce sens au-delà du signal.Le panneau additionnel indique que les cyclistes et les speed pedelecs (P) peuvent quand même passer.Dans le sens opposé, tous les conducteurs peuvent circuler.",
+      "explanation": "- 'Sens interdit'Le signal routier supérieur signifie qu’il est interdit aux conducteurs de passer dans ce sens au-delà du signal.Le panneau additionnel indique que les cyclistes et les speed pedelecs (P) peuvent quand même passer.Dans le sens opposé, tous les conducteurs peuvent circuler.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1181.jpg"
     },
     {
@@ -8304,7 +8304,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 21 – ‘Tourner à droite ou à gauche’.Le conducteur qui désire conduire tout droit a la priorité.Le conducteur qui veut tourner à gauche, doit donner la priorité.",
+      "explanation": "Le conducteur qui désire conduire tout droit a la priorité.Le conducteur qui veut tourner à gauche, doit donner la priorité.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/588.jpg"
     },
     {
@@ -8370,7 +8370,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***La voiture rouge peut-elle s'engager dans le carrefour ?",
       "correctAnswer": "NON",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]Les usagers qui se dirigent vers le ventre ou vers le dos de l’agent doivent s’arrêter.",
+      "explanation": "Les usagers qui se dirigent vers le ventre ou vers le dos de l’agent doivent s’arrêter.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/434.jpg"
     },
     {
@@ -8672,7 +8672,7 @@
       "type": "yes_no",
       "question": "Pouvez-vous franchir un site spécial franchissable en voiture pour accéder à votre domicile ?",
       "correctAnswer": "OUI",
-      "explanation": " Les autres conducteurs peuvent traverser le site spécial franchissable :. pour rejoindre ou quitter un emplacement de stationnement qui se trouve le long de ce site ;. pour rejoindre une propriété ou la quitter ;. et dans les carrefours.",
+      "explanation": "Les autres conducteurs peuvent traverser le site spécial franchissable :. pour rejoindre ou quitter un emplacement de stationnement qui se trouve le long de ce site ;. pour rejoindre une propriété ou la quitter ;. et dans les carrefours.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/165.jpg"
     },
     {
@@ -8754,7 +8754,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***Introduisez un nombre.Vous avez le permis de conduire B.Lorsque vous excédez la vitesse autorisée de plus de (...) km/h, le juge prononcera une déchéance de votre permis de conduire.",
       "correctAnswer": "30",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 6 – ‘Endroits particuliers’.C’est plus de 30 km/h en agglomération.Conseil d’examen : lisez très bien dans votre livre la différence entre un retrait immédiat temporaire de votre permis de conduire  et une déchéance du droit de conduire un véhicule à moteur (leçon 12).",
+      "explanation": "C’est plus de 30 km/h en agglomération.Conseil d’examen : lisez très bien dans votre livre la différence entre un retrait immédiat temporaire de votre permis de conduire  et une déchéance du droit de conduire un véhicule à moteur (leçon 12).",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/175.jpg"
     },
     {
@@ -8806,7 +8806,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]L'agent donne l'ordre d'arrêter.",
+      "explanation": "L'agent donne l'ordre d'arrêter.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/946.jpg"
     },
     {
@@ -8870,7 +8870,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 14 – ‘Le croisement des véhicules’.Une bande cyclable suggérée n’est pas une piste cyclable.Elle fait partie de la chaussée et le conducteur doit se tenir le plus près  du côté droit de la route.",
+      "explanation": "Une bande cyclable suggérée n’est pas une piste cyclable.Elle fait partie de la chaussée et le conducteur doit se tenir le plus près  du côté droit de la route.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/351.jpg"
     },
     {
@@ -9010,7 +9010,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 21 – ‘Tourner à droite ou à gauche’.",
+      "explanation": "",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/939.jpg"
     },
     {
@@ -9050,7 +9050,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": " - 'Lieux spéciaux'.Les véhicules autorisés à conduire dans une rue scolaire doivent procéder étape par étape.(sauf s'il y a des panneaux de signalisation autorisant une vitesse différente).",
+      "explanation": "- 'Lieux spéciaux'.Les véhicules autorisés à conduire dans une rue scolaire doivent procéder étape par étape.(sauf s'il y a des panneaux de signalisation autorisant une vitesse différente).",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/972.jpg"
     },
     {
@@ -9156,7 +9156,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": " Sous ce bouchon bleu il y a le réservoir pour le liquide de refroidissement.",
+      "explanation": "Sous ce bouchon bleu il y a le réservoir pour le liquide de refroidissement.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/917.jpg"
     },
     {
@@ -9210,7 +9210,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": " La voiture rouge vient de la droite.",
+      "explanation": "La voiture rouge vient de la droite.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/558.jpg"
     },
     {
@@ -9294,7 +9294,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 18 – ‘les feux de circulation’.La flèche verte indique que vous pouvez tourner à droite.Mais vous devez donner la priorité aux conducteurs venant des autres directions et aussi aux piétons.",
+      "explanation": "La flèche verte indique que vous pouvez tourner à droite.Mais vous devez donner la priorité aux conducteurs venant des autres directions et aussi aux piétons.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/480.jpg"
     },
     {
@@ -9410,7 +9410,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***Est-il autorisé de dépasser par la gauche un cyclomotoriste sur ce passage à niveau ?",
       "correctAnswer": "OUI",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 22 – ‘Train – tram -autobus’.Si le feu blanc lunaire clignote, vous pouvez dépasser par la gauche.",
+      "explanation": "Si le feu blanc lunaire clignote, vous pouvez dépasser par la gauche.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/632.jpg"
     },
     {
@@ -9472,7 +9472,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 10 – ‘Chargement de véhicules’.Le signal concerne le chargement transporté et non pas le carburant utilisé.",
+      "explanation": "Le signal concerne le chargement transporté et non pas le carburant utilisé.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/255.jpg"
     },
     {
@@ -9494,7 +9494,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": " / InfractionsLes infractions du quatrième degré sont les plus graves.Elles mettent directement en danger la sécurité des personnes et, en cas d’accident, provoquent presque inévitablement des dommages corporels.Exemples :- ignorer les injonctions d’une personne compétente,- ne pas respecter la signalisation d’un passage à niveau,- stationner ou arrêter son véhicule sur un passage à niveau,- inciter à une vitesse excessive,- organiser des courses de vitesse sur la voie publique,- dépasser par la gauche dans une côte ou un virage lorsqu’un tel dépassement est interdit,- faire marche arrière ou circuler en sens inverse sur une autoroute ou une route pour automobiles.",
+      "explanation": "/ InfractionsLes infractions du quatrième degré sont les plus graves.Elles mettent directement en danger la sécurité des personnes et, en cas d’accident, provoquent presque inévitablement des dommages corporels.Exemples :- ignorer les injonctions d’une personne compétente,- ne pas respecter la signalisation d’un passage à niveau,- stationner ou arrêter son véhicule sur un passage à niveau,- inciter à une vitesse excessive,- organiser des courses de vitesse sur la voie publique,- dépasser par la gauche dans une côte ou un virage lorsqu’un tel dépassement est interdit,- faire marche arrière ou circuler en sens inverse sur une autoroute ou une route pour automobiles.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1504.jpg"
     },
     {
@@ -9616,7 +9616,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": " Un cycliste est également un conducteur.Le cycliste vient de la droite.",
+      "explanation": "Un cycliste est également un conducteur.Le cycliste vient de la droite.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/567.jpg"
     },
     {
@@ -9700,7 +9700,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***Pouvez-vous franchir ce signal routier en voiture ?",
       "correctAnswer": "OUI",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 23 – ‘Sens interdits’Ces signes disent que les véhicules agricoles avec une M.E.C. de plus de 5,5 tonnes, peuvent continuer.",
+      "explanation": "Ces signes disent que les véhicules agricoles avec une M.E.C. de plus de 5,5 tonnes, peuvent continuer.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/659.jpg"
     },
     {
@@ -9768,7 +9768,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***La voiture blanche peut-elle dépasser la voiture bleue par la gauche ?",
       "correctAnswer": "NON",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 2 – ‘Bandes de circulation’. Il y a une ligne jaune continue au milieu de la chaussée.La ligne jaune est continue et les lignes jaunes annulent les marquages blancs.C’est une infraction grave qui implique une perte de 5 points à la théorie et une déchéance du droit de conduire pour un jeune conducteur.",
+      "explanation": "Il y a une ligne jaune continue au milieu de la chaussée.La ligne jaune est continue et les lignes jaunes annulent les marquages blancs.C’est une infraction grave qui implique une perte de 5 points à la théorie et une déchéance du droit de conduire pour un jeune conducteur.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/59.jpg"
     },
     {
@@ -9812,7 +9812,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": " - 'Endroits particuliers'.Dans une zone résidentielle (max 20 km/h), les voitures peuvent se stationner à gauche et à droite mais uniquement sur les emplacements de stationnement désignés à cet effet.",
+      "explanation": "- 'Endroits particuliers'.Dans une zone résidentielle (max 20 km/h), les voitures peuvent se stationner à gauche et à droite mais uniquement sur les emplacements de stationnement désignés à cet effet.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1145.jpg"
     },
     {
@@ -9972,7 +9972,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "  Si les feux sont défectueux, vous devez appliquer les règles de priorité normale.Il n'y a aucun signal sous les lumières.",
+      "explanation": "Si les feux sont défectueux, vous devez appliquer les règles de priorité normale.Il n'y a aucun signal sous les lumières.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/488.jpg"
     },
     {
@@ -10034,7 +10034,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "INFO - PERMIS DE CONDUIREDès que vous avez 18 ans, vous pouvez présenter l’examen pratique du permis de conduire B dans un centre d’examen, à condition que votre période de stage remplisse les exigences légales.",
+      "explanation": "Dès que vous avez 18 ans, vous pouvez présenter l’examen pratique du permis de conduire B dans un centre d’examen, à condition que votre période de stage remplisse les exigences légales.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1351.jpg"
     },
     {
@@ -10100,7 +10100,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***Introduisez un nombre.Après avoir franchi ce signal routier, vous pouvez rouler à une vitesse maximale de (...) km/h.",
       "correctAnswer": "30",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 6 – ‘Endroits particuliers’.Au-delà du deuxième signal routier vous êtes dans une ZONE 30.",
+      "explanation": "Au-delà du deuxième signal routier vous êtes dans une ZONE 30.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/150.jpg"
     },
     {
@@ -10208,7 +10208,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***Pouvez-vous franchir ce signal routier en voiture ?",
       "correctAnswer": "NON",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 23 – ‘Sens interdits’.Sens interdit pour tout conducteur.Sauf pour les vélos et les vélos électriques (pedelecs) et cyclomoteurs classe A.Signal d’interdiction.",
+      "explanation": "Sens interdit pour tout conducteur.Sauf pour les vélos et les vélos électriques (pedelecs) et cyclomoteurs classe A.Signal d’interdiction.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/646.jpg"
     },
     {
@@ -10262,7 +10262,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 18 – ‘les feux de circulation’.Normalement, le conducteur doit s’arrêter, sauf s’il n’est vraiment pas sécuritaire.",
+      "explanation": "Normalement, le conducteur doit s’arrêter, sauf s’il n’est vraiment pas sécuritaire.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/459.jpg"
     },
     {
@@ -10486,7 +10486,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": " Dépasser une voiture par la gauche n’est pas interdit aux intersections où vous voyez ces signaux.",
+      "explanation": "Dépasser une voiture par la gauche n’est pas interdit aux intersections où vous voyez ces signaux.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/416.jpg"
     },
     {
@@ -10614,7 +10614,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***À l'approche de ce carrefour.Devez-vous vous arrêter ?",
       "correctAnswer": "OUI",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]Dans les carrefours qui ne disposent pas de feux de signalisation, une personne autorisée peut arrêter la circulation, à condition d’être identifiable et de tendre vers le haut un signal C3 fixe sur une manche.",
+      "explanation": "Dans les carrefours qui ne disposent pas de feux de signalisation, une personne autorisée peut arrêter la circulation, à condition d’être identifiable et de tendre vers le haut un signal C3 fixe sur une manche.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/451.jpg"
     },
     {
@@ -10658,7 +10658,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": " – ‘La M.M.A. et la M.E.C.Le constructeur, car le fabricant connait toutes les normes techniques du véhicule : sa solidité, sa résistance, le poids qu’il pourra supporter,…",
+      "explanation": "– ‘La M.M.A. et la M.E.C.Le constructeur, car le fabricant connait toutes les normes techniques du véhicule : sa solidité, sa résistance, le poids qu’il pourra supporter,…",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/221.jpg"
     },
     {
@@ -10812,7 +10812,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 22 – ‘Train – tram -autobus’.",
+      "explanation": "",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/943.jpg"
     },
     {
@@ -10838,7 +10838,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]Le conducteur conduit vers le dos de l’agent, qui tend les bras horizontalement.",
+      "explanation": "Le conducteur conduit vers le dos de l’agent, qui tend les bras horizontalement.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/447.jpg"
     },
     {
@@ -11022,7 +11022,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***Le conducteur de la voiture peut-il tourner à gauche pour aller faire le plein d’essence ?",
       "correctAnswer": "NON",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 2 – ‘Bandes de circulation’.Il est interdit de franchir une ligne blanche continue même pour entrer dans sa propriété. C’est une infraction grave qui implique une perte de 5 points à la théorie et une déchéance du droit de conduire pour un jeune conducteur.",
+      "explanation": "Il est interdit de franchir une ligne blanche continue même pour entrer dans sa propriété. C’est une infraction grave qui implique une perte de 5 points à la théorie et une déchéance du droit de conduire pour un jeune conducteur.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/56.jpg"
     },
     {
@@ -11196,7 +11196,7 @@
       "type": "number",
       "question": "Après quel panneau avez-vous la priorité ?",
       "correctAnswer": "4",
-      "explanation": " Priorité de droite.2. Travaux.3. Circulation à double sens.4. Priorité au rétrécissement de la chaussée.",
+      "explanation": "Priorité de droite.2. Travaux.3. Circulation à double sens.4. Priorité au rétrécissement de la chaussée.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1186.jpg"
     },
     {
@@ -11228,7 +11228,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***Introduisez un nombre.Quelle est la vitesse maximale (... km/h) à laquelle l’on peut rouler en voiture sur cette route ?",
       "correctAnswer": "50",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 12 – ‘La vitesse’. Jusqu'à 50 km par heure.",
+      "explanation": "Jusqu'à 50 km par heure.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/319.jpg"
     },
     {
@@ -11236,7 +11236,7 @@
       "type": "yes_no",
       "question": "Une moto à deux roues dépasse une autre moto à deux roues.La voiture bleue peut-elle dépasser les deux motos ?",
       "correctAnswer": "OUI",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 15+16 – ‘Le dépassement’.",
+      "explanation": "",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/953.jpg"
     },
     {
@@ -11302,7 +11302,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 18 – ‘les feux de circulation’.",
+      "explanation": "",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/476.jpg"
     },
     {
@@ -11418,7 +11418,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 14 – ‘Le croisement des véhicules’.Mais à un carrefour où aucune flèche n’est tracée sur la chaussée, le croisement s’effectue par la droite.",
+      "explanation": "Mais à un carrefour où aucune flèche n’est tracée sur la chaussée, le croisement s’effectue par la droite.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/358.jpg"
     },
     {
@@ -11448,7 +11448,7 @@
       "type": "yes_no",
       "question": "Vous avez stationné votre voiture dans cette rue.Le lendemain, au moment de partir, c'est une rue  scolaire.Pouvez-vous quitter cette rue en voiture ?",
       "correctAnswer": "OUI",
-      "explanation": " - \"Lieux spéciaux\". À certaines heures reprises sur la signalisation ou en cas de barrières placées sur la voirie, vous n'êtes pas autorisé à entrer dans cette rue (accès interdit). Vous pouvez toutefois la quitter en voiture.",
+      "explanation": "- \"Lieux spéciaux\". À certaines heures reprises sur la signalisation ou en cas de barrières placées sur la voirie, vous n'êtes pas autorisé à entrer dans cette rue (accès interdit). Vous pouvez toutefois la quitter en voiture.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1050.jpg"
     },
     {
@@ -11766,7 +11766,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***Au-delà de ce signal routier, le conducteur d’une voiture peut-il dépasser un camion par la gauche ?",
       "correctAnswer": "OUI",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 15+16 – ‘Le dépassement’.  Mais un camion ne peut pas dépasser par la gauche.",
+      "explanation": "Mais un camion ne peut pas dépasser par la gauche.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/382.jpg"
     },
     {
@@ -11944,7 +11944,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": " Signal d’indication.",
+      "explanation": "Signal d’indication.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/145.jpg"
     },
     {
@@ -12100,7 +12100,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 14 – ‘Le croisement des véhicules’.",
+      "explanation": "",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/942.jpg"
     },
     {
@@ -12240,7 +12240,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 21 – ‘Tourner à droite ou à gauche’.Une voiture qui change de direction, devrait donner la priorité aux piétons qui traversent la route où la voiture veut aller.",
+      "explanation": "Une voiture qui change de direction, devrait donner la priorité aux piétons qui traversent la route où la voiture veut aller.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/596.jpg"
     },
     {
@@ -12276,7 +12276,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "  Vous ne commencez à freiner qu’une fois sur la sortie.",
+      "explanation": "Vous ne commencez à freiner qu’une fois sur la sortie.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/307.jpg"
     },
     {
@@ -12438,7 +12438,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***Introduisez un nombre:Vous devez allumer vos feux de croisement du coucher au lever du soleil, ou de jour en cas de pluie, brouillard, neige ou autres circonstances qui limitent la visibilité à (...) mètres.",
       "correctAnswer": "200",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 11 – ‘Les feux’.200 mètres.",
+      "explanation": "200 mètres.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/265.jpg"
     },
     {
@@ -12508,7 +12508,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]D’abord l’agent de police.Ensuite les signaux lumineux de circulation.Puis les signaux routiers.Et enfin les règles de circulation.",
+      "explanation": "D’abord l’agent de police.Ensuite les signaux lumineux de circulation.Puis les signaux routiers.Et enfin les règles de circulation.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/454.jpg"
     },
     {
@@ -12672,7 +12672,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***La flèche verte d’évacuation est allumée.Le conducteur de la voiture bleue peut-il encore s’engager dans le carrefour et tourner à gauche ?",
       "correctAnswer": "NON",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 18 – ‘les feux de circulation’.Les voitures au carrefour peuvent partir.La voiture bleue ne peut pas franchir le feu rouge.",
+      "explanation": "Les voitures au carrefour peuvent partir.La voiture bleue ne peut pas franchir le feu rouge.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/475.jpg"
     },
     {
@@ -12688,7 +12688,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***Un passage à niveau sans feu blanc et sans barrières.  Une voiture peut-elle y dépasser une motocyclette ?",
       "correctAnswer": "NON",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 15+16 – ‘Le dépassement’.  C’est interdit de dépasser par la gauche : un véhicule attelé, un véhicule à plus de deux roues ou un véhicule à moteur à deux roues, sauf s’il y a des barrières ou si le feu blanc clignote.",
+      "explanation": "C’est interdit de dépasser par la gauche : un véhicule attelé, un véhicule à plus de deux roues ou un véhicule à moteur à deux roues, sauf s’il y a des barrières ou si le feu blanc clignote.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/386.jpg"
     },
     {
@@ -12732,7 +12732,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": " Si votre voiture tombe en panne sur une autoroute ou une route pour automobiles, la police appelle un service de dépannage agrée.",
+      "explanation": "Si votre voiture tombe en panne sur une autoroute ou une route pour automobiles, la police appelle un service de dépannage agrée.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/146.jpg"
     },
     {
@@ -12780,7 +12780,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***À quelle vitesse maximale pouvez-vous circuler sur une voie publique ordinaire en Wallonie ?",
       "correctAnswer": "90",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]La vitesse maximale sur une voie ordinaire est…… en Wallonne: 90 km/h ;… en Flandre et Bruxelles-capitale région : 70 km/h.",
+      "explanation": "La vitesse maximale sur une voie ordinaire est…… en Wallonne: 90 km/h ;… en Flandre et Bruxelles-capitale région : 70 km/h.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/19.jpg"
     },
     {
@@ -13404,7 +13404,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 18 – ‘les feux de circulation’.le feu jaune-orange fixe signifie interdiction de franchir la ligne d'arrêt ou, à défaut de ligne d'arrêt le signal même, à moins qu'au moment où il s'allume le conducteur ne s'en trouve si près qu'il ne puisse plus s'arrêter dans des conditions de sécurité suffisante; toutefois, si le signal est placé à un carrefour, le conducteur qui, dans de telles circonstances, a franchi la ligne d'arrêt ou le signal, ne peut traverser le carrefour qu'à la condition de ne pas mettre en danger les autres usagers;",
+      "explanation": "le feu jaune-orange fixe signifie interdiction de franchir la ligne d'arrêt ou, à défaut de ligne d'arrêt le signal même, à moins qu'au moment où il s'allume le conducteur ne s'en trouve si près qu'il ne puisse plus s'arrêter dans des conditions de sécurité suffisante; toutefois, si le signal est placé à un carrefour, le conducteur qui, dans de telles circonstances, a franchi la ligne d'arrêt ou le signal, ne peut traverser le carrefour qu'à la condition de ne pas mettre en danger les autres usagers;",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/494.jpg"
     },
     {
@@ -13532,7 +13532,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 15+16 – ‘Le dépassement’.  Si vous voulez dépasser un cyclomoteur par la gauche, vous devez laisser un espace latéral de sécurité de 1,5 mètre.",
+      "explanation": "Si vous voulez dépasser un cyclomoteur par la gauche, vous devez laisser un espace latéral de sécurité de 1,5 mètre.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/413.jpg"
     },
     {
@@ -13576,7 +13576,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]C’est un véhicule prioritaire et vous devez donner la priorité.",
+      "explanation": "C’est un véhicule prioritaire et vous devez donner la priorité.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/431.jpg"
     },
     {
@@ -13646,7 +13646,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***Un conducteur peut-il circuler sur l’accotement de plain-pied pour croiser plus facilement ?",
       "correctAnswer": "OUI",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 14 – ‘Le croisement des véhicules’.Il peut circuler sur l’accotement de plain-pied le long du chemin.Il ne peut toutefois pas circuler sur une bande cyclable, sur le trottoirou sur la bande de stationnement.",
+      "explanation": "Il peut circuler sur l’accotement de plain-pied le long du chemin.Il ne peut toutefois pas circuler sur une bande cyclable, sur le trottoirou sur la bande de stationnement.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/354.jpg"
     },
     {
@@ -13912,7 +13912,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": " La vitesse maximale sur une route ordinaire est…… en Wallonne: 90 km/h;… en Flandre et Bruxelles-capitale region: 70 km/h.",
+      "explanation": "La vitesse maximale sur une route ordinaire est…… en Wallonne: 90 km/h;… en Flandre et Bruxelles-capitale region: 70 km/h.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/335.jpg"
     },
     {
@@ -14178,7 +14178,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***La voiture bleue peut-elle tourner à droite ?",
       "correctAnswer": "NON",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 23 – ‘Sens interdits’.Sens interdit pour tout conducteur.Signal d’interdiction.",
+      "explanation": "Sens interdit pour tout conducteur.Signal d’interdiction.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/640.jpg"
     },
     {
@@ -14352,7 +14352,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***Entrez un nombre.Sur cette route pour automobiles en Région wallonne, le conducteur de la voiture bleue, peut circuler à une vitesse maximale de (...) km/h.",
       "correctAnswer": "50",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 5 – ‘La route pour automobiles’.La route pour automobiles est dans une agglomération.",
+      "explanation": "La route pour automobiles est dans une agglomération.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/130.jpg"
     },
     {
@@ -14448,7 +14448,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***Peut une voiture dépasser un cyclomoteur par la gauche ?",
       "correctAnswer": "OUI",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 15+16 – ‘Le dépassement’.Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues.",
+      "explanation": "Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/422.jpg"
     },
     {
@@ -14594,7 +14594,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***Au-delà de ce signal routier, le conducteur d’une motocyclette peut-il dépasser une voiture par la gauche ?",
       "correctAnswer": "NON",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 15+16 – ‘Le dépassement’.  Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues.",
+      "explanation": "Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/384.jpg"
     },
     {
@@ -14672,7 +14672,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***Introduisez un nombre.Quelle est la vitesse maximale (... km/h) à laquelle ces voitures peuvent rouler à cet endroit dans la région wallonne ?",
       "correctAnswer": "90",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 12 – ‘La vitesse’. La vitesse maximale sur une route ordinaire est…… en Wallonne: 90 km/h;… en Flandre: 70 km/h.",
+      "explanation": "La vitesse maximale sur une route ordinaire est…… en Wallonne: 90 km/h;… en Flandre: 70 km/h.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/314.jpg"
     },
     {
@@ -14724,7 +14724,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]Vous devez vous arrêter (pour un contrôle).",
+      "explanation": "Vous devez vous arrêter (pour un contrôle).",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/446.jpg"
     },
     {
@@ -14828,7 +14828,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***Vous avez le permis de conduire provisoire B.En voiture, pouvez-vous dépasser par la gauche un cheval attelé ?",
       "correctAnswer": "NON",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 15+16 – ‘Le dépassement’.  Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues.",
+      "explanation": "Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/408.jpg"
     },
     {
@@ -15074,7 +15074,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": " 200 mètres plus loin, maximum 50 km/h.",
+      "explanation": "200 mètres plus loin, maximum 50 km/h.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/304.jpg"
     },
     {
@@ -15126,7 +15126,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": " Panneau de signalisation : carrefour où la priorité de droite est applicable.",
+      "explanation": "Panneau de signalisation : carrefour où la priorité de droite est applicable.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/571.jpg"
     },
     {
@@ -15204,7 +15204,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 14 – ‘Le croisement des véhicules’.",
+      "explanation": "",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/940.jpg"
     },
     {
@@ -15502,7 +15502,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***Introduisez un nombre.Quelle est la vitesse maximale à laquelle vous pouvez rouler en voiture dans ce carrefour ?",
       "correctAnswer": "30",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 12 – ‘La vitesse’.La vitesse maximale sur un dispositif surélevé est de 30 km / h.",
+      "explanation": "La vitesse maximale sur un dispositif surélevé est de 30 km / h.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/323.jpg"
     },
     {
@@ -15824,7 +15824,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 21 – ‘Tourner à droite ou à gauche’.Une voiture qui change de direction, devrait donner la priorité aux piétons qui traversent la route où la voiture veut aller.",
+      "explanation": "Une voiture qui change de direction, devrait donner la priorité aux piétons qui traversent la route où la voiture veut aller.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/595.jpg"
     },
     {
@@ -15886,7 +15886,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "  Si vous restez immobile au-delà du temps nécessaire pour embarquer ou débarquer une personne, cela est considéré comme stationner.",
+      "explanation": "Si vous restez immobile au-delà du temps nécessaire pour embarquer ou débarquer une personne, cela est considéré comme stationner.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/698.jpg"
     },
     {
@@ -16094,7 +16094,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 23 – ‘Sens interdits’.Accès interdit aux conducteurs de véhicules dont la masse en charge dépasse la masse indiquée.",
+      "explanation": "Accès interdit aux conducteurs de véhicules dont la masse en charge dépasse la masse indiquée.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/642.jpg"
     },
     {
@@ -16192,7 +16192,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 14 – ‘Le croisement des véhicules’.La route se rétrécit du côté de la voiture A. La voiture A doit donc  céder le passage.",
+      "explanation": "La route se rétrécit du côté de la voiture A. La voiture A doit donc  céder le passage.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/372.jpg"
     },
     {
@@ -16308,7 +16308,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": " Le cycliste - 2 la voiture – 3 le camion.",
+      "explanation": "Le cycliste - 2 la voiture – 3 le camion.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/554.jpg"
     },
     {
@@ -16326,7 +16326,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 5 – ‘La route pour automobiles’Lisez très bien le chapitre 12 dans votre livre.",
+      "explanation": "Lisez très bien le chapitre 12 dans votre livre.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/143.jpg"
     },
     {
@@ -16362,7 +16362,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 23 – ‘Sens interdits’.La M.E.C. (Masse En Charge).",
+      "explanation": "La M.E.C. (Masse En Charge).",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/655.jpg"
     },
     {
@@ -16574,7 +16574,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": " :Il est interdit de stationner (mais pas de s’arrêter)dans les 15 mètres avant et après un signal indiquantun arrêt de bus, de trolleybus ou de tram.",
+      "explanation": ":Il est interdit de stationner (mais pas de s’arrêter)dans les 15 mètres avant et après un signal indiquantun arrêt de bus, de trolleybus ou de tram.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1613.jpg"
     },
     {
@@ -16724,7 +16724,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 11 – ‘Les feux’.Si un bus scolaire s’arrête afin que les élèves peuvent sortir, le conducteur du bus scolaire doit allumer ses feux de détresse.Les autres véhicules qui circulent sont obligés de réduire fortement la vitesse et de s’arrêter si necessaire,Leurs conducteurs doivent redoubler de prudence dans ces circonstance.",
+      "explanation": "Si un bus scolaire s’arrête afin que les élèves peuvent sortir, le conducteur du bus scolaire doit allumer ses feux de détresse.Les autres véhicules qui circulent sont obligés de réduire fortement la vitesse et de s’arrêter si necessaire,Leurs conducteurs doivent redoubler de prudence dans ces circonstance.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/283.jpg"
     },
     {
@@ -16822,7 +16822,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]La motocyclette conduit vers le ventre et la voiture brune vers le dos.",
+      "explanation": "La motocyclette conduit vers le ventre et la voiture brune vers le dos.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/443.jpg"
     },
     {
@@ -16852,7 +16852,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***Introduisez un nombre.Dans une zone résidentielle, vous pouvez rouler à une vitesse maximale de (...) km/h.",
       "correctAnswer": "20",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 6 – ‘Endroits particuliers’.Dans une zone résidentielle…. les piétons peuvent emprunter la chaussée.. les enfants peuvent jouer sur la chaussée.. la vitesse maximale autorisée est de 20 km/h.",
+      "explanation": "Dans une zone résidentielle…. les piétons peuvent emprunter la chaussée.. les enfants peuvent jouer sur la chaussée.. la vitesse maximale autorisée est de 20 km/h.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/154.jpg"
     },
     {
@@ -16890,7 +16890,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***Sur cette route pour automobiles en Wallonie, la voiture bleue peut rouler à une vitesse maximale de (...) km/h.",
       "correctAnswer": "90",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 12 – ‘La vitesse’.La vitesse maximale sur une route ordinaire est…… en Wallonne: 90 km/h;… en Flandre et Bruxelles capitale région: 70 km/h.",
+      "explanation": "La vitesse maximale sur une route ordinaire est…… en Wallonne: 90 km/h;… en Flandre et Bruxelles capitale région: 70 km/h.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/298.jpg"
     },
     {
@@ -16908,7 +16908,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "  Le bus vient de la droite.",
+      "explanation": "Le bus vient de la droite.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/560.jpg"
     },
     {
@@ -16970,7 +16970,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***Entrez un nombre.Sur cette route pour automobiles en Flandre, comptant 2 x 2 bandes de circulation, une voiture peut rouler à une vitesse maximale de (...) km/h.",
       "correctAnswer": "70",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 5 – ‘La route pour automobiles’. La vitesse maximale sur cette route est…… en Wallonie: 90 km/h… en Flandre: 70 km/h.Cette route compte 4 bandes, 2x2 mais les sens sont séparés uniquement par de la peinture.",
+      "explanation": "La vitesse maximale sur cette route est…… en Wallonie: 90 km/h… en Flandre: 70 km/h.Cette route compte 4 bandes, 2x2 mais les sens sont séparés uniquement par de la peinture.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/132.jpg"
     },
     {
@@ -17192,7 +17192,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***Introduisez un nombre:Vous devez allumer vos feux de croisement de jour lorsqu’il neige et la visibilité est réduite à moins de (...) mètres.",
       "correctAnswer": "200",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 11 – ‘Les feux’.200 mètres.",
+      "explanation": "200 mètres.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/269.jpg"
     },
     {
@@ -17276,7 +17276,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 23 – ‘Sens interdits’.Si sur le panneau blanc les lettres A et P sont écrites, les cyclomoteurs classe A peuvent franchir ce panneau. S'il n'y a que la lettre P :  les vélos et les vélos électriques (pedelecs).",
+      "explanation": "Si sur le panneau blanc les lettres A et P sont écrites, les cyclomoteurs classe A peuvent franchir ce panneau. S'il n'y a que la lettre P :  les vélos et les vélos électriques (pedelecs).",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/669.jpg"
     },
     {
@@ -17380,7 +17380,7 @@
       "type": "yes_no",
       "question": "Peut-on doubler un speed pedelec dans une rue cyclable ?",
       "correctAnswer": "NON",
-      "explanation": " - 'La piste cyclable'. Les véhicules à moteur (y compris les cyclomoteurs) ne sont pas autorisés à dépasser les cyclistes, les speed pedelecs et les vélos jusqu'à 1 m de large dans une rue cyclable.",
+      "explanation": "- 'La piste cyclable'. Les véhicules à moteur (y compris les cyclomoteurs) ne sont pas autorisés à dépasser les cyclistes, les speed pedelecs et les vélos jusqu'à 1 m de large dans une rue cyclable.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1048.jpg"
     },
     {
@@ -17438,7 +17438,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 3 – ‘La piste cyclable’.La piste cyclable est une partie de la voie publique. Elle ne fait toutefois pas partie de la chaussée. Le code vous oblige a circuler sur la chaussée.Cela signifie que vous ne pouvez pas circuler en voiture sur la piste cyclable. Vous ne pouvez pas non plus y stationner ou vos y arrêter pour embarquer ou désembarquer un passager.",
+      "explanation": "La piste cyclable est une partie de la voie publique. Elle ne fait toutefois pas partie de la chaussée. Le code vous oblige a circuler sur la chaussée.Cela signifie que vous ne pouvez pas circuler en voiture sur la piste cyclable. Vous ne pouvez pas non plus y stationner ou vos y arrêter pour embarquer ou désembarquer un passager.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/72.jpg"
     },
     {
@@ -17586,7 +17586,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***Le piéton n’est pas encore sur le passage pour piétons.Le conducteur de la voiture doit-il s’arrêter ?",
       "correctAnswer": "OUI",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 7 – ‘Les piétons’.Les piétons qui traversent sur le passage pour piétons, ou ont l’intention de l’emprunter, ont toujours priorité.",
+      "explanation": "Les piétons qui traversent sur le passage pour piétons, ou ont l’intention de l’emprunter, ont toujours priorité.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/191.jpg"
     },
     {
@@ -17638,7 +17638,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]La voiture bleue et la voiture verte se dirigent vers la main de l’agent et peuvent s’engager dans le carrefour.",
+      "explanation": "La voiture bleue et la voiture verte se dirigent vers la main de l’agent et peuvent s’engager dans le carrefour.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/432.jpg"
     },
     {
@@ -17698,7 +17698,7 @@
       "type": "number",
       "question": "À quelle vitesse maximale une voiture peut-elle rouler sur cette route pour automobiles ?",
       "correctAnswer": "120",
-      "explanation": " Sur les routes pour automobiles, hors agglomération, vous pouvez circuler à 120 km/h :. si chaque sens de circulation est composé d’au moins 2 bandes de circulation,. et si les sens de circulation sont divisés autrement que par de la peinture.",
+      "explanation": "Sur les routes pour automobiles, hors agglomération, vous pouvez circuler à 120 km/h :. si chaque sens de circulation est composé d’au moins 2 bandes de circulation,. et si les sens de circulation sont divisés autrement que par de la peinture.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/142.jpg"
     },
     {
@@ -17736,7 +17736,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***À quelle vitesse maximale pouvez-vous circuler sur une voie publique ordinaire en Flandre?",
       "correctAnswer": "70",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 1 – ‘La chaussée’. La vitesse maximale sur une voie ordinaire est…… en Wallonne: 90 km/h ;… en Flandre et Bruxelles-capitale région : 70 km/h.",
+      "explanation": "La vitesse maximale sur une voie ordinaire est…… en Wallonne: 90 km/h ;… en Flandre et Bruxelles-capitale région : 70 km/h.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/18.jpg"
     },
     {
@@ -17890,7 +17890,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": " Les véhicules sur rails ne doivent pas respecter la priorité de droite.",
+      "explanation": "Les véhicules sur rails ne doivent pas respecter la priorité de droite.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/565.jpg"
     },
     {
@@ -17912,7 +17912,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": " Sur une voie à sens unique, vous pouvez ranger votre voiture autant à droite qu’à gauche.",
+      "explanation": "Sur une voie à sens unique, vous pouvez ranger votre voiture autant à droite qu’à gauche.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1397.jpg"
     },
     {
@@ -18026,7 +18026,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***Vous roulez trop vite en Zone 30.A partir de combien de km/h d’excès de vitesse la POLICE peut-elle vous retirer votre permis sur-le- champ ?",
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 12 – ‘La vitesse’.À partir d’un excès de 20 km/h.",
+      "explanation": "À partir d’un excès de 20 km/h.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/328.jpg"
     },
     {
@@ -18034,7 +18034,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***La voiture bleue peut-elle dépasser le camion par la gauche ?",
       "correctAnswer": "OUI",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 15+16 – ‘Le dépassement’.  Mais un camion ne peut pas dépasser par la gauche.",
+      "explanation": "Mais un camion ne peut pas dépasser par la gauche.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/385.jpg"
     },
     {
@@ -18064,7 +18064,7 @@
       "type": "number",
       "question": "Quel numéro indique le bouchon d'huile?",
       "correctAnswer": "1",
-      "explanation": " = huile.2 = liquide de frein3 = liquide de refroidissement.4 = jauge d'huile.5 = essuie-glaces.",
+      "explanation": "= huile.2 = liquide de frein3 = liquide de refroidissement.4 = jauge d'huile.5 = essuie-glaces.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/984.jpg"
     },
     {
@@ -18094,7 +18094,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 12 – ‘La vitesse’.Cette combinaison de panneaux signifie que sur cette sortie vous ne pouvez rouler qu’à 50 km/h maximum.",
+      "explanation": "Cette combinaison de panneaux signifie que sur cette sortie vous ne pouvez rouler qu’à 50 km/h maximum.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/293.jpg"
     },
     {
@@ -18182,7 +18182,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": " - 'Lieux spéciaux'.En cas de forte pluie, de brouillard, de neige, de neige fondue (...), le conducteur doit adapter sa vitesse en fonction des circonstances.",
+      "explanation": "- 'Lieux spéciaux'.En cas de forte pluie, de brouillard, de neige, de neige fondue (...), le conducteur doit adapter sa vitesse en fonction des circonstances.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/971.jpg"
     },
     {
@@ -18208,7 +18208,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***Introduisez un nombre.Au-delà de ce signal routier en Wallonie,  en voiture, vous pouvez rouler à une vitesse maximale de (...) km/h.",
       "correctAnswer": "90",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 12 – ‘La vitesse’.La vitesse maximale sur une route ordinaire est…… en Wallonie: 90 km/h;… en Flandre et Bruxelles-capitale région: 70 km/h.",
+      "explanation": "La vitesse maximale sur une route ordinaire est…… en Wallonie: 90 km/h;… en Flandre et Bruxelles-capitale région: 70 km/h.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/294.jpg"
     },
     {
@@ -18412,7 +18412,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***La voiture A peut-elle se déplacer vers la gauche ?",
       "correctAnswer": "NON",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 2 – ‘Bandes de circulation’.ExplicationIl s’agit d’un changement de bande. Vous ne pouvez pas franchir une ligne blanche continue.C’est une infraction grave qui implique une perte de 5 points à la théorie et une déchéance du droit de conduire pour un jeune conducteur.",
+      "explanation": "ExplicationIl s’agit d’un changement de bande. Vous ne pouvez pas franchir une ligne blanche continue.C’est une infraction grave qui implique une perte de 5 points à la théorie et une déchéance du droit de conduire pour un jeune conducteur.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/63.jpg"
     },
     {
@@ -18500,7 +18500,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]Les voitures se dirigent vers le ventre et le dos de l’agent et doivent s'arrêter.",
+      "explanation": "Les voitures se dirigent vers le ventre et le dos de l’agent et doivent s'arrêter.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/430.jpg"
     },
     {
@@ -18592,7 +18592,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]La voiture se dirige vers le ventre de l’agent et doit s’arrêter.",
+      "explanation": "La voiture se dirige vers le ventre de l’agent et doit s’arrêter.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/452.jpg"
     },
     {
@@ -18614,7 +18614,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": " En agglomération les conducteurs sont autorisés à conduire sur la voie qu'ils choisissent:  . soit sur une rue à sens unique qui est divisé en voies, . soit sur une rue à quatre voies ou plus, dont au moins deux pour chaque direction.",
+      "explanation": "En agglomération les conducteurs sont autorisés à conduire sur la voie qu'ils choisissent:  . soit sur une rue à sens unique qui est divisé en voies, . soit sur une rue à quatre voies ou plus, dont au moins deux pour chaque direction.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/425.jpg"
     },
     {
@@ -18766,7 +18766,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]Il se dirige vers le ventre de l’agent et doit s’arrêter.",
+      "explanation": "Il se dirige vers le ventre de l’agent et doit s’arrêter.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/448.jpg"
     },
     {
@@ -18826,7 +18826,7 @@
       "type": "yes_no",
       "question": "ESP est l'abréviation de Electronic Stability Program.(En français, on dit : Électro-Stabilisateur Programmé).",
       "correctAnswer": "OUI",
-      "explanation": " Le correcteur électronique de trajectoire (en anglais Electronic Stability Program, ESP ou Electronic Stability Control, ESC ou Dynamic stability control, DSC) est un équipement de sécurité active d'antidérapage destiné à améliorer le contrôle de trajectoire d'un véhicule automobile.",
+      "explanation": "Le correcteur électronique de trajectoire (en anglais Electronic Stability Program, ESP ou Electronic Stability Control, ESC ou Dynamic stability control, DSC) est un équipement de sécurité active d'antidérapage destiné à améliorer le contrôle de trajectoire d'un véhicule automobile.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/896.jpg"
     },
     {
@@ -18958,7 +18958,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***Entrez un nombre aussi long et aussi bas que possible (p. ex., 1356 et non 6531), composé des numéros des panneaux dont la vitesse maximale autorisée est de 20 km / heure.",
       "correctAnswer": "3",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 12 – ‘La vitesse’.",
+      "explanation": "",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/933.jpg"
     },
     {
@@ -19146,7 +19146,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***Les barrières sont encore ouvertes, mais l'alarme est clairement audible.Pouvez-vous encore conduire sur le passage ?",
       "correctAnswer": "NON",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 18 – ‘les feux de circulation’.",
+      "explanation": "",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/493.jpg"
     },
     {
@@ -19154,7 +19154,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***Introduisez un nombre.Sur cette route en Flandre, en voiture, vous pouvez rouler à une vitesse maximale de (...) km/h.",
       "correctAnswer": "70",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 12 – ‘La vitesse’.La vitesse maximale sur une route ordinaire est…… en Wallonne: 90 km/h;… en Flandre et Bruxelles capitale région: 70 km/h.",
+      "explanation": "La vitesse maximale sur une route ordinaire est…… en Wallonne: 90 km/h;… en Flandre et Bruxelles capitale région: 70 km/h.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/299.jpg"
     },
     {
@@ -19180,7 +19180,7 @@
       "type": "yes_no",
       "question": "Est-il permis de faire demi-tour sur un marquage en damier à une intersection ?",
       "correctAnswer": "OUI",
-      "explanation": " - 'Train - Tram -Bus'.",
+      "explanation": "- 'Train - Tram -Bus'.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1044.jpg"
     },
     {
@@ -19352,7 +19352,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]La voiture brune conduit en direction des doigts de l’agent.",
+      "explanation": "La voiture brune conduit en direction des doigts de l’agent.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/442.jpg"
     },
     {
@@ -19618,7 +19618,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***Le conducteur de la voiture brune veut s’engager dans le carrefour.Doit-il respecter le feu rouge ?",
       "correctAnswer": "NON",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 18 – ‘les feux de circulation’.Non, parce que le feu rouge est sur la gauche de lui.",
+      "explanation": "Non, parce que le feu rouge est sur la gauche de lui.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/463.jpg"
     },
     {
@@ -20068,7 +20068,7 @@
       "type": "number",
       "question": "À quelle vitesse maximale (... km/h) une voiture peut-elle rouler sur cette route pour automobiles composée de 2 x 3 bandes de circulation hors agglomération ?",
       "correctAnswer": "120",
-      "explanation": " Sur les routes pour automobiles, hors agglomération, vous pouvez circuler à 120 km/h :. si chaque sens de circulation est composé d’au moins 2 bandes de circulation,. et les sens de circulation sont divisés par une berme centrale.",
+      "explanation": "Sur les routes pour automobiles, hors agglomération, vous pouvez circuler à 120 km/h :. si chaque sens de circulation est composé d’au moins 2 bandes de circulation,. et les sens de circulation sont divisés par une berme centrale.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/140.jpg"
     },
     {
@@ -20208,7 +20208,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 15+16 – ‘Le dépassement’.   Le conducteur doit laisser une distance latérale d'au moins un mètre entre son véhicule et le cycliste ou le conducteur de cyclomoteur à deux roues.En dehors des agglomérations, la distance latérale est d’au moins un mètre et demi.",
+      "explanation": "Le conducteur doit laisser une distance latérale d'au moins un mètre entre son véhicule et le cycliste ou le conducteur de cyclomoteur à deux roues.En dehors des agglomérations, la distance latérale est d’au moins un mètre et demi.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/405.jpg"
     },
     {
@@ -20238,7 +20238,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***Introduisez un nombre:En cas de forte pluie, de jour, vous devez allumer vos feux de croisement si la visibilité est réduite à moins de (...) mètres.",
       "correctAnswer": "200",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 11 – ‘Les feux’.200 mètres.",
+      "explanation": "200 mètres.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/272.jpg"
     },
     {
@@ -20436,7 +20436,7 @@
       "type": "yes_no",
       "question": "Le feu est vert, mais le carrefour n’est pas libre.Pouvez-vous, pendant que vous attendez, rester sur le passage pour piétons ?",
       "correctAnswer": "NON",
-      "explanation": "  Vous pouvez conduire sur le passage, lorsque la lumière est verte et la jonction est libre. Mais vous ne pouvez pas bloquer le passage pour piétons pendant que vous attendez.",
+      "explanation": "Vous pouvez conduire sur le passage, lorsque la lumière est verte et la jonction est libre. Mais vous ne pouvez pas bloquer le passage pour piétons pendant que vous attendez.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/489.jpg"
     },
     {
@@ -20632,7 +20632,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "  Dans ce cas vous devez comprendre:a) que ce n'est pas un chemin de terre.b) que dans ce cas le changement de direction n'a pas d'impact sur la priorité.c) que l'enfant est un piéton en dehors d'un passage.d) que la partie sur laquelle il circule n'est pas une piste cyclable (pas de signal, pas dit dans la question) et que de toute manière elle n'est pas traversante.",
+      "explanation": "Dans ce cas vous devez comprendre:a) que ce n'est pas un chemin de terre.b) que dans ce cas le changement de direction n'a pas d'impact sur la priorité.c) que l'enfant est un piéton en dehors d'un passage.d) que la partie sur laquelle il circule n'est pas une piste cyclable (pas de signal, pas dit dans la question) et que de toute manière elle n'est pas traversante.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/557.jpg"
     },
     {
@@ -20736,7 +20736,7 @@
       "type": "yes_no",
       "question": "Cette voiture peut-elle tourner à droite ?",
       "correctAnswer": "OUI",
-      "explanation": " Fin de route pour automobiles.Signal d’indication.",
+      "explanation": "Fin de route pour automobiles.Signal d’indication.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/144.jpg"
     },
     {
@@ -20798,7 +20798,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": " Le panneau additionnel bleu indique que l’interdiction de dépasser commence dans 200 mètres.L’interdiction ne s’applique donc pas encore ici, et la voiture peut dépasser le camion par la gauche.",
+      "explanation": "Le panneau additionnel bleu indique que l’interdiction de dépasser commence dans 200 mètres.L’interdiction ne s’applique donc pas encore ici, et la voiture peut dépasser le camion par la gauche.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1530.jpg"
     },
     {
@@ -21030,7 +21030,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 21 – ‘Tourner à droite ou à gauche’.Le conducteur qui veut rouler tout droit à priorité.Le conducteur qui veut tourner à gauche accorde la priorité.",
+      "explanation": "Le conducteur qui veut rouler tout droit à priorité.Le conducteur qui veut tourner à gauche accorde la priorité.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/577.jpg"
     },
     {
@@ -21184,7 +21184,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": " Le bus vient de la droite.",
+      "explanation": "Le bus vient de la droite.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/561.jpg"
     },
     {
@@ -21276,7 +21276,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***Le conducteur de cette voiture peut rouler ici dans la région wallonne à une vitesse maximale de (...) km/h.",
       "correctAnswer": "90",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 4 – ‘L’autoroute’.Maximale 90 km/h (sauf si les panneaux de signalisation ou règles imposent une limite de vitesse différente.En Flandre et Bruxelles-capitale région: 70 km/heure.Dans la région wallonne la vitesse maximale est 90 km/heure.",
+      "explanation": "autoroute’.Maximale 90 km/h (sauf si les panneaux de signalisation ou règles imposent une limite de vitesse différente.En Flandre et Bruxelles-capitale région: 70 km/heure.Dans la région wallonne la vitesse maximale est 90 km/heure.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/109.jpg"
     },
     {
@@ -21742,7 +21742,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": " Si la M.M.A. de la remorque est supérieur à 750 kg, un permis de conduire B est bon à condition que la M.M.A. de l'ensemble (voiture + remorque) ne dépasse pas 3,5 tonnes.",
+      "explanation": "Si la M.M.A. de la remorque est supérieur à 750 kg, un permis de conduire B est bon à condition que la M.M.A. de l'ensemble (voiture + remorque) ne dépasse pas 3,5 tonnes.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/234.jpg"
     },
     {
@@ -21764,7 +21764,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]L’agent donne l’ordre que la motocyclette doit s’arrêter.",
+      "explanation": "L’agent donne l’ordre que la motocyclette doit s’arrêter.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/445.jpg"
     },
     {
@@ -22322,7 +22322,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***A partir de combien de km/h d’excès de vitesse, hors agglomeration, la police peut-elle retirer temporairement votre permis de conduire ?",
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 12 – ‘La vitesse’.",
+      "explanation": "",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/325.jpg"
     },
     {
@@ -22520,7 +22520,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 4 – ‘L’autoroute’.",
+      "explanation": "autoroute’.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/945.jpg"
     },
     {
@@ -22722,7 +22722,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***Pouvez-vous franchir ce signal routier avec n’importe quelle voiture ?",
       "correctAnswer": "NON",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 23 – ‘Sens interdits’.Seules les voitures avec une M.E.C. maximale de 2,5 tonnes.",
+      "explanation": "Seules les voitures avec une M.E.C. maximale de 2,5 tonnes.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/647.jpg"
     },
     {
@@ -22932,7 +22932,7 @@
       "type": "number",
       "question": "Quel numéro indique le bouchon du liquide de frein ?",
       "correctAnswer": "2",
-      "explanation": " = huile.2 = liquide de frein3 = liquide de refroidissement.4 = jauge d'huile.5 = essuie-glaces.",
+      "explanation": "= huile.2 = liquide de frein3 = liquide de refroidissement.4 = jauge d'huile.5 = essuie-glaces.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/983.jpg"
     },
     {
@@ -22972,7 +22972,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]Vous approchez le bout des doigts de l’agent, alors vous êtes autorisé à traverser la jonction.",
+      "explanation": "Vous approchez le bout des doigts de l’agent, alors vous êtes autorisé à traverser la jonction.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/450.jpg"
     },
     {
@@ -23046,7 +23046,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***La voiture bleue peut-elle s'engager dans le carrefour ?",
       "correctAnswer": "OUI",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]Oui, parce que le conducteur conduit en direction des doigts de l’agent.",
+      "explanation": "Oui, parce que le conducteur conduit en direction des doigts de l’agent.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/440.jpg"
     },
     {
@@ -23698,7 +23698,7 @@
       "type": "yes_no",
       "question": "*** Question de 5 points ***Une route divisée en deux voies.La voiture brune dépasse une moto.La voiture bleue peut-elle dépasser la voiture brune et la moto?",
       "correctAnswer": "OUI",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 15+16 – ‘Le dépassement’.",
+      "explanation": "",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/949.jpg"
     },
     {
@@ -23822,7 +23822,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "   Panneau de signalisation : carrefour où la priorité de droite est applicable.",
+      "explanation": "Panneau de signalisation : carrefour où la priorité de droite est applicable.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/568.jpg"
     },
     {
@@ -23870,7 +23870,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 14 – ‘Le croisement des véhicules’.Le code de la route ne définit pas « combien » cela doit être. Il  mentionne : « suffisamment de distance ».On doit donc adapter sa vitesse pour se croiser sans se toucher.Attention, si c’était un vélo ou un cyclomoteur, la réponse aurait été C en agglomération et B hors agglomération. Si la distance ne peut être respectée, la voiture doit s’arrêter mais le cycliste ou le cyclomoteur peut continuer, car lui doit respecter « A »",
+      "explanation": "Le code de la route ne définit pas « combien » cela doit être. Il  mentionne : « suffisamment de distance ».On doit donc adapter sa vitesse pour se croiser sans se toucher.Attention, si c’était un vélo ou un cyclomoteur, la réponse aurait été C en agglomération et B hors agglomération. Si la distance ne peut être respectée, la voiture doit s’arrêter mais le cycliste ou le cyclomoteur peut continuer, car lui doit respecter « A »",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/375.jpg"
     },
     {
@@ -24310,7 +24310,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "   Seules les voitures électriques.",
+      "explanation": "Seules les voitures électriques.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/789.jpg"
     },
     {
@@ -24350,7 +24350,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 15+16 – ‘Le dépassement’.",
+      "explanation": "",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/947.jpg"
     },
     {
@@ -24476,7 +24476,7 @@
       "type": "yes_no",
       "question": "La voiture verte peut-elle stationner dans ce parking ?",
       "correctAnswer": "OUI",
-      "explanation": " - «Lieux spéciaux».Dans un quartier résidentiel, vous ne pouvez garer une voiture que si des places de stationnement sont prévues.Vous pouvez ensuite vous garer à droite ou à gauche par rapport à votre direction de conduite.",
+      "explanation": "- «Lieux spéciaux».Dans un quartier résidentiel, vous ne pouvez garer une voiture que si des places de stationnement sont prévues.Vous pouvez ensuite vous garer à droite ou à gauche par rapport à votre direction de conduite.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/968.jpg"
     },
     {
@@ -24524,7 +24524,7 @@
       "type": "number",
       "question": "*** Question de 5 points ***Introduisez un nombre.Les enfants de moins de (...) ans, qui mesurent moins de 1,35 mètre, doivent être transportés dans un dispositif de retenue pour enfants qui leur est adapté.",
       "correctAnswer": "18",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 10 – ‘Chargement de véhicules’.Les enfants de moins de 18 ans et dont la taille est inférieure à 1m35 doivent voyager dans un dispositif de retenue pour enfants homologué.Homologué veut dire qu’il est conforme aux normes imposées par la CEE.",
+      "explanation": "Les enfants de moins de 18 ans et dont la taille est inférieure à 1m35 doivent voyager dans un dispositif de retenue pour enfants homologué.Homologué veut dire qu’il est conforme aux normes imposées par la CEE.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/248.jpg"
     },
     {
@@ -24562,7 +24562,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 14 – ‘Le croisement des véhicules’.",
+      "explanation": "",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/941.jpg"
     },
     {
@@ -24716,7 +24716,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "  Les signaux de danger sont placés à une distance approximative de 150 m de l'endroit dangereux.",
+      "explanation": "Les signaux de danger sont placés à une distance approximative de 150 m de l'endroit dangereux.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/492.jpg"
     },
     {
@@ -24936,7 +24936,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": " Le conducteur doit porter un gilet de sécurité. Mais il est préférable que les passagers le fassent aussi.",
+      "explanation": "Le conducteur doit porter un gilet de sécurité. Mais il est préférable que les passagers le fassent aussi.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/135.jpg"
     },
     {
@@ -24996,7 +24996,7 @@
       "type": "yes_no",
       "question": "La voiture devant vous veut tourner à gauche.Il n’y a pas de cycliste sur la piste cyclable à côté de vous.Pouvez-vous rouler sur la piste cyclable pour dépasser la voiture par la droite ?",
       "correctAnswer": "NON",
-      "explanation": " - 'Piste cyclable et cyclistes'.La piste cyclable ne fait pas partie de la chaussée.Vous ne pouvez pas y circuler en voiture.",
+      "explanation": "- 'Piste cyclable et cyclistes'.La piste cyclable ne fait pas partie de la chaussée.Vous ne pouvez pas y circuler en voiture.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1119.jpg"
     },
     {
@@ -25098,7 +25098,7 @@
       "type": "number",
       "question": "Combien de minutes pouvez-vous stationner?",
       "correctAnswer": "A",
-      "explanation": "  .  Une durée maximale de stationnement différent peut être mentionnée.",
+      "explanation": ".  Une durée maximale de stationnement différent peut être mentionnée.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/788.jpg"
     },
     {
@@ -25160,7 +25160,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "[Violations du 3ème et 4ème degré sur notre page de Théorie B : n ° 32]LEÇON 15+16 – ‘Le dépassement’.Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues.",
+      "explanation": "Le signal d’interdiction interdit aux conducteurs de dépasser par la gauche:. un véhicule attelé.. ou un véhicule à plus de deux roues.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/424.jpg"
     },
     {
