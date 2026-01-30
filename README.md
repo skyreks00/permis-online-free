@@ -13,26 +13,13 @@ Ce projet propose une application web moderne pour réviser le code de la route 
 
 Accès en ligne : [https://skyreks00.github.io/permis-online-free/](https://skyreks00.github.io/permis-online-free/)
 
-## 🚀 Installation locale
+## 🌐 Accès en ligne
 
-1. Clone le dépôt :
-	```bash
-	git clone https://github.com/skyreks00/permis-online-free.git
-	cd permis-online-free/code-route-app
-	```
-2. Installe les dépendances :
-	```bash
-	npm install
-	```
-3. Lance le serveur de développement :
-	```bash
-	npm run dev
-	```
-4. Ouvre [http://localhost:5173](http://localhost:5173)
+Utilisation directe : [https://skyreks00.github.io/permis-online-free/](https://skyreks00.github.io/permis-online-free/)
 
-## 🛠️ Déploiement GitHub Pages
+## 🛠️ Déploiement (pour contributeurs)
 
-Pour publier une nouvelle version :
+Pour publier une nouvelle version :
 ```bash
 npm run deploy
 ```
