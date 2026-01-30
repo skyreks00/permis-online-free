@@ -1,16 +1,49 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Permis Online Free – Code de la Route
 
-Currently, two official plugins are available:
+> Entraînement gratuit au code de la route, quiz interactifs et leçons en ligne.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚦 Aperçu
 
-## React Compiler
+Ce projet propose une application web moderne pour réviser le code de la route français :
+- Quiz interactifs par thème
+- Leçons illustrées
+- Suivi de la progression
+- Mode sombre/clair
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Accès en ligne : [https://skyreks00.github.io/permis-online-free/](https://skyreks00.github.io/permis-online-free/)
 
-## Expanding the ESLint configuration
+## 🚀 Installation locale
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone le dépôt :
+	```bash
+	git clone https://github.com/skyreks00/permis-online-free.git
+	cd permis-online-free/code-route-app
+	```
+2. Installe les dépendances :
+	```bash
+	npm install
+	```
+3. Lance le serveur de développement :
+	```bash
+	npm run dev
+	```
+4. Ouvre [http://localhost:5173](http://localhost:5173)
+
+## 🛠️ Déploiement GitHub Pages
+
+Pour publier une nouvelle version :
+```bash
+npm run deploy
+```
+Le site sera mis à jour sur GitHub Pages.
+
+## 📁 Structure du projet
+
+- `src/` : code source React
+- `public/data/` : questions des quiz (JSON)
+- `public/lecon/` : leçons (HTML)
+
+## 🙏 Remerciements
+
+Inspiré par les ressources libres du code de la route. Projet open source, contributions bienvenues !
