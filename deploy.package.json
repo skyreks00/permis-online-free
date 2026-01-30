@@ -1,0 +1,12 @@
+{
+  "name": "deploy",
+  "version": "1.0.0",
+  "description": "Déploiement sur GitHub Pages",
+  "scripts": {
+    "predeploy": "vite build --config vite.config.github.js",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
+  }
+}

@@ -10,7 +10,8 @@ const LessonViewer = ({ lessonFile, onBack, theme }) => {
         const fetchLesson = async () => {
             setLoading(true);
             try {
-                const response = await fetch(`/lecon/${lessonFile}`);
+                const base = import.meta.env.BASE_URL || '/';
+                const response = await fetch(`${base}lecon/${lessonFile}`);
                 const html = await response.text();
 
                 // Parse the HTML

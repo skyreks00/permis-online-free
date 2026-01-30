@@ -1,3 +1,17 @@
+/* Aligne le bouton suivant avec l'image sur desktop */
+.quiz-next-row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+@media (max-width: 880px) {
+  .quiz-next-row {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Modern design system for Code Route App */
 /* 1) Reset & base */
 *,
@@ -451,6 +465,16 @@ input[type='checkbox'] {
   border-color: var(--primary);
 }
 
+.number-field.correct .number-input {
+  border-color: var(--success);
+  background: color-mix(in oklab, var(--success) 10%, var(--bg-elev));
+}
+
+.number-field.incorrect .number-input {
+  border-color: var(--danger);
+  background: color-mix(in oklab, var(--danger) 10%, var(--bg-elev));
+}
+
 .number-feedback {
   color: var(--muted);
   font-size: 14px;
@@ -587,4 +611,21 @@ input[type='checkbox'] {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--muted);
+}
+
+/* 17) Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 
-const QuestionCard = ({ title = 'Titre', question, onAnswer, currentIndex, total }) => {
+const QuestionCard = ({ title = 'Titre', question, onAnswer, currentIndex, total, instantFeedback }) => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [hasAnswered, setHasAnswered] = useState(false);
   const [freeformAnswer, setFreeformAnswer] = useState('');
@@ -77,7 +77,7 @@ const QuestionCard = ({ title = 'Titre', question, onAnswer, currentIndex, total
 
   const handleAnswer = (answer) => {
     if (hasAnswered) return;
-    
+
     setSelectedAnswer(answer);
     setHasAnswered(true);
     const isCorrect = answer === question.correctAnswer;
@@ -113,6 +113,14 @@ const QuestionCard = ({ title = 'Titre', question, onAnswer, currentIndex, total
 
   const getButtonClass = (answer) => {
     if (timedOut) return 'dimmed';
+
+    if (hasAnswered && instantFeedback) {
+      // Mode correction directe
+      if (answer === question.correctAnswer) return 'correct';
+      if (answer === selectedAnswer && selectedAnswer !== question.correctAnswer) return 'incorrect';
+      return 'dimmed';
+    }
+
     if (selectedAnswer == null) return '';
     return answer === selectedAnswer ? 'selected' : 'dimmed';
   };
@@ -181,7 +189,12 @@ const QuestionCard = ({ title = 'Titre', question, onAnswer, currentIndex, total
               </>
             ) : (
               <div className="number-wrap">
-                <div className={`number-field ${hasAnswered ? 'selected' : ''}`}>
+                <div className={`number-field ${hasAnswered
+                    ? (instantFeedback
+                      ? (result === 'correct' ? 'correct' : 'incorrect')
+                      : 'selected')
+                    : ''
+                  }`}>
                   <input
                     className="number-input"
                     type="text"
@@ -219,7 +232,13 @@ const QuestionCard = ({ title = 'Titre', question, onAnswer, currentIndex, total
         </div>
       </div>
 
-      {/* Explications désactivées */}
+      {/* Explications (Mode Correction Directe) */}
+      {instantFeedback && hasAnswered && question.explanation && (
+        <div className="explanation animate-fade-in">
+          <div className="explanation-title">Explication</div>
+          <div className="explanation-text">{question.explanation}</div>
+        </div>
+      )}
     </div>
   );
 };

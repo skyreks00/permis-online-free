@@ -18,6 +18,17 @@ function App() {
   const [selectedLesson, setSelectedLesson] = useState(null);
   const [colorTheme, setColorTheme] = useState(null);
   const [showProfile, setShowProfile] = useState(false);
+  const [instantFeedback, setInstantFeedback] = useState(() => {
+    return localStorage.getItem('instantFeedback') === 'true';
+  });
+
+  const toggleInstantFeedback = () => {
+    setInstantFeedback(prev => {
+      const next = !prev;
+      localStorage.setItem('instantFeedback', String(next));
+      return next;
+    });
+  };
 
   // Persistence state
   const [progress, setProgress] = useState(() => {
@@ -93,7 +104,8 @@ function App() {
 
   const loadQuestions = async (themeFile) => {
     try {
-      const response = await fetch(`/data/${themeFile}`);
+      const base = import.meta.env.BASE_URL || '/';
+      const response = await fetch(`${base}data/${themeFile}`);
       const data = await response.json();
       return data.questions;
     } catch (error) {
@@ -304,6 +316,7 @@ function App() {
           themeName={selectedTheme.name}
           onFinish={handleFinishQuiz}
           onExit={handleBackToThemes}
+          instantFeedback={instantFeedback}
         />
       </>
     );
@@ -318,6 +331,8 @@ function App() {
         onSelectTheme={handleSelectTheme}
         onStartRandom={handleStartRandom}
         onSelectLesson={handleSelectLesson}
+        instantFeedback={instantFeedback}
+        onToggleInstantFeedback={toggleInstantFeedback}
       />
     </>
   );

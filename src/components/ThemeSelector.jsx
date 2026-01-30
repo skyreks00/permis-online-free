@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
-import { Dices, BookOpen, Search } from 'lucide-react';
+import { Dices, BookOpen, Search, CheckCircle2, Circle } from 'lucide-react';
 
-const ThemeSelector = ({ sections, progress, onSelectTheme, onStartRandom, onSelectLesson }) => {
+const ThemeSelector = ({ sections, progress, onSelectTheme, onStartRandom, onSelectLesson, instantFeedback, onToggleInstantFeedback }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredSections = useMemo(() => {
@@ -41,6 +41,14 @@ const ThemeSelector = ({ sections, progress, onSelectTheme, onStartRandom, onSel
       <div className="actions">
         <button type="button" className="btn-primary" onClick={onStartRandom} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           <Dices size={18} /> Quiz aléatoire (tous les thèmes)
+        </button>
+        <button
+          className="btn-ghost"
+          onClick={onToggleInstantFeedback}
+          style={{ display: 'flex', alignItems: 'center', gap: '8px', border: '1px solid var(--border)' }}
+        >
+          {instantFeedback ? <CheckCircle2 size={18} className="text-success" /> : <Circle size={18} />}
+          Correction directe {instantFeedback ? 'activée' : 'désactivée'}
         </button>
       </div>
 

@@ -57,9 +57,8 @@
     },
     {
       "id": 4,
-      "type": "multiple_choice",
+      "type": "number",
       "question": "À quelle vitesse maximale pouvez-vous circuler sur une voie publique ordinaire en Flandre ?",
-      "propositions": [],
       "correctAnswer": "70",
       "explanation": "LEÇON 2 – ‘Bandes de circulation’. En Flandre la vitesse maximale hors agglomération est de 70 km/h (sauf si les  signaux routiers  ou règles imposent une limite de vitesse différente.En Wallonie, dans les mêmes conditions la vitesse maximale est de 90 km/heure.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/4.jpg"
