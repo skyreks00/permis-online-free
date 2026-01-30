@@ -1,10 +1,18 @@
 import React from 'react';
 import { Trophy, ThumbsUp, Award, Target, PartyPopper } from 'lucide-react';
 
-const Results = ({ score, total, questions = [], answers = [], showReview = false, onRestart, onBackToThemes }) => {
+const Results = ({ score, total, questions = [], answers = [], showReview = false, onRestart, onBackToThemes, isExamMode }) => {
   const percentage = Math.round((score / total) * 100);
 
   const getResultMessage = () => {
+    if (isExamMode) {
+      const incorrect = total - score;
+      if (incorrect >= 9) {
+        return { icon: <Target size={48} className="text-danger" />, text: 'ÉCHEC - 9 fautes ou plus', tone: 'danger' };
+      }
+      return { icon: <Trophy size={48} className="text-success" />, text: 'RÉUSSI !', tone: 'success' };
+    }
+
     if (percentage >= 90) return { icon: <Trophy size={48} className="text-success" />, text: 'Excellent !', tone: 'success' };
     if (percentage >= 75) return { icon: <ThumbsUp size={48} className="text-success" />, text: 'Très bien !', tone: 'success' };
     if (percentage >= 50) return { icon: <Award size={48} className="text-warning" />, text: 'Pas mal !', tone: 'warn' };
@@ -32,10 +40,12 @@ const Results = ({ score, total, questions = [], answers = [], showReview = fals
 
   const cleanExplanation = (text) => {
     if (!text) return '';
-    let t = String(text);
-    // Remove leading chapter prefix like "LEÇON 1 – Title." or "LECON 1 - Title."
-    t = t.replace(/^\s*LE(?:Ç|C)ON\s*\d+\s*[–-]\s*[^.]*\.\s*/i, '');
-    return t.trim();
+    return t
+      .replace(/^\s*INFO\W*PERMIS\W*DE\W*CONDUIRE\W*/i, '')
+      .replace(/^\s*Signification\W*/i, '')
+      .replace(/^\s*Explication\W*/i, '')
+      .replace(/^\s*LE(?:Ç|C)ON\s*\d+(?:\s*[–\-:]\s*[^.\n]*)?(?:[.\n]\s*)?/i, '')
+      .trim();
   };
 
   return (

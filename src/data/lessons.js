@@ -21,7 +21,7 @@ export const lessons = [
   { slug: 'lecon-16-interdiction-depasser', title: 'LEÇON 16 – Où le dépassement par la gauche est interdit', file: "LECON 16 REGLES OÙ EST LE DÉPASSEMENT PAR LA GAUCHE INTERDIT.md" },
   { slug: 'lecon-17-injonctions', title: 'LEÇON 17 – Injonctions des personnes qualifiées et priorité', file: 'LECON 17 INJONCTIONS DES PERSONNES QUALIFIÉES ET PRIORITÉ.md' },
   { slug: 'lecon-18-signaux-lumineux', title: 'LEÇON 18 – Signaux lumineux, flèches et tram', file: 'LECON 18 LES SIGNAUX LUMINEUX DE CIRCULATION, FLÈCHES ET TRAM.md' },
-  { slug: 'lecon-19-priorite', title: 'LEÇON 19 – Signaux relatifs à la priorité', file: 'LECON 19 LES SIGNAUX RELATIFS À LA PRIORITÉ.md' },
+  { slug: 'lecon-19-priorite', title: ' – Signaux relatifs à la priorité', file: 'LECON 19 LES SIGNAUX RELATIFS À LA PRIORITÉ.md' },
   { slug: 'lecon-20-priorite-de-droite', title: 'LEÇON 20 – Priorité de droite', file: 'LECON 20 LA PRIORITÉ DE DROITE.md' },
   { slug: 'lecon-21-tourner', title: 'LEÇON 21 – Priorité et tourner à droite/à gauche', file: 'LECON 21 LA PRIORITÉ ET TOURNER À DROITE OU À GAUCHE.md' },
   { slug: 'lecon-22-tram-bus', title: 'LEÇON 22 – Site spécial franchissable, tram, bus', file: 'LECON 22 SITE SPÉCIAL FRANCHISSABLE, TRAM, BUS.md' },

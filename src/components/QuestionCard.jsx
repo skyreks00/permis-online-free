@@ -1,8 +1,10 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { BookOpen, X, CheckCircle } from 'lucide-react';
 
-const QuestionCard = ({ title = 'Titre', question, onAnswer, currentIndex, total, instantFeedback }) => {
+const QuestionCard = ({ title = 'Titre', question, onAnswer, currentIndex, total, instantFeedback, autoPlayAudio, onNext, isLastQuestion }) => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [hasAnswered, setHasAnswered] = useState(false);
+  const [showExplanation, setShowExplanation] = useState(false);
   const [freeformAnswer, setFreeformAnswer] = useState('');
   const [result, setResult] = useState(null); // 'correct' | 'incorrect' | null
   const [timedOut, setTimedOut] = useState(false);
@@ -11,6 +13,59 @@ const QuestionCard = ({ title = 'Titre', question, onAnswer, currentIndex, total
   const intervalRef = useRef(null);
   const timeoutRef = useRef(null);
   const answeredRef = useRef(false);
+
+  // Audio effect
+  const [voice, setVoice] = useState(null);
+
+  useEffect(() => {
+    const loadVoices = () => {
+      const voices = window.speechSynthesis.getVoices();
+      // Try to find a good French voice
+      // Priority: Google -> Microsoft -> any FR
+      const frVoices = voices.filter(v => v.lang.startsWith('fr'));
+      const best = frVoices.find(v => v.name.includes('Google'))
+        || frVoices.find(v => v.name.includes('Microsoft'))
+        || frVoices.find(v => v.name.includes('Natural')) // Edge 'Natural' voices
+        || frVoices[0];
+      setVoice(best);
+    };
+
+    loadVoices();
+    window.speechSynthesis.onvoiceschanged = loadVoices;
+
+    return () => {
+      window.speechSynthesis.onvoiceschanged = null;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (autoPlayAudio && question) {
+      // Cancel previous speech
+      window.speechSynthesis.cancel();
+
+      // Construct text: Question ... Propositions
+      let textToRead = question.question || '';
+      if (question.propositions && Array.isArray(question.propositions)) {
+        const propsText = question.propositions.map(p => `${p.letter}... ${p.text}`).join('. ');
+        textToRead += `. ${propsText}`;
+      } else if (question.type === 'yes_no') {
+        textToRead += ". A... Oui. B... Non.";
+      }
+
+      const utterance = new SpeechSynthesisUtterance(textToRead);
+      if (voice) utterance.voice = voice;
+      utterance.lang = 'fr-FR';
+      utterance.rate = 1.0;
+      window.speechSynthesis.speak(utterance);
+    } else {
+      window.speechSynthesis.cancel();
+    }
+
+    // Cleanup on unmount or question change
+    return () => {
+      window.speechSynthesis.cancel();
+    };
+  }, [question, autoPlayAudio, voice]);
 
   useEffect(() => {
     setSelectedAnswer(null);
@@ -128,7 +183,6 @@ const QuestionCard = ({ title = 'Titre', question, onAnswer, currentIndex, total
   return (
     <div className={`question-card${timedOut ? ' timed-out' : ''}`}>
       <div className="question-header">
-        <div className="question-title">{title || 'Titre'}</div>
         <div className="question-progress" aria-live="polite">
           Question {Math.min(currentIndex + 1, total)} / {total}
         </div>
@@ -148,26 +202,34 @@ const QuestionCard = ({ title = 'Titre', question, onAnswer, currentIndex, total
         <div className="question-right">
           <div className="question-text">
             <div>
-              <div>
-                <strong>ID:</strong> {question.id}
-              </div>
               <div className="question-text-inner">{question.question}</div>
             </div>
           </div>
 
           <div className="answers">
             {question.type === 'multiple_choice' && question.propositions ? (
-              question.propositions.map((prop) => (
-                <button
-                  key={prop.letter}
-                  className={`answer-btn ${getButtonClass(prop.letter)}`}
-                  onClick={() => handleAnswer(prop.letter)}
-                  disabled={hasAnswered}
-                >
-                  <span className="answer-letter">{prop.letter}.</span>
-                  <span className="answer-text">{prop.text}</span>
-                </button>
-              ))
+              question.propositions.map((prop) => {
+                const isSelected = selectedAnswer === prop.letter;
+                // Only show check if instantFeedback is ON and it's the correct answer
+                // OR if it's the selected answer AND instantFeedback is ON (logic overlap, effectively: show on correct if feedback on)
+                // Actually, standard behavior:
+                // If feedback ON: Show valid check on Correct Answer.
+                // If feedback OFF: Do NOT show check.
+                const showCheck = hasAnswered && instantFeedback && prop.letter === question.correctAnswer;
+
+                return (
+                  <button
+                    key={prop.letter}
+                    className={`answer-btn ${getButtonClass(prop.letter)}`}
+                    onClick={() => handleAnswer(prop.letter)}
+                    disabled={hasAnswered}
+                  >
+                    <div className="answer-key">{prop.letter}</div>
+                    <div className="answer-text">{prop.text}</div>
+                    {showCheck && <CheckCircle size={20} className="answer-check" />}
+                  </button>
+                )
+              })
             ) : question.type === 'yes_no' ? (
               <>
                 <button
@@ -175,25 +237,27 @@ const QuestionCard = ({ title = 'Titre', question, onAnswer, currentIndex, total
                   onClick={() => handleAnswer('OUI')}
                   disabled={hasAnswered}
                 >
-                  <span className="answer-letter">A.</span>
-                  <span className="answer-text">Oui</span>
+                  <div className="answer-key">A</div>
+                  <div className="answer-text">Oui</div>
+                  {hasAnswered && instantFeedback && question.correctAnswer === 'OUI' && <CheckCircle size={20} className="answer-check" />}
                 </button>
                 <button
                   className={`answer-btn ${getButtonClass('NON')}`}
                   onClick={() => handleAnswer('NON')}
                   disabled={hasAnswered}
                 >
-                  <span className="answer-letter">B.</span>
-                  <span className="answer-text">Non</span>
+                  <div className="answer-key">B</div>
+                  <div className="answer-text">Non</div>
+                  {hasAnswered && instantFeedback && question.correctAnswer === 'NON' && <CheckCircle size={20} className="answer-check" />}
                 </button>
               </>
             ) : (
               <div className="number-wrap">
                 <div className={`number-field ${hasAnswered
-                    ? (instantFeedback
-                      ? (result === 'correct' ? 'correct' : 'incorrect')
-                      : 'selected')
-                    : ''
+                  ? (instantFeedback
+                    ? (result === 'correct' ? 'correct' : 'incorrect')
+                    : 'selected')
+                  : ''
                   }`}>
                   <input
                     className="number-input"
@@ -232,11 +296,84 @@ const QuestionCard = ({ title = 'Titre', question, onAnswer, currentIndex, total
         </div>
       </div>
 
-      {/* Explications (Mode Correction Directe) */}
-      {instantFeedback && hasAnswered && question.explanation && (
-        <div className="explanation animate-fade-in">
-          <div className="explanation-title">Explication</div>
-          <div className="explanation-text">{question.explanation}</div>
+      {/* Navigation Buttons inside the right column */}
+      {hasAnswered && (
+        <div className="quiz-nav-buttons">
+          {instantFeedback && question?.explanation && (
+            <button
+              onClick={() => setShowExplanation(true)}
+              className="btn-explanation"
+            >
+              <BookOpen size={20} />
+              Explication
+            </button>
+          )}
+          <button type="button" onClick={onNext} className="btn-next">
+            {isLastQuestion ? 'Terminer' : 'Suivant'}
+          </button>
+        </div>
+      )}
+
+      {/* Popup Modal */}
+      {showExplanation && (
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background: 'rgba(0, 0, 0, 0.75)',
+            zIndex: 9999,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '20px',
+            backdropFilter: 'blur(4px)'
+          }}
+          onClick={() => setShowExplanation(false)}
+        >
+          <div
+            style={{
+              background: 'var(--surface)',
+              color: 'var(--foreground)',
+              padding: '24px',
+              borderRadius: '16px',
+              maxWidth: '600px',
+              width: '100%',
+              maxHeight: '90vh',
+              overflowY: 'auto',
+              position: 'relative',
+              boxShadow: 'var(--shadow-lg)',
+              border: '1px solid var(--border)'
+            }}
+            onClick={(e) => e.stopPropagation()}
+            className="animate-in fade-in zoom-in-95 duration-200"
+          >
+            <button
+              onClick={() => setShowExplanation(false)}
+              style={{
+                position: 'absolute',
+                top: '16px',
+                right: '16px',
+                background: 'transparent',
+                border: 'none',
+                color: 'var(--muted-foreground)',
+                cursor: 'pointer',
+                padding: '4px'
+              }}
+            >
+              <X size={24} />
+            </button>
+            <div style={{ lineHeight: '1.6', fontSize: '1.05rem' }}>
+              {question.explanation
+                .replace(/^\s*INFO\W*PERMIS\W*DE\W*CONDUIRE\W*/i, '') // Robust INFO removal
+                .replace(/^\s*Signification\W*/i, '') // Remove "Signification" + any non-word chars (: / - \n)
+                .replace(/^\s*Explication\W*/i, '') // Remove "Explication" + any non-word chars
+                .replace(/^\s*LE(?:Ç|C)ON\s*\d+(?:\s*[–\-:]\s*[^.\n]*)?(?:[.\n]\s*)?/i, '') // Remove "LEÇON 1" (+ opt title)
+                .trim()}
+            </div>
+          </div>
         </div>
       )}
     </div>

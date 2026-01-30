@@ -14,7 +14,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [showResults, setShowResults] = useState(false);
   const [results, setResults] = useState({ correct: 0, incorrect: 0, answers: [] });
-  const [isRandomMode, setIsRandomMode] = useState(false);
+  const [isExamMode, setIsExamMode] = useState(false);
   const [selectedLesson, setSelectedLesson] = useState(null);
   const [colorTheme, setColorTheme] = useState(null);
   const [showProfile, setShowProfile] = useState(false);
@@ -22,10 +22,22 @@ function App() {
     return localStorage.getItem('instantFeedback') === 'true';
   });
 
+  const [autoPlayAudio, setAutoPlayAudio] = useState(() => {
+    return localStorage.getItem('autoPlayAudio') === 'true';
+  });
+
   const toggleInstantFeedback = () => {
     setInstantFeedback(prev => {
       const next = !prev;
       localStorage.setItem('instantFeedback', String(next));
+      return next;
+    });
+  };
+
+  const toggleAutoPlayAudio = () => {
+    setAutoPlayAudio(prev => {
+      const next = !prev;
+      localStorage.setItem('autoPlayAudio', String(next));
       return next;
     });
   };
@@ -43,8 +55,7 @@ function App() {
 
   // Save progress handler
   const saveProgress = (themeId, score, total) => {
-    // Only save for specific themes, not random mode
-    if (isRandomMode || !themeId) return;
+    if (!themeId) return;
 
     setProgress(prev => {
       const current = prev[themeId] || { bestScore: 0, attempts: 0, totalQuestions: total };
@@ -119,32 +130,22 @@ function App() {
     if (!theme.file) return;
 
     setSelectedTheme(theme);
-    setIsRandomMode(false);
+
+    // Check for Exam Mode
+    const isExam = theme.id === 'examen_B';
+    setIsExamMode(isExam);
+
     const loadedQuestions = await loadQuestions(theme.file);
     // Mélanger les questions
     const shuffled = [...loadedQuestions].sort(() => Math.random() - 0.5);
-    setQuestions(shuffled); // Prendre toutes les questions
-    setShowResults(false);
-  };
 
-  const handleStartRandom = async () => {
-    setIsRandomMode(true);
-    setSelectedTheme({ name: 'Quiz Aléatoire' });
-
-    // Charger des questions de plusieurs thèmes
-    const allQuestions = [];
-
-    // Flatten all themes from sections
-    const allThemes = (sections || []).flatMap(s => s.items).filter(item => item.file);
-
-    for (const theme of allThemes) {
-      const themeQuestions = await loadQuestions(theme.file);
-      allQuestions.push(...themeQuestions);
+    if (isExam) {
+      // Limit to 50 questions for Exam Mode
+      setQuestions(shuffled.slice(0, 50));
+    } else {
+      setQuestions(shuffled); // Prendre toutes les questions
     }
 
-    // Mélanger et prendre toutes les questions
-    const shuffled = [...allQuestions].sort(() => Math.random() - 0.5);
-    setQuestions(shuffled);
     setShowResults(false);
   };
 
@@ -166,8 +167,8 @@ function App() {
       score: score
     });
 
-    // Save progress if not random mode
-    if (!isRandomMode && selectedTheme) {
+    // Save progress
+    if (selectedTheme) {
       saveProgress(selectedTheme.id, score, questions.length);
     }
 
@@ -175,18 +176,14 @@ function App() {
   };
 
   const handleRestart = async () => {
-    if (isRandomMode) {
-      handleStartRandom();
-    } else {
-      handleSelectTheme(selectedTheme);
-    }
+    handleSelectTheme(selectedTheme);
   };
 
   const handleBackToThemes = () => {
     setSelectedTheme(null);
     setQuestions([]);
     setShowResults(false);
-    setIsRandomMode(false);
+    setIsExamMode(false);
   };
 
   const handleSelectLesson = (lessonFile) => {
@@ -269,7 +266,6 @@ function App() {
   if (selectedLesson) {
     return (
       <>
-        <TopControls />
         <LessonViewer lessonFile={selectedLesson} onBack={handleBackFromLesson} theme={colorTheme} />
       </>
     );
@@ -284,6 +280,10 @@ function App() {
           themesData={themesData}
           onBack={handleBackFromProfile}
           onReset={handleResetProgress}
+          instantFeedback={instantFeedback}
+          onToggleInstantFeedback={toggleInstantFeedback}
+          autoPlayAudio={autoPlayAudio}
+          onToggleAutoPlayAudio={toggleAutoPlayAudio}
         />
       </>
     );
@@ -302,6 +302,7 @@ function App() {
           showReview={true}
           onRestart={handleRestart}
           onBackToThemes={handleBackToThemes}
+          isExamMode={isExamMode}
         />
       </>
     );
@@ -310,13 +311,13 @@ function App() {
   if (selectedTheme && questions.length > 0) {
     return (
       <>
-        <TopControls />
         <Quiz
           questions={questions}
           themeName={selectedTheme.name}
           onFinish={handleFinishQuiz}
           onExit={handleBackToThemes}
-          instantFeedback={instantFeedback}
+          instantFeedback={!isExamMode && instantFeedback}
+          autoPlayAudio={autoPlayAudio}
         />
       </>
     );
@@ -329,10 +330,7 @@ function App() {
         sections={sections}
         progress={progress}
         onSelectTheme={handleSelectTheme}
-        onStartRandom={handleStartRandom}
         onSelectLesson={handleSelectLesson}
-        instantFeedback={instantFeedback}
-        onToggleInstantFeedback={toggleInstantFeedback}
       />
     </>
   );

@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import QuestionCard from './QuestionCard';
 
-const Quiz = ({ questions, themeName, onFinish, onExit, instantFeedback }) => {
+const Quiz = ({ questions, themeName, onFinish, onExit, instantFeedback, autoPlayAudio }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [hasAnswered, setHasAnswered] = useState(false);
@@ -52,18 +52,10 @@ const Quiz = ({ questions, themeName, onFinish, onExit, instantFeedback }) => {
           currentIndex={currentQuestionIndex}
           total={questions.length}
           instantFeedback={instantFeedback}
+          autoPlayAudio={autoPlayAudio}
+          onNext={handleNext}
+          isLastQuestion={currentQuestionIndex === questions.length - 1}
         />
-
-        {hasAnswered && (
-          <div className="quiz-next-row">
-            <div></div>
-            <div>
-              <button type="button" onClick={handleNext}>
-                {currentQuestionIndex < questions.length - 1 ? 'Suivant' : 'Terminer'}
-              </button>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );

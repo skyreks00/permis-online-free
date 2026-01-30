@@ -244,6 +244,17 @@
                     "file": "31_technique.json"
                 }
             ]
+        },
+        {
+            "title": "Examen",
+            "items": [
+                {
+                    "id": "examen_B",
+                    "name": "Examen B",
+                    "totalQuestions": 50,
+                    "file": "examen_B.json"
+                }
+            ]
         }
     ]
 }

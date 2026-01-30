@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
-import { Dices, BookOpen, Search, CheckCircle2, Circle } from 'lucide-react';
+import { BookOpen, Search, CheckCircle2, Circle } from 'lucide-react';
 
-const ThemeSelector = ({ sections, progress, onSelectTheme, onStartRandom, onSelectLesson, instantFeedback, onToggleInstantFeedback }) => {
+const ThemeSelector = ({ sections, progress, onSelectTheme, onSelectLesson }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredSections = useMemo(() => {
@@ -38,20 +38,6 @@ const ThemeSelector = ({ sections, progress, onSelectTheme, onStartRandom, onSel
         />
       </div>
 
-      <div className="actions">
-        <button type="button" className="btn-primary" onClick={onStartRandom} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <Dices size={18} /> Quiz aléatoire (tous les thèmes)
-        </button>
-        <button
-          className="btn-ghost"
-          onClick={onToggleInstantFeedback}
-          style={{ display: 'flex', alignItems: 'center', gap: '8px', border: '1px solid var(--border)' }}
-        >
-          {instantFeedback ? <CheckCircle2 size={18} className="text-success" /> : <Circle size={18} />}
-          Correction directe {instantFeedback ? 'activée' : 'désactivée'}
-        </button>
-      </div>
-
       {filteredSections.map((section, idx) => (
         <div key={idx} className="section mb-5">
           {section.title && <h2 className="mt-4 mb-3" style={{ fontSize: '1.4rem' }}>{section.title}</h2>}
@@ -61,18 +47,34 @@ const ThemeSelector = ({ sections, progress, onSelectTheme, onStartRandom, onSel
               const bestScore = itemProgress ? itemProgress.bestScore : null;
               const isCompleted = bestScore !== null;
 
+              const isExam = item.id === 'examen_B' || section.title === 'Examen';
+              // Assume exams don't have lessons, others might (fallback to HTML)
+              const hasLesson = item.lessonFile || (!isExam && item.file);
+
               return (
                 <div
                   key={item.id}
                   className="theme-card card"
-                  style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '12px', position: 'relative', overflow: 'hidden' }}
+                  style={{
+                    padding: '16px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '12px',
+                    position: 'relative',
+                    overflow: 'hidden',
+                    ...(isExam ? {
+                      borderColor: 'var(--warning)',
+                      background: 'linear-gradient(to bottom right, var(--surface), rgba(245, 158, 11, 0.1))',
+                      boxShadow: '0 4px 12px rgba(245, 158, 11, 0.15)'
+                    } : {})
+                  }}
                 >
                   {isCompleted && (
                     <div style={{
                       position: 'absolute',
                       top: 0,
                       right: 0,
-                      background: bestScore >= (item.totalQuestions * 0.8) ? 'var(--success)' : 'var(--primary)',
+                      background: 'var(--primary)',
                       color: 'white',
                       fontSize: '10px',
                       padding: '2px 8px',
@@ -82,7 +84,12 @@ const ThemeSelector = ({ sections, progress, onSelectTheme, onStartRandom, onSel
                     </div>
                   )}
                   <div style={{ flex: 1 }}>
-                    <div className="theme-name" style={{ fontWeight: 600, marginBottom: 4, paddingRight: isCompleted ? '40px' : '0' }}>
+                    <div className="theme-name" style={{
+                      fontWeight: 600,
+                      marginBottom: 4,
+                      paddingRight: isCompleted ? '40px' : '0',
+                      ...(isExam ? { color: 'var(--warning)', fontSize: '1.1rem' } : {})
+                    }}>
                       {item.name}
                     </div>
                     {item.totalQuestions > 0 && (
@@ -96,8 +103,14 @@ const ThemeSelector = ({ sections, progress, onSelectTheme, onStartRandom, onSel
                     {item.file ? (
                       <button
                         type="button"
-                        className="btn-primary"
-                        style={{ flex: 1, padding: '8px', display: 'grid', placeItems: 'center' }}
+                        className={`btn-primary ${isExam ? 'btn-exam' : ''}`}
+                        style={{
+                          flex: 1,
+                          padding: '8px',
+                          display: 'grid',
+                          placeItems: 'center',
+                          ...(isExam ? { background: 'var(--warning)', borderColor: 'var(--warning)', color: '#000' } : {})
+                        }}
                         onClick={() => onSelectTheme(item)}
                       >
                         Quiz
@@ -113,18 +126,31 @@ const ThemeSelector = ({ sections, progress, onSelectTheme, onStartRandom, onSel
                       </button>
                     )}
 
-                    <button
-                      type="button"
-                      className="btn-ghost"
-                      style={{ flex: 1, padding: '8px', border: '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}
-                      onClick={() => {
-                        // Use explicit lessonFile if present, otherwise derive from json file
-                        const lesson = item.lessonFile || (item.file ? item.file.replace('.json', '.html') : null);
-                        if (lesson) onSelectLesson(lesson);
-                      }}
-                    >
-                      <BookOpen size={16} /> Leçon
-                    </button>
+                    {!isExam && (
+                      <button
+                        type="button"
+                        className="btn-ghost"
+                        style={{
+                          flex: 1,
+                          padding: '8px',
+                          border: '1px solid var(--border)',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          gap: '6px',
+                          ...(!hasLesson ? { opacity: 0.5, cursor: 'not-allowed' } : {})
+                        }}
+                        disabled={!hasLesson}
+                        onClick={() => {
+                          if (!hasLesson) return;
+                          // Use explicit lessonFile if present, otherwise derive from json file
+                          const lesson = item.lessonFile || (item.file ? item.file.replace('.json', '.html') : null);
+                          if (lesson) onSelectLesson(lesson);
+                        }}
+                      >
+                        <BookOpen size={16} /> Leçon
+                      </button>
+                    )}
                   </div>
                 </div>
               )

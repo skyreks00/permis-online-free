@@ -22,7 +22,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "LEÇON 8 – ‘Les conducteurs’.Tout conducteur doit ralentir lorsqu'il approche d'animaux de trait, de charge et de monture, ou de bestiaux se trouvant sur la voie publique. Il doit s'arrêter lorsque ces animaux montrent des signes de frayeur.",
+      "explanation": "Tout conducteur doit ralentir lorsqu'il approche d'animaux de trait, de charge et de monture, ou de bestiaux se trouvant sur la voie publique. Il doit s'arrêter lorsque ces animaux montrent des signes de frayeur.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/16.jpg"
     },
     {
@@ -40,15 +40,15 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "LEÇON 8 – ‘Les conducteurs’.Quelqu’un qui mène ou surveille des animaux de trait, de charge ou de montre sur la voie publique est un conducteur.",
+      "explanation": "Quelqu’un qui mène ou surveille des animaux de trait, de charge ou de montre sur la voie publique est un conducteur.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/8.jpg"
     },
     {
       "id": 3,
       "type": "number",
-      "question": ".Une voiture est un véhicule dont la",
+      "question": "Une voiture est un véhicule dont la",
       "correctAnswer": "3500",
-      "explanation": "LEÇON 8 – ‘Les conducteurs’.Vous pouvez conduire :Une voiture – une voiture mixte – un minibus – une camionnette.POUR CONDUIRE CES VÉHICULES, AUX CONDITIONS SUIVANTES : ▶  M.M.A.  ≤ 3.500 kg. ▶  ≤ 8+1 places assises. ▶  Avec ou sans remorque de M.M.A. ≤ 750 kg. ▶  Si M.M.A. remorque > 750 kg → M.M.A. ensemble ≤ 3.500 kg.",
+      "explanation": "Vous pouvez conduire :Une voiture – une voiture mixte – un minibus – une camionnette.POUR CONDUIRE CES VÉHICULES, AUX CONDITIONS SUIVANTES : ▶  M.M.A.  ≤ 3.500 kg. ▶  ≤ 8+1 places assises. ▶  Avec ou sans remorque de M.M.A. ≤ 750 kg. ▶  Si M.M.A. remorque > 750 kg → M.M.A. ensemble ≤ 3.500 kg.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/11.jpg"
     },
     {
@@ -56,7 +56,7 @@
       "type": "yes_no",
       "question": "Pouvez-vous franchir ce signal routier avec votre voiture ?",
       "correctAnswer": "OUI",
-      "explanation": "LEÇON 8 – ‘Les conducteurs’.Signification : accès interdit aux conducteurs d’autocars.Signal d’interdiction.",
+      "explanation": "Signification : accès interdit aux conducteurs d’autocars.Signal d’interdiction.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/13.jpg"
     },
     {
@@ -78,7 +78,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "LEÇON 8 – ‘Les conducteurs’.C’est le conducteur d’une motocyclette.",
+      "explanation": "C’est le conducteur d’une motocyclette.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/10.jpg"
     },
     {
@@ -86,7 +86,7 @@
       "type": "yes_no",
       "question": "Les piétons sont-ils aussi des usagers de la route ?",
       "correctAnswer": "OUI",
-      "explanation": "LEÇON 8 – ‘Les conducteurs’.Selon le code de la route, un conducteur est une personne qui conduit un véhicule.. Soit un véhicule sans moteur.. Soit un véhicule à moteur.",
+      "explanation": "Selon le code de la route, un conducteur est une personne qui conduit un véhicule.. Soit un véhicule sans moteur.. Soit un véhicule à moteur.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/7.jpg"
     },
     {
@@ -104,7 +104,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "LEÇON 8 – ‘Les conducteurs’.Signification : accès interdit aux piétons.Signal d’interdiction.",
+      "explanation": "Signification : accès interdit aux piétons.Signal d’interdiction.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/15.jpg"
     },
     {
@@ -122,7 +122,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "LEÇON 7Un cavalier ou une personne qui accompagne un cheval n’est pas un piéton, mais bien un conducteur.",
+      "explanation": "Un cavalier ou une personne qui accompagne un cheval n’est pas un piéton, mais bien un conducteur.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/18.jpg"
     },
     {
@@ -144,7 +144,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "LEÇON 8 – ‘Les conducteurs’.Signification : accès interdit aux conducteurs de motocyclettes.Signal d’interdiction.",
+      "explanation": "Signification : accès interdit aux conducteurs de motocyclettes.Signal d’interdiction.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/9.jpg"
     },
     {
@@ -162,7 +162,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "LEÇON 8 – ‘Les conducteurs’.Signification : accès interdit aux conducteurs de véhicules affectés au transport de choses.Signal d’interdiction.",
+      "explanation": "Signification : accès interdit aux conducteurs de véhicules affectés au transport de choses.Signal d’interdiction.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/2.jpg"
     },
     {
@@ -180,7 +180,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "LEÇON 8 – ‘Les conducteurs’.C’est le conducteur d’un véhicule sans moteur.",
+      "explanation": "C’est le conducteur d’un véhicule sans moteur.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/4.jpg"
     },
     {
@@ -188,7 +188,7 @@
       "type": "yes_no",
       "question": "Pouvez-vous conduire ce véhicule avec un permis de conduire provisoire B ?",
       "correctAnswer": "OUI",
-      "explanation": "LEÇON 8 – ‘Les conducteurs’.C’est une camionnette.Vous pouvez conduire avec :Une voiture – une voiture mixte – un minibus – une camionnette.",
+      "explanation": "C’est une camionnette.Vous pouvez conduire avec :Une voiture – une voiture mixte – un minibus – une camionnette.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/6.jpg"
     },
     {
@@ -206,7 +206,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "LEÇON 8 – ‘Les conducteurs’.Vous pouvez conduire :Une voiture – une voiture mixte – un minibus – une camionnette.POUR CONDUIRE CES VÉHICULES, AUX CONDITIONS SUIVANTES : ▶  M.M.A.  ≤ 3.500 kg. ▶  ≤ 8+1 places assises. ▶  Avec ou sans remorque de M.M.A. ≤ 750 kg. ▶  Si M.M.A. remorque > 750 kg → M.M.A. ensemble ≤ 3.500 kg.",
+      "explanation": "Vous pouvez conduire :Une voiture – une voiture mixte – un minibus – une camionnette.POUR CONDUIRE CES VÉHICULES, AUX CONDITIONS SUIVANTES : ▶  M.M.A.  ≤ 3.500 kg. ▶  ≤ 8+1 places assises. ▶  Avec ou sans remorque de M.M.A. ≤ 750 kg. ▶  Si M.M.A. remorque > 750 kg → M.M.A. ensemble ≤ 3.500 kg.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/12.jpg"
     },
     {
@@ -228,7 +228,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "LEÇON 8 – ‘Les conducteurs’.Signification : traversée de bétail.Signal de danger.",
+      "explanation": "Signification : traversée de bétail.Signal de danger.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/5.jpg"
     },
     {
@@ -246,7 +246,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "LEÇON 8 – ‘Les conducteurs’.Qui pousse une voiture ou une moto, est un conducteur.Qui pousse un cyclomoteur est selon le code de la route un piéton.",
+      "explanation": "Qui pousse une voiture ou une moto, est un conducteur.Qui pousse un cyclomoteur est selon le code de la route un piéton.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/1.jpg"
     },
     {
@@ -264,7 +264,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "LEÇON 8 – ‘Les conducteurs’.Dans le code de la route, il est considéré comme un conducteur.",
+      "explanation": "Dans le code de la route, il est considéré comme un conducteur.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/17.jpg"
     },
     {
@@ -282,15 +282,15 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "LEÇON 8 – ‘Les conducteurs’.Quelqu’un qui mène ou surveille des animaux de trait, de charge ou de montre sur la voie publique est un conducteur.",
+      "explanation": "Quelqu’un qui mène ou surveille des animaux de trait, de charge ou de montre sur la voie publique est un conducteur.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/14.jpg"
     },
     {
       "id": 18,
       "type": "number",
-      "question": ".Dans un minibus il peut y avoir un maximum de (...) places assises pour les passagers.",
+      "question": "Dans un minibus il peut y avoir un maximum de (...) places assises pour les passagers.",
       "correctAnswer": "8",
-      "explanation": "LEÇON 8 – ‘Les conducteurs’.Passagers : 8.Conducteur : 1.",
+      "explanation": "Passagers : 8.Conducteur : 1.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/3.jpg"
     }
   ]

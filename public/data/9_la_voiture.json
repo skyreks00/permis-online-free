@@ -8,7 +8,7 @@
       "type": "yes_no",
       "question": "Vous avez un permis de conduire provisoire B.Pouvez-vous traverser ce pont avec une camionnette ?",
       "correctAnswer": "OUI",
-      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.Une camionnette est un véhicule avec une M.M.A. jusqu'à 3500 kg.",
+      "explanation": "Une camionnette est un véhicule avec une M.M.A. jusqu'à 3500 kg.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/14.jpg"
     },
     {
@@ -26,7 +26,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.À partir ce signal routier jusqu'à la prochaine intersection, il est interdit pour les véhicules avec une M.M.A. de plus de 3,5 tonnes de circuler plus rapidement que  la vitesse reprise sur le signal de limitation.",
+      "explanation": "À partir ce signal routier jusqu'à la prochaine intersection, il est interdit pour les véhicules avec une M.M.A. de plus de 3,5 tonnes de circuler plus rapidement que  la vitesse reprise sur le signal de limitation.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/7.jpg"
     },
     {
@@ -48,7 +48,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.Les accessoires obligatoires sonta) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondesc) un gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas)d) une trousse de secours.",
+      "explanation": "Les accessoires obligatoires sonta) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondesc) un gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas)d) une trousse de secours.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/11.jpg"
     },
     {
@@ -56,7 +56,7 @@
       "type": "yes_no",
       "question": "Vous avez un permis de conduire provisoire de catégorie B. Votre père a un minibus. Pouvez-vous apprendre à conduire avec son véhicule ?",
       "correctAnswer": "OUI",
-      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.Un minibus est un bus dans lequel un maximum de 8 passagers peuvent prendre place.il peut être conduit avec un permis B",
+      "explanation": "Un minibus est un bus dans lequel un maximum de 8 passagers peuvent prendre place.il peut être conduit avec un permis B",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/17.jpg"
     },
     {
@@ -78,7 +78,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.a) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondesc) un – gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas)d) – une trousse de secours.",
+      "explanation": "a) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondesc) un – gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas)d) – une trousse de secours.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/1.jpg"
     },
     {
@@ -96,7 +96,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.",
+      "explanation": "",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/18.jpg"
     },
     {
@@ -104,7 +104,7 @@
       "type": "yes_no",
       "question": "Un conducteur titulaire d’un permis de conduire B peut-il conduire une camionnette ?",
       "correctAnswer": "OUI",
-      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.Une camionnette est un véhicule avec une M.M.A. jusqu'à 3500 kg.",
+      "explanation": "Une camionnette est un véhicule avec une M.M.A. jusqu'à 3500 kg.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/13.jpg"
     },
     {
@@ -126,7 +126,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "LEÇON 9 – ‘La M.M.A. et le M.E.C.’.a) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondesc) un – gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas)d) – une trousse de secours.",
+      "explanation": "a) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondesc) un – gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas)d) – une trousse de secours.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/12.jpg"
     },
     {
@@ -144,7 +144,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.La Masse en Charge M.E.C.",
+      "explanation": "La Masse en Charge M.E.C.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/15.jpg"
     },
     {
@@ -166,15 +166,15 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.signal 1 à la M.E.C.",
+      "explanation": "signal 1 à la M.E.C.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/16.jpg"
     },
     {
       "id": 11,
       "type": "number",
-      "question": ".Cette route pour automobiles a 2 x 2 bandes de circulation, qui est divisée par une berne centrale.Au-delà de ces panneaux, la voiture bleue peut rouler à une vitesse maximale de (...) km/h.",
+      "question": "Cette route pour automobiles a 2 x 2 bandes de circulation, qui est divisée par une berne centrale.Au-delà de ces panneaux, la voiture bleue peut rouler à une vitesse maximale de (...) km/h.",
       "correctAnswer": "90",
-      "explanation": "LEÇON 9 – ‘La M.M.A. et Le M.E.C.’.Maximum de  90 km/h pour les voitures.Véhicules avec une  M.M.A. de plus de 3,5 tonnes : maximum de 70 km/heure.",
+      "explanation": "Maximum de  90 km/h pour les voitures.Véhicules avec une  M.M.A. de plus de 3,5 tonnes : maximum de 70 km/heure.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/8.jpg"
     },
     {
@@ -192,7 +192,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.La Masse en Charge M.E.C.",
+      "explanation": "La Masse en Charge M.E.C.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/9.jpg"
     },
     {
@@ -214,7 +214,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.Le constructeur, car Il le fabricant connait toutes les normes techniques du véhicule : sa solidité, sa résistance, le poids qu’il pourra supporter,… sait à quel point la voiture est solide.",
+      "explanation": "Le constructeur, car Il le fabricant connait toutes les normes techniques du véhicule : sa solidité, sa résistance, le poids qu’il pourra supporter,… sait à quel point la voiture est solide.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/6.jpg"
     },
     {
@@ -236,7 +236,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.Les accessoires obligatoires sonta) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondesc) un – gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas).d) – une trousse de secours.",
+      "explanation": "Les accessoires obligatoires sonta) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondesc) un – gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas).d) – une trousse de secours.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/2.jpg"
     },
     {
@@ -254,7 +254,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "LEÇON 9Doivent se trouver dans le véhicule :- Certificat d’immatriculation (original)- Certificat de conformité (original)- Attestation d’assurance (original, copie ou version numérique sur smartphone)- Certificat de contrôle technique (original), dès que le véhicule a 4 ans",
+      "explanation": "Doivent se trouver dans le véhicule :- Certificat d’immatriculation (original)- Certificat de conformité (original)- Attestation d’assurance (original, copie ou version numérique sur smartphone)- Certificat de contrôle technique (original), dès que le véhicule a 4 ans",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/3.jpg"
     },
     {
@@ -268,7 +268,7 @@
         }
       ],
       "correctAnswer": "3500",
-      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.Jusqu'à 3500 kg.",
+      "explanation": "Jusqu'à 3500 kg.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/5.jpg"
     },
     {
@@ -290,7 +290,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.a) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondesc) un – gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas)d) – une trousse de secours.",
+      "explanation": "a) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondesc) un – gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas)d) – une trousse de secours.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/4.jpg"
     },
     {
@@ -312,7 +312,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’. Si la M.M.A. de la remorque est supérieur à 750 kg, un permis de conduire B est bon à condition que la M.M.A. de l'ensemble (voiture + remorque) ne dépasse pas 3,5 tonnes.",
+      "explanation": " Si la M.M.A. de la remorque est supérieur à 750 kg, un permis de conduire B est bon à condition que la M.M.A. de l'ensemble (voiture + remorque) ne dépasse pas 3,5 tonnes.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/19.jpg"
     },
     {
@@ -330,7 +330,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.Si vous conduisez, vous devez avoir votre permis de conduire original avec vous.",
+      "explanation": "Si vous conduisez, vous devez avoir votre permis de conduire original avec vous.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/20.jpg"
     },
     {
@@ -348,7 +348,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "LEÇON 9 – ‘La M.M.A. et la M.E.C.’.Signification: stationnement autorisé. Lorsqu’une masse est indiquée sur le panneau additionnel l’admission n’est applicable qu’aux véhicules dont la masse maximale autorisée excède la limite fixée.",
+      "explanation": "Signification: stationnement autorisé. Lorsqu’une masse est indiquée sur le panneau additionnel l’admission n’est applicable qu’aux véhicules dont la masse maximale autorisée excède la limite fixée.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/10.jpg"
     },
     {
@@ -370,7 +370,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "LEÇON 9À partir de ce moment, le certificat de contrôle original doit toujours se trouver dans la voiture.",
+      "explanation": "À partir de ce moment, le certificat de contrôle original doit toujours se trouver dans la voiture.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/21.jpg"
     }
   ]

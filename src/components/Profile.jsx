@@ -1,7 +1,7 @@
 import React from 'react';
-import { Trophy, Target, AlertTriangle, Clock, BarChart2, ArrowLeft } from 'lucide-react';
+import { Trophy, Target, AlertTriangle, Clock, Settings, ArrowLeft, CheckCircle2, Circle, Volume2 } from 'lucide-react';
 
-const Profile = ({ progress, themesData, onBack, onReset }) => {
+const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onToggleInstantFeedback, autoPlayAudio, onToggleAutoPlayAudio }) => {
     // --- Stats Calculation ---
     const progressValues = Object.values(progress);
     const totalQuizzes = progressValues.length;
@@ -128,17 +128,38 @@ const Profile = ({ progress, themesData, onBack, onReset }) => {
                 {/* Right Column: Actions */}
                 <div>
                     <h2 style={{ fontSize: '1.2rem', marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <BarChart2 size={20} /> Actions
+                        <Settings size={20} /> Paramètres
                     </h2>
 
                     <div className="card" style={{ padding: '24px', background: 'var(--bg-elev)', border: 'none', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                        <button className="btn-primary" style={{
-                            padding: '12px',
-                            background: 'linear-gradient(90deg, #db2777 0%, #e11d48 100%)', // Pink gradient like screenshot
-                            borderColor: 'transparent',
-                            boxShadow: '0 4px 12px rgba(225, 29, 72, 0.3)'
-                        }}>
-                            Revoir mes fautes ({totalMistakes})
+
+
+                        <button
+                            className="btn-ghost"
+                            onClick={onToggleInstantFeedback}
+                            style={{
+                                display: 'flex', alignItems: 'center', gap: '8px',
+                                border: '1px solid var(--border)',
+                                justifyContent: 'center',
+                                padding: '12px'
+                            }}
+                        >
+                            {instantFeedback ? <CheckCircle2 size={18} className="text-success" /> : <Circle size={18} />}
+                            Correction directe
+                        </button>
+
+                        <button
+                            className="btn-ghost"
+                            onClick={onToggleAutoPlayAudio}
+                            style={{
+                                display: 'flex', alignItems: 'center', gap: '8px',
+                                border: '1px solid var(--border)',
+                                justifyContent: 'center',
+                                padding: '12px'
+                            }}
+                        >
+                            {autoPlayAudio ? <CheckCircle2 size={18} className="text-success" /> : <Circle size={18} />}
+                            <Volume2 size={18} /> Voix
                         </button>
 
                         <button

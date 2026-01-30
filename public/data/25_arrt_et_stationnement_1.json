@@ -8,7 +8,7 @@
       "type": "yes_no",
       "question": "Vous ne pouvez ni vous arrêter ni stationner sur la piste cyclable.Mais pouvez-vous rouler sur la piste cyclable pour croiser un autre véhicule en toute sécurité ?",
       "correctAnswer": "NON",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  La piste cyclable ne fait pas partie de la chaussée.",
+      "explanation": "La piste cyclable ne fait pas partie de la chaussée.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/18.jpg"
     },
     {
@@ -30,7 +30,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  Il n'est pas obligatoire. La batterie peut s’épuiser.",
+      "explanation": "Il n'est pas obligatoire. La batterie peut s’épuiser.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/21.jpg"
     },
     {
@@ -52,7 +52,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  En agglomération sur l’accotement de plain-pied.Hors agglomération sur tous les accotements.",
+      "explanation": "En agglomération sur l’accotement de plain-pied.Hors agglomération sur tous les accotements.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/23.jpg"
     },
     {
@@ -60,7 +60,7 @@
       "type": "yes_no",
       "question": "Il y a embouteillage. La voiture devant vous a roulé sur un dispositif surélevé et arrête.Pouvez-vous arrêter sur le dispositif surélevé ?",
       "correctAnswer": "OUI",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  S’arrêter dans la circulation sur la voie publique, n’est pas considéré comme être à l’arrêt ou stationner.",
+      "explanation": "S’arrêter dans la circulation sur la voie publique, n’est pas considéré comme être à l’arrêt ou stationner.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/35.jpg"
     },
     {
@@ -68,23 +68,23 @@
       "type": "yes_no",
       "question": "Les voitures rouges sont garées sur la chaussée.La voiture bleue peut-elle rester immobile sur la route pour permettre à un passager de sortir ?",
       "correctAnswer": "NON",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  Le double stationnement ou immobilisation est interdit.",
+      "explanation": "Le double stationnement ou immobilisation est interdit.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/36.jpg"
     },
     {
       "id": 6,
       "type": "number",
-      "question": ".Jusqu'à quelle distance du carrefour ne pouvez-vous ni vous arrêter ni stationner? (…) mètres.",
+      "question": "Jusqu'à quelle distance du carrefour ne pouvez-vous ni vous arrêter ni stationner? (…) mètres.",
       "correctAnswer": "5",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  Sur la chaussée et l’accotement vous ne pouvez ni vous arrêter ni stationner dans un carrefour à moins de 5 mètres du bord dajacent de la voie transversale.",
+      "explanation": "Sur la chaussée et l’accotement vous ne pouvez ni vous arrêter ni stationner dans un carrefour à moins de 5 mètres du bord dajacent de la voie transversale.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/19.jpg"
     },
     {
       "id": 7,
       "type": "number",
-      "question": ".Combien de mètres avant un rond-point ne pouvez-vous pas vous arrêter ni stationner sur la chaussée ou sur l'accotement ?",
+      "question": "Combien de mètres avant un rond-point ne pouvez-vous pas vous arrêter ni stationner sur la chaussée ou sur l'accotement ?",
       "correctAnswer": "5",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.",
+      "explanation": " – ‘Arrêt et stationnement’.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/37.jpg"
     },
     {
@@ -102,15 +102,15 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  Aussi sur les bandes de circulation d’une route pour automobiles vous ne pouvez ni vous arrêter ni stationner.",
+      "explanation": "Aussi sur les bandes de circulation d’une route pour automobiles vous ne pouvez ni vous arrêter ni stationner.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/16.jpg"
     },
     {
       "id": 9,
       "type": "number",
-      "question": ".Il doit y avoir (...) m. de distance entre deux voitures stationnées.",
+      "question": "Il doit y avoir (...) m. de distance entre deux voitures stationnées.",
       "correctAnswer": "1",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  Il faut laisser un espace d’au moins 1 mètre entre deux voitures stationnées",
+      "explanation": "Il faut laisser un espace d’au moins 1 mètre entre deux voitures stationnées",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/14.jpg"
     },
     {
@@ -128,7 +128,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  Il ne doit pas porter la ceinture de sécurité.",
+      "explanation": "Il ne doit pas porter la ceinture de sécurité.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/11.jpg"
     },
     {
@@ -150,7 +150,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  Sur une voie à sens unique, vous pouvez ranger votre voiture autant à droite qu’à gauche.",
+      "explanation": "Sur une voie à sens unique, vous pouvez ranger votre voiture autant à droite qu’à gauche.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/22.jpg"
     },
     {
@@ -158,7 +158,7 @@
       "type": "yes_no",
       "question": "Vous ne pouvez ni vous arrêter ni stationner sur un passage pour piétons.Pouvez-vous le faire sur l'accotement ?",
       "correctAnswer": "NON",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  Sur un passage pour piétons ou cyclistes, vous ne pouvez ni vous arrêter ni stationner sur la chaussée et l’accotement.",
+      "explanation": "Sur un passage pour piétons ou cyclistes, vous ne pouvez ni vous arrêter ni stationner sur la chaussée et l’accotement.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/12.jpg"
     },
     {
@@ -180,7 +180,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  Une bande cyclable suggérée fait partie de la chaussée.",
+      "explanation": "Une bande cyclable suggérée fait partie de la chaussée.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/24.jpg"
     },
     {
@@ -198,23 +198,23 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "LEÇON 25Sur une chaussée à sens unique, les véhicules peuvent stationner à gauche et à droite de la chaussée.Cette voiture est toutefois mal stationnée, car elle est placée dans le mauvais sens de circulation.",
+      "explanation": "Sur une chaussée à sens unique, les véhicules peuvent stationner à gauche et à droite de la chaussée.Cette voiture est toutefois mal stationnée, car elle est placée dans le mauvais sens de circulation.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/41.jpg"
     },
     {
       "id": 15,
       "type": "number",
-      "question": ".Ce signal routier se trouve à une hauteur de 1,20 mètre.Votre voiture a une hauteur inférieure à 1,65 mètre.Jusqu'à combien (…) de mètres de distance de ce signal ne pouvez-vous ni vous arrêter ni stationner votre voiture ?",
+      "question": "Ce signal routier se trouve à une hauteur de 1,20 mètre.Votre voiture a une hauteur inférieure à 1,65 mètre.Jusqu'à combien (…) de mètres de distance de ce signal ne pouvez-vous ni vous arrêter ni stationner votre voiture ?",
       "correctAnswer": "20",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  Le bord inférieur du signal ne se trouve pas à au moins 2 mètres de hauteur.",
+      "explanation": "Le bord inférieur du signal ne se trouve pas à au moins 2 mètres de hauteur.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/20.jpg"
     },
     {
       "id": 16,
       "type": "number",
-      "question": ".Vous ne pouvez ni vous arrêter ni stationner sur la chaussée à moins de (...) mètres en deçà d'un passage pour cyclistes et cyclomoteurs à deux roues.",
+      "question": "Vous ne pouvez ni vous arrêter ni stationner sur la chaussée à moins de (...) mètres en deçà d'un passage pour cyclistes et cyclomoteurs à deux roues.",
       "correctAnswer": "5",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  5 mètres.Sur un passage pour piétons ou cyclistes, vous ne pouvez ni vous arrêter ni stationner sur la chaussée et l’accotement.",
+      "explanation": "5 mètres.Sur un passage pour piétons ou cyclistes, vous ne pouvez ni vous arrêter ni stationner sur la chaussée et l’accotement.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/5.jpg"
     },
     {
@@ -232,7 +232,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "LEÇON 25Sur la chaussée sous un pont, il est interdit de s’arrêter ou de stationner.Mais sur la berme sous un pont, il est permis de s’arrêter et de stationner.",
+      "explanation": "Sur la chaussée sous un pont, il est interdit de s’arrêter ou de stationner.Mais sur la berme sous un pont, il est permis de s’arrêter et de stationner.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/40.jpg"
     },
     {
@@ -250,16 +250,15 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  En agglomération sur l’accotement de plain-pied.Hors agglomération sur tous les accotements.",
+      "explanation": "En agglomération sur l’accotement de plain-pied.Hors agglomération sur tous les accotements.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/33.jpg"
     },
     {
       "id": 19,
-      "type": "multiple_choice",
+      "type": "number",
       "question": "Jusqu'à combien (…) de mètres en deçà de ces signaux routiers ne pouvez-vous pas stationner sur la chaussée et sur l'accotement ?",
-      "propositions": [],
       "correctAnswer": "20",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  Le bord inférieur du signal ne se trouve pas à au moins 2 mètres de hauteur.",
+      "explanation": "Le bord inférieur du signal ne se trouve pas à au moins 2 mètres de hauteur.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/28.jpg"
     },
     {
@@ -277,7 +276,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.    Si vous restez immobile au-delà du temps nécessaire pour embarquer ou débarquer une personne, cela est considéré comme stationner.",
+      "explanation": "  Si vous restez immobile au-delà du temps nécessaire pour embarquer ou débarquer une personne, cela est considéré comme stationner.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/1.jpg"
     },
     {
@@ -295,7 +294,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’. Vous ne pouvez ni vous arrêter ni stationner sur la chaussée et sur l'accotement à moins de 5 mètres en deçà et au-delà de cet endroit.",
+      "explanation": "Vous ne pouvez ni vous arrêter ni stationner sur la chaussée et sur l'accotement à moins de 5 mètres en deçà et au-delà de cet endroit.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/10.jpg"
     },
     {
@@ -317,7 +316,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  En agglomération sur l’accotement de plain-pied.Hors agglomération sur tous les accotements.",
+      "explanation": "En agglomération sur l’accotement de plain-pied.Hors agglomération sur tous les accotements.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/27.jpg"
     },
     {
@@ -325,15 +324,15 @@
       "type": "yes_no",
       "question": "Vous êtes fatigué de conduire et vous vous arrêtez quelques instants sur la bande d'arrêt d'urgence pour vous dégourdir les jambes.Est-ce permis ?",
       "correctAnswer": "NON",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  Sur la bande d’arrêt d’urgence vous ne pouvez ni circuler, ni vous arrêter, ni stationner.",
+      "explanation": "Sur la bande d’arrêt d’urgence vous ne pouvez ni circuler, ni vous arrêter, ni stationner.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/9.jpg"
     },
     {
       "id": 24,
       "type": "number",
-      "question": ".Jusqu'à combien (…) de mètres de distance de ce passage pour piétons ne pouvez-vous pas stationner ?",
+      "question": "Jusqu'à combien (…) de mètres de distance de ce passage pour piétons ne pouvez-vous pas stationner ?",
       "correctAnswer": "20",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  Sur la chaussée et l’accotement vous ne pouvez ni vous arrêter ni stationner dans un carrefour muni de feux de signalisation à moins de 20 mètres avant les feux.",
+      "explanation": "Sur la chaussée et l’accotement vous ne pouvez ni vous arrêter ni stationner dans un carrefour muni de feux de signalisation à moins de 20 mètres avant les feux.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/29.jpg"
     },
     {
@@ -355,7 +354,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  Sur une voie à sens unique, vous pouvez stationner votre voiture autant à droite qu’à gauche.",
+      "explanation": "Sur une voie à sens unique, vous pouvez stationner votre voiture autant à droite qu’à gauche.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/3.jpg"
     },
     {
@@ -363,7 +362,7 @@
       "type": "yes_no",
       "question": "Pouvez-vous vous arrêter quelques instants sur la piste cyclable pour laisser monter ou descendre un passager ?",
       "correctAnswer": "NON",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  La piste cyclable ne fait pas partie de la chaussée.",
+      "explanation": "La piste cyclable ne fait pas partie de la chaussée.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/7.jpg"
     },
     {
@@ -385,7 +384,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  Sur la chaussée et l’accotement vous ne pouvez ni vous arrêter ni stationner dans un carrefour muni de feux de signalisation à moins de 20 mètres avant les feux.",
+      "explanation": "Sur la chaussée et l’accotement vous ne pouvez ni vous arrêter ni stationner dans un carrefour muni de feux de signalisation à moins de 20 mètres avant les feux.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/26.jpg"
     },
     {
@@ -403,7 +402,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "LEÇON 25L’arrêt est le temps nécessaire pour faire monter ou descendre une personne ou pour charger/décharger des marchandises.La voiture est donc en stationnement.",
+      "explanation": "L’arrêt est le temps nécessaire pour faire monter ou descendre une personne ou pour charger/décharger des marchandises.La voiture est donc en stationnement.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/38.jpg"
     },
     {
@@ -411,7 +410,7 @@
       "type": "yes_no",
       "question": "Il y a eu un accident dans le sens inverse. Pouvez-vous vous arrêter sur la bande d'arrêt d'urgence pour offrir de l'aide ?",
       "correctAnswer": "NON",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  C’est interdit.",
+      "explanation": "C’est interdit.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/17.jpg"
     },
     {
@@ -433,7 +432,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "LEÇON 25Sur la chaussée sous un pont, il est interdit de s’arrêter ou de stationner.",
+      "explanation": "Sur la chaussée sous un pont, il est interdit de s’arrêter ou de stationner.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/39.jpg"
     },
     {
@@ -455,7 +454,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  Une voiture peut s’arrêter.",
+      "explanation": "Une voiture peut s’arrêter.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/25.jpg"
     },
     {
@@ -473,7 +472,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "LEÇON 25Il est interdit de s’arrêter ou de stationner sur un dispositif surélevé, sauf indication contraire par des marquages ou des signaux routiers.Cette interdiction est stricte.⚠️ Cependant : en cas de file, vous pouvez vous arrêter momentanément pour suivre la circulation.Cela ne constitue pas un arrêt interdit, mais un arrêt imposé par la circulation.",
+      "explanation": "Il est interdit de s’arrêter ou de stationner sur un dispositif surélevé, sauf indication contraire par des marquages ou des signaux routiers.Cette interdiction est stricte.⚠️ Cependant : en cas de file, vous pouvez vous arrêter momentanément pour suivre la circulation.Cela ne constitue pas un arrêt interdit, mais un arrêt imposé par la circulation.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/42.jpg"
     },
     {
@@ -491,7 +490,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "LEÇON 25Il est interdit de s’arrêter ou de stationner si cela gêne un tram.➡️ Le conducteur doit réagir immédiatement, même si le tram ne donne pas de signal sonore.",
+      "explanation": "Il est interdit de s’arrêter ou de stationner si cela gêne un tram.➡️ Le conducteur doit réagir immédiatement, même si le tram ne donne pas de signal sonore.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/43.jpg"
     },
     {
@@ -513,7 +512,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.    S'arrêter et stationner sur la chaussée.",
+      "explanation": "  S'arrêter et stationner sur la chaussée.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/4.jpg"
     },
     {
@@ -521,7 +520,7 @@
       "type": "yes_no",
       "question": "La bande à droite de la large ligne blanche est prévue pour le stationnement et l'arrêt.Pouvez-vous l'emprunter brièvement pour croiser plus facilement ou pour dépasser par la droite ?",
       "correctAnswer": "NON",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  Il est interdit.",
+      "explanation": "Il est interdit.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/15.jpg"
     },
     {
@@ -529,15 +528,15 @@
       "type": "yes_no",
       "question": "En agglomération.Une voiture peut-elle être stationnée sur la partie de la voie publique indiquée par la flèche jaune ?",
       "correctAnswer": "NON",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  En agglomération sur l’accotement de plain-pied.Hors agglomération sur tous les accotements.",
+      "explanation": "En agglomération sur l’accotement de plain-pied.Hors agglomération sur tous les accotements.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/2.jpg"
     },
     {
       "id": 37,
       "type": "number",
-      "question": ".Un carrefour muni de feux de signalisation.Vous ne pouvez ni vous arrêter ni stationner sur la chaussée ou sur l'accotement jusque (…) mètres en deçà du feu de signalisation.",
+      "question": "Un carrefour muni de feux de signalisation.Vous ne pouvez ni vous arrêter ni stationner sur la chaussée ou sur l'accotement jusque (…) mètres en deçà du feu de signalisation.",
       "correctAnswer": "20",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  Sur la chaussée et l’accotement vous ne pouvez ni vous arrêter ni stationner dans un carrefour muni de feux de signalisation à moins de 20 mètres avant les feux.",
+      "explanation": "Sur la chaussée et l’accotement vous ne pouvez ni vous arrêter ni stationner dans un carrefour muni de feux de signalisation à moins de 20 mètres avant les feux.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/8.jpg"
     },
     {
@@ -559,7 +558,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  - Vitesse maximale 30 km/h.- Dépassement par la gauche est interdit (tu peux dépasser un vélo)",
+      "explanation": "- Vitesse maximale 30 km/h.- Dépassement par la gauche est interdit (tu peux dépasser un vélo)",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/34.jpg"
     },
     {
@@ -581,7 +580,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  Vous ne pouvez ni vous arrêter ni stationner sur une zone d’évitement.",
+      "explanation": "Vous ne pouvez ni vous arrêter ni stationner sur une zone d’évitement.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/6.jpg"
     },
     {
@@ -589,7 +588,7 @@
       "type": "yes_no",
       "question": "Un carrefour sans feux de signalisation ni signaux.Vous ne pouvez pas y stationner sur la chaussée ou sur l'accotement à moins de 5 mètres du bord adjacent de la voie transversale.  Mais pouvez-vous vous y arrêter ?",
       "correctAnswer": "NON",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  Sur la chaussée et l’accotement vous ne pouvez ni vous arrêter ni stationner dans un carrefour à moins de 5 mètres du bord adjacent de la voie transversale.",
+      "explanation": "Sur la chaussée et l’accotement vous ne pouvez ni vous arrêter ni stationner dans un carrefour à moins de 5 mètres du bord adjacent de la voie transversale.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/30.jpg"
     },
     {
@@ -597,7 +596,7 @@
       "type": "yes_no",
       "question": "Dans un virage dont la visibilité est insuffisante, vous ne pouvez pas stationner sur la chaussée.Mais pouvez-vous vous y arrêter ?",
       "correctAnswer": "NON",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  Sur la chaussée, vous ne pouvez ni vous arrêter ni stationner.",
+      "explanation": "Sur la chaussée, vous ne pouvez ni vous arrêter ni stationner.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/13.jpg"
     },
     {
@@ -619,7 +618,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’.  Si vous êtes capable de voir les pneus arrière.",
+      "explanation": "Si vous êtes capable de voir les pneus arrière.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/31.jpg"
     },
     {
@@ -637,7 +636,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "LEÇON 25 – ‘Arrêt et stationnement’. En agglomération sur l’accotement de plain-pied.Hors agglomération sur tous les accotements.",
+      "explanation": "En agglomération sur l’accotement de plain-pied.Hors agglomération sur tous les accotements.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/89/32.jpg"
     }
   ]
