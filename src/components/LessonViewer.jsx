@@ -45,6 +45,16 @@ const LessonViewer = ({ lessonFile, onBack, theme }) => {
                         margin-bottom: 5px;
                     }
 
+                    .lesson-video {
+                        width: 100%;
+                        aspect-ratio: 16 / 9;
+                        height: auto;
+                        border-radius: 8px;
+                        display: block;
+                        margin: 20px 0;
+                        border: none;
+                    }
+
                     /* Scrollbar styling */
                     ::-webkit-scrollbar {
                         width: 10px;
@@ -141,6 +151,20 @@ const LessonViewer = ({ lessonFile, onBack, theme }) => {
                     const src = img.getAttribute('src');
                     if (src && src.startsWith('uploads/')) {
                         img.src = `https://www.permisdeconduire-online.be/${src}`;
+                    }
+                }
+
+                // 3b. Fix Videos (add fullscreen and styling helpers)
+                const iframes = doc.body.getElementsByTagName('iframe');
+                for (let iframe of iframes) {
+                    iframe.setAttribute('allowfullscreen', 'true');
+                    iframe.setAttribute('mozallowfullscreen', 'true');
+                    iframe.setAttribute('webkitallowfullscreen', 'true');
+                    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+
+                    // Add class if not present
+                    if (!iframe.classList.contains('lesson-video')) {
+                        iframe.classList.add('lesson-video');
                     }
                 }
 
