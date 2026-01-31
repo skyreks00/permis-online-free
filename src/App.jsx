@@ -97,6 +97,91 @@ function App() {
     return () => media.removeEventListener?.('change', handler);
   }, []);
 
+  // Debug methods exposed to console
+  useEffect(() => {
+    window.appDebug = {
+      // Force open results page
+      openResults: async (score = 42, reqTotal = 50, themeFile = 'examen_B.json') => {
+        let loaded = [];
+        try {
+          const loadedQuestions = await loadQuestions(themeFile);
+          if (loadedQuestions && loadedQuestions.length > 0) {
+            loaded = loadedQuestions;
+          } else {
+            throw new Error('Aucune question chargée');
+          }
+        } catch (e) {
+          console.error("Impossible de charger les questions réelles, fallback sur mock", e);
+        }
+
+        if (loaded.length === 0) {
+          loaded = Array.from({ length: reqTotal }, (_, i) => ({
+            id: i,
+            question: `Question Debug ${i + 1}`,
+            type: 'multiple_choice',
+            propositions: [
+              { letter: 'A', text: 'Réponse A' },
+              { letter: 'B', text: 'Réponse B' }
+            ],
+            correctAnswer: 'A',
+            explanation: 'Explication debug pour la question ' + (i + 1)
+          }));
+        }
+
+        // Limit total to available questions if we are using real data
+        const total = Math.min(reqTotal, loaded.length);
+        const questionsToUse = loaded.slice(0, total);
+        const effectiveScore = Math.min(score, total);
+
+        setQuestions(questionsToUse);
+        setResults({
+          correct: effectiveScore,
+          incorrect: total - effectiveScore,
+          score: effectiveScore,
+          answers: questionsToUse.map((q, i) => {
+            const isCorrect = i < effectiveScore;
+            let userAnswer = q.correctAnswer;
+            if (!isCorrect) {
+              const wrongProp = q.propositions?.find(p => p.letter !== q.correctAnswer);
+              userAnswer = wrongProp ? wrongProp.letter : (q.correctAnswer === 'A' ? 'B' : 'A');
+            }
+            return {
+              questionId: q.id,
+              userAnswer: userAnswer,
+              correctAnswer: q.correctAnswer,
+              isCorrect: isCorrect
+            };
+          })
+        });
+        setShowResults(true);
+        setSelectedTheme({ id: 'debug', name: 'Mode Debug (Réel)', file: themeFile });
+        setIsExamMode(themeFile.includes('examen'));
+        console.log(`> Page de résultats ouverte avec score ${effectiveScore}/${total} (${themeFile})`);
+      },
+
+      // Force start a quiz (first available or specific index)
+      startQuiz: (sectionIndex = 0, themeIndex = 0) => {
+        try {
+          const theme = sections[sectionIndex]?.themes[themeIndex];
+          if (theme) {
+            handleSelectTheme(theme);
+            console.log(`> Quiz démarré: ${theme.name}`);
+          } else {
+            console.error('Thème non trouvé aux index donnés');
+          }
+        } catch (e) {
+          console.error('Erreur au démarrage du quiz:', e);
+        }
+      }
+    };
+
+    console.log("🔧 Mode Debug actif: Utilisez window.appDebug.openResults() ou window.appDebug.startQuiz()");
+
+    return () => {
+      delete window.appDebug;
+    };
+  }, [sections]);
+
   const setTheme = (theme) => {
     document.documentElement.setAttribute('data-theme', theme);
     setColorTheme(theme);

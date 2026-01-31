@@ -1,5 +1,5 @@
 import React from 'react';
-import { Trophy, ThumbsUp, Award, Target, PartyPopper } from 'lucide-react';
+import { Trophy, ThumbsUp, Award, Target, PartyPopper, CheckCircle } from 'lucide-react';
 
 const Results = ({ score, total, questions = [], answers = [], showReview = false, onRestart, onBackToThemes, isExamMode }) => {
   const percentage = Math.round((score / total) * 100);
@@ -40,7 +40,7 @@ const Results = ({ score, total, questions = [], answers = [], showReview = fals
 
   const cleanExplanation = (text) => {
     if (!text) return '';
-    return t
+    return text
       .replace(/^\s*INFO\W*PERMIS\W*DE\W*CONDUIRE\W*/i, '')
       .replace(/^\s*Signification\W*/i, '')
       .replace(/^\s*Explication\W*/i, '')
@@ -73,25 +73,109 @@ const Results = ({ score, total, questions = [], answers = [], showReview = fals
       </div>
 
       {showReview && (
-        <div className="review card" style={{ padding: 16, marginTop: '30px', textAlign: 'left' }}>
-          <h2>Erreurs et conseils</h2>
+        <div style={{ marginTop: '30px', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '32px' }}>
+          <h2 style={{ textAlign: 'center', marginBottom: '16px' }}>Erreurs et conseils</h2>
           {errorItems.length === 0 ? (
-            <p className="muted" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <PartyPopper size={20} /> Aucune erreur. Bravo !
-            </p>
+            <div className="card" style={{ padding: '32px', textAlign: 'center' }}>
+              <p className="muted" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', fontSize: '1.2rem', margin: 0 }}>
+                <PartyPopper size={24} /> Aucune erreur. Bravo !
+              </p>
+            </div>
           ) : (
             errorItems.map(({ q, a, idx }) => (
-              <div className="review-item" key={`${q.id}-${idx}`}>
-                <div><strong>Question:</strong> {q.question}</div>
-                {q.image && (
-                  <div className="mt-2"><img src={q.image} alt="Illustration" /></div>
-                )}
-                <div className="mt-2"><strong>Ta réponse:</strong> {formatAnswer(q, a?.userAnswer)}</div>
-                <div><strong>Bonne réponse:</strong> {formatAnswer(q, q.correctAnswer)}</div>
+              <div className="question-card card" key={`${q.id}-${idx}`}>
+                <div className="question-header">
+                  <div className="question-progress" style={{ color: 'var(--danger)' }}>
+                    Question {idx + 1}
+                  </div>
+                </div>
+
+                <div className="question-main">
+                  <div className="question-left">
+                    {q.image ? (
+                      <div className="question-image">
+                        <img src={q.image} alt="Illustration" />
+                      </div>
+                    ) : (
+                      <div className="question-image placeholder" />
+                    )}
+                  </div>
+
+                  <div className="question-right">
+                    <div className="question-text">
+                      <div className="question-text-inner">{q.question}</div>
+                    </div>
+
+                    <div className="answers">
+                      {q.type === 'multiple_choice' && q.propositions ? (
+                        q.propositions.map((prop) => {
+                          const isCorrect = prop.letter === q.correctAnswer;
+                          const isSelected = a?.userAnswer === prop.letter;
+                          let btnClass = '';
+                          if (isCorrect) btnClass = 'correct';
+                          else if (isSelected) btnClass = 'incorrect';
+                          else btnClass = 'dimmed';
+
+                          return (
+                            <button
+                              key={prop.letter}
+                              className={`answer-btn ${btnClass}`}
+                              disabled
+                              style={{ opacity: 1, cursor: 'default' }}
+                            >
+                              <div className="answer-key">{prop.letter}</div>
+                              <div className="answer-text">{prop.text}</div>
+                              {isCorrect && <CheckCircle size={20} className="text-success" />}
+                            </button>
+                          );
+                        })
+                      ) : q.type === 'yes_no' ? (
+                        <>
+                          {['OUI', 'NON'].map((val, i) => {
+                            const letter = i === 0 ? 'A' : 'B';
+                            const label = i === 0 ? 'Oui' : 'Non';
+                            const isCorrect = val === q.correctAnswer;
+                            const isSelected = a?.userAnswer === val;
+                            let btnClass = '';
+                            if (isCorrect) btnClass = 'correct';
+                            else if (isSelected) btnClass = 'incorrect';
+                            else btnClass = 'dimmed';
+
+                            return (
+                              <button
+                                key={val}
+                                className={`answer-btn ${btnClass}`}
+                                disabled
+                                style={{ opacity: 1, cursor: 'default' }}
+                              >
+                                <div className="answer-key">{letter}</div>
+                                <div className="answer-text">{label}</div>
+                                {isCorrect && <CheckCircle size={20} className="text-success" />}
+                              </button>
+                            );
+                          })}
+                        </>
+                      ) : (
+                        <div className="p-4 border rounded bg-surface-2">
+                          <p><strong>Votre réponse:</strong> {a?.userAnswer || '—'}</p>
+                          <p><strong>Réponse attendue:</strong> {q.correctAnswer}</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
                 {q.explanation && (
-                  <div className="mt-2"><strong>Conseil:</strong> {cleanExplanation(q.explanation)}</div>
+                  <div className="explanation animate-fade-in">
+                    <div className="explanation-title" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <Award size={20} className="text-primary" />
+                      Conseil
+                    </div>
+                    <div className="explanation-text" style={{ fontSize: '1.05rem', lineHeight: 1.6 }}>
+                      {cleanExplanation(q.explanation)}
+                    </div>
+                  </div>
                 )}
-                <hr />
               </div>
             ))
           )}
