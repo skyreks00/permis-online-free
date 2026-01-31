@@ -32,15 +32,15 @@
       "propositions": [
         {
           "letter": "A",
-          "text": "Cycliste"
+          "text": "Cycliste A"
         },
         {
           "letter": "B",
-          "text": "Cycliste"
+          "text": "Cycliste B"
         },
         {
           "letter": "C",
-          "text": "Cycliste"
+          "text": "Cycliste C"
         }
       ],
       "correctAnswer": "B",
@@ -121,7 +121,7 @@
       "id": 8,
       "type": "number",
       "question": "À partir de combien de cyclistes dans un groupe ces cyclistes ne sont-ils pas obligés de rouler sur la piste cyclable ?",
-      "correctAnswer": "B",
+      "correctAnswer": "15",
       "explanation": "Les groupes de 15 à 50 cyclistes ne sont pas obligés d'emprunter les pistes cyclables. Ils sont autorisés à rouler à deux côte à côte sur la chaussée. A condition qu'ils restent ensemble (groupés). Les groupes de moins de 15 cyclistes doivent suivre les mêmes règles que les cyclistes individuels.Information : Vous n’aurez en principe pas cette question lors de l’examen pour le permis B mais c’est utile de le savoir vu les obligations que vous aurez vis-à-vis des cyclistes et que vous apprendrez dans un autre leçon.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/67/3.jpg"
     },
@@ -174,7 +174,7 @@
         },
         {
           "letter": "B",
-          "text": "Les cyclomoteurs de classe A et"
+          "text": "Les cyclomoteurs de classe A et B"
         }
       ],
       "correctAnswer": "B",
@@ -203,7 +203,7 @@
       "id": 14,
       "type": "number",
       "question": "Combien de cyclistes faut-il au minimum dans un groupe pour que 2 capitaines de route doivent être présents ?",
-      "correctAnswer": "C",
+      "correctAnswer": "51",
       "explanation": "Un groupe de 15 à 50 cyclistes PEUT être accompagné de minimum deux capitaines de route et d’un véhicule accompagnateur à l’avant et à l’arrière.Si le groupe compte au moins 50 cyclistes, alors il DOIT obligatoirement être encadré par au moins deux capitaines de route et deux véhicules accompagnateurs (à l’avant et à l’arrière).",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/67/20.jpg"
     },
@@ -219,7 +219,7 @@
       "id": 16,
       "type": "number",
       "question": "Combien de cyclistes faut-il au minimum dans un groupe pour que 2 capitaines de route doivent être présents ?",
-      "correctAnswer": "C",
+      "correctAnswer": "51",
       "explanation": "",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/67/24.jpg"
     },
@@ -316,7 +316,7 @@
         },
         {
           "letter": "C",
-          "text": "Les cyclomoteurs de classe A et"
+          "text": "Les cyclomoteurs de classe A et B"
         }
       ],
       "correctAnswer": "A",
@@ -458,7 +458,7 @@
         },
         {
           "letter": "B",
-          "text": "Accès interdit aux conducteurs de cycles et cyclomoteurs de classe"
+          "text": "Accès interdit aux conducteurs de cycles et cyclomoteurs de classe B"
         }
       ],
       "correctAnswer": "A",

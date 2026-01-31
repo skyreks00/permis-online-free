@@ -51,7 +51,7 @@
       "id": 3,
       "type": "number",
       "question": "Combien de bandes de circulation voyez-vous sur cette route pour automobile  ?",
-      "correctAnswer": "C",
+      "correctAnswer": "3",
       "explanation": "Sur l’image, vous voyez trois bandes de circulation et la bande d’arrêt d’urgence.Sur une route pour automobile ou sur une autoroute, la partie à droite est une bande d’arrêt d’urgence ; Sur une route ordinaire c’est une bande de stationnement.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/66/3.jpg"
     },
@@ -288,7 +288,7 @@
         },
         {
           "letter": "C",
-          "text": "Les cyclistes et les cyclomoteurs de classe A et"
+          "text": "Les cyclistes et les cyclomoteurs de classe A et C"
         }
       ],
       "correctAnswer": "A",
