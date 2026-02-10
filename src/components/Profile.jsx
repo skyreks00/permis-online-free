@@ -185,7 +185,9 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
 
                         <div className="mb-5">
                             <label className="block mb-1.5 font-semibold text-sm">Gemini API Key</label>
-                            <p className="text-xs text-muted mb-2">Requise pour générer des corrections IA.</p>
+                            <p className="text-xs text-muted mb-2">
+                                Requise pour générer des corrections IA. <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noreferrer" className="text-primary underline">Obtenir une clé</a>
+                            </p>
                             <input
                                 type="password"
                                 className="input w-full"
@@ -202,7 +204,7 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                             <p className="text-xs text-muted mb-2">
                                 Requis pour proposer des corrections (Pull Requests).
                                 <br />
-                                <a href="https://github.com/settings/tokens/new?scopes=public_repo" target="_blank" rel="noreferrer" className="text-primary underline">
+                                <a href="https://github.com/settings/tokens/new?scopes=public_repo" target="_blank" rel="noreferrer" className="text-primary underline font-medium">
                                     Générer un token (Classic)
                                 </a> avec le scope <code>public_repo</code>.
                             </p>
