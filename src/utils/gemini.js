@@ -1,8 +1,5 @@
 
-
 import { GoogleGenAI } from "@google/genai";
-
-console.log("Gemini Module Loaded - Version: 2026-02-10 14:26 (Fixed single_choice)");
 
 /**
  * Fixes a question using Gemini 3 Flash Preview.
