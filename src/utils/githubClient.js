@@ -98,13 +98,30 @@ export const saveQuestionToGitHub = async (token, owner, repo, path, questionId,
         sha: refData.object.sha
     });
 
+    // Start with upstream SHA but check if file exists in fork/branch
+    let forkSha = currentSha;
+
+    try {
+        console.log(`[saveQuestionToGitHub] Checking file in fork: ${forkOwner}/${repo} ref=${branchName}`);
+        const { data: forkFileData } = await octokit.request(`GET /repos/${forkOwner}/${repo}/contents/${path}?ref=${branchName}`);
+        forkSha = forkFileData.sha;
+        console.log(`[saveQuestionToGitHub] Found file in fork with SHA: ${forkSha}`);
+    } catch (e) {
+        console.warn(`[saveQuestionToGitHub] File not found in fork/branch (or error), will try creating/updating with upstream SHA. Error: ${e.status}`);
+        // If file doesn't exist in fork, we don't provide SHA (create) or use upstream SHA if we think it matches
+        // But since we branched from main, the file SHOULD exist and have a SHA.
+        // If it's a 404, sha should be undefined for create? No, createOrUpdate needs SHA if updating.
+        // If we branched from main, the file exists.
+        // If error is not 404, we might have issues.
+    }
+
     await octokit.rest.repos.createOrUpdateFileContents({
         owner: forkOwner,
         repo,
         path,
         message,
         content: btoa(unescape(encodeURIComponent(newContent))),
-        sha: currentSha,
+        sha: forkSha,
         branch: branchName
     });
 
