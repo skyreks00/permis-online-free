@@ -23,7 +23,6 @@ const QuizPage = ({
         const loadData = async () => {
             setIsLoading(true);
             setError(null);
-
             // Find theme in sections
             let foundTheme = null;
             if (themeId === 'examen_B') {
@@ -31,12 +30,14 @@ const QuizPage = ({
                 foundTheme = { id: 'examen_B', name: 'Examen Blanc', file: 'examen_B.json' };
                 // Search in sections just in case
                 for (const section of sections) {
-                    const t = section.themes.find(t => t.id === themeId);
+                    const items = section.items || section.themes || [];
+                    const t = items.find(t => t.id === themeId);
                     if (t) { foundTheme = t; break; }
                 }
             } else {
                 for (const section of sections) {
-                    const t = section.themes.find(t => t.id === themeId);
+                    const items = section.items || section.themes || [];
+                    const t = items.find(t => t.id === themeId);
                     if (t) {
                         foundTheme = t;
                         break;
