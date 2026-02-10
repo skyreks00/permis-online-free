@@ -393,6 +393,12 @@ function App() {
     );
   }
 
+  const handleUpdateQuestion = (questionId, newQuestionData) => {
+    setQuestions(prevQuestions => prevQuestions.map(q =>
+      q.id === questionId ? { ...q, ...newQuestionData } : q
+    ));
+  };
+
   if (selectedTheme && questions.length > 0) {
     return (
       <>
@@ -404,6 +410,7 @@ function App() {
           instantFeedback={!isExamMode && instantFeedback}
           autoPlayAudio={autoPlayAudio}
           fileName={selectedTheme.file}
+          onUpdateQuestion={handleUpdateQuestion}
         />
       </>
     );

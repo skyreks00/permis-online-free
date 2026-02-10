@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { BookOpen, X, CheckCircle } from 'lucide-react';
 
-const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback, autoPlayAudio, onNext, isLastQuestion, fileName }) => {
+const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback, autoPlayAudio, onNext, isLastQuestion, fileName, onUpdateQuestion }) => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [hasAnswered, setHasAnswered] = useState(false);
   const [showExplanation, setShowExplanation] = useState(false);
@@ -291,6 +291,11 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
         setSaveMessage(<a href={result.url} target="_blank" rel="noreferrer">PR créée !</a>);
       } else {
         setSaveMessage('Commit effectué !');
+      }
+
+      // Update parent state to reflect change immediately in UI (e.g. Results page)
+      if (onUpdateQuestion) {
+        onUpdateQuestion(question.id, fixedQuestion);
       }
 
     } catch (ghErr) {
