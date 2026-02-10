@@ -2,28 +2,24 @@
   "questions": [
     {
       "id": 1,
-      "question": "La",
+      "question": "La vitesse d'une voiture est déterminée par",
       "type": "multiple_choice",
       "propositions": [
         {
           "letter": "A",
-          "text": "d’une voiture est déterminée par"
-        },
-        {
-          "letter": "A",
-          "text": "... le constructeur"
+          "text": "le constructeur"
         },
         {
           "letter": "B",
-          "text": "... le gouvernement"
+          "text": "le gouvernement"
         },
         {
           "letter": "C",
-          "text": "... le garagiste"
+          "text": "le garagiste"
         }
       ],
       "correctAnswer": "A",
-      "explanation": "Bug ici."
+      "explanation": "La vitesse d'une voiture est généralement déterminée par le constructeur."
     },
     {
       "id": 2,
