@@ -325,8 +325,8 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
         )}
       </div>
 
-      {/* Validation Controls (Only in Correction Mode) */}
-      {isCorrectionMode && (
+      {/* Validation Controls (Only in Correction Mode) - Hide on success */}
+      {isCorrectionMode && savingState !== 'success' && (
         <div className="p-3 bg-surface-2 border-b border-warning mb-4 rounded flex flex-col gap-2">
           <div className="flex justify-between items-center">
             <span className="text-sm font-bold text-warning">Valider cette correction ?</span>
@@ -336,17 +336,15 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
                 className="btn-ghost text-xs bg-surface-1"
                 disabled={savingState === 'saving'}
               >
-                {savingState === 'success' ? 'Fermer' : 'Annuler'}
+                Annuler
               </button>
-              {savingState !== 'success' && (
-                <button
-                  onClick={handleConfirmFix}
-                  className="btn-primary text-xs bg-warning border-warning text-black"
-                  disabled={savingState === 'saving'}
-                >
-                  {savingState === 'saving' ? 'Envoi...' : 'Valider'}
-                </button>
-              )}
+              <button
+                onClick={handleConfirmFix}
+                className="btn-primary text-xs bg-warning border-warning text-black"
+                disabled={savingState === 'saving'}
+              >
+                {savingState === 'saving' ? 'Envoi...' : 'Valider'}
+              </button>
             </div>
           </div>
           {savingState === 'error' && <div className="text-danger text-xs">{saveMessage}</div>}
