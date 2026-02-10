@@ -1,83 +1,64 @@
 {
-    "questions": [
+  "questions": [
+    {
+      "id": 1,
+      "question": "La charge utile d'un véhicule est déterminée par :",
+      "type": "single_choice",
+      "propositions": [
         {
-            "id": 1,
-            "question": "La",
-            "type": "multiple_choice",
-            "propositions": [
-                {
-                    "letter": "A",
-                    "text": "d’une voiture est déterminée par"
-                },
-                {
-                    "letter": "A",
-                    "text": "... le constructeur"
-                },
-                {
-                    "letter": "B",
-                    "text": "... le gouvernement"
-                },
-                {
-                    "letter": "C",
-                    "text": "... le garagiste"
-                }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Bug ici."
+          "letter": "A",
+          "text": "le constructeur"
         },
         {
-            "id": 2,
-            "question": "La masse en charge (",
-            "type": "multiple_choice",
-            "propositions": [
-                {
-                    "letter": "C",
-                    "text": ") de cette voiture est de 1450 kg.La"
-                },
-                {
-                    "letter": "A",
-                    "text": "est de 1700 kg.Le conducteur peut-il emprunter ce pont ?"
-                },
-                {
-                    "letter": "A",
-                    "text": "Oui"
-                },
-                {
-                    "letter": "B",
-                    "text": "Non"
-                }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Bug ici aussi."
+          "letter": "B",
+          "text": "le gouvernement"
         },
         {
-            "id": 3,
-            "question": "Vous êtes en possession d'un permis B et vous conduisez une voiture avec une",
-            "type": "multiple_choice",
-            "propositions": [
-                {
-                    "letter": "A",
-                    "text": "de 2500 kg.Quelle est la"
-                },
-                {
-                    "letter": "A",
-                    "text": "maximale de la remorque ?"
-                },
-                {
-                    "letter": "A",
-                    "text": "500 kg"
-                },
-                {
-                    "letter": "B",
-                    "text": "1000 kg"
-                },
-                {
-                    "letter": "C",
-                    "text": "1500 kg"
-                }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Encore un bug."
+          "letter": "C",
+          "text": "le garagiste"
         }
-    ]
+      ],
+      "correctAnswer": "A",
+      "explanation": "Les caractéristiques techniques d'un véhicule, telles que la charge utile ou la pression des pneus, sont spécifiquement définies par le constructeur pour assurer la sécurité du véhicule."
+    },
+    {
+      "id": 2,
+      "question": "La masse en charge de cette voiture est de 1450 kg et sa Masse Maximale Autorisée (MMA) est de 1700 kg. Le conducteur peut-il emprunter ce pont ?",
+      "type": "true_false",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Le véhicule a une masse réelle de 1450 kg. Puisque cette masse est inférieure à la limite autorisée ou à la MMA de 1700 kg mentionnée, le conducteur est autorisé à circuler.",
+      "answer": "A"
+    },
+    {
+      "id": 3,
+      "question": "Vous possédez le permis B et conduisez un véhicule d'un PTAC de 2500 kg. Quelle est la masse maximale (PTAC) de la remorque que vous pouvez tracter sans formation complémentaire ?",
+      "type": "single_choice",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "750 kg"
+        },
+        {
+          "letter": "B",
+          "text": "1000 kg"
+        },
+        {
+          "letter": "C",
+          "text": "1500 kg"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Avec le permis B, vous pouvez tracter une remorque de plus de 750 kg tant que la somme des PTAC (véhicule tracteur + remorque) ne dépasse pas 3500 kg. Dans ce cas, 3500 - 2500 = 1000 kg."
+    }
+  ]
 }
