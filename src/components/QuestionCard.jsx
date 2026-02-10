@@ -368,7 +368,7 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
 
           <div className="answers">
             {(displayQuestion.type === 'multiple_choice' || displayQuestion.type === 'single_choice') && displayQuestion.propositions ? (
-              displayQuestion.propositions.map((prop) => {
+              displayQuestion.propositions.map((prop, idx) => {
                 // const isSelected = selectedAnswer === prop.letter; // Unused
                 // Only show check if instantFeedback is ON and it's the correct answer
                 // OR if it's the selected answer AND instantFeedback is ON (logic overlap, effectively: show on correct if feedback on)
@@ -379,7 +379,7 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
 
                 return (
                   <button
-                    key={prop.letter}
+                    key={`${prop.letter}-${idx}`}
                     className={`answer-btn ${getButtonClass(prop.letter)}`}
                     onClick={() => handleAnswer(prop.letter)}
                     disabled={hasAnswered}
