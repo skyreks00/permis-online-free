@@ -286,17 +286,17 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
         try {
           console.log(`Attempt ${attempts} to save to GitHub...`);
 
-          // 1. Get latest content AND SHA (Fix CORS & Cache: Use query param cache-buster)
-          // Adding a random query parameter forces the browser to bypass its cache
-          // and fetch fresh data from GitHub, ensuring we get the REAL latest SHA.
-          const { data } = await octokit.rest.repos.getContent({
+          // 1. Get latest content AND SHA (Force cache bypass with URL query param)
+          // Manually construct the URL with a cache-busting query parameter
+          // This ensures the browser treats it as a completely new request
+          const cacheBuster = Date.now();
+          const { data } = await octokit.request(`GET /repos/${owner}/${repo}/contents/${path}?_=${cacheBuster}`, {
             owner,
             repo,
-            path,
-            _t: Date.now() // Cache buster
+            path
           });
           const currentSha = data.sha;
-          console.log("Fetched fresh SHA:", currentSha);
+          console.log(`Fetched fresh SHA (cache bypass ${cacheBuster}):`, currentSha);
 
           const content = JSON.parse(decodeURIComponent(escape(atob(data.content))));
 
