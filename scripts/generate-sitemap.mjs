@@ -3,20 +3,10 @@ import path from 'node:path';
 
 const SITE_URL = process.env.SITE_URL || 'https://skyreks00.github.io/permis-online-free/';
 const PUBLIC_DIR = path.resolve(process.cwd(), 'public');
-const LESSON_DIR = path.join(PUBLIC_DIR, 'lecon');
 const SITEMAP_PATH = path.join(PUBLIC_DIR, 'sitemap.xml');
-const INDEX_HTML_PATH = path.resolve(process.cwd(), 'index.html');
+const THEMES_PATH = path.join(PUBLIC_DIR, 'data', 'themes.json');
 
 const yyyyMmDd = (date = new Date()) => date.toISOString().slice(0, 10);
-
-async function lastModifiedDateOrToday(filePath) {
-  try {
-    const stat = await fs.stat(filePath);
-    return yyyyMmDd(stat.mtime);
-  } catch {
-    return yyyyMmDd(new Date());
-  }
-}
 
 const xmlEscape = (value) =>
   String(value)
@@ -26,21 +16,7 @@ const xmlEscape = (value) =>
     .replaceAll('"', '&quot;')
     .replaceAll("'", '&apos;');
 
-async function listLessonHtmlFiles() {
-  try {
-    const dirEntries = await fs.readdir(LESSON_DIR, { withFileTypes: true });
-    return dirEntries
-      .filter((e) => e.isFile() && e.name.toLowerCase().endsWith('.html'))
-      .map((e) => e.name)
-      .sort((a, b) => a.localeCompare(b, 'fr'));
-  } catch (e) {
-    if (e && (e.code === 'ENOENT' || e.code === 'ENOTDIR')) return [];
-    throw e;
-  }
-}
-
 function normalizeSiteUrl(siteUrl) {
-  // Ensure trailing slash.
   return siteUrl.endsWith('/') ? siteUrl : `${siteUrl}/`;
 }
 
@@ -57,35 +33,73 @@ function buildUrl(loc, { lastmod, changefreq, priority }) {
     .join('\n');
 }
 
+async function loadThemes() {
+  try {
+    const data = await fs.readFile(THEMES_PATH, 'utf8');
+    return JSON.parse(data);
+  } catch (error) {
+    console.error('Failed to load themes data:', error);
+    return { sections: [] };
+  }
+}
+
 async function main() {
   const siteUrl = normalizeSiteUrl(SITE_URL);
   const today = yyyyMmDd();
 
-  const homeLastmod = await lastModifiedDateOrToday(INDEX_HTML_PATH);
-
-  const lessonFiles = await listLessonHtmlFiles();
-
   const urls = [];
 
-  // Home
-  urls.push(
-    buildUrl(siteUrl, {
-      lastmod: homeLastmod,
-      changefreq: 'weekly',
-      priority: '1.0',
-    })
-  );
+  // 1. Static Routes
+  const staticRoutes = [
+    { path: '', priority: '1.0', changefreq: 'weekly' },
+    { path: 'profil', priority: '0.8', changefreq: 'monthly' },
+    { path: 'resultats', priority: '0.5', changefreq: 'monthly' },
+  ];
 
-  // Lessons (static HTML in /public/lecon)
-  for (const file of lessonFiles) {
-    const lessonLastmod = await lastModifiedDateOrToday(path.join(LESSON_DIR, file));
-    urls.push(
-      buildUrl(`${siteUrl}lecon/${encodeURIComponent(file)}`, {
-        lastmod: lessonLastmod || today,
-        changefreq: 'monthly',
-        priority: '0.7',
-      })
-    );
+  for (const route of staticRoutes) {
+    let fullPath;
+    if (route.path === '') {
+      fullPath = siteUrl;
+    } else {
+      fullPath = `${siteUrl}#/${route.path}`;
+    }
+
+    urls.push(buildUrl(fullPath, {
+      lastmod: today,
+      changefreq: route.changefreq,
+      priority: route.priority
+    }));
+  }
+
+  // 2. Dynamic Content from Themes
+  const data = await loadThemes();
+
+  if (data.sections) {
+    for (const section of data.sections) {
+      const items = section.items || section.themes || [];
+
+      for (const item of items) {
+        // Quiz Route
+        // Pattern: /#/quiz/:themeId
+        if (item.id) {
+          urls.push(buildUrl(`${siteUrl}#/quiz/${item.id}`, {
+            lastmod: today,
+            changefreq: 'monthly',
+            priority: '0.7'
+          }));
+        }
+
+        // Lesson Route
+        // Pattern: /#/lecon/:lessonFile
+        if (item.lessonFile) {
+          urls.push(buildUrl(`${siteUrl}#/lecon/${item.lessonFile}`, {
+            lastmod: today,
+            changefreq: 'monthly',
+            priority: '0.6'
+          }));
+        }
+      }
+    }
   }
 
   const sitemap = [
@@ -98,7 +112,7 @@ async function main() {
 
   await fs.writeFile(SITEMAP_PATH, sitemap, 'utf8');
 
-  console.log(`Generated sitemap with ${1 + lessonFiles.length} URLs at: ${SITEMAP_PATH}`);
+  console.log(`Generated sitemap with ${urls.length} URLs at: ${SITEMAP_PATH}`);
 }
 
 await main();
