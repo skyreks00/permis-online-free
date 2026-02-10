@@ -51,7 +51,14 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
 
     return (
         <div className="page container animate-fade-in" style={{ maxWidth: '1200px' }}>
-            {/* ... Header and Stats ... */}
+            <div className="mb-6">
+                <button
+                    onClick={onBack}
+                    className="btn-ghost flex items-center gap-2"
+                >
+                    <ArrowLeft size={20} /> Retour
+                </button>
+            </div>
 
             {/* Stats Grid */}
             <div className="profile-stats-grid">
