@@ -59,49 +59,50 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                 <h1 className="text-3xl font-bold m-0">Mon Profil</h1>
             </div>
 
-            {/* Stats Row */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
-                <div className="card p-5 flex items-center gap-4 border-none bg-surface-2">
-                    <div className="w-12 h-12 rounded-xl bg-primary/20 text-primary grid place-items-center">
+            {/* Stats Grid */}
+            <div className="profile-stats-grid">
+                <div className="stat-card">
+                    <div className="stat-icon primary">
                         <Trophy size={24} />
                     </div>
-                    <div>
-                        <div className="text-muted text-sm mb-1">Moyenne Globale</div>
-                        <div className="text-3xl font-bold leading-none">{averageAccuracy}%</div>
+                    <div className="stat-content">
+                        <div className="stat-label">Moyenne Globale</div>
+                        <div className="stat-value">{averageAccuracy}%</div>
                     </div>
                 </div>
-                <div className="card p-5 flex items-center gap-4 border-none bg-surface-2">
-                    <div className="w-12 h-12 rounded-xl bg-info/20 text-info grid place-items-center">
+                <div className="stat-card">
+                    <div className="stat-icon info">
                         <Target size={24} />
                     </div>
-                    <div>
-                        <div className="text-muted text-sm mb-1">Quiz Terminés</div>
-                        <div className="text-3xl font-bold leading-none">{totalQuizzes}</div>
+                    <div className="stat-content">
+                        <div className="stat-label">Quiz Terminés</div>
+                        <div className="stat-value">{totalQuizzes}</div>
                     </div>
                 </div>
-                <div className="card p-5 flex items-center gap-4 border-none bg-surface-2">
-                    <div className="w-12 h-12 rounded-xl bg-danger/20 text-danger grid place-items-center">
+                <div className="stat-card">
+                    <div className="stat-icon danger">
                         <AlertTriangle size={24} />
                     </div>
-                    <div>
-                        <div className="text-muted text-sm mb-1">Fautes à revoir</div>
-                        <div className="text-3xl font-bold leading-none">{totalMistakes}</div>
-                        <div className="text-xs text-muted mt-1">{totalMistakes} erreurs au total</div>
+                    <div className="stat-content">
+                        <div className="stat-label">Fautes à revoir</div>
+                        <div className="stat-value">{totalMistakes}</div>
+                        <div className="stat-sub">{totalMistakes} erreurs au total</div>
                     </div>
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-8 items-start">
+            <div className="profile-content-grid">
 
                 {/* Left Column: History & Progress */}
-                <div>
-                    <h2 className="text-xl font-bold mb-5 flex items-center gap-2">
+                {/* Left Column: History & Progress */}
+                <div className="card p-6 bg-surface-1 border border-border">
+                    <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
                         <Clock size={20} /> Historique par Thème
                     </h2>
 
-                    <div className="flex flex-col gap-3">
+                    <div className="theme-history-list">
                         {statedThemes.length === 0 ? (
-                            <div className="card p-8 text-center bg-surface-2 border-none text-muted">
+                            <div className="text-center text-muted py-8">
                                 Aucun historique disponible. Commencez un quiz !
                             </div>
                         ) : (
@@ -111,7 +112,7 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                                 const scoreColor = acc >= 80 ? 'text-success' : acc >= 50 ? 'text-warning' : 'text-danger';
 
                                 return (
-                                    <div key={theme.id} className="card p-4 bg-surface-2 border-none flex justify-between items-center">
+                                    <div key={theme.id} className="theme-history-item">
                                         <div className="font-medium">{theme.name}</div>
                                         <div className={`font-mono font-bold ${scoreColor}`}>
                                             {p.bestScore} / {p.totalQuestions} ({acc}%)
@@ -123,7 +124,7 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                     </div>
 
                     {Object.keys(progress).length > 0 && (
-                        <div className="mt-8">
+                        <div className="mt-8 pt-6 border-t border-border">
                             {!showConfirmReset ? (
                                 <button
                                     onClick={() => setShowConfirmReset(true)}
@@ -132,11 +133,11 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                                     <LogOut size={16} /> Réinitialiser la progression
                                 </button>
                             ) : (
-                                <div className="p-4 border border-danger rounded bg-danger/10">
-                                    <p className="text-center mb-3 text-danger font-medium">Êtes-vous sûr ? Cette action est irréversible.</p>
+                                <div className="p-4 border border-danger rounded bg-danger/10 animate-fade-in">
+                                    <p className="text-center mb-3 text-danger font-medium">Êtes-vous sûr ?</p>
                                     <div className="flex gap-3">
-                                        <button onClick={() => setShowConfirmReset(false)} className="btn-ghost flex-1">Annuler</button>
-                                        <button onClick={() => { onReset(); setShowConfirmReset(false); }} className="btn-primary bg-danger border-danger hover:bg-danger/90 flex-1 text-white">Confirmer</button>
+                                        <button onClick={() => setShowConfirmReset(false)} className="btn-ghost flex-1 text-sm">Annuler</button>
+                                        <button onClick={() => { onReset(); setShowConfirmReset(false); }} className="btn-primary bg-danger border-danger hover:bg-danger/90 flex-1 text-white text-sm">Confirmer</button>
                                     </div>
                                 </div>
                             )}
@@ -145,7 +146,7 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                 </div>
 
                 {/* Right Column: Settings & Developer Mode */}
-                <div className="flex flex-col gap-6">
+                <div className="settings-list">
 
                     {/* Preferences Card */}
                     <div className="card p-6 bg-surface-1 border border-border">
