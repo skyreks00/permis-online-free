@@ -14,7 +14,8 @@ export const fixQuestionWithGroq = async (question, apiKey) => {
     Your task is to FIX the following JSON question object.
     
     RULES:
-    1. **Fix Typos & Grammar**: Correct any spelling or grammatical errors in 'question', 'propositions', and 'explanation'.
+    1. **LANGUAGE: IMPERATIVELY FRENCH**. All text (question, propositions, explanation) MUST be in correct French.
+    2. **Fix Typos & Grammar**: Correct any spelling or grammatical errors in 'question', 'propositions', and 'explanation'.
     2. **Start** with a valid JSON structure.
     3. **Three Supported Question Types**:
        - "multiple_choice" (Standard question with options A, B, C... used for BOTH single and multiple valid answers)
