@@ -323,11 +323,21 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
           <div className="grid grid-cols-2 gap-2 text-sm">
             <div>
               <strong>Original:</strong>
-              <p className="line-clamp-3">{question.question}</p>
+              <p className="mb-2 font-medium">{question.question}</p>
+              <ul className="list-none pl-0 space-y-1 text-xs text-muted-foreground">
+                {question.propositions?.map((p, i) => (
+                  <li key={i}><span className="font-bold">{p.letter}</span>. {p.text}</li>
+                ))}
+              </ul>
             </div>
             <div>
               <strong>Correction:</strong>
-              <p className="line-clamp-3">{fixedQuestion.question}</p>
+              <p className="mb-2 font-medium">{fixedQuestion.question}</p>
+              <ul className="list-none pl-0 space-y-1 text-xs text-muted-foreground">
+                {fixedQuestion.propositions?.map((p, i) => (
+                  <li key={i}><span className="font-bold">{p.letter}</span>. {p.text}</li>
+                ))}
+              </ul>
             </div>
           </div>
 
