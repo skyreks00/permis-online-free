@@ -16,7 +16,7 @@ ${h}`)}return a}),pe=nc(wo);class Mo extends Ro{create(e,n){var o;const{api_vers
     
     RULES:
     1. **Fix Typos & Grammar**: Correct any spelling or grammatical errors in 'question', 'propositions', and 'explanation'.
-    2. **start** with a valid JSON structure.
+    2. **Start** with a valid JSON structure.
     3. **Three Supported Question Types**:
        - "multiple_choice" (Standard question with options A, B, C...)
        - "true_false" (Binary question, Oui/Non)
@@ -28,6 +28,43 @@ ${h}`)}return a}),pe=nc(wo);class Mo extends Ro{create(e,n){var o;const{api_vers
        - Ensure "answer" field matches the letters (e.g., "A" or "AC").
     5. **JSON Only**: Output ONLY valid JSON.
 
-    Original Question:
+    EXAMPLES:
+
+    Type: "multiple_choice" (Fill in the blank style)
+    {
+      "type": "multiple_choice",
+      "question": "Le panneau indique une vitesse limitée à ... (A) ... ou la fin d'une zone 30 ... (B) ...",
+      "propositions": [
+        { "letter": "A", "text": "50 km/h" },
+        { "letter": "B", "text": "Oui" },
+        { "letter": "C", "text": "Non" }
+      ],
+      "correctAnswer": "AC"
+    }
+
+    Type: "true_false"
+    {
+      "type": "true_false",
+      "question": "Je peux dépasser ce véhicule par la droite ?",
+      "propositions": [
+        { "letter": "A", "text": "Oui" },
+        { "letter": "B", "text": "Non" }
+      ],
+      "correctAnswer": "B"
+    }
+
+    Type: "single_choice"
+    {
+      "type": "single_choice",
+      "question": "Quelle est la vitesse maximale autorisée ?",
+      "propositions": [
+        { "letter": "A", "text": "30 km/h" },
+        { "letter": "B", "text": "50 km/h" },
+        { "letter": "C", "text": "70 km/h" }
+      ],
+      "correctAnswer": "B"
+    }
+
+    Original Question to Fix:
     ${JSON.stringify(t,null,2)}
   `;try{const a=(await o.models.generateContent({model:"gemini-2.0-flash",model:"gemini-3-flash-preview",contents:i,config:{responseMimeType:"application/json"}})).text;if(!a)throw new Error("No text in response");const u=a.replace(/```json/g,"").replace(/```/g,"").trim();return JSON.parse(u)}catch(l){throw console.error("Gemini Direct SDK Error:",l),alert("Attention: Impossible de contacter Gemini directement depuis GitHub (CORS). Cette fonctionnalité nécessite le proxy local (node server.js)."),l}};export{zc as fixQuestionWithGemini};
