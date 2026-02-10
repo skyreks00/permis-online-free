@@ -3102,7 +3102,7 @@
         },
         {
           "letter": "B",
-          "text": "Les cyclomoteurs de classe A et"
+          "text": "Les cyclomoteurs de classe A et B"
         }
       ],
       "correctAnswer": "B",
@@ -3648,7 +3648,7 @@
         },
         {
           "letter": "C",
-          "text": "Les cyclistes et les cyclomoteurs de classe A et"
+          "text": "Les cyclistes et les cyclomoteurs de classe A et B"
         }
       ],
       "correctAnswer": "A",
@@ -10382,7 +10382,7 @@
         },
         {
           "letter": "C",
-          "text": "Panneau A et"
+          "text": "Panneau A et C"
         }
       ],
       "correctAnswer": "C",
@@ -19852,7 +19852,7 @@
         },
         {
           "letter": "C",
-          "text": "Au signaux routiers A et"
+          "text": "Au signaux routiers A et C"
         }
       ],
       "correctAnswer": "A",
@@ -22902,7 +22902,7 @@
         },
         {
           "letter": "C",
-          "text": "Les cyclomoteurs de classe A et"
+          "text": "Les cyclomoteurs de classe A et C"
         }
       ],
       "correctAnswer": "A",
