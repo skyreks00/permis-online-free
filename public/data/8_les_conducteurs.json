@@ -110,7 +110,7 @@
     {
       "id": 8,
       "type": "multiple_choice",
-      "question": "Papa marche dans la rue avec son fils assis sur un poney.Papa est …",
+      "question": "Papa marche dans la rue avec son fils assis sur un poney. Papa est …",
       "propositions": [
         {
           "letter": "A",
@@ -121,8 +121,8 @@
           "text": "Un conducteur"
         }
       ],
-      "correctAnswer": "B",
-      "explanation": "Un cavalier ou une personne qui accompagne un cheval n’est pas un piéton, mais bien un conducteur.",
+      "correctAnswer": "A",
+      "explanation": "Un cavalier ou une personne qui accompagne à pied un cheval ou un animal de selle n'est pas considérée comme un conducteur mais comme un piéton.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/18.jpg"
     },
     {
