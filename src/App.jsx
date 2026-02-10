@@ -5,13 +5,14 @@ import Quiz from './components/Quiz';
 import Results from './components/Results';
 import LessonViewer from './components/LessonViewer';
 import Profile from './components/Profile';
-import themesData from './data/themes.json';
+import bundledThemes from './data/themes.json';
+import { loadThemesIndex, loadThemeQuestions } from './utils/contentLoader';
 
 function App() {
-  const [sections, setSections] = useState(themesData?.sections || []);
+  const [sections, setSections] = useState([]);
   const [selectedTheme, setSelectedTheme] = useState(null);
   const [questions, setQuestions] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [showResults, setShowResults] = useState(false);
   const [results, setResults] = useState({ correct: 0, incorrect: 0, answers: [] });
   const [isExamMode, setIsExamMode] = useState(false);
@@ -76,6 +77,23 @@ function App() {
     localStorage.removeItem('user-progress');
     setProgress({});
   };
+
+  // Load themes from GitHub on mount
+  useEffect(() => {
+    const loadThemes = async () => {
+      try {
+        setIsLoading(true);
+        const themesData = await loadThemesIndex(bundledThemes);
+        setSections(themesData?.sections || []);
+      } catch (error) {
+        console.error('Failed to load themes:', error);
+        setSections(bundledThemes?.sections || []);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    loadThemes();
+  }, []);
 
   useEffect(() => {
     // initialize color theme
@@ -200,10 +218,21 @@ function App() {
 
   const loadQuestions = async (themeFile) => {
     try {
-      const base = import.meta.env.BASE_URL || '/';
-      const response = await fetch(`${base}data/${themeFile}`);
-      const data = await response.json();
-      return data.questions;
+      // Try loading from GitHub first, with bundled fallback
+      let fallbackData = null;
+
+      // Attempt to load bundled version as fallback
+      try {
+        const base = import.meta.env.BASE_URL || '/';
+        const response = await fetch(`${base}data/${themeFile}`);
+        fallbackData = await response.json();
+      } catch (e) {
+        console.warn('Bundled fallback not available:', e.message);
+      }
+
+      // Load from GitHub with fallback
+      const data = await loadThemeQuestions(themeFile, fallbackData);
+      return data.questions || [];
     } catch (error) {
       console.error('Erreur lors du chargement des questions:', error);
       return [];
