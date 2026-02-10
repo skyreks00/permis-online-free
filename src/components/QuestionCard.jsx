@@ -282,8 +282,9 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
 
       const newContent = JSON.stringify(content, null, 2);
 
-      // Commit/PR with SHA
-      const result = await saveToGitHub(token, owner, repo, path, newContent, `Fix question ${question.id}`, user, currentSha);
+      // Commit/PR
+      const commitMessage = `fix(content): correct question ${question.id} in ${fileName} (AI)`;
+      const result = await saveToGitHub(token, owner, repo, path, newContent, commitMessage, user, currentSha);
 
       setSavingState('success');
       if (result.type === 'pr') {
