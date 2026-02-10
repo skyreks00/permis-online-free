@@ -135,7 +135,13 @@ export const fixQuestionWithGemini = async (question, apiKey) => {
     console.log("Gemini Raw Response:", text);
 
     const jsonString = text.replace(/```json/g, '').replace(/```/g, '').trim();
-    return JSON.parse(jsonString);
+    const result = JSON.parse(jsonString);
+
+    // If Gemini returns an array (common behavior), take the first item
+    if (Array.isArray(result)) {
+      return result[0];
+    }
+    return result;
 
   } catch (error) {
     console.error("Gemini Direct SDK Error:", error);
