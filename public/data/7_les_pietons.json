@@ -22,16 +22,34 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "Lorsque les symboles piéton et bicyclette sont superposés, aucun cyclomoteur ne peut passer. Lorsqu'ils sont côte à côte, les cyclomoteurs de classe A sont autorisés.",
+      "explanation": "Si les pictogrammes de piéton et de bicyclette sont superposés, aucun cyclomoteur ne peut passer. S'ils sont côte à côte, les cyclomoteurs de classe A peuvent passer.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/5.jpg"
     },
     {
       "id": 2,
-      "type": "number",
-      "question": "Ce signal de danger est placé à (...) mètres en deçà du passage pour piétons.",
-      "correctAnswer": "150",
-      "explanation": "Les piétons qui traversent sur le passage pour piétons, ou ont l’intention de l’emprunter, ont toujours priorité et un conducteur ne peut pas passer devant eux",
-      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/13.jpg"
+      "type": "multiple_choice",
+      "question": "À quelle distance en amont d'un passage pour piétons un signal de danger est-il généralement placé ?",
+      "correctAnswer": "C",
+      "explanation": "Les piétons qui traversent sur le passage pour piétons, ou ont l’intention de l’emprunter, ont toujours priorité et un conducteur ne peut pas passer devant eux. La distance précise peut varier selon les pays, mais 150 mètres est une valeur courante.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/13.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "50 mètres"
+        },
+        {
+          "letter": "B",
+          "text": "100 mètres"
+        },
+        {
+          "letter": "C",
+          "text": "150 mètres"
+        },
+        {
+          "letter": "D",
+          "text": "200 mètres"
+        }
+      ]
     },
     {
       "id": 3,
