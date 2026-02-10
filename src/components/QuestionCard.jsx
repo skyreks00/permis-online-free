@@ -210,19 +210,19 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
   // I will add the imports to the TOP of the file in a separate step.
 
   const handleFixQuestion = async () => {
-    const apiKey = localStorage.getItem('gemini_api_key');
+    const apiKey = localStorage.getItem('groq_api_key');
     if (!apiKey) {
-      alert("Veuillez ajouter votre clé API Gemini dans le Profil.");
+      alert("Veuillez ajouter votre clé API Groq dans le Profil.");
       return;
     }
 
     setIsFixing(true);
     setSavingState(null);
     try {
-      const { fixQuestionWithGemini } = await import('../utils/gemini');
+      const { fixQuestionWithGroq } = await import('../utils/groq');
       // Always fix the ORIGINAL question, not the already fixed one (unless we want iterative fixes?)
       // Let's stick to fixing the original 'question' prop.
-      const fixed = await fixQuestionWithGemini(question, apiKey);
+      const fixed = await fixQuestionWithGroq(question, apiKey);
       setFixedQuestion(fixed);
     } catch (e) {
       console.error(e);
@@ -317,7 +317,7 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
         </div>
 
         {/* Fix Button / Actions */}
-        {localStorage.getItem('gemini_api_key') && !isCorrectionMode && (
+        {localStorage.getItem('groq_api_key') && !isCorrectionMode && (
           <button
             onClick={handleFixQuestion}
             disabled={isFixing}

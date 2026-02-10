@@ -14,7 +14,7 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
     const statedThemes = (themesData.sections || []).flatMap(section => section.items).filter(t => progress[t.id]);
 
     // --- Developer Mode State ---
-    const [apiKey, setApiKey] = useState(() => localStorage.getItem('gemini_api_key') || '');
+    const [apiKey, setApiKey] = useState(() => localStorage.getItem('groq_api_key') || '');
     const [githubToken, setGithubToken] = useState(() => localStorage.getItem('github_token') || '');
     const [githubUser, setGithubUser] = useState(null);
     const [showConfirmReset, setShowConfirmReset] = useState(false);
@@ -36,8 +36,8 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
     }, []);
 
     const handleSaveKeys = () => {
-        if (apiKey) localStorage.setItem('gemini_api_key', apiKey);
-        else localStorage.removeItem('gemini_api_key');
+        if (apiKey) localStorage.setItem('groq_api_key', apiKey);
+        else localStorage.removeItem('groq_api_key');
 
         if (githubToken) {
             localStorage.setItem('github_token', githubToken);
@@ -51,13 +51,7 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
 
     return (
         <div className="page container animate-fade-in" style={{ maxWidth: '1200px' }}>
-            {/* Header */}
-            <div className="flex items-center justify-between mb-8">
-                <button onClick={onBack} className="btn-ghost flex items-center gap-2 pl-0 font-medium">
-                    <ArrowLeft size={20} /> Retour à l'accueil
-                </button>
-                <h1 className="text-3xl font-bold m-0">Mon Profil</h1>
-            </div>
+            {/* ... Header and Stats ... */}
 
             {/* Stats Grid */}
             <div className="profile-stats-grid">
@@ -93,7 +87,6 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
 
             <div className="profile-content-grid">
 
-                {/* Left Column: History & Progress */}
                 {/* Left Column: History & Progress */}
                 <div className="card p-6 bg-surface-1 border border-border">
                     <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
@@ -184,16 +177,16 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                         </h2>
 
                         <div className="mb-5">
-                            <label className="block mb-1.5 font-semibold text-sm">Gemini API Key</label>
+                            <label className="block mb-1.5 font-semibold text-sm">Groq API Key</label>
                             <p className="text-xs text-muted mb-2">
-                                Requise pour générer des corrections IA. <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noreferrer" className="text-primary underline">Obtenir une clé</a>
+                                Requise pour corrections IA (Llama 3). <a href="https://console.groq.com/keys" target="_blank" rel="noreferrer" className="text-primary underline">Obtenir une clé</a>
                             </p>
                             <input
                                 type="password"
                                 className="input w-full"
                                 value={apiKey}
                                 onChange={e => setApiKey(e.target.value)}
-                                placeholder="AIzaSy..."
+                                placeholder="gsk_..."
                             />
                         </div>
 
