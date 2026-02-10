@@ -393,6 +393,16 @@ function App() {
     );
   }
 
+  // Toast Notification State
+  const [toast, setToast] = useState(null); // { message: '', type: 'success' | 'error' }
+
+  useEffect(() => {
+    if (toast) {
+      const timer = setTimeout(() => setToast(null), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [toast]);
+
   const handleUpdateQuestion = (questionId, newQuestionData) => {
     console.log("handleUpdateQuestion called for ID:", questionId);
     setQuestions(prevQuestions => prevQuestions.map(q => {
@@ -401,6 +411,7 @@ function App() {
         console.log("Match found! Updating question content.");
         // DEBUG ALERT
         // setTimeout(() => alert(`Mise à jour de la question ${questionId} réussie !`), 100);
+        setToast({ message: `Question ${questionId} mise à jour avec succès !`, type: 'success' });
         return { ...q, ...newQuestionData };
       }
       return q;
@@ -410,6 +421,23 @@ function App() {
   if (selectedTheme && questions.length > 0) {
     return (
       <>
+        {toast && (
+          <div style={{
+            position: 'fixed',
+            bottom: '20px',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            background: toast.type === 'error' ? 'var(--danger)' : 'var(--success)',
+            color: '#fff',
+            padding: '12px 24px',
+            borderRadius: '8px',
+            zIndex: 9999,
+            fontWeight: 'bold',
+            boxShadow: '0 4px 6px rgba(0,0,0,0.2)'
+          }}>
+            {toast.message}
+          </div>
+        )}
         <Quiz
           questions={questions}
           themeName={selectedTheme.name}
@@ -433,6 +461,23 @@ function App() {
         onSelectTheme={handleSelectTheme}
         onSelectLesson={handleSelectLesson}
       />
+      {toast && (
+        <div style={{
+          position: 'fixed',
+          bottom: '20px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          background: toast.type === 'error' ? 'var(--danger)' : 'var(--success)',
+          color: '#fff',
+          padding: '12px 24px',
+          borderRadius: '8px',
+          zIndex: 9999,
+          fontWeight: 'bold',
+          boxShadow: '0 4px 6px rgba(0,0,0,0.2)'
+        }}>
+          {toast.message}
+        </div>
+      )}
     </>
   );
 }

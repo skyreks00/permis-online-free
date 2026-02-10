@@ -275,8 +275,15 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
       const repo = 'permis-online-free';
       const path = `public/data/${fileName}`;
 
-      // Get content AND SHA
-      const { data } = await octokit.rest.repos.getContent({ owner, repo, path });
+      // Get content AND SHA with cache busting to prevent 409 Conflict
+      const { data } = await octokit.rest.repos.getContent({
+        owner,
+        repo,
+        path,
+        headers: {
+          'if-none-match': ''
+        }
+      });
       const currentSha = data.sha;
       const content = JSON.parse(decodeURIComponent(escape(atob(data.content))));
 
