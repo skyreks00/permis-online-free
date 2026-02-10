@@ -394,9 +394,15 @@ function App() {
   }
 
   const handleUpdateQuestion = (questionId, newQuestionData) => {
-    setQuestions(prevQuestions => prevQuestions.map(q =>
-      q.id === questionId ? { ...q, ...newQuestionData } : q
-    ));
+    console.log("handleUpdateQuestion called for ID:", questionId);
+    setQuestions(prevQuestions => prevQuestions.map(q => {
+      // Robust comparison (String cast) to avoid type mismatches
+      if (String(q.id) === String(questionId)) {
+        console.log("Match found! Updating question content.");
+        return { ...q, ...newQuestionData };
+      }
+      return q;
+    }));
   };
 
   if (selectedTheme && questions.length > 0) {
