@@ -397,13 +397,14 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
                 // If feedback ON: Show valid check on Correct Answer.
                 // If feedback OFF: Do NOT show check.
                 const showCheck = hasAnswered && instantFeedback && prop.letter === displayQuestion.correctAnswer;
+                const isInteractionDisabled = hasAnswered || (isCorrectionMode && savingState !== 'success');
 
                 return (
                   <button
                     key={`${prop.letter}-${idx}`}
                     className={`answer-btn ${getButtonClass(prop.letter)}`}
                     onClick={() => handleAnswer(prop.letter)}
-                    disabled={hasAnswered}
+                    disabled={isInteractionDisabled}
                   >
                     <div className="answer-key">{prop.letter}</div>
                     <div className="answer-text">{prop.text}</div>
@@ -418,7 +419,7 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
                 <button
                   className={`answer-btn ${getButtonClass('OUI')}`}
                   onClick={() => handleAnswer('OUI')}
-                  disabled={hasAnswered}
+                  disabled={hasAnswered || (isCorrectionMode && savingState !== 'success')}
                 >
                   <div className="answer-key">A</div>
                   <div className="answer-text">Oui</div>
@@ -427,7 +428,7 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
                 <button
                   className={`answer-btn ${getButtonClass('NON')}`}
                   onClick={() => handleAnswer('NON')}
-                  disabled={hasAnswered}
+                  disabled={hasAnswered || (isCorrectionMode && savingState !== 'success')}
                 >
                   <div className="answer-key">B</div>
                   <div className="answer-text">Non</div>
@@ -449,7 +450,7 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
                     inputMode="numeric"
                     placeholder="Votre réponse…"
                     value={freeformAnswer}
-                    disabled={hasAnswered}
+                    disabled={hasAnswered || (isCorrectionMode && savingState !== 'success')}
                     onChange={(e) => setFreeformAnswer(e.target.value)}
                     onKeyDown={(e) => {
                       if (e.key === 'Enter') handleFreeformSubmit();
@@ -459,7 +460,7 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
                     className="number-submit"
                     type="button"
                     onClick={handleFreeformSubmit}
-                    disabled={hasAnswered || !String(freeformAnswer ?? '').trim()}
+                    disabled={hasAnswered || !String(freeformAnswer ?? '').trim() || (isCorrectionMode && savingState !== 'success')}
                   >
                     OK
                   </button>
