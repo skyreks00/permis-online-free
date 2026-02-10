@@ -220,7 +220,7 @@
     {
       "id": 13,
       "type": "multiple_choice",
-      "question": "Les bandes d’herbe que vous voyez sur cette image font-elles partie de la voie publique ?",
+      "question": "Les bandes d'herbe que vous voyez sur cette image font-elles partie de la voie publique ?",
       "propositions": [
         {
           "letter": "A",
@@ -232,7 +232,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "La piste cyclable, l'accotement de plein pied ou en saillie, la bande de stationnement, les trottoirs et les bandes d’herbe font partie de la voie publique. La voie publique s’étend jusqu'au fossé, talus ou la limite d'une propriété privée.",
+      "explanation": "La piste cyclable, l'accotement de plein pied ou en saillie, la bande de stationnement, les trottoirs et les bandes d'herbe font partie de la voie publique. La voie publique s'étend jusqu'au fossé, au talus ou à la limite d'une propriété privée.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/29.jpg"
     },
     {
