@@ -367,7 +367,7 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
           </div>
 
           <div className="answers">
-            {displayQuestion.type === 'multiple_choice' && displayQuestion.propositions ? (
+            {(displayQuestion.type === 'multiple_choice' || displayQuestion.type === 'single_choice') && displayQuestion.propositions ? (
               displayQuestion.propositions.map((prop) => {
                 // const isSelected = selectedAnswer === prop.letter; // Unused
                 // Only show check if instantFeedback is ON and it's the correct answer
