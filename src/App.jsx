@@ -1,28 +1,22 @@
 import { useState, useEffect } from 'react';
-import { Moon, Sun, User } from 'lucide-react';
-import ThemeSelector from './components/ThemeSelector';
-import Quiz from './components/Quiz';
-import Results from './components/Results';
-import LessonViewer from './components/LessonViewer';
-import Profile from './components/Profile';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import QuizPage from './pages/QuizPage';
+import ResultsPage from './pages/ResultsPage';
+import LessonPage from './pages/LessonPage';
+import ProfilePage from './pages/ProfilePage';
 import bundledThemes from './data/themes.json';
-import { loadThemesIndex, loadThemeQuestions } from './utils/contentLoader';
+import { loadThemesIndex } from './utils/contentLoader';
 
 function App() {
   const [sections, setSections] = useState([]);
-  const [selectedTheme, setSelectedTheme] = useState(null);
-  const [questions, setQuestions] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [showResults, setShowResults] = useState(false);
-  const [results, setResults] = useState({ correct: 0, incorrect: 0, answers: [] });
-  const [isExamMode, setIsExamMode] = useState(false);
-  const [selectedLesson, setSelectedLesson] = useState(null);
+
+  // Preferences
   const [colorTheme, setColorTheme] = useState(null);
-  const [showProfile, setShowProfile] = useState(false);
   const [instantFeedback, setInstantFeedback] = useState(() => {
     return localStorage.getItem('instantFeedback') === 'true';
   });
-
   const [autoPlayAudio, setAutoPlayAudio] = useState(() => {
     return localStorage.getItem('autoPlayAudio') === 'true';
   });
@@ -65,7 +59,7 @@ function App() {
         [themeId]: {
           bestScore: Math.max(current.bestScore, score),
           attempts: current.attempts + 1,
-          totalQuestions: total // Update total in case it changes
+          totalQuestions: total
         }
       };
       localStorage.setItem('user-progress', JSON.stringify(newProgress));
@@ -78,7 +72,7 @@ function App() {
     setProgress({});
   };
 
-  // Load themes from GitHub on mount
+  // Load themes
   useEffect(() => {
     const loadThemes = async () => {
       try {
@@ -95,8 +89,8 @@ function App() {
     loadThemes();
   }, []);
 
+  // Theme Management
   useEffect(() => {
-    // initialize color theme
     const stored = localStorage.getItem('color-theme');
     if (stored === 'light' || stored === 'dark') {
       setTheme(stored);
@@ -104,7 +98,7 @@ function App() {
       const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
       setTheme(prefersLight ? 'light' : 'dark');
     }
-    // respond to system changes
+
     const media = window.matchMedia('(prefers-color-scheme: light)');
     const handler = (e) => {
       if (!localStorage.getItem('color-theme')) {
@@ -114,108 +108,6 @@ function App() {
     media.addEventListener?.('change', handler);
     return () => media.removeEventListener?.('change', handler);
   }, []);
-
-  // --- Dynamic Title Management ---
-  useEffect(() => {
-    let title = "Permis Online Free – Code de la Route Gratuit";
-
-    if (showProfile) {
-      title = "Mon Profil – Permis Online Free";
-    } else if (selectedLesson) {
-      title = "Leçon – Permis Online Free";
-    } else if (showResults) {
-      title = "Résultats – Permis Online Free";
-    } else if (selectedTheme) {
-      title = `${selectedTheme.name} – Quiz Code de la Route`;
-    }
-
-    document.title = title;
-  }, [showProfile, selectedLesson, showResults, selectedTheme]);
-
-  // Debug methods exposed to console
-  useEffect(() => {
-    window.appDebug = {
-      // Force open results page
-      openResults: async (score = 42, reqTotal = 50, themeFile = 'examen_B.json') => {
-        let loaded = [];
-        try {
-          const loadedQuestions = await loadQuestions(themeFile);
-          if (loadedQuestions && loadedQuestions.length > 0) {
-            loaded = loadedQuestions;
-          } else {
-            throw new Error('Aucune question chargée');
-          }
-        } catch (e) {
-          console.error("Impossible de charger les questions réelles, fallback sur mock", e);
-        }
-
-        if (loaded.length === 0) {
-          loaded = Array.from({ length: reqTotal }, (_, i) => ({
-            id: i,
-            question: `Question Debug ${i + 1}`,
-            type: 'multiple_choice',
-            propositions: [
-              { letter: 'A', text: 'Réponse A' },
-              { letter: 'B', text: 'Réponse B' }
-            ],
-            correctAnswer: 'A',
-            explanation: 'Explication debug pour la question ' + (i + 1)
-          }));
-        }
-
-        // Limit total to available questions if we are using real data
-        const total = Math.min(reqTotal, loaded.length);
-        const questionsToUse = loaded.slice(0, total);
-        const effectiveScore = Math.min(score, total);
-
-        setQuestions(questionsToUse);
-        setResults({
-          correct: effectiveScore,
-          incorrect: total - effectiveScore,
-          score: effectiveScore,
-          answers: questionsToUse.map((q, i) => {
-            const isCorrect = i < effectiveScore;
-            let userAnswer = q.correctAnswer;
-            if (!isCorrect) {
-              const wrongProp = q.propositions?.find(p => p.letter !== q.correctAnswer);
-              userAnswer = wrongProp ? wrongProp.letter : (q.correctAnswer === 'A' ? 'B' : 'A');
-            }
-            return {
-              questionId: q.id,
-              userAnswer: userAnswer,
-              correctAnswer: q.correctAnswer,
-              isCorrect: isCorrect
-            };
-          })
-        });
-        setShowResults(true);
-        setSelectedTheme({ id: 'debug', name: 'Mode Debug (Réel)', file: themeFile });
-        setIsExamMode(themeFile.includes('examen'));
-        console.log(`> Page de résultats ouverte avec score ${effectiveScore}/${total} (${themeFile})`);
-      },
-
-      // Force start a quiz (first available or specific index)
-      startQuiz: (sectionIndex = 0, themeIndex = 0) => {
-        try {
-          const theme = sections[sectionIndex]?.themes[themeIndex];
-          if (theme) {
-            handleSelectTheme(theme);
-            console.log(`> Quiz démarré: ${theme.name}`);
-          } else {
-            console.error('Thème non trouvé aux index donnés');
-          }
-        } catch (e) {
-          console.error('Erreur au démarrage du quiz:', e);
-        }
-      }
-    };
-
-    console.log("🔧 Mode Debug actif: Utilisez window.appDebug.openResults() ou window.appDebug.startQuiz()");
-
-    return () => {
-      delete window.appDebug;
-    };
-  }, [sections]);
 
   const setTheme = (theme) => {
     document.documentElement.setAttribute('data-theme', theme);
@@ -228,243 +120,70 @@ function App() {
     localStorage.setItem('color-theme', next);
   };
 
-  /* 
-   * Themes are loaded directly from import, no async fetch needed for the list.
-   * Questions are loaded on demand.
-   */
-
-  const loadQuestions = async (themeFile) => {
-    try {
-      // Try loading from GitHub first, with bundled fallback
-      let fallbackData = null;
-
-      // Attempt to load bundled version as fallback
-      try {
-        const base = import.meta.env.BASE_URL || '/';
-        const response = await fetch(`${base}data/${themeFile}`);
-        fallbackData = await response.json();
-      } catch (e) {
-        console.warn('Bundled fallback not available:', e.message);
-      }
-
-      // Load from GitHub with fallback
-      const data = await loadThemeQuestions(themeFile, fallbackData);
-      return data.questions || [];
-    } catch (error) {
-      console.error('Erreur lors du chargement des questions:', error);
-      return [];
-    }
-  };
-
-  const handleSelectTheme = async (theme) => {
-    // We only select themes that have a file (quiz)
-    if (!theme.file) return;
-
-    setSelectedTheme(theme);
-
-    // Check for Exam Mode
-    const isExam = theme.id === 'examen_B';
-    setIsExamMode(isExam);
-
-    const loadedQuestions = await loadQuestions(theme.file);
-    // Mélanger les questions
-    const shuffled = [...loadedQuestions].sort(() => Math.random() - 0.5);
-
-    if (isExam) {
-      // Limit to 50 questions for Exam Mode
-      setQuestions(shuffled.slice(0, 50));
-    } else {
-      setQuestions(shuffled); // Prendre toutes les questions
-    }
-
-    setShowResults(false);
-  };
-
-  const handleFinishQuiz = (payload) => {
-    let score = 0;
-    let answers = [];
-
-    if (typeof payload === 'number') {
-      score = payload ?? 0;
-    } else {
-      score = payload?.score ?? 0;
-      answers = payload?.answers ?? [];
-    }
-
-    setResults({
-      correct: score,
-      incorrect: questions.length - score,
-      answers: answers,
-      score: score
-    });
-
-    // Save progress
-    if (selectedTheme) {
-      saveProgress(selectedTheme.id, score, questions.length);
-    }
-
-    setShowResults(true);
-  };
-
-  const handleRestart = async () => {
-    handleSelectTheme(selectedTheme);
-  };
-
-  const handleBackToThemes = () => {
-    setSelectedTheme(null);
-    setQuestions([]);
-    setShowResults(false);
-    setIsExamMode(false);
-  };
-
-  const handleSelectLesson = (lessonFile) => {
-    setSelectedLesson(lessonFile);
-  };
-
-  const handleBackFromLesson = () => {
-    setSelectedLesson(null);
-  };
-
-  const handleShowProfile = () => {
-    setShowProfile(true);
-  };
-
-  const handleBackFromProfile = () => {
-    setShowProfile(false);
-  };
-
-  const TopControls = () => (
-    <div style={{
-      position: 'fixed',
-      top: '20px',
-      right: '20px',
-      display: 'flex',
-      gap: '4px',
-      zIndex: 1000,
-      background: 'var(--surface)',
-      padding: '4px',
-      borderRadius: '30px',
-      border: '1px solid var(--border)',
-      boxShadow: 'var(--shadow-sm)'
-    }}>
-      {!showProfile && (
-        <button
-          className="btn-ghost"
-          onClick={handleShowProfile}
-          title="Mon Profil"
-          style={{
-            width: '36px',
-            height: '36px',
-            display: 'grid',
-            placeItems: 'center',
-            padding: 0,
-            borderRadius: '50%'
-          }}
-        >
-          <User size={20} />
-        </button>
-      )}
-      <button
-        className="theme-toggle btn-ghost"
-        onClick={toggleTheme}
-        title={colorTheme === 'light' ? 'Mode sombre' : 'Mode clair'}
-        style={{
-          width: '36px',
-          height: '36px',
-          display: 'grid',
-          placeItems: 'center',
-          padding: 0,
-          borderRadius: '50%'
-        }}
-      >
-        {colorTheme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
-      </button>
-    </div>
-  );
-
   if (isLoading) {
-    return (
-      <div className="container">
-        <TopControls />
-        <p>Chargement...</p>
-      </div>
-    );
+    return <div className="p-8 text-center">Chargement...</div>;
   }
 
-  // Quiz-only flow (no lessons routing)
-
-
-  if (selectedLesson) {
-    return (
-      <>
-        <LessonViewer lessonFile={selectedLesson} onBack={handleBackFromLesson} theme={colorTheme} />
-      </>
-    );
-  }
-
-  if (showProfile) {
-    return (
-      <>
-        <TopControls />
-        <Profile
-          progress={progress}
-          themesData={{ sections }}
-          onBack={handleBackFromProfile}
-          onReset={handleResetProgress}
-          instantFeedback={instantFeedback}
-          onToggleInstantFeedback={toggleInstantFeedback}
-          autoPlayAudio={autoPlayAudio}
-          onToggleAutoPlayAudio={toggleAutoPlayAudio}
-        />
-      </>
-    );
-  }
-
-
-  if (showResults) {
-    return (
-      <>
-        <TopControls />
-        <Results
-          score={results.score || results.correct} // Handle both structures if needed
-          total={questions.length}
-          questions={questions}
-          answers={results.answers}
-          showReview={true}
-          onRestart={handleRestart}
-          onBackToThemes={handleBackToThemes}
-          isExamMode={isExamMode}
-        />
-      </>
-    );
-  }
-
-  if (selectedTheme && questions.length > 0) {
-    return (
-      <>
-        <Quiz
-          questions={questions}
-          themeName={selectedTheme.name}
-          onFinish={handleFinishQuiz}
-          onExit={handleBackToThemes}
-          instantFeedback={!isExamMode && instantFeedback}
-          autoPlayAudio={autoPlayAudio}
-          fileName={selectedTheme.file}
-        />
-      </>
-    );
-  }
+  const isDarkMode = colorTheme === 'dark';
 
   return (
-    <>
-      <TopControls />
-      <ThemeSelector
-        sections={sections}
-        progress={progress}
-        onSelectTheme={handleSelectTheme}
-        onSelectLesson={handleSelectLesson}
-      />
-    </>
+    <HashRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <HomePage
+              sections={sections}
+              progress={progress}
+              toggleTheme={toggleTheme}
+              isDarkMode={isDarkMode}
+            />
+          }
+        />
+        <Route
+          path="/profil"
+          element={
+            <ProfilePage
+              progress={progress}
+              themesData={{ sections }}
+              onReset={handleResetProgress}
+              instantFeedback={instantFeedback}
+              onToggleInstantFeedback={toggleInstantFeedback}
+              autoPlayAudio={autoPlayAudio}
+              onToggleAutoPlayAudio={toggleAutoPlayAudio}
+              toggleTheme={toggleTheme}
+              isDarkMode={isDarkMode}
+            />
+          }
+        />
+        <Route
+          path="/lecon/:lessonId"
+          element={<LessonPage themeMode={colorTheme} />}
+        />
+        <Route
+          path="/quiz/:themeId"
+          element={
+            <QuizPage
+              sections={sections}
+              onFinishQuiz={saveProgress}
+              instantFeedback={instantFeedback}
+              autoPlayAudio={autoPlayAudio}
+              toggleTheme={toggleTheme}
+              isDarkMode={isDarkMode}
+            />
+          }
+        />
+        <Route
+          path="/resultats"
+          element={
+            <ResultsPage
+              toggleTheme={toggleTheme}
+              isDarkMode={isDarkMode}
+            />
+          }
+        />
+      </Routes>
+    </HashRouter>
   );
 }
 
