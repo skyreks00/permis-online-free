@@ -238,7 +238,7 @@
       "propositions": [
         {
           "letter": "A",
-          "text": "... est toujours un conducteur"
+          "text": "... est toujours considéré comme un conducteur"
         },
         {
           "letter": "B",
@@ -246,7 +246,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "Qui pousse une voiture ou une moto, est un conducteur.Qui pousse un cyclomoteur est selon le code de la route un piéton.",
+      "explanation": "Celui qui pousse une voiture ou une moto est considéré comme un conducteur. Celui qui pousse un cyclomoteur est considéré comme un piéton selon le code de la route.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/1.jpg"
     },
     {
