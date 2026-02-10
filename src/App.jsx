@@ -1,133 +1,142 @@
 import { useState, useEffect } from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import QuizPage from './pages/QuizPage';
 import ResultsPage from './pages/ResultsPage';
-import LessonPage from './pages/LessonPage';
 import ProfilePage from './pages/ProfilePage';
-import bundledThemes from './data/themes.json';
-import { loadThemesIndex } from './utils/contentLoader';
+import LessonPage from './pages/LessonPage';
+import TopControls from './components/TopControls';
+import { loadThemeQuestions, loadThemesIndex } from './utils/contentLoader';
+
+// Utility to start the GitHub login flow
+const handleLogin = () => {
+  const clientId = import.meta.env.VITE_GITHUB_CLIENT_ID;
+  const redirectUri = window.location.origin + window.location.pathname;
+  const scope = 'public_repo';
+  window.location.href = `https://github.com/login/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scope}`;
+};
 
 function App() {
   const [sections, setSections] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [progress, setProgress] = useState({});
+  const [colorTheme, setColorTheme] = useState('light');
+  const [instantFeedback, setInstantFeedback] = useState(false);
+  const [autoPlayAudio, setAutoPlayAudio] = useState(false);
 
-  // Preferences
-  const [colorTheme, setColorTheme] = useState(null);
-  const [instantFeedback, setInstantFeedback] = useState(() => {
-    return localStorage.getItem('instantFeedback') === 'true';
-  });
-  const [autoPlayAudio, setAutoPlayAudio] = useState(() => {
-    return localStorage.getItem('autoPlayAudio') === 'true';
-  });
+  // Initialize theme from localStorage or system preference
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setColorTheme(savedTheme);
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      return;
+    }
+
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    setColorTheme(systemTheme);
+    document.documentElement.setAttribute('data-theme', systemTheme);
+  }, []);
+
+  // Dynamic Page Title
+  useEffect(() => {
+    const path = window.location.hash.replace('#', '') || '/';
+    let title = 'Permis Online Free';
+
+    if (path.startsWith('/quiz')) title = 'Quiz - Permis Online Free';
+    else if (path.startsWith('/resultats')) title = 'Résultats - Permis Online Free';
+    else if (path === '/profil') title = 'Mon Profil - Permis Online Free';
+    else if (path.startsWith('/lecon')) title = 'Leçon - Permis Online Free';
+
+    document.title = title;
+  }, []); // Note: With BrowserRouter this effect needs to listen to location changes, but for now purely static title or simple hook is fine.
+
+  const toggleTheme = () => {
+    const newTheme = colorTheme === 'light' ? 'dark' : 'light';
+    setColorTheme(newTheme);
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  };
 
   const toggleInstantFeedback = () => {
-    setInstantFeedback(prev => {
-      const next = !prev;
-      localStorage.setItem('instantFeedback', String(next));
-      return next;
-    });
+    const newState = !instantFeedback;
+    setInstantFeedback(newState);
+    localStorage.setItem('instantFeedback', JSON.stringify(newState));
   };
 
   const toggleAutoPlayAudio = () => {
-    setAutoPlayAudio(prev => {
-      const next = !prev;
-      localStorage.setItem('autoPlayAudio', String(next));
-      return next;
-    });
+    const newState = !autoPlayAudio;
+    setAutoPlayAudio(newState);
+    localStorage.setItem('autoPlayAudio', JSON.stringify(newState));
   };
 
-  // Persistence state
-  const [progress, setProgress] = useState(() => {
-    try {
-      const stored = localStorage.getItem('user-progress');
-      return stored ? JSON.parse(stored) : {};
-    } catch (e) {
-      console.error("Failed to load progress", e);
-      return {};
-    }
-  });
-
-  // Save progress handler
-  const saveProgress = (themeId, score, total) => {
-    if (!themeId) return;
-
-    setProgress(prev => {
-      const current = prev[themeId] || { bestScore: 0, attempts: 0, totalQuestions: total };
-      const newProgress = {
-        ...prev,
-        [themeId]: {
-          bestScore: Math.max(current.bestScore, score),
-          attempts: current.attempts + 1,
-          totalQuestions: total
+  // Load initial data
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const themesData = await loadThemesIndex();
+        if (themesData && themesData.sections) {
+          setSections(themesData.sections);
         }
-      };
-      localStorage.setItem('user-progress', JSON.stringify(newProgress));
-      return newProgress;
-    });
+      } catch (error) {
+        console.error("Failed to load themes index", error);
+      }
+    };
+    loadData();
+
+    // Load progress
+    const savedProgress = localStorage.getItem('quizProgress');
+    if (savedProgress) {
+      setProgress(JSON.parse(savedProgress));
+    }
+
+    // Load settings
+    const savedFeedback = localStorage.getItem('instantFeedback');
+    if (savedFeedback) {
+      setInstantFeedback(JSON.parse(savedFeedback));
+    }
+
+    const savedAudio = localStorage.getItem('autoPlayAudio');
+    if (savedAudio) {
+      setAutoPlayAudio(JSON.parse(savedAudio));
+    }
+  }, []);
+
+  const saveProgress = (themeId, score, total, answers) => {
+    const newProgress = {
+      ...progress,
+      [themeId]: {
+        score,
+        total,
+        date: new Date().toISOString(),
+        answers // Save answers for review
+      }
+    };
+    setProgress(newProgress);
+    localStorage.setItem('quizProgress', JSON.stringify(newProgress));
   };
 
   const handleResetProgress = () => {
-    localStorage.removeItem('user-progress');
-    setProgress({});
-  };
-
-  // Load themes
-  useEffect(() => {
-    const loadThemes = async () => {
-      try {
-        setIsLoading(true);
-        const themesData = await loadThemesIndex(bundledThemes);
-        setSections(themesData?.sections || []);
-      } catch (error) {
-        console.error('Failed to load themes:', error);
-        setSections(bundledThemes?.sections || []);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    loadThemes();
-  }, []);
-
-  // Theme Management
-  useEffect(() => {
-    const stored = localStorage.getItem('color-theme');
-    if (stored === 'light' || stored === 'dark') {
-      setTheme(stored);
-    } else {
-      const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-      setTheme(prefersLight ? 'light' : 'dark');
+    if (window.confirm('Êtes-vous sûr de vouloir réinitialiser toute votre progression ?')) {
+      setProgress({});
+      localStorage.removeItem('quizProgress');
     }
-
-    const media = window.matchMedia('(prefers-color-scheme: light)');
-    const handler = (e) => {
-      if (!localStorage.getItem('color-theme')) {
-        setTheme(e.matches ? 'light' : 'dark');
-      }
-    };
-    media.addEventListener?.('change', handler);
-    return () => media.removeEventListener?.('change', handler);
-  }, []);
-
-  const setTheme = (theme) => {
-    document.documentElement.setAttribute('data-theme', theme);
-    setColorTheme(theme);
   };
 
-  const toggleTheme = () => {
-    const next = colorTheme === 'light' ? 'dark' : 'light';
-    setTheme(next);
-    localStorage.setItem('color-theme', next);
+  // Debug methods
+  window.debugApp = {
+    sections,
+    progress,
+    resetProgress: () => {
+      setProgress({});
+      localStorage.removeItem('quizProgress');
+      console.log("Progress reset");
+    }
   };
-
-  if (isLoading) {
-    return <div className="p-8 text-center">Chargement...</div>;
-  }
 
   const isDarkMode = colorTheme === 'dark';
 
   return (
-    <HashRouter>
+    <BrowserRouter basename="/permis-online-free/">
       <Routes>
         <Route
           path="/"
@@ -183,7 +192,7 @@ function App() {
           }
         />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

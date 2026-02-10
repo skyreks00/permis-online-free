@@ -49,7 +49,7 @@ async function main() {
 
   const urls = [];
 
-  // 1. Static Routes
+  // 1. Static Routes (Clean URLs)
   const staticRoutes = [
     { path: '', priority: '1.0', changefreq: 'weekly' },
     { path: 'profil', priority: '0.8', changefreq: 'monthly' },
@@ -61,7 +61,7 @@ async function main() {
     if (route.path === '') {
       fullPath = siteUrl;
     } else {
-      fullPath = `${siteUrl}#/${route.path}`;
+      fullPath = `${siteUrl}${route.path}`;
     }
 
     urls.push(buildUrl(fullPath, {
@@ -71,7 +71,7 @@ async function main() {
     }));
   }
 
-  // 2. Dynamic Content from Themes
+  // 2. Dynamic Content from Themes (Clean URLs)
   const data = await loadThemes();
 
   if (data.sections) {
@@ -80,9 +80,8 @@ async function main() {
 
       for (const item of items) {
         // Quiz Route
-        // Pattern: /#/quiz/:themeId
         if (item.id) {
-          urls.push(buildUrl(`${siteUrl}#/quiz/${item.id}`, {
+          urls.push(buildUrl(`${siteUrl}quiz/${item.id}`, {
             lastmod: today,
             changefreq: 'monthly',
             priority: '0.7'
@@ -90,9 +89,8 @@ async function main() {
         }
 
         // Lesson Route
-        // Pattern: /#/lecon/:lessonFile
         if (item.lessonFile) {
-          urls.push(buildUrl(`${siteUrl}#/lecon/${item.lessonFile}`, {
+          urls.push(buildUrl(`${siteUrl}lecon/${item.lessonFile}`, {
             lastmod: today,
             changefreq: 'monthly',
             priority: '0.6'
