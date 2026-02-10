@@ -24,6 +24,7 @@ export const getUser = async (token) => {
 
 /**
  * Saves a specific question update to a theme file on GitHub
+ * ALWAYS uses PR flow to avoid SHA mismatch issues
  * @param {string} token - GitHub Token
  * @param {string} owner - Repo owner
  * @param {string} repo - Repo name  
@@ -32,7 +33,7 @@ export const getUser = async (token) => {
  * @param {object} updatedQuestion - New question data
  * @param {string} message - Commit message
  * @param {object} user - User object from getUser()
- * @returns {Promise<object>} - Result with type ('commit' or 'pr') and url
+ * @returns {Promise<object>} - Result with type ('pr') and url
  */
 export const saveQuestionToGitHub = async (token, owner, repo, path, questionId, updatedQuestion, message, user) => {
     const octokit = getOctokit(token);
@@ -74,66 +75,50 @@ export const saveQuestionToGitHub = async (token, owner, repo, path, questionId,
         return { type: 'unchanged', message: 'No changes detected' };
     }
 
-    console.log(`[saveQuestionToGitHub] Content changed, committing...`);
+    console.log(`[saveQuestionToGitHub] Content changed, creating PR...`);
 
-    // Commit directly if owner, otherwise create PR
-    if (user.login === owner) {
-        // Direct commit
-        await octokit.rest.repos.createOrUpdateFileContents({
-            owner,
-            repo,
-            path,
-            message,
-            content: btoa(unescape(encodeURIComponent(newContent))),
-            sha: currentSha,
-        });
+    // ALWAYS use PR flow to avoid SHA mismatch issues with direct commits
+    const fork = await octokit.rest.repos.createFork({ owner, repo });
+    const forkOwner = fork.data.owner.login;
 
-        console.log('[saveQuestionToGitHub] Successfully committed');
-        return { type: 'commit', url: `https://github.com/${owner}/${repo}/blob/main/${path}` };
-    } else {
-        // Community flow: Fork & PR
-        const fork = await octokit.rest.repos.createFork({ owner, repo });
-        const forkOwner = fork.data.owner.login;
+    await new Promise(r => setTimeout(r, 2000));
 
-        await new Promise(r => setTimeout(r, 2000));
+    const branchName = `fix/question-${questionId}-${Date.now()}`;
 
-        const branchName = `fix/question-${questionId}-${Date.now()}`;
+    const { data: refData } = await octokit.rest.git.getRef({
+        owner: forkOwner,
+        repo,
+        ref: 'heads/main'
+    });
 
-        const { data: refData } = await octokit.rest.git.getRef({
-            owner: forkOwner,
-            repo,
-            ref: 'heads/main'
-        });
+    await octokit.rest.git.createRef({
+        owner: forkOwner,
+        repo,
+        ref: `refs/heads/${branchName}`,
+        sha: refData.object.sha
+    });
 
-        await octokit.rest.git.createRef({
-            owner: forkOwner,
-            repo,
-            ref: `refs/heads/${branchName}`,
-            sha: refData.object.sha
-        });
+    await octokit.rest.repos.createOrUpdateFileContents({
+        owner: forkOwner,
+        repo,
+        path,
+        message,
+        content: btoa(unescape(encodeURIComponent(newContent))),
+        sha: currentSha,
+        branch: branchName
+    });
 
-        await octokit.rest.repos.createOrUpdateFileContents({
-            owner: forkOwner,
-            repo,
-            path,
-            message,
-            content: btoa(unescape(encodeURIComponent(newContent))),
-            sha: currentSha,
-            branch: branchName
-        });
+    const pr = await octokit.rest.pulls.create({
+        owner,
+        repo,
+        title: message,
+        head: `${forkOwner}:${branchName}`,
+        base: 'main',
+        body: `Proposed fix by ${user.login} using Gemini AI.`
+    });
 
-        const pr = await octokit.rest.pulls.create({
-            owner,
-            repo,
-            title: message,
-            head: `${forkOwner}:${branchName}`,
-            base: 'main',
-            body: `Proposed fix by ${user.login} using Gemini AI.`
-        });
-
-        console.log('[saveQuestionToGitHub] Successfully created PR');
-        return { type: 'pr', url: pr.data.html_url };
-    }
+    console.log('[saveQuestionToGitHub] Successfully created PR');
+    return { type: 'pr', url: pr.data.html_url };
 };
 
 /**
