@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://skyreks00.github.io/permis-online-free/sitemap.xml

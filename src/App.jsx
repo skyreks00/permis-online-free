@@ -115,6 +115,23 @@ function App() {
     return () => media.removeEventListener?.('change', handler);
   }, []);
 
+  // --- Dynamic Title Management ---
+  useEffect(() => {
+    let title = "Permis Online Free – Code de la Route Gratuit";
+
+    if (showProfile) {
+      title = "Mon Profil – Permis Online Free";
+    } else if (selectedLesson) {
+      title = "Leçon – Permis Online Free";
+    } else if (showResults) {
+      title = "Résultats – Permis Online Free";
+    } else if (selectedTheme) {
+      title = `${selectedTheme.name} – Quiz Code de la Route`;
+    }
+
+    document.title = title;
+  }, [showProfile, selectedLesson, showResults, selectedTheme]);
+
   // Debug methods exposed to console
   useEffect(() => {
     window.appDebug = {
