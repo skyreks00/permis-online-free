@@ -331,14 +331,40 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
           <div className="flex justify-between items-center">
             <span className="text-sm font-bold text-warning">Valider cette correction ?</span>
             <div className="flex gap-2">
-              <button onClick={() => setFixedQuestion(null)} className="btn-ghost text-xs bg-surface-1">Annuler</button>
-              <button onClick={handleConfirmFix} className="btn-primary text-xs bg-warning border-warning text-black">
-                {savingState === 'success' ? 'Enregistré !' : 'Valider'}
+              <button
+                onClick={() => setFixedQuestion(null)}
+                className="btn-ghost text-xs bg-surface-1"
+                disabled={savingState === 'saving'}
+              >
+                Annuler
+              </button>
+              <button
+                onClick={handleConfirmFix}
+                className="btn-primary text-xs bg-warning border-warning text-black"
+                disabled={savingState === 'saving'}
+              >
+                {savingState === 'saving' ? 'Envoi...' : (savingState === 'success' ? 'Validé' : 'Valider')}
               </button>
             </div>
           </div>
-          {savingState === 'success' && <div className="text-success text-xs">{saveMessage}</div>}
           {savingState === 'error' && <div className="text-danger text-xs">{saveMessage}</div>}
+        </div>
+      )}
+
+      {/* Global Toast for Success */}
+      {savingState === 'success' && (
+        <div className="toast-notification">
+          <CheckCircle size={24} className="text-success" />
+          <div>
+            <div className="font-bold text-sm">Correction envoyée !</div>
+            <div className="text-xs text-muted">{saveMessage}</div>
+          </div>
+          <button
+            onClick={() => setSavingState(null)}
+            className="ml-auto text-muted hover:text-foreground"
+          >
+            <X size={16} />
+          </button>
         </div>
       )}
 
