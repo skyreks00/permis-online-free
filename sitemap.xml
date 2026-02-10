@@ -7,200 +7,236 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/0_comment_apprendre_la_theorie.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/profil</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skyreks00.github.io/permis-online-free/#/resultats</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/0_intro</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/0_le_permis_de_conduire.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/lecon/0_comment_apprendre_la_theorie.html</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/0_permis</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/1_la_chaussee.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/lecon/0_le_permis_de_conduire.html</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/1_la_chaussee</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/10_chargement_des_vehicules.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/2_bandes_de_circulation</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/11_les_feux.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/3_la_piste_cyclable</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/12_la_vitesse_maximale.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/4_lautoroute</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/13_la_distance_darret.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/5_route_pour_automobiles</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/14_le_croisement.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/6_endroits_particliers</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/15_depassement.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/7_les_pietons</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/16_depassement.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/8_les_conducteurs</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/17_les_personnes_quaifiees.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/9_la_voiture</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/18_les_signaux_lumineux.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/10_chargement_des_vehicules</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/19_les_panneaux.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/11_les_feux</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/2_bandes_de_circulation.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/12_la_vitesse_maximale</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/20_la_priorite_de_droite.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/13_la_distance_darret</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/21_les_maneuvres.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/14_le_croisement</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/22_train_-_tram_-_autobus.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/16_depassement</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/23_sens_interdit.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/15_depassement_interdit</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/24_direction_obligatoire.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/lecon/15_depassement.html</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/17_les_personnes_quaifiees</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/25_arrt_et_stationnement_1.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/18_les_signaux_lumineux</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/26_arrt_et_stationnement_2.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/19_les_panneaux</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/27_arrt_et_stationnement_3.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/20_la_priorite_de_droite</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/28_alcool_et_drogues.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/21_les_maneuvres</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/29_un_accident.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/22_train_-_tram_-_autobus</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/3_la_piste_cyclable.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/23_sens_interdit</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/30_consommation_de_carburant.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/24_direction_obligatoire</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/31_technique.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/25_arrt_et_stationnement_1</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/4_lautoroute.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/26_arrt_et_stationnement_2</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/5_route_pour_automobiles.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/27_arrt_et_stationnement_3</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/6_endroits_particliers.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/28_alcool_et_drogues</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/7_les_pietons.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/29_un_accident</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/8_les_conducteurs.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/30_consommation_de_carburant</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://skyreks00.github.io/permis-online-free/lecon/9_la_voiture.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/31_technique</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skyreks00.github.io/permis-online-free/#/quiz/examen_B</loc>
+    <lastmod>2026-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
