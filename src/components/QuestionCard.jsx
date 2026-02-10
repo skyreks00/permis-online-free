@@ -94,11 +94,15 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
     setTimedOut(false);
     setTimeLeft(MAX_TIME_MS);
 
-    // démarrer le compte à rebours (seulement si pas en mode correction)
+    // démarrer le compte à rebours (seulement si pas en mode correction BLOQUANT)
     clearInterval(intervalRef.current);
     clearTimeout(timeoutRef.current);
 
-    if (isCorrectionMode) return;
+    // Bloquer seulement si on est en preview (savingState === null) ou erreur
+    // Si 'saving' ou 'success', on laisse le timer courir (Optimistic UI)
+    const isBlocking = isCorrectionMode && (savingState === null || savingState === 'error');
+
+    if (isBlocking) return;
 
     const start = Date.now();
     intervalRef.current = setInterval(() => {
@@ -126,7 +130,7 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
       clearInterval(intervalRef.current);
       clearTimeout(timeoutRef.current);
     };
-  }, [displayQuestion?.id, displayQuestion?.question]); // Depend on displayQuestion
+  }, [displayQuestion?.id, displayQuestion?.question, isCorrectionMode, savingState]); // Added dependencies
 
   useEffect(() => {
     answeredRef.current = hasAnswered;
@@ -240,14 +244,13 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
     const { saveQuestionLocally } = await import('../utils/api');
     const { saveToGitHub, getUser } = await import('../utils/githubClient');
 
-    setSavingState('saving');
+    setSavingState('saving'); // UI Unblocks HERE
 
     // 1. Try Local Save (Silence error as backend might not be running)
     try {
       await saveQuestionLocally(fileName, question.id, fixedQuestion);
-      setSavingState('success');
-      setSaveMessage('Sauvegardé localement !');
-      return;
+      // setSavingState('success'); // Don't updating to success here to avoid premature toast if we want Github too?
+      // Actually local save is fast.
     } catch (localErr) {
       // console.warn('Local save failed (backend likely offline):', localErr.message);
     }
@@ -272,34 +275,69 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
       const repo = 'permis-online-free';
       const path = `public/data/${fileName}`;
 
-      // Get content AND SHA
-      const { data } = await octokit.rest.repos.getContent({ owner, repo, path });
-      const currentSha = data.sha;
-      const content = JSON.parse(decodeURIComponent(escape(atob(data.content))));
+      // Retry loop for SHA mismatch (Conflict)
+      let attempts = 0;
+      const MAX_ATTEMPTS = 3;
+      let success = false;
+      let lastError = null;
 
-      // Update the specific question
-      const idx = content.questions.findIndex(q => q.id === question.id);
-      if (idx !== -1) {
-        content.questions[idx] = { ...content.questions[idx], ...fixedQuestion };
-      }
+      while (attempts < MAX_ATTEMPTS && !success) {
+        attempts++;
+        try {
+          console.log(`Attempt ${attempts} to save to GitHub...`);
 
-      const newContent = JSON.stringify(content, null, 2);
+          // 1. Get latest content AND SHA
+          const { data } = await octokit.rest.repos.getContent({ owner, repo, path, t: Date.now() }); // Adding timestamp to bust cache?
+          const currentSha = data.sha;
+          const content = JSON.parse(decodeURIComponent(escape(atob(data.content))));
 
-      // Commit/PR
-      const commitMessage = `fix(content): correct question ${question.id} in ${fileName} (AI)`;
-      const result = await saveToGitHub(token, owner, repo, path, newContent, commitMessage, user, currentSha);
+          // 2. Update the specific question
+          const idx = content.questions.findIndex(q => q.id === question.id);
+          if (idx !== -1) {
+            // Determine if we are updating an existing question or adding/fixing
+            // We merge the fixed question into the existing one
+            content.questions[idx] = { ...content.questions[idx], ...fixedQuestion };
+          } else {
+            // Should not happen for a fix, but safety check
+            throw new Error("Question introuvable dans le fichier distant (ID changé ?)");
+          }
 
-      setSavingState('success');
-      if (result.type === 'pr') {
-        setSaveMessage(<a href={result.url} target="_blank" rel="noreferrer">PR créée !</a>);
-      } else {
-        setSaveMessage('Commit effectué !');
+          const newContent = JSON.stringify(content, null, 2);
+
+          // 3. Commit/PR with SHA
+          const commitMessage = `fix(content): correct question ${question.id} in ${fileName} (AI)`;
+          const result = await saveToGitHub(token, owner, repo, path, newContent, commitMessage, user, currentSha);
+
+          success = true; // Loop ends
+          setSavingState('success');
+
+          if (result.type === 'pr') {
+            setSaveMessage(<a href={result.url} target="_blank" rel="noreferrer">PR créée !</a>);
+          } else {
+            setSaveMessage('Commit effectué !');
+          }
+
+        } catch (attemptErr) {
+          console.error(`Attempt ${attempts} failed:`, attemptErr);
+          lastError = attemptErr;
+
+          // Check if it's a SHA mismatch (409 Conflict)
+          const isConflict = attemptErr.status === 409 || attemptErr.message.includes('does not match');
+          if (isConflict && attempts < MAX_ATTEMPTS) {
+            console.log("SHA mismatch detected. Retrying...");
+            await new Promise(r => setTimeout(r, 1000)); // Wait 1s before retry
+            continue;
+          }
+
+          // If not conflict or max attempts reached, throw to outer catch
+          throw attemptErr;
+        }
       }
 
     } catch (ghErr) {
       console.error(ghErr);
       setSavingState('error');
-      setSaveMessage('Erreur GitHub: ' + ghErr.message);
+      setSaveMessage('Erreur GitHub: ' + (ghErr.message || 'Problème de sauvegarde'));
     }
   };
 
@@ -328,8 +366,8 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
         )}
       </div>
 
-      {/* Validation Controls (Only in Correction Mode) - Hide on success */}
-      {isCorrectionMode && savingState !== 'success' && (
+      {/* Validation Controls (Only in Correction Mode) - Hide on success OR SAVING */}
+      {isCorrectionMode && (savingState === null || savingState === 'error') && (
         <div className="p-3 bg-surface-2 border-b border-warning mb-4 rounded flex flex-col gap-2">
           <div className="flex justify-between items-center">
             <span className="text-sm font-bold text-warning">Valider cette correction ?</span>
@@ -355,27 +393,30 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
       )}
 
       {/* Global Toast for Success */}
-      {savingState === 'success' && (
+      {(savingState === 'success' || savingState === 'saving') && (
         <div className="toast-notification">
-          <CheckCircle size={24} className="text-success" />
+          <CheckCircle size={24} className={savingState === 'success' ? "text-success" : "text-muted"} />
           <div>
-            <div className="font-bold text-sm">Correction envoyée !</div>
-            <div className="text-xs text-muted">{saveMessage}</div>
+            <div className="font-bold text-sm">{savingState === 'success' ? 'Correction envoyée !' : 'Envoi en cours...'}</div>
+            {savingState === 'success' && <div className="text-xs text-muted">{saveMessage}</div>}
+            {savingState === 'saving' && <div className="text-xs text-muted">Vous pouvez continuer à jouer</div>}
           </div>
-          <button
-            onClick={() => setSavingState(null)}
-            className="ml-auto text-muted hover:text-foreground"
-          >
-            <X size={16} />
-          </button>
+          {savingState === 'success' && (
+            <button
+              onClick={() => setSavingState(null)}
+              className="ml-auto text-muted hover:text-foreground"
+            >
+              <X size={16} />
+            </button>
+          )}
         </div>
       )}
 
       <div
         className="question-main"
         style={{
-          opacity: (isCorrectionMode && savingState !== 'success') ? 0.6 : 1,
-          filter: (isCorrectionMode && savingState !== 'success') ? 'grayscale(100%)' : 'none',
+          opacity: (isCorrectionMode && (savingState === null || savingState === 'error')) ? 0.6 : 1,
+          filter: (isCorrectionMode && (savingState === null || savingState === 'error')) ? 'grayscale(100%)' : 'none',
           transition: 'all 0.3s ease'
         }}
       >
@@ -407,7 +448,7 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
                 // If feedback ON: Show valid check on Correct Answer.
                 // If feedback OFF: Do NOT show check.
                 const showCheck = hasAnswered && instantFeedback && prop.letter === displayQuestion.correctAnswer;
-                const isInteractionDisabled = hasAnswered || (isCorrectionMode && savingState !== 'success');
+                const isInteractionDisabled = hasAnswered || (isCorrectionMode && (savingState === null || savingState === 'error'));
 
                 return (
                   <button
@@ -429,7 +470,7 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
                 <button
                   className={`answer-btn ${getButtonClass('OUI')}`}
                   onClick={() => handleAnswer('OUI')}
-                  disabled={hasAnswered || (isCorrectionMode && savingState !== 'success')}
+                  disabled={hasAnswered || (isCorrectionMode && (savingState === null || savingState === 'error'))}
                 >
                   <div className="answer-key">A</div>
                   <div className="answer-text">Oui</div>
@@ -438,7 +479,7 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
                 <button
                   className={`answer-btn ${getButtonClass('NON')}`}
                   onClick={() => handleAnswer('NON')}
-                  disabled={hasAnswered || (isCorrectionMode && savingState !== 'success')}
+                  disabled={hasAnswered || (isCorrectionMode && (savingState === null || savingState === 'error'))}
                 >
                   <div className="answer-key">B</div>
                   <div className="answer-text">Non</div>
@@ -460,7 +501,7 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
                     inputMode="numeric"
                     placeholder="Votre réponse…"
                     value={freeformAnswer}
-                    disabled={hasAnswered || (isCorrectionMode && savingState !== 'success')}
+                    disabled={hasAnswered || (isCorrectionMode && (savingState === null || savingState === 'error'))}
                     onChange={(e) => setFreeformAnswer(e.target.value)}
                     onKeyDown={(e) => {
                       if (e.key === 'Enter') handleFreeformSubmit();
@@ -470,7 +511,7 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
                     className="number-submit"
                     type="button"
                     onClick={handleFreeformSubmit}
-                    disabled={hasAnswered || !String(freeformAnswer ?? '').trim() || (isCorrectionMode && savingState !== 'success')}
+                    disabled={hasAnswered || !String(freeformAnswer ?? '').trim() || (isCorrectionMode && (savingState === null || savingState === 'error'))}
                   >
                     OK
                   </button>
