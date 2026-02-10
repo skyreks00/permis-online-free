@@ -630,7 +630,7 @@
     {
       "id": 44,
       "type": "multiple_choice",
-      "question": "Peut-il être dangereux d’utiliser tout le temps le régulateur de vitesse ?",
+      "question": "Peut-il être dangereux d'utiliser tout le temps le régulateur de vitesse ?",
       "propositions": [
         {
           "letter": "A",
@@ -642,7 +642,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "Le régulateur de vitesse est une option présente sur la plupart des véhicules récents, utilisée pour adopter une conduite plus sûre et économique, en réduisant la consommation de carburant.Une fois activé, il permet au conducteur de maintenir une vitesse constante sans avoir à utiliser la pédale d'accélération.Cependant, il ne tient pas compte des mauvaises conditions de la route.En cas de neige, de verglas ou de sol glissant, si les roues du véhicule perdent de l’adhérence, le régulateur continue de maintenir la vitesse présélectionnée, ce qui peut provoquer une perte de contrôle ou un dérapage, surtout si le conducteur freine brusquement pour le désactiver.Dans ces conditions, les experts recommandent de ne pas utiliser le régulateur de vitesse, afin de garder une maîtrise totale du véhicule.",
+      "explanation": "Le régulateur de vitesse est une option présente sur la plupart des véhicules récents, utilisée pour adopter une conduite plus sûre et économique, en réduisant la consommation de carburant. Une fois activé, il permet au conducteur de maintenir une vitesse constante sans avoir à utiliser la pédale d'accélération. Cependant, il ne tient pas compte des mauvaises conditions de la route. En cas de neige, de verglas ou de sol glissant, si les roues du véhicule perdent de l'adhérence, le régulateur continue de maintenir la vitesse présélectionnée, ce qui peut provoquer une perte de contrôle ou un dérapage, surtout si le conducteur freine brusquement pour le désactiver. Dans ces conditions, les experts recommandent de ne pas utiliser le régulateur de vitesse, afin de garder une maîtrise totale du véhicule.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/60.jpg"
     },
     {
