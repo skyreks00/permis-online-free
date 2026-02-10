@@ -391,7 +391,7 @@ function App() {
         <TopControls />
         <Profile
           progress={progress}
-          themesData={themesData}
+          themesData={{ sections }}
           onBack={handleBackFromProfile}
           onReset={handleResetProgress}
           instantFeedback={instantFeedback}
