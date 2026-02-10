@@ -239,16 +239,14 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
 
     setSavingState('saving');
 
-    // 1. Try Local Save
+    // 1. Try Local Save (Silence error as backend might not be running)
     try {
       await saveQuestionLocally(fileName, question.id, fixedQuestion);
       setSavingState('success');
       setSaveMessage('Sauvegardé localement !');
-      // Optional: Update the 'question' prop via parent callback if we want to make it permanent in UI without refresh?
-      // For now, reload or just keep showing it.
       return;
     } catch (localErr) {
-      console.log('Local save failed, trying GitHub...', localErr);
+      // console.warn('Local save failed (backend likely offline):', localErr.message);
     }
 
     // 2. Try GitHub Save
@@ -263,24 +261,20 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
 
     try {
       const user = await getUser(token);
-      // We need to fetch the file content to replace the specific question in the array
-      // This is tricky because `saveToGitHub` expects full file content.
-      // We'll need a way to read the FULL file from GitHub first.
-      // SIMPLIFICATION: We will just commit to a 'fix' branch or issue?
-      // Let's try to do it properly: Read -> Modify -> Write.
 
       const { getOctokit } = await import('../utils/githubClient');
       const octokit = getOctokit(token);
       // Default repo
-      const owner = 'skyreks00'; // TODO: Make dynamic
+      const owner = 'skyreks00'; // Make dynamic if needed
       const repo = 'permis-online-free';
       const path = `public/data/${fileName}`;
 
-      // Get content
+      // Get content AND SHA
       const { data } = await octokit.rest.repos.getContent({ owner, repo, path });
+      const currentSha = data.sha;
       const content = JSON.parse(decodeURIComponent(escape(atob(data.content))));
 
-      // Update
+      // Update the specific question
       const idx = content.questions.findIndex(q => q.id === question.id);
       if (idx !== -1) {
         content.questions[idx] = { ...content.questions[idx], ...fixedQuestion };
@@ -288,8 +282,8 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
 
       const newContent = JSON.stringify(content, null, 2);
 
-      // Commit/PR
-      const result = await saveToGitHub(token, owner, repo, path, newContent, `Fix question ${question.id}`, user);
+      // Commit/PR with SHA
+      const result = await saveToGitHub(token, owner, repo, path, newContent, `Fix question ${question.id}`, user, currentSha);
 
       setSavingState('success');
       if (result.type === 'pr') {

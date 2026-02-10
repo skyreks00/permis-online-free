@@ -28,21 +28,25 @@ export const getUser = async (token) => {
  * @param {string} message - Commit message
  * @param {object} user - User object from getUser()
  */
-export const saveToGitHub = async (token, owner, repo, path, content, message, user) => {
+export const saveToGitHub = async (token, owner, repo, path, content, message, user, providedSha = null) => {
     const octokit = getOctokit(token);
 
-    // 1. Get current file SHA
-    let sha;
-    try {
-        const { data } = await octokit.rest.repos.getContent({
-            owner,
-            repo,
-            path,
-        });
-        sha = data.sha;
-    } catch (e) {
-        console.error("File not found on GitHub:", e);
-        throw new Error("File not found in repository");
+    // 1. Get current file SHA (if not provided)
+    let sha = providedSha;
+    if (!sha) {
+        try {
+            const { data } = await octokit.rest.repos.getContent({
+                owner,
+                repo,
+                path,
+            });
+            sha = data.sha;
+        } catch (e) {
+            console.error("File not found on GitHub:", e);
+            // If file doesn't exist, sha remains null (create new file)
+            // But if we expected it to exist, this might be an issue.
+            // For updates, we usually expect a sha.
+        }
     }
 
     // 2. Check permissions
