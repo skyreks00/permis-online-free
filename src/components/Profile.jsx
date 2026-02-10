@@ -219,7 +219,7 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
 
                             {githubUser && (
                                 <div className="flex items-center gap-2 p-2 bg-success/10 rounded-lg text-success text-sm border border-success/20">
-                                    <img src={githubUser.avatar_url} alt="" className="w-6 h-6 rounded-full" />
+                                    <img src={githubUser.avatar_url} alt="" style={{ width: '24px', height: '24px', borderRadius: '50%' }} />
                                     <span>Connecté en tant que <strong>{githubUser.login}</strong></span>
                                 </div>
                             )}
