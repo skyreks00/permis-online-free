@@ -61,12 +61,14 @@ export const fixQuestionWithGemini = async (question, apiKey) => {
             }
         });
 
-        const text = response.text(); // Note: generateContent uses function or property? SDK doc said .text for interactions, let's check basic. 
-        // usually response.text() in older, response.text in newer?
-        // simple fallback:
-        const finalString = typeof text === 'function' ? text() : text;
+        // In new SDK, .text is a property, not a function
+        const text = response.text;
 
-        const jsonString = finalString.replace(/```json/g, '').replace(/```/g, '').trim();
+        if (!text) {
+            throw new Error("No text in response");
+        }
+
+        const jsonString = text.replace(/```json/g, '').replace(/```/g, '').trim();
         return JSON.parse(jsonString);
 
     } catch (error) {
