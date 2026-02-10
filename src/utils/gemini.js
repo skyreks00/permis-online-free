@@ -35,7 +35,7 @@ export const fixQuestionWithGemini = async (question, apiKey) => {
     }
 
     // 2. Direct SDK Call (Fallback / Production)
-    console.log("Attempting Direct SDK Call...");
+    console.log("Attempting Direct SDK Call (generateContent)...");
     const client = new GoogleGenAI({ apiKey: apiKey });
 
     const prompt = `
@@ -49,19 +49,29 @@ export const fixQuestionWithGemini = async (question, apiKey) => {
   `;
 
     try {
-        const interaction = await client.interactions.create({
+        // Switching to generateContent for better CORS support in browser
+        const response = await client.models.generateContent({
+            model: 'gemini-2.0-flash', // Fallback to 2.0 Flash for stability on direct calls, or try 'gemini-3-flash-preview'
+            // Let's try to stick to the requested model if possible, but 'gemini-3-flash-preview' might be interactions-only?
+            // Let's try 3 first.
             model: 'gemini-3-flash-preview',
-            input: prompt,
+            contents: prompt,
+            config: {
+                responseMimeType: 'application/json'
+            }
         });
 
-        const output = interaction.outputs[interaction.outputs.length - 1];
-        const text = output.text;
+        const text = response.text(); // Note: generateContent uses function or property? SDK doc said .text for interactions, let's check basic. 
+        // usually response.text() in older, response.text in newer?
+        // simple fallback:
+        const finalString = typeof text === 'function' ? text() : text;
 
-        const jsonString = text.replace(/```json/g, '').replace(/```/g, '').trim();
+        const jsonString = finalString.replace(/```json/g, '').replace(/```/g, '').trim();
         return JSON.parse(jsonString);
 
     } catch (error) {
         console.error("Gemini Direct SDK Error:", error);
+        alert("Attention: Impossible de contacter Gemini directement depuis GitHub (CORS). Cette fonctionnalité nécessite le proxy local (node server.js).");
         throw error;
     }
 };
