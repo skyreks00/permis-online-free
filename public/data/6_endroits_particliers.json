@@ -91,11 +91,25 @@
     },
     {
       "id": 8,
-      "type": "number",
-      "question": "Après avoir franchi ces signaux routiers, en voiture, vous pouvez rouler à une vitesse maximale de (...) km/h.",
-      "correctAnswer": "70",
-      "explanation": "Jusqu'à 70 km/heure jusqu’au prochain croisement.",
-      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/20.jpg"
+      "type": "multiple_choice",
+      "question": "Après avoir franchi ces signaux routiers, en voiture, quelle est la vitesse maximale à laquelle vous pouvez rouler ?",
+      "correctAnswer": "B",
+      "explanation": "La vitesse maximale autorisée est de 70 km/h jusqu'au prochain croisement.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/20.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "50 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "70 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "90 km/h"
+        }
+      ]
     },
     {
       "id": 9,
