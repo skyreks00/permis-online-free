@@ -6,11 +6,11 @@
     {
       "id": 1,
       "type": "multiple_choice",
-      "question": "Tu as une autorisation pour circuler avec ta voiture dans une rue de jeux.Un enfant veut traverser la chaussée à un endroit sans passage pour piétons.Qui a la priorité ?",
+      "question": "Vous avez une autorisation pour circuler avec votre voiture dans une rue de jeux. Un enfant veut traverser la chaussée à un endroit sans passage pour piétons. Qui a la priorité ?",
       "propositions": [
         {
           "letter": "A",
-          "text": "L’enfant"
+          "text": "L'enfant"
         },
         {
           "letter": "B",
@@ -18,7 +18,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "Dans une rue de jeux, les enfants peuvent utiliser toute la chaussée.Celui qui y circule doit rouler au pas.",
+      "explanation": "Dans une rue de jeux, les enfants peuvent utiliser toute la chaussée. Celui qui y circule doit rouler au pas.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/43.jpg"
     },
     {
