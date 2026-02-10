@@ -21,7 +21,7 @@ ${h}`)}return a}),pe=nc(wo);class Mo extends Ro{create(e,n){var o;const{api_vers
        - "multiple_choice" (Standard question with options A, B, C...)
        - "true_false" (Binary question, Oui/Non)
        - "single_choice" (Only one correct answer)
-       *(Keep the original type of the question unless it is clearly wrong)*.
+       *IMPORTANT: If the question has options (A, B, C), it is NEVER a "number" type, even if the answers are numbers (e.g. "500 kg"). Keep it as "multiple_choice" or "single_choice".*
     4. **Propositions Structure**:
        - Must be an array of objects: [{ "letter": "A", "text": "..." }, { "letter": "B", "text": "..." }]
        - Do NOT merge propositions into the question text.
