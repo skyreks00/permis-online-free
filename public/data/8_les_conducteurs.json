@@ -287,11 +287,25 @@
     },
     {
       "id": 18,
-      "type": "number",
-      "question": "Dans un minibus il peut y avoir un maximum de (...) places assises pour les passagers.",
-      "correctAnswer": "8",
-      "explanation": "Passagers : 8.Conducteur : 1.",
-      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/3.jpg"
+      "type": "multiple_choice",
+      "question": "Dans un minibus, quel est le nombre maximum de places assises pour les passagers ?",
+      "correctAnswer": "B",
+      "explanation": "Le nombre maximum de places assises pour les passagers dans un minibus est de 8. En incluant le conducteur, cela porte le total à 9 personnes.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/3.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "6"
+        },
+        {
+          "letter": "B",
+          "text": "8"
+        },
+        {
+          "letter": "C",
+          "text": "10"
+        }
+      ]
     }
   ]
 }
