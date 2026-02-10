@@ -93,6 +93,17 @@ export const fixQuestionWithGemini = async (question, apiKey) => {
       "correctAnswer": "B"
     }
 
+    Type: "single_choice" (Numeric Answers - NOT 'number' type)
+    {
+      "type": "single_choice",
+      "question": "Quel est le poids maximum ?",
+      "propositions": [
+         { "letter": "A", "text": "500 kg" },
+         { "letter": "B", "text": "1000 kg" }
+      ],
+      "correctAnswer": "A"
+    }
+
     Original Question to Fix:
     ${JSON.stringify(question, null, 2)}
   `;
