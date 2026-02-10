@@ -68,8 +68,7 @@ export const saveQuestionToGitHub = async (token, owner, repo, path, questionId,
     const newContent = JSON.stringify(currentContent, null, 2);
 
     // Check if content actually changed
-    const oldContent = JSON.stringify(currentContent, null, 2);
-    if (newContent === JSON.stringify(JSON.parse(decodeURIComponent(escape(atob(fileData.content)))), null, 2)) {
+    if (newContent === originalContentString) {
         console.log('[saveQuestionToGitHub] Content unchanged, skipping commit');
         return { type: 'unchanged', message: 'No changes detected' };
     }
