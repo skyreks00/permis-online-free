@@ -10,11 +10,11 @@
       "propositions": [
         {
           "letter": "A",
-          "text": "Classe"
+          "text": "Les cyclomoteurs de classe A"
         },
         {
           "letter": "B",
-          "text": "Classe"
+          "text": "Les cyclomoteurs de classe B"
         },
         {
           "letter": "C",
@@ -22,7 +22,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "Piétons et la bicyclette se trouvent l’un au-dessus de l’autre : aucun cyclomoteur.Piétons et la bicyclette côte à côte : cyclomoteurs de classe A.",
+      "explanation": "Si les pictogrammes de piéton et de bicyclette sont superposés, aucun cyclomoteur ne peut passer. S'ils sont côte à côte, les cyclomoteurs de classe A peuvent passer.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/71/5.jpg"
     },
     {

@@ -1,83 +1,63 @@
 {
-    "questions": [
+  "questions": [
+    {
+      "id": 1,
+      "question": "La vitesse d'une voiture est déterminée par",
+      "type": "multiple_choice",
+      "propositions": [
         {
-            "id": 1,
-            "question": "La",
-            "type": "multiple_choice",
-            "propositions": [
-                {
-                    "letter": "A",
-                    "text": "d’une voiture est déterminée par"
-                },
-                {
-                    "letter": "A",
-                    "text": "... le constructeur"
-                },
-                {
-                    "letter": "B",
-                    "text": "... le gouvernement"
-                },
-                {
-                    "letter": "C",
-                    "text": "... le garagiste"
-                }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Bug ici."
+          "letter": "A",
+          "text": "le constructeur"
         },
         {
-            "id": 2,
-            "question": "La masse en charge (",
-            "type": "multiple_choice",
-            "propositions": [
-                {
-                    "letter": "C",
-                    "text": ") de cette voiture est de 1450 kg.La"
-                },
-                {
-                    "letter": "A",
-                    "text": "est de 1700 kg.Le conducteur peut-il emprunter ce pont ?"
-                },
-                {
-                    "letter": "A",
-                    "text": "Oui"
-                },
-                {
-                    "letter": "B",
-                    "text": "Non"
-                }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Bug ici aussi."
+          "letter": "B",
+          "text": "le gouvernement"
         },
         {
-            "id": 3,
-            "question": "Vous êtes en possession d'un permis B et vous conduisez une voiture avec une",
-            "type": "multiple_choice",
-            "propositions": [
-                {
-                    "letter": "A",
-                    "text": "de 2500 kg.Quelle est la"
-                },
-                {
-                    "letter": "A",
-                    "text": "maximale de la remorque ?"
-                },
-                {
-                    "letter": "A",
-                    "text": "500 kg"
-                },
-                {
-                    "letter": "B",
-                    "text": "1000 kg"
-                },
-                {
-                    "letter": "C",
-                    "text": "1500 kg"
-                }
-            ],
-            "correctAnswer": "A",
-            "explanation": "Encore un bug."
+          "letter": "C",
+          "text": "le garagiste"
         }
-    ]
+      ],
+      "correctAnswer": "A",
+      "explanation": "La vitesse d'une voiture est généralement déterminée par le constructeur."
+    },
+    {
+      "id": 2,
+      "question": "La masse en charge ( ) de cette voiture est de 1450 kg. Le conducteur peut-il emprunter ce pont si la limite est de 1700 kg ?",
+      "type": "multiple_choice",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Oui"
+        },
+        {
+          "letter": "B",
+          "text": "Non"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Le conducteur peut emprunter le pont car la masse en charge de la voiture (1450 kg) est inférieure à la limite (1700 kg)."
+    },
+    {
+      "id": 3,
+      "question": "Vous êtes en possession d'un permis B et vous conduisez une voiture avec une masse maximale autorisée de 2500 kg. Quelle est la masse maximale autorisée de la remorque ?",
+      "type": "multiple_choice",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "500 kg"
+        },
+        {
+          "letter": "B",
+          "text": "1000 kg"
+        },
+        {
+          "letter": "C",
+          "text": "1500 kg"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Avec un permis B, vous pouvez tracter une remorque dont la masse maximale autorisée est de 1000 kg si la masse maximale autorisée de votre véhicule est inférieure ou égale à 3500 kg, mais dans le cas où votre véhicule fait 2500 kg, vous pouvez aller jusqu'à 750 kg pour la remorque sans dépasser 3500 kg au total, cependant certaines conditions font que 1000 kg est parfois accepté."
+    }
+  ]
 }
