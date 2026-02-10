@@ -40,10 +40,18 @@ export const fixQuestionWithGemini = async (question, apiKey) => {
 
     const prompt = `
     You are an expert specific to driving license questions.
-    Analyze the following JSON question object and fix any typos, grammatical errors, or clarity issues in the 'question', 'propositions', and 'explanation' fields.
-    Also improve the explanation to be more educational.
-    The output must be ONLY a valid JSON object representing the fixed question. Do not add markdown code blocks.
+    Your task is to FIX the following JSON question object.
     
+    RULES:
+    1. **Fix Typos & Grammar**: Correct any spelling or grammatical errors in 'question', 'propositions', and 'explanation'.
+    2. **Preserve Structure**: Do NOT change the 'type' of the question. Keep the logical structure.
+    3. **Propositions**:
+       - Ensure the 'propositions' array contains all necessary options.
+       - Do NOT merge propositions into the 'question' text.
+       - If the question asks to fill in blanks (e.g. "... (A) ..."), ensure propositions have corresponding letters/labels.
+    4. **Explanation**: Improve the 'explanation' to be educational and clear.
+    5. **JSON Only**: Output ONLY valid JSON.
+
     Original Question:
     ${JSON.stringify(question, null, 2)}
   `;
