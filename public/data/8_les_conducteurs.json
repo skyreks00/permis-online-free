@@ -150,7 +150,7 @@
     {
       "id": 10,
       "type": "multiple_choice",
-      "question": "Que signifie ce signal d’interdiction?",
+      "question": "Que signifie ce signal d'interdiction ?",
       "propositions": [
         {
           "letter": "A",
@@ -162,7 +162,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "Signification : accès interdit aux conducteurs de véhicules affectés au transport de choses.Signal d’interdiction.",
+      "explanation": "Ce signal d'interdiction signifie que l'accès est interdit aux conducteurs de véhicules affectés au transport de choses.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/2.jpg"
     },
     {
