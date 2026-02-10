@@ -399,6 +399,8 @@ function App() {
       // Robust comparison (String cast) to avoid type mismatches
       if (String(q.id) === String(questionId)) {
         console.log("Match found! Updating question content.");
+        // DEBUG ALERT
+        // setTimeout(() => alert(`Mise à jour de la question ${questionId} réussie !`), 100);
         return { ...q, ...newQuestionData };
       }
       return q;

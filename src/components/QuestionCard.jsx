@@ -295,7 +295,9 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
 
       // Update parent state to reflect change immediately in UI (e.g. Results page)
       if (onUpdateQuestion) {
+        console.log("Calling onUpdateQuestion...");
         onUpdateQuestion(question.id, fixedQuestion);
+        alert("Question corrigée et mise à jour !");
       }
 
     } catch (ghErr) {
