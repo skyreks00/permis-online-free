@@ -364,14 +364,7 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
             {savingState === 'success' && <div className="text-xs text-muted">{saveMessage}</div>}
             {savingState === 'saving' && <div className="text-xs text-muted">Vous pouvez continuer à jouer</div>}
           </div>
-          {savingState === 'success' && (
-            <button
-              onClick={() => setSavingState(null)}
-              className="ml-auto text-muted hover:text-foreground"
-            >
-              <X size={16} />
-            </button>
-          )}
+
         </div>
       )}
 
