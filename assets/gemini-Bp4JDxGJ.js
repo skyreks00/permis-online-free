@@ -18,14 +18,13 @@ ${h}`)}return a}),pe=nc(wo);class Mo extends Ro{create(e,n){var o;const{api_vers
     1. **Fix Typos & Grammar**: Correct any spelling or grammatical errors in 'question', 'propositions', and 'explanation'.
     2. **Start** with a valid JSON structure.
     3. **Three Supported Question Types**:
-       - "multiple_choice" (Standard question with options A, B, C...)
+       - "multiple_choice" (Standard question with options A, B, C... used for BOTH single and multiple valid answers)
        - "true_false" (Binary question, Oui/Non)
-       - "single_choice" (Only one correct answer)
-       - "single_choice" (Only one correct answer)
        - "number" (Open numeric field, NO propositions)
        
        *CRITICAL RULES FOR TYPES:*
-       - If 'correctAnswer' is a LETTER (e.g. "A", "B", "AB"), the type MUST be "multiple_choice" or "single_choice".
+       - If the question has options/propositions (A, B, C), the type MUST be "multiple_choice".
+       - NEVER use "single_choice" (it does not exist in the system).
        - NEVER use "number" type if there are possibilities/propositions.
        - ONLY use "number" type if the user must type a value and 'correctAnswer' is a raw number (e.g. "50", "0.5").
     4. **Propositions Structure**:
@@ -36,7 +35,7 @@ ${h}`)}return a}),pe=nc(wo);class Mo extends Ro{create(e,n){var o;const{api_vers
 
     EXAMPLES:
 
-    Type: "multiple_choice" (Fill in the blank style)
+    Type: "multiple_choice" (Multiple valid answers)
     {
       "type": "multiple_choice",
       "question": "Le panneau indique une vitesse limitée à ... (A) ... ou la fin d'une zone 30 ... (B) ...",
@@ -59,9 +58,9 @@ ${h}`)}return a}),pe=nc(wo);class Mo extends Ro{create(e,n){var o;const{api_vers
       "correctAnswer": "B"
     }
 
-    Type: "single_choice"
+    Type: "multiple_choice" (Single valid answer - MUST BE "multiple_choice")
     {
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Quelle est la vitesse maximale autorisée ?",
       "propositions": [
         { "letter": "A", "text": "30 km/h" },
@@ -71,9 +70,9 @@ ${h}`)}return a}),pe=nc(wo);class Mo extends Ro{create(e,n){var o;const{api_vers
       "correctAnswer": "B"
     }
 
-    Type: "single_choice" (Numeric Answers - NOT 'number' type)
+    Type: "multiple_choice" (Numeric Answers - MUST BE "multiple_choice")
     {
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Quel est le poids maximum ?",
       "propositions": [
          { "letter": "A", "text": "500 kg" },
