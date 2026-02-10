@@ -55,7 +55,7 @@ export const fixQuestionWithGemini = async (question, apiKey) => {
        *CRITICAL RULES FOR TYPES:*
        - If 'correctAnswer' is a LETTER (e.g. "A", "B", "AB"), the type MUST be "multiple_choice" or "single_choice".
        - NEVER use "number" type if there are possibilities/propositions.
-       - ONLY use "number" type if the user must type a value and `correctAnswer` is a raw number (e.g. "50", "0.5").
+       - ONLY use "number" type if the user must type a value and 'correctAnswer' is a raw number (e.g. "50", "0.5").
     4. **Propositions Structure**:
        - Must be an array of objects: [{ "letter": "A", "text": "..." }, { "letter": "B", "text": "..." }]
        - Do NOT merge propositions into the question text.
@@ -133,6 +133,8 @@ export const fixQuestionWithGemini = async (question, apiKey) => {
     if (!text) {
       throw new Error("No text in response");
     }
+
+    console.log("Gemini Raw Response:", text);
 
     const jsonString = text.replace(/```json/g, '').replace(/```/g, '').trim();
     return JSON.parse(jsonString);
