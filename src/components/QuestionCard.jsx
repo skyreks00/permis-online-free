@@ -94,9 +94,12 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
     setTimedOut(false);
     setTimeLeft(MAX_TIME_MS);
 
-    // démarrer le compte à rebours
+    // démarrer le compte à rebours (seulement si pas en mode correction)
     clearInterval(intervalRef.current);
     clearTimeout(timeoutRef.current);
+
+    if (isCorrectionMode) return;
+
     const start = Date.now();
     intervalRef.current = setInterval(() => {
       const elapsed = Date.now() - start;
@@ -368,7 +371,14 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
         </div>
       )}
 
-      <div className="question-main">
+      <div
+        className="question-main"
+        style={{
+          opacity: (isCorrectionMode && savingState !== 'success') ? 0.6 : 1,
+          filter: (isCorrectionMode && savingState !== 'success') ? 'grayscale(100%)' : 'none',
+          transition: 'all 0.3s ease'
+        }}
+      >
         <div className="question-left">
           {displayQuestion.image ? (
             <div className="question-image">
