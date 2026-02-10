@@ -52,6 +52,7 @@ export const saveQuestionToGitHub = async (token, owner, repo, path, questionId,
 
     // Decode content
     const currentContent = JSON.parse(decodeURIComponent(escape(atob(fileData.content))));
+    const originalContentString = JSON.stringify(currentContent, null, 2);
 
     // Find and update the question
     const questionIndex = currentContent.questions.findIndex(q => q.id === questionId);
