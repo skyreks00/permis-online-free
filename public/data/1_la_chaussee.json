@@ -542,7 +542,7 @@
     {
       "id": 30,
       "type": "multiple_choice",
-      "question": "Quelle partie de la route est indiquée par la ligne jaune ?",
+      "question": "Quelle partie de la route est indiquée par une ligne jaune ?",
       "propositions": [
         {
           "letter": "A",
@@ -557,8 +557,8 @@
           "text": "La bande de circulation"
         }
       ],
-      "correctAnswer": "B",
-      "explanation": "La chaussée est la partie de la voie publique aménagée pour la circulations des véhicules  comme les voitures, les camions, les bus et les motocyclettes.",
+      "correctAnswer": "C",
+      "explanation": "La bande de circulation est la partie de la chaussée réservée à la circulation d'une seule file de véhicules.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/4.jpg"
     },
     {
