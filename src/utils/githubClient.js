@@ -54,65 +54,16 @@ export const saveToGitHub = async (token, owner, repo, path, content, message, u
     // Otherwise, fork -> branch -> PR.
 
     if (user.login === owner) {
-        // Direct Commit with Retry Logic for 409 (Conflict)
-        try {
-            await octokit.rest.repos.createOrUpdateFileContents({
-                owner,
-                repo,
-                path,
-                message,
-                content: btoa(unescape(encodeURIComponent(content))), // Unicode-safe base64
-                sha,
-            });
-            return { type: 'commit', url: `https://github.com/${owner}/${repo}/blob/main/${path}` };
-        } catch (error) {
-            // Check for 409 Conflict (SHA mismatch)
-            if (error.status === 409) {
-                console.warn("SHA mismatch detected (409). Retrying with fresh SHA...");
-
-                // 1. Fetch latest content & SHA
-                const { data: latestData } = await octokit.rest.repos.getContent({
-                    owner,
-                    repo,
-                    path,
-                    headers: { 'if-none-match': '' } // Force fresh fetch
-                });
-
-                const latestSha = latestData.sha;
-                // Decode latest content
-                const latestContentStr = decodeURIComponent(escape(atob(latestData.content)));
-                const latestJson = JSON.parse(latestContentStr);
-
-                // 2. Re-apply the fix (we need to know WHAT changed).
-                // LIMITATION: 'content' passed to this function is the FULL NEW CONTENT.
-                // We can't easily merge without knowing the diff.
-                // HOWEVER, for this specific app, we are updating a SINGLE QUESTION inside a large JSON.
-                // We should ideally pass the PATCH logic, not the full content.
-                // BUT, to keep it simple: we will assume the 'content' passed passed validation.
-                // Wait, if we just use the new SHA with the OLD 'content', we overwrite other people's changes!
-                // We MUST re-merge.
-
-                // fallback: throwing error is safer than overwriting, BUT we can try one simple trick:
-                // If the user is just fixing one question, maybe we can re-inject it?
-                // This function `saveToGitHub` is too generic to know about "questions".
-
-                // AUTOMATIC RETRY with NEW SHA (Blind Overwrite) - dangerous but solves "my view was stale"
-                // if nobody else is editing.
-                // The error is likely due to the BROWSER having an old SHA, not a race condition with another user.
-                // So simply using the NEW SHA with the SAME content is 99% likely what we want.
-
-                await octokit.rest.repos.createOrUpdateFileContents({
-                    owner,
-                    repo,
-                    path,
-                    message,
-                    content: btoa(unescape(encodeURIComponent(content))),
-                    sha: latestSha, // Use the FRESH SHA
-                });
-                return { type: 'commit', url: `https://github.com/${owner}/${repo}/blob/main/${path}` };
-            }
-            throw error;
-        }
+        // Direct Commit
+        await octokit.rest.repos.createOrUpdateFileContents({
+            owner,
+            repo,
+            path,
+            message,
+            content: btoa(unescape(encodeURIComponent(content))), // Unicode-safe base64
+            sha,
+        });
+        return { type: 'commit', url: `https://github.com/${owner}/${repo}/blob/main/${path}` };
     } else {
         // Community Flow (Fork & PR)
 

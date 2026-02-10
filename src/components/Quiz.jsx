@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import QuestionCard from './QuestionCard';
 
-const Quiz = ({ questions, themeName, onFinish, onExit, instantFeedback, autoPlayAudio, fileName, onUpdateQuestion }) => {
+const Quiz = ({ questions, themeName, onFinish, onExit, instantFeedback, autoPlayAudio, fileName }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [hasAnswered, setHasAnswered] = useState(false);
@@ -56,7 +56,6 @@ const Quiz = ({ questions, themeName, onFinish, onExit, instantFeedback, autoPla
           onNext={handleNext}
           isLastQuestion={currentQuestionIndex === questions.length - 1}
           fileName={fileName}
-          onUpdateQuestion={onUpdateQuestion}
         />
       </div>
     </div>

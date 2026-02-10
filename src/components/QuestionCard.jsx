@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { BookOpen, X, CheckCircle } from 'lucide-react';
 
-const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback, autoPlayAudio, onNext, isLastQuestion, fileName, onUpdateQuestion }) => {
+const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback, autoPlayAudio, onNext, isLastQuestion, fileName }) => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [hasAnswered, setHasAnswered] = useState(false);
   const [showExplanation, setShowExplanation] = useState(false);
@@ -256,12 +256,6 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
       navigator.clipboard.writeText(JSON.stringify(fixedQuestion, null, 2));
       setSavingState('success');
       setSaveMessage('Copié (Pas de token GitHub)');
-
-      // Also update local UI state
-      if (onUpdateQuestion) {
-        onUpdateQuestion(question.id, fixedQuestion);
-        alert("Copié dans le presse-papier (Pas de token) + Mise à jour locale !");
-      }
       return;
     }
 
@@ -275,15 +269,8 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
       const repo = 'permis-online-free';
       const path = `public/data/${fileName}`;
 
-      // Get content AND SHA with cache busting to prevent 409 Conflict
-      const { data } = await octokit.rest.repos.getContent({
-        owner,
-        repo,
-        path,
-        headers: {
-          'if-none-match': ''
-        }
-      });
+      // Get content AND SHA
+      const { data } = await octokit.rest.repos.getContent({ owner, repo, path });
       const currentSha = data.sha;
       const content = JSON.parse(decodeURIComponent(escape(atob(data.content))));
 
@@ -304,13 +291,6 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
         setSaveMessage(<a href={result.url} target="_blank" rel="noreferrer">PR créée !</a>);
       } else {
         setSaveMessage('Commit effectué !');
-      }
-
-      // Update parent state to reflect change immediately in UI (e.g. Results page)
-      if (onUpdateQuestion) {
-        console.log("Calling onUpdateQuestion...");
-        onUpdateQuestion(question.id, fixedQuestion);
-        alert("Question corrigée et mise à jour !");
       }
 
     } catch (ghErr) {
