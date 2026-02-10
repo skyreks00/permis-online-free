@@ -65,6 +65,17 @@ ${h}`)}return a}),pe=nc(wo);class Mo extends Ro{create(e,n){var o;const{api_vers
       "correctAnswer": "B"
     }
 
+    Type: "single_choice" (Numeric Answers - NOT 'number' type)
+    {
+      "type": "single_choice",
+      "question": "Quel est le poids maximum ?",
+      "propositions": [
+         { "letter": "A", "text": "500 kg" },
+         { "letter": "B", "text": "1000 kg" }
+      ],
+      "correctAnswer": "A"
+    }
+
     Original Question to Fix:
     ${JSON.stringify(t,null,2)}
   `;try{const a=(await o.models.generateContent({model:"gemini-2.0-flash",model:"gemini-3-flash-preview",contents:i,config:{responseMimeType:"application/json"}})).text;if(!a)throw new Error("No text in response");const u=a.replace(/```json/g,"").replace(/```/g,"").trim();return JSON.parse(u)}catch(l){throw console.error("Gemini Direct SDK Error:",l),alert("Attention: Impossible de contacter Gemini directement depuis GitHub (CORS). Cette fonctionnalité nécessite le proxy local (node server.js)."),l}};export{zc as fixQuestionWithGemini};
