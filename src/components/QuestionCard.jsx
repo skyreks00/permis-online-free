@@ -336,15 +336,17 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
                 className="btn-ghost text-xs bg-surface-1"
                 disabled={savingState === 'saving'}
               >
-                Annuler
+                {savingState === 'success' ? 'Fermer' : 'Annuler'}
               </button>
-              <button
-                onClick={handleConfirmFix}
-                className="btn-primary text-xs bg-warning border-warning text-black"
-                disabled={savingState === 'saving'}
-              >
-                {savingState === 'saving' ? 'Envoi...' : (savingState === 'success' ? 'Validé' : 'Valider')}
-              </button>
+              {savingState !== 'success' && (
+                <button
+                  onClick={handleConfirmFix}
+                  className="btn-primary text-xs bg-warning border-warning text-black"
+                  disabled={savingState === 'saving'}
+                >
+                  {savingState === 'saving' ? 'Envoi...' : 'Valider'}
+                </button>
+              )}
             </div>
           </div>
           {savingState === 'error' && <div className="text-danger text-xs">{saveMessage}</div>}
