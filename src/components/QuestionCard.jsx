@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { BookOpen, X, CheckCircle } from 'lucide-react';
 
-const QuestionCard = ({ title = 'Titre', question, onAnswer, currentIndex, total, instantFeedback, autoPlayAudio, onNext, isLastQuestion }) => {
+const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback, autoPlayAudio, onNext, isLastQuestion, fileName }) => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [hasAnswered, setHasAnswered] = useState(false);
   const [showExplanation, setShowExplanation] = useState(false);
@@ -14,8 +14,22 @@ const QuestionCard = ({ title = 'Titre', question, onAnswer, currentIndex, total
   const timeoutRef = useRef(null);
   const answeredRef = useRef(false);
 
+  // Fix Logic States
+  const [isFixing, setIsFixing] = useState(false);
+  const [fixedQuestion, setFixedQuestion] = useState(null);
+  const [savingState, setSavingState] = useState(null); // 'saving', 'success', 'error'
+  const [saveMessage, setSaveMessage] = useState('');
+
   // Audio effect
   const [voice, setVoice] = useState(null);
+
+  useEffect(() => {
+    // Reset Fix UI when question changes
+    setIsFixing(false);
+    setFixedQuestion(null);
+    setSavingState(null);
+    setSaveMessage('');
+  }, [question?.id]);
 
   useEffect(() => {
     const loadVoices = () => {
@@ -180,13 +194,155 @@ const QuestionCard = ({ title = 'Titre', question, onAnswer, currentIndex, total
     return answer === selectedAnswer ? 'selected' : 'dimmed';
   };
 
+  // --- FIX LOGIC IMPORTS ---
+  // Ideally these would be at top, but we are inside function for tool simplicity.
+  // We will assume imports are added at top of file (I cannot inject imports easily with replace_file_content if I don't target top).
+  // Wait, I am replacing the whole component logic, so I NEED imports.
+  // Since I can't edit top of file in same tool call easily without context, I will ASSUME the user adds imports or I use dynamic imports.
+  // Actually, I should use `multi_replace` to add imports at top if I want to be clean.
+  // For now, I'll rely on global scope or assume `src/utils` are available.
+  // NO, I must fix imports. I'll do a separate tool call for imports or use `replace_file_content` carefully.
+  // I will add the imports to the TOP of the file in a separate step.
+
+  const handleFixQuestion = async () => {
+    const apiKey = localStorage.getItem('gemini_api_key');
+    if (!apiKey) {
+      alert("Veuillez ajouter votre clé API Gemini dans le Profil.");
+      return;
+    }
+
+    setIsFixing(true);
+    setSavingState(null);
+    try {
+      const { fixQuestionWithGemini } = await import('../utils/gemini');
+      const fixed = await fixQuestionWithGemini(question, apiKey);
+      setFixedQuestion(fixed);
+    } catch (e) {
+      console.error(e);
+      alert("Erreur lors de la correction : " + e.message);
+    } finally {
+      setIsFixing(false);
+    }
+  };
+
+  const handleConfirmFix = async () => {
+    if (!fixedQuestion) return;
+    const { saveQuestionLocally } = await import('../utils/api');
+    const { saveToGitHub, getUser } = await import('../utils/githubClient');
+
+    setSavingState('saving');
+
+    // 1. Try Local Save
+    try {
+      await saveQuestionLocally(fileName, question.id, fixedQuestion);
+      setSavingState('success');
+      setSaveMessage('Sauvegardé localement !');
+      return;
+    } catch (localErr) {
+      console.log('Local save failed, trying GitHub...', localErr);
+    }
+
+    // 2. Try GitHub Save
+    const token = localStorage.getItem('github_token');
+    if (!token) {
+      // Fallback: Copy to clipboard
+      navigator.clipboard.writeText(JSON.stringify(fixedQuestion, null, 2));
+      setSavingState('success');
+      setSaveMessage('Copié dans le presse-papier (Local server down & No GitHub Token)');
+      return;
+    }
+
+    try {
+      const user = await getUser(token);
+      // We need to fetch the file content to replace the specific question in the array
+      // This is tricky because `saveToGitHub` expects full file content.
+      // We'll need a way to read the FULL file from GitHub first.
+      // SIMPLIFICATION: We will just commit to a 'fix' branch or issue?
+      // Let's try to do it properly: Read -> Modify -> Write.
+
+      const { getOctokit } = await import('../utils/githubClient');
+      const octokit = getOctokit(token);
+      // Default repo
+      const owner = 'skyreks00'; // TODO: Make dynamic
+      const repo = 'permis-online-free';
+      const path = `public/data/${fileName}`;
+
+      // Get content
+      const { data } = await octokit.rest.repos.getContent({ owner, repo, path });
+      const content = JSON.parse(decodeURIComponent(escape(atob(data.content))));
+
+      // Update
+      const idx = content.questions.findIndex(q => q.id === question.id);
+      if (idx !== -1) {
+        content.questions[idx] = { ...content.questions[idx], ...fixedQuestion };
+      }
+
+      const newContent = JSON.stringify(content, null, 2);
+
+      // Commit/PR
+      const result = await saveToGitHub(token, owner, repo, path, newContent, `Fix question ${question.id} via Gemini`, user);
+
+      setSavingState('success');
+      if (result.type === 'pr') {
+        setSaveMessage(<a href={result.url} target="_blank" rel="noreferrer">Pull Request créée ! (Cliquez ici)</a>);
+      } else {
+        setSaveMessage('Commit effectué sur main !');
+      }
+
+    } catch (ghErr) {
+      console.error(ghErr);
+      setSavingState('error');
+      setSaveMessage('Erreur GitHub: ' + ghErr.message);
+    }
+  };
+
+
   return (
     <div className={`question-card${timedOut ? ' timed-out' : ''}`}>
       <div className="question-header">
         <div className="question-progress" aria-live="polite">
           Question {Math.min(currentIndex + 1, total)} / {total}
         </div>
+        {/* Fix Button */}
+        {localStorage.getItem('gemini_api_key') && (
+          <button
+            onClick={handleFixQuestion}
+            disabled={isFixing}
+            className="btn-ghost"
+            style={{ fontSize: '12px', padding: '4px 8px', display: 'flex', alignItems: 'center', gap: '4px' }}
+            title="Suggérer une correction"
+          >
+            {isFixing ? '...' : '✨ Corriger'}
+          </button>
+        )}
       </div>
+
+      {fixedQuestion && (
+        <div className="fix-preview p-4 bg-surface-2 border border-warning rounded mb-4">
+          <h4 className="font-bold text-warning mb-2">Proposition de correction</h4>
+          <div className="grid grid-cols-2 gap-2 text-sm">
+            <div>
+              <strong>Original:</strong>
+              <p className="line-clamp-3">{question.question}</p>
+            </div>
+            <div>
+              <strong>Correction:</strong>
+              <p className="line-clamp-3">{fixedQuestion.question}</p>
+            </div>
+          </div>
+
+          {savingState === 'saving' && <p className="text-muted mt-2">Sauvegarde en cours...</p>}
+          {savingState === 'success' && <p className="text-success mt-2">{saveMessage}</p>}
+          {savingState === 'error' && <p className="text-danger mt-2">{saveMessage}</p>}
+
+          <div className="flex gap-2 mt-4">
+            <button onClick={() => setFixedQuestion(null)} className="btn-ghost text-sm">Annuler</button>
+            <button onClick={handleConfirmFix} className="btn-primary text-sm bg-warning border-warning text-black">
+              {savingState === 'success' ? 'Terminé' : 'Valider & Proposer'}
+            </button>
+          </div>
+        </div>
+      )}
 
       <div className="question-main">
         <div className="question-left">
@@ -209,7 +365,7 @@ const QuestionCard = ({ title = 'Titre', question, onAnswer, currentIndex, total
           <div className="answers">
             {question.type === 'multiple_choice' && question.propositions ? (
               question.propositions.map((prop) => {
-                const isSelected = selectedAnswer === prop.letter;
+                // const isSelected = selectedAnswer === prop.letter; // Unused
                 // Only show check if instantFeedback is ON and it's the correct answer
                 // OR if it's the selected answer AND instantFeedback is ON (logic overlap, effectively: show on correct if feedback on)
                 // Actually, standard behavior:

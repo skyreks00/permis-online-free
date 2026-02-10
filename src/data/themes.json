@@ -255,6 +255,17 @@
                     "file": "examen_B.json"
                 }
             ]
+        },
+        {
+            "title": "Debug",
+            "items": [
+                {
+                    "id": "99_debug",
+                    "name": "Quiz Buggé (Test Fix)",
+                    "totalQuestions": 3,
+                    "file": "debug_quiz.json"
+                }
+            ]
         }
     ]
 }

@@ -12,7 +12,12 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@google/genai": "^1.40.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1",
     "lucide-react": "^0.563.0",
+    "octokit": "^5.0.5",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },

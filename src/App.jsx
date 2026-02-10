@@ -403,6 +403,7 @@ function App() {
           onExit={handleBackToThemes}
           instantFeedback={!isExamMode && instantFeedback}
           autoPlayAudio={autoPlayAudio}
+          fileName={selectedTheme.file}
         />
       </>
     );
