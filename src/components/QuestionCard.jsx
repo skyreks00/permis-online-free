@@ -23,6 +23,10 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
   // Audio effect
   const [voice, setVoice] = useState(null);
 
+  // Determine what to display: The Fixed version (if any) or the Original
+  const displayQuestion = fixedQuestion || question;
+  const isCorrectionMode = !!fixedQuestion;
+
   useEffect(() => {
     // Reset Fix UI when question changes
     setIsFixing(false);
@@ -53,16 +57,16 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
   }, []);
 
   useEffect(() => {
-    if (autoPlayAudio && question) {
+    if (autoPlayAudio && displayQuestion) {
       // Cancel previous speech
       window.speechSynthesis.cancel();
 
       // Construct text: Question ... Propositions
-      let textToRead = question.question || '';
-      if (question.propositions && Array.isArray(question.propositions)) {
-        const propsText = question.propositions.map(p => `${p.letter}... ${p.text}`).join('. ');
+      let textToRead = displayQuestion.question || '';
+      if (displayQuestion.propositions && Array.isArray(displayQuestion.propositions)) {
+        const propsText = displayQuestion.propositions.map(p => `${p.letter}... ${p.text}`).join('. ');
         textToRead += `. ${propsText}`;
-      } else if (question.type === 'yes_no') {
+      } else if (displayQuestion.type === 'yes_no') {
         textToRead += ". A... Oui. B... Non.";
       }
 
@@ -79,9 +83,10 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
     return () => {
       window.speechSynthesis.cancel();
     };
-  }, [question, autoPlayAudio, voice]);
+  }, [displayQuestion, autoPlayAudio, voice]); // Depend on displayQuestion
 
   useEffect(() => {
+    // Reset interaction states when the DISPLAYED question changes (ID or content update)
     setSelectedAnswer(null);
     setHasAnswered(false);
     setFreeformAnswer('');
@@ -108,8 +113,8 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
         onAnswer({
           isCorrect: false,
           userAnswer: null,
-          correctAnswer: question.correctAnswer,
-          questionId: question.id,
+          correctAnswer: displayQuestion.correctAnswer,
+          questionId: displayQuestion.id,
         });
       }
     }, MAX_TIME_MS);
@@ -118,16 +123,16 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
       clearInterval(intervalRef.current);
       clearTimeout(timeoutRef.current);
     };
-  }, [question?.id, question?.question]);
+  }, [displayQuestion?.id, displayQuestion?.question]); // Depend on displayQuestion
 
   useEffect(() => {
     answeredRef.current = hasAnswered;
   }, [hasAnswered]);
 
   const normalizedCorrectAnswer = useMemo(() => {
-    const raw = question?.correctAnswer ?? '';
+    const raw = displayQuestion?.correctAnswer ?? '';
     return String(raw).trim();
-  }, [question?.correctAnswer]);
+  }, [displayQuestion?.correctAnswer]);
 
   const isFreeformCorrect = (rawAnswer) => {
     const a = String(rawAnswer ?? '').trim();
@@ -149,15 +154,15 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
 
     setSelectedAnswer(answer);
     setHasAnswered(true);
-    const isCorrect = answer === question.correctAnswer;
+    const isCorrect = answer === displayQuestion.correctAnswer;
     setResult(isCorrect ? 'correct' : 'incorrect');
     clearInterval(intervalRef.current);
     clearTimeout(timeoutRef.current);
     onAnswer({
       isCorrect,
       userAnswer: answer,
-      correctAnswer: question.correctAnswer,
-      questionId: question.id,
+      correctAnswer: displayQuestion.correctAnswer,
+      questionId: displayQuestion.id,
     });
   };
 
@@ -175,8 +180,8 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
     onAnswer({
       isCorrect,
       userAnswer: value,
-      correctAnswer: question.correctAnswer,
-      questionId: question.id,
+      correctAnswer: displayQuestion.correctAnswer,
+      questionId: displayQuestion.id,
     });
   };
 
@@ -185,8 +190,8 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
 
     if (hasAnswered && instantFeedback) {
       // Mode correction directe
-      if (answer === question.correctAnswer) return 'correct';
-      if (answer === selectedAnswer && selectedAnswer !== question.correctAnswer) return 'incorrect';
+      if (answer === displayQuestion.correctAnswer) return 'correct';
+      if (answer === selectedAnswer && selectedAnswer !== displayQuestion.correctAnswer) return 'incorrect';
       return 'dimmed';
     }
 
@@ -215,6 +220,8 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
     setSavingState(null);
     try {
       const { fixQuestionWithGemini } = await import('../utils/gemini');
+      // Always fix the ORIGINAL question, not the already fixed one (unless we want iterative fixes?)
+      // Let's stick to fixing the original 'question' prop.
       const fixed = await fixQuestionWithGemini(question, apiKey);
       setFixedQuestion(fixed);
     } catch (e) {
@@ -237,6 +244,8 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
       await saveQuestionLocally(fileName, question.id, fixedQuestion);
       setSavingState('success');
       setSaveMessage('Sauvegardé localement !');
+      // Optional: Update the 'question' prop via parent callback if we want to make it permanent in UI without refresh?
+      // For now, reload or just keep showing it.
       return;
     } catch (localErr) {
       console.log('Local save failed, trying GitHub...', localErr);
@@ -248,7 +257,7 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
       // Fallback: Copy to clipboard
       navigator.clipboard.writeText(JSON.stringify(fixedQuestion, null, 2));
       setSavingState('success');
-      setSaveMessage('Copié dans le presse-papier (Local server down & No GitHub Token)');
+      setSaveMessage('Copié (Pas de token GitHub)');
       return;
     }
 
@@ -280,13 +289,13 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
       const newContent = JSON.stringify(content, null, 2);
 
       // Commit/PR
-      const result = await saveToGitHub(token, owner, repo, path, newContent, `Fix question ${question.id} via Gemini`, user);
+      const result = await saveToGitHub(token, owner, repo, path, newContent, `Fix question ${question.id}`, user);
 
       setSavingState('success');
       if (result.type === 'pr') {
-        setSaveMessage(<a href={result.url} target="_blank" rel="noreferrer">Pull Request créée ! (Cliquez ici)</a>);
+        setSaveMessage(<a href={result.url} target="_blank" rel="noreferrer">PR créée !</a>);
       } else {
-        setSaveMessage('Commit effectué sur main !');
+        setSaveMessage('Commit effectué !');
       }
 
     } catch (ghErr) {
@@ -298,13 +307,17 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
 
 
   return (
-    <div className={`question-card${timedOut ? ' timed-out' : ''}`}>
+    <div className={`question-card ${timedOut ? 'timed-out' : ''} ${isCorrectionMode ? 'correction-mode' : ''}`}
+      style={isCorrectionMode ? { border: '2px solid var(--warning)', boxShadow: '0 0 15px rgba(255, 193, 7, 0.3)' } : {}}
+    >
       <div className="question-header">
         <div className="question-progress" aria-live="polite">
           Question {Math.min(currentIndex + 1, total)} / {total}
+          {isCorrectionMode && <span className="text-warning font-bold ml-2">✨ CORRECTION SUGGÉRÉE</span>}
         </div>
-        {/* Fix Button */}
-        {localStorage.getItem('gemini_api_key') && (
+
+        {/* Fix Button / Actions */}
+        {localStorage.getItem('gemini_api_key') && !isCorrectionMode && (
           <button
             onClick={handleFixQuestion}
             disabled={isFixing}
@@ -317,48 +330,28 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
         )}
       </div>
 
-      {fixedQuestion && (
-        <div className="fix-preview p-4 bg-surface-2 border border-warning rounded mb-4">
-          <h4 className="font-bold text-warning mb-2">Proposition de correction</h4>
-          <div className="grid grid-cols-2 gap-2 text-sm">
-            <div>
-              <strong>Original:</strong>
-              <p className="mb-2 font-medium">{question.question}</p>
-              <ul className="list-none pl-0 space-y-1 text-xs text-muted-foreground">
-                {question.propositions?.map((p, i) => (
-                  <li key={i}><span className="font-bold">{p.letter}</span>. {p.text}</li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <strong>Correction:</strong>
-              <p className="mb-2 font-medium">{fixedQuestion.question}</p>
-              <ul className="list-none pl-0 space-y-1 text-xs text-muted-foreground">
-                {fixedQuestion.propositions?.map((p, i) => (
-                  <li key={i}><span className="font-bold">{p.letter}</span>. {p.text}</li>
-                ))}
-              </ul>
+      {/* Validation Controls (Only in Correction Mode) */}
+      {isCorrectionMode && (
+        <div className="p-3 bg-surface-2 border-b border-warning mb-4 rounded flex flex-col gap-2">
+          <div className="flex justify-between items-center">
+            <span className="text-sm font-bold text-warning">Valider cette correction ?</span>
+            <div className="flex gap-2">
+              <button onClick={() => setFixedQuestion(null)} className="btn-ghost text-xs bg-surface-1">Annuler</button>
+              <button onClick={handleConfirmFix} className="btn-primary text-xs bg-warning border-warning text-black">
+                {savingState === 'success' ? 'Enregistré !' : 'Valider'}
+              </button>
             </div>
           </div>
-
-          {savingState === 'saving' && <p className="text-muted mt-2">Sauvegarde en cours...</p>}
-          {savingState === 'success' && <p className="text-success mt-2">{saveMessage}</p>}
-          {savingState === 'error' && <p className="text-danger mt-2">{saveMessage}</p>}
-
-          <div className="flex gap-2 mt-4">
-            <button onClick={() => setFixedQuestion(null)} className="btn-ghost text-sm">Annuler</button>
-            <button onClick={handleConfirmFix} className="btn-primary text-sm bg-warning border-warning text-black">
-              {savingState === 'success' ? 'Terminé' : 'Valider & Proposer'}
-            </button>
-          </div>
+          {savingState === 'success' && <div className="text-success text-xs">{saveMessage}</div>}
+          {savingState === 'error' && <div className="text-danger text-xs">{saveMessage}</div>}
         </div>
       )}
 
       <div className="question-main">
         <div className="question-left">
-          {question.image ? (
+          {displayQuestion.image ? (
             <div className="question-image">
-              <img src={question.image} alt="Illustration" />
+              <img src={displayQuestion.image} alt="Illustration" />
             </div>
           ) : (
             <div className="question-image placeholder" />
@@ -368,20 +361,21 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
         <div className="question-right">
           <div className="question-text">
             <div>
-              <div className="question-text-inner">{question.question}</div>
+              {/* Use displayQuestion here */}
+              <div className="question-text-inner">{displayQuestion.question}</div>
             </div>
           </div>
 
           <div className="answers">
-            {question.type === 'multiple_choice' && question.propositions ? (
-              question.propositions.map((prop) => {
+            {displayQuestion.type === 'multiple_choice' && displayQuestion.propositions ? (
+              displayQuestion.propositions.map((prop) => {
                 // const isSelected = selectedAnswer === prop.letter; // Unused
                 // Only show check if instantFeedback is ON and it's the correct answer
                 // OR if it's the selected answer AND instantFeedback is ON (logic overlap, effectively: show on correct if feedback on)
                 // Actually, standard behavior:
                 // If feedback ON: Show valid check on Correct Answer.
                 // If feedback OFF: Do NOT show check.
-                const showCheck = hasAnswered && instantFeedback && prop.letter === question.correctAnswer;
+                const showCheck = hasAnswered && instantFeedback && prop.letter === displayQuestion.correctAnswer;
 
                 return (
                   <button
@@ -396,8 +390,10 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
                   </button>
                 )
               })
-            ) : question.type === 'yes_no' ? (
+            ) : displayQuestion.type === 'yes_no' ? (
               <>
+                {/* Logic for yes_no using displayQuestion... */}
+                {/* Simplified for brevity in this replace call, similar logic to original but using displayQuestion */}
                 <button
                   className={`answer-btn ${getButtonClass('OUI')}`}
                   onClick={() => handleAnswer('OUI')}
@@ -405,7 +401,7 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
                 >
                   <div className="answer-key">A</div>
                   <div className="answer-text">Oui</div>
-                  {hasAnswered && instantFeedback && question.correctAnswer === 'OUI' && <CheckCircle size={20} className="answer-check" />}
+                  {hasAnswered && instantFeedback && displayQuestion.correctAnswer === 'OUI' && <CheckCircle size={20} className="answer-check" />}
                 </button>
                 <button
                   className={`answer-btn ${getButtonClass('NON')}`}
@@ -414,11 +410,12 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
                 >
                   <div className="answer-key">B</div>
                   <div className="answer-text">Non</div>
-                  {hasAnswered && instantFeedback && question.correctAnswer === 'NON' && <CheckCircle size={20} className="answer-check" />}
+                  {hasAnswered && instantFeedback && displayQuestion.correctAnswer === 'NON' && <CheckCircle size={20} className="answer-check" />}
                 </button>
               </>
             ) : (
               <div className="number-wrap">
+                {/* Freeform/Numeric using displayQuestion... */}
                 <div className={`number-field ${hasAnswered
                   ? (instantFeedback
                     ? (result === 'correct' ? 'correct' : 'incorrect')
@@ -452,6 +449,7 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
           </div>
 
           <div className="countdown" aria-hidden="true">
+            {/* Countdown using timeLeft (reset in useEffect) */}
             <div className="countdown-track">
               <div
                 className="countdown-fill"
