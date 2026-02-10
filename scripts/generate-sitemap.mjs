@@ -72,6 +72,7 @@ async function main() {
   }
 
   // 2. Dynamic Content from Themes (Clean URLs)
+  // Quizzes Excluded per user request
   const data = await loadThemes();
 
   if (data.sections) {
@@ -79,14 +80,7 @@ async function main() {
       const items = section.items || section.themes || [];
 
       for (const item of items) {
-        // Quiz Route
-        if (item.id) {
-          urls.push(buildUrl(`${siteUrl}quiz/${item.id}`, {
-            lastmod: today,
-            changefreq: 'monthly',
-            priority: '0.7'
-          }));
-        }
+        // Quiz Route - EXCLUDED
 
         // Lesson Route
         if (item.lessonFile) {
