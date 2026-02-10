@@ -256,6 +256,12 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
       navigator.clipboard.writeText(JSON.stringify(fixedQuestion, null, 2));
       setSavingState('success');
       setSaveMessage('Copié (Pas de token GitHub)');
+
+      // Also update local UI state
+      if (onUpdateQuestion) {
+        onUpdateQuestion(question.id, fixedQuestion);
+        alert("Copié dans le presse-papier (Pas de token) + Mise à jour locale !");
+      }
       return;
     }
 
