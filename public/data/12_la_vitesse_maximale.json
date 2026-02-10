@@ -62,7 +62,7 @@
     {
       "id": 5,
       "type": "multiple_choice",
-      "question": "En agglomération.Sur un dispositif surélevé, un cycliste indique son intention de tourner à gauche avec un signe du bras et se déplace à gauche.Pouvez-vous doubler ce cycliste à la droite?",
+      "question": "En agglomération, sur un dispositif surélevé, un cycliste indique son intention de tourner à gauche avec un signe du bras et se déplace à gauche. Pouvez-vous doubler ce cycliste par la droite ?",
       "propositions": [
         {
           "letter": "A",
@@ -77,8 +77,8 @@
           "text": "Non"
         }
       ],
-      "correctAnswer": "B",
-      "explanation": "",
+      "correctAnswer": "C",
+      "explanation": "Il est généralement interdit de doubler un cycliste qui signale son intention de tourner ou de changer de direction, notamment lorsqu'il se déplace sur une trajectoire qui croise la vôtre. Doubler par la droite dans ce cas peut être dangereux et n'est souvent pas autorisé. La bonne réponse est donc 'Non'.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/50.jpg"
     },
     {
