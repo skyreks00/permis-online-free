@@ -422,7 +422,7 @@
     {
       "id": 24,
       "type": "multiple_choice",
-      "question": "Quel âge faut-il avoir pour pouvoir présenter l’examen théorique du permis B ?",
+      "question": "Quel âge faut-il avoir pour pouvoir présenter l'examen théorique du permis B ?",
       "propositions": [
         {
           "letter": "A",
@@ -438,7 +438,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "INFO : PERMIS DE CONDUIREDès que tu as 17 ans, tu peux passer l’examen théorique dans un centre d’examen. Pour réussir, il faut obtenir au moins 41 points sur 50.",
+      "explanation": "Dès que vous avez 17 ans, vous pouvez passer l'examen théorique dans un centre d'examen. Pour réussir, il faut obtenir au moins 41 points sur 50.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/47.jpg"
     },
     {
