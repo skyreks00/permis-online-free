@@ -286,16 +286,23 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
         try {
           console.log(`Attempt ${attempts} to save to GitHub...`);
 
-          // 1. Get latest content AND SHA (Force fresh fetch with headers)
+          // 1. Get latest content AND SHA (Fix CORS: Use Ref strategy instead of headers)
+          // Step A: Get latest commit SHA of main branch (bust cache with timestamp param)
+          const { data: refData } = await octokit.request('GET /repos/{owner}/{repo}/git/ref/heads/main', {
+            owner,
+            repo,
+            t: Date.now() // Octokit adds unused params to query string, acts as cache buster
+          });
+          const latestCommitSha = refData.object.sha;
+
+          // Step B: Get file content at this specific commit (URL is unique per commit, so cache is fine)
           const { data } = await octokit.rest.repos.getContent({
             owner,
             repo,
             path,
-            headers: {
-              'If-None-Match': '', // Disable ETag caching
-              'Cache-Control': 'no-cache' // Force new request
-            }
+            ref: latestCommitSha
           });
+
           const currentSha = data.sha;
           const content = JSON.parse(decodeURIComponent(escape(atob(data.content))));
 
