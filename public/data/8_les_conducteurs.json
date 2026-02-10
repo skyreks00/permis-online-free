@@ -194,19 +194,19 @@
     {
       "id": 13,
       "type": "multiple_choice",
-      "question": "Celui qui a un permis de conduire B, peut conduire un minibus.",
+      "question": "Can a holder of a driving license B drive a minibus?",
       "propositions": [
         {
           "letter": "A",
-          "text": "Oui"
+          "text": "Yes"
         },
         {
           "letter": "B",
-          "text": "Non"
+          "text": "No"
         }
       ],
       "correctAnswer": "A",
-      "explanation": "Vous pouvez conduire :Une voiture – une voiture mixte – un minibus – une camionnette.POUR CONDUIRE CES VÉHICULES, AUX CONDITIONS SUIVANTES : ▶  M.M.A.  ≤ 3.500 kg. ▶  ≤ 8+1 places assises. ▶  Avec ou sans remorque de M.M.A. ≤ 750 kg. ▶  Si M.M.A. remorque > 750 kg → M.M.A. ensemble ≤ 3.500 kg.",
+      "explanation": "You can drive: A car - a mixed car - a minibus - a van. TO DRIVE THESE VEHICLES, UNDER THE FOLLOWING CONDITIONS: M.M.A. ≤ 3,500 kg. ≤ 8+1 seated places. With or without a trailer with M.M.A. ≤ 750 kg. If M.M.A. trailer > 750 kg → M.M.A. assembly ≤ 3,500 kg.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/12.jpg"
     },
     {
