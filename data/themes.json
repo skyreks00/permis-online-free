@@ -250,7 +250,7 @@
       "items": [
         {
           "id": "examen_B",
-          "name": "Examen blanc (50 questions)",
+          "name": "Examen B",
           "totalQuestions": 50,
           "file": "examen_B.json",
           "icon": "🎓"
