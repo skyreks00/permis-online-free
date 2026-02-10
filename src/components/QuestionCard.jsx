@@ -242,17 +242,15 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
   const handleConfirmFix = async () => {
     if (!fixedQuestion) return;
     const { saveQuestionLocally } = await import('../utils/api');
-    const { saveToGitHub, getUser } = await import('../utils/githubClient');
+    const { saveQuestionToGitHub, getUser } = await import('../utils/githubClient');
 
     setSavingState('saving'); // UI Unblocks HERE
 
     // 1. Try Local Save (Silence error as backend might not be running)
     try {
       await saveQuestionLocally(fileName, question.id, fixedQuestion);
-      // setSavingState('success'); // Don't updating to success here to avoid premature toast if we want Github too?
-      // Actually local save is fast.
     } catch (localErr) {
-      // console.warn('Local save failed (backend likely offline):', localErr.message);
+      // Local save failed, backend likely offline
     }
 
     // 2. Try GitHub Save
@@ -267,84 +265,40 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
 
     try {
       const user = await getUser(token);
-
-      const { getOctokit } = await import('../utils/githubClient');
-      const octokit = getOctokit(token);
-      // Default repo
-      const owner = 'skyreks00'; // Make dynamic if needed
+      const owner = 'skyreks00';
       const repo = 'permis-online-free';
       const path = `public/data/${fileName}`;
+      const commitMessage = `fix(content): correct question ${question.id} in ${fileName} (AI)`;
 
-      // Retry loop for SHA mismatch (Conflict)
-      let attempts = 0;
-      const MAX_ATTEMPTS = 3;
-      let success = false;
-      let lastError = null;
+      console.log('[handleConfirmFix] Saving question to GitHub...');
 
-      while (attempts < MAX_ATTEMPTS && !success) {
-        attempts++;
-        try {
-          console.log(`Attempt ${attempts} to save to GitHub...`);
+      const result = await saveQuestionToGitHub(
+        token,
+        owner,
+        repo,
+        path,
+        question.id,
+        fixedQuestion,
+        commitMessage,
+        user
+      );
 
-          // 1. Get latest content AND SHA (Force cache bypass with URL query param)
-          // Manually construct the URL with a cache-busting query parameter
-          // This ensures the browser treats it as a completely new request
-          const cacheBuster = Date.now();
-          const { data } = await octokit.request(`GET /repos/${owner}/${repo}/contents/${path}?_=${cacheBuster}`, {
-            owner,
-            repo,
-            path
-          });
-          const currentSha = data.sha;
-          console.log(`Fetched fresh SHA (cache bypass ${cacheBuster}):`, currentSha);
+      if (result.type === 'unchanged') {
+        setSavingState('success');
+        setSaveMessage('Aucun changement détecté');
+        return;
+      }
 
-          const content = JSON.parse(decodeURIComponent(escape(atob(data.content))));
+      setSavingState('success');
 
-          // 2. Update the specific question
-          const idx = content.questions.findIndex(q => q.id === question.id);
-          if (idx !== -1) {
-            // Determine if we are updating an existing question or adding/fixing
-            // We merge the fixed question into the existing one
-            content.questions[idx] = { ...content.questions[idx], ...fixedQuestion };
-          } else {
-            // Should not happen for a fix, but safety check
-            throw new Error("Question introuvable dans le fichier distant (ID changé ?)");
-          }
-
-          const newContent = JSON.stringify(content, null, 2);
-
-          // 3. Commit/PR with SHA
-          const commitMessage = `fix(content): correct question ${question.id} in ${fileName} (AI)`;
-          const result = await saveToGitHub(token, owner, repo, path, newContent, commitMessage, user, currentSha);
-
-          success = true; // Loop ends
-          setSavingState('success');
-
-          if (result.type === 'pr') {
-            setSaveMessage(<a href={result.url} target="_blank" rel="noreferrer">PR créée !</a>);
-          } else {
-            setSaveMessage('Commit effectué !');
-          }
-
-        } catch (attemptErr) {
-          console.error(`Attempt ${attempts} failed:`, attemptErr);
-          lastError = attemptErr;
-
-          // Check if it's a SHA mismatch (409 Conflict)
-          const isConflict = attemptErr.status === 409 || attemptErr.message.includes('does not match');
-          if (isConflict && attempts < MAX_ATTEMPTS) {
-            console.log("SHA mismatch detected. Retrying...");
-            await new Promise(r => setTimeout(r, 1000)); // Wait 1s before retry
-            continue;
-          }
-
-          // If not conflict or max attempts reached, throw to outer catch
-          throw attemptErr;
-        }
+      if (result.type === 'pr') {
+        setSaveMessage(<a href={result.url} target="_blank" rel="noreferrer">PR créée !</a>);
+      } else {
+        setSaveMessage('Commit effectué !');
       }
 
     } catch (ghErr) {
-      console.error(ghErr);
+      console.error('[handleConfirmFix] GitHub save error:', ghErr);
       setSavingState('error');
       setSaveMessage('Erreur GitHub: ' + (ghErr.message || 'Problème de sauvegarde'));
     }

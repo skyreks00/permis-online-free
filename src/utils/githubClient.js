@@ -1,3 +1,7 @@
+/**
+ * GitHub Client Utility
+ * Enhanced with question-specific save logic
+ */
 
 import { Octokit } from "octokit";
 
@@ -19,20 +23,127 @@ export const getUser = async (token) => {
 };
 
 /**
- * Saves a file directly to the repository (if owner) or creates a PR (if community).
+ * Saves a specific question update to a theme file on GitHub
  * @param {string} token - GitHub Token
  * @param {string} owner - Repo owner
- * @param {string} repo - Repo name
- * @param {string} path - File path in repo (e.g. 'public/data/file.json')
- * @param {string} content - New file content (stringified JSON)
+ * @param {string} repo - Repo name  
+ * @param {string} path - File path (e.g. 'public/data/7_les_pietons.json')
+ * @param {number} questionId - ID of the question to update
+ * @param {object} updatedQuestion - New question data
  * @param {string} message - Commit message
  * @param {object} user - User object from getUser()
+ * @returns {Promise<object>} - Result with type ('commit' or 'pr') and url
+ */
+export const saveQuestionToGitHub = async (token, owner, repo, path, questionId, updatedQuestion, message, user) => {
+    const octokit = getOctokit(token);
+
+    console.log(`[saveQuestionToGitHub] Fetching latest version of ${path}...`);
+
+    // Get the latest file content and SHA with cache busting
+    const cacheBuster = Date.now();
+    const { data: fileData } = await octokit.request(`GET /repos/${owner}/${repo}/contents/${path}?_=${cacheBuster}`, {
+        owner,
+        repo,
+        path
+    });
+
+    const currentSha = fileData.sha;
+    console.log(`[saveQuestionToGitHub] Current SHA: ${currentSha}`);
+
+    // Decode content
+    const currentContent = JSON.parse(decodeURIComponent(escape(atob(fileData.content))));
+
+    // Find and update the question
+    const questionIndex = currentContent.questions.findIndex(q => q.id === questionId);
+    if (questionIndex === -1) {
+        throw new Error(`Question with ID ${questionId} not found in ${path}`);
+    }
+
+    // Merge the update
+    currentContent.questions[questionIndex] = {
+        ...currentContent.questions[questionIndex],
+        ...updatedQuestion
+    };
+
+    const newContent = JSON.stringify(currentContent, null, 2);
+
+    // Check if content actually changed
+    const oldContent = JSON.stringify(currentContent, null, 2);
+    if (newContent === JSON.stringify(JSON.parse(decodeURIComponent(escape(atob(fileData.content)))), null, 2)) {
+        console.log('[saveQuestionToGitHub] Content unchanged, skipping commit');
+        return { type: 'unchanged', message: 'No changes detected' };
+    }
+
+    console.log(`[saveQuestionToGitHub] Content changed, committing...`);
+
+    // Commit directly if owner, otherwise create PR
+    if (user.login === owner) {
+        // Direct commit
+        await octokit.rest.repos.createOrUpdateFileContents({
+            owner,
+            repo,
+            path,
+            message,
+            content: btoa(unescape(encodeURIComponent(newContent))),
+            sha: currentSha,
+        });
+
+        console.log('[saveQuestionToGitHub] Successfully committed');
+        return { type: 'commit', url: `https://github.com/${owner}/${repo}/blob/main/${path}` };
+    } else {
+        // Community flow: Fork & PR
+        const fork = await octokit.rest.repos.createFork({ owner, repo });
+        const forkOwner = fork.data.owner.login;
+
+        await new Promise(r => setTimeout(r, 2000));
+
+        const branchName = `fix/question-${questionId}-${Date.now()}`;
+
+        const { data: refData } = await octokit.rest.git.getRef({
+            owner: forkOwner,
+            repo,
+            ref: 'heads/main'
+        });
+
+        await octokit.rest.git.createRef({
+            owner: forkOwner,
+            repo,
+            ref: `refs/heads/${branchName}`,
+            sha: refData.object.sha
+        });
+
+        await octokit.rest.repos.createOrUpdateFileContents({
+            owner: forkOwner,
+            repo,
+            path,
+            message,
+            content: btoa(unescape(encodeURIComponent(newContent))),
+            sha: currentSha,
+            branch: branchName
+        });
+
+        const pr = await octokit.rest.pulls.create({
+            owner,
+            repo,
+            title: message,
+            head: `${forkOwner}:${branchName}`,
+            base: 'main',
+            body: `Proposed fix by ${user.login} using Gemini AI.`
+        });
+
+        console.log('[saveQuestionToGitHub] Successfully created PR');
+        return { type: 'pr', url: pr.data.html_url };
+    }
+};
+
+/**
+ * Legacy saveToGitHub for backward compatibility
+ * @deprecated Use saveQuestionToGitHub instead
  */
 export const saveToGitHub = async (token, owner, repo, path, content, message, user, providedSha = null) => {
     const octokit = getOctokit(token);
 
-    // ALWAYS get the LATEST file SHA right before committing (ignore providedSha to prevent race conditions)
-    // Use cache-busting URL construction to ensure we get the real current SHA
+    //ALWAYS get the LATEST file SHA right before committing
     let sha;
     try {
         const cacheBuster = Date.now();
@@ -45,71 +156,50 @@ export const saveToGitHub = async (token, owner, repo, path, content, message, u
         console.log(`[saveToGitHub] Fetched latest SHA with cache bypass: ${sha}`);
     } catch (e) {
         console.error("File not found on GitHub or error fetching:", e);
-        // If file doesn't exist, sha remains undefined (will create new file)
-        // But if we expected it to exist, this will likely fail at commit time
     }
 
-    // 2. Check permissions
-    // Simplification: If user is owner, commit directly to main.
-    // Otherwise, fork -> branch -> PR.
-
     if (user.login === owner) {
-        // Direct Commit
         await octokit.rest.repos.createOrUpdateFileContents({
             owner,
             repo,
             path,
             message,
-            content: btoa(unescape(encodeURIComponent(content))), // Unicode-safe base64
+            content: btoa(unescape(encodeURIComponent(content))),
             sha,
         });
         return { type: 'commit', url: `https://github.com/${owner}/${repo}/blob/main/${path}` };
     } else {
-        // Community Flow (Fork & PR)
-
-        // A. Fork Repository (idempotent)
+        // Fork & PR logic...
         const fork = await octokit.rest.repos.createFork({ owner, repo });
-        const forkOwner = fork.data.owner.login; // Should be user.login
+        const forkOwner = fork.data.owner.login;
 
-        // Wait for fork to be ready (naive wait)
         await new Promise(r => setTimeout(r, 2000));
 
-        // B. Get default branch SHA of the fork to base new branch off
-        // Actually, getting it from upstream is better to be up to date
-        // But working on fork is safer.
-
-        // Create new branch name
         const branchName = `fix/question-${Date.now()}`;
 
-        // Get fork's main SHA
         const { data: refData } = await octokit.rest.git.getRef({
             owner: forkOwner,
-            repo: repo, // usually same repo name
+            repo,
             ref: 'heads/main'
         });
 
-        // C. Create Branch
         await octokit.rest.git.createRef({
             owner: forkOwner,
-            repo: repo,
+            repo,
             ref: `refs/heads/${branchName}`,
             sha: refData.object.sha
         });
 
-        // D. Commit Change to Branch
         await octokit.rest.repos.createOrUpdateFileContents({
             owner: forkOwner,
-            repo: repo,
+            repo,
             path,
             message,
             content: btoa(unescape(encodeURIComponent(content))),
-            sha, // We use the ORIGINAL sha, hoping it matches. 
-            // If fork is old, this might conflict. Ideally should fetch SHA from fork.
-            // For now, let's assume fork is fresh or user will sync.
+            sha,
             branch: branchName
         });
 
-        // E. Create Pull Request
         const pr = await octokit.rest.pulls.create({
             owner,
             repo,
