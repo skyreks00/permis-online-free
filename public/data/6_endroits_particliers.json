@@ -41,10 +41,10 @@
     },
     {
       "id": 3,
-      "type": "yes_no",
+      "type": "true_false",
       "question": "Pouvez-vous traverser un site spécial franchissable en voiture pour accéder à votre domicile ?",
       "correctAnswer": "OUI",
-      "explanation": "Les autres conducteurs peuvent traverser le site spécial franchissable :. pour rejoindre ou quitter un emplacement de stationnement qui se trouve le long de ce site ;. pour rejoindre une propriété ou la quitter ;. et dans les carrefours.",
+      "explanation": "Les autres conducteurs peuvent traverser le site spécial franchissable pour rejoindre ou quitter un emplacement de stationnement qui se trouve le long de ce site, pour rejoindre une propriété ou la quitter, et dans les carrefours.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/18.jpg"
     },
     {
