@@ -23,7 +23,7 @@
     },
     {
       "id": 2,
-      "question": "La masse en charge ( ) de cette voiture est de 1450 kg. Le conducteur peut-il emprunter ce pont si la limitation est de 1700 kg ?",
+      "question": "La masse en charge ( ) de cette voiture est de 1450 kg. Le conducteur peut-il emprunter ce pont si la limite est de 1700 kg ?",
       "type": "multiple_choice",
       "propositions": [
         {
@@ -36,7 +36,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "Le conducteur peut emprunter le pont car la masse en charge de la voiture (1450 kg) est inférieure à la limitation (1700 kg)."
+      "explanation": "Le conducteur peut emprunter le pont car la masse en charge de la voiture (1450 kg) est inférieure à la limite (1700 kg)."
     },
     {
       "id": 3,
