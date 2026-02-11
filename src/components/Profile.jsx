@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Trophy, Target, AlertTriangle, Clock, Settings, ArrowLeft, CheckCircle2, Circle, Volume2, User, LogOut, Key, Github, Save } from 'lucide-react';
+import { Trophy, Target, AlertTriangle, Clock, Settings, ArrowLeft, LogOut, Key, Github, Save } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { getUser } from '../utils/githubClient';
+import { loadThemeQuestions } from '../utils/contentLoader';
 
 const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onToggleInstantFeedback, autoPlayAudio, onToggleAutoPlayAudio }) => {
+    const navigate = useNavigate();
+
     // --- Stats Calculation ---
     const progressValues = Object.values(progress);
     const totalQuizzes = progressValues.length;
@@ -18,6 +22,7 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
     const [githubToken, setGithubToken] = useState(() => localStorage.getItem('github_token') || '');
     const [githubUser, setGithubUser] = useState(null);
     const [showConfirmReset, setShowConfirmReset] = useState(false);
+    const [isLoadingReview, setIsLoadingReview] = useState(false);
 
     const fetchGithubUser = async (token) => {
         try {
@@ -47,6 +52,73 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
             setGithubUser(null);
         }
         alert('Paramètres sauvegardés !');
+    };
+
+    const handleReview = async (theme) => {
+        const p = progress[theme.id];
+        if (!p || !p.answers) return;
+
+        setIsLoadingReview(true);
+        try {
+            // Load questions
+            // We use the same loader as QuizPage
+            const data = await loadThemeQuestions(theme.file);
+            let loadedQuestions = data.questions || [];
+
+            if (loadedQuestions.length === 0) {
+                // Fallback fetch if needed
+                const base = import.meta.env.BASE_URL || '/';
+                const res = await fetch(`${base}data/${theme.file}`);
+                const json = await res.json();
+                loadedQuestions = json.questions || [];
+            }
+
+            // Map answers to questions
+            // We need to reconstruct the "questions" array that was used
+            // Logic: Filter loadedQuestions to find those present in p.answers
+            // If p.answers has questionId, we use it. 
+            // Note: If the quiz was random subset, we only want those 50 questions.
+            // But usually p.answers contains all answered questions. 
+
+            // Create a map for fast lookup
+            const questionMap = new Map(loadedQuestions.map(q => [q.id, q]));
+
+            const reviewQuestions = p.answers.map(ans => questionMap.get(ans.questionId)).filter(Boolean);
+
+            // If for some reason we can't find questions (e.g. content changed), we might have issues.
+            // But assuming IDs are stable:
+
+            if (reviewQuestions.length > 0) {
+                navigate('/resultats', {
+                    state: {
+                        results: {
+                            score: p.score, // Use the score from that specific run (or bestScore? likely bestScore if we clicked on the item representing best score)
+                            // Actually progress stores "score" (last) and "bestScore". 
+                            // "answers" usually corresponds to the LAST run. 
+                            // If we want to review the BEST run, we would need to save bestRunAnswers.
+                            // For now, let's assume "answers" corresponds to the run we want to review.
+                            // Limitation: If user retries and gets a worse score, "answers" might be overwritten?
+                            // Let's check App.jsx: yes, "answers" is overwritten on every save.
+                            // So we are reviewing the LATEST attempt.
+                            answers: p.answers,
+                            correct: p.score,
+                            incorrect: p.total - p.score
+                        },
+                        questions: reviewQuestions,
+                        total: p.total,
+                        isExamMode: theme.id.includes('examen')
+                    }
+                });
+            } else {
+                alert("Impossible de charger le détail de ce quiz (questions non trouvées).");
+            }
+
+        } catch (error) {
+            console.error("Failed to load review", error);
+            alert("Erreur lors du chargement du quiz.");
+        } finally {
+            setIsLoadingReview(false);
+        }
     };
 
     return (
@@ -114,7 +186,12 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                                 const scoreColor = acc >= 80 ? 'text-success' : acc >= 50 ? 'text-warning' : 'text-danger';
 
                                 return (
-                                    <div key={theme.id} className="theme-history-item">
+                                    <div
+                                        key={theme.id}
+                                        className="theme-history-item cursor-pointer hover:bg-surface-2 transition-colors p-2 rounded"
+                                        onClick={() => handleReview(theme)}
+                                        title="Cliquez pour revoir vos fautes"
+                                    >
                                         <div className="font-medium">{theme.name}</div>
                                         <div className={`font-mono font-bold ${scoreColor}`}>
                                             {best} / {total} ({acc}%)
