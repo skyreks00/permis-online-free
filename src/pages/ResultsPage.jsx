@@ -22,6 +22,7 @@ const ResultsPage = ({ toggleTheme, isDarkMode }) => {
             <TopControls
                 toggleTheme={toggleTheme}
                 isDarkMode={isDarkMode}
+                onOpenProfile={() => navigate('/profil')}
             />
             <Results
                 score={results.score}
