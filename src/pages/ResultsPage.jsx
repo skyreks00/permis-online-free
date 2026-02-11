@@ -13,6 +13,9 @@ const ResultsPage = ({ toggleTheme, isDarkMode }) => {
         }
     }, [state, navigate]);
 
+    // Safety check for state
+    if (!state || !state.results) return null;
+
     const { results, questions, total, isExamMode, themeId } = state;
 
     const handleRetakeOriginal = () => {
@@ -24,7 +27,27 @@ const ResultsPage = ({ toggleTheme, isDarkMode }) => {
         }
     };
 
-    if (!state || !state.results) return null;
+    const handleReviewRemaining = () => {
+        // Filter questions that were answered incorrectly in THIS session
+        const incorrectIndices = results.answers
+            .map((a, index) => (!a.isCorrect ? index : -1))
+            .filter(index => index !== -1);
+
+        const remainingQuestions = incorrectIndices.map(index => questions[index]);
+
+        if (remainingQuestions.length > 0) {
+            navigate('/quiz/erreurs', {
+                state: {
+                    questions: remainingQuestions,
+                    theme: {
+                        id: themeId, // Keep same ID (e.g. 'erreurs' or 'erreurs_themeId')
+                        name: 'Révision (Suite)',
+                        file: null
+                    }
+                }
+            });
+        }
+    };
 
     return (
         <>
