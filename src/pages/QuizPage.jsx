@@ -131,7 +131,8 @@ const QuizPage = ({
                 },
                 questions: questions,
                 total: questions.length,
-                isExamMode: theme && theme.id.includes('examen')
+                isExamMode: theme && theme.id.includes('examen'),
+                themeId: theme ? theme.id : null
             }
         });
     };

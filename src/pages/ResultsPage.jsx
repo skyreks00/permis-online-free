@@ -13,9 +13,18 @@ const ResultsPage = ({ toggleTheme, isDarkMode }) => {
         }
     }, [state, navigate]);
 
-    if (!state || !state.results) return null;
+    const { results, questions, total, isExamMode, themeId } = state;
 
-    const { results, questions, total, isExamMode } = state;
+    const handleRetakeOriginal = () => {
+        if (themeId && themeId.startsWith('erreurs_')) {
+            const originalId = themeId.replace('erreurs_', '');
+            navigate(`/quiz/${originalId}`);
+        } else {
+            navigate('/');
+        }
+    };
+
+    if (!state || !state.results) return null;
 
     return (
         <>
@@ -33,6 +42,8 @@ const ResultsPage = ({ toggleTheme, isDarkMode }) => {
                 onRestart={() => navigate(-1)} // Go back to quiz (will reload it)
                 onBackToThemes={() => navigate('/')}
                 isExamMode={isExamMode}
+                themeId={themeId}
+                onRetakeFullQuiz={handleRetakeOriginal}
             />
         </>
     );

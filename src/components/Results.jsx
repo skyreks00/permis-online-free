@@ -1,7 +1,7 @@
 import React from 'react';
 import { Trophy, ThumbsUp, Award, Target, PartyPopper, CheckCircle } from 'lucide-react';
 
-const Results = ({ score, total, questions = [], answers = [], showReview = false, onRestart, onBackToThemes, isExamMode }) => {
+const Results = ({ score, total, questions = [], answers = [], showReview = false, onRestart, onBackToThemes, isExamMode, themeId, onRetakeFullQuiz }) => {
   const percentage = Math.round((score / total) * 100);
 
   const getResultMessage = () => {
@@ -71,6 +71,23 @@ const Results = ({ score, total, questions = [], answers = [], showReview = fals
           Choisir un autre thème
         </button>
       </div>
+
+      {themeId && themeId.startsWith('erreurs_') && score === total && (
+        <div style={{ marginTop: '20px' }} className="animate-fade-in">
+          <div className="card bg-success/10 border-success/30 p-6">
+            <h3 className="text-xl font-bold text-success mb-2 flex items-center justify-center gap-2">
+              <CheckCircle /> Fautes corrigées !
+            </h3>
+            <p className="mb-4">Vous avez bien assimilé ces corrections. Voulez-vous refaire le quiz complet pour valider vos acquis ?</p>
+            <button
+              onClick={onRetakeFullQuiz}
+              className="btn-primary w-full md:w-auto"
+            >
+              Refaire le Quiz Complet
+            </button>
+          </div>
+        </div>
+      )}
 
       {showReview && (
         <div style={{ marginTop: '30px', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '32px' }}>
