@@ -19,7 +19,7 @@ const handleLogin = () => {
 function App() {
   const [sections, setSections] = useState([]);
   const [progress, setProgress] = useState({});
-  const [colorTheme, setColorTheme] = useState('light');
+  const [colorTheme, setColorTheme] = useState('dark');
   const [instantFeedback, setInstantFeedback] = useState(false);
   const [autoPlayAudio, setAutoPlayAudio] = useState(false);
 

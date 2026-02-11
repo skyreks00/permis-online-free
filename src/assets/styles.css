@@ -110,6 +110,7 @@ body {
   color: var(--text);
   background: var(--bg);
   background-attachment: fixed;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #root {
@@ -1175,4 +1176,239 @@ input:checked+.slider:before {
 
 .hover-text-primary:hover {
   color: var(--primary);
+}
+
+/* --- Mobile / Responsive Overrides --- */
+@media (max-width: 600px) {
+
+  /* Container - More space for content */
+  .container {
+    width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 12px;
+    padding-bottom: 120px;
+    /* Space for sticky Quiz Nav + Chat button */
+  }
+
+  /* Quiz Title */
+  h1 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+
+  /* Question Image - Limit height strictly to save vertical space on small phones */
+  .question-image {
+    min-height: 200px;
+    max-height: 35vh;
+    /* Use viewport height unit */
+    margin-bottom: 12px;
+  }
+
+  .question-image img {
+    object-fit: contain;
+    transform: none;
+    /* Disable the zoom effect */
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Question Text - Readable but compact */
+  .question-text-inner {
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  .question-text {
+    margin-bottom: 12px;
+  }
+
+  /* Answers - Touch friendly but compact */
+  .answer-btn {
+    padding: 10px 12px;
+    min-height: 48px;
+    /* Slightly smaller min-height */
+    gap: 12px;
+  }
+
+  .answer-key {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .answer-text {
+    font-size: 0.95rem;
+  }
+
+  /* Quiz Navigation Buttons - STICKY BOTTOM */
+  .quiz-nav-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    padding: 12px 16px;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    z-index: 1000;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-next {
+    flex: 2;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .btn-explanation {
+    flex: 1;
+    padding: 12px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Results Page - Stack columns */
+  .results .results-actions {
+    flex-direction: column;
+  }
+
+  .results .results-actions button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Responsive Countdown Visibility - GLOBAL SCOPE */
+.mobile-countdown {
+  display: none;
+  /* Hidden by default on desktop */
+}
+
+.desktop-countdown {
+  display: block;
+  /* Visible by default on desktop */
+  margin-top: 16px !important;
+  /* Force spacing */
+}
+
+@media (max-width: 600px) {
+  .mobile-countdown {
+    display: block;
+    /* Show on mobile */
+    margin-bottom: 12px;
+  }
+
+  .desktop-countdown {
+    display: none;
+    /* Hide on mobile */
+  }
+}
+
+/* Safe Countdown Defaults */
+.countdown {
+  position: static;
+  margin-top: 0;
+  padding-top: 0;
+  z-index: auto;
+  background: transparent;
+}
+
+.countdown-track {
+  border-radius: 999px;
+  height: 6px;
+  background: var(--surface-2);
+}
+
+/* --- Profile Page Styles --- */
+.profile-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 600px) {
+  .profile-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: var(--surface-2);
+  color: var(--muted);
+}
+
+.stat-icon.primary {
+  background: rgba(14, 165, 233, 0.1);
+  color: var(--primary);
+}
+
+.stat-icon.info {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+
+.stat-icon.danger {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--danger);
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.stat-sub {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.profile-content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .profile-content-grid {
+    grid-template-columns: 1fr;
+  }
 }

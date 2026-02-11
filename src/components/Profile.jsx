@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Trophy, Target, AlertTriangle, Clock, Settings, ArrowLeft, LogOut, Key, Github, Save, RefreshCw } from 'lucide-react';
+import { Trophy, Target, AlertTriangle, Clock, Settings, ArrowLeft, LogOut, Key, Github, Save, RefreshCw, Bot } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { getUser } from '../utils/githubClient';
 import { loadThemeQuestions } from '../utils/contentLoader';
@@ -295,7 +295,7 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                             <button
                                 onClick={handleStartMistakeQuiz}
                                 disabled={isLoadingReview}
-                                className="btn-xs btn-primary flex items-center gap-1"
+                                className="btn-xs btn-primary flex items-center gap-2"
                             >
                                 {isLoadingReview ? <span className="loading loading-spinner loading-xs"></span> : <RefreshCw size={12} />}
                                 Réviser
@@ -344,7 +344,7 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                                             <button
                                                 onClick={(e) => handleReviewThemeMistakes(theme, e)}
                                                 disabled={isLoadingReview}
-                                                className="btn-xs btn-ghost text-danger flex items-center gap-1 ml-2 border border-danger/30 hover:bg-danger/10"
+                                                className="btn-xs btn-ghost text-danger flex items-center gap-2 ml-2 border border-danger/30 hover:bg-danger/10"
                                                 title="Réviser uniquement les fautes de ce thème"
                                             >
                                                 <RefreshCw size={12} />
@@ -412,51 +412,61 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                     </div>
 
                     {/* Developer / Contributor Card */}
-                    <div className="card p-6 border-2 border-primary/20 bg-surface-1">
-                        <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-primary">
-                            <Key size={20} /> Mode Contributeur
+                    {/* AI Assistant Card */}
+                    {/* Technical Zone Card */}
+                    <div className="card p-6 bg-surface-1 border-2 border-primary/20">
+                        <h2 className="text-xl font-bold mb-6 flex items-center gap-2 text-primary">
+                            <Key size={20} /> Zone Technique
                         </h2>
 
-                        <div className="mb-5">
-                            <label className="block mb-1.5 font-semibold text-sm">Groq API Key</label>
-                            <p className="text-xs text-muted mb-2">
-                                Requise pour corrections IA (Llama 3). <a href="https://console.groq.com/keys" target="_blank" rel="noreferrer" className="text-primary underline">Obtenir une clé</a>
-                            </p>
-                            <input
-                                type="password"
-                                className="input w-full"
-                                value={apiKey}
-                                onChange={e => setApiKey(e.target.value)}
-                                placeholder="gsk_..."
-                            />
+                        {/* AI Section */}
+                        <div className="mb-6">
+                            <h3 className="font-semibold flex items-center gap-2 mb-3 text-lg">
+                                <Bot size={18} className="text-primary" /> Assistant IA
+                            </h3>
+                            <div className="pl-1">
+                                <label className="block mb-1.5 font-medium text-sm">Clé API Groq</label>
+                                <p className="text-xs text-muted mb-2">
+                                    Nécessaire pour le chatbot et les corrections. <a href="https://console.groq.com/keys" target="_blank" rel="noreferrer" className="text-primary underline">Obtenir une clé</a>
+                                </p>
+                                <input
+                                    type="password"
+                                    className="input w-full"
+                                    value={apiKey}
+                                    onChange={e => setApiKey(e.target.value)}
+                                    placeholder="gsk_..."
+                                />
+                            </div>
                         </div>
 
+
+                        {/* Spacer */}
+                        <div className="my-8"></div>
+
+                        {/* Contributor Section */}
                         <div className="mb-6">
-                            <label className="block mb-1.5 font-semibold text-sm flex items-center gap-2">
-                                <Github size={16} /> GitHub Token (Optionnel)
-                            </label>
-                            <p className="text-xs text-muted mb-2">
-                                Requis pour proposer des corrections (Pull Requests).
-                                <br />
-                                <a href="https://github.com/settings/tokens/new?scopes=public_repo" target="_blank" rel="noreferrer" className="text-primary underline font-medium">
-                                    Générer un token (Classic)
-                                </a> avec le scope <code>public_repo</code>.
-                            </p>
-
-                            <input
-                                type="password"
-                                className="input w-full mb-3"
-                                value={githubToken}
-                                onChange={e => setGithubToken(e.target.value)}
-                                placeholder="ghp_..."
-                            />
-
-                            {githubUser && (
-                                <div className="flex items-center gap-2 p-2 bg-success/10 rounded-lg text-success text-sm border border-success/20">
-                                    <img src={githubUser.avatar_url} alt="" style={{ width: '24px', height: '24px', borderRadius: '50%' }} />
-                                    <span>Connecté en tant que <strong>{githubUser.login}</strong></span>
-                                </div>
-                            )}
+                            <h3 className="font-semibold flex items-center gap-2 mb-3 text-lg">
+                                <Github size={18} /> Mode Contributeur
+                            </h3>
+                            <div className="pl-1">
+                                <label className="block mb-1.5 font-medium text-sm">Token GitHub (Optionnel)</label>
+                                <p className="text-xs text-muted mb-2">
+                                    Pour proposer des corrections. <a href="https://github.com/settings/tokens/new?scopes=public_repo" target="_blank" rel="noreferrer" className="text-primary underline">Générer un token</a>
+                                </p>
+                                <input
+                                    type="password"
+                                    className="input w-full mb-3"
+                                    value={githubToken}
+                                    onChange={e => setGithubToken(e.target.value)}
+                                    placeholder="ghp_..."
+                                />
+                                {githubUser && (
+                                    <div className="flex items-center gap-2 p-2 bg-success/10 rounded-lg text-success text-sm border border-success/20">
+                                        <img src={githubUser.avatar_url} alt="" style={{ width: '20px', height: '20px', borderRadius: '50%' }} />
+                                        <span>Connecté : <strong>{githubUser.login}</strong></span>
+                                    </div>
+                                )}
+                            </div>
                         </div>
 
                         <button onClick={handleSaveKeys} className="btn-primary w-full flex items-center justify-center gap-2">

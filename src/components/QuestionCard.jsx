@@ -329,44 +329,15 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
         )}
       </div>
 
-      {/* Validation Controls (Only in Correction Mode) - Hide on success OR SAVING */}
-      {isCorrectionMode && (savingState === null || savingState === 'error') && (
-        <div className="p-3 bg-surface-2 border-b border-warning mb-4 rounded flex flex-col gap-2">
-          <div className="flex justify-between items-center">
-            <span className="text-sm font-bold text-warning">Valider cette correction ?</span>
-            <div className="flex gap-2">
-              <button
-                onClick={() => setFixedQuestion(null)}
-                className="btn-ghost text-xs bg-surface-1"
-                disabled={savingState === 'saving'}
-              >
-                Annuler
-              </button>
-              <button
-                onClick={handleConfirmFix}
-                className="btn-primary text-xs bg-warning border-warning text-black"
-                disabled={savingState === 'saving'}
-              >
-                {savingState === 'saving' ? 'Envoi...' : 'Valider'}
-              </button>
-            </div>
-          </div>
-          {savingState === 'error' && <div className="text-danger text-xs">{saveMessage}</div>}
+      {/* Mobile Countdown (Above Image) */}
+      <div className="countdown mobile-countdown" aria-hidden="true">
+        <div className="countdown-track">
+          <div
+            className="countdown-fill"
+            style={{ width: `${Math.max(0, Math.min(100, (timeLeft / MAX_TIME_MS) * 100))}%` }}
+          />
         </div>
-      )}
-
-      {/* Global Toast for Success */}
-      {(savingState === 'success' || savingState === 'saving') && (
-        <div className="toast-notification">
-          <CheckCircle size={24} className={savingState === 'success' ? "text-success" : "text-muted"} />
-          <div>
-            <div className="font-bold text-sm">{savingState === 'success' ? 'Correction envoyée !' : 'Envoi en cours...'}</div>
-            {savingState === 'success' && <div className="text-xs text-muted">{saveMessage}</div>}
-            {savingState === 'saving' && <div className="text-xs text-muted">Vous pouvez continuer à jouer</div>}
-          </div>
-
-        </div>
-      )}
+      </div>
 
       <div
         className="question-main"
@@ -477,7 +448,7 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
             )}
           </div>
 
-          <div className="countdown" aria-hidden="true">
+          <div className="countdown desktop-countdown" aria-hidden="true">
             {/* Countdown using timeLeft (reset in useEffect) */}
             <div className="countdown-track">
               <div
@@ -545,20 +516,21 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
           >
             <button
               onClick={() => setShowExplanation(false)}
+              className="text-muted hover-text-primary hover-scale"
               style={{
                 position: 'absolute',
                 top: '16px',
                 right: '16px',
                 background: 'transparent',
                 border: 'none',
-                color: 'var(--muted-foreground)',
                 cursor: 'pointer',
-                padding: '4px'
+                padding: '4px',
+                transition: 'transform 0.2s ease, color 0.2s ease'
               }}
             >
               <X size={24} />
             </button>
-            <div style={{ lineHeight: '1.6', fontSize: '1.05rem' }}>
+            <div style={{ lineHeight: '1.6', fontSize: '1.05rem', paddingRight: '32px' }}>
               {question.explanation
                 .replace(/^\s*INFO\W*PERMIS\W*DE\W*CONDUIRE\W*/i, '') // Robust INFO removal
                 .replace(/^\s*Signification\W*/i, '') // Remove "Signification" + any non-word chars (: / - \n)
