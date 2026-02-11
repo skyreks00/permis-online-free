@@ -77,21 +77,19 @@ Explication fournie : "${explanation}"
     };
 
     return (
-        <div className="fixed inset-0 z-50 flex justify-end pointer-events-none">
-            {/* Backdrop - optional, maybe invisible if we want to allow seeing the background? 
-                User said "fenetre sur la droite", often implies side panel. 
-                Let's make it a drawer style. pointer-events-auto for the drawer itself.
-            */}
-            <button onClick={onClose} className="absolute inset-0 bg-black/20 pointer-events-auto backdrop-blur-[1px] transition-opacity" />
+    return (
+        <div className="fixed inset-0 z-50 flex items-end justify-end p-6 pointer-events-none">
+            {/* Transparent backdrop to catch clicks outside. pointer-events-auto to receive clicks. */}
+            <div onClick={onClose} className="absolute inset-0 pointer-events-auto bg-transparent" />
 
-            <div className="bg-surface-1 w-full max-w-md h-full shadow-2xl flex flex-col border-l border-border pointer-events-auto animate-slide-in-right">
+            <div className="bg-surface-1 w-full max-w-[380px] h-[550px] max-h-[80vh] shadow-2xl flex flex-col border border-border rounded-2xl pointer-events-auto animate-fade-in-up origin-bottom-right overflow-hidden relative z-10">
                 {/* Header */}
-                <div className="p-4 border-b border-border flex justify-between items-center bg-primary/10">
-                    <div className="flex items-center gap-2 font-bold text-primary">
+                <div className="p-4 border-b border-border flex justify-between items-center bg-primary text-primary-content">
+                    <div className="flex items-center gap-2 font-bold">
                         <Bot size={24} />
                         <span>Assistant Moniteur</span>
                     </div>
-                    <button onClick={onClose} className="btn-ghost btn-square btn-sm text-muted hover:text-danger">
+                    <button onClick={onClose} className="btn-ghost btn-square btn-sm text-primary-content/80 hover:text-white hover:bg-white/20">
                         <X size={20} />
                     </button>
                 </div>
