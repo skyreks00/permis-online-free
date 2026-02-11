@@ -1,7 +1,10 @@
-import React from 'react';
-import { Trophy, ThumbsUp, Award, Target, PartyPopper, CheckCircle } from 'lucide-react';
+import React, { useState } from 'react';
+import { Trophy, ThumbsUp, Award, Target, PartyPopper, CheckCircle, MessageCircle } from 'lucide-react';
+import ChatAssistant from './ChatAssistant';
 
 const Results = ({ score, total, questions = [], answers = [], showReview = false, onRestart, onBackToThemes, isExamMode, themeId, onRetakeFullQuiz, onReviewRemaining }) => {
+  const [activeChatQuestion, setActiveChatQuestion] = useState(null); // { question, userAnswer, correction, explanation }
+
   const percentage = Math.round((score / total) * 100);
 
   const getResultMessage = () => {
@@ -209,12 +212,37 @@ const Results = ({ score, total, questions = [], answers = [], showReview = fals
                     <div className="explanation-text" style={{ fontSize: '1.05rem', lineHeight: 1.6 }}>
                       {cleanExplanation(q.explanation)}
                     </div>
+
+                    <div className="mt-4 flex justify-end">
+                      <button
+                        onClick={() => setActiveChatQuestion({
+                          question: q.question,
+                          userAnswer: formatAnswer(q, a?.userAnswer),
+                          correction: formatAnswer(q, q.correctAnswer),
+                          explanation: cleanExplanation(q.explanation)
+                        })}
+                        className="btn-sm btn-secondary flex items-center gap-2"
+                      >
+                        <MessageCircle size={16} /> Discuter avec l'IA
+                      </button>
+                    </div>
                   </div>
                 )}
               </div>
             ))
           )}
         </div>
+      )}
+
+      {activeChatQuestion && (
+        <ChatAssistant
+          question={activeChatQuestion.question}
+          userAnswer={activeChatQuestion.userAnswer}
+          correction={activeChatQuestion.correction}
+          explanation={activeChatQuestion.explanation}
+          apiKey={localStorage.getItem('groq_api_key')}
+          onClose={() => setActiveChatQuestion(null)}
+        />
       )}
     </div>
   );
