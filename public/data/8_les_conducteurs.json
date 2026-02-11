@@ -45,11 +45,25 @@
     },
     {
       "id": 3,
-      "type": "number",
-      "question": "Une voiture est un véhicule dont la",
-      "correctAnswer": "3500",
-      "explanation": "Vous pouvez conduire :Une voiture – une voiture mixte – un minibus – une camionnette.POUR CONDUIRE CES VÉHICULES, AUX CONDITIONS SUIVANTES : ▶  M.M.A.  ≤ 3.500 kg. ▶  ≤ 8+1 places assises. ▶  Avec ou sans remorque de M.M.A. ≤ 750 kg. ▶  Si M.M.A. remorque > 750 kg → M.M.A. ensemble ≤ 3.500 kg.",
-      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/11.jpg"
+      "type": "multiple_choice",
+      "question": "Quel est le poids maximal autorisé (M.M.A.) d'une voiture pour être conduite sans permis spécial ?",
+      "correctAnswer": "B",
+      "explanation": "Vous pouvez conduire une voiture dont la Masse Maximale Autorisée (M.M.A.) est inférieure ou égale à 3 500 kg. Cela inclut également une voiture mixte, un minibus ou une camionnette, sous certaines conditions : ▶ M.M.A. ≤ 3 500 kg, ▶ ≤ 8 + 1 places assises, ▶ Avec ou sans remorque de M.M.A. ≤ 750 kg, ▶ Si M.M.A. remorque > 750 kg → M.M.A. ensemble ≤ 3 500 kg.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/11.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "3 000 kg"
+        },
+        {
+          "letter": "B",
+          "text": "3 500 kg"
+        },
+        {
+          "letter": "C",
+          "text": "4 000 kg"
+        }
+      ]
     },
     {
       "id": 4,
