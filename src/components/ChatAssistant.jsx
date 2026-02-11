@@ -86,7 +86,7 @@ const ChatAssistant = ({ mistakes }) => {
 
             {/* Chat Window */}
             {isOpen && (
-                <div className="fixed bottom-6 right-6 w-full max-w-sm h-96 bg-surface-1 border border-border rounded-xl shadow-2xl flex flex-col z-50 animate-in slide-in-from-bottom-10 fade-in duration-300">
+                <div className="fixed bottom-24 right-6 w-80 h-96 bg-surface-1 border border-border rounded-xl shadow-2xl flex flex-col z-50 animate-in slide-in-from-bottom-10 fade-in duration-300">
                     {/* Header */}
                     <div className="p-3 border-b border-border flex justify-between items-center bg-primary/10 rounded-t-xl">
                         <div className="flex items-center gap-2 font-bold text-primary">
@@ -102,8 +102,8 @@ const ChatAssistant = ({ mistakes }) => {
                         {messages.map((m, i) => (
                             <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                                 <div className={`max-w-[85%] p-3 rounded-lg text-sm ${m.role === 'user'
-                                        ? 'bg-primary text-primary-foreground rounded-tr-none'
-                                        : 'bg-surface-2 border border-border rounded-tl-none'
+                                    ? 'bg-primary text-primary-foreground rounded-tr-none'
+                                    : 'bg-surface-2 border border-border rounded-tl-none'
                                     }`}>
                                     {m.content}
                                 </div>
