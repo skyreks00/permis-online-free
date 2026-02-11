@@ -10,7 +10,8 @@ const QuizPage = ({
     instantFeedback,
     autoPlayAudio,
     toggleTheme,
-    isDarkMode
+    isDarkMode,
+    onMistakesCorrected
 }) => {
     const { themeId } = useParams();
     const navigate = useNavigate();
