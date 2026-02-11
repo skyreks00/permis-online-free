@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { MessageCircle, X, Send, Bot, User } from 'lucide-react';
 import { getChatResponse } from '../utils/groq';
 
@@ -70,7 +71,7 @@ const ChatAssistant = ({ mistakes }) => {
 
     if (!apiKey) return null; // Don't show if no key
 
-    return (
+    return createPortal(
         <>
             {/* Floating Button */}
             {!isOpen && (
@@ -78,6 +79,7 @@ const ChatAssistant = ({ mistakes }) => {
                     onClick={() => setIsOpen(true)}
                     className="fixed bottom-6 right-6 btn-primary rounded-full shadow-lg p-4 animate-bounce-in z-50 flex items-center gap-2"
                     title="Discuter avec le moniteur IA"
+                    style={{ zIndex: 9999 }}
                 >
                     <Bot size={24} />
                     <span className="font-bold hidden md:inline">Analyse IA</span>
@@ -88,7 +90,7 @@ const ChatAssistant = ({ mistakes }) => {
             {isOpen && (
                 <div
                     className="fixed bottom-24 right-6 h-96 bg-surface-1 border border-border rounded-xl shadow-2xl flex flex-col z-50 animate-in slide-in-from-bottom-10 fade-in duration-300"
-                    style={{ width: '320px', maxWidth: 'calc(100vw - 3rem)' }}
+                    style={{ width: '320px', maxWidth: 'calc(100vw - 3rem)', zIndex: 9999 }}
                 >
                     {/* Header */}
                     <div className="p-3 border-b border-border flex justify-between items-center bg-primary/10 rounded-t-xl">
@@ -145,7 +147,8 @@ const ChatAssistant = ({ mistakes }) => {
                     </div>
                 </div>
             )}
-        </>
+        </>,
+        document.body
     );
 };
 
