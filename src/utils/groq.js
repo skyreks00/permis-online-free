@@ -94,7 +94,7 @@ export const chatWithGroq = async (messages, apiKey) => {
     try {
         const chatCompletion = await groq.chat.completions.create({
             messages: messages,
-            model: "llama3-70b-8192", // More standard/stable model ID on Groq
+            model: "llama-3.3-70b-versatile", // Updated to supported model
             temperature: 0.7,
             max_completion_tokens: 1024,
             top_p: 1,
