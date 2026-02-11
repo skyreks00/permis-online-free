@@ -88,19 +88,31 @@ const ChatAssistant = ({ mistakes }) => {
 
             {/* Chat Window with Backdrop */}
             {isOpen && (
-                <div className="fixed inset-0 z-[9990] flex items-end justify-end pointer-events-none">
+                <>
                     {/* Backdrop - Click to close */}
                     <div
-                        className="fixed inset-0 pointer-events-auto"
-                        style={{ backgroundColor: 'rgba(0,0,0,0.5)', transition: 'opacity 0.3s' }}
+                        className="fixed inset-0 z-[9990]"
+                        style={{
+                            position: 'fixed',
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            backgroundColor: 'rgba(0,0,0,0.5)',
+                            transition: 'opacity 0.3s'
+                        }}
                         onClick={() => setIsOpen(false)}
                     />
 
                     {/* Chat Container */}
                     <div
-                        className="pointer-events-auto relative mr-6 mb-6 h-96 flex flex-col z-[9999] animate-in slide-in-from-bottom-10 fade-in duration-300"
+                        className="z-[9999] flex flex-col animate-in slide-in-from-bottom-10 fade-in duration-300"
                         style={{
+                            position: 'fixed',
+                            bottom: '24px',
+                            right: '24px',
                             width: '320px',
+                            height: '400px',
                             maxWidth: 'calc(100vw - 3rem)',
                             backgroundColor: 'var(--surface)',
                             border: '1px solid var(--border)',
@@ -179,7 +191,7 @@ const ChatAssistant = ({ mistakes }) => {
                             </button>
                         </div>
                     </div>
-                </div>
+                </>
             )}
         </>,
         document.body
