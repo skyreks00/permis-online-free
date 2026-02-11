@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Results from '../components/Results';
 import TopControls from '../components/TopControls';
+import ChatAssistant from '../components/ChatAssistant';
 
 const ResultsPage = ({ toggleTheme, isDarkMode }) => {
     const { state } = useLocation();
@@ -49,6 +50,17 @@ const ResultsPage = ({ toggleTheme, isDarkMode }) => {
         }
     };
 
+    // Prepare mistakes for ChatAssistant
+    const mistakes = results.answers
+        .map((a, index) => {
+            if (a.isCorrect) return null;
+            return {
+                q: questions[index],
+                a: a
+            };
+        })
+        .filter(Boolean);
+
     return (
         <>
             <TopControls
@@ -69,6 +81,7 @@ const ResultsPage = ({ toggleTheme, isDarkMode }) => {
                 onRetakeFullQuiz={handleRetakeOriginal}
                 onReviewRemaining={handleReviewRemaining}
             />
+            {mistakes.length > 0 && <ChatAssistant mistakes={mistakes} />}
         </>
     );
 };
