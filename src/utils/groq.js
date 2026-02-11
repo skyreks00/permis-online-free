@@ -81,3 +81,29 @@ export const fixQuestionWithGroq = async (question, apiKey) => {
         throw new Error("Impossible de corriger la question avec Groq : " + error.message);
     }
 };
+
+/**
+ * Chat with Groq API (Llama 3)
+ * @param {Array} messages - Array of message objects { role, content }
+ * @param {string} apiKey - Groq API Key
+ * @returns {Promise<string>} - The assistant response content
+ */
+export const chatWithGroq = async (messages, apiKey) => {
+    const groq = new Groq({ apiKey, dangerouslyAllowBrowser: true });
+
+    try {
+        const chatCompletion = await groq.chat.completions.create({
+            messages: messages,
+            model: "meta-llama/llama-3.3-70b-versatile", // Or similar high quality model
+            temperature: 0.7,
+            max_completion_tokens: 1024,
+            top_p: 1,
+            stream: false
+        });
+
+        return chatCompletion.choices[0]?.message?.content || "";
+    } catch (error) {
+        console.error("Groq Chat Error:", error);
+        throw new Error("Erreur de communication avec l'IA.");
+    }
+};
