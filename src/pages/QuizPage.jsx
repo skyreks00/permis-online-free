@@ -21,19 +21,19 @@ const QuizPage = ({
 
     useEffect(() => {
         const loadData = async () => {
+            // If sections are not loaded yet (refresh case), wait.
+            // App.jsx will trigger a re-render when sections are updated.
+            if (!sections || sections.length === 0) {
+                return;
+            }
+
             setIsLoading(true);
             setError(null);
+
             // Find theme in sections
             let foundTheme = null;
             if (themeId === 'examen_B') {
-                // Special case for exam mode if it's not in sections explicitly or if we need to construct it
                 foundTheme = { id: 'examen_B', name: 'Examen Blanc', file: 'examen_B.json' };
-                // Search in sections just in case
-                for (const section of sections) {
-                    const items = section.items || section.themes || [];
-                    const t = items.find(t => t.id === themeId);
-                    if (t) { foundTheme = t; break; }
-                }
             } else {
                 for (const section of sections) {
                     const items = section.items || section.themes || [];
@@ -55,13 +55,11 @@ const QuizPage = ({
 
             try {
                 // Load questions
-                // Simplified loading logic compared to App.jsx debug/fallback complexity
-                // We assume loadThemeQuestions handles the fetch
                 const data = await loadThemeQuestions(foundTheme.file);
                 let loaded = data.questions || [];
 
                 if (loaded.length === 0) {
-                    // Fallback to fetch if contentLoader didn't work as expected or for debug
+                    // Fallback
                     const base = import.meta.env.BASE_URL || '/';
                     const res = await fetch(`${base}data/${foundTheme.file}`);
                     const json = await res.json();
@@ -84,19 +82,17 @@ const QuizPage = ({
             }
         };
 
-        if (sections.length > 0) {
-            loadData();
-        }
+        loadData();
     }, [themeId, sections]);
 
     const handleFinish = (payload) => {
         // Notify App to save progress
         const score = typeof payload === 'number' ? payload : payload.score;
+        const answers = typeof payload === 'object' ? payload.answers : [];
 
         // We delegate the saving logic to App via onFinishQuiz
-        // But App needs to know which theme and how many questions
-        if (onFinishQuiz) {
-            onFinishQuiz(theme.id, score, questions.length);
+        if (onFinishQuiz && theme) {
+            onFinishQuiz(theme.id, score, questions.length, answers);
         }
 
         // Navigate to results
@@ -106,17 +102,23 @@ const QuizPage = ({
                     correct: score,
                     incorrect: questions.length - score,
                     score: score,
-                    answers: payload.answers || []
+                    answers: answers
                 },
                 questions: questions,
                 total: questions.length,
-                isExamMode: theme.id.includes('examen')
+                isExamMode: theme && theme.id.includes('examen')
             }
         });
     };
 
-    if (isLoading) return <div className="p-8 text-center">Chargement du quiz...</div>;
-    if (error) return <div className="p-8 text-center text-error">{error} <br /><button onClick={() => navigate('/')} className="btn mt-4">Retour</button></div>;
+    // Show loading state if we are fetching data OR if we are waiting for sections (refresh case)
+    if (isLoading || !sections || sections.length === 0) {
+        return <div className="p-8 text-center"><span className="loading loading-spinner loading-lg"></span><br />Chargement du quiz...</div>;
+    }
+
+    if (error) {
+        return <div className="p-8 text-center text-error">{error} <br /><button onClick={() => navigate('/')} className="btn mt-4">Retour</button></div>;
+    }
 
     return (
         <>
@@ -125,7 +127,7 @@ const QuizPage = ({
                 toggleTheme={toggleTheme}
                 isDarkMode={isDarkMode}
             />
-            {theme && (
+            {theme && questions.length > 0 && (
                 <Quiz
                     questions={questions}
                     themeName={theme.name}
