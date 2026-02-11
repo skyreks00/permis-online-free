@@ -115,9 +115,16 @@ const QuizPage = ({
                 })
                 .filter(Boolean);
 
+            console.log("QuizPage: Generated corrections:", corrections); // DEBUG LOG
+
             if (corrections.length > 0) {
+                console.log("QuizPage: Calling onMistakesCorrected"); // DEBUG LOG
                 onMistakesCorrected(corrections);
+            } else {
+                console.log("QuizPage: No corrections generated (maybe sourceThemeId missing or no correct answers?)");
             }
+        } else {
+            console.log("QuizPage: Not triggering corrections. onMistakesCorrected:", !!onMistakesCorrected, "theme:", theme);
         }
 
         // Navigate to results

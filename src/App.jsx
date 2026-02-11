@@ -120,42 +120,60 @@ function App() {
   };
 
   const handleMistakeCorrection = (corrections) => {
+    console.log("App: handleMistakeCorrection called", corrections); // DEBUG LOG
     // corrections: [{ themeId, questionId }]
     const newProgress = { ...progress };
     let hasChanges = false;
 
     corrections.forEach(({ themeId, questionId }) => {
-      if (!newProgress[themeId]) return;
+      console.log(`App: Processing correction for theme ${themeId}, question ${questionId}`); // DEBUG LOG
+      if (!newProgress[themeId]) {
+        console.log(`App: Theme ${themeId} not found in progress`);
+        return;
+      }
 
       const themeProgress = newProgress[themeId];
-      if (!themeProgress.answers) return;
+      if (!themeProgress.answers) {
+        console.log(`App: No answers found for theme ${themeId}`);
+        return;
+      }
 
       const answerIndex = themeProgress.answers.findIndex(a => a.questionId === questionId);
-      if (answerIndex !== -1 && !themeProgress.answers[answerIndex].isCorrect) {
-        // Update answer
-        const newAnswers = [...themeProgress.answers];
-        newAnswers[answerIndex] = {
-          ...newAnswers[answerIndex],
-          isCorrect: true
-        };
+      if (answerIndex !== -1) {
+        if (!themeProgress.answers[answerIndex].isCorrect) {
+          // Update answer
+          console.log(`App: Marking question ${questionId} as correct for theme ${themeId}`); // DEBUG LOG
+          const newAnswers = [...themeProgress.answers];
+          newAnswers[answerIndex] = {
+            ...newAnswers[answerIndex],
+            isCorrect: true
+          };
 
-        // Recalculate score
-        const newScore = newAnswers.filter(a => a.isCorrect).length;
-        const newBestScore = Math.max(themeProgress.bestScore, newScore);
+          // Recalculate score
+          const newScore = newAnswers.filter(a => a.isCorrect).length;
+          const newBestScore = Math.max(themeProgress.bestScore, newScore);
 
-        newProgress[themeId] = {
-          ...themeProgress,
-          answers: newAnswers,
-          score: newScore,
-          bestScore: newBestScore
-        };
-        hasChanges = true;
+          newProgress[themeId] = {
+            ...themeProgress,
+            answers: newAnswers,
+            score: newScore,
+            bestScore: newBestScore
+          };
+          hasChanges = true;
+        } else {
+          console.log(`App: Question ${questionId} was already correct`);
+        }
+      } else {
+        console.log(`App: Question ${questionId} not found in theme answers`);
       }
     });
 
     if (hasChanges) {
+      console.log("App: Saving updated progress to localStorage"); // DEBUG LOG
       setProgress(newProgress);
       localStorage.setItem('quizProgress', JSON.stringify(newProgress));
+    } else {
+      console.log("App: No changes made to progress");
     }
   };
 
