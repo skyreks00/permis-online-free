@@ -225,6 +225,7 @@ function App() {
               autoPlayAudio={autoPlayAudio}
               toggleTheme={toggleTheme}
               isDarkMode={isDarkMode}
+              onMistakesCorrected={handleMistakeCorrection}
             />
           }
         />
