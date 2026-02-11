@@ -86,7 +86,10 @@ const ChatAssistant = ({ mistakes }) => {
 
             {/* Chat Window */}
             {isOpen && (
-                <div className="fixed bottom-24 right-6 w-80 h-96 bg-surface-1 border border-border rounded-xl shadow-2xl flex flex-col z-50 animate-in slide-in-from-bottom-10 fade-in duration-300">
+                <div
+                    className="fixed bottom-24 right-6 h-96 bg-surface-1 border border-border rounded-xl shadow-2xl flex flex-col z-50 animate-in slide-in-from-bottom-10 fade-in duration-300"
+                    style={{ width: '320px', maxWidth: 'calc(100vw - 3rem)' }}
+                >
                     {/* Header */}
                     <div className="p-3 border-b border-border flex justify-between items-center bg-primary/10 rounded-t-xl">
                         <div className="flex items-center gap-2 font-bold text-primary">
