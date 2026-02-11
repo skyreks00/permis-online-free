@@ -1,7 +1,7 @@
 import React from 'react';
 import { Trophy, ThumbsUp, Award, Target, PartyPopper, CheckCircle } from 'lucide-react';
 
-const Results = ({ score, total, questions = [], answers = [], showReview = false, onRestart, onBackToThemes, isExamMode, themeId, onRetakeFullQuiz }) => {
+const Results = ({ score, total, questions = [], answers = [], showReview = false, onRestart, onBackToThemes, isExamMode, themeId, onRetakeFullQuiz, onReviewRemaining }) => {
   const percentage = Math.round((score / total) * 100);
 
   const getResultMessage = () => {
@@ -71,6 +71,24 @@ const Results = ({ score, total, questions = [], answers = [], showReview = fals
           Choisir un autre thème
         </button>
       </div>
+
+      {/* Iterative Revision Button */}
+      {themeId && (themeId === 'erreurs' || themeId.startsWith('erreurs_')) && (total - score) > 0 && (
+        <div style={{ marginTop: '20px' }} className="animate-fade-in">
+          <div className="card bg-warning/10 border-warning/30 p-6">
+            <h3 className="text-xl font-bold text-warning mb-2 flex items-center justify-center gap-2">
+              <Target /> Encore des fautes...
+            </h3>
+            <p className="mb-4">Il reste {total - score} erreurs à corriger. Courage !</p>
+            <button
+              onClick={onReviewRemaining}
+              className="btn-primary w-full md:w-auto"
+            >
+              Réviser les {total - score} erreurs restantes
+            </button>
+          </div>
+        </div>
+      )}
 
       {themeId && themeId.startsWith('erreurs_') && score === total && (
         <div style={{ marginTop: '20px' }} className="animate-fade-in">

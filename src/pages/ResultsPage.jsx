@@ -44,6 +44,7 @@ const ResultsPage = ({ toggleTheme, isDarkMode }) => {
                 isExamMode={isExamMode}
                 themeId={themeId}
                 onRetakeFullQuiz={handleRetakeOriginal}
+                onReviewRemaining={handleReviewRemaining}
             />
         </>
     );
