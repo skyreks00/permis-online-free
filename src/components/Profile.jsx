@@ -6,8 +6,8 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
     // --- Stats Calculation ---
     const progressValues = Object.values(progress);
     const totalQuizzes = progressValues.length;
-    const totalBestScore = progressValues.reduce((acc, p) => acc + p.bestScore, 0);
-    const totalMaxPossible = progressValues.reduce((acc, p) => acc + p.totalQuestions, 0);
+    const totalBestScore = progressValues.reduce((acc, p) => acc + (p.bestScore || p.score || 0), 0);
+    const totalMaxPossible = progressValues.reduce((acc, p) => acc + (p.total || 0), 0);
     const averageAccuracy = totalMaxPossible > 0 ? Math.round((totalBestScore / totalMaxPossible) * 100) : 0;
     const totalMistakes = totalMaxPossible - totalBestScore;
 
@@ -108,14 +108,16 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                         ) : (
                             statedThemes.map(theme => {
                                 const p = progress[theme.id];
-                                const acc = p.totalQuestions > 0 ? Math.round((p.bestScore / p.totalQuestions) * 100) : 0;
+                                const best = p.bestScore || p.score || 0;
+                                const total = p.total || 0;
+                                const acc = total > 0 ? Math.round((best / total) * 100) : 0;
                                 const scoreColor = acc >= 80 ? 'text-success' : acc >= 50 ? 'text-warning' : 'text-danger';
 
                                 return (
                                     <div key={theme.id} className="theme-history-item">
                                         <div className="font-medium">{theme.name}</div>
                                         <div className={`font-mono font-bold ${scoreColor}`}>
-                                            {p.bestScore} / {p.totalQuestions} ({acc}%)
+                                            {best} / {total} ({acc}%)
                                         </div>
                                     </div>
                                 );
