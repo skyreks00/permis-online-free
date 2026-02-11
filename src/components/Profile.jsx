@@ -8,7 +8,16 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
     const navigate = useNavigate();
 
     // --- Stats Calculation ---
-    const progressValues = Object.values(progress);
+    // Filter progress to only include actual themes (exclude 'erreurs' or other special keys)
+    const validThemeIds = new Set((themesData.sections || []).flatMap(s => s.items).map(t => t.id));
+    // Also include examen_B if it's considered a valid theme for stats, but usually it is.
+    // If 'examen_B' is not in sections items, we might need to add it manually or check how it's handled.
+    // Assuming 'themesData' contains all standard themes.
+
+    const progressValues = Object.entries(progress)
+        .filter(([key]) => validThemeIds.has(key) || key === 'examen_B') // Include examen_B if needed, but definitely exclude 'erreurs'
+        .map(([, value]) => value);
+
     const totalQuizzes = progressValues.length;
     const totalBestScore = progressValues.reduce((acc, p) => acc + (p.bestScore || p.score || 0), 0);
     const totalMaxPossible = progressValues.reduce((acc, p) => acc + (p.total || 0), 0);
