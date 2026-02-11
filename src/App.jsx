@@ -102,10 +102,14 @@ function App() {
   }, []);
 
   const saveProgress = (themeId, score, total, answers) => {
+    const previousBest = progress[themeId]?.bestScore || 0;
+    const newBestScore = Math.max(score, previousBest);
+
     const newProgress = {
       ...progress,
       [themeId]: {
-        score,
+        score, // Last score
+        bestScore: newBestScore, // Best score ever
         total,
         date: new Date().toISOString(),
         answers // Save answers for review
