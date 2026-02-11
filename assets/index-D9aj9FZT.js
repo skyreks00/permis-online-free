@@ -56,7 +56,7 @@ new Groq({ apiKey, dangerouslyAllowBrowser: true })`);super({baseURL:c.baseURL,b
 
             Contexte des erreurs (Question | Réponse Utilisateur | Bonne réponse | Explication):
             ${s.map((Q,B)=>`
-                Q${B+1}: ${Q.q.question}
+                Q${B+1} (ID: ${Q.q.id}): ${Q.q.question}
                 Il a répondu: ${Q.a.userAnswer||"Rien"}
                 Il fallait répondre: ${Q.q.correctAnswer}
                 Pourquoi: ${Q.q.explanation}
