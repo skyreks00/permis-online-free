@@ -39,21 +39,24 @@ const ChatAssistant = ({ mistakes }) => {
         // Prepare context
         const systemPrompt = {
             role: 'system',
-            content: `Tu es un moniteur d'auto-école pédagogue et bienveillant.
-            L'utilisateur vient de terminer un quiz de code de la route et a fait des erreurs.
-            Voici les erreurs qu'il a commises (Format: Question | Réponse Utilisateur | Réponse Correcte | Explication):
-            ${mistakes.map((m, i) => `
-                ${i + 1}. Q: ${m.q.question}
-                Réponse joueur: ${m.a.userAnswer || 'Aucune'}
-                Bonne réponse: ${m.q.correctAnswer}
-                Explication: ${m.q.explanation}
-            `).join('\n')}
+            content: `Tu es un moniteur d'auto-école expérimenté, cool et humain. 
+            L'utilisateur vient de faire quelques fautes au code, pas de panique !
+            
+            TES OBJECTIFS :
+            TES OBJECTIFS :
+            1. Être BREF et DIRECT. Pas de pavés. Une réponse = 2 ou 3 phrases max.
+            2. Adopter un ton oral, encourageant et naturel (tu peux utiliser "on", "t'inquiète", etc.).
+            3. Expliquer SIMPLEMENT pourquoi la réponse de l'utilisateur est fausse, sans jargon compliqué.
+            4. Si on te pose une question, réponds comme un vrai humain, pas comme un robot.
+            5. STRICTEMENT INTERDIT : Ne réponds PAS aux sujets hors-sujet (politique, cuisine, etc.). Dis gentiment que tu ne parles que du Code de la Route.
 
-            CONSIGNES:
-            1. Réponds de manière CONCISE (max 3-4 phrases).
-            2. Explique pourquoi la réponse de l'utilisateur est fausse et pourquoi la bonne réponse est la bonne.
-            3. Sois encourageant.
-            4. Ne donne pas de longues leçons théoriques sauf si demandé.
+            Contexte des erreurs (Question | Réponse Utilisateur | Bonne réponse | Explication):
+            ${mistakes.map((m) => `
+                Question ${m.questionIndex + 1} (ID: ${m.q.id}): ${m.q.question}
+                Il a répondu: ${m.a.userAnswer || 'Rien'}
+                Il fallait répondre: ${m.q.correctAnswer}
+                Pourquoi: ${m.q.explanation}
+            `).join('\n')}
             `
         };
 
@@ -75,15 +78,25 @@ const ChatAssistant = ({ mistakes }) => {
         <>
             {/* Floating Button */}
             {!isOpen && (
-                <button
-                    onClick={() => setIsOpen(true)}
-                    className="fixed bottom-6 right-6 btn-primary rounded-full shadow-lg p-4 animate-bounce-in z-50 flex items-center gap-2"
-                    title="Discuter avec le moniteur IA"
-                    style={{ zIndex: 9999 }}
+                <div
+                    className="fixed bottom-6 right-6 z-[9999]"
+                    style={{ position: 'fixed', bottom: '24px', right: '24px' }}
                 >
-                    <Bot size={24} />
-                    <span className="font-bold hidden md:inline">Analyse IA</span>
-                </button>
+                    <button
+                        onClick={() => setIsOpen(true)}
+                        className="btn-primary shadow-lg flex items-center justify-center transition-transform hover:scale-110 active:scale-95"
+                        title="Discuter avec le moniteur IA"
+                        style={{
+                            width: '60px',
+                            height: '60px',
+                            borderRadius: '50%',
+                            padding: 0,
+                            animation: 'chat-open 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
+                        }}
+                    >
+                        <Bot size={32} />
+                    </button>
+                </div>
             )}
 
             {/* Chat Window with Backdrop */}
@@ -106,20 +119,23 @@ const ChatAssistant = ({ mistakes }) => {
 
                     {/* Chat Container */}
                     <div
-                        className="z-[9999] animate-in slide-in-from-bottom-10 fade-in duration-300"
+                        className="z-[9999]"
                         style={{
                             position: 'fixed',
                             bottom: '24px',
                             right: '24px',
                             width: '320px',
-                            height: '400px',
+                            height: '450px',
                             maxWidth: 'calc(100vw - 3rem)',
                             backgroundColor: 'var(--surface)',
                             border: '1px solid var(--border)',
                             borderRadius: '12px',
                             boxShadow: '0 8px 30px rgba(0,0,0,0.5)',
                             display: 'flex',
-                            flexDirection: 'column'
+                            flexDirection: 'column',
+                            overflow: 'hidden',
+                            transformOrigin: 'bottom right',
+                            animation: 'chat-open 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
                         }}
                     >
                         {/* Header */}
@@ -131,32 +147,57 @@ const ChatAssistant = ({ mistakes }) => {
                                 flexShrink: 0
                             }}
                         >
-                            <div className="flex items-center gap-2 font-bold text-primary">
+                            <div
+                                className="flex items-center gap-2 font-bold text-primary"
+                                style={{ paddingLeft: '16px' }}
+                            >
                                 <Bot size={20} /> Moniteur IA
                             </div>
-                            <button onClick={() => setIsOpen(false)} className="btn-ghost btn-sm btn-circle">
-                                <X size={18} />
+                            <button
+                                onClick={() => setIsOpen(false)}
+                                className="text-muted hover-text-primary hover-scale"
+                                style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+                            >
+                                <X size={20} />
                             </button>
                         </div>
 
                         {/* Messages */}
                         <div
-                            className="flex-1 overflow-y-auto p-4 space-y-4"
-                            style={{ flex: '1 1 auto', minHeight: 0 }}
+                            className="flex-1 p-4 no-scrollbar"
+                            style={{
+                                flex: '1 1 auto',
+                                minHeight: 0,
+                                overflowY: 'auto',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                gap: '16px' // Explicit gap for vertical spacing
+                            }}
                         >
                             {messages.map((m, i) => (
-                                <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                                <div
+                                    key={i}
+                                    style={{
+                                        display: 'flex',
+                                        justifyContent: m.role === 'user' ? 'flex-end' : 'flex-start',
+                                        width: '100%'
+                                    }}
+                                >
                                     <div
-                                        className={`max-w-[85%] p-3 rounded-lg text-sm`}
                                         style={{
+                                            maxWidth: '85%',
+                                            padding: '12px 16px', // Comfortable padding
+                                            borderRadius: '12px',
                                             backgroundColor: m.role === 'user' ? 'var(--primary)' : 'var(--surface-2)',
                                             color: m.role === 'user' ? '#fff' : 'var(--text)',
-                                            borderTopRightRadius: m.role === 'user' ? 0 : '12px',
-                                            borderTopLeftRadius: m.role === 'user' ? '12px' : 0,
+                                            borderTopRightRadius: m.role === 'user' ? '4px' : '12px',
+                                            borderTopLeftRadius: m.role === 'user' ? '12px' : '4px',
                                             borderBottomLeftRadius: '12px',
                                             borderBottomRightRadius: '12px',
                                             border: m.role === 'assistant' ? '1px solid var(--border)' : 'none',
-                                            wordBreak: 'break-word'
+                                            wordBreak: 'break-word',
+                                            lineHeight: '1.5',
+                                            boxShadow: '0 1px 2px rgba(0,0,0,0.1)'
                                         }}
                                     >
                                         {m.content}
@@ -166,7 +207,7 @@ const ChatAssistant = ({ mistakes }) => {
                             {isLoading && (
                                 <div className="flex justify-start">
                                     <div
-                                        className="p-3 rounded-lg flex gap-1"
+                                        className="p-4 rounded-lg flex gap-1"
                                         style={{ backgroundColor: 'var(--surface-2)', borderTopLeftRadius: 0 }}
                                     >
                                         <span className="w-2 h-2 bg-muted rounded-full animate-bounce"></span>
@@ -180,7 +221,7 @@ const ChatAssistant = ({ mistakes }) => {
 
                         {/* Input */}
                         <div
-                            className="p-3 flex gap-2"
+                            className="p-4 flex gap-2"
                             style={{
                                 borderTop: '1px solid var(--border)',
                                 flexShrink: 0
@@ -199,7 +240,7 @@ const ChatAssistant = ({ mistakes }) => {
                                     border: '1px solid var(--border)',
                                     color: 'var(--text)',
                                     borderRadius: '8px',
-                                    padding: '8px 12px'
+                                    padding: '10px 14px'
                                 }}
                             />
                             <button

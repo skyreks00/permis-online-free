@@ -56,7 +56,8 @@ const ResultsPage = ({ toggleTheme, isDarkMode }) => {
             if (a.isCorrect) return null;
             return {
                 q: questions[index],
-                a: a
+                a: a,
+                questionIndex: index
             };
         })
         .filter(Boolean);

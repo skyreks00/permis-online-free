@@ -340,7 +340,7 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                                                 {best} / {total} ({acc}%)
                                             </div>
                                         </div>
-                                        {hasMistakes && (
+                                        {hasMistakes && acc < 100 && (
                                             <button
                                                 onClick={(e) => handleReviewThemeMistakes(theme, e)}
                                                 disabled={isLoadingReview}

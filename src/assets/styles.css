@@ -235,9 +235,7 @@ input[type='checkbox'] {
 }
 
 /* 8) App / Theme toggle */
-.theme-toggle {
-  /* Position handled by TopControls in App.jsx */
-}
+/* .theme-toggle { Position handled by TopControls in App.jsx } */
 
 /* 9) Theme selector page */
 .page {
@@ -1135,4 +1133,46 @@ input:checked+.slider:before {
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+@keyframes chat-open {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Utilities */
+.hover-scale {
+  transition: transform 0.2s;
+}
+
+.hover-scale:hover {
+  transform: scale(1.1);
+}
+
+.hover-text-primary {
+  transition: color 0.2s;
+}
+
+.hover-text-primary:hover {
+  color: var(--primary);
 }

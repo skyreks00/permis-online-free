@@ -87,7 +87,7 @@ export const getChatResponse = async (apiKey, messages) => {
     try {
         const chatCompletion = await groq.chat.completions.create({
             messages: messages,
-            model: "meta-llama/llama-3.3-70b-versatile", // Or similar high quality model
+            model: "meta-llama/llama-4-scout-17b-16e-instruct", // User request: same as correction
             temperature: 0.5,
             max_completion_tokens: 512,
             top_p: 1,
