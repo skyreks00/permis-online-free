@@ -91,17 +91,31 @@ const ChatAssistant = ({ mistakes }) => {
                 <div className="fixed inset-0 z-[9990] flex items-end justify-end pointer-events-none">
                     {/* Backdrop - Click to close */}
                     <div
-                        className="fixed inset-0 bg-black/40 pointer-events-auto transition-opacity duration-300"
+                        className="fixed inset-0 pointer-events-auto"
+                        style={{ backgroundColor: 'rgba(0,0,0,0.5)', transition: 'opacity 0.3s' }}
                         onClick={() => setIsOpen(false)}
                     />
 
                     {/* Chat Container */}
                     <div
-                        className="pointer-events-auto relative mr-6 mb-6 h-96 bg-surface-1 border border-border rounded-xl shadow-2xl flex flex-col z-[9999] animate-in slide-in-from-bottom-10 fade-in duration-300"
-                        style={{ width: '320px', maxWidth: 'calc(100vw - 3rem)' }}
+                        className="pointer-events-auto relative mr-6 mb-6 h-96 flex flex-col z-[9999] animate-in slide-in-from-bottom-10 fade-in duration-300"
+                        style={{
+                            width: '320px',
+                            maxWidth: 'calc(100vw - 3rem)',
+                            backgroundColor: 'var(--surface)',
+                            border: '1px solid var(--border)',
+                            borderRadius: '12px',
+                            boxShadow: '0 8px 30px rgba(0,0,0,0.5)'
+                        }}
                     >
                         {/* Header */}
-                        <div className="p-3 border-b border-border flex justify-between items-center bg-primary/10 rounded-t-xl">
+                        <div
+                            className="p-3 flex justify-between items-center rounded-t-xl"
+                            style={{
+                                borderBottom: '1px solid var(--border)',
+                                backgroundColor: 'var(--surface-2)'
+                            }}
+                        >
                             <div className="flex items-center gap-2 font-bold text-primary">
                                 <Bot size={20} /> Moniteur IA
                             </div>
@@ -114,17 +128,28 @@ const ChatAssistant = ({ mistakes }) => {
                         <div className="flex-1 overflow-y-auto p-4 space-y-4">
                             {messages.map((m, i) => (
                                 <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                                    <div className={`max-w-[85%] p-3 rounded-lg text-sm ${m.role === 'user'
-                                            ? 'bg-primary text-primary-foreground rounded-tr-none'
-                                            : 'bg-surface-2 border border-border rounded-tl-none'
-                                        }`}>
+                                    <div
+                                        className={`max-w-[85%] p-3 rounded-lg text-sm`}
+                                        style={{
+                                            backgroundColor: m.role === 'user' ? 'var(--primary)' : 'var(--surface-2)',
+                                            color: m.role === 'user' ? '#fff' : 'var(--text)',
+                                            borderTopRightRadius: m.role === 'user' ? 0 : '12px',
+                                            borderTopLeftRadius: m.role === 'user' ? '12px' : 0,
+                                            borderBottomLeftRadius: '12px',
+                                            borderBottomRightRadius: '12px',
+                                            border: m.role === 'assistant' ? '1px solid var(--border)' : 'none'
+                                        }}
+                                    >
                                         {m.content}
                                     </div>
                                 </div>
                             ))}
                             {isLoading && (
                                 <div className="flex justify-start">
-                                    <div className="bg-surface-2 p-3 rounded-lg rounded-tl-none flex gap-1">
+                                    <div
+                                        className="p-3 rounded-lg flex gap-1"
+                                        style={{ backgroundColor: 'var(--surface-2)', borderTopLeftRadius: 0 }}
+                                    >
                                         <span className="w-2 h-2 bg-muted rounded-full animate-bounce"></span>
                                         <span className="w-2 h-2 bg-muted rounded-full animate-bounce delay-100"></span>
                                         <span className="w-2 h-2 bg-muted rounded-full animate-bounce delay-200"></span>
@@ -135,7 +160,7 @@ const ChatAssistant = ({ mistakes }) => {
                         </div>
 
                         {/* Input */}
-                        <div className="p-3 border-t border-border flex gap-2">
+                        <div className="p-3 flex gap-2" style={{ borderTop: '1px solid var(--border)' }}>
                             <input
                                 type="text"
                                 value={input}
