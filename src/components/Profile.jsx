@@ -193,6 +193,57 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
         }
     };
 
+    const handleReviewThemeMistakes = async (theme, e) => {
+        if (e) e.stopPropagation();
+
+        const p = progress[theme.id];
+        if (!p || !p.answers) return;
+
+        const mistakes = p.answers.filter(a => !a.isCorrect);
+        if (mistakes.length === 0) {
+            alert("Bravo ! Aucune faute à réviser résiduelle pour ce thème.");
+            return;
+        }
+
+        setIsLoadingReview(true);
+        try {
+            // Load questions
+            const data = await loadThemeQuestions(theme.file);
+            let loadedQuestions = data.questions || [];
+
+            if (loadedQuestions.length === 0) {
+                const base = import.meta.env.BASE_URL || '/';
+                const res = await fetch(`${base}data/${theme.file}`);
+                const json = await res.json();
+                loadedQuestions = json.questions || [];
+            }
+
+            const questionMap = new Map(loadedQuestions.map(q => [q.id, q]));
+            const reviewQuestions = mistakes.map(m => questionMap.get(m.questionId)).filter(Boolean);
+
+            if (reviewQuestions.length > 0) {
+                navigate('/quiz/erreurs', {
+                    state: {
+                        questions: reviewQuestions,
+                        theme: {
+                            id: `erreurs_${theme.id}`,
+                            name: `Révision: ${theme.name}`,
+                            file: null
+                        }
+                    }
+                });
+            } else {
+                alert("Impossible de charger les questions.");
+            }
+
+        } catch (error) {
+            console.error("Failed to load theme review", error);
+            alert("Erreur lors du chargement.");
+        } finally {
+            setIsLoadingReview(false);
+        }
+    };
+
     return (
         <div className="page container animate-fade-in" style={{ maxWidth: '1200px' }}>
             <div className="mb-6">
@@ -268,18 +319,32 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                                 const total = p.total || 0;
                                 const acc = total > 0 ? Math.round((best / total) * 100) : 0;
                                 const scoreColor = acc >= 80 ? 'text-success' : acc >= 50 ? 'text-warning' : 'text-danger';
+                                const hasMistakes = progress[theme.id]?.answers?.some(a => !a.isCorrect);
 
                                 return (
                                     <div
                                         key={theme.id}
-                                        className="theme-history-item cursor-pointer hover:bg-surface-2 transition-colors p-2 rounded"
+                                        className="theme-history-item cursor-pointer hover:bg-surface-2 transition-colors p-2 rounded flex justify-between items-center"
                                         onClick={() => handleReview(theme)}
-                                        title="Cliquez pour revoir vos fautes"
+                                        title="Cliquez pour voir le détail des résultats"
                                     >
-                                        <div className="font-medium">{theme.name}</div>
-                                        <div className={`font-mono font-bold ${scoreColor}`}>
-                                            {best} / {total} ({acc}%)
+                                        <div>
+                                            <div className="font-medium">{theme.name}</div>
+                                            <div className={`font-mono font-bold ${scoreColor}`}>
+                                                {best} / {total} ({acc}%)
+                                            </div>
                                         </div>
+                                        {hasMistakes && (
+                                            <button
+                                                onClick={(e) => handleReviewThemeMistakes(theme, e)}
+                                                disabled={isLoadingReview}
+                                                className="btn-xs btn-ghost text-danger flex items-center gap-1 ml-2 border border-danger/30 hover:bg-danger/10"
+                                                title="Réviser uniquement les fautes de ce thème"
+                                            >
+                                                <RefreshCw size={12} />
+                                                Réviser
+                                            </button>
+                                        )}
                                     </div>
                                 );
                             })
