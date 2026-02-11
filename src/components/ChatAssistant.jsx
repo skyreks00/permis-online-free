@@ -86,64 +86,73 @@ const ChatAssistant = ({ mistakes }) => {
                 </button>
             )}
 
-            {/* Chat Window */}
+            {/* Chat Window with Backdrop */}
             {isOpen && (
-                <div
-                    className="fixed bottom-24 right-6 h-96 bg-surface-1 border border-border rounded-xl shadow-2xl flex flex-col z-50 animate-in slide-in-from-bottom-10 fade-in duration-300"
-                    style={{ width: '320px', maxWidth: 'calc(100vw - 3rem)', zIndex: 9999 }}
-                >
-                    {/* Header */}
-                    <div className="p-3 border-b border-border flex justify-between items-center bg-primary/10 rounded-t-xl">
-                        <div className="flex items-center gap-2 font-bold text-primary">
-                            <Bot size={20} /> Moniteur IA
+                <div className="fixed inset-0 z-[9990] flex items-end justify-end pointer-events-none">
+                    {/* Backdrop - Click to close */}
+                    <div
+                        className="fixed inset-0 bg-black/40 pointer-events-auto transition-opacity duration-300"
+                        onClick={() => setIsOpen(false)}
+                    />
+
+                    {/* Chat Container */}
+                    <div
+                        className="pointer-events-auto relative mr-6 mb-6 h-96 bg-surface-1 border border-border rounded-xl shadow-2xl flex flex-col z-[9999] animate-in slide-in-from-bottom-10 fade-in duration-300"
+                        style={{ width: '320px', maxWidth: 'calc(100vw - 3rem)' }}
+                    >
+                        {/* Header */}
+                        <div className="p-3 border-b border-border flex justify-between items-center bg-primary/10 rounded-t-xl">
+                            <div className="flex items-center gap-2 font-bold text-primary">
+                                <Bot size={20} /> Moniteur IA
+                            </div>
+                            <button onClick={() => setIsOpen(false)} className="btn-ghost btn-sm btn-circle">
+                                <X size={18} />
+                            </button>
                         </div>
-                        <button onClick={() => setIsOpen(false)} className="btn-ghost btn-sm btn-circle">
-                            <X size={18} />
-                        </button>
-                    </div>
 
-                    {/* Messages */}
-                    <div className="flex-1 overflow-y-auto p-4 space-y-4">
-                        {messages.map((m, i) => (
-                            <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                                <div className={`max-w-[85%] p-3 rounded-lg text-sm ${m.role === 'user'
-                                    ? 'bg-primary text-primary-foreground rounded-tr-none'
-                                    : 'bg-surface-2 border border-border rounded-tl-none'
-                                    }`}>
-                                    {m.content}
+                        {/* Messages */}
+                        <div className="flex-1 overflow-y-auto p-4 space-y-4">
+                            {messages.map((m, i) => (
+                                <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                                    <div className={`max-w-[85%] p-3 rounded-lg text-sm ${m.role === 'user'
+                                            ? 'bg-primary text-primary-foreground rounded-tr-none'
+                                            : 'bg-surface-2 border border-border rounded-tl-none'
+                                        }`}>
+                                        {m.content}
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
-                        {isLoading && (
-                            <div className="flex justify-start">
-                                <div className="bg-surface-2 p-3 rounded-lg rounded-tl-none flex gap-1">
-                                    <span className="w-2 h-2 bg-muted rounded-full animate-bounce"></span>
-                                    <span className="w-2 h-2 bg-muted rounded-full animate-bounce delay-100"></span>
-                                    <span className="w-2 h-2 bg-muted rounded-full animate-bounce delay-200"></span>
+                            ))}
+                            {isLoading && (
+                                <div className="flex justify-start">
+                                    <div className="bg-surface-2 p-3 rounded-lg rounded-tl-none flex gap-1">
+                                        <span className="w-2 h-2 bg-muted rounded-full animate-bounce"></span>
+                                        <span className="w-2 h-2 bg-muted rounded-full animate-bounce delay-100"></span>
+                                        <span className="w-2 h-2 bg-muted rounded-full animate-bounce delay-200"></span>
+                                    </div>
                                 </div>
-                            </div>
-                        )}
-                        <div ref={messagesEndRef} />
-                    </div>
+                            )}
+                            <div ref={messagesEndRef} />
+                        </div>
 
-                    {/* Input */}
-                    <div className="p-3 border-t border-border flex gap-2">
-                        <input
-                            type="text"
-                            value={input}
-                            onChange={e => setInput(e.target.value)}
-                            onKeyDown={e => e.key === 'Enter' && handleSend()}
-                            placeholder="Posez une question..."
-                            className="input flex-1 text-sm h-10"
-                            disabled={isLoading}
-                        />
-                        <button
-                            onClick={handleSend}
-                            disabled={isLoading || !input.trim()}
-                            className="btn-primary h-10 w-10 p-0 flex items-center justify-center rounded-lg"
-                        >
-                            <Send size={18} />
-                        </button>
+                        {/* Input */}
+                        <div className="p-3 border-t border-border flex gap-2">
+                            <input
+                                type="text"
+                                value={input}
+                                onChange={e => setInput(e.target.value)}
+                                onKeyDown={e => e.key === 'Enter' && handleSend()}
+                                placeholder="Posez une question..."
+                                className="input flex-1 text-sm h-10"
+                                disabled={isLoading}
+                            />
+                            <button
+                                onClick={handleSend}
+                                disabled={isLoading || !input.trim()}
+                                className="btn-primary h-10 w-10 p-0 flex items-center justify-center rounded-lg"
+                            >
+                                <Send size={18} />
+                            </button>
+                        </div>
                     </div>
                 </div>
             )}
