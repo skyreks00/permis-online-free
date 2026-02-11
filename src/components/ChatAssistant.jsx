@@ -106,7 +106,7 @@ const ChatAssistant = ({ mistakes }) => {
 
                     {/* Chat Container */}
                     <div
-                        className="z-[9999] flex flex-col animate-in slide-in-from-bottom-10 fade-in duration-300"
+                        className="z-[9999] animate-in slide-in-from-bottom-10 fade-in duration-300"
                         style={{
                             position: 'fixed',
                             bottom: '24px',
@@ -117,7 +117,9 @@ const ChatAssistant = ({ mistakes }) => {
                             backgroundColor: 'var(--surface)',
                             border: '1px solid var(--border)',
                             borderRadius: '12px',
-                            boxShadow: '0 8px 30px rgba(0,0,0,0.5)'
+                            boxShadow: '0 8px 30px rgba(0,0,0,0.5)',
+                            display: 'flex',
+                            flexDirection: 'column'
                         }}
                     >
                         {/* Header */}
@@ -125,7 +127,8 @@ const ChatAssistant = ({ mistakes }) => {
                             className="p-3 flex justify-between items-center rounded-t-xl"
                             style={{
                                 borderBottom: '1px solid var(--border)',
-                                backgroundColor: 'var(--surface-2)'
+                                backgroundColor: 'var(--surface-2)',
+                                flexShrink: 0
                             }}
                         >
                             <div className="flex items-center gap-2 font-bold text-primary">
@@ -137,7 +140,10 @@ const ChatAssistant = ({ mistakes }) => {
                         </div>
 
                         {/* Messages */}
-                        <div className="flex-1 overflow-y-auto p-4 space-y-4">
+                        <div
+                            className="flex-1 overflow-y-auto p-4 space-y-4"
+                            style={{ flex: '1 1 auto', minHeight: 0 }}
+                        >
                             {messages.map((m, i) => (
                                 <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                                     <div
@@ -149,7 +155,8 @@ const ChatAssistant = ({ mistakes }) => {
                                             borderTopLeftRadius: m.role === 'user' ? '12px' : 0,
                                             borderBottomLeftRadius: '12px',
                                             borderBottomRightRadius: '12px',
-                                            border: m.role === 'assistant' ? '1px solid var(--border)' : 'none'
+                                            border: m.role === 'assistant' ? '1px solid var(--border)' : 'none',
+                                            wordBreak: 'break-word'
                                         }}
                                     >
                                         {m.content}
@@ -172,7 +179,13 @@ const ChatAssistant = ({ mistakes }) => {
                         </div>
 
                         {/* Input */}
-                        <div className="p-3 flex gap-2" style={{ borderTop: '1px solid var(--border)' }}>
+                        <div
+                            className="p-3 flex gap-2"
+                            style={{
+                                borderTop: '1px solid var(--border)',
+                                flexShrink: 0
+                            }}
+                        >
                             <input
                                 type="text"
                                 value={input}
@@ -181,11 +194,26 @@ const ChatAssistant = ({ mistakes }) => {
                                 placeholder="Posez une question..."
                                 className="input flex-1 text-sm h-10"
                                 disabled={isLoading}
+                                style={{
+                                    backgroundColor: 'var(--bg-elev)',
+                                    border: '1px solid var(--border)',
+                                    color: 'var(--text)',
+                                    borderRadius: '8px',
+                                    padding: '8px 12px'
+                                }}
                             />
                             <button
                                 onClick={handleSend}
                                 disabled={isLoading || !input.trim()}
                                 className="btn-primary h-10 w-10 p-0 flex items-center justify-center rounded-lg"
+                                style={{
+                                    backgroundColor: 'var(--primary)',
+                                    border: 'none',
+                                    color: 'white',
+                                    cursor: 'pointer',
+                                    display: 'grid',
+                                    placeItems: 'center'
+                                }}
                             >
                                 <Send size={18} />
                             </button>
