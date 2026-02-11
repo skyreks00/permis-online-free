@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import Quiz from '../components/Quiz';
 import TopControls from '../components/TopControls';
 import { loadThemeQuestions } from '../utils/contentLoader';
@@ -14,6 +14,7 @@ const QuizPage = ({
 }) => {
     const { themeId } = useParams();
     const navigate = useNavigate();
+    const location = useLocation();
     const [questions, setQuestions] = useState([]);
     const [theme, setTheme] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -21,6 +22,14 @@ const QuizPage = ({
 
     useEffect(() => {
         const loadData = async () => {
+            // Check if questions are passed via state (e.g. for Mistake Quiz)
+            if (location.state?.questions && location.state?.theme) {
+                setTheme(location.state.theme);
+                setQuestions(location.state.questions);
+                setIsLoading(false);
+                return;
+            }
+
             // If sections are not loaded yet (refresh case), wait.
             // App.jsx will trigger a re-render when sections are updated.
             if (!sections || sections.length === 0) {

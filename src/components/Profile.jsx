@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Trophy, Target, AlertTriangle, Clock, Settings, ArrowLeft, LogOut, Key, Github, Save } from 'lucide-react';
+import { Trophy, Target, AlertTriangle, Clock, Settings, ArrowLeft, LogOut, Key, Github, Save, RefreshCw } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { getUser } from '../utils/githubClient';
 import { loadThemeQuestions } from '../utils/contentLoader';
@@ -121,6 +121,69 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
         }
     };
 
+    const handleStartMistakeQuiz = async () => {
+        setIsLoadingReview(true);
+        try {
+            // 1. Identify all incorrect questions across all themes
+            const mistakePromises = Object.entries(progress).map(async ([themeId, p]) => {
+                if (!p.answers || p.answers.length === 0) return [];
+
+                // Filter incorrect answers
+                const mistakes = p.answers.filter(a => !a.isCorrect);
+                if (mistakes.length === 0) return [];
+
+                // We need to fetch the theme file to get the actual question objects
+                // Find theme file using themesData
+                const allThemes = (themesData.sections || []).flatMap(s => s.items);
+                const themeInfo = allThemes.find(t => t.id === themeId);
+
+                if (!themeInfo) return [];
+
+                // Load questions
+                const data = await loadThemeQuestions(themeInfo.file);
+                let loadedQuestions = data.questions || [];
+
+                if (loadedQuestions.length === 0) {
+                    const base = import.meta.env.BASE_URL || '/';
+                    const res = await fetch(`${base}data/${themeInfo.file}`);
+                    const json = await res.json();
+                    loadedQuestions = json.questions || [];
+                }
+
+                const questionMap = new Map(loadedQuestions.map(q => [q.id, q]));
+                return mistakes.map(m => questionMap.get(m.questionId)).filter(Boolean);
+            });
+
+            const results = await Promise.all(mistakePromises);
+            const allMistakeQuestions = results.flat();
+
+            if (allMistakeQuestions.length === 0) {
+                alert("Aucune erreur trouvée disponible pour la révision.");
+                return;
+            }
+
+            // 2. Navigate to QuizPage with these questions
+            // We use a dummy themeId 'erreurs' but pass data via state
+            // QuizPage needs to be updated to inspect location.state
+            navigate('/quiz/erreurs', {
+                state: {
+                    questions: allMistakeQuestions,
+                    theme: {
+                        id: 'erreurs',
+                        name: 'Révision des Erreurs',
+                        file: null
+                    }
+                }
+            });
+
+        } catch (error) {
+            console.error("Failed to start mistake quiz", error);
+            alert("Erreur lors de la préparation du quiz.");
+        } finally {
+            setIsLoadingReview(false);
+        }
+    };
+
     return (
         <div className="page container animate-fade-in" style={{ maxWidth: '1200px' }}>
             <div className="mb-6">
@@ -161,6 +224,18 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                         <div className="stat-value">{totalMistakes}</div>
                         <div className="stat-sub">{totalMistakes} erreurs au total</div>
                     </div>
+                    {totalMistakes > 0 && (
+                        <div className="mt-2 flex justify-center">
+                            <button
+                                onClick={handleStartMistakeQuiz}
+                                disabled={isLoadingReview}
+                                className="btn-xs btn-primary flex items-center gap-1"
+                            >
+                                {isLoadingReview ? <span className="loading loading-spinner loading-xs"></span> : <RefreshCw size={12} />}
+                                Réviser
+                            </button>
+                        </div>
+                    )}
                 </div>
             </div>
 
