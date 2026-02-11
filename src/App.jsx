@@ -119,6 +119,48 @@ function App() {
     localStorage.setItem('quizProgress', JSON.stringify(newProgress));
   };
 
+  const handleMistakeCorrection = (corrections) => {
+    // corrections: [{ themeId, questionId }]
+    const newProgress = { ...progress };
+    let hasChanges = false;
+
+    corrections.forEach(({ themeId, questionId }) => {
+      if (!newProgress[themeId]) return;
+
+      const themeProgress = newProgress[themeId];
+      if (!themeProgress.answers) return;
+
+      const answerIndex = themeProgress.answers.findIndex(a => a.questionId === questionId);
+      if (answerIndex !== -1 && !themeProgress.answers[answerIndex].isCorrect) {
+        // Update answer
+        const newAnswers = [...themeProgress.answers];
+        newAnswers[answerIndex] = {
+          ...newAnswers[answerIndex],
+          isCorrect: true
+        };
+
+        // Recalculate score
+        const newScore = newAnswers.filter(a => a.isCorrect).length;
+        const newBestScore = Math.max(themeProgress.bestScore, newScore);
+
+        newProgress[themeId] = {
+          ...themeProgress,
+          answers: newAnswers,
+          score: newScore,
+          bestScore: newBestScore
+        };
+        hasChanges = true;
+      }
+    });
+
+    if (hasChanges) {
+      setProgress(newProgress);
+      localStorage.setItem('quizProgress', JSON.stringify(newProgress));
+    }
+  };
+
+
+
   const handleResetProgress = () => {
     if (window.confirm('Êtes-vous sûr de vouloir réinitialiser toute votre progression ?')) {
       setProgress({});

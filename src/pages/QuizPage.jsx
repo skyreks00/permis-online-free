@@ -104,6 +104,21 @@ const QuizPage = ({
             onFinishQuiz(theme.id, score, questions.length, answers);
         }
 
+        // Check for corrections in revision mode
+        if (onMistakesCorrected && theme && theme.id.includes('erreurs')) {
+            const corrections = answers
+                .filter(a => a.isCorrect)
+                .map(a => {
+                    const q = questions.find(q => q.id === a.questionId);
+                    return q && q.sourceThemeId ? { themeId: q.sourceThemeId, questionId: q.id } : null;
+                })
+                .filter(Boolean);
+
+            if (corrections.length > 0) {
+                onMistakesCorrected(corrections);
+            }
+        }
+
         // Navigate to results
         navigate('/resultats', {
             state: {

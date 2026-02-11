@@ -160,7 +160,10 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                 }
 
                 const questionMap = new Map(loadedQuestions.map(q => [q.id, q]));
-                return mistakes.map(m => questionMap.get(m.questionId)).filter(Boolean);
+                return mistakes.map(m => {
+                    const q = questionMap.get(m.questionId);
+                    return q ? { ...q, sourceThemeId: themeId } : null;
+                }).filter(Boolean);
             });
 
             const results = await Promise.all(mistakePromises);
@@ -219,7 +222,10 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
             }
 
             const questionMap = new Map(loadedQuestions.map(q => [q.id, q]));
-            const reviewQuestions = mistakes.map(m => questionMap.get(m.questionId)).filter(Boolean);
+            const reviewQuestions = mistakes.map(m => {
+                const q = questionMap.get(m.questionId);
+                return q ? { ...q, sourceThemeId: theme.id } : null;
+            }).filter(Boolean);
 
             if (reviewQuestions.length > 0) {
                 navigate('/quiz/erreurs', {
