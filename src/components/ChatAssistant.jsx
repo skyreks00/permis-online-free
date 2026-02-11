@@ -77,10 +77,16 @@ Explication fournie : "${explanation}"
     };
 
     return (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 animate-fade-in backdrop-blur-sm">
-            <div className="bg-surface-1 w-full max-w-md rounded-xl shadow-2xl flex flex-col max-h-[80vh] border border-border">
+        <div className="fixed inset-0 z-50 flex justify-end pointer-events-none">
+            {/* Backdrop - optional, maybe invisible if we want to allow seeing the background? 
+                User said "fenetre sur la droite", often implies side panel. 
+                Let's make it a drawer style. pointer-events-auto for the drawer itself.
+            */}
+            <button onClick={onClose} className="absolute inset-0 bg-black/20 pointer-events-auto backdrop-blur-[1px] transition-opacity" />
+
+            <div className="bg-surface-1 w-full max-w-md h-full shadow-2xl flex flex-col border-l border-border pointer-events-auto animate-slide-in-right">
                 {/* Header */}
-                <div className="p-4 border-b border-border flex justify-between items-center bg-primary/10 rounded-t-xl">
+                <div className="p-4 border-b border-border flex justify-between items-center bg-primary/10">
                     <div className="flex items-center gap-2 font-bold text-primary">
                         <Bot size={24} />
                         <span>Assistant Moniteur</span>
@@ -98,8 +104,8 @@ Explication fournie : "${explanation}"
                                 {msg.role === 'user' ? <User size={16} /> : <Bot size={16} />}
                             </div>
                             <div className={`p-3 rounded-lg max-w-[80%] text-sm leading-relaxed ${msg.role === 'user'
-                                    ? 'bg-primary text-primary-content rounded-tr-none'
-                                    : 'bg-surface-2 text-text rounded-tl-none border border-border'
+                                ? 'bg-primary text-primary-content rounded-tr-none'
+                                : 'bg-surface-2 text-text rounded-tl-none border border-border'
                                 }`}>
                                 {msg.content}
                             </div>
@@ -119,7 +125,7 @@ Explication fournie : "${explanation}"
                 </div>
 
                 {/* Input Area */}
-                <div className="p-3 border-t border-border bg-surface-2/30 rounded-b-xl">
+                <div className="p-4 border-t border-border bg-surface-2/30">
                     <div className="relative">
                         <input
                             type="text"
