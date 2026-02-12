@@ -92,7 +92,7 @@
     {
       "id": 7,
       "type": "multiple_choice",
-      "question": "Tu as suivi 20 heures de cours pratiques dans une auto-école agréée et tu as reçu une « attestation de compétence ».À partir de quel âge peux-tu désormais conduire seul pour t’exercer ?",
+      "question": "Vous avez suivi 20 heures de cours pratiques dans une auto-école agréée et vous avez reçu une « attestation de compétence ». À partir de quel âge pouvez-vous désormais conduire seul pour vous exercer ?",
       "propositions": [
         {
           "letter": "A",
@@ -108,7 +108,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "u dois avoir suivi 20 heures de cours pratiques et avoir 18 ans pour pouvoir conduire seul avec un permis provisoire 18M.",
+      "explanation": "Vous devez avoir suivi 20 heures de cours pratiques et avoir 18 ans pour pouvoir conduire seul avec un permis provisoire 18M.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/46.jpg"
     },
     {
