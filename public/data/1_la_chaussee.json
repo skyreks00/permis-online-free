@@ -307,8 +307,8 @@
     },
     {
       "id": 18,
-      "type": "multiple_choice",
-      "question": "Cette combinaison d'un signal routier et un panneau signifie que sur une distance de 7,5 km, la voie publique peut être rendue glissante en raison du verglas ou de la neige.",
+      "type": "true_false",
+      "question": "Cette combinaison d'un signal routier et d'un panneau signifie que sur une distance de 7,5 km, la voie publique peut être rendue glissante en raison du verglas ou de la neige.",
       "propositions": [
         {
           "letter": "A",
@@ -319,8 +319,8 @@
           "text": "Faux"
         }
       ],
-      "correctAnswer": "A",
-      "explanation": "Chaussée glissante. Le panneau additionnel du modèle suivant peut être employé pour indiquer que la voie publique peut être rendue glissante en raison du verglas ou de la neige.Presque tous signaux routiers triangulaire avec un bord rouge sont des signaux de danger. Les signaux de danger sont placés à une distance approximative de 150 m de l'endroit dangereux et le panneau additionnel s’applique au signal au-dessus duquel il se trouve.",
+      "correctAnswer": "Vrai",
+      "explanation": "Chaussée glissante. Le panneau additionnel peut être employé pour indiquer que la voie publique peut être rendue glissante en raison du verglas ou de la neige. Presque tous les signaux routiers triangulaires avec un bord rouge sont des signaux de danger. Les signaux de danger sont placés à une distance approximative de 150 m de l'endroit dangereux et le panneau additionnel s’applique au signal au-dessus duquel il se trouve.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/35.jpg"
     },
     {
