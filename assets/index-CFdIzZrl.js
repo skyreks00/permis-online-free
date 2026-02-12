@@ -40,6 +40,7 @@ new Groq({ apiKey, dangerouslyAllowBrowser: true })`);super({baseURL:c.baseURL,b
        - Ensure "answer" field matches the letters (e.g., "A" or "AC").
     5. **JSON Only**: Output ONLY valid JSON, no markdown formatting (no \`\`\`json).
     6. **IMMUTABLE ANSWER**: The 'answer' field MUST remain exactly the same as the original (e.g., if it was "A", it MUST remain "A"). Do NOT change which option is the correct one.
+    7. **AMBIGUITY FIX**: If multiple propositions have the EXACT SAME text (e.g. both are "Signal"), you MUST append the proposition letter to the text to differentiate them (e.g., "Signal" -> "Signal A", "Signal" -> "Signal B"). This is important for clarity.
 
     Original Question to Fix:
     ${JSON.stringify(s,null,2)}
