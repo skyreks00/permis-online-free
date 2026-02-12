@@ -444,7 +444,7 @@
     {
       "id": 25,
       "type": "multiple_choice",
-      "question": "Commettez-vous une infraction si vous configurez l'application de navigation de votre téléphone mobile pendant que vous conduisez ?",
+      "question": "Commencez-vous une infraction si vous configurez l'application de navigation de votre téléphone mobile pendant que vous conduisez ?",
       "propositions": [
         {
           "letter": "A",
@@ -452,11 +452,11 @@
         },
         {
           "letter": "B",
-          "text": "Non,"
+          "text": "Non"
         }
       ],
       "correctAnswer": "A",
-      "explanation": "Ce n’est pas une bonne idée car lors de la configuration d'une application, votre attention se porte sur quelque chose de complètement différent de la circulation sur la chaussée.Le code ne spécifie toutefois pas que la configuration est interdite.8.4. Sauf lorsque son véhicule est à l’arrêt ou en stationnement, le conducteur ne peut utiliser, tenir en main ni manipuler aucun appareil électronique mobile doté d’un écran, à moins qu’il ne soit fixé au véhicule dans un support destiné à cette fin.",
+      "explanation": "Ce n'est pas une bonne idée car lors de la configuration d'une application, votre attention se porte sur quelque chose de complètement différent de la circulation sur la chaussée. Le code ne spécifie toutefois pas que la configuration est interdite. 8.4. Sauf lorsque son véhicule est à l'arrêt ou en stationnement, le conducteur ne peut utiliser, tenir en main ni manipuler aucun appareil électronique mobile doté d'un écran, à moins qu'il ne soit fixé au véhicule dans un support destiné à cette fin.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/21.jpg"
     },
     {
