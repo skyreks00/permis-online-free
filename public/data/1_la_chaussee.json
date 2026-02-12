@@ -176,7 +176,7 @@
     {
       "id": 11,
       "type": "multiple_choice",
-      "question": "Qu’est-ce qu’une station-service ?",
+      "question": "Qu'est-ce qu'une station-service ?",
       "propositions": [
         {
           "letter": "A",
@@ -184,7 +184,7 @@
         },
         {
           "letter": "B",
-          "text": "Un terrain public"
+          "text": "Un lieu où l'on vend du carburant pour les véhicules"
         },
         {
           "letter": "C",
@@ -192,7 +192,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "Un terrain public, comme le parking d’un restaurant ou une station-service, est un lieu public où l’on ne circule qu’en cas de nécessité, c’est-à-dire uniquement si l’on doit vraiment s’y rendre.",
+      "explanation": "Une station-service est un lieu où l'on vend du carburant pour les véhicules, elle peut également proposer d'autres services comme des magasins ou des restaurants.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/50.jpg"
     },
     {
