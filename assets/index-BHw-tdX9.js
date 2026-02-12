@@ -39,7 +39,7 @@ new Groq({ apiKey, dangerouslyAllowBrowser: true })`);super({baseURL:c.baseURL,b
        - Do NOT merge propositions into the question text.
        - Ensure "answer" field matches the letters (e.g., "A" or "AC").
     5. **JSON Only**: Output ONLY valid JSON, no markdown formatting (no \`\`\`json).
-    6. **IMMUTABLE ANSWER LOGIC**: You MAY fix typos and grammar in the 'propositions' text. HOWEVER, you MUST NOT change the meaning of the propositions or the 'answer' field (the letter of the correct answer). The logic of the question must remain exactly the same.
+    6. **IMMUTABLE ANSWER**: The 'answer' field MUST remain exactly the same as the original (e.g., if it was "A", it MUST remain "A"). Do NOT change which option is the correct one.
 
     Original Question to Fix:
     ${JSON.stringify(s,null,2)}
