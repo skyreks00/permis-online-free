@@ -462,7 +462,7 @@
     {
       "id": 26,
       "type": "multiple_choice",
-      "question": "Comment réagissez-vous si, en voiture, vous approchez d’un cheval avec cavalier et que le cheval se cabre de peur ?",
+      "question": "Comment réagissez-vous si, en voiture, vous approchez d'un cheval avec cavalier et que le cheval se cabre de peur ?",
       "propositions": [
         {
           "letter": "A",
@@ -474,11 +474,11 @@
         },
         {
           "letter": "C",
-          "text": "Vous vous arrêtez"
+          "text": "Vous arrêtez"
         }
       ],
       "correctAnswer": "C",
-      "explanation": "Si un cheval sur la chaussée prend peur d’une voiture et se cabre, le conducteur doit arrêter son véhicule et surtout éviter tout mouvement brusque, afin que le cavalier puisse calmer le cheval et reprendre le contrôle de la situation avant qu’elle ne dégénère.",
+      "explanation": "Si un cheval sur la chaussée prend peur d'une voiture et se cabre, le conducteur doit arrêter son véhicule et surtout éviter tout mouvement brusque, afin que le cavalier puisse calmer le cheval et reprendre le contrôle de la situation avant qu'elle ne dégénère.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/44.jpg"
     },
     {
