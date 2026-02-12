@@ -19,11 +19,11 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "La vitesse d'une voiture est généralement déterminée par le constructeur."
+      "explanation": "La vitesse d'une voiture est généralement déterminée par son constructeur."
     },
     {
       "id": 2,
-      "question": "La masse en charge ( ) de cette voiture est de 1450 kg. Le conducteur peut-il emprunter ce pont si la limitation est de 1700 kg ?",
+      "question": "La masse en charge ( ) de cette voiture est de 1450 kg. Le conducteur peut-il emprunter ce pont si la limite est de 1700 kg ?",
       "type": "multiple_choice",
       "propositions": [
         {
@@ -36,7 +36,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "Le conducteur peut emprunter le pont car la masse en charge de la voiture (1450 kg) est inférieure à la limitation (1700 kg)."
+      "explanation": "Le conducteur peut emprunter le pont car la masse en charge de la voiture (1450 kg) est inférieure à la limite (1700 kg)."
     },
     {
       "id": 3,
@@ -57,7 +57,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "Avec un permis B, vous pouvez tracter une remorque dont la masse maximale autorisée est de 1000 kg si la masse maximale autorisée de votre véhicule est inférieure ou égale à 3500 kg, mais dans le cas où votre véhicule fait 2500 kg, vous pouvez aller jusqu'à 750 kg pour la remorque sans dépasser 3500 kg au total, mais parmi les choix, 1000 kg est la limite souvent retenue."
+      "explanation": "Avec un permis B, vous pouvez tracter une remorque dont la masse maximale autorisée est de 1000 kg si la masse maximale autorisée de votre véhicule est inférieure ou égale à 3500 kg, mais dans le cas où votre véhicule fait 2500 kg, vous pouvez aller jusqu'à 750 kg pour la remorque sans dépasser 3500 kg au total, cependant certaines conditions font que 1000 kg est parfois accepté."
     }
   ]
 }
