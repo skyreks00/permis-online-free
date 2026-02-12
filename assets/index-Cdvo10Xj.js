@@ -35,11 +35,11 @@ new Groq({ apiKey, dangerouslyAllowBrowser: true })`);super({baseURL:c.baseURL,b
        - NEVER use "single_choice" (it does not exist in the system).
        - NEVER use "number" type if there are possibilities/propositions.
        - ONLY use "number" type if the user must type a value and 'correctAnswer' is a raw number (e.g. "50", "0.5").
-    4. **Propositions Structure**:
        - Must be an array of objects: [{ "letter": "A", "text": "..." }, { "letter": "B", "text": "..." }]
        - Do NOT merge propositions into the question text.
        - Ensure "answer" field matches the letters (e.g., "A" or "AC").
     5. **JSON Only**: Output ONLY valid JSON, no markdown formatting (no \`\`\`json).
+    6. **IMMUTABLE ANSWERS**: NEVER change the 'propositions' text or the 'answer' field (correct answer). Your job is to fix the QUESTION text and EXPLANATION only. The options must remain identical to the input.
 
     Original Question to Fix:
     ${JSON.stringify(s,null,2)}
