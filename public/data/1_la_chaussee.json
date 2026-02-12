@@ -259,10 +259,10 @@
     },
     {
       "id": 15,
-      "type": "yes_no",
+      "type": "true_false",
       "question": "Vous avez le permis de conduire provisoire B. Pouvez-vous conduire une voiture dimanche soir après 22h ?",
-      "correctAnswer": "NON",
-      "explanation": "Vous ne pouvez pas conduire avec un permis provisoire sur la voie publique:. Du vendredi soir 22h00 à samedi matin 6h00;. Du samedi soir 22h00 à dimanche matin 6h00;. Du dimanche soir 22h00 à lundi matin 6h00;. Le soir avant un jour férié 22h00 au matin de ce jour férié 6h00;. Le soir du jour férié 22h00 au matin du lendemain 6h00.Nous sommes un dimanche et la conduite n’est pas autorisée avant 6h lundi matin.",
+      "correctAnswer": "Non",
+      "explanation": "Vous ne pouvez pas conduire avec un permis provisoire sur la voie publique : du vendredi soir 22h00 à samedi matin 6h00 ; du samedi soir 22h00 à dimanche matin 6h00 ; du dimanche soir 22h00 à lundi matin 6h00. Le soir avant un jour férié 22h00 au matin de ce jour férié 6h00 ; le soir du jour férié 22h00 au matin du lendemain 6h00. Nous sommes dimanche et la conduite n'est pas autorisée avant 6h lundi matin.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/33.jpg"
     },
     {
