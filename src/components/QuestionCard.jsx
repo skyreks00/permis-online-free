@@ -275,6 +275,12 @@ const QuestionCard = ({
     setSavingState("saving"); // UI Unblocks HERE
 
     const effectiveFileName = question.sourceFile || fileName;
+    console.log("[QuestionCard] Debug Fix:", { 
+        id: question.id, 
+        sourceFile: question.sourceFile, 
+        propFileName: fileName, 
+        effective: effectiveFileName 
+    });
 
     if (!effectiveFileName) {
         setSavingState("error");
