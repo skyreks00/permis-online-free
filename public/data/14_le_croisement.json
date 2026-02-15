@@ -67,7 +67,9 @@
       ],
       "correctAnswer": "A",
       "explanation": "Conseil d'examen : apprenez bien quels signaux concernent la Masse Maximale Autorisée (M.M.A.) ou la Masse en Charge (M.E.C.) (Leçon 9).",
-      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/78/15.jpg"
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/78/15.jpg",
+      "originalThemeId": "14_le_croisement",
+      "sourceFile": "14_le_croisement.json"
     },
     {
       "id": 5,
