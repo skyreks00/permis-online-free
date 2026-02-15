@@ -46,7 +46,7 @@
     {
       "id": 3,
       "type": "multiple_choice",
-      "question": "Quel est le poids maximum autorisé (M.M.A.) pour une voiture?",
+      "question": "Quel est le poids maximum autorisé (M.M.A.) d'une voiture pour être conduite sans permis spécial ?",
       "propositions": [
         {
           "letter": "A",
@@ -62,7 +62,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "Vous pouvez conduire une voiture dont la M.M.A. est inférieure ou égale à 3 500 kg. Cela inclut également une voiture mixte, un minibus et une camionnette, sous certaines conditions : M.M.A. ≤ 3 500 kg, ≤ 8+1 places assises, avec ou sans remorque de M.M.A. ≤ 750 kg, ou si M.M.A. remorque > 750 kg, alors M.M.A. ensemble ≤ 3 500 kg.",
+      "explanation": "Vous pouvez conduire une voiture dont la Masse Maximale Autorisée (M.M.A.) est inférieure ou égale à 3 500 kg. Cela inclut également une voiture mixte, un minibus ou une camionnette, sous certaines conditions : M.M.A. ≤ 3 500 kg, ≤ 8+1 places assises, avec ou sans remorque de M.M.A. ≤ 750 kg, ou si la M.M.A. de la remorque est supérieure à 750 kg, la M.M.A. de l'ensemble doit être ≤ 3 500 kg.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/11.jpg"
     },
     {
