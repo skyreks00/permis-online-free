@@ -341,8 +341,8 @@
       "id": 24,
       "type": "number",
       "question": "Les conducteurs qui peuvent circuler dans cette rue, peuvent le faire à une vitesse maximale de (...) km/h.",
-      "correctAnswer": "B",
-      "explanation": "Certaines voiries sont réservées à certaines catégories d’usagers.Les logos sur le panneau montrent quels usagers peuvent emprunter cette voirie.",
+      "correctAnswer": "30",
+      "explanation": "Certaines voiries sont réservées à certaines catégories d’usagers. Les logos sur le panneau montrent quels usagers peuvent emprunter cette voirie. La vitesse maximale y est de 30 km/h.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/70/34.jpg"
     },
     {
