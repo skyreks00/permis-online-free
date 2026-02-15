@@ -518,6 +518,7 @@ const QuestionCard = ({
                   instantFeedback &&
                   prop.letter === displayQuestion.correctAnswer;
                 const isInteractionDisabled =
+                  isFixing ||
                   hasAnswered ||
                   (isCorrectionMode &&
                     (savingState === null || savingState === "error"));
@@ -545,6 +546,7 @@ const QuestionCard = ({
                   className={`answer-btn ${getButtonClass("OUI")}`}
                   onClick={() => handleAnswer("OUI")}
                   disabled={
+                    isFixing ||
                     hasAnswered ||
                     (isCorrectionMode &&
                       (savingState === null || savingState === "error"))
@@ -562,6 +564,7 @@ const QuestionCard = ({
                   className={`answer-btn ${getButtonClass("NON")}`}
                   onClick={() => handleAnswer("NON")}
                   disabled={
+                    isFixing ||
                     hasAnswered ||
                     (isCorrectionMode &&
                       (savingState === null || savingState === "error"))
@@ -597,6 +600,7 @@ const QuestionCard = ({
                     placeholder="Votre réponse…"
                     value={freeformAnswer}
                     disabled={
+                      isFixing ||
                       hasAnswered ||
                       (isCorrectionMode &&
                         (savingState === null || savingState === "error"))
@@ -611,6 +615,7 @@ const QuestionCard = ({
                     type="button"
                     onClick={handleFreeformSubmit}
                     disabled={
+                      isFixing ||
                       hasAnswered ||
                       !String(freeformAnswer ?? "").trim() ||
                       (isCorrectionMode &&
