@@ -274,9 +274,17 @@ const QuestionCard = ({
 
     setSavingState("saving"); // UI Unblocks HERE
 
+    const effectiveFileName = question.sourceFile || fileName;
+
+    if (!effectiveFileName) {
+        setSavingState("error");
+        setSaveMessage("Erreur: Nom de fichier manquant");
+        return;
+    }
+
     // 1. Try Local Save (Silence error as backend might not be running)
     try {
-      await saveQuestionLocally(fileName, question.id, fixedQuestion);
+      await saveQuestionLocally(effectiveFileName, question.id, fixedQuestion);
     } catch (localErr) {
       // Local save failed, backend likely offline
     }
@@ -295,8 +303,8 @@ const QuestionCard = ({
       const user = await getUser(token);
       const owner = "stotwo";
       const repo = "permis-online-free";
-      const path = `public/data/${fileName}`;
-      const commitMessage = `fix(content): correct question ${question.id} in ${fileName} (AI)`;
+      const path = `public/data/${effectiveFileName}`;
+      const commitMessage = `fix(content): correct question ${question.id} in ${effectiveFileName} (AI)`;
 
       console.log("[handleConfirmFix] Saving question to GitHub...");
 

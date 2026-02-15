@@ -116,8 +116,12 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                         // Use loose equality for ID matching
                         const q = questions.find(q => q.id == ans.questionId);
                         if (q) {
-                            // Attach originalThemeId for tracking
-                            questionsToReview.push({ ...q, originalThemeId: theme.id });
+                            // Attach originalThemeId and sourceFile for tracking
+                            questionsToReview.push({ 
+                                ...q, 
+                                originalThemeId: theme.id,
+                                sourceFile: theme.file 
+                            });
                         }
                     }
                 });
@@ -183,8 +187,14 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                             // Use loose equality
                             const q = questions.find(q => q.id == ans.questionId);
                             if (q) {
-                                // Include themeId so we can patch it later
-                                allErrors.push({ q, a: ans, idx: allErrors.length, themeId: theme.id });
+                                // Include themeId and sourceFile so we can patch it later
+                                allErrors.push({ 
+                                    q, 
+                                    a: ans, 
+                                    idx: allErrors.length, 
+                                    themeId: theme.id,
+                                    sourceFile: theme.file 
+                                });
                             }
                         }
                     });
@@ -199,7 +209,8 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
             // Extract just the question objects, injecting the theme ID for tracking
             const questionsToReview = allErrors.map(item => ({
                 ...item.q,
-                originalThemeId: item.themeId
+                originalThemeId: item.themeId,
+                sourceFile: item.sourceFile
             }));
 
             navigate('/quiz/review', {
