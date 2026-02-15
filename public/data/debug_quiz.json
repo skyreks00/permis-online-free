@@ -19,7 +19,9 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "La vitesse d'une voiture est généralement déterminée par le constructeur."
+      "explanation": "La vitesse d'une voiture est généralement déterminée par le constructeur.",
+      "originalThemeId": "debug_quiz",
+      "sourceFile": "debug_quiz.json"
     },
     {
       "id": 2,
