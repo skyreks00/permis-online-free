@@ -1,10 +1,12 @@
 import React from 'react';
-import { Trophy, ThumbsUp, Award, Target, PartyPopper, CheckCircle } from 'lucide-react';
+import { Trophy, ThumbsUp, Award, Target, PartyPopper, CheckCircle, ArrowLeft } from 'lucide-react';
 
-const Results = ({ score, total, questions = [], answers = [], showReview = false, onRestart, onBackToThemes, isExamMode }) => {
-  const percentage = Math.round((score / total) * 100);
+const Results = ({ score, total, questions = [], answers = [], showReview = false, onRestart, onBackToThemes, isExamMode, isReviewOnly = false, customErrorItems = null, onBackToProfile }) => {
+  const percentage = total > 0 ? Math.round((score / total) * 100) : 0;
 
   const getResultMessage = () => {
+    if (isReviewOnly) return { icon: <Target size={48} className="text-primary" />, text: 'Mode Révision', tone: 'info' };
+
     if (isExamMode) {
       const incorrect = total - score;
       if (incorrect >= 9) {
@@ -22,7 +24,9 @@ const Results = ({ score, total, questions = [], answers = [], showReview = fals
   const result = getResultMessage();
 
   // Build error list for review
-  const errorItems = (questions || []).map((q, idx) => ({ q, a: answers?.[idx], idx }))
+  // If customErrorItems is provided (from Profile review), use it.
+  // Otherwise, use fallback logic (mapping by index - legacy).
+  const errorItems = customErrorItems || (questions || []).map((q, idx) => ({ q, a: answers?.[idx], idx }))
     .filter(({ a }) => a && a.isCorrect === false);
 
   const formatAnswer = (q, value) => {
@@ -50,36 +54,58 @@ const Results = ({ score, total, questions = [], answers = [], showReview = fals
 
   return (
     <div className="results container" style={{ textAlign: 'center' }}>
-      <div style={{ margin: '20px 0', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px' }}>
-        {result.icon}
-        <h1 style={{ margin: 0 }}>{result.text}</h1>
-      </div>
+        
+      {!isReviewOnly ? (
+        <>
+            <div style={{ margin: '20px 0', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px' }}>
+                {result.icon}
+                <h1 style={{ margin: 0 }}>{result.text}</h1>
+            </div>
 
-      <p style={{ fontSize: '1.2rem', marginBottom: '20px' }}>
-        Score: <strong>{score}</strong> / {total} ({percentage}%)
-      </p>
+            <p style={{ fontSize: '1.2rem', marginBottom: '20px' }}>
+                Score: <strong>{score}</strong> / {total} ({percentage}%)
+            </p>
 
-      <p>
-        Correctes: <strong>{score}</strong> | Incorrectes: <strong>{total - score}</strong>
-      </p>
+            <p>
+                Correctes: <strong>{score}</strong> | Incorrectes: <strong>{total - score}</strong>
+            </p>
 
-      <div className="results-actions" style={{ justifyContent: 'center' }}>
-        <button type="button" className="btn-primary" onClick={onRestart}>
-          Recommencer
-        </button>
-        <button type="button" onClick={onBackToThemes}>
-          Choisir un autre thème
-        </button>
-      </div>
+            <div className="results-actions" style={{ justifyContent: 'center' }}>
+                <button type="button" className="btn-primary" onClick={onRestart}>
+                Recommencer
+                </button>
+                <button type="button" onClick={onBackToThemes}>
+                Choisir un autre thème
+                </button>
+            </div>
+        </>
+      ) : (
+        <div style={{ margin: '20px 0', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <Target size={32} className="text-primary" />
+                <h1 style={{ margin: 0 }}>Révision des erreurs</h1>
+            </div>
+            <p className="text-muted">
+                Voici les points à retravailler. Prenez le temps de lire les explications.
+            </p>
+            <button onClick={onBackToProfile} className="btn-secondary flex items-center gap-2">
+                <ArrowLeft size={20} /> Retour au profil
+            </button>
+        </div>
+      )}
 
-      {showReview && (
+      {(showReview || isReviewOnly) && (
         <div style={{ marginTop: '30px', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '32px' }}>
-          <h2 style={{ textAlign: 'center', marginBottom: '16px' }}>Erreurs et conseils</h2>
           {errorItems.length === 0 ? (
             <div className="card" style={{ padding: '32px', textAlign: 'center' }}>
               <p className="muted" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', fontSize: '1.2rem', margin: 0 }}>
-                <PartyPopper size={24} /> Aucune erreur. Bravo !
+                <PartyPopper size={24} /> Aucune erreur à réviser. Bravo !
               </p>
+               {isReviewOnly && (
+                   <button onClick={onBackToProfile} className="btn-primary mt-4">
+                       Retour au profil
+                   </button>
+               )}
             </div>
           ) : (
             errorItems.map(({ q, a, idx }) => (

@@ -717,10 +717,24 @@
     },
     {
       "id": 42,
-      "type": "number",
+      "type": "multiple_choice",
       "question": "Si vous voyez ces signaux, vous savez que vous devez (...) au prochain  prochain carrefour",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vous arrêter"
+        },
+        {
+          "letter": "B",
+          "text": "Céder le passage"
+        },
+        {
+          "letter": "C",
+          "text": "Avoir la priorité"
+        }
+      ],
       "correctAnswer": "B",
-      "explanation": "",
+      "explanation": "Le triangle inversé accompagné du panneau additionnel indique que vous devez céder le passage.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/10.jpg"
     },
     {

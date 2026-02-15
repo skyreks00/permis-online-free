@@ -1,0 +1,42 @@
+FILE: examen_B.json | ID: 71
+  - Type "number" with non-numeric answer: "C"
+FILE: examen_B.json | ID: 106
+  - Type "number" with non-numeric answer: "C"
+FILE: examen_B.json | ID: 172
+  - Type "number" with non-numeric answer: "B"
+FILE: examen_B.json | ID: 437
+  - Type "number" with non-numeric answer: "A"
+FILE: examen_B.json | ID: 507
+  - Type "number" with non-numeric answer: "B"
+FILE: examen_B.json | ID: 543
+  - TRUNCATED? Ends with preposition/article: "Une voiture est un véhicule dont la"
+FILE: examen_B.json | ID: 582
+  - Type "number" with non-numeric answer: "B"
+FILE: examen_B.json | ID: 665
+  - Type "number" with non-numeric answer: "C"
+FILE: examen_B.json | ID: 675
+  - Type "number" with non-numeric answer: "C"
+FILE: examen_B.json | ID: 755
+  - Type "number" with non-numeric answer: "C"
+FILE: examen_B.json | ID: 836
+  - Type "number" with non-numeric answer: "C"
+FILE: examen_B.json | ID: 874
+  - Type "number" with non-numeric answer: "B"
+FILE: examen_B.json | ID: 1029
+  - Type "number" with non-numeric answer: "B"
+FILE: examen_B.json | ID: 1067
+  - Type "number" with non-numeric answer: "A"
+FILE: examen_B.json | ID: 1072
+  - Type "number" with non-numeric answer: "A"
+FILE: examen_B.json | ID: 1118
+  - Type "number" with non-numeric answer: "A"
+FILE: examen_B.json | ID: 1195
+  - Type "number" with non-numeric answer: "A"
+FILE: examen_B.json | ID: 1212
+  - Type "number" with non-numeric answer: "C"
+FILE: examen_B.json | ID: 1330
+  - Type "number" with non-numeric answer: "B"
+FILE: examen_B.json | ID: 1347
+  - Type "number" with non-numeric answer: "C"
+FILE: examen_B.json | ID: 1495
+  - Type "number" with non-numeric answer: "A"

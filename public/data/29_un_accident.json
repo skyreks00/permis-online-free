@@ -449,10 +449,24 @@
     },
     {
       "id": 26,
-      "type": "number",
+      "type": "multiple_choice",
       "question": "Combien de vestes de sécurité fluorescentes doivent être dans votre voiture?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "1"
+        },
+        {
+          "letter": "B",
+          "text": "Autant que de sièges"
+        },
+        {
+          "letter": "C",
+          "text": "2"
+        }
+      ],
       "correctAnswer": "A",
-      "explanation": "",
+      "explanation": "Une seule veste est obligatoire, pour le conducteur.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/34.jpg"
     },
     {
@@ -549,8 +563,22 @@
     },
     {
       "id": 32,
-      "type": "number",
+      "type": "multiple_choice",
       "question": "Vous vous endormez toujours derrière le volant et votre médecin généraliste est d’avis que vous n’êtes plus capable de conduire de façon sûre. Dans combien de jours vous devez aller à la commune muni de votre permis ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "1 jour"
+        },
+        {
+          "letter": "B",
+          "text": "2 jours"
+        },
+        {
+          "letter": "C",
+          "text": "4 jours"
+        }
+      ],
       "correctAnswer": "C",
       "explanation": "4 jours.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/37.jpg"
@@ -939,9 +967,23 @@
     },
     {
       "id": 55,
-      "type": "number",
+      "type": "multiple_choice",
       "question": "Vous avez endommagé une autre voiture en vous garant. Vous ne savez pas qui en est le propriétaire.Combien de temps avez-vous pour faire une déclaration au commissariat de police ?",
-      "correctAnswer": "C",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "12 heures"
+        },
+        {
+          "letter": "B",
+          "text": "24 heures"
+        },
+        {
+          "letter": "C",
+          "text": "48 heures"
+        }
+      ],
+      "correctAnswer": "B",
       "explanation": "Si vous endommagez la propriété de quelqu’un et que la police ne peut pas se déplacer, vous devez faire une déclaration le plus vite possible dans un commissariat ou en ligne via Police-on-Web (en cas de petits dégâts). Plus vous faites la déclaration rapidement, plus les faits pourront être établis correctement. Assurez-vous d’avoir toutes les informations nécessaires, comme le lieu et l’heure de l’incident, la plaque d’immatriculation du véhicule endommagé et des photos des dégâts.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/93/52.jpg"
     },

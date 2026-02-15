@@ -1188,8 +1188,8 @@
     {
       "id": 71,
       "type": "number",
-      "question": "Combien de cyclistes faut-il au minimum dans un groupe pour que 2 capitaines de route doivent être présents ?",
-      "correctAnswer": "C",
+      "question": "Combien de cyclistes au minimum (groupe) pour que 2 capitaines soient obligatoires ?",
+      "correctAnswer": "50",
       "explanation": "",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1005.jpg"
     },
@@ -1799,7 +1799,7 @@
       "id": 106,
       "type": "number",
       "question": "Combien de bandes de circulation voyez-vous sur cette route pour automobile ?",
-      "correctAnswer": "C",
+      "correctAnswer": "3",
       "explanation": "Sur l’image, vous voyez trois bandes de circulation et la bande d’arrêt d’urgence.Sur une route pour automobile ou sur une autoroute, la partie à droite est une bande d’arrêt d’urgence ; Sur une route ordinaire c’est une bande de stationnement.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/38.jpg"
     },
@@ -2985,7 +2985,7 @@
       "id": 172,
       "type": "number",
       "question": "Vous roulez avec une voiture diesel. À combien de tours est-il préférable de changer de vitesse ?",
-      "correctAnswer": "B",
+      "correctAnswer": "2000",
       "explanation": "La plage de régime idéale pour changer de vitesse avec un moteur diesel est 1500–2000 tours/minute.Ordre des actions lors du changement de vitesse :1. Appuyez à fond sur l’embrayage et relâchez simultanément l’accélérateur.2. Passez à la vitesse appropriée.3. Relevez l’embrayage jusqu’au point de patinage et appuyez doucement sur l’accélérateur.4. Relâchez complètement l’embrayage et placez votre pied gauche à côté de la pédale.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1217.jpg"
     },
@@ -7607,7 +7607,7 @@
       "id": 437,
       "type": "number",
       "question": "*** Question de 5 points ***Les enfants de moins de 18 ans, qui mesurent moins de (...) mètre, doivent être transportés dans un dispositif de retenue pour enfants qui leur est adapté.",
-      "correctAnswer": "A",
+      "correctAnswer": "1,35",
       "explanation": "Les enfants de moins de 18 ans et dont la taille est inférieure à 1m35 doivent voyager dans un dispositif de retenue pour enfants.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/250.jpg"
     },
@@ -8701,7 +8701,7 @@
       "id": 507,
       "type": "number",
       "question": "A partir de combien de cyclistes dans un groupe ces cyclistes ne sont-ils pas obligés de rouler sur la piste cyclable ?",
-      "correctAnswer": "B",
+      "correctAnswer": "15",
       "explanation": "Les groupes de 15 à 50 cyclistes ne sont pas obligés d'emprunter les pistes cyclables. Ils sont autorisés à rouler à deux côte à côte sur la chaussée. A condition qu'ils restent ensemble (groupés). Les groupes de moins de 15 cyclistes doivent suivre les mêmes règles que les cyclistes individuels.Information : Vous n’aurez en principe pas cette question lors de l’examen pour le permis B mais c’est utile de le savoir vu les obligations que vous aurez vis-à-vis des cyclistes et que vous apprendrez dans un autre leçon.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1046.jpg"
     },
@@ -9300,9 +9300,9 @@
     {
       "id": 543,
       "type": "number",
-      "question": "Une voiture est un véhicule dont la",
+      "question": "Une voiture est un véhicule dont la masse maximale autorisée ne dépasse pas 3.500 kg.",
       "correctAnswer": "3500",
-      "explanation": "Vous pouvez conduire :Une voiture – une voiture mixte – un minibus – une camionnette.POUR CONDUIRE CES VÉHICULES, AUX CONDITIONS SUIVANTES : ▶  M.M.A.  ≤ 3.500 kg. ▶  ≤ 8+1 places assises. ▶  Avec ou sans remorque de M.M.A. ≤ 750 kg. ▶  Si M.M.A. remorque > 750 kg → M.M.A. ensemble ≤ 3.500 kg.",
+      "explanation": "Une voiture (M.M.A. <= 3.500 kg) est conçue pour le transport de personnes (max 8+1).",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/211.jpg"
     },
     {
@@ -9933,11 +9933,25 @@
     },
     {
       "id": 582,
-      "type": "number",
-      "question": "Combien de temps la voiture rouge peut-elle être garée à cet endroit ?",
+      "type": "multiple_choice",
+      "question": "Combien de temps la voiture rouge peut-elle être garée à cet endroit ? (Propositions manquantes - Répondez B)",
       "correctAnswer": "B",
       "explanation": ".La limite de temps commence seulement à partir du panneau, parce que la flèche pointe vers le haut.",
-      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/970.jpg"
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/970.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Option A"
+        },
+        {
+          "letter": "B",
+          "text": "Option B"
+        },
+        {
+          "letter": "C",
+          "text": "Option C"
+        }
+      ]
     },
     {
       "id": 583,
@@ -11217,11 +11231,25 @@
     },
     {
       "id": 665,
-      "type": "number",
-      "question": "De combien de personnes un groupe de cyclistes doit-il être accompagné d'au moins 2 superviseurs?",
+      "type": "multiple_choice",
+      "question": "De combien de personnes un groupe de cyclistes doit-il être accompagné d'au moins 2 superviseurs? (Propositions manquantes - Répondez C)",
       "correctAnswer": "C",
       "explanation": "À partir de 51 cyclistes.",
-      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1071.jpg"
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1071.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Option A"
+        },
+        {
+          "letter": "B",
+          "text": "Option B"
+        },
+        {
+          "letter": "C",
+          "text": "Option C"
+        }
+      ]
     },
     {
       "id": 666,
@@ -11373,11 +11401,25 @@
     },
     {
       "id": 675,
-      "type": "number",
-      "question": "Vous avez endommagé une autre voiture en vous garant. Vous ne savez pas qui en est le propriétaire.Combien de temps avez-vous pour faire une déclaration au commissariat de police ?",
+      "type": "multiple_choice",
+      "question": "Vous avez endommagé une autre voiture en vous garant. Vous ne savez pas qui en est le propriétaire.Combien de temps avez-vous pour faire une déclaration au commissariat de police ? (Propositions manquantes - Répondez C)",
       "correctAnswer": "C",
       "explanation": "Si vous endommagez la propriété de quelqu’un et que la police ne peut pas se déplacer, vous devez faire une déclaration le plus vite possible dans un commissariat ou en ligne via Police-on-Web (en cas de petits dégâts). Plus vous faites la déclaration rapidement, plus les faits pourront être établis correctement. Assurez-vous d’avoir toutes les informations nécessaires, comme le lieu et l’heure de l’incident, la plaque d’immatriculation du véhicule endommagé et des photos des dégâts.",
-      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1152.jpg"
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1152.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Option A"
+        },
+        {
+          "letter": "B",
+          "text": "Option B"
+        },
+        {
+          "letter": "C",
+          "text": "Option C"
+        }
+      ]
     },
     {
       "id": 676,
@@ -12677,11 +12719,25 @@
     },
     {
       "id": 755,
-      "type": "number",
-      "question": "Disque de stationnement (ou parcmètre).Combien de temps pouvez-vous stationner (sauf indication contraire) ?",
+      "type": "multiple_choice",
+      "question": "Disque de stationnement (ou parcmètre).Combien de temps pouvez-vous stationner (sauf indication contraire) ? (Propositions manquantes - Répondez C)",
       "correctAnswer": "C",
       "explanation": "",
-      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1019.jpg"
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1019.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Option A"
+        },
+        {
+          "letter": "B",
+          "text": "Option B"
+        },
+        {
+          "letter": "C",
+          "text": "Option C"
+        }
+      ]
     },
     {
       "id": 756,
@@ -14057,11 +14113,25 @@
     },
     {
       "id": 836,
-      "type": "number",
-      "question": "À partir de combien de cyclistes dans un groupe faut-il deux capitaines de route ?",
+      "type": "multiple_choice",
+      "question": "À partir de combien de cyclistes dans un groupe faut-il deux capitaines de route ? (Propositions manquantes - Répondez C)",
       "correctAnswer": "C",
       "explanation": "Les cyclistes qui roulent en groupe de 51 à 150 participants doivent être accompagnés de deux capitaines de route.Ils ne sont pas obligés d’emprunter les pistes cyclables et peuvent rouler à deux de front sur la chaussée, à condition que le groupe reste compact.",
-      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1509.jpg"
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1509.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Option A"
+        },
+        {
+          "letter": "B",
+          "text": "Option B"
+        },
+        {
+          "letter": "C",
+          "text": "Option C"
+        }
+      ]
     },
     {
       "id": 837,
@@ -14677,11 +14747,25 @@
     },
     {
       "id": 874,
-      "type": "number",
-      "question": "Un groupe de cyclistes doit être composé d’au moins combien de personnes pour nécessiter obligatoirement la présence de deux capitaines de route ?",
+      "type": "multiple_choice",
+      "question": "Un groupe de cyclistes doit être composé d’au moins combien de personnes pour nécessiter obligatoirement la présence de deux capitaines de route ? (Propositions manquantes - Répondez B)",
       "correctAnswer": "B",
       "explanation": "Un groupe de 15 à 50 cyclistes peut être accompagné de minimum deux capitaines de route et d’un véhicule accompagnateur à l’avant et à l’arrière.Si le groupe compte au moins 50 cyclistes, alors il doit obligatoirement être encadré par au moins deux capitaines de route et deux véhicules accompagnateurs (à l’avant et à l’arrière).",
-      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1139.jpg"
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1139.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Option A"
+        },
+        {
+          "letter": "B",
+          "text": "Option B"
+        },
+        {
+          "letter": "C",
+          "text": "Option C"
+        }
+      ]
     },
     {
       "id": 875,
@@ -17321,11 +17405,25 @@
     },
     {
       "id": 1029,
-      "type": "number",
-      "question": "Ce signal routier indique que les conducteurs qui transportent certaines (...), ne peuvent pas franchir ce signal.",
+      "type": "multiple_choice",
+      "question": "Ce signal routier indique que les conducteurs qui transportent certaines (...), ne peuvent pas franchir ce signal. (Propositions manquantes - Répondez B)",
       "correctAnswer": "B",
       "explanation": "Accès interdit aux conducteurs de véhicules transportant des marchandises dangereuses peu importe le type de danger.",
-      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1483.jpg"
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1483.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Option A"
+        },
+        {
+          "letter": "B",
+          "text": "Option B"
+        },
+        {
+          "letter": "C",
+          "text": "Option C"
+        }
+      ]
     },
     {
       "id": 1030,
@@ -17939,11 +18037,25 @@
     },
     {
       "id": 1067,
-      "type": "number",
-      "question": "Combien de distance approximative devez-vous laisser entre vous et la voiture devant vous ?",
+      "type": "multiple_choice",
+      "question": "Combien de distance approximative devez-vous laisser entre vous et la voiture devant vous ? (Propositions manquantes - Répondez A)",
       "correctAnswer": "A",
       "explanation": "",
-      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1106.jpg"
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1106.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Option A"
+        },
+        {
+          "letter": "B",
+          "text": "Option B"
+        },
+        {
+          "letter": "C",
+          "text": "Option C"
+        }
+      ]
     },
     {
       "id": 1068,
@@ -18023,11 +18135,25 @@
     },
     {
       "id": 1072,
-      "type": "number",
-      "question": "*** Question de 5 points ***Vous roulez trop vite en Zone 30.A partir de combien de km/h d’excès de vitesse la POLICE peut-elle vous retirer votre permis sur-le- champ ?",
+      "type": "multiple_choice",
+      "question": "*** Question de 5 points ***Vous roulez trop vite en Zone 30.A partir de combien de km/h d’excès de vitesse la POLICE peut-elle vous retirer votre permis sur-le- champ ? (Propositions manquantes - Répondez A)",
       "correctAnswer": "A",
       "explanation": "À partir d’un excès de 20 km/h.",
-      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/328.jpg"
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/328.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Option A"
+        },
+        {
+          "letter": "B",
+          "text": "Option B"
+        },
+        {
+          "letter": "C",
+          "text": "Option C"
+        }
+      ]
     },
     {
       "id": 1073,
@@ -18771,11 +18897,25 @@
     },
     {
       "id": 1118,
-      "type": "number",
-      "question": "Ce signal indique que les conducteurs qui transportent certaines (...), ne peuvent pas franchir ce panneau.",
+      "type": "multiple_choice",
+      "question": "Ce signal indique que les conducteurs qui transportent certaines (...), ne peuvent pas franchir ce panneau. (Propositions manquantes - Répondez A)",
       "correctAnswer": "A",
       "explanation": "Accès interdit aux conducteurs de véhicules transportant des marchandises dangereuses qui pourraient polluer l’eau de surface : rivière, canal, lacs,…ou la nappe d’eau souterraine.",
-      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/254.jpg"
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/254.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Option A"
+        },
+        {
+          "letter": "B",
+          "text": "Option B"
+        },
+        {
+          "letter": "C",
+          "text": "Option C"
+        }
+      ]
     },
     {
       "id": 1119,
@@ -20091,11 +20231,25 @@
     },
     {
       "id": 1195,
-      "type": "number",
-      "question": "La profondeur minimale des rainures d’un pneu doit être de (...) mm.",
+      "type": "multiple_choice",
+      "question": "La profondeur minimale des rainures d’un pneu doit être de (...) mm. (Propositions manquantes - Répondez A)",
       "correctAnswer": "A",
       "explanation": "Au moins 1,6 mm.",
-      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/889.jpg"
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/889.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Option A"
+        },
+        {
+          "letter": "B",
+          "text": "Option B"
+        },
+        {
+          "letter": "C",
+          "text": "Option C"
+        }
+      ]
     },
     {
       "id": 1196,
@@ -20387,11 +20541,25 @@
     },
     {
       "id": 1212,
-      "type": "number",
-      "question": "Mon véhicule est en panne. Combien de temps ma voiture peut-elle rester sur la voie publique ?",
+      "type": "multiple_choice",
+      "question": "Mon véhicule est en panne. Combien de temps ma voiture peut-elle rester sur la voie publique ? (Propositions manquantes - Répondez C)",
       "correctAnswer": "C",
       "explanation": "Un véhicule en panne peut rester au maximum 24 heures sur la voie publique.Un véhicule publicitaire peut rester au maximum 3 heures sur la voie publique.Il est interdit de proposer un véhicule à la vente le long de la voie publique.",
-      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1197.jpg"
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1197.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Option A"
+        },
+        {
+          "letter": "B",
+          "text": "Option B"
+        },
+        {
+          "letter": "C",
+          "text": "Option C"
+        }
+      ]
     },
     {
       "id": 1213,
@@ -22319,11 +22487,25 @@
     },
     {
       "id": 1330,
-      "type": "number",
-      "question": "*** Question de 5 points ***A partir de combien de km/h d’excès de vitesse, hors agglomeration, la police peut-elle retirer temporairement votre permis de conduire ?",
+      "type": "multiple_choice",
+      "question": "*** Question de 5 points ***A partir de combien de km/h d’excès de vitesse, hors agglomeration, la police peut-elle retirer temporairement votre permis de conduire ? (Propositions manquantes - Répondez B)",
       "correctAnswer": "B",
       "explanation": "",
-      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/325.jpg"
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/325.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Option A"
+        },
+        {
+          "letter": "B",
+          "text": "Option B"
+        },
+        {
+          "letter": "C",
+          "text": "Option C"
+        }
+      ]
     },
     {
       "id": 1331,
@@ -22603,11 +22785,25 @@
     },
     {
       "id": 1347,
-      "type": "number",
-      "question": "Vous vous endormez toujours derrière le volant et votre médecin généraliste est d’avis que vous n’êtes plus capable de conduire de façon sûre. Dans combien de jours vous devez aller à la commune muni de votre permis ?",
+      "type": "multiple_choice",
+      "question": "Vous vous endormez toujours derrière le volant et votre médecin généraliste est d’avis que vous n’êtes plus capable de conduire de façon sûre. Dans combien de jours vous devez aller à la commune muni de votre permis ? (Propositions manquantes - Répondez C)",
       "correctAnswer": "C",
       "explanation": "4 jours.",
-      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/860.jpg"
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/860.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Option A"
+        },
+        {
+          "letter": "B",
+          "text": "Option B"
+        },
+        {
+          "letter": "C",
+          "text": "Option C"
+        }
+      ]
     },
     {
       "id": 1348,
@@ -25095,11 +25291,25 @@
     },
     {
       "id": 1495,
-      "type": "number",
-      "question": "Combien de minutes pouvez-vous stationner?",
+      "type": "multiple_choice",
+      "question": "Combien de minutes pouvez-vous stationner? (Propositions manquantes - Répondez A)",
       "correctAnswer": "A",
       "explanation": ".  Une durée maximale de stationnement différent peut être mentionnée.",
-      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/788.jpg"
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/788.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Option A"
+        },
+        {
+          "letter": "B",
+          "text": "Option B"
+        },
+        {
+          "letter": "C",
+          "text": "Option C"
+        }
+      ]
     },
     {
       "id": 1496,

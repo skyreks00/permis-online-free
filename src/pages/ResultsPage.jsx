@@ -1,27 +1,38 @@
 import React, { useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import Results from '../components/Results';
 import TopControls from '../components/TopControls';
 
 const ResultsPage = ({ toggleTheme, isDarkMode }) => {
-    const { state } = useLocation();
+    const { state, pathname } = useLocation();
     const navigate = useNavigate();
+    const [searchParams] = useSearchParams();
+    
+    // Determine if we are in review mode either via State, URL Query, or Path
+    const isReviewMode = state?.isReviewOnly || searchParams.get('review') === 'true' || pathname === '/revision';
 
     useEffect(() => {
-        if (!state || !state.results) {
+        // If not in review mode and no results state, redirect home
+        if (!isReviewMode && (!state || !state.results)) {
             navigate('/');
         }
-    }, [state, navigate]);
+    }, [state, navigate, isReviewMode]);
 
-    if (!state || !state.results) return null;
+    if (!isReviewMode && (!state || !state.results)) return null;
 
-    const { results, questions, total, isExamMode } = state;
+    // Use state results or empty defaults if just reviewing via URL (though URL usually comes with state too)
+    const results = state?.results || { score: 0, answers: [] };
+    const questions = state?.questions || [];
+    const total = state?.total || 0;
+    const isExamMode = state?.isExamMode || false;
+    const customErrorItems = state?.customErrorItems || null;
 
     return (
         <>
             <TopControls
                 toggleTheme={toggleTheme}
                 isDarkMode={isDarkMode}
+                onOpenProfile={() => navigate('/profil')}
             />
             <Results
                 score={results.score}
@@ -32,6 +43,9 @@ const ResultsPage = ({ toggleTheme, isDarkMode }) => {
                 onRestart={() => navigate(-1)} // Go back to quiz (will reload it)
                 onBackToThemes={() => navigate('/')}
                 isExamMode={isExamMode}
+                isReviewOnly={isReviewMode}
+                customErrorItems={customErrorItems}
+                onBackToProfile={() => navigate('/profil')}
             />
         </>
     );

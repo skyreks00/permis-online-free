@@ -1,17 +1,47 @@
 import React, { useState, useEffect } from 'react';
-import { Trophy, Target, AlertTriangle, Clock, Settings, ArrowLeft, CheckCircle2, Circle, Volume2, User, LogOut, Key, Github, Save, FileJson, Download, Upload } from 'lucide-react';
+import { Trophy, Target, AlertTriangle, Clock, Settings, ArrowLeft, CheckCircle2, Circle, Volume2, User, LogOut, Key, Github, Save, Filter, RefreshCcw } from 'lucide-react';
 import { getUser } from '../utils/githubClient';
+import { useNavigate } from 'react-router-dom';
+import { loadThemeQuestions } from '../utils/contentLoader';
 
 const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onToggleInstantFeedback, autoPlayAudio, onToggleAutoPlayAudio }) => {
+    const navigate = useNavigate();
+    const [showErrorsOnly, setShowErrorsOnly] = useState(false);
+    const [isLoadingReview, setIsLoadingReview] = useState(false);
+
     // --- Stats Calculation ---
+    const getNormalizedProgress = (p) => {
+        const score = p.bestScore !== undefined ? p.bestScore : (p.score || 0);
+        const total = p.totalQuestions !== undefined ? p.totalQuestions : (p.total || 0);
+        return { score, total };
+    };
+
     const progressValues = Object.values(progress);
     const totalQuizzes = progressValues.length;
-    const totalBestScore = progressValues.reduce((acc, p) => acc + p.bestScore, 0);
-    const totalMaxPossible = progressValues.reduce((acc, p) => acc + p.totalQuestions, 0);
+    
+    const globalStats = progressValues.reduce((acc, p) => {
+        const { score, total } = getNormalizedProgress(p);
+        return {
+            bestScore: acc.bestScore + score,
+            totalQuestions: acc.totalQuestions + total
+        };
+    }, { bestScore: 0, totalQuestions: 0 });
+
+    const totalBestScore = globalStats.bestScore;
+    const totalMaxPossible = globalStats.totalQuestions;
     const averageAccuracy = totalMaxPossible > 0 ? Math.round((totalBestScore / totalMaxPossible) * 100) : 0;
     const totalMistakes = totalMaxPossible - totalBestScore;
 
-    const statedThemes = (themesData.sections || []).flatMap(section => section.items).filter(t => progress[t.id]);
+    const statedThemes = (themesData.sections || [])
+        .flatMap(section => section.items || section.themes || [])
+        .filter(t => t && t.id && progress[t.id]);
+
+    const filteredThemes = showErrorsOnly 
+        ? statedThemes.filter(t => {
+            const { score, total } = getNormalizedProgress(progress[t.id]);
+            return score < total;
+        })
+        : statedThemes;
 
     // --- Developer Mode State ---
     const [apiKey, setApiKey] = useState(() => localStorage.getItem('groq_api_key') || '');
@@ -49,6 +79,146 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
         alert('Paramètres sauvegardés !');
     };
 
+    const handleReview = async (theme) => {
+        setIsLoadingReview(true);
+        try {
+            // Load questions for the theme
+            let questions = [];
+            try {
+                const data = await loadThemeQuestions(theme.file);
+                questions = data.questions || [];
+            } catch (e) {
+                // Fallback fetch
+                const res = await fetch(`data/${theme.file}`);
+                const json = await res.json();
+                questions = json.questions || [];
+            }
+
+            if (questions.length === 0) {
+                alert("Impossible de charger les questions pour la révision.");
+                return;
+            }
+
+            const p = progress[theme.id];
+            const savedAnswers = p.answers || []; // Array of { questionId, userAnswer, isCorrect ... } (hopefully)
+
+            // Map saved answers to questions by ID
+            // If p.answers is array of objects with questionId, great.
+            // If it's old array of undefined/objects, we try our best.
+            // Current Quiz.jsx saves: { questionId, userAnswer, correctAnswer, isCorrect }
+            
+            const questionsToReview = [];
+            
+            // Iterate over SAVED ANSWERS if available to match with questions
+            if (savedAnswers.length > 0) {
+                savedAnswers.forEach((ans) => {
+                    if (ans && ans.isCorrect === false) {
+                        // Use loose equality for ID matching
+                        const q = questions.find(q => q.id == ans.questionId);
+                        if (q) {
+                            // Attach originalThemeId for tracking
+                            questionsToReview.push({ ...q, originalThemeId: theme.id });
+                        }
+                    }
+                });
+            }
+
+            if (questionsToReview.length === 0) {
+                alert("Erreur: Impossible de retrouver les questions.");
+                return;
+            }
+
+
+
+            navigate('/quiz/review', {
+                state: {
+                    questions: questionsToReview,
+                    title: `Révision: ${theme.name}`,
+                    isReview: true
+                }
+            });
+
+        } catch (error) {
+            console.error("Erreur révision:", error);
+            alert("Erreur lors du chargement de la révision.");
+        } finally {
+            setIsLoadingReview(false);
+        }
+    };
+
+    const handleReviewAll = async () => {
+        setIsLoadingReview(true);
+        try {
+            const allErrors = [];
+            
+            // Get all themes that have progress
+            const themesToReview = statedThemes.filter(t => {
+                const { score, total } = getNormalizedProgress(progress[t.id]);
+                return score < total;
+            });
+
+            if (themesToReview.length === 0) {
+                alert("Aucune faute à réviser !");
+                setIsLoadingReview(false);
+                return;
+            }
+
+            for (const theme of themesToReview) {
+                 let questions = [];
+                try {
+                    const data = await loadThemeQuestions(theme.file);
+                    questions = data.questions || [];
+                } catch (e) {
+                    const res = await fetch(`data/${theme.file}`);
+                    const json = await res.json();
+                    questions = json.questions || [];
+                }
+
+                const p = progress[theme.id];
+                const savedAnswers = p.answers || [];
+
+                if (savedAnswers.length > 0) {
+                     savedAnswers.forEach((ans) => {
+                        if (ans && ans.isCorrect === false) {
+                            // Use loose equality
+                            const q = questions.find(q => q.id == ans.questionId);
+                            if (q) {
+                                // Include themeId so we can patch it later
+                                allErrors.push({ q, a: ans, idx: allErrors.length, themeId: theme.id });
+                            }
+                        }
+                    });
+                }
+            }
+
+            if (allErrors.length === 0) {
+                alert("Aucune erreur trouvée dans les sauvegardes.");
+                return;
+            }
+
+            // Extract just the question objects
+            const questionsToReview = allErrors.map(item => item.q);
+
+            navigate('/quiz/review', {
+                state: {
+                    questions: questionsToReview,
+                    title: "Révision des fautes (Global)",
+                    isReview: true
+                }
+            });
+
+        } catch(e) {
+            console.error(e);
+            alert("Erreur lors de la préparation de la révision globale.");
+        } finally {
+             setIsLoadingReview(false);
+        }
+    };
+
+    if (isLoadingReview) {
+        return <div className="page container flex items-center justify-center h-screen">Chargement de la révision...</div>;
+    }
+
     return (
         <div className="page container animate-fade-in" style={{ maxWidth: '1200px' }}>
             <div className="mb-6">
@@ -80,14 +250,24 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                         <div className="stat-value">{totalQuizzes}</div>
                     </div>
                 </div>
-                <div className="stat-card">
+                <div className="stat-card relative overflow-hidden">
                     <div className="stat-icon danger">
                         <AlertTriangle size={24} />
                     </div>
-                    <div className="stat-content">
+                    <div className="stat-content z-10 relative w-full">
                         <div className="stat-label">Fautes à revoir</div>
                         <div className="stat-value">{totalMistakes}</div>
-                        <div className="stat-sub">{totalMistakes} erreurs au total</div>
+                        <div className="flex flex-row items-center justify-between w-full mt-1">
+                            <div className="stat-sub">{totalMistakes} erreurs au total</div>
+                            {totalMistakes > 0 && (
+                                <button 
+                                    onClick={handleReviewAll}
+                                    className="btn-primary btn-sm flex items-center gap-1 px-3 py-2"
+                                >
+                                    <RefreshCcw size={16} /> Réviser
+                                </button>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -96,27 +276,53 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
 
                 {/* Left Column: History & Progress */}
                 <div className="card p-6 bg-surface-1 border border-border">
-                    <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
-                        <Clock size={20} /> Historique par Thème
-                    </h2>
+                    <div className="flex items-center justify-between mb-6">
+                        <h2 className="text-xl font-bold flex items-center gap-2">
+                            <Clock size={20} /> Historique
+                        </h2>
+                        <button
+                            onClick={() => setShowErrorsOnly(!showErrorsOnly)}
+                            className={`btn-sm flex items-center gap-2 ${showErrorsOnly ? 'btn-danger' : 'btn-ghost'}`}
+                        >
+                            <Filter size={16} /> {showErrorsOnly ? 'Tout voir' : 'Voir les fautes'}
+                        </button>
+                    </div>
 
                     <div className="theme-history-list">
-                        {statedThemes.length === 0 ? (
+                        {filteredThemes.length === 0 ? (
                             <div className="text-center text-muted py-8">
-                                Aucun historique disponible. Commencez un quiz !
+                                {showErrorsOnly ? 'Aucune faute trouvée ! Bravo ! 🎉' : 'Aucun historique disponible. Commencez un quiz !'}
                             </div>
                         ) : (
-                            statedThemes.map(theme => {
+                            filteredThemes.map(theme => {
                                 const p = progress[theme.id];
-                                const acc = p.totalQuestions > 0 ? Math.round((p.bestScore / p.totalQuestions) * 100) : 0;
-                                const scoreColor = acc >= 80 ? 'text-success' : acc >= 50 ? 'text-warning' : 'text-danger';
+                                const { score, total } = getNormalizedProgress(p);
+                                const acc = total > 0 ? Math.round((score / total) * 100) : 0;
+                                
+                                // Color Logic: Green ONLY for 100%
+                                // Orange for >= 50% but < 100%
+                                // Red for < 50%
+                                let scoreColor;
+                                if (acc === 100) scoreColor = 'text-success';
+                                else if (acc >= 50) scoreColor = 'text-warning';
+                                else scoreColor = 'text-danger';
 
                                 return (
-                                    <div key={theme.id} className="theme-history-item">
-                                        <div className="font-medium">{theme.name}</div>
-                                        <div className={`font-mono font-bold ${scoreColor}`}>
-                                            {p.bestScore} / {p.totalQuestions} ({acc}%)
+                                    <div key={theme.id} className="theme-history-item flex items-center justify-between">
+                                        <div>
+                                            <div className="font-medium">{theme.name}</div>
+                                            <div className={`font-mono font-bold ${scoreColor}`}>
+                                                {score} / {total} ({acc}%)
+                                            </div>
                                         </div>
+                                        {score < total && (
+                                            <button 
+                                                onClick={() => handleReview(theme)}
+                                                className="btn-ghost text-primary btn-sm flex items-center gap-1 hover:bg-primary/10"
+                                            >
+                                                <RefreshCcw size={14} /> Réviser
+                                            </button>
+                                        )}
                                     </div>
                                 );
                             })
@@ -229,67 +435,6 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                             <Save size={18} /> Enregistrer les clés
                         </button>
                     </div>
-                </div>
-                {/* Data Management Card */}
-                <div className="card p-6 bg-surface-1 border border-border mt-6">
-                    <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
-                        <FileJson size={20} /> Gestion des Données
-                    </h2>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <button 
-                            onClick={() => {
-                                const dataStr = localStorage.getItem('quizProgress');
-                                if (!dataStr) {
-                                    alert('Aucune donnée à exporter.');
-                                    return;
-                                }
-                                const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
-                                const exportFileDefaultName = 'sauvegarde-permis.json';
-                                const linkElement = document.createElement('a');
-                                linkElement.setAttribute('href', dataUri);
-                                linkElement.setAttribute('download', exportFileDefaultName);
-                                linkElement.click();
-                            }}
-                            className="btn-secondary flex items-center justify-center gap-2 p-4"
-                        >
-                            <Download size={20} /> Exporter ma progression
-                        </button>
-
-                        <label className="btn-primary flex items-center justify-center gap-2 p-4 cursor-pointer">
-                            <Upload size={20} /> Importer une sauvegarde
-                            <input 
-                                type="file" 
-                                accept=".json" 
-                                className="hidden" 
-                                onChange={(e) => {
-                                    const fileReader = new FileReader();
-                                    fileReader.readAsText(e.target.files[0], "UTF-8");
-                                    fileReader.onload = e => {
-                                        try {
-                                            const json = JSON.parse(e.target.result);
-                                            // Basic validation
-                                            if (typeof json === 'object') {
-                                                if (window.confirm('Attention : Ceci va ÉCRASER votre progression actuelle. Continuer ?')) {
-                                                    localStorage.setItem('quizProgress', JSON.stringify(json));
-                                                    alert('Importation réussie ! La page va se recharger.');
-                                                    window.location.reload();
-                                                }
-                                            } else {
-                                                alert('Fichier invalide.');
-                                            }
-                                        } catch (err) {
-                                            console.error(err);
-                                            alert('Erreur lors de la lecture du fichier.');
-                                        }
-                                    };
-                                }}
-                            />
-                        </label>
-                    </div>
-                    <p className="text-sm text-muted mt-4">
-                        Utilisez ces options pour transférer votre progression d'un appareil à l'autre ou pour faire une sauvegarde de sécurité.
-                    </p>
                 </div>
             </div>
 

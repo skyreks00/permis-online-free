@@ -115,6 +115,49 @@ function App() {
     localStorage.setItem('quizProgress', JSON.stringify(newProgress));
   };
 
+  /**
+   * Patches existing progress with new answers (e.g. from review mode)
+   * This allows correcting specific mistakes without overwriting the original score/date
+   * @param {string} themeId 
+   * @param {Array} newAnswers - Array of { questionId, isCorrect, ... }
+   */
+  const patchProgress = (themeId, newAnswers) => {
+    if (!progress[themeId]) return;
+
+    const currentThemeProgress = progress[themeId];
+    const oldAnswers = currentThemeProgress.answers || [];
+    
+    // Merge new answers into old answers
+    // If a question is answered in newAnswers, it replaces the old one
+    const updatedAnswers = oldAnswers.map(oldAns => {
+        // Use loose equality to match string/number IDs
+        const newAns = newAnswers.find(na => na.questionId == oldAns.questionId);
+        return newAns ? newAns : oldAns;
+    });
+
+    // Also append any new answers that weren't in old answers (unlikely but safe)
+    newAnswers.forEach(newAns => {
+        if (!updatedAnswers.find(ua => ua.questionId == newAns.questionId)) {
+            updatedAnswers.push(newAns);
+        }
+    });
+
+    // Recalculate score based on the updated answers
+    const newScore = updatedAnswers.filter(a => a.isCorrect).length;
+
+    const newProgress = {
+        ...progress,
+        [themeId]: {
+            ...currentThemeProgress,
+            answers: updatedAnswers,
+            score: newScore // Update the score to reflect corrections
+        }
+    };
+
+    setProgress(newProgress);
+    localStorage.setItem('quizProgress', JSON.stringify(newProgress));
+  };
+
   const handleResetProgress = () => {
     if (window.confirm('Êtes-vous sûr de vouloir réinitialiser toute votre progression ?')) {
       setProgress({});
@@ -175,8 +218,18 @@ function App() {
             <QuizPage
               sections={sections}
               onFinishQuiz={saveProgress}
+              onPatchProgress={patchProgress}
               instantFeedback={instantFeedback}
               autoPlayAudio={autoPlayAudio}
+              toggleTheme={toggleTheme}
+              isDarkMode={isDarkMode}
+            />
+          }
+        />
+        <Route
+          path="/revision"
+          element={
+            <ResultsPage
               toggleTheme={toggleTheme}
               isDarkMode={isDarkMode}
             />

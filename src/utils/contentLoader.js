@@ -1,19 +1,31 @@
 /**
  * Content Loader Utility
- * Loads question data from GitHub Raw URLs with cache-busting
- * Falls back to bundled content if GitHub is unavailable
+ * Loads question data from local public/data folder
+ * Falls back to GitHub if needed (or vice versa, but for local dev/preview we want local data)
  */
 
 const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/skyreks00/permis-online-free/main/public/data';
 
 /**
- * Loads JSON content from GitHub Raw URL with cache busting
+ * Loads JSON content from local data or GitHub
  * @param {string} filename - The filename to load (e.g., 'themes.json')
  * @param {object|null} fallbackData - Optional fallback data if fetch fails
  * @returns {Promise<object>} - The loaded JSON data
  */
 export const loadFromGitHub = async (filename, fallbackData = null) => {
-    // Add cache-busting timestamp to force fresh data
+    // Try local fetch first (relative to index.html in public/data)
+    try {
+        console.log(`[ContentLoader] Fetching ${filename} from local data...`);
+        const response = await fetch(`data/${filename}`);
+        if (response.ok) {
+            const data = await response.json();
+            return data;
+        }
+    } catch (e) {
+        console.warn(`[ContentLoader] Local fetch failed for ${filename}, trying GitHub...`);
+    }
+
+    // Fallback to GitHub
     const cacheBuster = Date.now();
     const url = `${GITHUB_RAW_BASE}/${filename}?_=${cacheBuster}`;
 

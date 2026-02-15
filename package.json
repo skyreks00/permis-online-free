@@ -7,10 +7,10 @@
     "dev": "vite",
     "generate:sitemap": "node scripts/generate-sitemap.mjs",
     "prebuild": "npm run generate:sitemap",
-    "build": "vite build",
+    "build": "vite build && node scripts/copy-404.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run generate:sitemap && vite build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

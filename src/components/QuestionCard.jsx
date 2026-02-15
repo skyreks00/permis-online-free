@@ -327,6 +327,7 @@ const QuestionCard = ({ question, onAnswer, currentIndex, total, instantFeedback
             {isFixing ? '...' : '✨ Corriger'}
           </button>
         )}
+
       </div>
 
       {/* Validation Controls (Only in Correction Mode) - Hide on success OR SAVING */}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import Quiz from '../components/Quiz';
 import TopControls from '../components/TopControls';
 import { loadThemeQuestions } from '../utils/contentLoader';
@@ -7,12 +7,14 @@ import { loadThemeQuestions } from '../utils/contentLoader';
 const QuizPage = ({
     sections,
     onFinishQuiz, // App callback to save progress
+    onPatchProgress, // New callback to patch progress (for reviews)
     instantFeedback,
     autoPlayAudio,
     toggleTheme,
     isDarkMode
 }) => {
     const { themeId } = useParams();
+    const location = useLocation();
     const navigate = useNavigate();
     const [questions, setQuestions] = useState([]);
     const [theme, setTheme] = useState(null);
@@ -23,6 +25,19 @@ const QuizPage = ({
         const loadData = async () => {
             setIsLoading(true);
             setError(null);
+
+            // Check if we have custom questions passed via navigation state (e.g. for Review/Mistakes)
+            if (location.state && location.state.questions) {
+                setTheme({ 
+                    id: 'review', 
+                    name: location.state.title || 'Révision des erreurs', 
+                    file: null 
+                });
+                setQuestions(location.state.questions);
+                setIsLoading(false);
+                return;
+            }
+
             // Find theme in sections
             let foundTheme = null;
             if (themeId === 'examen_B') {
@@ -84,10 +99,10 @@ const QuizPage = ({
             }
         };
 
-        if (sections.length > 0) {
+        if (sections.length > 0 || (location.state && location.state.questions)) {
             loadData();
         }
-    }, [themeId, sections]);
+    }, [themeId, sections, location.state]);
 
     const handleFinish = (payload) => {
         // Notify App to save progress
@@ -95,11 +110,52 @@ const QuizPage = ({
 
         // We delegate the saving logic to App via onFinishQuiz
         // But App needs to know which theme and how many questions
-        if (onFinishQuiz) {
-            onFinishQuiz(theme.id, score, questions.length);
+        
+        // Check if we are in a review mode (custom questions via state)
+        // If so, we likely DON'T want to save this as a new attempt for the theme, 
+        // effectively treating it as a practice run.
+        const isReviewMode = location.state && location.state.isReview;
+
+        if (onFinishQuiz && !isReviewMode) {
+            // Fix: Pass payload.answers to saveProgress so they are stored in localStorage
+            onFinishQuiz(theme.id, score, questions.length, payload.answers);
+        } else if (isReviewMode && onPatchProgress) {
+            // Processing review results to patch original progress
+            const answers = payload.answers || []; // [{ questionId, isCorrect, ... }]
+            const correctAnswers = answers.filter(a => a && a.isCorrect);
+
+            if (correctAnswers.length > 0) {
+                // We need to group by themeId (handleReviewAll involves multiple themes)
+                // The question objects in 'questions' state have 'originalThemeId' attached
+                
+                // Map questionId -> originalThemeId
+                const questionThemeMap = {};
+                questions.forEach(q => {
+                    if (q.originalThemeId) {
+                        questionThemeMap[q.id] = q.originalThemeId;
+                    }
+                });
+
+                // Group correct answers by theme
+                const updatesByTheme = {}; // { themeId: [answerObjects] }
+                
+                correctAnswers.forEach(ans => {
+                    const tId = questionThemeMap[ans.questionId];
+                    if (tId) {
+                        if (!updatesByTheme[tId]) updatesByTheme[tId] = [];
+                        updatesByTheme[tId].push(ans);
+                    }
+                });
+
+                // Dispatch updates
+                Object.keys(updatesByTheme).forEach(tId => {
+                    onPatchProgress(tId, updatesByTheme[tId]);
+                });
+            }
         }
 
         // Navigate to results
+        // If it was a review, we might want to differentiate the results page too?
         navigate('/resultats', {
             state: {
                 results: {
@@ -110,7 +166,9 @@ const QuizPage = ({
                 },
                 questions: questions,
                 total: questions.length,
-                isExamMode: theme.id.includes('examen')
+                isExamMode: theme.id.includes('examen'),
+                // If it was a review, results page can perhaps show "Révision terminée"
+                isReviewSession: isReviewMode
             }
         });
     };

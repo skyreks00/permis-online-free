@@ -271,10 +271,24 @@
     },
     {
       "id": 15,
-      "type": "number",
+      "type": "multiple_choice",
       "question": "Combien de distance approximative devez-vous laisser entre vous et la voiture devant vous ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Vitesse divisée par 2"
+        },
+        {
+          "letter": "B",
+          "text": "Vitesse divisée par 3"
+        },
+        {
+          "letter": "C",
+          "text": "10 mètres"
+        }
+      ],
       "correctAnswer": "A",
-      "explanation": "",
+      "explanation": "La distance de sécurité minimale correspond environ à la vitesse divisée par 2 (en mètres).",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/77/15.jpg"
     },
     {
