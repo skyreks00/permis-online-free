@@ -34,7 +34,9 @@ const Quiz = ({ questions, themeName, onFinish, onExit, instantFeedback, autoPla
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setHasAnswered(false);
     } else {
-      onFinish({ score: scoreRef.current, answers: answersRef.current });
+      // Calculate final score properly from answersRef
+      const finalScore = answersRef.current.filter(a => a && a.isCorrect).length;
+      onFinish({ score: finalScore, answers: answersRef.current });
     }
   };
 
