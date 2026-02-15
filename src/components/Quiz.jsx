@@ -13,6 +13,30 @@ const Quiz = ({ questions, themeName, onFinish, onExit, instantFeedback, autoPla
   const currentQuestion = questionsData[currentQuestionIndex];
 
   const handleAnswer = ({ isCorrect, userAnswer, correctAnswer, questionId }) => {
+    const previousAnswer = answersRef.current[currentQuestionIndex];
+
+    // Calculate score delta
+    let scoreDelta = 0;
+
+    if (previousAnswer) {
+        // Changing answer
+        if (previousAnswer.isCorrect && !isCorrect) {
+            scoreDelta = -1;
+        } else if (!previousAnswer.isCorrect && isCorrect) {
+            scoreDelta = 1;
+        }
+    } else {
+        // New answer
+        if (isCorrect) {
+            scoreDelta = 1;
+        }
+    }
+
+    // Apply delta
+    scoreRef.current += scoreDelta;
+    setScore(scoreRef.current);
+
+    // Update refs
     answersRef.current[currentQuestionIndex] = {
       questionId,
       userAnswer,
@@ -20,10 +44,6 @@ const Quiz = ({ questions, themeName, onFinish, onExit, instantFeedback, autoPla
       isCorrect,
     };
 
-    if (isCorrect) {
-      scoreRef.current += 1;
-      setScore(scoreRef.current);
-    }
     setHasAnswered(true);
   };
 
