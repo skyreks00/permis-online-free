@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Trophy, Target, AlertTriangle, Clock, Settings, ArrowLeft, CheckCircle2, Circle, Volume2, User, LogOut, Key, Github, Save } from 'lucide-react';
+import { Trophy, Target, AlertTriangle, Clock, Settings, ArrowLeft, CheckCircle2, Circle, Volume2, User, LogOut, Key, Github, Save, FileJson, Download, Upload } from 'lucide-react';
 import { getUser } from '../utils/githubClient';
 
 const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onToggleInstantFeedback, autoPlayAudio, onToggleAutoPlayAudio }) => {
@@ -229,6 +229,67 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                             <Save size={18} /> Enregistrer les clés
                         </button>
                     </div>
+                </div>
+                {/* Data Management Card */}
+                <div className="card p-6 bg-surface-1 border border-border mt-6">
+                    <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
+                        <FileJson size={20} /> Gestion des Données
+                    </h2>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <button 
+                            onClick={() => {
+                                const dataStr = localStorage.getItem('quizProgress');
+                                if (!dataStr) {
+                                    alert('Aucune donnée à exporter.');
+                                    return;
+                                }
+                                const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+                                const exportFileDefaultName = 'sauvegarde-permis.json';
+                                const linkElement = document.createElement('a');
+                                linkElement.setAttribute('href', dataUri);
+                                linkElement.setAttribute('download', exportFileDefaultName);
+                                linkElement.click();
+                            }}
+                            className="btn-secondary flex items-center justify-center gap-2 p-4"
+                        >
+                            <Download size={20} /> Exporter ma progression
+                        </button>
+
+                        <label className="btn-primary flex items-center justify-center gap-2 p-4 cursor-pointer">
+                            <Upload size={20} /> Importer une sauvegarde
+                            <input 
+                                type="file" 
+                                accept=".json" 
+                                className="hidden" 
+                                onChange={(e) => {
+                                    const fileReader = new FileReader();
+                                    fileReader.readAsText(e.target.files[0], "UTF-8");
+                                    fileReader.onload = e => {
+                                        try {
+                                            const json = JSON.parse(e.target.result);
+                                            // Basic validation
+                                            if (typeof json === 'object') {
+                                                if (window.confirm('Attention : Ceci va ÉCRASER votre progression actuelle. Continuer ?')) {
+                                                    localStorage.setItem('quizProgress', JSON.stringify(json));
+                                                    alert('Importation réussie ! La page va se recharger.');
+                                                    window.location.reload();
+                                                }
+                                            } else {
+                                                alert('Fichier invalide.');
+                                            }
+                                        } catch (err) {
+                                            console.error(err);
+                                            alert('Erreur lors de la lecture du fichier.');
+                                        }
+                                    };
+                                }}
+                            />
+                        </label>
+                    </div>
+                    <p className="text-sm text-muted mt-4">
+                        Utilisez ces options pour transférer votre progression d'un appareil à l'autre ou pour faire une sauvegarde de sécurité.
+                    </p>
                 </div>
             </div>
 
