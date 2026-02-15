@@ -426,19 +426,19 @@
     {
       "id": 25,
       "type": "multiple_choice",
-      "question": "Qui a la priorité?",
+      "question": "Qui a la priorité ?",
       "propositions": [
         {
           "letter": "A",
-          "text": "Voiture"
+          "text": "La voiture A"
         },
         {
           "letter": "B",
-          "text": "Voiture"
+          "text": "La voiture B"
         }
       ],
       "correctAnswer": "B",
-      "explanation": "Le signal bleu indique que la voiture B a priorité.",
+      "explanation": "Le signal bleu indique que la voiture B a la priorité.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/78/23.jpg"
     },
     {
