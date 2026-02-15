@@ -17,6 +17,10 @@ const handleLogin = () => {
 };
 
 function App() {
+  useEffect(() => {
+    console.log("🚀 Permis Online Free - Version 1.5 (Score Fix + Interaction Lock)");
+  }, []);
+
   const [sections, setSections] = useState([]);
   const [progress, setProgress] = useState({});
   const [colorTheme, setColorTheme] = useState('light');

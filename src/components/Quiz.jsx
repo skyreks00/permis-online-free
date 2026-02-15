@@ -13,36 +13,18 @@ const Quiz = ({ questions, themeName, onFinish, onExit, instantFeedback, autoPla
   const currentQuestion = questionsData[currentQuestionIndex];
 
   const handleAnswer = ({ isCorrect, userAnswer, correctAnswer, questionId }) => {
-    const previousAnswer = answersRef.current[currentQuestionIndex];
-
-    // Calculate score delta
-    let scoreDelta = 0;
-
-    if (previousAnswer) {
-        // Changing answer
-        if (previousAnswer.isCorrect && !isCorrect) {
-            scoreDelta = -1;
-        } else if (!previousAnswer.isCorrect && isCorrect) {
-            scoreDelta = 1;
-        }
-    } else {
-        // New answer
-        if (isCorrect) {
-            scoreDelta = 1;
-        }
-    }
-
-    // Apply delta
-    scoreRef.current += scoreDelta;
-    setScore(scoreRef.current);
-
-    // Update refs
+    // 1. Update the answer in the ref
     answersRef.current[currentQuestionIndex] = {
       questionId,
       userAnswer,
       correctAnswer,
       isCorrect,
     };
+
+    // 2. Recalculate score entirely from the current answers state
+    // This prevents any "double counting" or delta errors
+    const newScore = answersRef.current.filter(a => a && a.isCorrect).length;
+    setScore(newScore);
 
     setHasAnswered(true);
   };
