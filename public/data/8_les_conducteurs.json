@@ -47,6 +47,9 @@
       "id": 3,
       "type": "multiple_choice",
       "question": "Quel est le poids maximum autorisé (M.M.A.) pour une voiture, une voiture mixte, un minibus ou une camionnette que vous pouvez conduire ?",
+      "correctAnswer": "B",
+      "explanation": "Vous pouvez conduire une voiture, une voiture mixte, un minibus ou une camionnette si leur poids maximum autorisé (M.M.A.) est inférieur ou égal à 3 500 kg. De plus, ces véhicules peuvent avoir une remorque avec un M.M.A. de 750 kg maximum, ou si le M.M.A. de la remorque est supérieur à 750 kg, le M.M.A. total de l'ensemble véhicule-remorque ne doit pas dépasser 3 500 kg.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/11.jpg",
       "propositions": [
         {
           "letter": "A",
@@ -64,10 +67,7 @@
           "letter": "D",
           "text": "5 000 kg"
         }
-      ],
-      "correctAnswer": "B",
-      "explanation": "Vous pouvez conduire une voiture, une voiture mixte, un minibus ou une camionnette si le poids maximum autorisé (M.M.A.) est inférieur ou égal à 3 500 kg. De plus, le véhicule ne doit pas avoir plus de 8 + 1 places assises et la remorque éventuelle doit avoir un M.M.A. inférieur ou égal à 750 kg, ou si le M.M.A. de la remorque est supérieur à 750 kg, le M.M.A. total de l'ensemble ne doit pas dépasser 3 500 kg.",
-      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/72/11.jpg"
+      ]
     },
     {
       "id": 4,
