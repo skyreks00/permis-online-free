@@ -263,7 +263,7 @@
         {
           "id": "debug_quiz",
           "name": "Quiz de Debug",
-          "totalQuestions": 5,
+          "totalQuestions": 3,
           "file": "debug_quiz.json",
           "icon": "🐛"
         }
