@@ -346,15 +346,15 @@
       "propositions": [
         {
           "letter": "A",
-          "text": "Voiture"
+          "text": "La voiture A"
         },
         {
           "letter": "B",
-          "text": "Voiture"
+          "text": "La voiture B"
         }
       ],
       "correctAnswer": "B",
-      "explanation": "La route se rétrécit le long du côté de la voiture A. Voiture A doit donc donner la priorité.",
+      "explanation": "La route se rétrécit le long du côté de la voiture A. La voiture A doit donc donner la priorité.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/78/22.jpg"
     },
     {
