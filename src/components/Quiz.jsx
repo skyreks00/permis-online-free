@@ -13,6 +13,8 @@ const Quiz = ({ questions, themeName, onFinish, onExit, instantFeedback, autoPla
   const currentQuestion = questionsData[currentQuestionIndex];
 
   const handleAnswer = ({ isCorrect, userAnswer, correctAnswer, questionId }) => {
+    console.log("DEBUG: handleAnswer called", { currentQuestionIndex, questionId, isCorrect });
+
     // 1. Update the answer in the ref
     answersRef.current[currentQuestionIndex] = {
       questionId,
@@ -21,9 +23,12 @@ const Quiz = ({ questions, themeName, onFinish, onExit, instantFeedback, autoPla
       isCorrect,
     };
 
+    console.log("DEBUG: answersRef updated", JSON.stringify(answersRef.current));
+
     // 2. Recalculate score entirely from the current answers state
-    // This prevents any "double counting" or delta errors
     const newScore = answersRef.current.filter(a => a && a.isCorrect).length;
+    console.log("DEBUG: newScore calculated", newScore);
+
     setScore(newScore);
 
     setHasAnswered(true);
