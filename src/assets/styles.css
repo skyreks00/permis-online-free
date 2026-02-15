@@ -32,7 +32,23 @@ body,
 
 body {
   margin: 0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    Arial,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -83,7 +99,7 @@ select {
   /* 32 */
 }
 
-[data-theme='light'] {
+[data-theme="light"] {
   --bg: #f7f8fb;
   --bg-elev: #ffffff;
   --surface: #ffffff;
@@ -118,7 +134,7 @@ body {
 }
 
 .container {
-  width: min(1100px, calc(100% - 32px));
+  width: min(1250px, calc(100% - 32px));
   margin-inline: auto;
   padding: var(--space-5) 0 var(--space-6);
 }
@@ -164,7 +180,9 @@ button {
   padding: var(--bpad-y) var(--bpad-x);
   border-radius: 8px;
   cursor: pointer;
-  transition: background 150ms ease, border-color 150ms ease;
+  transition:
+    background 150ms ease,
+    border-color 150ms ease;
 }
 
 button:hover {
@@ -210,8 +228,8 @@ button:active {
 
 /* 7) Inputs */
 .input,
-input[type='text'],
-input[type='search'] {
+input[type="text"],
+input[type="search"] {
   width: 100%;
   padding: 12px 14px;
   border-radius: 8px;
@@ -230,7 +248,7 @@ input:focus {
   border-color: var(--primary);
 }
 
-input[type='checkbox'] {
+input[type="checkbox"] {
   accent-color: var(--primary);
 }
 
@@ -290,7 +308,7 @@ input[type='checkbox'] {
 
 /* 10) Quiz */
 .quiz {
-  width: min(1100px, calc(100% - 32px));
+  width: min(1250px, calc(100% - 32px));
   margin: 24px auto;
 }
 
@@ -350,7 +368,7 @@ input[type='checkbox'] {
 
 .question-main {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1fr 1.5fr;
   gap: 18px;
 }
 
@@ -365,7 +383,7 @@ input[type='checkbox'] {
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--surface);
-  min-height: 220px;
+  min-height: 180px;
   display: grid;
   place-items: center;
 }
@@ -893,7 +911,7 @@ input[type='checkbox'] {
   bottom: 0;
   background-color: var(--surface-2);
   border: 1px solid var(--border);
-  transition: .4s;
+  transition: 0.4s;
   border-radius: 34px;
 }
 
@@ -905,16 +923,16 @@ input[type='checkbox'] {
   left: 2px;
   bottom: 2px;
   background-color: var(--muted);
-  transition: .4s;
+  transition: 0.4s;
   border-radius: 50%;
 }
 
-input:checked+.slider {
+input:checked + .slider {
   background-color: var(--primary);
   border-color: var(--primary);
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
   transform: translateX(20px);
   background-color: white;
 }

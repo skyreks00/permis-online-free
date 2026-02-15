@@ -196,8 +196,11 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                 return;
             }
 
-            // Extract just the question objects
-            const questionsToReview = allErrors.map(item => item.q);
+            // Extract just the question objects, injecting the theme ID for tracking
+            const questionsToReview = allErrors.map(item => ({
+                ...item.q,
+                originalThemeId: item.themeId
+            }));
 
             navigate('/quiz/review', {
                 state: {
