@@ -4,28 +4,15 @@
  * Falls back to GitHub if needed (or vice versa, but for local dev/preview we want local data)
  */
 
-const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/skyreks00/permis-online-free/main/public/data';
+const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/stotwo/permis-online-free/main/public/data';
 
 /**
- * Loads JSON content from local data or GitHub
+ * Loads JSON content from GitHub or local data as fallback
  * @param {string} filename - The filename to load (e.g., 'themes.json')
  * @param {object|null} fallbackData - Optional fallback data if fetch fails
  * @returns {Promise<object>} - The loaded JSON data
  */
 export const loadFromGitHub = async (filename, fallbackData = null) => {
-    // Try local fetch first (relative to index.html in public/data)
-    try {
-        console.log(`[ContentLoader] Fetching ${filename} from local data...`);
-        const response = await fetch(`data/${filename}`);
-        if (response.ok) {
-            const data = await response.json();
-            return data;
-        }
-    } catch (e) {
-        console.warn(`[ContentLoader] Local fetch failed for ${filename}, trying GitHub...`);
-    }
-
-    // Fallback to GitHub
     const cacheBuster = Date.now();
     const url = `${GITHUB_RAW_BASE}/${filename}?_=${cacheBuster}`;
 
@@ -42,14 +29,27 @@ export const loadFromGitHub = async (filename, fallbackData = null) => {
         return data;
     } catch (error) {
         console.warn(`[ContentLoader] Failed to load ${filename} from GitHub:`, error.message);
-
-        if (fallbackData) {
-            console.log(`[ContentLoader] Using bundled fallback for ${filename}`);
-            return fallbackData;
-        }
-
-        throw error;
+        console.log(`[ContentLoader] Trying local fallback for ${filename}...`);
     }
+
+    try {
+        console.log(`[ContentLoader] Fetching ${filename} from local data...`);
+        const response = await fetch(`data/${filename}`);
+        if (response.ok) {
+            const data = await response.json();
+            console.log(`[ContentLoader] Successfully loaded ${filename} from local data`);
+            return data;
+        }
+    } catch (e) {
+        console.warn(`[ContentLoader] Local fetch also failed for ${filename}`);
+    }
+
+    if (fallbackData) {
+        console.log(`[ContentLoader] Using bundled fallback for ${filename}`);
+        return fallbackData;
+    }
+
+    throw new Error(`Failed to load ${filename} from all sources`);
 };
 
 /**

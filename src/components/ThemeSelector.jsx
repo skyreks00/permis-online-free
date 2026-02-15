@@ -44,11 +44,10 @@ const ThemeSelector = ({ sections, progress, onSelectTheme, onSelectLesson }) =>
           <div className="theme-grid">
             {section.items.map((item) => {
               const itemProgress = progress && progress[item.id];
-              const bestScore = itemProgress ? itemProgress.bestScore : null;
-              const isCompleted = bestScore !== null;
+              const score = itemProgress ? itemProgress.score : null;
+              const isCompleted = score !== null;
 
               const isExam = item.id === 'examen_B' || section.title === 'Examen';
-              // Assume exams don't have lessons, others might (fallback to HTML)
               const hasLesson = item.lessonFile || (!isExam && item.file);
 
               return (
@@ -80,7 +79,7 @@ const ThemeSelector = ({ sections, progress, onSelectTheme, onSelectLesson }) =>
                       padding: '2px 8px',
                       borderBottomLeftRadius: '8px'
                     }}>
-                      {bestScore}/{item.totalQuestions}
+                      {score}/{item.totalQuestions}
                     </div>
                   )}
                   <div style={{ flex: 1 }}>
