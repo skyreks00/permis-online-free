@@ -50,19 +50,23 @@
     {
       "id": 4,
       "type": "multiple_choice",
-      "question": "Le signal routier “3,5 tonnes” concerne la: ...",
+      "question": "Le signal routier '3,5 tonnes' concerne la:",
       "propositions": [
         {
           "letter": "A",
-          "text": "ou Masse Maximal Autorisée"
+          "text": "Masse Maximale Autorisée"
+        },
+        {
+          "letter": "B",
+          "text": "Masse en Charge"
         },
         {
           "letter": "C",
-          "text": "ou Masse en Charge"
+          "text": "Vitesse Maximale Autorisée"
         }
       ],
-      "correctAnswer": "B",
-      "explanation": "Conseil d’examen : apprenez bien quels signaux concernent M.M.A. ou M.E.C. (Leçon 9).",
+      "correctAnswer": "A",
+      "explanation": "Conseil d'examen : apprenez bien quels signaux concernent la Masse Maximale Autorisée (M.M.A.) ou la Masse en Charge (M.E.C.) (Leçon 9).",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/78/15.jpg"
     },
     {
