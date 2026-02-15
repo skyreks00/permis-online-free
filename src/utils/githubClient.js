@@ -75,67 +75,23 @@ export const saveQuestionToGitHub = async (token, owner, repo, path, questionId,
         return { type: 'unchanged', message: 'No changes detected' };
     }
 
-    console.log(`[saveQuestionToGitHub] Content changed, creating PR...`);
-
-    // ALWAYS use PR flow to avoid SHA mismatch issues with direct commits
-    const fork = await octokit.rest.repos.createFork({ owner, repo });
-    const forkOwner = fork.data.owner.login;
-
-    await new Promise(r => setTimeout(r, 2000));
-
-    const branchName = `fix/question-${questionId}-${Date.now()}`;
-
-    const { data: refData } = await octokit.rest.git.getRef({
-        owner: forkOwner,
-        repo,
-        ref: 'heads/main'
-    });
-
-    await octokit.rest.git.createRef({
-        owner: forkOwner,
-        repo,
-        ref: `refs/heads/${branchName}`,
-        sha: refData.object.sha
-    });
-
-    // Start with upstream SHA but check if file exists in fork/branch
-    let forkSha = currentSha;
-
-    try {
-        console.log(`[saveQuestionToGitHub] Checking file in fork: ${forkOwner}/${repo} ref=${branchName}`);
-        const { data: forkFileData } = await octokit.request(`GET /repos/${forkOwner}/${repo}/contents/${path}?ref=${branchName}`);
-        forkSha = forkFileData.sha;
-        console.log(`[saveQuestionToGitHub] Found file in fork with SHA: ${forkSha}`);
-    } catch (e) {
-        console.warn(`[saveQuestionToGitHub] File not found in fork/branch (or error), will try creating/updating with upstream SHA. Error: ${e.status}`);
-        // If file doesn't exist in fork, we don't provide SHA (create) or use upstream SHA if we think it matches
-        // But since we branched from main, the file SHOULD exist and have a SHA.
-        // If it's a 404, sha should be undefined for create? No, createOrUpdate needs SHA if updating.
-        // If we branched from main, the file exists.
-        // If error is not 404, we might have issues.
-    }
+    console.log(`[saveQuestionToGitHub] Content changed, committing directly...`);
 
     await octokit.rest.repos.createOrUpdateFileContents({
-        owner: forkOwner,
+        owner,
         repo,
         path,
         message,
         content: btoa(unescape(encodeURIComponent(newContent))),
-        sha: forkSha,
-        branch: branchName
+        sha: currentSha,
+        branch: 'main'
     });
 
-    const pr = await octokit.rest.pulls.create({
-        owner,
-        repo,
-        title: message,
-        head: `${forkOwner}:${branchName}`,
-        base: 'main',
-        body: `Proposed fix by ${user.login} using Gemini AI.`
-    });
-
-    console.log('[saveQuestionToGitHub] Successfully created PR');
-    return { type: 'pr', url: pr.data.html_url };
+    console.log('[saveQuestionToGitHub] Successfully committed to repository');
+    return { 
+        type: 'commit', 
+        url: `https://github.com/${owner}/${repo}/blob/main/${path}` 
+    };
 };
 
 /**

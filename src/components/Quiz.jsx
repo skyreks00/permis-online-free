@@ -6,10 +6,11 @@ const Quiz = ({ questions, themeName, onFinish, onExit, instantFeedback, autoPla
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [hasAnswered, setHasAnswered] = useState(false);
+  const [questionsData, setQuestionsData] = useState(questions);
   const scoreRef = useRef(0);
   const answersRef = useRef([]);
 
-  const currentQuestion = questions[currentQuestionIndex];
+  const currentQuestion = questionsData[currentQuestionIndex];
 
   const handleAnswer = ({ isCorrect, userAnswer, correctAnswer, questionId }) => {
     answersRef.current[currentQuestionIndex] = {
@@ -27,12 +28,18 @@ const Quiz = ({ questions, themeName, onFinish, onExit, instantFeedback, autoPla
   };
 
   const handleNext = () => {
-    if (currentQuestionIndex < questions.length - 1) {
+    if (currentQuestionIndex < questionsData.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setHasAnswered(false);
     } else {
       onFinish({ score: scoreRef.current, answers: answersRef.current });
     }
+  };
+
+  const handleQuestionUpdated = async (updatedQuestion) => {
+    const newQuestions = [...questionsData];
+    newQuestions[currentQuestionIndex] = updatedQuestion;
+    setQuestionsData(newQuestions);
   };
 
   return (
@@ -50,12 +57,13 @@ const Quiz = ({ questions, themeName, onFinish, onExit, instantFeedback, autoPla
           question={currentQuestion}
           onAnswer={handleAnswer}
           currentIndex={currentQuestionIndex}
-          total={questions.length}
+          total={questionsData.length}
           instantFeedback={instantFeedback}
           autoPlayAudio={autoPlayAudio}
           onNext={handleNext}
-          isLastQuestion={currentQuestionIndex === questions.length - 1}
+          isLastQuestion={currentQuestionIndex === questionsData.length - 1}
           fileName={fileName}
+          onQuestionUpdated={handleQuestionUpdated}
         />
       </div>
     </div>
