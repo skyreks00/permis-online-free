@@ -142,6 +142,35 @@ const LessonViewer = ({ lessonFile, onBack, theme }) => {
                         color: var(--text);
                         overflow-y: auto; /* Allow scrolling inside iframe body */
                     }
+
+                    /* Mobile Responsive for Lesson Content */
+                    @media (max-width: 600px) {
+                        body {
+                            padding: 12px;
+                        }
+                        .lesson-detail-table, .lesson-detail-table tbody, .lesson-detail-table tr, .lesson-detail-table td {
+                            display: block;
+                            width: 100% !important;
+                            min-width: 0 !important;
+                            box-sizing: border-box;
+                        }
+                        .lesson-detail-table td:first-child {
+                            width: 100%;
+                            min-width: 0;
+                            margin-bottom: 15px;
+                            border-bottom: 1px solid var(--border);
+                            padding-bottom: 15px;
+                        }
+                        .lesson-detail-table img {
+                            max-height: 200px;
+                            width: auto;
+                            margin: 0 auto;
+                            display: block;
+                        }
+                        .lesson-detail-table td:first-child p {
+                            justify-content: center;
+                        }
+                    }
                 `;
                 doc.head.appendChild(style);
 

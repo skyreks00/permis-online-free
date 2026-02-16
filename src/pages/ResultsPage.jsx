@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import Results from '../components/Results';
 import TopControls from '../components/TopControls';
+import ChatAssistant from '../components/ChatAssistant';
 
 const ResultsPage = ({ toggleTheme, isDarkMode }) => {
     const { state, pathname } = useLocation();
@@ -27,6 +28,18 @@ const ResultsPage = ({ toggleTheme, isDarkMode }) => {
     const isExamMode = state?.isExamMode || false;
     const customErrorItems = state?.customErrorItems || null;
 
+    // Prepare mistakes for ChatAssistant
+    const mistakes = results.answers
+        .map((a, index) => {
+            if (a.isCorrect) return null;
+            return {
+                q: questions[index],
+                a: a,
+                questionIndex: index
+            };
+        })
+        .filter(Boolean);
+
     return (
         <>
             <TopControls
@@ -47,6 +60,7 @@ const ResultsPage = ({ toggleTheme, isDarkMode }) => {
                 customErrorItems={customErrorItems}
                 onBackToProfile={() => navigate('/profil')}
             />
+            {mistakes.length > 0 && <ChatAssistant mistakes={mistakes} />}
         </>
     );
 };

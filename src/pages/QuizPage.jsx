@@ -11,11 +11,13 @@ const QuizPage = ({
     instantFeedback,
     autoPlayAudio,
     toggleTheme,
-    isDarkMode
+    isDarkMode,
+    onMistakesCorrected
 }) => {
     const { themeId } = useParams();
     const location = useLocation();
     const navigate = useNavigate();
+    const location = useLocation();
     const [questions, setQuestions] = useState([]);
     const [theme, setTheme] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -23,9 +25,24 @@ const QuizPage = ({
 
     useEffect(() => {
         const loadData = async () => {
+            // Check if questions are passed via state (e.g. for Mistake Quiz)
+            if (location.state?.questions && location.state?.theme) {
+                setTheme(location.state.theme);
+                setQuestions(location.state.questions);
+                setIsLoading(false);
+                return;
+            }
+
+            // If sections are not loaded yet (refresh case), wait.
+            // App.jsx will trigger a re-render when sections are updated.
+            if (!sections || sections.length === 0) {
+                return;
+            }
+
             setIsLoading(true);
             setError(null);
 
+<<<<<<< HEAD
             // Check if we have custom questions passed via navigation state (e.g. for Review/Mistakes)
             if (location.state && location.state.questions) {
                 setTheme({ 
@@ -38,17 +55,12 @@ const QuizPage = ({
                 return;
             }
 
+=======
+>>>>>>> 9f4b4031ef3de6b9da275ca6f157967228dda77b
             // Find theme in sections
             let foundTheme = null;
             if (themeId === 'examen_B') {
-                // Special case for exam mode if it's not in sections explicitly or if we need to construct it
                 foundTheme = { id: 'examen_B', name: 'Examen Blanc', file: 'examen_B.json' };
-                // Search in sections just in case
-                for (const section of sections) {
-                    const items = section.items || section.themes || [];
-                    const t = items.find(t => t.id === themeId);
-                    if (t) { foundTheme = t; break; }
-                }
             } else {
                 for (const section of sections) {
                     const items = section.items || section.themes || [];
@@ -70,13 +82,11 @@ const QuizPage = ({
 
             try {
                 // Load questions
-                // Simplified loading logic compared to App.jsx debug/fallback complexity
-                // We assume loadThemeQuestions handles the fetch
                 const data = await loadThemeQuestions(foundTheme.file);
                 let loaded = data.questions || [];
 
                 if (loaded.length === 0) {
-                    // Fallback to fetch if contentLoader didn't work as expected or for debug
+                    // Fallback
                     const base = import.meta.env.BASE_URL || '/';
                     const res = await fetch(`${base}data/${foundTheme.file}`);
                     const json = await res.json();
@@ -99,16 +109,23 @@ const QuizPage = ({
             }
         };
 
+<<<<<<< HEAD
         if (sections.length > 0 || (location.state && location.state.questions)) {
             loadData();
         }
     }, [themeId, sections, location.state]);
+=======
+        loadData();
+    }, [themeId, sections]);
+>>>>>>> 9f4b4031ef3de6b9da275ca6f157967228dda77b
 
     const handleFinish = (payload) => {
         // Notify App to save progress
         const score = typeof payload === 'number' ? payload : payload.score;
+        const answers = typeof payload === 'object' ? payload.answers : [];
 
         // We delegate the saving logic to App via onFinishQuiz
+<<<<<<< HEAD
         // But App needs to know which theme and how many questions
         
         // Check if we are in a review mode (custom questions via state)
@@ -152,6 +169,32 @@ const QuizPage = ({
                     onPatchProgress(tId, updatesByTheme[tId]);
                 });
             }
+=======
+        if (onFinishQuiz && theme) {
+            onFinishQuiz(theme.id, score, questions.length, answers);
+        }
+
+        // Check for corrections in revision mode
+        if (onMistakesCorrected && theme && theme.id.includes('erreurs')) {
+            const corrections = answers
+                .filter(a => a.isCorrect)
+                .map(a => {
+                    const q = questions.find(q => q.id === a.questionId);
+                    return q && q.sourceThemeId ? { themeId: q.sourceThemeId, questionId: q.id } : null;
+                })
+                .filter(Boolean);
+
+            console.log("QuizPage: Generated corrections:", corrections); // DEBUG LOG
+
+            if (corrections.length > 0) {
+                console.log("QuizPage: Calling onMistakesCorrected"); // DEBUG LOG
+                onMistakesCorrected(corrections);
+            } else {
+                console.log("QuizPage: No corrections generated (maybe sourceThemeId missing or no correct answers?)");
+            }
+        } else {
+            console.log("QuizPage: Not triggering corrections. onMistakesCorrected:", !!onMistakesCorrected, "theme:", theme);
+>>>>>>> 9f4b4031ef3de6b9da275ca6f157967228dda77b
         }
 
         // Navigate to results
@@ -162,19 +205,30 @@ const QuizPage = ({
                     correct: score,
                     incorrect: questions.length - score,
                     score: score,
-                    answers: payload.answers || []
+                    answers: answers
                 },
                 questions: questions,
                 total: questions.length,
+<<<<<<< HEAD
                 isExamMode: theme.id.includes('examen'),
                 // If it was a review, results page can perhaps show "Révision terminée"
                 isReviewSession: isReviewMode
+=======
+                isExamMode: theme && theme.id.includes('examen'),
+                themeId: theme ? theme.id : null
+>>>>>>> 9f4b4031ef3de6b9da275ca6f157967228dda77b
             }
         });
     };
 
-    if (isLoading) return <div className="p-8 text-center">Chargement du quiz...</div>;
-    if (error) return <div className="p-8 text-center text-error">{error} <br /><button onClick={() => navigate('/')} className="btn mt-4">Retour</button></div>;
+    // Show loading state if we are fetching data OR if we are waiting for sections (refresh case)
+    if (isLoading || !sections || sections.length === 0) {
+        return <div className="p-8 text-center"><span className="loading loading-spinner loading-lg"></span><br />Chargement du quiz...</div>;
+    }
+
+    if (error) {
+        return <div className="p-8 text-center text-error">{error} <br /><button onClick={() => navigate('/')} className="btn mt-4">Retour</button></div>;
+    }
 
     return (
         <>
@@ -183,7 +237,7 @@ const QuizPage = ({
                 toggleTheme={toggleTheme}
                 isDarkMode={isDarkMode}
             />
-            {theme && (
+            {theme && questions.length > 0 && (
                 <Quiz
                     questions={questions}
                     themeName={theme.name}

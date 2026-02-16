@@ -1,8 +1,13 @@
 import React from 'react';
 import { Trophy, ThumbsUp, Award, Target, PartyPopper, CheckCircle, ArrowLeft } from 'lucide-react';
 
+<<<<<<< HEAD
 const Results = ({ score, total, questions = [], answers = [], showReview = false, onRestart, onBackToThemes, isExamMode, isReviewOnly = false, customErrorItems = null, onBackToProfile }) => {
   const percentage = total > 0 ? Math.round((score / total) * 100) : 0;
+=======
+const Results = ({ score, total, questions = [], answers = [], showReview = false, onRestart, onBackToThemes, isExamMode, themeId, onRetakeFullQuiz, onReviewRemaining }) => {
+  const percentage = Math.round((score / total) * 100);
+>>>>>>> 9f4b4031ef3de6b9da275ca6f157967228dda77b
 
   const getResultMessage = () => {
     if (isReviewOnly) return { icon: <Target size={48} className="text-primary" />, text: 'Mode Révision', tone: 'info' };
@@ -94,7 +99,46 @@ const Results = ({ score, total, questions = [], answers = [], showReview = fals
         </div>
       )}
 
+<<<<<<< HEAD
       {(showReview || isReviewOnly) && (
+=======
+      {/* Iterative Revision Button */}
+      {themeId && (themeId === 'erreurs' || themeId.startsWith('erreurs_')) && (total - score) > 0 && (
+        <div style={{ marginTop: '20px' }} className="animate-fade-in">
+          <div className="card bg-warning/10 border-warning/30 p-6">
+            <h3 className="text-xl font-bold text-warning mb-2 flex items-center justify-center gap-2">
+              <Target /> Encore des fautes...
+            </h3>
+            <p className="mb-4">Il reste {total - score} erreurs à corriger. Courage !</p>
+            <button
+              onClick={onReviewRemaining}
+              className="btn-primary w-full md:w-auto"
+            >
+              Réviser les {total - score} erreurs restantes
+            </button>
+          </div>
+        </div>
+      )}
+
+      {themeId && themeId.startsWith('erreurs_') && score === total && (
+        <div style={{ marginTop: '20px' }} className="animate-fade-in">
+          <div className="card bg-success/10 border-success/30 p-6">
+            <h3 className="text-xl font-bold text-success mb-2 flex items-center justify-center gap-2">
+              <CheckCircle /> Fautes corrigées !
+            </h3>
+            <p className="mb-4">Vous avez bien assimilé ces corrections. Voulez-vous refaire le quiz complet pour valider vos acquis ?</p>
+            <button
+              onClick={onRetakeFullQuiz}
+              className="btn-primary w-full md:w-auto"
+            >
+              Refaire le Quiz Complet
+            </button>
+          </div>
+        </div>
+      )}
+
+      {showReview && (
+>>>>>>> 9f4b4031ef3de6b9da275ca6f157967228dda77b
         <div style={{ marginTop: '30px', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '32px' }}>
           {errorItems.length === 0 ? (
             <div className="card" style={{ padding: '32px', textAlign: 'center' }}>

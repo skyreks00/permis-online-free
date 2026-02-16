@@ -18,7 +18,7 @@ const ThemeSelector = ({ sections, progress, onSelectTheme, onSelectLesson }) =>
 
   return (
     <div className="page container">
-      <div style={{ display: 'flex', alignItems: 'flex-start' }}>
+      <div style={{ display: 'flex', alignItems: 'flex-start', marginTop: '60px' }}>
         <div>
           <h1 className="page-title">Entraînement Code de la Route</h1>
           <p className="muted">Choisissez un sujet et lancez le Quiz.</p>

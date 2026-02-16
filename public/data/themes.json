@@ -4,6 +4,12 @@
       "title": "Intro",
       "items": [
         {
+          "id": "debug_quiz",
+          "name": "DEBUG QUIZ",
+          "totalQuestions": 5,
+          "file": "debug_quiz.json"
+        },
+        {
           "id": "0_intro",
           "name": "Comment apprendre la théorie",
           "lessonFile": "0_comment_apprendre_la_theorie.html"
