@@ -117,6 +117,14 @@ function App() {
     };
     setProgress(newProgress);
     localStorage.setItem('quizProgress', JSON.stringify(newProgress));
+
+    // Auto-Sync to Cloud
+    const token = localStorage.getItem('github_token');
+    if (token) {
+        // Debounce or just fire and forget ? Fire and forget with toast for now.
+        // We use a small helper to avoid code duplication
+        syncToCloud(newProgress, token);
+    }
   };
 
   /**
@@ -160,6 +168,41 @@ function App() {
 
     setProgress(newProgress);
     localStorage.setItem('quizProgress', JSON.stringify(newProgress));
+
+    // Auto-Sync to Cloud
+    const token = localStorage.getItem('github_token');
+    if (token) {
+        syncToCloud(newProgress, token);
+    }
+  };
+
+  const syncToCloud = async (data, token) => {
+       try {
+           // Dynamic import to avoid initial bundle size impact
+           const { saveFileContent } = await import('./utils/githubClient');
+           
+           // Toast/Indicator could be added here (e.g. via a global context or event)
+           // For now we just log, maybe we can add a small UI indicator in the layout if requested later.
+           // The user specifically asked for "direct au cloud", implying they want it done.
+           // We can assume silent success is fine, or maybe a small console log.
+           console.log("☁️ Auto-syncing to cloud...");
+           
+           const result = await saveFileContent(
+               token, 
+               'stotwo', 
+               'permis-online-free', 
+               'user_data/progress.json', 
+               JSON.stringify(data, null, 2), 
+               'chore: auto-sync user progress'
+           );
+           
+           if(result.success) {
+               console.log("☁️ Auto-sync complete!");
+               // Optional: Visual feedback?
+           }
+       } catch (e) {
+           console.error("☁️ Auto-sync failed:", e);
+       }
   };
 
   const handleResetProgress = () => {
