@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import QuizPage from './pages/QuizPage';
@@ -21,6 +21,10 @@ function App() {
   const [colorTheme, setColorTheme] = useState('light');
   const [instantFeedback, setInstantFeedback] = useState(false);
   const [autoPlayAudio, setAutoPlayAudio] = useState(false);
+  const [syncStatus, setSyncStatus] = useState(null); // 'syncing', 'success', 'error'
+  
+  const isLocalUpdate = useRef(false);
+  const debounceTimer = useRef(null);
 
   // Initialize theme from localStorage or system preference
   useEffect(() => {
@@ -115,26 +119,38 @@ function App() {
     return () => unsubscribe();
   }, []);
 
+  // DEBOUNCED CLOUD SYNC & LOCAL STORAGE SYNC
+  useEffect(() => {
+      // Always save to local storage
+      localStorage.setItem('quizProgress', JSON.stringify(progress));
+
+      if (isLocalUpdate.current) {
+          isLocalUpdate.current = false;
+          
+          const token = localStorage.getItem('github_token');
+          if (token) {
+              if (debounceTimer.current) clearTimeout(debounceTimer.current);
+              
+              setSyncStatus('pending'); // Visual hint if needed
+              
+              debounceTimer.current = setTimeout(() => {
+                  syncToCloud(progress, token);
+              }, 2500); // 2.5s debounce
+          }
+      }
+  }, [progress]);
+
   const saveProgress = (themeId, score, total, answers) => {
-    const newProgress = {
-      ...progress,
+    isLocalUpdate.current = true;
+    setProgress(prev => ({
+      ...prev,
       [themeId]: {
         score,
         total,
         date: new Date().toISOString(),
         answers // Save answers for review
       }
-    };
-    setProgress(newProgress);
-    localStorage.setItem('quizProgress', JSON.stringify(newProgress));
-
-    // Auto-Sync to Cloud
-    const token = localStorage.getItem('github_token');
-    if (token) {
-        // Debounce or just fire and forget ? Fire and forget with toast for now.
-        // We use a small helper to avoid code duplication
-        syncToCloud(newProgress, token);
-    }
+    }));
   };
 
   /**
@@ -144,46 +160,37 @@ function App() {
    * @param {Array} newAnswers - Array of { questionId, isCorrect, ... }
    */
   const patchProgress = (themeId, newAnswers) => {
-    if (!progress[themeId]) return;
+    isLocalUpdate.current = true;
+    setProgress(prev => {
+        if (!prev[themeId]) return prev;
 
-    const currentThemeProgress = progress[themeId];
-    const oldAnswers = currentThemeProgress.answers || [];
-    
-    // Merge new answers into old answers
-    // If a question is answered in newAnswers, it replaces the old one
-    const updatedAnswers = oldAnswers.map(oldAns => {
-        // Use loose equality to match string/number IDs
-        const newAns = newAnswers.find(na => na.questionId == oldAns.questionId);
-        return newAns ? newAns : oldAns;
+        const currentThemeProgress = prev[themeId];
+        const oldAnswers = currentThemeProgress.answers || [];
+        
+        // Merge new answers into old answers
+        const updatedAnswers = oldAnswers.map(oldAns => {
+            const newAns = newAnswers.find(na => na.questionId == oldAns.questionId);
+            return newAns ? newAns : oldAns;
+        });
+
+        // Add any outliers
+        newAnswers.forEach(newAns => {
+            if (!updatedAnswers.find(ua => ua.questionId == newAns.questionId)) {
+                updatedAnswers.push(newAns);
+            }
+        });
+
+        const newScore = updatedAnswers.filter(a => a.isCorrect).length;
+
+        return {
+            ...prev,
+            [themeId]: {
+                ...currentThemeProgress,
+                answers: updatedAnswers,
+                score: newScore
+            }
+        };
     });
-
-    // Also append any new answers that weren't in old answers (unlikely but safe)
-    newAnswers.forEach(newAns => {
-        if (!updatedAnswers.find(ua => ua.questionId == newAns.questionId)) {
-            updatedAnswers.push(newAns);
-        }
-    });
-
-    // Recalculate score based on the updated answers
-    const newScore = updatedAnswers.filter(a => a.isCorrect).length;
-
-    const newProgress = {
-        ...progress,
-        [themeId]: {
-            ...currentThemeProgress,
-            answers: updatedAnswers,
-            score: newScore // Update the score to reflect corrections
-        }
-    };
-
-    setProgress(newProgress);
-    localStorage.setItem('quizProgress', JSON.stringify(newProgress));
-
-    // Auto-Sync to Cloud
-    const token = localStorage.getItem('github_token');
-    if (token) {
-        syncToCloud(newProgress, token);
-    }
   };
 
   const syncToCloud = async (data, token) => {
@@ -269,7 +276,6 @@ function App() {
   };
 
   const isDarkMode = colorTheme === 'dark';
-  const [syncStatus, setSyncStatus] = useState(null); // 'syncing', 'success', 'error'
 
   return (
     <BrowserRouter basename="/permis-online-free/">
@@ -293,8 +299,9 @@ function App() {
             animation: 'slideUp 0.3s ease-out'
         }}>
             {syncStatus === 'syncing' && <span>☁️ Synchronisation...</span>}
-            {syncStatus === 'success' && <span className="text-success">✅ Sauvegardé !</span>}
-            {syncStatus === 'error' && <span>❌ Erreur Synchro</span>}
+            {syncStatus === 'pending' && <span style={{opacity: 0.7}}>☁️ En attente...</span>}
+            {syncStatus === 'success' && <span style={{color: 'var(--success)'}}>☁️ Synchronisé !</span>}
+            {syncStatus === 'error' && <span>❌ Erreur de synchronisation</span>}
         </div>
       )}
 
