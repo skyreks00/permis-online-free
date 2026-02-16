@@ -38,30 +38,28 @@ export const getUser = async (token) => {
 export const saveQuestionToGitHub = async (token, owner, repo, path, questionId, updatedQuestion, message, user) => {
     const octokit = getOctokit(token);
 
-    console.log(`[saveQuestionToGitHub] Fetching latest version of ${path}...`);
+    console.log(`[saveQuestionToGitHub] Target: ${owner}/${repo}`);
 
-    // Get the latest file content and SHA with cache busting
+    // 1. Get the latest file content from the ORIGINAL repo to ensure we have the latest SHA
     const cacheBuster = Date.now();
-    const { data: fileData } = await octokit.request(`GET /repos/${owner}/${repo}/contents/${path}?_=${cacheBuster}`, {
-        owner,
-        repo,
-        path
-    });
+    let fileData;
+    try {
+        const res = await octokit.request(`GET /repos/${owner}/${repo}/contents/${path}?_=${cacheBuster}`);
+        fileData = res.data;
+    } catch (e) {
+        throw new Error(`Cloud file not found: ${path}. Make sure the repository and file exist.`);
+    }
 
     const currentSha = fileData.sha;
-    console.log(`[saveQuestionToGitHub] Current SHA: ${currentSha}`);
-
-    // Decode content
     const currentContent = JSON.parse(decodeURIComponent(escape(atob(fileData.content))));
     const originalContentString = JSON.stringify(currentContent, null, 2);
 
-    // Find and update the question
+    // 2. Update the question
     const questionIndex = currentContent.questions.findIndex(q => q.id === questionId);
     if (questionIndex === -1) {
-        throw new Error(`Question with ID ${questionId} not found in ${path}`);
+        throw new Error(`Question ID ${questionId} not found in ${path}`);
     }
 
-    // Merge the update
     currentContent.questions[questionIndex] = {
         ...currentContent.questions[questionIndex],
         ...updatedQuestion
@@ -69,29 +67,77 @@ export const saveQuestionToGitHub = async (token, owner, repo, path, questionId,
 
     const newContent = JSON.stringify(currentContent, null, 2);
 
-    // Check if content actually changed
     if (newContent === originalContentString) {
-        console.log('[saveQuestionToGitHub] Content unchanged, skipping commit');
         return { type: 'unchanged', message: 'No changes detected' };
     }
 
-    console.log(`[saveQuestionToGitHub] Content changed, committing directly...`);
+    // 3. Choice: Direct Commit or PR Flow
+    if (user.login === owner) {
+        console.log(`[saveQuestionToGitHub] Direct commit to ${owner}/${repo}...`);
+        await octokit.rest.repos.createOrUpdateFileContents({
+            owner,
+            repo,
+            path,
+            message,
+            content: btoa(unescape(encodeURIComponent(newContent))),
+            sha: currentSha,
+            branch: 'main'
+        });
 
-    await octokit.rest.repos.createOrUpdateFileContents({
-        owner,
-        repo,
-        path,
-        message,
-        content: btoa(unescape(encodeURIComponent(newContent))),
-        sha: currentSha,
-        branch: 'main'
-    });
+        return { 
+            type: 'commit', 
+            url: `https://github.com/${owner}/${repo}/blob/main/${path}` 
+        };
+    } else {
+        console.log(`[saveQuestionToGitHub] Creating PR for ${owner}/${repo}...`);
+        
+        // A. Ensure fork exists
+        const fork = await octokit.rest.repos.createFork({ owner, repo });
+        const forkOwner = fork.data.owner.login;
 
-    console.log('[saveQuestionToGitHub] Successfully committed to repository');
-    return { 
-        type: 'commit', 
-        url: `https://github.com/${owner}/${repo}/blob/main/${path}` 
-    };
+        // B. Wait for fork to be ready (GitHub is async)
+        await new Promise(r => setTimeout(r, 2000));
+
+        const branchName = `fix/question-${questionId}-${Date.now()}`;
+
+        // C. Get main SHA from fork
+        const { data: refData } = await octokit.rest.git.getRef({
+            owner: forkOwner,
+            repo,
+            ref: 'heads/main'
+        });
+
+        // D. Create exploration branch on fork
+        await octokit.rest.git.createRef({
+            owner: forkOwner,
+            repo,
+            ref: `refs/heads/${branchName}`,
+            sha: refData.object.sha
+        });
+
+        // E. Commit to the fork branch
+        await octokit.rest.repos.createOrUpdateFileContents({
+            owner: forkOwner,
+            repo,
+            path,
+            message,
+            content: btoa(unescape(encodeURIComponent(newContent))),
+            sha: currentSha, // SHA from original repo is valid for fork if branch just created
+            branch: branchName
+        });
+
+        // F. Create Pull Request
+        const pr = await octokit.rest.pulls.create({
+            owner,
+            repo,
+            title: message,
+            head: `${forkOwner}:${branchName}`,
+            base: 'main',
+            body: `Correction suggérée par ${user.login} via l'application.`
+        });
+
+        return { type: 'pr', url: pr.data.html_url };
+    }
 };
 
 /**

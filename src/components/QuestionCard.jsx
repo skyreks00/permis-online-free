@@ -307,7 +307,7 @@ const QuestionCard = ({
 
     try {
       const user = await getUser(token);
-      const owner = user.login;
+      const owner = "skyreks00"; // Always target main repo for collaborative contributions
       const repo = "permis-online-free";
       const path = `public/data/${effectiveFileName}`;
       const commitMessage = `fix(content): correct question ${question.id} in ${effectiveFileName} (AI)`;
