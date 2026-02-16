@@ -1,26 +1,73 @@
 {
   "debug_quiz": {
-    "score": 3,
+    "score": 1,
+    "bestScore": 2,
     "total": 3,
-    "date": "2026-02-16T19:58:29.435Z",
+    "date": "2026-02-12T09:22:11.188Z",
     "answers": [
       {
-        "questionId": 2,
+        "questionId": 3,
         "userAnswer": "A",
+        "correctAnswer": "B",
+        "isCorrect": false
+      },
+      {
+        "questionId": 2,
+        "userAnswer": "B",
         "correctAnswer": "A",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "questionId": 1,
         "userAnswer": "A",
         "correctAnswer": "A",
         "isCorrect": true
+      }
+    ],
+    "bestAnswers": [
+      {
+        "questionId": 3,
+        "userAnswer": "A",
+        "correctAnswer": "B",
+        "isCorrect": false
+      },
+      {
+        "questionId": 2,
+        "userAnswer": "B",
+        "correctAnswer": "A",
+        "isCorrect": false
+      },
+      {
+        "questionId": 1,
+        "userAnswer": "A",
+        "correctAnswer": "A",
+        "isCorrect": true
+      }
+    ]
+  },
+  "erreurs_debug_quiz": {
+    "score": 0,
+    "bestScore": 0,
+    "total": 3,
+    "date": "2026-02-11T18:58:19.852Z",
+    "answers": [
+      {
+        "questionId": 2,
+        "userAnswer": "B",
+        "correctAnswer": "A",
+        "isCorrect": false
+      },
+      {
+        "questionId": 1,
+        "userAnswer": "B",
+        "correctAnswer": "A",
+        "isCorrect": false
       },
       {
         "questionId": 3,
-        "userAnswer": "B",
+        "userAnswer": "A",
         "correctAnswer": "B",
-        "isCorrect": true
+        "isCorrect": false
       }
     ]
   }
