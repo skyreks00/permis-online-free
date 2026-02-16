@@ -23,7 +23,7 @@ function App() {
 
   const [sections, setSections] = useState([]);
   const [progress, setProgress] = useState({});
-  const [colorTheme, setColorTheme] = useState('dark');
+  const [colorTheme, setColorTheme] = useState('light');
   const [instantFeedback, setInstantFeedback] = useState(false);
   const [autoPlayAudio, setAutoPlayAudio] = useState(false);
 
@@ -106,14 +106,10 @@ function App() {
   }, []);
 
   const saveProgress = (themeId, score, total, answers) => {
-    const previousBest = progress[themeId]?.bestScore || 0;
-    const newBestScore = Math.max(score, previousBest);
-
     const newProgress = {
       ...progress,
       [themeId]: {
-        score, // Last score
-        bestScore: newBestScore, // Best score ever
+        score,
         total,
         date: new Date().toISOString(),
         answers // Save answers for review
@@ -190,7 +186,7 @@ function App() {
            
            const result = await saveFileContent(
                token, 
-               'skyreks00', 
+               'stotwo', 
                'permis-online-free', 
                'user_data/progress.json', 
                JSON.stringify(data, null, 2), 
@@ -208,66 +204,6 @@ function App() {
            setTimeout(() => setSyncStatus(null), 5000);
        }
   };
-
-  const handleMistakeCorrection = (corrections) => {
-    console.log("App: handleMistakeCorrection called", corrections); // DEBUG LOG
-    // corrections: [{ themeId, questionId }]
-    const newProgress = { ...progress };
-    let hasChanges = false;
-
-    corrections.forEach(({ themeId, questionId }) => {
-      console.log(`App: Processing correction for theme ${themeId}, question ${questionId}`); // DEBUG LOG
-      if (!newProgress[themeId]) {
-        console.log(`App: Theme ${themeId} not found in progress`);
-        return;
-      }
-
-      const themeProgress = newProgress[themeId];
-      if (!themeProgress.answers) {
-        console.log(`App: No answers found for theme ${themeId}`);
-        return;
-      }
-
-      const answerIndex = themeProgress.answers.findIndex(a => a.questionId === questionId);
-      if (answerIndex !== -1) {
-        if (!themeProgress.answers[answerIndex].isCorrect) {
-          // Update answer
-          console.log(`App: Marking question ${questionId} as correct for theme ${themeId}`); // DEBUG LOG
-          const newAnswers = [...themeProgress.answers];
-          newAnswers[answerIndex] = {
-            ...newAnswers[answerIndex],
-            isCorrect: true
-          };
-
-          // Recalculate score
-          const newScore = newAnswers.filter(a => a.isCorrect).length;
-          const newBestScore = Math.max(themeProgress.bestScore, newScore);
-
-          newProgress[themeId] = {
-            ...themeProgress,
-            answers: newAnswers,
-            score: newScore,
-            bestScore: newBestScore
-          };
-          hasChanges = true;
-        } else {
-          console.log(`App: Question ${questionId} was already correct`);
-        }
-      } else {
-        console.log(`App: Question ${questionId} not found in theme answers`);
-      }
-    });
-
-    if (hasChanges) {
-      console.log("App: Saving updated progress to localStorage"); // DEBUG LOG
-      setProgress(newProgress);
-      localStorage.setItem('quizProgress', JSON.stringify(newProgress));
-    } else {
-      console.log("App: No changes made to progress");
-    }
-  };
-
-
 
   const handleResetProgress = () => {
     if (window.confirm('Êtes-vous sûr de vouloir réinitialiser toute votre progression ?')) {
@@ -360,7 +296,6 @@ function App() {
               autoPlayAudio={autoPlayAudio}
               toggleTheme={toggleTheme}
               isDarkMode={isDarkMode}
-              onMistakesCorrected={handleMistakeCorrection}
             />
           }
         />

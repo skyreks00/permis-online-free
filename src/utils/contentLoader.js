@@ -4,7 +4,7 @@
  * Falls back to GitHub if needed (or vice versa, but for local dev/preview we want local data)
  */
 
-const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/skyreks00/permis-online-free/main/public/data';
+const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/stotwo/permis-online-free/main/public/data';
 
 /**
  * Loads JSON content from GitHub or local data as fallback

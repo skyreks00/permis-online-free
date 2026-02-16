@@ -307,7 +307,7 @@ const QuestionCard = ({
 
     try {
       const user = await getUser(token);
-      const owner = "skyreks00";
+      const owner = "stotwo";
       const repo = "permis-online-free";
       const path = `public/data/${effectiveFileName}`;
       const commitMessage = `fix(content): correct question ${question.id} in ${effectiveFileName} (AI)`;
@@ -408,7 +408,6 @@ const QuestionCard = ({
         )}
       </div>
 
-<<<<<<< HEAD
       {/* Validation Controls (Only in Correction Mode) - Hide on success OR SAVING */}
       {isCorrectionMode &&
         (savingState === null || savingState === "error") && (
@@ -466,17 +465,6 @@ const QuestionCard = ({
           </div>
         </div>
       )}
-=======
-      {/* Mobile Countdown (Above Image) */}
-      <div className="countdown mobile-countdown" aria-hidden="true">
-        <div className="countdown-track">
-          <div
-            className="countdown-fill"
-            style={{ width: `${Math.max(0, Math.min(100, (timeLeft / MAX_TIME_MS) * 100))}%` }}
-          />
-        </div>
-      </div>
->>>>>>> 9f4b4031ef3de6b9da275ca6f157967228dda77b
 
       <div
         className="question-main"
@@ -642,7 +630,7 @@ const QuestionCard = ({
             )}
           </div>
 
-          <div className="countdown desktop-countdown" aria-hidden="true">
+          <div className="countdown" aria-hidden="true">
             {/* Countdown using timeLeft (reset in useEffect) */}
             <div className="countdown-track">
               <div
@@ -712,9 +700,7 @@ const QuestionCard = ({
           >
             <button
               onClick={() => setShowExplanation(false)}
-              className="text-muted hover-text-primary hover-scale"
               style={{
-<<<<<<< HEAD
                 position: "absolute",
                 top: "16px",
                 right: "16px",
@@ -723,25 +709,11 @@ const QuestionCard = ({
                 color: "var(--muted-foreground)",
                 cursor: "pointer",
                 padding: "4px",
-=======
-                position: 'absolute',
-                top: '16px',
-                right: '16px',
-                background: 'transparent',
-                border: 'none',
-                cursor: 'pointer',
-                padding: '4px',
-                transition: 'transform 0.2s ease, color 0.2s ease'
->>>>>>> 9f4b4031ef3de6b9da275ca6f157967228dda77b
               }}
             >
               <X size={24} />
             </button>
-<<<<<<< HEAD
             <div style={{ lineHeight: "1.6", fontSize: "1.05rem" }}>
-=======
-            <div style={{ lineHeight: '1.6', fontSize: '1.05rem', paddingRight: '32px' }}>
->>>>>>> 9f4b4031ef3de6b9da275ca6f157967228dda77b
               {question.explanation
                 .replace(/^\s*INFO\W*PERMIS\W*DE\W*CONDUIRE\W*/i, "") // Robust INFO removal
                 .replace(/^\s*Signification\W*/i, "") // Remove "Signification" + any non-word chars (: / - \n)

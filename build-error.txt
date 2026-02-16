@@ -1,0 +1,49 @@
+
+> code-route-app@0.0.0 prebuild
+> npm run generate:sitemap
+
+
+> code-route-app@0.0.0 generate:sitemap
+> node scripts/generate-sitemap.mjs
+
+Generated sitemap with 6 URLs at: C:\Users\test\Documents\permis\permis-online-free\public\sitemap.xml
+
+> code-route-app@0.0.0 build
+> vite build && node scripts/copy-404.mjs
+
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32m✓[39m 21 modules transformed.
+✗ Build failed in 492ms
+error during build:
+[vite:esbuild] Transform failed with 2 errors:
+C:/Users/test/Documents/permis/permis-online-free/src/pages/QuizPage.jsx:20:10: ERROR: The symbol "location" has already been declared
+C:/Users/test/Documents/permis/permis-online-free/src/pages/QuizPage.jsx:45:0: ERROR: Unexpected "<<"
+file: C:/Users/test/Documents/permis/permis-online-free/src/pages/QuizPage.jsx:20:10
+
+The symbol "location" has already been declared
+18 |      const location = useLocation();
+19 |      const navigate = useNavigate();
+20 |      const location = useLocation();
+   |            ^
+21 |      const [questions, setQuestions] = useState([]);
+22 |      const [theme, setTheme] = useState(null);
+
+Unexpected "<<"
+43 |              setError(null);
+44 |  
+45 |  <<<<<<< HEAD
+   |  ^
+46 |              // Check if we have custom questions passed via navigation state (e.g. for Review/Mistakes)
+47 |              if (location.state && location.state.questions) {
+
+    at failureErrorWithLog (C:\Users\test\Documents\permis\permis-online-free\node_modules\esbuild\lib\main.js:1467:15)
+    at C:\Users\test\Documents\permis\permis-online-free\node_modules\esbuild\lib\main.js:736:50
+    at responseCallbacks.<computed> (C:\Users\test\Documents\permis\permis-online-free\node_modules\esbuild\lib\main.js:603:9)
+    at handleIncomingPacket (C:\Users\test\Documents\permis\permis-online-free\node_modules\esbuild\lib\main.js:658:12)
+    at Socket.readFromStdout (C:\Users\test\Documents\permis\permis-online-free\node_modules\esbuild\lib\main.js:581:7)
+    at Socket.emit (node:events:508:20)
+    at addChunk (node:internal/streams/readable:564:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:515:3)
+    at Readable.push (node:internal/streams/readable:395:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)

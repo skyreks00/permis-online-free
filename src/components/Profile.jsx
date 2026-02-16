@@ -472,7 +472,7 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                                     const { saveFileContent } = await import('../utils/githubClient');
                                     setIsLoadingReview(true);
                                     try {
-                                        await saveFileContent(githubToken, 'skyreks00', 'permis-online-free', 'user_data/progress.json', JSON.stringify(progress, null, 2), 'chore: sync user progress');
+                                        await saveFileContent(githubToken, 'stotwo', 'permis-online-free', 'user_data/progress.json', JSON.stringify(progress, null, 2), 'chore: sync user progress');
                                         alert("Progression sauvegardée dans le cloud ! ☁️✅");
                                     } catch(e) {
                                         console.error(e);
@@ -492,7 +492,7 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                                     const { fetchFileContent } = await import('../utils/githubClient');
                                     setIsLoadingReview(true);
                                     try {
-                                        const result = await fetchFileContent(githubToken, 'skyreks00', 'permis-online-free', 'user_data/progress.json');
+                                        const result = await fetchFileContent(githubToken, 'stotwo', 'permis-online-free', 'user_data/progress.json');
                                         if (!result) {
                                             alert("Aucune sauvegarde trouvée dans le cloud.");
                                             return;
