@@ -29,6 +29,44 @@
       rel="stylesheet"
     />
     <title>Permis Online Free – Code de la Route Gratuit</title>
+    <!-- GLOBAL ERROR HANDLER FOR MOBILE DEBUGGING -->
+    <script>
+      window.onerror = function(msg, url, line, col, error) {
+        // Ignore ResizeObserver errors
+        if(msg && msg.includes && msg.includes('ResizeObserver')) return;
+
+        const div = document.createElement('div');
+        div.style.position = 'fixed';
+        div.style.top = '0';
+        div.style.left = '0';
+        div.style.width = '100%';
+        div.style.background = 'red';
+        div.style.color = 'white';
+        div.style.zIndex = '999999';
+        div.style.padding = '20px';
+        div.style.fontSize = '14px';
+        div.style.wordBreak = 'break-word';
+        div.innerHTML = '<strong>ERREUR FATALE:</strong><br/>' + msg + '<br/>' + url + ':' + line;
+        document.body.appendChild(div);
+      };
+      
+      // Handle Promise Rejections
+      window.addEventListener('unhandledrejection', function(event) {
+        const div = document.createElement('div');
+        div.style.position = 'fixed';
+        div.style.bottom = '0';
+        div.style.left = '0';
+        div.style.width = '100%';
+        div.style.background = 'darkred';
+        div.style.color = 'white';
+        div.style.zIndex = '999999';
+        div.style.padding = '10px';
+        div.style.fontSize = '12px';
+         div.style.wordBreak = 'break-word';
+        div.innerHTML = 'Promise Error: ' + event.reason;
+        document.body.appendChild(div);
+      });
+    </script>
     <meta
       name="description"
       content="Entraînez-vous gratuitement au Code de la Route (Belgique/France). Séries de tests, cours détaillés, panneaux et suivi de progression. 100% gratuit, sans inscription."
