@@ -1,0 +1,22 @@
+{
+  "name": "Permis Online Free",
+  "short_name": "PermisFree",
+  "description": "Quiz code de la route 2025 gratuit et illimité",
+  "start_url": "/permis-online-free/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "logo.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "orientation": "portrait"
+}

@@ -253,10 +253,24 @@
     },
     {
       "id": 18,
-      "type": "number",
+      "type": "multiple_choice",
       "question": "Parcmètre / Disque de stationnement.Combien de temps pouvez-vous stationner (sauf indication contraire)?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "30 minutes"
+        },
+        {
+          "letter": "B",
+          "text": "1 heure"
+        },
+        {
+          "letter": "C",
+          "text": "2 heures"
+        }
+      ],
       "correctAnswer": "C",
-      "explanation": "",
+      "explanation": "En règle générale, avec un disque de stationnement, vous pouvez stationner pour une durée maximale de 2 heures.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/91/25.jpg"
     },
     {
@@ -363,8 +377,22 @@
     },
     {
       "id": 27,
-      "type": "number",
+      "type": "multiple_choice",
       "question": "Combien de temps la voiture rouge peut-elle rester garée à cet endroit?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "30 minutes"
+        },
+        {
+          "letter": "B",
+          "text": "2 heures"
+        },
+        {
+          "letter": "C",
+          "text": "4 heures"
+        }
+      ],
       "correctAnswer": "B",
       "explanation": "La limite de temps commence seulement à partir du panneau, parce que la flèche pointe vers le haut.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/91/28.jpg"
@@ -451,8 +479,22 @@
     },
     {
       "id": 35,
-      "type": "number",
+      "type": "multiple_choice",
       "question": "Combien de minutes pouvez-vous stationner?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "15 minutes"
+        },
+        {
+          "letter": "B",
+          "text": "30 minutes"
+        },
+        {
+          "letter": "C",
+          "text": "1 heure"
+        }
+      ],
       "correctAnswer": "A",
       "explanation": ".  Une durée maximale de stationnement différent peut être mentionnée.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/91/26.jpg"

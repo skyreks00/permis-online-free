@@ -429,9 +429,23 @@
     },
     {
       "id": 22,
-      "type": "number",
+      "type": "multiple_choice",
       "question": "La profondeur minimale des rainures d’un pneu doit être de (...) mm.",
-      "correctAnswer": "A",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "1,0 mm"
+        },
+        {
+          "letter": "B",
+          "text": "1,6 mm"
+        },
+        {
+          "letter": "C",
+          "text": "2,0 mm"
+        }
+      ],
+      "correctAnswer": "B",
       "explanation": "Au moins 1,6 mm.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/4.jpg"
     },
@@ -675,9 +689,27 @@
     },
     {
       "id": 35,
-      "type": "number",
-      "question": "La fonction de l’huile moteur.1. Elle assure uniquement un fonctionnement souple du moteur.2. Elle empêche uniquement les parties en mouvement de se toucher.3. Elle empêche uniquement le moteur de se bloquer.4. Tous les éléments ci-dessus sont corrects.",
-      "correctAnswer": "4",
+      "type": "multiple_choice",
+      "question": "La fonction de l’huile moteur.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Elle assure uniquement un fonctionnement souple du moteur"
+        },
+        {
+          "letter": "B",
+          "text": "Elle empêche uniquement les parties en mouvement de se toucher"
+        },
+        {
+          "letter": "C",
+          "text": "Elle empêche uniquement le moteur de se bloquer"
+        },
+        {
+          "letter": "D",
+          "text": "Tous les éléments ci-dessus sont corrects"
+        }
+      ],
+      "correctAnswer": "D",
       "explanation": "L’huile moteur a plusieurs fonctions : elle lubrifie, elle nettoie, elle étanchéifie, elle refroidit, elle protège, elle diminue la consommation de carburant.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/95/18.jpg"
     },

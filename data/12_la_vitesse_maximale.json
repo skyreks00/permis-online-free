@@ -801,10 +801,24 @@
     },
     {
       "id": 54,
-      "type": "number",
+      "type": "multiple_choice",
       "question": "A partir de combien de km/h d’excès de vitesse, hors agglomeration, la police peut-elle retirer temporairement votre permis de conduire ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "20 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "30 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "40 km/h"
+        }
+      ],
       "correctAnswer": "B",
-      "explanation": "",
+      "explanation": "La police peut retirer immédiatement le permis si l'excès de vitesse dépasse 30 km/h hors agglomération.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/37.jpg"
     },
     {
@@ -895,8 +909,22 @@
     },
     {
       "id": 61,
-      "type": "number",
+      "type": "multiple_choice",
       "question": "Vous roulez trop vite en Zone 30.A partir de combien de km/h d’excès de vitesse la POLICE peut-elle vous retirer votre permis sur-le- champ?",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "20 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "30 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "40 km/h"
+        }
+      ],
       "correctAnswer": "A",
       "explanation": "À partir d’un excès de 20 km/h.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/76/40.jpg"

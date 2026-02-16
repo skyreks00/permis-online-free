@@ -18,11 +18,11 @@
       "propositions": [
         {
           "letter": "A",
-          "text": "... la"
+          "text": "... la masse maximale autorisée"
         },
         {
           "letter": "B",
-          "text": "... la"
+          "text": "... la masse en charge"
         }
       ],
       "correctAnswer": "A",
@@ -48,7 +48,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "Les accessoires obligatoires sonta) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondesc) un gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas)d) une trousse de secours.",
+      "explanation": "Les accessoires obligatoires sont a) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondes c) un gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas) d) une trousse de secours.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/11.jpg"
     },
     {
@@ -78,7 +78,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "a) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondesc) un – gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas)d) – une trousse de secours.",
+      "explanation": "a) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondes c) un – gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas) d) – une trousse de secours.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/1.jpg"
     },
     {
@@ -126,7 +126,7 @@
         }
       ],
       "correctAnswer": "C",
-      "explanation": "a) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondesc) un – gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas)d) – une trousse de secours.",
+      "explanation": "a) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondes c) un – gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas) d) – une trousse de secours.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/12.jpg"
     },
     {
@@ -171,10 +171,24 @@
     },
     {
       "id": 11,
-      "type": "number",
-      "question": "Cette route pour automobiles a 2 x 2 bandes de circulation, qui est divisée par une berne centrale.Au-delà de ces panneaux, la voiture bleue peut rouler à une vitesse maximale de (...) km/h.",
-      "correctAnswer": "90",
-      "explanation": "Maximum de  90 km/h pour les voitures.Véhicules avec une  M.M.A. de plus de 3,5 tonnes : maximum de 70 km/heure.",
+      "type": "multiple_choice",
+      "question": "Cette route pour automobiles a 2 x 2 bandes de circulation, qui est divisée par une berne centrale. Au-delà de ces panneaux, la voiture bleue peut rouler à une vitesse maximale de (...) km/h.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "70 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "90 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "120 km/h"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Maximum de 90 km/h pour les voitures. Véhicules avec une M.M.A. de plus de 3,5 tonnes : maximum de 70 km/heure.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/8.jpg"
     },
     {
@@ -236,17 +250,21 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "Les accessoires obligatoires sonta) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondesc) un – gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas).d) – une trousse de secours.",
+      "explanation": "Les accessoires obligatoires sont a) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondes c) un – gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas). d) – une trousse de secours.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/2.jpg"
     },
     {
       "id": 15,
       "type": "multiple_choice",
-      "question": "Lors d’un contrôle, la police demande le certificat d’immatriculation du véhicule.Sous quelle forme ce document doit-il être présenté ?",
+      "question": "Lors d’un contrôle, la police demande le certificat d’immatriculation du véhicule. Sous quelle forme ce document doit-il être présenté ?",
       "propositions": [
         {
           "letter": "A",
-          "text": "L’original. B: L'original ou une copie en couleur"
+          "text": "L’original"
+        },
+        {
+          "letter": "B",
+          "text": "L'original ou une copie en couleur"
         },
         {
           "letter": "C",
@@ -260,14 +278,22 @@
     {
       "id": 16,
       "type": "multiple_choice",
-      "question": "La",
+      "question": "La masse maximale autorisée d’une voiture ne peut pas être supérieure à :",
       "propositions": [
         {
           "letter": "A",
-          "text": "d’une voiture ne peut pas être supérieure à (...) kg"
+          "text": "3 500 kg"
+        },
+        {
+          "letter": "B",
+          "text": "4 000 kg"
+        },
+        {
+          "letter": "C",
+          "text": "5 000 kg"
         }
       ],
-      "correctAnswer": "3500",
+      "correctAnswer": "A",
       "explanation": "Jusqu'à 3500 kg.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/5.jpg"
     },
@@ -290,7 +316,7 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "a) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondesc) un – gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas)d) – une trousse de secours.",
+      "explanation": "a) le triangle de danger – b) un extincteur avec 1 kg de poudre accessible en 10 secondes c) un – gilet de sécurité réfléchissant (à mettre avant de quitter la voiture dans certains cas) d) – une trousse de secours.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/73/4.jpg"
     },
     {
@@ -340,11 +366,11 @@
       "propositions": [
         {
           "letter": "A",
-          "text": "... la"
+          "text": "... la masse maximale autorisée"
         },
         {
           "letter": "B",
-          "text": "... la"
+          "text": "... la masse en charge"
         }
       ],
       "correctAnswer": "A",

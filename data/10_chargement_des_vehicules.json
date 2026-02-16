@@ -35,8 +35,22 @@
     },
     {
       "id": 3,
-      "type": "number",
+      "type": "multiple_choice",
       "question": "Ce signal routier indique que les conducteurs qui transportent certaines (...), ne peuvent pas franchir ce panneau.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Marchandises inflammables"
+        },
+        {
+          "letter": "B",
+          "text": "Marchandises dangereuses"
+        },
+        {
+          "letter": "C",
+          "text": "Marchandises polluantes"
+        }
+      ],
       "correctAnswer": "B",
       "explanation": "Accès interdit aux conducteurs de véhicules transportant des marchandises dangereuses peu importe le type de danger.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/19.jpg"
@@ -235,8 +249,22 @@
     },
     {
       "id": 14,
-      "type": "number",
+      "type": "multiple_choice",
       "question": "Ce signal routier indique que les conducteurs qui transportent certaines (...), ne peuvent pas franchir ce panneau.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Marchandises polluantes"
+        },
+        {
+          "letter": "B",
+          "text": "Marchandises dangereuses"
+        },
+        {
+          "letter": "C",
+          "text": "Marchandises explosives"
+        }
+      ],
       "correctAnswer": "A",
       "explanation": "Accès interdit aux conducteurs de véhicules transportant des marchandises dangereuses qui pourraient polluer l’eau de surface : rivière, canal, lacs,…ou la nappe d’eau souterraine.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/20.jpg"
@@ -487,8 +515,22 @@
     },
     {
       "id": 30,
-      "type": "number",
+      "type": "multiple_choice",
       "question": "Les enfants de moins de 18 ans, qui mesurent moins de (...) centimètres, doivent être transportés dans un dispositif de retenue pour enfants qui leur est adapté.",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "135 cm"
+        },
+        {
+          "letter": "B",
+          "text": "150 cm"
+        },
+        {
+          "letter": "C",
+          "text": "100 cm"
+        }
+      ],
       "correctAnswer": "A",
       "explanation": "Les enfants de moins de 18 ans et dont la taille est inférieure à 1m35 doivent voyager dans un dispositif de retenue pour enfants.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/16.jpg"

@@ -19,7 +19,9 @@
         }
       ],
       "correctAnswer": "A",
-      "explanation": "La vitesse d'une voiture est généralement déterminée par le constructeur."
+      "explanation": "La vitesse d'une voiture est généralement déterminée par le constructeur.",
+      "originalThemeId": "debug_quiz",
+      "sourceFile": "debug_quiz.json"
     },
     {
       "id": 2,
@@ -40,7 +42,7 @@
     },
     {
       "id": 3,
-      "question": "Vous êtes en possession d'un permis B et vous conduisez une voiture avec une masse maximale autorisée de 2500 kg. Quelle est la masse maximale autorisée de la remorque ?",
+      "question": "Vous êtes en possession d'un permis B et vous conduisez une voiture avec une masse maximale autorisée de 2500 kg. Quelle est la masse maximale autorisée de la remorque que vous pouvez tracter sans dépasser les 3500 kg au total ?",
       "type": "multiple_choice",
       "propositions": [
         {
@@ -49,15 +51,17 @@
         },
         {
           "letter": "B",
-          "text": "1000 kg"
+          "text": "750 kg"
         },
         {
           "letter": "C",
-          "text": "1500 kg"
+          "text": "1000 kg"
         }
       ],
       "correctAnswer": "B",
-      "explanation": "Avec un permis B, vous pouvez tracter une remorque dont la masse maximale autorisée est de 1000 kg si la masse maximale autorisée de votre véhicule est inférieure ou égale à 3500 kg, mais dans le cas où votre véhicule fait 2500 kg, vous pouvez aller jusqu'à 750 kg pour la remorque sans dépasser 3500 kg au total, cependant certaines conditions font que 1000 kg est parfois accepté."
+      "explanation": "Avec un permis B, lorsque la masse maximale autorisée de votre véhicule est de 2500 kg, vous pouvez tracter une remorque dont la masse maximale autorisée est de 750 kg sans dépasser les 3500 kg au total. La réponse B est donc correcte.",
+      "originalThemeId": "debug_quiz",
+      "sourceFile": "debug_quiz.json"
     }
   ]
 }
