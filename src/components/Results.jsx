@@ -77,6 +77,9 @@ const Results = ({ score, total, questions = [], answers = [], showReview = fals
                 <button type="button" onClick={onBackToThemes}>
                 Choisir un autre thème
                 </button>
+                <button type="button" className="btn-secondary" onClick={onBackToProfile}>
+                Retour au profil
+                </button>
             </div>
         </>
       ) : (
