@@ -1,15 +1,9 @@
 {
   "debug_quiz": {
-    "score": 3,
+    "score": 2,
     "total": 3,
-    "date": "2026-02-16T02:56:28.416Z",
+    "date": "2026-02-16T15:44:04.194Z",
     "answers": [
-      {
-        "questionId": 2,
-        "userAnswer": "A",
-        "correctAnswer": "A",
-        "isCorrect": true
-      },
       {
         "questionId": 1,
         "userAnswer": "A",
@@ -17,10 +11,16 @@
         "isCorrect": true
       },
       {
-        "questionId": 3,
-        "userAnswer": "B",
-        "correctAnswer": "B",
+        "questionId": 2,
+        "userAnswer": "A",
+        "correctAnswer": "A",
         "isCorrect": true
+      },
+      {
+        "questionId": 3,
+        "userAnswer": "A",
+        "correctAnswer": "B",
+        "isCorrect": false
       }
     ]
   },
