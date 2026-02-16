@@ -499,28 +499,36 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                                         }
                                         const remoteProgress = JSON.parse(result.content);
                                         
-                                        // MERGE LOGIC: Keep best scores
+                                        // MERGE LOGIC: Last Modified Wins
                                         const newProgress = { ...progress };
+                                        
+                                        // 1. Process Remote entries
                                         Object.keys(remoteProgress).forEach(themeId => {
                                             const r = remoteProgress[themeId];
                                             const l = newProgress[themeId];
                                             
+                                            // Case 1: Loop has entry, Local does not -> Take Remote
                                             if (!l) {
                                                 newProgress[themeId] = r;
                                             } else {
-                                                // Merge logic: If remote score is better OR remote has more answers
-                                                const rScore = r.bestScore !== undefined ? r.bestScore : (r.score || 0);
-                                                const lScore = l.bestScore !== undefined ? l.bestScore : (l.score || 0);
+                                                // Case 2: Both exist. Compare dates.
+                                                // Convert to dates (handle missing dates by defaulting to 0)
+                                                const rDate = r.date ? new Date(r.date).getTime() : 0;
+                                                const lDate = l.date ? new Date(l.date).getTime() : 0;
                                                 
-                                                if (rScore > lScore) {
+                                                // Allow small drift? No, strictly newer.
+                                                if (rDate > lDate) {
+                                                    console.log(`[Sync] Updating ${themeId}: Remote (${r.date}) > Local (${l.date})`);
                                                     newProgress[themeId] = r;
                                                 }
-                                                // Else keep local (or we could merge arrays but let's keep it simple for now)
                                             }
                                         });
 
+                                        // 2. Check for local entries not in remote? No, we keep local entries as is. 
+                                        // This is a "Merge Remote into Local" operation.
+
                                         localStorage.setItem('quizProgress', JSON.stringify(newProgress));
-                                        alert("Progression synchronisée ! Réactualisez la page. 🔄");
+                                        alert("Progression synchronisée (Dernière modification fait foi) ! Réactualisez la page. 🔄");
                                         window.location.reload();
 
                                     } catch(e) {
