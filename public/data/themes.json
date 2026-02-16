@@ -262,18 +262,6 @@
           "icon": "🎓"
         }
       ]
-    },
-    {
-      "title": "Debug",
-      "items": [
-        {
-          "id": "debug_quiz",
-          "name": "Quiz de Debug",
-          "totalQuestions": 3,
-          "file": "debug_quiz.json",
-          "icon": "🐛"
-        }
-      ]
     }
   ]
 }
