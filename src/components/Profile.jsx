@@ -44,6 +44,7 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
         })
         : statedThemes;
 
+    const [apiKey, setApiKey] = useState(() => localStorage.getItem('groq_api_key') || '');
     const [githubUser, setGithubUser] = useState(auth.currentUser);
     const [showConfirmReset, setShowConfirmReset] = useState(false);
 
