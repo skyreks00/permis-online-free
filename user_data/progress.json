@@ -1,29 +1,4 @@
 {
-  "debug_quiz": {
-    "score": 3,
-    "total": 3,
-    "date": "2026-02-16T16:17:53.814Z",
-    "answers": [
-      {
-        "questionId": 1,
-        "userAnswer": "A",
-        "correctAnswer": "A",
-        "isCorrect": true
-      },
-      {
-        "questionId": 2,
-        "userAnswer": "A",
-        "correctAnswer": "A",
-        "isCorrect": true
-      },
-      {
-        "questionId": 3,
-        "userAnswer": "B",
-        "correctAnswer": "B",
-        "isCorrect": true
-      }
-    ]
-  },
   "8_les_conducteurs": {
     "score": 18,
     "total": 18,
@@ -1076,6 +1051,31 @@
         "userAnswer": "B",
         "correctAnswer": "B",
         "isCorrect": true
+      }
+    ]
+  },
+  "debug_quiz": {
+    "score": 2,
+    "total": 3,
+    "date": "2026-02-16T16:17:53.814Z",
+    "answers": [
+      {
+        "questionId": 1,
+        "userAnswer": "A",
+        "correctAnswer": "A",
+        "isCorrect": true
+      },
+      {
+        "questionId": 2,
+        "userAnswer": "A",
+        "correctAnswer": "A",
+        "isCorrect": true
+      },
+      {
+        "questionId": 3,
+        "userAnswer": "A",
+        "correctAnswer": "B",
+        "isCorrect": false
       }
     ]
   }
