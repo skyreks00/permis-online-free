@@ -466,35 +466,8 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                 </div>
             </div>
 
-                <div className="h-10"></div>
-                                                    console.log(`[Sync] Updating ${themeId}: Remote (${r.date}) > Local (${l.date})`);
-                                                    newProgress[themeId] = r;
-                                                }
-                                            }
-                                        });
-
-                                        // 2. Check for local entries not in remote? No, we keep local entries as is. 
-                                        // This is a "Merge Remote into Local" operation.
-
-                                        localStorage.setItem('quizProgress', JSON.stringify(newProgress));
-                                        alert("Progression synchronisée (Dernière modification fait foi) ! Réactualisez la page. 🔄");
-                                        window.location.reload();
-
-                                    } catch(e) {
-                                        console.error(e);
-                                        alert("Erreur download: " + e.message);
-                                    } finally {
-                                        setIsLoadingReview(false);
-                                    }
-                                }}
-                                className="btn-primary flex-1 flex items-center justify-center gap-2"
-                            >
-                                📥 Récupérer du Cloud
-                            </button>
-                        </div>
-                    </div>
-                )}
-            </div>
+            <div className="h-10"></div>
+        </div>
     );
 };
 
