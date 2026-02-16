@@ -1,13 +1,8 @@
 import React from 'react';
 import { Trophy, ThumbsUp, Award, Target, PartyPopper, CheckCircle, ArrowLeft } from 'lucide-react';
 
-<<<<<<< HEAD
 const Results = ({ score, total, questions = [], answers = [], showReview = false, onRestart, onBackToThemes, isExamMode, isReviewOnly = false, customErrorItems = null, onBackToProfile }) => {
   const percentage = total > 0 ? Math.round((score / total) * 100) : 0;
-=======
-const Results = ({ score, total, questions = [], answers = [], showReview = false, onRestart, onBackToThemes, isExamMode, themeId, onRetakeFullQuiz, onReviewRemaining }) => {
-  const percentage = Math.round((score / total) * 100);
->>>>>>> 9f4b4031ef3de6b9da275ca6f157967228dda77b
 
   const getResultMessage = () => {
     if (isReviewOnly) return { icon: <Target size={48} className="text-primary" />, text: 'Mode Révision', tone: 'info' };
