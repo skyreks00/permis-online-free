@@ -40,10 +40,13 @@ const ResultsPage = ({ toggleTheme, isDarkMode }) => {
     navigate('/profil');
   };
 
+  // Flatten the results object if it exists (legacy/robustness)
+  const resultsData = state.results ? { ...state, ...state.results } : state;
+
   return (
     <div className="page animate-fade-in">
       <Results 
-        {...state} 
+        {...resultsData} 
         onRestart={handleRestart}
         onBackToThemes={handleBackToThemes}
         onBackToProfile={handleBackToProfile}

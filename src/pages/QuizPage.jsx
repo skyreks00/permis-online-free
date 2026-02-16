@@ -165,16 +165,11 @@ const QuizPage = ({
         // If it was a review, we might want to differentiate the results page too?
         navigate('/resultats', {
             state: {
-                results: {
-                    correct: score,
-                    incorrect: questions.length - score,
-                    score: score,
-                    answers: answers
-                },
-                questions: questions,
+                score: score,
                 total: questions.length,
+                questions: questions,
+                answers: answers,
                 isExamMode: theme.id.includes('examen'),
-                // If it was a review, results page can perhaps show "Révision terminée"
                 isReviewSession: isReviewMode
             }
         });
