@@ -1057,16 +1057,10 @@
   "debug_quiz": {
     "score": 2,
     "total": 3,
-    "date": "2026-02-16T15:52:32.928Z",
+    "date": "2026-02-16T15:52:59.840Z",
     "answers": [
       {
         "questionId": 1,
-        "userAnswer": "A",
-        "correctAnswer": "A",
-        "isCorrect": true
-      },
-      {
-        "questionId": 2,
         "userAnswer": "A",
         "correctAnswer": "A",
         "isCorrect": true
@@ -1076,6 +1070,12 @@
         "userAnswer": "A",
         "correctAnswer": "B",
         "isCorrect": false
+      },
+      {
+        "questionId": 2,
+        "userAnswer": "A",
+        "correctAnswer": "A",
+        "isCorrect": true
       }
     ]
   }
