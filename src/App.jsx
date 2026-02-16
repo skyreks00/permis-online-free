@@ -9,7 +9,7 @@ import TopControls from './components/TopControls';
 import { loadThemeQuestions, loadThemesIndex } from './utils/contentLoader';
 
 import { auth } from './utils/firebase';
-import { fetchFileContent } from './utils/githubClient';
+import { fetchFileContent, getUser } from './utils/githubClient';
 
 function App() {
   useEffect(() => {
@@ -21,7 +21,8 @@ function App() {
   const [colorTheme, setColorTheme] = useState('light');
   const [instantFeedback, setInstantFeedback] = useState(false);
   const [autoPlayAudio, setAutoPlayAudio] = useState(false);
-  const [syncStatus, setSyncStatus] = useState(null); // 'syncing', 'success', 'error'
+  const [repoOwner, setRepoOwner] = useState('skyreks00'); // Default owner
+  const [syncStatus, setSyncStatus] = useState(null); // 'syncing', 'success', 'error', 'pending'
   
   const isLocalUpdate = useRef(false);
   const debounceTimer = useRef(null);
@@ -110,8 +111,19 @@ function App() {
             console.log("👤 User logged in:", user.displayName);
             const token = localStorage.getItem('github_token');
             if (token) {
-                // Trigger auto-pull on login
-                pullFromCloud(token);
+                // Fetch GitHub user to determine the correct repository owner
+                try {
+                    const ghUser = await getUser(token);
+                    if (ghUser && ghUser.login) {
+                        console.log("⚓ GitHub Owner established:", ghUser.login);
+                        setRepoOwner(ghUser.login);
+                        // Trigger auto-pull on login with the correct owner
+                        pullFromCloud(token, ghUser.login);
+                    }
+                } catch (e) {
+                    console.error("Failed to fetch GitHub user:", e);
+                    pullFromCloud(token, repoOwner);
+                }
             }
         }
     });
@@ -205,11 +217,11 @@ function App() {
            setSyncStatus('syncing');
            const { saveFileContent } = await import('./utils/githubClient');
            
-           console.log("☁️ Auto-syncing to cloud...");
+           console.log(`☁️ Auto-syncing to cloud (${repoOwner})...`);
            
            const result = await saveFileContent(
                token, 
-               'skyreks00', 
+               repoOwner, 
                'permis-online-free', 
                'user_data/progress.json', 
                JSON.stringify(data, null, 2), 
@@ -228,11 +240,12 @@ function App() {
        }
   };
 
-  const pullFromCloud = async (token) => {
+  const pullFromCloud = async (token, overrideOwner = null) => {
       try {
+          const owner = overrideOwner || repoOwner;
           setSyncStatus('syncing');
-          console.log("☁️ Auto-pulling from cloud...");
-          const result = await fetchFileContent(token, 'skyreks00', 'permis-online-free', 'user_data/progress.json');
+          console.log(`☁️ Auto-pulling from GitHub (${owner})...`);
+          const result = await fetchFileContent(token, owner, 'permis-online-free', 'user_data/progress.json');
           
           if (!result || !result.content) {
               setSyncStatus(null);
@@ -252,8 +265,8 @@ function App() {
               const lResetTime = localReset ? new Date(localReset).getTime() : 0;
               
               // Find latest local activity timestamp
-              const latestLocalActivity = Object.values(savedProgress).reduce((latest, item) => {
-                  if (!item || !item.date) return latest;
+              const latestLocalActivity = Object.entries(savedProgress).reduce((latest, [key, item]) => {
+                  if (key === 'metadata' || !item || !item.date) return latest;
                   const itemTime = new Date(item.date).getTime();
                   return Math.max(latest, itemTime);
               }, 0);
@@ -285,8 +298,8 @@ function App() {
               const r = cleanRemote[themeId];
               const l = newProgress[themeId];
               
-              const rDate = r.date ? new Date(r.date).getTime() : 0;
-              const lDate = l.date ? new Date(l.date || 0).getTime() : 0;
+              const rDate = r && r.date ? new Date(r.date).getTime() : 0;
+              const lDate = l && l.date ? new Date(l.date).getTime() : 0;
 
               if (!l || rDate > lDate || (rDate === lDate && r.score > (l.score || 0))) {
                   newProgress[themeId] = r;
