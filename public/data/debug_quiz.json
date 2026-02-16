@@ -59,7 +59,7 @@
         }
       ],
       "correctAnswer": "B",
-      "explanation": "Avec un permis B, lorsque la masse maximale autorisée de votre véhicule est de 2500 kg, vous pouvez tracter une remorque dont la masse maximale autorisée est de 750 kg sans dépasser les 3500 kg au total.",
+      "explanation": "Avec un permis B, lorsque la masse maximale autorisée de votre véhicule est de 2500 kg, vous pouvez tracter une remorque dont la masse maximale autorisée est de 750 kg sans dépasser les 3500 kg au total. La réponse B est donc correcte.",
       "originalThemeId": "debug_quiz",
       "sourceFile": "debug_quiz.json"
     }
