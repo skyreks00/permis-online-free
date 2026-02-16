@@ -429,10 +429,10 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
 
                         <div className="mb-6">
                             <label className="block mb-1.5 font-semibold text-sm flex items-center gap-2">
-                                <Github size={16} /> Synchronisation GitHub
+                                <RefreshCcw size={16} /> Synchronisation Cloud
                             </label>
                             <p className="text-xs text-muted mb-4">
-                                Connectez-vous à GitHub pour sauvegarder votre progression automatiquement.
+                                Sauvegardez votre progression automatiquement dans le cloud pour la retrouver sur tous vos appareils.
                             </p>
 
                             {!githubUser ? (

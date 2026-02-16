@@ -202,15 +202,22 @@ function App() {
            if (!user) return;
 
            setSyncStatus('syncing');
-           console.log(`☁️ Auto-syncing to Firestore (${user.uid})...`);
+           console.log(`☁️ Firestore Sync: Saving to users/${user.uid}...`);
            
            await setDoc(doc(db, 'users', user.uid), data);
            
-           console.log("☁️ Auto-sync complete!");
+           console.log("☁️ Firestore Sync: Success!");
            setSyncStatus('success');
            setTimeout(() => setSyncStatus(null), 3000);
        } catch (e) {
-           console.error("☁️ Auto-sync failed:", e);
+           console.error("❌ Firestore Sync Error:", e.code, e.message);
+           
+           if (e.code === 'permission-denied') {
+               console.warn("⚠️ ACTION REQUIRED: Check Firestore Rules in Firebase Console!");
+           } else if (e.code === 'not-found') {
+               console.warn("⚠️ ACTION REQUIRED: Create 'Cloud Firestore' database in Firebase Console!");
+           }
+
            setSyncStatus('error');
            setTimeout(() => setSyncStatus(null), 5000);
        }
@@ -222,12 +229,12 @@ function App() {
           if (!user) return;
 
           setSyncStatus('syncing');
-          console.log(`☁️ Auto-pulling from Firestore (${user.uid})...`);
+          console.log(`☁️ Firestore Pull: Fetching users/${user.uid}...`);
           
           const docSnap = await getDoc(doc(db, 'users', user.uid));
           
           if (!docSnap.exists()) {
-              console.log("☁️ No remote data found.");
+              console.log("☁️ Firestore Pull: No remote data found.");
               setSyncStatus(null);
               return;
           }
