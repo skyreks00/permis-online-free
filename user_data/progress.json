@@ -1,27 +1,5 @@
 {
-  "debug_quiz": {
-    "score": 3,
-    "total": 3,
-    "date": "2026-02-16T22:46:55.070Z",
-    "answers": [
-      {
-        "questionId": 3,
-        "userAnswer": "B",
-        "correctAnswer": "B",
-        "isCorrect": true
-      },
-      {
-        "questionId": 2,
-        "userAnswer": "A",
-        "correctAnswer": "A",
-        "isCorrect": true
-      },
-      {
-        "questionId": 1,
-        "userAnswer": "A",
-        "correctAnswer": "A",
-        "isCorrect": true
-      }
-    ]
+  "metadata": {
+    "lastResetAll": "2026-02-16T22:49:24.772Z"
   }
 }
