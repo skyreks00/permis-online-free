@@ -1,18 +1,9 @@
 {
-  "metadata": {
-    "lastResetAll": "2026-02-16T22:49:24.772Z"
-  },
   "debug_quiz": {
-    "score": 2,
+    "score": 3,
     "total": 3,
-    "date": "2026-02-16T22:58:31.475Z",
+    "date": "2026-02-16T22:58:52.930Z",
     "answers": [
-      {
-        "questionId": 1,
-        "userAnswer": "A",
-        "correctAnswer": "A",
-        "isCorrect": true
-      },
       {
         "questionId": 2,
         "userAnswer": "A",
@@ -21,10 +12,19 @@
       },
       {
         "questionId": 3,
-        "userAnswer": "A",
+        "userAnswer": "B",
         "correctAnswer": "B",
-        "isCorrect": false
+        "isCorrect": true
+      },
+      {
+        "questionId": 1,
+        "userAnswer": "A",
+        "correctAnswer": "A",
+        "isCorrect": true
       }
     ]
+  },
+  "metadata": {
+    "lastResetAll": "2026-02-16T22:49:24.772Z"
   }
 }
