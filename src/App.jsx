@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import QuizPage from './pages/QuizPage';
-import ResultsPage from './components/Results';
+import ResultsPage from './pages/ResultsPage';
 import ProfilePage from './pages/ProfilePage';
 import LessonPage from './pages/LessonPage';
 import TopControls from './components/TopControls';
