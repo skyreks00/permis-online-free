@@ -1119,10 +1119,12 @@ input:checked + .slider:before {
 }
 
 /* Toast Notification */
+/* Toast Notification */
 .toast-notification {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
   background: var(--surface-1);
   border: 1px solid var(--border);
   border-left: 4px solid var(--success);
@@ -1133,8 +1135,9 @@ input:checked + .slider:before {
   align-items: center;
   gap: 12px;
   z-index: 9999;
-  animation: slideIn 0.3s ease-out forwards;
-  max-width: 350px;
+  animation: slideDown 0.3s ease-out forwards;
+  max-width: 90%;
+  width: max-content;
 }
 
 .toast-notification a {
@@ -1143,14 +1146,14 @@ input:checked + .slider:before {
   font-weight: 500;
 }
 
-@keyframes slideIn {
+@keyframes slideDown {
   from {
-    transform: translateX(100%);
+    transform: translate(-50%, -100%);
     opacity: 0;
   }
 
   to {
-    transform: translateX(0);
+    transform: translate(-50%, 0);
     opacity: 1;
   }
 }
