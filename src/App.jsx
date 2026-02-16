@@ -8,13 +8,8 @@ import LessonPage from './pages/LessonPage';
 import TopControls from './components/TopControls';
 import { loadThemeQuestions, loadThemesIndex } from './utils/contentLoader';
 
-// Utility to start the GitHub login flow
-const handleLogin = () => {
-  const clientId = import.meta.env.VITE_GITHUB_CLIENT_ID;
-  const redirectUri = window.location.origin + window.location.pathname;
-  const scope = 'public_repo';
-  window.location.href = `https://github.com/login/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scope}`;
-};
+import { auth } from './utils/firebase';
+import { fetchFileContent } from './utils/githubClient';
 
 function App() {
   useEffect(() => {
@@ -99,10 +94,25 @@ function App() {
       setInstantFeedback(JSON.parse(savedFeedback));
     }
 
+    // Load settings
     const savedAudio = localStorage.getItem('autoPlayAudio');
     if (savedAudio) {
       setAutoPlayAudio(JSON.parse(savedAudio));
     }
+
+    // AUTH & AUTO-SYNC PULL
+    const unsubscribe = auth.onAuthStateChanged(async (user) => {
+        if (user) {
+            console.log("👤 User logged in:", user.displayName);
+            const token = localStorage.getItem('github_token');
+            if (token) {
+                // Trigger auto-pull on login
+                pullFromCloud(token);
+            }
+        }
+    });
+
+    return () => unsubscribe();
   }, []);
 
   const saveProgress = (themeId, score, total, answers) => {
@@ -179,14 +189,13 @@ function App() {
   const syncToCloud = async (data, token) => {
        try {
            setSyncStatus('syncing');
-           // Dynamic import to avoid initial bundle size impact
            const { saveFileContent } = await import('./utils/githubClient');
            
            console.log("☁️ Auto-syncing to cloud...");
            
            const result = await saveFileContent(
                token, 
-               'stotwo', 
+               'skyreks00', 
                'permis-online-free', 
                'user_data/progress.json', 
                JSON.stringify(data, null, 2), 
@@ -203,6 +212,42 @@ function App() {
            setSyncStatus('error');
            setTimeout(() => setSyncStatus(null), 5000);
        }
+  };
+
+  const pullFromCloud = async (token) => {
+      try {
+          setSyncStatus('syncing');
+          console.log("☁️ Auto-pulling from cloud...");
+          const result = await fetchFileContent(token, 'skyreks00', 'permis-online-free', 'user_data/progress.json');
+          
+          if (!result || !result.content) {
+              setSyncStatus(null);
+              return;
+          }
+
+          const remoteProgress = JSON.parse(result.content);
+          const savedProgress = JSON.parse(localStorage.getItem('quizProgress') || '{}');
+          
+          // Merge logic
+          const newProgress = { ...savedProgress };
+          Object.keys(remoteProgress).forEach(themeId => {
+              const r = remoteProgress[themeId];
+              const l = newProgress[themeId];
+              if (!l || (r.date && new Date(r.date) > new Date(l.date || 0))) {
+                  newProgress[themeId] = r;
+              }
+          });
+
+          setProgress(newProgress);
+          localStorage.setItem('quizProgress', JSON.stringify(newProgress));
+          setSyncStatus('success');
+          console.log("☁️ Auto-pull complete!");
+          setTimeout(() => setSyncStatus(null), 3000);
+      } catch (e) {
+          console.error("☁️ Auto-pull failed:", e);
+          setSyncStatus('error');
+          setTimeout(() => setSyncStatus(null), 5000);
+      }
   };
 
   const handleResetProgress = () => {

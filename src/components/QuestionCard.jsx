@@ -307,7 +307,7 @@ const QuestionCard = ({
 
     try {
       const user = await getUser(token);
-      const owner = "stotwo";
+      const owner = "skyreks00";
       const repo = "permis-online-free";
       const path = `public/data/${effectiveFileName}`;
       const commitMessage = `fix(content): correct question ${question.id} in ${effectiveFileName} (AI)`;

@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Trophy, Target, AlertTriangle, Clock, Settings, ArrowLeft, CheckCircle2, Circle, Volume2, User, LogOut, Key, Github, Save, Filter, RefreshCcw } from 'lucide-react';
-import { getUser } from '../utils/githubClient';
 import { useNavigate } from 'react-router-dom';
 import { loadThemeQuestions } from '../utils/contentLoader';
+import { loginWithGitHub, logout, auth } from '../utils/firebase';
+import { GithubAuthProvider } from 'firebase/auth';
 
 const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onToggleInstantFeedback, autoPlayAudio, onToggleAutoPlayAudio }) => {
     const navigate = useNavigate();
@@ -43,40 +42,46 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
         })
         : statedThemes;
 
-    // --- Developer Mode State ---
-    const [apiKey, setApiKey] = useState(() => localStorage.getItem('groq_api_key') || '');
-    const [githubToken, setGithubToken] = useState(() => localStorage.getItem('github_token') || '');
-    const [githubUser, setGithubUser] = useState(null);
+    const [githubUser, setGithubUser] = useState(auth.currentUser);
     const [showConfirmReset, setShowConfirmReset] = useState(false);
 
-    const fetchGithubUser = async (token) => {
-        try {
-            const user = await getUser(token);
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged((user) => {
             setGithubUser(user);
+        });
+        return () => unsubscribe();
+    }, []);
+
+    const handleLogin = async () => {
+        try {
+            setIsLoadingReview(true);
+            const result = await loginWithGitHub();
+            const credential = GithubAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
+            if (token) {
+                localStorage.setItem('github_token', token);
+            }
         } catch (e) {
-            console.error("Invalid token:", e);
-            setGithubUser(null);
+            console.error("Login failed:", e);
+            alert("Erreur de connexion : " + e.message);
+        } finally {
+            setIsLoadingReview(false);
         }
     };
 
-    useEffect(() => {
-        if (githubToken) {
-            fetchGithubUser(githubToken);
+    const handleLogout = async () => {
+        try {
+            await logout();
+            localStorage.removeItem('github_token');
+        } catch (e) {
+            console.error("Logout failed:", e);
         }
-    }, []);
+    };
 
     const handleSaveKeys = () => {
         if (apiKey) localStorage.setItem('groq_api_key', apiKey);
         else localStorage.removeItem('groq_api_key');
-
-        if (githubToken) {
-            localStorage.setItem('github_token', githubToken);
-            fetchGithubUser(githubToken);
-        } else {
-            localStorage.removeItem('github_token');
-            setGithubUser(null);
-        }
-        alert('Paramètres sauvegardés !');
+        alert('Clé IA sauvegardée !');
     };
 
     const handleReview = async (theme) => {
@@ -419,28 +424,34 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
 
                         <div className="mb-6">
                             <label className="block mb-1.5 font-semibold text-sm flex items-center gap-2">
-                                <Github size={16} /> GitHub Token (Optionnel)
+                                <Github size={16} /> Synchronisation GitHub
                             </label>
-                            <p className="text-xs text-muted mb-2">
-                                Requis pour proposer des corrections (Pull Requests).
-                                <br />
-                                <a href="https://github.com/settings/tokens/new?scopes=public_repo" target="_blank" rel="noreferrer" className="text-primary underline font-medium">
-                                    Générer un token (Classic)
-                                </a> avec le scope <code>public_repo</code>.
+                            <p className="text-xs text-muted mb-4">
+                                Connectez-vous à GitHub pour sauvegarder votre progression automatiquement.
                             </p>
 
-                            <input
-                                type="password"
-                                className="input w-full mb-3"
-                                value={githubToken}
-                                onChange={e => setGithubToken(e.target.value)}
-                                placeholder="ghp_..."
-                            />
-
-                            {githubUser && (
-                                <div className="flex items-center gap-2 p-2 bg-success/10 rounded-lg text-success text-sm border border-success/20">
-                                    <img src={githubUser.avatar_url} alt="" style={{ width: '24px', height: '24px', borderRadius: '50%' }} />
-                                    <span>Connecté en tant que <strong>{githubUser.login}</strong></span>
+                            {!githubUser ? (
+                                <button onClick={handleLogin} className="btn-secondary w-full flex items-center justify-center gap-2 py-3 border-2 border-primary/20 hover:border-primary/50 transition-all">
+                                    <Github size={20} /> Se connecter avec GitHub
+                                </button>
+                            ) : (
+                                <div className="space-y-3">
+                                    <div className="flex items-center justify-between p-3 bg-success/10 rounded-lg text-success text-sm border border-success/20">
+                                        <div className="flex items-center gap-2">
+                                            {githubUser.photoURL ? (
+                                                <img src={githubUser.photoURL} alt="" style={{ width: '32px', height: '32px', borderRadius: '50%' }} />
+                                            ) : (
+                                                <User size={24} />
+                                            )}
+                                            <div className="flex flex-col">
+                                                <span className="font-bold">{githubUser.displayName || githubUser.email}</span>
+                                                <span className="text-[10px] opacity-70">Connecté via Firebase</span>
+                                            </div>
+                                        </div>
+                                        <button onClick={handleLogout} className="p-1 hover:bg-danger/20 rounded-full text-danger transition-colors" title="Se déconnecter">
+                                            <LogOut size={18} />
+                                        </button>
+                                    </div>
                                 </div>
                             )}
                         </div>
@@ -455,7 +466,7 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                 <div className="h-10"></div>
                 
                 {/* CLOUD SYNC SECTION */}
-                {githubToken && githubUser && (
+                {githubUser && (
                     <div className="card p-6 bg-surface-1 border border-primary/30 mt-8 mb-8">
                         <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-primary">
                             <span style={{ fontSize: '1.5em' }}>☁️</span> Cloud Sync (Expérimental)
@@ -472,7 +483,12 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                                     const { saveFileContent } = await import('../utils/githubClient');
                                     setIsLoadingReview(true);
                                     try {
-                                        await saveFileContent(githubToken, 'skyreks00', 'permis-online-free', 'user_data/progress.json', JSON.stringify(progress, null, 2), 'chore: sync user progress');
+                                    const token = localStorage.getItem('github_token');
+                                    if(!token) {
+                                        alert("Session expirée. Veuillez vous reconnecter.");
+                                        return;
+                                    }
+                                    const result = await saveFileContent(token, 'skyreks00', 'permis-online-free', 'user_data/progress.json', JSON.stringify(progress, null, 2), 'chore: sync user progress');
                                         alert("Progression sauvegardée dans le cloud ! ☁️✅");
                                     } catch(e) {
                                         console.error(e);
@@ -492,7 +508,12 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                                     const { fetchFileContent } = await import('../utils/githubClient');
                                     setIsLoadingReview(true);
                                     try {
-                                        const result = await fetchFileContent(githubToken, 'skyreks00', 'permis-online-free', 'user_data/progress.json');
+                                    const token = localStorage.getItem('github_token');
+                                    if(!token) {
+                                        alert("Session expirée. Veuillez vous reconnecter.");
+                                        return;
+                                    }
+                                    const result = await fetchFileContent(token, 'skyreks00', 'permis-online-free', 'user_data/progress.json');
                                         if (!result) {
                                             alert("Aucune sauvegarde trouvée dans le cloud.");
                                             return;
