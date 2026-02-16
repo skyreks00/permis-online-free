@@ -18,10 +18,32 @@ const ResultsPage = ({ toggleTheme, isDarkMode }) => {
   }, [location.state]);
 
   const handleRestart = () => {
-    if (state.questions && state.questions.length > 0) {
+    // Flatten the results object if it exists (legacy/robustness)
+    const resultsData = state.results ? { ...state, ...state.results } : state;
+    
+    if (resultsData.isReviewSession) {
+        // Filter only the questions that were answered incorrectly in the current session
+        const mistakeQuestions = (resultsData.questions || []).filter((q, idx) => {
+            const ans = resultsData.answers?.[idx];
+            return ans && ans.isCorrect === false;
+        });
+
+        if (mistakeQuestions.length > 0) {
+            navigate('/quiz/review', {
+                state: {
+                    questions: mistakeQuestions,
+                    title: resultsData.title || 'Révision des erreurs',
+                    isReview: true
+                }
+            });
+            return;
+        }
+    }
+
+    if (resultsData.questions && resultsData.questions.length > 0) {
         // If it was a theme quiz, we might have the themeId
-        const firstQ = state.questions[0];
-        const themeId = firstQ.originalThemeId || (location.state.themeId);
+        const firstQ = resultsData.questions[0];
+        const themeId = firstQ.originalThemeId || resultsData.themeId;
         if (themeId) {
             navigate(`/quiz/${themeId}`);
         } else {
