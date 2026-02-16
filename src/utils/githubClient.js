@@ -170,3 +170,55 @@ export const saveToGitHub = async (token, owner, repo, path, content, message, u
         return { type: 'pr', url: pr.data.html_url };
     }
 };
+
+/**
+ * Generic file fetcher from GitHub
+ */
+export const fetchFileContent = async (token, owner, repo, path) => {
+    const octokit = getOctokit(token);
+    const cacheBuster = Date.now();
+    
+    try {
+        const { data } = await octokit.request(`GET /repos/${owner}/${repo}/contents/${path}?_=${cacheBuster}`, {
+            owner,
+            repo,
+            path
+        });
+        
+        // Decode content (Base64 -> UTF-8)
+        const content = decodeURIComponent(escape(atob(data.content)));
+        return { content, sha: data.sha };
+    } catch (e) {
+        if (e.status === 404) return null; // File doesn't exist yet
+        throw e;
+    }
+};
+
+/**
+ * Generic file saver to GitHub (Direct Commit)
+ */
+export const saveFileContent = async (token, owner, repo, path, content, message, sha = null) => {
+    const octokit = getOctokit(token);
+
+    // If SHA not provided, try to fetch it first to allow overwriting
+    if (!sha) {
+        try {
+            const existing = await fetchFileContent(token, owner, repo, path);
+            if (existing) sha = existing.sha;
+        } catch (e) {
+            // Ignore error, assume new file
+        }
+    }
+
+    await octokit.rest.repos.createOrUpdateFileContents({
+        owner,
+        repo,
+        path,
+        message,
+        content: btoa(unescape(encodeURIComponent(content))),
+        sha,
+        branch: 'main'
+    });
+
+    return { success: true };
+};

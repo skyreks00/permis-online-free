@@ -452,8 +452,92 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                 </div>
             </div>
 
-            <div className="h-10"></div>
-        </div>
+                <div className="h-10"></div>
+                
+                {/* CLOUD SYNC SECTION */}
+                {githubToken && githubUser && (
+                    <div className="card p-6 bg-surface-1 border border-primary/30 mt-8 mb-8">
+                        <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-primary">
+                            <span style={{ fontSize: '1.5em' }}>☁️</span> Cloud Sync (Expérimental)
+                        </h2>
+                        <p className="text-sm text-muted mb-4">
+                            Sauvegardez votre progression dans votre dépôt GitHub pour la récupérer sur un autre appareil (PC/Mobile).
+                            Le fichier sera stocké dans <code>user_data/progress.json</code>.
+                        </p>
+
+                        <div className="flex gap-4">
+                            <button 
+                                onClick={async () => {
+                                    if(!confirm("Cela va écraser la sauvegarde distante avec votre progression actuelle. Continuer ?")) return;
+                                    const { saveFileContent } = await import('../utils/githubClient');
+                                    setIsLoadingReview(true);
+                                    try {
+                                        await saveFileContent(githubToken, 'stotwo', 'permis-online-free', 'user_data/progress.json', JSON.stringify(progress, null, 2), 'chore: sync user progress');
+                                        alert("Progression sauvegardée dans le cloud ! ☁️✅");
+                                    } catch(e) {
+                                        console.error(e);
+                                        alert("Erreur upload: " + e.message);
+                                    } finally {
+                                        setIsLoadingReview(false);
+                                    }
+                                }}
+                                className="btn-secondary flex-1 flex items-center justify-center gap-2"
+                            >
+                                📤 Envoyer vers le Cloud
+                            </button>
+
+                            <button 
+                                onClick={async () => {
+                                    if(!confirm("Cela va fusionner la sauvegarde distante avec votre appareil. Continuer ?")) return;
+                                    const { fetchFileContent } = await import('../utils/githubClient');
+                                    setIsLoadingReview(true);
+                                    try {
+                                        const result = await fetchFileContent(githubToken, 'stotwo', 'permis-online-free', 'user_data/progress.json');
+                                        if (!result) {
+                                            alert("Aucune sauvegarde trouvée dans le cloud.");
+                                            return;
+                                        }
+                                        const remoteProgress = JSON.parse(result.content);
+                                        
+                                        // MERGE LOGIC: Keep best scores
+                                        const newProgress = { ...progress };
+                                        Object.keys(remoteProgress).forEach(themeId => {
+                                            const r = remoteProgress[themeId];
+                                            const l = newProgress[themeId];
+                                            
+                                            if (!l) {
+                                                newProgress[themeId] = r;
+                                            } else {
+                                                // Merge logic: If remote score is better OR remote has more answers
+                                                const rScore = r.bestScore !== undefined ? r.bestScore : (r.score || 0);
+                                                const lScore = l.bestScore !== undefined ? l.bestScore : (l.score || 0);
+                                                
+                                                if (rScore > lScore) {
+                                                    newProgress[themeId] = r;
+                                                }
+                                                // Else keep local (or we could merge arrays but let's keep it simple for now)
+                                            }
+                                        });
+
+                                        localStorage.setItem('quizProgress', JSON.stringify(newProgress));
+                                        alert("Progression synchronisée ! Réactualisez la page. 🔄");
+                                        window.location.reload();
+
+                                    } catch(e) {
+                                        console.error(e);
+                                        alert("Erreur download: " + e.message);
+                                    } finally {
+                                        setIsLoadingReview(false);
+                                    }
+                                }}
+                                className="btn-primary flex-1 flex items-center justify-center gap-2"
+                            >
+                                📥 Récupérer du Cloud
+                            </button>
+                        </div>
+                    </div>
+                )}
+            </div>
     );
 };
 
