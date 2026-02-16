@@ -1055,15 +1055,15 @@
     ]
   },
   "debug_quiz": {
-    "score": 1,
+    "score": 2,
     "total": 3,
-    "date": "2026-02-16T15:46:42.979Z",
+    "date": "2026-02-16T15:52:32.928Z",
     "answers": [
       {
         "questionId": 1,
-        "userAnswer": "B",
+        "userAnswer": "A",
         "correctAnswer": "A",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
         "questionId": 2,
