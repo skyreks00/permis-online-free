@@ -245,6 +245,20 @@ function App() {
           const owner = overrideOwner || repoOwner;
           setSyncStatus('syncing');
           console.log(`☁️ Auto-pulling from GitHub (${owner})...`);
+          
+          // 0. Check if repo exists first to avoid 404 console noise
+          const octokit = (await import('./utils/githubClient')).getOctokit(token);
+          try {
+              await octokit.rest.repos.get({ owner, repo: 'permis-online-free' });
+          } catch (repoErr) {
+              if (repoErr.status === 404) {
+                  console.warn(`🛑 Repository ${owner}/permis-online-free not found. Fork needed.`);
+                  setSyncStatus('error');
+                  return;
+              }
+              throw repoErr;
+          }
+
           const result = await fetchFileContent(token, owner, 'permis-online-free', 'user_data/progress.json');
           
           if (!result || !result.content) {
@@ -298,7 +312,9 @@ function App() {
               const r = cleanRemote[themeId];
               const l = newProgress[themeId];
               
-              const rDate = r && r.date ? new Date(r.date).getTime() : 0;
+              if (!r) return; // Skip empty remote entries
+
+              const rDate = r.date ? new Date(r.date).getTime() : 0;
               const lDate = l && l.date ? new Date(l.date).getTime() : 0;
 
               if (!l || rDate > lDate || (rDate === lDate && r.score > (l.score || 0))) {
