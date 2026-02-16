@@ -1,23 +1,23 @@
 {
   "debug_quiz": {
-    "score": 2,
+    "score": 3,
     "total": 3,
-    "date": "2026-02-16T22:41:51.100Z",
+    "date": "2026-02-16T22:46:55.070Z",
     "answers": [
       {
         "questionId": 3,
-        "userAnswer": "A",
+        "userAnswer": "B",
         "correctAnswer": "B",
-        "isCorrect": false
+        "isCorrect": true
       },
       {
-        "questionId": 1,
+        "questionId": 2,
         "userAnswer": "A",
         "correctAnswer": "A",
         "isCorrect": true
       },
       {
-        "questionId": 2,
+        "questionId": 1,
         "userAnswer": "A",
         "correctAnswer": "A",
         "isCorrect": true
