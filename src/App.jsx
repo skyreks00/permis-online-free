@@ -187,7 +187,8 @@ function App() {
             [themeId]: {
                 ...currentThemeProgress,
                 answers: updatedAnswers,
-                score: newScore
+                score: newScore,
+                date: new Date().toISOString()
             }
         };
     });
@@ -240,7 +241,11 @@ function App() {
           Object.keys(remoteProgress).forEach(themeId => {
               const r = remoteProgress[themeId];
               const l = newProgress[themeId];
-              if (!l || (r.date && new Date(r.date) > new Date(l.date || 0))) {
+              
+              const rDate = r.date ? new Date(r.date).getTime() : 0;
+              const lDate = l.date ? new Date(l.date || 0).getTime() : 0;
+
+              if (!l || rDate > lDate || (rDate === lDate && r.score > (l.score || 0))) {
                   newProgress[themeId] = r;
               }
           });
