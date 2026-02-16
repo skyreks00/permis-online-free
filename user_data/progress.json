@@ -1,30 +1,5 @@
 {
-  "debug_quiz": {
-    "score": 3,
-    "total": 3,
-    "date": "2026-02-16T22:58:52.930Z",
-    "answers": [
-      {
-        "questionId": 2,
-        "userAnswer": "A",
-        "correctAnswer": "A",
-        "isCorrect": true
-      },
-      {
-        "questionId": 3,
-        "userAnswer": "B",
-        "correctAnswer": "B",
-        "isCorrect": true
-      },
-      {
-        "questionId": 1,
-        "userAnswer": "A",
-        "correctAnswer": "A",
-        "isCorrect": true
-      }
-    ]
-  },
   "metadata": {
-    "lastResetAll": "2026-02-16T22:49:24.772Z"
+    "lastResetAll": "2026-02-16T22:59:05.044Z"
   }
 }
