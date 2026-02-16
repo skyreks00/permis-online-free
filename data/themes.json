@@ -4,12 +4,6 @@
       "title": "Intro",
       "items": [
         {
-          "id": "debug_quiz",
-          "name": "DEBUG QUIZ",
-          "totalQuestions": 5,
-          "file": "debug_quiz.json"
-        },
-        {
           "id": "0_intro",
           "name": "Comment apprendre la théorie",
           "lessonFile": "0_comment_apprendre_la_theorie.html"
@@ -260,6 +254,18 @@
           "totalQuestions": 50,
           "file": "examen_B.json",
           "icon": "🎓"
+        }
+      ]
+    },
+    {
+      "title": "Debug",
+      "items": [
+        {
+          "id": "debug_quiz",
+          "name": "Quiz de Debug",
+          "totalQuestions": 3,
+          "file": "debug_quiz.json",
+          "icon": "🐛"
         }
       ]
     }
