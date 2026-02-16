@@ -1,6 +1,6 @@
 {
   "debug_quiz": {
-    "score": 2,
+    "score": 3,
     "total": 3,
     "date": "2026-02-16T16:17:53.814Z",
     "answers": [
@@ -18,9 +18,9 @@
       },
       {
         "questionId": 3,
-        "userAnswer": "A",
+        "userAnswer": "B",
         "correctAnswer": "B",
-        "isCorrect": false
+        "isCorrect": true
       }
     ]
   },
