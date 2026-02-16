@@ -178,13 +178,10 @@ function App() {
 
   const syncToCloud = async (data, token) => {
        try {
+           setSyncStatus('syncing');
            // Dynamic import to avoid initial bundle size impact
            const { saveFileContent } = await import('./utils/githubClient');
            
-           // Toast/Indicator could be added here (e.g. via a global context or event)
-           // For now we just log, maybe we can add a small UI indicator in the layout if requested later.
-           // The user specifically asked for "direct au cloud", implying they want it done.
-           // We can assume silent success is fine, or maybe a small console log.
            console.log("☁️ Auto-syncing to cloud...");
            
            const result = await saveFileContent(
@@ -198,10 +195,13 @@ function App() {
            
            if(result.success) {
                console.log("☁️ Auto-sync complete!");
-               // Optional: Visual feedback?
+               setSyncStatus('success');
+               setTimeout(() => setSyncStatus(null), 3000);
            }
        } catch (e) {
            console.error("☁️ Auto-sync failed:", e);
+           setSyncStatus('error');
+           setTimeout(() => setSyncStatus(null), 5000);
        }
   };
 
@@ -224,9 +224,35 @@ function App() {
   };
 
   const isDarkMode = colorTheme === 'dark';
+  const [syncStatus, setSyncStatus] = useState(null); // 'syncing', 'success', 'error'
 
   return (
     <BrowserRouter basename="/permis-online-free/">
+      {/* GLOBAL SYNC TOAST */}
+      {syncStatus && (
+        <div style={{
+            position: 'fixed',
+            bottom: '20px',
+            right: '20px',
+            background: syncStatus === 'error' ? 'var(--danger)' : 'var(--surface-1)',
+            color: syncStatus === 'error' ? 'white' : 'var(--foreground)',
+            padding: '12px 20px',
+            borderRadius: '8px',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+            zIndex: 10000,
+            display: 'flex',
+            alignItems: 'center',
+            gap: '10px',
+            border: '1px solid var(--border)',
+            fontWeight: '500',
+            animation: 'slideUp 0.3s ease-out'
+        }}>
+            {syncStatus === 'syncing' && <span>☁️ Synchronisation...</span>}
+            {syncStatus === 'success' && <span className="text-success">✅ Sauvegardé !</span>}
+            {syncStatus === 'error' && <span>❌ Erreur Synchro</span>}
+        </div>
+      )}
+
       <Routes>
         <Route
           path="/"
