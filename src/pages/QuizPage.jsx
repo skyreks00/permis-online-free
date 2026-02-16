@@ -15,7 +15,6 @@ const QuizPage = ({
     onMistakesCorrected
 }) => {
     const { themeId } = useParams();
-    const location = useLocation();
     const navigate = useNavigate();
     const location = useLocation();
     const [questions, setQuestions] = useState([]);
@@ -42,7 +41,6 @@ const QuizPage = ({
             setIsLoading(true);
             setError(null);
 
-<<<<<<< HEAD
             // Check if we have custom questions passed via navigation state (e.g. for Review/Mistakes)
             if (location.state && location.state.questions) {
                 setTheme({ 
@@ -55,8 +53,6 @@ const QuizPage = ({
                 return;
             }
 
-=======
->>>>>>> 9f4b4031ef3de6b9da275ca6f157967228dda77b
             // Find theme in sections
             let foundTheme = null;
             if (themeId === 'examen_B') {
@@ -109,15 +105,10 @@ const QuizPage = ({
             }
         };
 
-<<<<<<< HEAD
         if (sections.length > 0 || (location.state && location.state.questions)) {
             loadData();
         }
     }, [themeId, sections, location.state]);
-=======
-        loadData();
-    }, [themeId, sections]);
->>>>>>> 9f4b4031ef3de6b9da275ca6f157967228dda77b
 
     const handleFinish = (payload) => {
         // Notify App to save progress
@@ -125,7 +116,6 @@ const QuizPage = ({
         const answers = typeof payload === 'object' ? payload.answers : [];
 
         // We delegate the saving logic to App via onFinishQuiz
-<<<<<<< HEAD
         // But App needs to know which theme and how many questions
         
         // Check if we are in a review mode (custom questions via state)
@@ -169,32 +159,6 @@ const QuizPage = ({
                     onPatchProgress(tId, updatesByTheme[tId]);
                 });
             }
-=======
-        if (onFinishQuiz && theme) {
-            onFinishQuiz(theme.id, score, questions.length, answers);
-        }
-
-        // Check for corrections in revision mode
-        if (onMistakesCorrected && theme && theme.id.includes('erreurs')) {
-            const corrections = answers
-                .filter(a => a.isCorrect)
-                .map(a => {
-                    const q = questions.find(q => q.id === a.questionId);
-                    return q && q.sourceThemeId ? { themeId: q.sourceThemeId, questionId: q.id } : null;
-                })
-                .filter(Boolean);
-
-            console.log("QuizPage: Generated corrections:", corrections); // DEBUG LOG
-
-            if (corrections.length > 0) {
-                console.log("QuizPage: Calling onMistakesCorrected"); // DEBUG LOG
-                onMistakesCorrected(corrections);
-            } else {
-                console.log("QuizPage: No corrections generated (maybe sourceThemeId missing or no correct answers?)");
-            }
-        } else {
-            console.log("QuizPage: Not triggering corrections. onMistakesCorrected:", !!onMistakesCorrected, "theme:", theme);
->>>>>>> 9f4b4031ef3de6b9da275ca6f157967228dda77b
         }
 
         // Navigate to results
@@ -209,14 +173,9 @@ const QuizPage = ({
                 },
                 questions: questions,
                 total: questions.length,
-<<<<<<< HEAD
                 isExamMode: theme.id.includes('examen'),
                 // If it was a review, results page can perhaps show "Révision terminée"
                 isReviewSession: isReviewMode
-=======
-                isExamMode: theme && theme.id.includes('examen'),
-                themeId: theme ? theme.id : null
->>>>>>> 9f4b4031ef3de6b9da275ca6f157967228dda77b
             }
         });
     };
