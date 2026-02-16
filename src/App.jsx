@@ -8,8 +8,8 @@ import LessonPage from './pages/LessonPage';
 import TopControls from './components/TopControls';
 import { loadThemeQuestions, loadThemesIndex } from './utils/contentLoader';
 
-import { auth } from './utils/firebase';
-import { fetchFileContent, getUser } from './utils/githubClient';
+import { auth, db } from './utils/firebase';
+import { doc, getDoc, setDoc } from 'firebase/firestore';
 
 function App() {
   useEffect(() => {
@@ -21,7 +21,6 @@ function App() {
   const [colorTheme, setColorTheme] = useState('light');
   const [instantFeedback, setInstantFeedback] = useState(false);
   const [autoPlayAudio, setAutoPlayAudio] = useState(false);
-  const [repoOwner, setRepoOwner] = useState('skyreks00'); // Default owner
   const [syncStatus, setSyncStatus] = useState(null); // 'syncing', 'success', 'error', 'pending'
   
   const isLocalUpdate = useRef(false);
@@ -108,23 +107,9 @@ function App() {
     // AUTH & AUTO-SYNC PULL
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
         if (user) {
-            console.log("👤 User logged in:", user.displayName);
-            const token = localStorage.getItem('github_token');
-            if (token) {
-                // Fetch GitHub user to determine the correct repository owner
-                try {
-                    const ghUser = await getUser(token);
-                    if (ghUser && ghUser.login) {
-                        console.log("⚓ GitHub Owner established:", ghUser.login);
-                        setRepoOwner(ghUser.login);
-                        // Trigger auto-pull on login with the correct owner
-                        pullFromCloud(token, ghUser.login);
-                    }
-                } catch (e) {
-                    console.error("Failed to fetch GitHub user:", e);
-                    pullFromCloud(token, repoOwner);
-                }
-            }
+            console.log("👤 User logged in:", user.displayName || user.email);
+            // Trigger auto-pull from Firestore
+            pullFromCloud();
         }
     });
 
@@ -139,15 +124,14 @@ function App() {
       if (isLocalUpdate.current) {
           isLocalUpdate.current = false;
           
-          const token = localStorage.getItem('github_token');
-          if (token) {
+          if (auth.currentUser) {
               if (debounceTimer.current) clearTimeout(debounceTimer.current);
               
-              setSyncStatus('pending'); // Visual hint if needed
+              setSyncStatus('pending');
               
               debounceTimer.current = setTimeout(() => {
-                  syncToCloud(progress, token);
-              }, 2500); // 2.5s debounce
+                  syncToCloud(progress);
+              }, 2500);
           }
       }
   }, [progress]);
@@ -212,27 +196,19 @@ function App() {
     });
   };
 
-  const syncToCloud = async (data, token) => {
+  const syncToCloud = async (data) => {
        try {
+           const user = auth.currentUser;
+           if (!user) return;
+
            setSyncStatus('syncing');
-           const { saveFileContent } = await import('./utils/githubClient');
+           console.log(`☁️ Auto-syncing to Firestore (${user.uid})...`);
            
-           console.log(`☁️ Auto-syncing to cloud (${repoOwner})...`);
+           await setDoc(doc(db, 'users', user.uid), data);
            
-           const result = await saveFileContent(
-               token, 
-               repoOwner, 
-               'permis-online-free', 
-               'user_data/progress.json', 
-               JSON.stringify(data, null, 2), 
-               'chore: auto-sync user progress'
-           );
-           
-           if(result.success) {
-               console.log("☁️ Auto-sync complete!");
-               setSyncStatus('success');
-               setTimeout(() => setSyncStatus(null), 3000);
-           }
+           console.log("☁️ Auto-sync complete!");
+           setSyncStatus('success');
+           setTimeout(() => setSyncStatus(null), 3000);
        } catch (e) {
            console.error("☁️ Auto-sync failed:", e);
            setSyncStatus('error');
@@ -240,33 +216,23 @@ function App() {
        }
   };
 
-  const pullFromCloud = async (token, overrideOwner = null) => {
+  const pullFromCloud = async () => {
       try {
-          const owner = overrideOwner || repoOwner;
-          setSyncStatus('syncing');
-          console.log(`☁️ Auto-pulling from GitHub (${owner})...`);
-          
-          // 0. Check if repo exists first to avoid 404 console noise
-          const octokit = (await import('./utils/githubClient')).getOctokit(token);
-          try {
-              await octokit.rest.repos.get({ owner, repo: 'permis-online-free' });
-          } catch (repoErr) {
-              if (repoErr.status === 404) {
-                  console.warn(`🛑 Repository ${owner}/permis-online-free not found. Fork needed.`);
-                  setSyncStatus('error');
-                  return;
-              }
-              throw repoErr;
-          }
+          const user = auth.currentUser;
+          if (!user) return;
 
-          const result = await fetchFileContent(token, owner, 'permis-online-free', 'user_data/progress.json');
+          setSyncStatus('syncing');
+          console.log(`☁️ Auto-pulling from Firestore (${user.uid})...`);
           
-          if (!result || !result.content) {
+          const docSnap = await getDoc(doc(db, 'users', user.uid));
+          
+          if (!docSnap.exists()) {
+              console.log("☁️ No remote data found.");
               setSyncStatus(null);
               return;
           }
 
-          const remoteProgress = JSON.parse(result.content);
+          const remoteProgress = docSnap.data();
           const savedProgress = JSON.parse(localStorage.getItem('quizProgress') || '{}');
           
           // 1. Check for Cross-Device Reset
