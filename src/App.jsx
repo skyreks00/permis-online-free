@@ -311,7 +311,7 @@ function App() {
         <Route
           path="/resultats"
           element={
-            <Results
+            <ResultsPage
               toggleTheme={toggleTheme}
               isDarkMode={isDarkMode}
             />
