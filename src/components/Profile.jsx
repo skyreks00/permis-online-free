@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from 'react';
+import { Trophy, Target, AlertTriangle, Clock, Settings, ArrowLeft, CheckCircle2, Circle, Volume2, User, LogOut, Key, Github, Save, Filter, RefreshCcw } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { loadThemeQuestions } from '../utils/contentLoader';
 import { loginWithGitHub, logout, auth } from '../utils/firebase';
