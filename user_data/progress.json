@@ -3,26 +3,26 @@
     "lastResetAll": "2026-02-16T22:49:24.772Z"
   },
   "debug_quiz": {
-    "score": 0,
+    "score": 2,
     "total": 3,
-    "date": "2026-02-16T22:57:50.008Z",
+    "date": "2026-02-16T22:58:31.475Z",
     "answers": [
       {
         "questionId": 1,
-        "userAnswer": "C",
+        "userAnswer": "A",
         "correctAnswer": "A",
-        "isCorrect": false
+        "isCorrect": true
+      },
+      {
+        "questionId": 2,
+        "userAnswer": "A",
+        "correctAnswer": "A",
+        "isCorrect": true
       },
       {
         "questionId": 3,
         "userAnswer": "A",
         "correctAnswer": "B",
-        "isCorrect": false
-      },
-      {
-        "questionId": 2,
-        "userAnswer": "B",
-        "correctAnswer": "A",
         "isCorrect": false
       }
     ]
