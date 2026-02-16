@@ -17,7 +17,9 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
         return { score, total };
     };
 
-    const progressValues = Object.values(progress);
+    const progressValues = Object.entries(progress)
+        .filter(([key]) => key !== 'metadata')
+        .map(([, value]) => value);
     const totalQuizzes = progressValues.length;
     
     const globalStats = progressValues.reduce((acc, p) => {
@@ -35,7 +37,7 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
 
     const statedThemes = (themesData.sections || [])
         .flatMap(section => section.items || section.themes || [])
-        .filter(t => t && t.id && progress[t.id]);
+        .filter(t => t && t.id && t.id !== 'metadata' && progress[t.id]);
 
     const filteredThemes = showErrorsOnly 
         ? statedThemes.filter(t => {

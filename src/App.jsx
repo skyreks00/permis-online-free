@@ -142,15 +142,19 @@ function App() {
 
   const saveProgress = (themeId, score, total, answers) => {
     isLocalUpdate.current = true;
-    setProgress(prev => ({
-      ...prev,
-      [themeId]: {
-        score,
-        total,
-        date: new Date().toISOString(),
-        answers // Save answers for review
-      }
-    }));
+    setProgress(prev => {
+      const { metadata, ...rest } = prev;
+      return {
+        ...rest,
+        metadata: metadata || {},
+        [themeId]: {
+          score,
+          total,
+          date: new Date().toISOString(),
+          answers // Save answers for review
+        }
+      };
+    });
   };
 
   /**
@@ -182,8 +186,10 @@ function App() {
 
         const newScore = updatedAnswers.filter(a => a.isCorrect).length;
 
+        const { metadata, ...rest } = prev;
         return {
-            ...prev,
+            ...rest,
+            metadata: metadata || {},
             [themeId]: {
                 ...currentThemeProgress,
                 answers: updatedAnswers,
@@ -236,10 +242,47 @@ function App() {
           const remoteProgress = JSON.parse(result.content);
           const savedProgress = JSON.parse(localStorage.getItem('quizProgress') || '{}');
           
-          // Merge logic
+          // 1. Check for Cross-Device Reset
+          const remoteReset = remoteProgress.metadata?.lastResetAll;
+          const localReset = savedProgress.metadata?.lastResetAll;
+          
+          // If remote reset is newer than local reset OR newer than ANY local activity
+          if (remoteReset) {
+              const rResetTime = new Date(remoteReset).getTime();
+              const lResetTime = localReset ? new Date(localReset).getTime() : 0;
+              
+              // Find latest local activity timestamp
+              const latestLocalActivity = Object.values(savedProgress).reduce((latest, item) => {
+                  if (!item || !item.date) return latest;
+                  const itemTime = new Date(item.date).getTime();
+                  return Math.max(latest, itemTime);
+              }, 0);
+
+              if (rResetTime > lResetTime && rResetTime > latestLocalActivity) {
+                  console.log("⚠️ Remote Reset detected. Clearing local progress.");
+                  setProgress(remoteProgress);
+                  localStorage.setItem('quizProgress', JSON.stringify(remoteProgress));
+                  setSyncStatus('success');
+                  setTimeout(() => setSyncStatus(null), 3000);
+                  return;
+              }
+          }
+
+          // 2. Normal Merge logic
+          const { metadata, ...cleanRemote } = remoteProgress;
           const newProgress = { ...savedProgress };
-          Object.keys(remoteProgress).forEach(themeId => {
-              const r = remoteProgress[themeId];
+          
+          // Preserve local metadata or take remote if newer
+          if (remoteReset) {
+              const rResetTime = new Date(remoteReset).getTime();
+              const lResetTime = localReset ? new Date(localReset).getTime() : 0;
+              if (rResetTime > lResetTime) {
+                  newProgress.metadata = { ...newProgress.metadata, lastResetAll: remoteReset };
+              }
+          }
+
+          Object.keys(cleanRemote).forEach(themeId => {
+              const r = cleanRemote[themeId];
               const l = newProgress[themeId];
               
               const rDate = r.date ? new Date(r.date).getTime() : 0;
@@ -263,9 +306,15 @@ function App() {
   };
 
   const handleResetProgress = () => {
-    if (window.confirm('Êtes-vous sûr de vouloir réinitialiser toute votre progression ?')) {
-      setProgress({});
-      localStorage.removeItem('quizProgress');
+    if (window.confirm('Êtes-vous sûr de vouloir réinitialiser toute votre progression sur TOUS vos appareils ?')) {
+      const resetData = { 
+          metadata: { 
+              lastResetAll: new Date().toISOString() 
+          } 
+      };
+      isLocalUpdate.current = true;
+      setProgress(resetData);
+      localStorage.setItem('quizProgress', JSON.stringify(resetData));
     }
   };
 
