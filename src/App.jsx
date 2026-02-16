@@ -124,15 +124,19 @@ function App() {
       if (isLocalUpdate.current) {
           isLocalUpdate.current = false;
           
-          if (auth.currentUser) {
-              if (debounceTimer.current) clearTimeout(debounceTimer.current);
-              
-              setSyncStatus('pending');
-              
-              debounceTimer.current = setTimeout(() => {
-                  syncToCloud(progress);
-              }, 2500);
-          }
+          // Use an observer to wait for current user if needed
+          const unsubscribe = auth.onAuthStateChanged((user) => {
+              if (user) {
+                  if (debounceTimer.current) clearTimeout(debounceTimer.current);
+                  setSyncStatus('pending');
+                  
+                  debounceTimer.current = setTimeout(() => {
+                      syncToCloud(progress);
+                  }, 2500);
+              }
+              // Only run once per update
+              unsubscribe();
+          });
       }
   }, [progress]);
 
