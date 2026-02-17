@@ -484,19 +484,19 @@
     {
       "id": 27,
       "type": "multiple_choice",
-      "question": "Qui a la priorité ?",
+      "question": "Qui a la priorité à cette intersection ?",
       "propositions": [
         {
           "letter": "A",
-          "text": "Voiture"
+          "text": "La voiture arrivant de la droite"
         },
         {
           "letter": "B",
-          "text": "Voiture"
+          "text": "La voiture arrivant de la gauche"
         }
       ],
-      "correctAnswer": "A",
-      "explanation": "À cette intersection la priorité de droite ne s’applique pas.",
+      "correctAnswer": "B",
+      "explanation": "À cette intersection, la priorité de droite s'applique.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/6.jpg"
     },
     {
