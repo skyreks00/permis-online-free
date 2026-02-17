@@ -758,15 +758,15 @@
       "propositions": [
         {
           "letter": "A",
-          "text": "Voiture"
+          "text": "La voiture A"
         },
         {
           "letter": "B",
-          "text": "Voiture"
+          "text": "La voiture B"
         }
       ],
       "correctAnswer": "A",
-      "explanation": "Le signal routier indique que la voiture B doit donner la priorité et si nécessaire s’arrêter.",
+      "explanation": "Le signal routier indique que la voiture B doit donner la priorité et s'arrêter si nécessaire.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/8.jpg"
     }
   ]
