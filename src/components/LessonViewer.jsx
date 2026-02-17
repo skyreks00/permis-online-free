@@ -304,15 +304,6 @@ const LessonViewer = ({ lessonFile, quizId, onBack, onStartQuiz, theme }) => {
                     <ArrowLeft size={16} /> Retour
                 </button>
                 <span style={{ fontWeight: 600, fontSize: '1.1rem', flex: 1 }}>Leçon</span>
-                {quizId && (
-                    <button 
-                        className="btn-primary" 
-                        onClick={() => onStartQuiz(quizId)}
-                        style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '8px 16px' }}
-                    >
-                        Démarrer le Quiz
-                    </button>
-                )}
             </div>
             <div style={{ flex: 1, display: 'flex', overflow: 'hidden', position: 'relative' }}>
                 <div style={{
