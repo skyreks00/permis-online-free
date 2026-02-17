@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { BookOpen, X, CheckCircle, ArrowLeftRight } from "lucide-react";
+import { BookOpen, X, CheckCircle } from "lucide-react";
 
 const QuestionCard = ({
   question,
@@ -234,22 +234,7 @@ const QuestionCard = ({
     return answer === selectedAnswer ? "selected" : "dimmed";
   };
 
-  const handleSwapProps = () => {
-    if (!fixedQuestion || !fixedQuestion.propositions || fixedQuestion.propositions.length < 2) return;
-    
-    setFixedQuestion(prev => {
-      const newProps = [...prev.propositions];
-      const tempText = newProps[0].text;
-      newProps[0] = { ...newProps[0], text: newProps[1].text };
-      newProps[1] = { ...newProps[1], text: tempText };
-      
-      let newCorrect = prev.correctAnswer;
-      if (newCorrect === prev.propositions[0].letter) newCorrect = prev.propositions[1].letter;
-      else if (newCorrect === prev.propositions[1].letter) newCorrect = prev.propositions[0].letter;
-      
-      return { ...prev, propositions: newProps, correctAnswer: newCorrect };
-    });
-  };
+
 
   const handleFixQuestion = async () => {
     const apiKey = localStorage.getItem("groq_api_key");
@@ -412,15 +397,6 @@ const QuestionCard = ({
                 <span>MASTER</span>
               </div>
               <div className="correction-actions">
-                <button
-                  onClick={handleSwapProps}
-                  className="btn-cancel"
-                  title="Inverser les réponses"
-                  disabled={savingState === "saving"}
-                  style={{ padding: '4px 8px' }}
-                >
-                  <ArrowLeftRight size={16} />
-                </button>
                 <button
                   onClick={() => setFixedQuestion(null)}
                   className="btn-cancel"
@@ -628,7 +604,7 @@ const QuestionCard = ({
                     >
                       {prop.letter}
                     </div>
-                    {isCorrectionMode ? (
+                    {isCorrectionMode && !['oui', 'non', 'vrai', 'faux'].includes(prop.text.toLowerCase().trim()) ? (
                       <div className="correction-answer-wrapper">
                          <input 
                           className="correction-answer-input"
