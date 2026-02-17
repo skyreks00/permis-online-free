@@ -408,19 +408,19 @@
     {
       "id": 23,
       "type": "multiple_choice",
-      "question": "La voiture A quitte la propriété.Qui a la priorité?",
+      "question": "La voiture A quitte la propriété. Qui a la priorité ?",
       "propositions": [
         {
           "letter": "A",
-          "text": "Voiture"
+          "text": "La voiture A"
         },
         {
           "letter": "B",
-          "text": "Voiture"
+          "text": "La voiture B"
         }
       ],
       "correctAnswer": "B",
-      "explanation": "Un conducteur qui quitte l’accès carrossable prive doit s’arrêter et céder le passage aux usagers (y compris aux piétons) qui se trouvent sur la chaussée.",
+      "explanation": "Un conducteur qui quitte un accès carrossable privé doit s'arrêter et céder le passage aux usagers (y compris aux piétons) qui se trouvent sur la chaussée.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/9.jpg"
     },
     {
