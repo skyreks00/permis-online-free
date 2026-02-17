@@ -118,15 +118,15 @@
       "propositions": [
         {
           "letter": "A",
-          "text": "Signal"
+          "text": "Signal annonçant un cassis ou un dos d'âne"
         },
         {
           "letter": "B",
-          "text": "Signal"
+          "text": "Signal annonçant un dispositif surélevé à 150m"
         }
       ],
       "correctAnswer": "B",
-      "explanation": "Les deux signaux routiers sont des signaux de danger.La signification du signal de A est cassis ou dos d'âne.",
+      "explanation": "Le signal B annonce un dispositif surélevé à 150m, tandis que le signal A annonce un cassis ou un dos d'âne.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/65/6.jpg"
     },
     {
