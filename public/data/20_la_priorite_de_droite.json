@@ -702,19 +702,19 @@
     {
       "id": 40,
       "type": "multiple_choice",
-      "question": "Un rétrécissement de la chaussée.Qui a la priorité ?",
+      "question": "Un rétrécissement de la chaussée, qui a la priorité ?",
       "propositions": [
         {
           "letter": "A",
-          "text": "Voiture"
+          "text": "La voiture B"
         },
         {
           "letter": "B",
-          "text": "Voiture"
+          "text": "La voiture A"
         }
       ],
-      "correctAnswer": "B",
-      "explanation": "La voiture B vient de la droite.",
+      "correctAnswer": "A",
+      "explanation": "Dans un rétrécissement de la chaussée, la priorité est généralement donnée à la voiture qui vient de la droite, sauf indication contraire.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/84/11.jpg"
     },
     {
