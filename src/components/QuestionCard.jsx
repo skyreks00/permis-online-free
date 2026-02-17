@@ -397,48 +397,55 @@ const QuestionCard = ({
         )}
       </div>
 
-      {isCorrectionMode &&
-        (savingState === null || savingState === "error") && (
-          <div className="p-4 mb-6 rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-xl flex flex-col gap-4 animate-in fade-in zoom-in-95 duration-500 shadow-2xl">
-            <div className="flex justify-between items-center text-xs">
-              <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-warning/10 border border-warning/20">
-                <div className="w-1.5 h-1.5 rounded-full bg-warning animate-pulse" />
-                <span className="font-bold text-warning uppercase tracking-widest text-[10px]">
-                  Édition Master
-                </span>
-              </div>
-              <div className="flex gap-2">
-                <button
-                  onClick={() => setFixedQuestion(null)}
-                  className="px-4 py-2 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] text-white/70 hover:text-white transition-all border border-white/5"
-                  disabled={savingState === "saving"}
-                >
-                  Annuler
-                </button>
-                <button
-                  onClick={handleConfirmFix}
-                  className="px-5 py-2 rounded-xl bg-warning text-black font-bold hover:shadow-[0_0_20px_rgba(255,193,7,0.3)] transition-all active:scale-95"
-                  disabled={savingState === "saving"}
-                >
-                  {savingState === "saving" ? "Sauvegarde..." : "Enregistrer"}
-                </button>
-              </div>
-            </div>
-            <textarea
-              className="w-full bg-transparent p-4 text-sm text-white/90 rounded-xl border border-white/5 outline-none focus:border-warning/30 transition-all placeholder:text-white/20 resize-none font-light leading-relaxed scrollbar-hide"
-              rows={2}
-              placeholder="Pourquoi cette correction est-elle nécessaire ? (Optionnel)"
-              value={fixedQuestion.explanation || ""}
-              onChange={(e) => updateFixedField("explanation", e.target.value)}
-              disabled={!!savingState}
-            />
-            {savingState === "error" && (
-              <div className="text-danger text-[11px] font-medium px-2 flex items-center gap-1">
-                <X size={12} /> {saveMessage}
-              </div>
-            )}
+      {isCorrectionMode && (
+        <div className="correction-toolbar">
+          {/* Status Badge */}
+          <div className="correction-badge">
+            <div className="correction-badge-dot" />
+            <span>ÉDITION MASTER</span>
           </div>
-        )}
+
+          {/* Action Buttons */}
+          <div className="correction-actions">
+            <button
+              onClick={() => setFixedQuestion(null)}
+              className="btn-cancel"
+              disabled={savingState === "saving"}
+            >
+              Annuler
+            </button>
+            <button
+              onClick={handleConfirmFix}
+              className="btn-save"
+              disabled={savingState === "saving"}
+            >
+              {savingState === "saving" ? "..." : "Enregistrer"}
+            </button>
+          </div>
+        </div>
+      )}
+
+      {isCorrectionMode && (
+        <div className="correction-floating-bar">
+           <div className="correction-input-wrapper">
+              <textarea
+                className="correction-explanation-input"
+                rows={1} 
+                placeholder="Message de commit / explication..."
+                value={fixedQuestion.explanation || ""}
+                onChange={(e) => updateFixedField("explanation", e.target.value)}
+                onFocus={(e) => e.target.rows = 3} 
+                onBlur={(e) => !e.target.value && (e.target.rows = 1)}
+                disabled={!!savingState}
+              />
+               {savingState === "error" && (
+                <div className="correction-error-msg">
+                   <X size={12} /> {saveMessage}
+                </div>
+              )}
+           </div>
+        </div>
+      )}
 
       {/* Global Toast for Success */}
       {(savingState === "success" || savingState === "saving") && (
@@ -515,9 +522,9 @@ const QuestionCard = ({
           <div className="question-text">
             <div>
               {isCorrectionMode ? (
-                <div className="relative">
+                <div className="correction-question-container">
                   <textarea
-                    className="question-text-inner w-full bg-transparent p-0 border-none outline-none focus:ring-0 transition-all resize-none overflow-hidden text-warning font-bold leading-relaxed placeholder:text-warning/20"
+                    className="correction-question-input"
                     value={fixedQuestion.question}
                     onChange={(e) => updateFixedField("question", e.target.value)}
                     onInput={(e) => {
@@ -525,9 +532,8 @@ const QuestionCard = ({
                       e.target.style.height = e.target.scrollHeight + 'px';
                     }}
                     disabled={!!savingState}
-                    autoFocus
                   />
-                  <div className="h-px w-full bg-gradient-to-r from-warning/50 to-transparent mt-1" />
+                  <div className="correction-underline" />
                 </div>
               ) : (
                 <div className="question-text-inner">
@@ -581,14 +587,16 @@ const QuestionCard = ({
                       {prop.letter}
                     </div>
                     {isCorrectionMode ? (
-                      <div className="flex-1 border-b border-white/5 focus-within:border-warning/30 transition-all ml-1">
-                        <input 
-                          className="answer-text !bg-transparent border-none outline-none w-full text-white/90 font-medium py-1"
+                      <div className="correction-answer-wrapper">
+                         <input 
+                          className="correction-answer-input"
                           value={prop.text}
                           onChange={(e) => updateFixedProposition(idx, e.target.value)}
                           onClick={(e) => e.stopPropagation()}
                           disabled={!!savingState}
+                          placeholder="Texte de la réponse..."
                         />
+                        <div className="correction-answer-underline" />
                       </div>
                     ) : (
                       <div className="answer-text">{prop.text}</div>
