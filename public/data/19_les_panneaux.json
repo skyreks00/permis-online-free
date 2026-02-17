@@ -122,15 +122,15 @@
       "propositions": [
         {
           "letter": "A",
-          "text": "Voiture"
+          "text": "La voiture A"
         },
         {
           "letter": "B",
-          "text": "Voiture"
+          "text": "La voiture B"
         }
       ],
       "correctAnswer": "B",
-      "explanation": "Le signal routier à côté de la voiture B indique que le conducteur a la priorité à ce carrefour.",
+      "explanation": "Le signal routier à côté de la voiture B indique que son conducteur a la priorité à ce carrefour.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/38.jpg"
     },
     {
