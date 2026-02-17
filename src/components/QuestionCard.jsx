@@ -430,6 +430,7 @@ const QuestionCard = ({
               placeholder="Pourquoi cette correction est-elle nécessaire ? (Optionnel)"
               value={fixedQuestion.explanation || ""}
               onChange={(e) => updateFixedField("explanation", e.target.value)}
+              disabled={!!savingState}
             />
             {savingState === "error" && (
               <div className="text-danger text-[11px] font-medium px-2 flex items-center gap-1">
@@ -523,6 +524,7 @@ const QuestionCard = ({
                       e.target.style.height = 'auto';
                       e.target.style.height = e.target.scrollHeight + 'px';
                     }}
+                    disabled={!!savingState}
                     autoFocus
                   />
                   <div className="h-px w-full bg-gradient-to-r from-warning/50 to-transparent mt-1" />
@@ -559,11 +561,11 @@ const QuestionCard = ({
                 return (
                   <button
                     key={`${prop.letter}-${idx}`}
-                    className={`answer-btn !bg-transparent border-none shadow-none transition-all duration-300
-                      ${isCorrectionMode ? "opacity-80 hover:opacity-100" : ""}
+                    className={`answer-btn transition-all duration-300 ${getButtonClass(prop.letter)} 
+                      ${isCorrectionMode ? "!bg-transparent border-none shadow-none opacity-80 hover:opacity-100" : ""}
                       ${isCorrectionMode && prop.letter === fixedQuestion.correctAnswer ? "scale-[1.02] !opacity-100" : ""}`}
                     onClick={() => isCorrectionMode ? toggleCorrectAnswer(prop.letter) : handleAnswer(prop.letter)}
-                    disabled={savingState === "saving"}
+                    disabled={savingState === "saving" || (savingState === "success" && isCorrectionMode)}
                   >
                     <div 
                       className={`answer-key shrink-0 transition-all !bg-transparent border border-white/10
@@ -585,6 +587,7 @@ const QuestionCard = ({
                           value={prop.text}
                           onChange={(e) => updateFixedProposition(idx, e.target.value)}
                           onClick={(e) => e.stopPropagation()}
+                          disabled={!!savingState}
                         />
                       </div>
                     ) : (
