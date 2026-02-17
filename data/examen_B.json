@@ -1,7 +1,7 @@
 {
   "id": "examen_B",
   "name": "examen B",
-  "totalQuestions": 1486,
+  "totalQuestions": 1501,
   "questions": [
     {
       "id": 1,
@@ -9924,6 +9924,28 @@
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1068.jpg"
     },
     {
+      "id": 582,
+      "type": "multiple_choice",
+      "question": "Combien de temps la voiture rouge peut-elle être garée à cet endroit ?",
+      "correctAnswer": "B",
+      "explanation": "La limite de temps commence seulement à partir du panneau, parce que la flèche pointe vers le haut.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/970.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "30 minutes"
+        },
+        {
+          "letter": "B",
+          "text": "Le temps que l'on souhaite"
+        },
+        {
+          "letter": "C",
+          "text": "Jusqu'à la fin de la zone bleue"
+        }
+      ]
+    },
+    {
       "id": 583,
       "type": "multiple_choice",
       "question": "Une chaussée sans marquage routier à l’intérieur d’une agglomération.Cette voiture est-elle correctement stationnée ?",
@@ -11200,6 +11222,28 @@
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/684.jpg"
     },
     {
+      "id": 665,
+      "type": "multiple_choice",
+      "question": "De combien de personnes un groupe de cyclistes doit-il être accompagné d'au moins 2 superviseurs ?",
+      "correctAnswer": "C",
+      "explanation": "À partir de 51 cyclistes.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1071.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "À partir de 15 cyclistes"
+        },
+        {
+          "letter": "B",
+          "text": "À partir de 31 cyclistes"
+        },
+        {
+          "letter": "C",
+          "text": "À partir de 51 cyclistes"
+        }
+      ]
+    },
+    {
       "id": 666,
       "type": "number",
       "question": "*** Question de 5 points ***Introduisez un nombre.Quelle est la vitesse maximale (... km/h) à laquelle l’on peut rouler en voiture sur cette route ?",
@@ -11346,6 +11390,28 @@
       "correctAnswer": "B",
       "explanation": "Lorsqu’il existe une piste cyclable, le cycliste est obligé de l’emprunter (sauf si elle est impraticable).Il est interdit de circuler sur le trottoir à vélo en agglomération, sauf pour les enfants de moins de 10 ans, qui peuvent toujours rouler sur le trottoir ou sur la berme surélevée.Hors agglomération, les cyclistes peuvent, s’il n’existe pas de piste cyclable praticable et à condition de rouler à droite dans le sens de la circulation, circuler sur le trottoir ou sur la berme surélevée.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1448.jpg"
+    },
+    {
+      "id": 675,
+      "type": "multiple_choice",
+      "question": "Vous avez endommagé une autre voiture en vous garant. Vous ne savez pas qui en est le propriétaire. Combien de temps avez-vous pour faire une déclaration au commissariat de police ?",
+      "correctAnswer": "C",
+      "explanation": "Si vous endommagez la propriété de quelqu’un et que la police ne peut pas se déplacer, vous devez faire une déclaration le plus vite possible.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1152.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Dans les 24 heures"
+        },
+        {
+          "letter": "B",
+          "text": "Dans les 12 heures"
+        },
+        {
+          "letter": "C",
+          "text": "Aussitôt que possible (sans délai)"
+        }
+      ]
     },
     {
       "id": 676,
@@ -12642,6 +12708,28 @@
       "correctAnswer": "NON",
       "explanation": "Les voitures au carrefour peuvent partir.La voiture bleue ne peut pas franchir le feu rouge.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/475.jpg"
+    },
+    {
+      "id": 755,
+      "type": "multiple_choice",
+      "question": "Disque de stationnement dans une zone bleue. Combien de temps pouvez-vous stationner par défaut ?",
+      "correctAnswer": "C",
+      "explanation": "Sauf indication contraire, le disque autorise le stationnement pendant 2 heures.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1019.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "30 minutes"
+        },
+        {
+          "letter": "B",
+          "text": "1 heure"
+        },
+        {
+          "letter": "C",
+          "text": "2 heures"
+        }
+      ]
     },
     {
       "id": 756,
@@ -14016,6 +14104,28 @@
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1508.jpg"
     },
     {
+      "id": 836,
+      "type": "multiple_choice",
+      "question": "À partir de combien de cyclistes dans un groupe faut-il deux capitaines de route ?",
+      "correctAnswer": "C",
+      "explanation": "Les cyclistes qui roulent en groupe de 51 à 150 participants doivent être accompagnés de deux capitaines de route.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1509.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "15"
+        },
+        {
+          "letter": "B",
+          "text": "31"
+        },
+        {
+          "letter": "C",
+          "text": "51"
+        }
+      ]
+    },
+    {
       "id": 837,
       "type": "multiple_choice",
       "question": "Vous approchez de ce carrefour et vous voulez tourner à droite.",
@@ -14622,6 +14732,28 @@
       "correctAnswer": "90",
       "explanation": "La vitesse maximale sur une route ordinaire est…… en Wallonne: 90 km/h;… en Flandre: 70 km/h.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/314.jpg"
+    },
+    {
+      "id": 874,
+      "type": "multiple_choice",
+      "question": "Un groupe de cyclistes doit être composé d’au moins combien de personnes pour nécessiter obligatoirement deux capitaines de route ?",
+      "correctAnswer": "B",
+      "explanation": "Si le groupe compte au moins 51 cyclistes, il doit obligatoirement être encadré par au moins deux capitaines de route.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1139.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "15"
+        },
+        {
+          "letter": "B",
+          "text": "51"
+        },
+        {
+          "letter": "C",
+          "text": "151"
+        }
+      ]
     },
     {
       "id": 875,
@@ -17260,6 +17392,28 @@
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/376.jpg"
     },
     {
+      "id": 1029,
+      "type": "multiple_choice",
+      "question": "Ce signal routier interdit l'accès aux conducteurs transportant quelles marchandises ?",
+      "correctAnswer": "B",
+      "explanation": "Accès interdit aux conducteurs de véhicules transportant des marchandises dangereuses peu importe le type de danger.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1483.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "Matières inflammables uniquement"
+        },
+        {
+          "letter": "B",
+          "text": "Matières dangereuses de toute nature"
+        },
+        {
+          "letter": "C",
+          "text": "Produits chimiques uniquement"
+        }
+      ]
+    },
+    {
       "id": 1030,
       "type": "yes_no",
       "question": "Pouvez-vous demander un délai de 15 minutes si vous devez vous soumettre à une analyse de l’haleine ?",
@@ -17870,6 +18024,28 @@
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/959.jpg"
     },
     {
+      "id": 1067,
+      "type": "multiple_choice",
+      "question": "Quelle distance de sécurité minimale (temps) devez-vous laisser entre vous et le véhicule qui vous précède ?",
+      "correctAnswer": "A",
+      "explanation": "La distance de sécurité doit être d'au moins 2 secondes.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1106.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "2 secondes"
+        },
+        {
+          "letter": "B",
+          "text": "1 seconde"
+        },
+        {
+          "letter": "C",
+          "text": "3 secondes"
+        }
+      ]
+    },
+    {
       "id": 1068,
       "type": "multiple_choice",
       "question": "Que peut faire le conducteur de cette voiture à cet endroit ?",
@@ -17944,6 +18120,28 @@
       "correctAnswer": "B",
       "explanation": "0Aux carrefours où : il n’y a ni agent qualifié, ni feux de signalisation, ni signaux routiers réglant la priorité, la règle de la priorité de droite s’applique. Cela signifie que tout conducteur (voiture, motocyclette, cyclomoteur à deux roues ou vélo) doit céder le passage au conducteur venant de droite, sauf s’il circule sur un rond-point ou si le conducteur venant de droite sort d’une direction interdite.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1300.jpg"
+    },
+    {
+      "id": 1072,
+      "type": "multiple_choice",
+      "question": "Vous roulez trop vite en Zone 30. À partir de quel excès de vitesse la police peut-elle retirer votre permis sur-le-champ ?",
+      "correctAnswer": "A",
+      "explanation": "À partir d’un excès de 20 km/h en agglomération ou zone 30.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/328.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "20 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "30 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "40 km/h"
+        }
+      ]
     },
     {
       "id": 1073,
@@ -18684,6 +18882,28 @@
       "correctAnswer": "C",
       "explanation": "Il se dirige vers le ventre de l’agent et doit s’arrêter.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/448.jpg"
+    },
+    {
+      "id": 1118,
+      "type": "multiple_choice",
+      "question": "Ce signal interdit l'accès aux véhicules transportant des marchandises qui peuvent polluer quoi ?",
+      "correctAnswer": "A",
+      "explanation": "Accès interdit aux véhicules transportant des marchandises susceptibles de polluer les eaux.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/254.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "L'eau"
+        },
+        {
+          "letter": "B",
+          "text": "L'air"
+        },
+        {
+          "letter": "C",
+          "text": "Le sol"
+        }
+      ]
     },
     {
       "id": 1119,
@@ -19998,6 +20218,28 @@
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1234.jpg"
     },
     {
+      "id": 1195,
+      "type": "multiple_choice",
+      "question": "La profondeur minimale des rainures d’un pneu doit être de (...) mm.",
+      "correctAnswer": "A",
+      "explanation": "Au moins 1,6 mm.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/889.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "1,6 mm"
+        },
+        {
+          "letter": "B",
+          "text": "1,0 mm"
+        },
+        {
+          "letter": "C",
+          "text": "2,0 mm"
+        }
+      ]
+    },
+    {
       "id": 1196,
       "type": "multiple_choice",
       "question": "Sur une bande de bus, il est interdit de …",
@@ -20284,6 +20526,28 @@
       "correctAnswer": "B",
       "explanation": "Infraction du 4ᵉ degréLes infractions du quatrième degré sont les plus graves.Elles mettent directement en danger la sécurité des personnes et, en cas d’accident, entraînent presque inévitablement des dommages physiques.Exemples :- ignorer les injonctions d’une personne compétente,- ne pas respecter la signalisation d’un passage à niveau,- stationner ou arrêter son véhicule sur un passage à niveau,- inciter à une vitesse excessive,- organiser ou participer à des courses de vitesse sur la voie publique,- dépasser par la gauche dans une côte ou dans un virage lorsque c’est interdit,- faire marche arrière ou circuler en sens inverse sur une autoroute ou sur une route pour automobiles.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1503.jpg"
+    },
+    {
+      "id": 1212,
+      "type": "multiple_choice",
+      "question": "Mon véhicule est en panne. Combien de temps ma voiture peut-elle rester sur la voie publique ?",
+      "correctAnswer": "C",
+      "explanation": "Un véhicule en panne peut rester au maximum 24 heures sur la voie publique.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1197.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "2 heures"
+        },
+        {
+          "letter": "B",
+          "text": "12 heures"
+        },
+        {
+          "letter": "C",
+          "text": "24 heures"
+        }
+      ]
     },
     {
       "id": 1213,
@@ -22210,6 +22474,28 @@
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1047.jpg"
     },
     {
+      "id": 1330,
+      "type": "multiple_choice",
+      "question": "À partir de quel excès de vitesse, HORS AGGLOMÉRATION, la police peut-elle retirer votre permis temporairement ?",
+      "correctAnswer": "B",
+      "explanation": "À partir de 30 km/h d'excès sur les routes ordinaires.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/325.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "20 km/h"
+        },
+        {
+          "letter": "B",
+          "text": "30 km/h"
+        },
+        {
+          "letter": "C",
+          "text": "40 km/h"
+        }
+      ]
+    },
+    {
       "id": 1331,
       "type": "multiple_choice",
       "question": "Vous approchez d'une intersection et vous voyez un de ces signaux.À quelle intersection pouvez-vous dépasser un cycliste par la gauche ?",
@@ -22484,6 +22770,28 @@
       "correctAnswer": "C",
       "explanation": "Parce que certains ponts ou tunnels sont plus bas, ce signal routier peut imposer une hauteur maximale différente.Ce n’est pas pour rien que ce signal est placé, comme de nombreux conducteurs de camion ou de bus l’ont déjà appris à leurs dépens.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/1495.jpg"
+    },
+    {
+      "id": 1347,
+      "type": "multiple_choice",
+      "question": "Votre médecin juge que vous n'êtes plus capable de conduire. Sous combien de jours devez-vous rendre votre permis à la commune ?",
+      "correctAnswer": "C",
+      "explanation": "Vous devez le rendre dans les 4 jours ouvrables.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/860.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "2 jours"
+        },
+        {
+          "letter": "B",
+          "text": "8 jours"
+        },
+        {
+          "letter": "C",
+          "text": "4 jours"
+        }
+      ]
     },
     {
       "id": 1348,
@@ -24968,6 +25276,28 @@
       "correctAnswer": "B",
       "explanation": "Vous pouvez passer un feu vert, si l’intersection est libre.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/462.jpg"
+    },
+    {
+      "id": 1495,
+      "type": "multiple_choice",
+      "question": "Quelle est la durée maximale de stationnement autorisée en zone bleue (par défaut) ?",
+      "correctAnswer": "A",
+      "explanation": "Sauf mention contraire, elle est de 2 heures (120 minutes).",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/788.jpg",
+      "propositions": [
+        {
+          "letter": "A",
+          "text": "2 heures"
+        },
+        {
+          "letter": "B",
+          "text": "1 heure"
+        },
+        {
+          "letter": "C",
+          "text": "30 minutes"
+        }
+      ]
     },
     {
       "id": 1496,
