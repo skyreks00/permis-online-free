@@ -82,15 +82,15 @@
       "propositions": [
         {
           "letter": "A",
-          "text": "Voiture"
+          "text": "Voiture A"
         },
         {
           "letter": "B",
-          "text": "Voiture"
+          "text": "Voiture B"
         },
         {
           "letter": "C",
-          "text": "Voiture"
+          "text": "Voiture C"
         }
       ],
       "correctAnswer": "A",
@@ -122,11 +122,11 @@
       "propositions": [
         {
           "letter": "A",
-          "text": "Voiture"
+          "text": "Voiture A"
         },
         {
           "letter": "B",
-          "text": "Voiture"
+          "text": "Voiture B"
         }
       ],
       "correctAnswer": "B",
@@ -200,11 +200,11 @@
       "propositions": [
         {
           "letter": "A",
-          "text": "Voiture"
+          "text": "Voiture A"
         },
         {
           "letter": "B",
-          "text": "Voiture"
+          "text": "Voiture B"
         }
       ],
       "correctAnswer": "A",
@@ -258,11 +258,11 @@
       "propositions": [
         {
           "letter": "A",
-          "text": "Voiture"
+          "text": "Voiture A"
         },
         {
           "letter": "B",
-          "text": "Voiture"
+          "text": "Voiture B"
         }
       ],
       "correctAnswer": "B",
@@ -368,11 +368,11 @@
       "propositions": [
         {
           "letter": "A",
-          "text": "Voiture"
+          "text": "Voiture A"
         },
         {
           "letter": "B",
-          "text": "Voiture"
+          "text": "Voiture B"
         }
       ],
       "correctAnswer": "A",
@@ -416,15 +416,15 @@
       "propositions": [
         {
           "letter": "A",
-          "text": "Voiture"
+          "text": "Voiture A"
         },
         {
           "letter": "B",
-          "text": "Voiture"
+          "text": "Voiture B"
         },
         {
           "letter": "C",
-          "text": "Voiture"
+          "text": "Voiture C"
         }
       ],
       "correctAnswer": "C",
@@ -752,11 +752,11 @@
       "propositions": [
         {
           "letter": "A",
-          "text": "Voiture"
+          "text": "Voiture A"
         },
         {
           "letter": "B",
-          "text": "Voiture"
+          "text": "Voiture B"
         }
       ],
       "correctAnswer": "A",
@@ -778,11 +778,11 @@
       "propositions": [
         {
           "letter": "A",
-          "text": "Voiture"
+          "text": "Voiture A"
         },
         {
           "letter": "B",
-          "text": "Voiture"
+          "text": "Voiture B"
         }
       ],
       "correctAnswer": "A",
@@ -1010,11 +1010,11 @@
       "propositions": [
         {
           "letter": "A",
-          "text": "Voiture"
+          "text": "Voiture A"
         },
         {
           "letter": "B",
-          "text": "Voiture"
+          "text": "Voiture B"
         }
       ],
       "correctAnswer": "B",
