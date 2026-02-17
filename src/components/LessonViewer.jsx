@@ -244,9 +244,7 @@ const LessonViewer = ({ lessonFile, quizId, onBack, onStartQuiz, theme }) => {
                     quizBtn.style.cursor = 'pointer';
                     quizBtn.style.boxShadow = '0 4px 12px rgba(var(--primary-rgb), 0.3)';
                     
-                    quizBtn.onclick = () => {
-                        window.parent.postMessage({ type: 'START_QUIZ', quizId }, '*');
-                    };
+                    quizBtn.setAttribute('onclick', `window.parent.postMessage({ type: 'START_QUIZ', quizId: '${quizId}' }, '*')`);
 
                     quizContainer.appendChild(quizBtn);
                     doc.body.appendChild(quizContainer);
