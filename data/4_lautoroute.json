@@ -820,12 +820,8 @@
     {
       "id": 53,
       "type": "multiple_choice",
-      "question": "Je suis sur une bretelle d’autoroute pour entrer sur l’autoroute, mais j’ai oublié de lancer mon GP",
+      "question": "Je suis sur une bretelle d’autoroute pour entrer sur l’autoroute, mais j’ai oublié de lancer mon GP. Puis-je m’arrêter derrière la bande blanche ?",
       "propositions": [
-        {
-          "letter": "S",
-          "text": "Puis-je m’arrêter derrière la bande blanche ?"
-        },
         {
           "letter": "A",
           "text": "Je peux m’arrêter derrière la bande blanche, car je ne suis pas encore sur l’autoroute"
