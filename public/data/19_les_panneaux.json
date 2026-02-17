@@ -778,15 +778,15 @@
       "propositions": [
         {
           "letter": "A",
-          "text": "Voiture"
+          "text": "La voiture A"
         },
         {
           "letter": "B",
-          "text": "Voiture"
+          "text": "La voiture B"
         }
       ],
       "correctAnswer": "A",
-      "explanation": "Un signal d'arrêt se trouve à côté de la voiture B.",
+      "explanation": "Un signal d'arrêt se trouve à côté de la voiture B, donc la voiture A peut s'engager en premier.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/36.jpg"
     },
     {
