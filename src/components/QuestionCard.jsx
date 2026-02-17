@@ -396,39 +396,37 @@ const QuestionCard = ({
             {isFixing ? "..." : "✨ Corriger"}
           </button>
         )}
+
+        {/* Correction Toolbar - Moved INSIDE Header for consistent visibility */}
+        {isCorrectionMode && (
+            <div className="correction-toolbar-inline">
+              <div className="correction-badge">
+                <div className="correction-badge-dot" />
+                <span>MASTER</span>
+              </div>
+              <div className="correction-actions">
+                <button
+                  onClick={() => setFixedQuestion(null)}
+                  className="btn-cancel"
+                  disabled={savingState === "saving"}
+                >
+                  Annuler
+                </button>
+                <button
+                  onClick={handleConfirmFix}
+                  className="btn-save"
+                  disabled={savingState === "saving"}
+                >
+                  {savingState === "saving" ? "..." : "Enregistrer"}
+                </button>
+              </div>
+            </div>
+        )}
       </div>
 
       {isCorrectionMode && (
-        <div className="correction-toolbar" style={{ top: 'auto', bottom: '100%', right: 0, marginBottom: '8px' }}>
-          {/* Status Badge */}
-          <div className="correction-badge">
-            <div className="correction-badge-dot" />
-            <span>ÉDITION MASTER</span>
-          </div>
-
-          {/* Action Buttons */}
-          <div className="correction-actions">
-            <button
-              onClick={() => setFixedQuestion(null)}
-              className="btn-cancel"
-              disabled={savingState === "saving"}
-            >
-              Annuler
-            </button>
-            <button
-              onClick={handleConfirmFix}
-              className="btn-save"
-              disabled={savingState === "saving"}
-            >
-              {savingState === "saving" ? "..." : "Enregistrer"}
-            </button>
-          </div>
-        </div>
-      )}
-
-      {isCorrectionMode && (
         <div className="correction-floating-bar">
-           {!fixedQuestion.explanation && !showExplanationInput ? (
+           {!showExplanationInput ? (
                <button 
                 className="correction-edit-expl-btn"
                 onClick={() => setShowExplanationInput(true)}
@@ -439,7 +437,7 @@ const QuestionCard = ({
                <div className="correction-input-wrapper animate-in slide-in-from-bottom-2 fade-in duration-300">
                   <div className="flex justify-between items-center px-4 py-2 border-b border-white/10">
                     <span className="text-xs font-semibold text-white/50">Explication / Commit Message</span>
-                    <button onClick={() => setShowExplanationInput(false)} className="text-white/50 hover:text-white"><X size={14}/></button>
+                    <button onClick={() => setShowExplanationInput(false)} style={{ color: 'rgba(255,255,255,0.5)' }} className="hover:text-white"><X size={16}/></button>
                   </div>
                   <textarea
                     className="correction-explanation-input"

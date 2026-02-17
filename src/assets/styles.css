@@ -1470,3 +1470,11 @@ input:checked + .slider:before {
   transform: translateY(-1px);
 }
 
+
+.correction-toolbar-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto; /* Push to right */
+}
+
