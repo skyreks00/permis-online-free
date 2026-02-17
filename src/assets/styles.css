@@ -1478,3 +1478,41 @@ input:checked + .slider:before {
   margin-left: auto; /* Push to right */
 }
 
+
+@media (max-width: 640px) {
+  .correction-badge {
+    display: none !important;
+  }
+  .correction-toolbar-inline {
+    gap: 4px;
+  }
+  .correction-actions {
+    transform: scale(0.9);
+    transform-origin: right center;
+  }
+  .question-header {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+
+@media (max-width: 640px) {
+  .question-progress {
+    font-size: 12px;
+  }
+  .question-progress span {
+    font-size: 10px;
+    margin-left: 4px;
+    letter-spacing: 0;
+  }
+  .correction-actions {
+    margin-left: 0; /* Reset auto margin in flex wrap context */
+  }
+  .correction-toolbar-inline {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 4px;
+  }
+}
+
