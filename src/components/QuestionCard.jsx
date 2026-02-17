@@ -399,40 +399,42 @@ const QuestionCard = ({
 
       {isCorrectionMode &&
         (savingState === null || savingState === "error") && (
-          <div className="p-4 mb-6 rounded-xl border border-warning/40 bg-warning/5 backdrop-blur-md flex flex-col gap-3 animate-in fade-in slide-in-from-top-4 duration-300">
-            <div className="flex justify-between items-center">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-warning animate-pulse" />
-                <span className="text-sm font-bold text-warning uppercase tracking-wider">
-                  Mode Édition Manuelle
+          <div className="p-4 mb-6 rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-xl flex flex-col gap-4 animate-in fade-in zoom-in-95 duration-500 shadow-2xl">
+            <div className="flex justify-between items-center text-xs">
+              <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-warning/10 border border-warning/20">
+                <div className="w-1.5 h-1.5 rounded-full bg-warning animate-pulse" />
+                <span className="font-bold text-warning uppercase tracking-widest text-[10px]">
+                  Édition Master
                 </span>
               </div>
-              <div className="flex gap-3">
+              <div className="flex gap-2">
                 <button
                   onClick={() => setFixedQuestion(null)}
-                  className="px-4 py-1.5 rounded-lg text-xs font-semibold bg-white/5 hover:bg-white/10 text-white transition-all border border-white/10"
+                  className="px-4 py-2 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] text-white/70 hover:text-white transition-all border border-white/5"
                   disabled={savingState === "saving"}
                 >
                   Annuler
                 </button>
                 <button
                   onClick={handleConfirmFix}
-                  className="px-4 py-1.5 rounded-lg text-xs font-bold bg-warning text-black hover:scale-105 active:scale-95 transition-all shadow-lg shadow-warning/20"
+                  className="px-5 py-2 rounded-xl bg-warning text-black font-bold hover:shadow-[0_0_20px_rgba(255,193,7,0.3)] transition-all active:scale-95"
                   disabled={savingState === "saving"}
                 >
-                  {savingState === "saving" ? "Envoi..." : "Valider la Correction"}
+                  {savingState === "saving" ? "Sauvegarde..." : "Enregistrer"}
                 </button>
               </div>
             </div>
             <textarea
-              className="text-white bg-black/40 p-3 text-sm rounded-lg border border-white/10 outline-none focus:border-warning/50 transition-colors placeholder:text-white/20 resize-none no-scrollbar"
+              className="w-full bg-transparent p-4 text-sm text-white/90 rounded-xl border border-white/5 outline-none focus:border-warning/30 transition-all placeholder:text-white/20 resize-none font-light leading-relaxed scrollbar-hide"
               rows={2}
-              placeholder="Ajouter une explication détaillée (optionnel)..."
+              placeholder="Pourquoi cette correction est-elle nécessaire ? (Optionnel)"
               value={fixedQuestion.explanation || ""}
               onChange={(e) => updateFixedField("explanation", e.target.value)}
             />
             {savingState === "error" && (
-              <div className="text-danger text-xs font-medium px-1">⚠️ {saveMessage}</div>
+              <div className="text-danger text-[11px] font-medium px-2 flex items-center gap-1">
+                <X size={12} /> {saveMessage}
+              </div>
             )}
           </div>
         )}
@@ -512,9 +514,9 @@ const QuestionCard = ({
           <div className="question-text">
             <div>
               {isCorrectionMode ? (
-                <div className="relative group">
+                <div className="relative">
                   <textarea
-                    className="question-text-inner w-full bg-warning/5 p-4 rounded-xl border border-warning/20 outline-none focus:border-warning focus:ring-4 focus:ring-warning/10 transition-all resize-none overflow-hidden text-warning font-medium leading-relaxed"
+                    className="question-text-inner w-full bg-transparent p-0 border-none outline-none focus:ring-0 transition-all resize-none overflow-hidden text-warning font-bold leading-relaxed placeholder:text-warning/20"
                     value={fixedQuestion.question}
                     onChange={(e) => updateFixedField("question", e.target.value)}
                     onInput={(e) => {
@@ -523,9 +525,7 @@ const QuestionCard = ({
                     }}
                     autoFocus
                   />
-                  <div className="absolute top-2 right-2 opacity-30 group-hover:opacity-100 transition-opacity">
-                    <BookOpen size={14} className="text-warning" />
-                  </div>
+                  <div className="h-px w-full bg-gradient-to-r from-warning/50 to-transparent mt-1" />
                 </div>
               ) : (
                 <div className="question-text-inner">
@@ -559,15 +559,16 @@ const QuestionCard = ({
                 return (
                   <button
                     key={`${prop.letter}-${idx}`}
-                    className={`answer-btn transition-all duration-300 ${getButtonClass(prop.letter)} 
-                      ${isCorrectionMode ? "border-dashed border-warning/30 bg-warning/5 hover:border-warning/60" : ""}
-                      ${isCorrectionMode && prop.letter === fixedQuestion.correctAnswer ? "border-solid border-warning shadow-[0_0_15px_rgba(255,193,7,0.2)] bg-warning/10 scale-[1.02]" : ""}`}
+                    className={`answer-btn !bg-transparent border-none shadow-none transition-all duration-300
+                      ${isCorrectionMode ? "opacity-80 hover:opacity-100" : ""}
+                      ${isCorrectionMode && prop.letter === fixedQuestion.correctAnswer ? "scale-[1.02] !opacity-100" : ""}`}
                     onClick={() => isCorrectionMode ? toggleCorrectAnswer(prop.letter) : handleAnswer(prop.letter)}
                     disabled={savingState === "saving"}
-                    style={isCorrectionMode ? { padding: '12px 16px' } : {}}
                   >
                     <div 
-                      className={`answer-key shrink-0 transition-all ${isCorrectionMode ? "bg-warning/20 text-warning border-warning/30 hover:bg-warning hover:text-black" : ""}`}
+                      className={`answer-key shrink-0 transition-all !bg-transparent border border-white/10
+                        ${isCorrectionMode ? "hover:border-warning/50 hover:text-warning" : ""}
+                        ${isCorrectionMode && prop.letter === fixedQuestion.correctAnswer ? "border-warning text-warning bg-warning/10" : ""}`}
                       onClick={(e) => {
                         if(isCorrectionMode) {
                           e.stopPropagation();
@@ -578,18 +579,19 @@ const QuestionCard = ({
                       {prop.letter}
                     </div>
                     {isCorrectionMode ? (
-                      <input 
-                        className="answer-text bg-transparent border-none outline-none w-full text-white font-medium placeholder:text-white/20 focus:text-warning"
-                        value={prop.text}
-                        placeholder="Option de réponse..."
-                        onChange={(e) => updateFixedProposition(idx, e.target.value)}
-                        onClick={(e) => e.stopPropagation()}
-                      />
+                      <div className="flex-1 border-b border-white/5 focus-within:border-warning/30 transition-all ml-1">
+                        <input 
+                          className="answer-text !bg-transparent border-none outline-none w-full text-white/90 font-medium py-1"
+                          value={prop.text}
+                          onChange={(e) => updateFixedProposition(idx, e.target.value)}
+                          onClick={(e) => e.stopPropagation()}
+                        />
+                      </div>
                     ) : (
                       <div className="answer-text">{prop.text}</div>
                     )}
                     {(showCheck || (isCorrectionMode && prop.letter === fixedQuestion.correctAnswer)) && (
-                      <CheckCircle size={20} className={`answer-check transition-all ${isCorrectionMode ? "text-warning" : "text-success"}`} />
+                      <CheckCircle size={18} className={`answer-check transition-all ${isCorrectionMode ? "text-warning" : "text-success"}`} />
                     )}
                   </button>
                 );
