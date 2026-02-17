@@ -395,7 +395,7 @@ function App() {
         />
         <Route
           path="/lecon/:lessonId"
-          element={<LessonPage themeMode={colorTheme} />}
+          element={<LessonPage themeMode={colorTheme} sections={sections} />}
         />
         <Route
           path="/quiz/:themeId"

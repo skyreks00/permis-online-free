@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import globalStyles from '../assets/styles.css?inline';
 import { ArrowLeft } from 'lucide-react';
 
-const LessonViewer = ({ lessonFile, onBack, theme }) => {
+const LessonViewer = ({ lessonFile, quizId, onBack, onStartQuiz, theme }) => {
     const [srcDoc, setSrcDoc] = React.useState('');
     const [loading, setLoading] = React.useState(true);
 
@@ -223,6 +223,35 @@ const LessonViewer = ({ lessonFile, onBack, theme }) => {
                     container.remove();
                 }
 
+                // 5. Inject "Start Quiz" button at the bottom if quizId is present
+                if (quizId) {
+                    const quizContainer = doc.createElement('div');
+                    quizContainer.style.marginTop = '40px';
+                    quizContainer.style.paddingTop = '20px';
+                    quizContainer.style.borderTop = '1px solid var(--border)';
+                    quizContainer.style.textAlign = 'center';
+                    quizContainer.style.marginBottom = '60px';
+
+                    const quizBtn = doc.createElement('button');
+                    quizBtn.textContent = 'Démarrer le Quiz sur ce thème';
+                    quizBtn.style.backgroundColor = 'var(--primary)';
+                    quizBtn.style.color = 'white';
+                    quizBtn.style.border = 'none';
+                    quizBtn.style.padding = '14px 28px';
+                    quizBtn.style.borderRadius = '8px';
+                    quizBtn.style.fontSize = '1.1rem';
+                    quizBtn.style.fontWeight = '600';
+                    quizBtn.style.cursor = 'pointer';
+                    quizBtn.style.boxShadow = '0 4px 12px rgba(var(--primary-rgb), 0.3)';
+                    
+                    quizBtn.onclick = () => {
+                        window.parent.postMessage({ type: 'START_QUIZ', quizId }, '*');
+                    };
+
+                    quizContainer.appendChild(quizBtn);
+                    doc.body.appendChild(quizContainer);
+                }
+
                 // Serialize back to string
                 setSrcDoc(doc.documentElement.outerHTML);
                 setLoading(false);
@@ -234,14 +263,22 @@ const LessonViewer = ({ lessonFile, onBack, theme }) => {
             }
         };
 
+        const handleMessage = (event) => {
+            if (event.data && event.data.type === 'START_QUIZ' && event.data.quizId === quizId) {
+                onStartQuiz(quizId);
+            }
+        };
+        window.addEventListener('message', handleMessage);
+
         fetchLesson();
 
         // Lock body scroll
         document.body.style.overflow = 'hidden';
         return () => {
             document.body.style.overflow = '';
+            window.removeEventListener('message', handleMessage);
         };
-    }, [lessonFile, theme]);
+    }, [lessonFile, theme, quizId, onStartQuiz]);
 
     return (
         <div className="lesson-viewer" style={{
@@ -266,7 +303,16 @@ const LessonViewer = ({ lessonFile, onBack, theme }) => {
                 <button className="btn-ghost" onClick={onBack} style={{ border: '1px solid var(--border)', display: 'flex', alignItems: 'center', gap: '6px' }}>
                     <ArrowLeft size={16} /> Retour
                 </button>
-                <span style={{ fontWeight: 600, fontSize: '1.1rem' }}>Leçon</span>
+                <span style={{ fontWeight: 600, fontSize: '1.1rem', flex: 1 }}>Leçon</span>
+                {quizId && (
+                    <button 
+                        className="btn-primary" 
+                        onClick={() => onStartQuiz(quizId)}
+                        style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '8px 16px' }}
+                    >
+                        Démarrer le Quiz
+                    </button>
+                )}
             </div>
             <div style={{ flex: 1, display: 'flex', overflow: 'hidden', position: 'relative' }}>
                 <div style={{

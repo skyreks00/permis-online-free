@@ -275,30 +275,23 @@ const QuestionCard = ({
     setSavingState("saving"); // UI Unblocks HERE
 
     const effectiveFileName = question.sourceFile || fileName;
-    console.log("[QuestionCard] Debug Fix:", { 
-        id: question.id, 
-        sourceFile: question.sourceFile, 
-        propFileName: fileName, 
-        effective: effectiveFileName 
-    });
-
+    
     if (!effectiveFileName) {
         setSavingState("error");
         setSaveMessage("Erreur: Nom de fichier manquant");
         return;
     }
 
-    // 1. Try Local Save (Silence error as backend might not be running)
+    // 1. Try Local Save
     try {
       await saveQuestionLocally(effectiveFileName, question.id, fixedQuestion);
     } catch (localErr) {
-      // Local save failed, backend likely offline
+      // Local save failed
     }
 
     // 2. Try GitHub Save
     const token = localStorage.getItem("github_token");
     if (!token) {
-      // Fallback: Copy to clipboard
       navigator.clipboard.writeText(JSON.stringify(fixedQuestion, null, 2));
       setSavingState("success");
       setSaveMessage("Copié (Pas de token GitHub)");
@@ -307,12 +300,10 @@ const QuestionCard = ({
 
     try {
       const user = await getUser(token);
-      const owner = "skyreks00"; // Always target main repo for collaborative contributions
+      const owner = "skyreks00"; 
       const repo = "permis-online-free";
       const path = `public/data/${effectiveFileName}`;
-      const commitMessage = `fix(content): correct question ${question.id} in ${effectiveFileName} (AI)`;
-
-      console.log("[handleConfirmFix] Saving question to GitHub...");
+      const commitMessage = `fix(content): correct question ${question.id} in ${effectiveFileName} (Manual+AI)`;
 
       const result = await saveQuestionToGitHub(
         token,
@@ -325,45 +316,43 @@ const QuestionCard = ({
         user,
       );
 
-      if (result.type === "unchanged") {
-        setSavingState("success");
-        setSaveMessage("Aucun changement détecté");
-        return;
-      }
-
       setSavingState("success");
-
       if (result.type === "pr") {
-        setSaveMessage(
-          <a href={result.url} target="_blank" rel="noreferrer">
-            PR créée !
-          </a>,
-        );
+        setSaveMessage(<a href={result.url} target="_blank" rel="noreferrer">PR créée !</a>);
       } else if (result.type === "commit") {
-        setSaveMessage(
-          <a href={result.url} target="_blank" rel="noreferrer">
-            Commit effectué !
-          </a>,
-        );
+        setSaveMessage(<a href={result.url} target="_blank" rel="noreferrer">Commit effectué !</a>);
       } else {
         setSaveMessage("Sauvegardé !");
       }
 
-      if (onQuestionUpdated) {
-        onQuestionUpdated(fixedQuestion);
-      }
+      if (onQuestionUpdated) onQuestionUpdated(fixedQuestion);
 
       setTimeout(() => {
         setFixedQuestion(null);
         setSavingState(null);
       }, 2000);
     } catch (ghErr) {
-      console.error("[handleConfirmFix] GitHub save error:", ghErr);
       setSavingState("error");
-      setSaveMessage(
-        "Erreur GitHub: " + (ghErr.message || "Problème de sauvegarde"),
-      );
+      setSaveMessage("Erreur GitHub: " + (ghErr.message || "Problème de sauvegarde"));
     }
+  };
+
+  // --- MANUAL EDITING HELPERS ---
+  const updateFixedField = (field, value) => {
+    setFixedQuestion(prev => ({ ...prev, [field]: value }));
+  };
+
+  const updateFixedProposition = (idx, text) => {
+    setFixedQuestion(prev => {
+      const newProps = [...prev.propositions];
+      newProps[idx] = { ...newProps[idx], text };
+      return { ...prev, propositions: newProps };
+    });
+  };
+
+  const toggleCorrectAnswer = (letter) => {
+    if (!isCorrectionMode) return;
+    updateFixedField("correctAnswer", letter);
   };
 
   return (
@@ -413,8 +402,8 @@ const QuestionCard = ({
         (savingState === null || savingState === "error") && (
           <div className="p-3 bg-surface-2 border-b border-warning mb-4 rounded flex flex-col gap-2">
             <div className="flex justify-between items-center">
-              <span className="text-sm font-bold text-warning">
-                Valider cette correction ?
+                <span className="text-sm font-bold text-warning">
+                Valider la correction (cliquez pour éditer)
               </span>
               <div className="flex gap-2">
                 <button
@@ -433,6 +422,13 @@ const QuestionCard = ({
                 </button>
               </div>
             </div>
+            <textarea
+              className="text-white bg-black/30 p-2 text-xs rounded border border-warning/30 outline-none focus:border-warning"
+              rows={2}
+              placeholder="Explication (optionnelle)"
+              value={fixedQuestion.explanation || ""}
+              onChange={(e) => updateFixedField("explanation", e.target.value)}
+            />
             {savingState === "error" && (
               <div className="text-danger text-xs">{saveMessage}</div>
             )}
@@ -513,10 +509,22 @@ const QuestionCard = ({
         <div className="question-right">
           <div className="question-text">
             <div>
-              {/* Use displayQuestion here */}
-              <div className="question-text-inner">
-                {displayQuestion.question}
-              </div>
+              {isCorrectionMode ? (
+                <textarea
+                  className="question-text-inner w-full bg-transparent border-b border-warning/50 outline-none focus:border-warning resize-none"
+                  value={fixedQuestion.question}
+                  onChange={(e) => updateFixedField("question", e.target.value)}
+                  onInput={(e) => {
+                    e.target.style.height = 'auto';
+                    e.target.style.height = e.target.scrollHeight + 'px';
+                  }}
+                  autoFocus
+                />
+              ) : (
+                <div className="question-text-inner">
+                  {displayQuestion.question}
+                </div>
+              )}
             </div>
           </div>
 
@@ -544,106 +552,92 @@ const QuestionCard = ({
                 return (
                   <button
                     key={`${prop.letter}-${idx}`}
-                    className={`answer-btn ${getButtonClass(prop.letter)}`}
-                    onClick={() => handleAnswer(prop.letter)}
-                    disabled={isInteractionDisabled}
+                    className={`answer-btn ${getButtonClass(prop.letter)} ${isCorrectionMode && prop.letter === fixedQuestion.correctAnswer ? "border-warning border-2" : ""}`}
+                    onClick={() => isCorrectionMode ? toggleCorrectAnswer(prop.letter) : handleAnswer(prop.letter)}
+                    disabled={savingState === "saving"}
                   >
-                    <div className="answer-key">{prop.letter}</div>
-                    <div className="answer-text">{prop.text}</div>
-                    {showCheck && (
-                      <CheckCircle size={20} className="answer-check" />
+                    <div className={`answer-key ${isCorrectionMode ? "cursor-pointer hover:bg-warning hover:text-black transition-colors" : ""}`} onClick={() => toggleCorrectAnswer(prop.letter)}>
+                      {prop.letter}
+                    </div>
+                    {isCorrectionMode ? (
+                      <input 
+                        className="answer-text bg-transparent border-none outline-none w-full text-warning font-semibold"
+                        value={prop.text}
+                        onChange={(e) => updateFixedProposition(idx, e.target.value)}
+                        onClick={(e) => e.stopPropagation()}
+                      />
+                    ) : (
+                      <div className="answer-text">{prop.text}</div>
+                    )}
+                    {(showCheck || (isCorrectionMode && prop.letter === fixedQuestion.correctAnswer)) && (
+                      <CheckCircle size={20} className="answer-check text-warning" />
                     )}
                   </button>
                 );
               })
             ) : displayQuestion.type === "yes_no" ? (
               <>
-                {/* Logic for yes_no using displayQuestion... */}
-                {/* Simplified for brevity in this replace call, similar logic to original but using displayQuestion */}
                 <button
-                  className={`answer-btn ${getButtonClass("OUI")}`}
-                  onClick={() => handleAnswer("OUI")}
-                  disabled={
-                    isFixing ||
-                    hasAnswered ||
-                    (isCorrectionMode &&
-                      (savingState === null || savingState === "error"))
-                  }
+                  className={`answer-btn ${getButtonClass("OUI")} ${isCorrectionMode && fixedQuestion.correctAnswer === "OUI" ? "border-warning border-2" : ""}`}
+                  onClick={() => isCorrectionMode ? toggleCorrectAnswer("OUI") : handleAnswer("OUI")}
+                  disabled={savingState === "saving"}
                 >
-                  <div className="answer-key">A</div>
+                  <div className={`answer-key ${isCorrectionMode ? "cursor-pointer hover:bg-warning hover:text-black transition-colors" : ""}`}>A</div>
                   <div className="answer-text">Oui</div>
-                  {hasAnswered &&
-                    instantFeedback &&
-                    displayQuestion.correctAnswer === "OUI" && (
-                      <CheckCircle size={20} className="answer-check" />
-                    )}
+                  {(hasAnswered && instantFeedback && displayQuestion.correctAnswer === "OUI") || (isCorrectionMode && fixedQuestion.correctAnswer === "OUI") ? (
+                      <CheckCircle size={20} className="answer-check text-warning" />
+                  ) : null}
                 </button>
                 <button
-                  className={`answer-btn ${getButtonClass("NON")}`}
-                  onClick={() => handleAnswer("NON")}
-                  disabled={
-                    isFixing ||
-                    hasAnswered ||
-                    (isCorrectionMode &&
-                      (savingState === null || savingState === "error"))
-                  }
+                  className={`answer-btn ${getButtonClass("NON")} ${isCorrectionMode && fixedQuestion.correctAnswer === "NON" ? "border-warning border-2" : ""}`}
+                  onClick={() => isCorrectionMode ? toggleCorrectAnswer("NON") : handleAnswer("NON")}
+                  disabled={savingState === "saving"}
                 >
-                  <div className="answer-key">B</div>
+                  <div className={`answer-key ${isCorrectionMode ? "cursor-pointer hover:bg-warning hover:text-black transition-colors" : ""}`}>B</div>
                   <div className="answer-text">Non</div>
-                  {hasAnswered &&
-                    instantFeedback &&
-                    displayQuestion.correctAnswer === "NON" && (
-                      <CheckCircle size={20} className="answer-check" />
-                    )}
+                  {(hasAnswered && instantFeedback && displayQuestion.correctAnswer === "NON") || (isCorrectionMode && fixedQuestion.correctAnswer === "NON") ? (
+                      <CheckCircle size={20} className="answer-check text-warning" />
+                  ) : null}
                 </button>
               </>
             ) : (
               <div className="number-wrap">
-                {/* Freeform/Numeric using displayQuestion... */}
                 <div
                   className={`number-field ${
-                    hasAnswered
-                      ? instantFeedback
-                        ? result === "correct"
-                          ? "correct"
-                          : "incorrect"
-                        : "selected"
-                      : ""
+                    isCorrectionMode 
+                      ? "border-warning" 
+                      : hasAnswered
+                        ? instantFeedback
+                          ? result === "correct"
+                            ? "correct"
+                            : "incorrect"
+                          : "selected"
+                        : ""
                   }`}
                 >
                   <input
                     className="number-input"
                     type="text"
                     inputMode="numeric"
-                    placeholder="Votre réponse…"
-                    value={freeformAnswer}
-                    disabled={
-                      isFixing ||
-                      hasAnswered ||
-                      (isCorrectionMode &&
-                        (savingState === null || savingState === "error"))
-                    }
-                    onChange={(e) => setFreeformAnswer(e.target.value)}
+                    placeholder={isCorrectionMode ? "Réponse correcte..." : "Votre réponse…"}
+                    value={isCorrectionMode ? fixedQuestion.correctAnswer : freeformAnswer}
+                    disabled={savingState === "saving"}
+                    onChange={(e) => isCorrectionMode ? updateFixedField("correctAnswer", e.target.value) : setFreeformAnswer(e.target.value)}
                     onKeyDown={(e) => {
-                      if (e.key === "Enter") handleFreeformSubmit();
+                      if (e.key === "Enter" && !isCorrectionMode) handleFreeformSubmit();
                     }}
                   />
-                  <button
-                    className="number-submit"
-                    type="button"
-                    onClick={handleFreeformSubmit}
-                    disabled={
-                      isFixing ||
-                      hasAnswered ||
-                      !String(freeformAnswer ?? "").trim() ||
-                      (isCorrectionMode &&
-                        (savingState === null || savingState === "error"))
-                    }
-                  >
-                    OK
-                  </button>
+                  {!isCorrectionMode && (
+                    <button
+                      className="number-submit"
+                      type="button"
+                      onClick={handleFreeformSubmit}
+                      disabled={hasAnswered || !String(freeformAnswer ?? "").trim()}
+                    >
+                      OK
+                    </button>
+                  )}
                 </div>
-                {/* Aucun retour immédiat sur la justesse de la réponse */}
               </div>
             )}
           </div>
