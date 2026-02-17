@@ -140,12 +140,8 @@
     {
       "id": 11,
       "type": "multiple_choice",
-      "question": "Vous avez le permis de conduire provisoire",
+      "question": "Vous avez le permis de conduire provisoire. Vous franchissez ce signal routier à 48 km/h. Quelles sont les conséquences ?",
       "propositions": [
-        {
-          "letter": "B",
-          "text": "Vous franchissez ce signal routier à 48 km/h. Quelles sont les conséquences ?"
-        },
         {
           "letter": "A",
           "text": "Vous devrez payer une amende"

@@ -1,0 +1,30 @@
+FILE: 10_chargement_des_vehicules.json | ID: 8
+  - PROPS_IN_QUESTION_FIELD
+    Q: "Si la M.M.A. de la remorque est supérieure à 750 kg, un permis de conduire B est valable à condition..."
+FILE: 10_chargement_des_vehicules.json | ID: 24
+  - PROPS_IN_QUESTION_FIELD
+    Q: "Ce conducteur possède un permis de conduire B définitif. La M.M.A. de la camionnette est de 2 700 kg..."
+FILE: 28_alcool_et_drogues.json | ID: 20
+  - POTENTIAL_REPEATED_QUESTION: Prop contains start of question.
+    Q: "Une analyse de l’haleine a indiqué que le taux d’alcool dans l’air expiré était d’au moins 0,33 mg/l..."
+FILE: 31_technique.json | ID: 57
+  - POTENTIAL_REPEATED_QUESTION: Prop contains start of question.
+    Q: "Les quatre chiffres qui suivent la mention DOT sur le flanc d’un pneu indiquent la date de fabricati..."
+FILE: 9_la_voiture.json | ID: 18
+  - PROPS_IN_QUESTION_FIELD
+    Q: "Vous êtes en possession d'un permis B et vous conduisez une voiture avec une M.M.A. de 2500 kg. Quel..."
+FILE: examen_B.json | ID: 132
+  - POTENTIAL_REPEATED_QUESTION: Prop contains start of question.
+    Q: "Les quatre chiffres qui suivent la mention DOT sur le flanc d’un pneu indiquent la date de fabricati..."
+FILE: examen_B.json | ID: 653
+  - POTENTIAL_REPEATED_QUESTION: Prop contains start of question.
+    Q: "En cas de brouillard, à quel moment le feu de brouillard arrière doit-il être allumé ?"
+FILE: examen_B.json | ID: 963
+  - POTENTIAL_REPEATED_QUESTION: Prop contains start of question.
+    Q: "Une analyse de l’haleine a indiqué que le taux d’alcool dans l’air expiré était d’au moins 0,30 mg/l..."
+FILE: examen_B.json | ID: 1183
+  - POTENTIAL_REPEATED_QUESTION: Prop contains start of question.
+    Q: "Un environnement scolaire.Où les enfants ont-ils la priorité lorsqu'ils traversent la route ?"
+FILE: examen_B.json | ID: 1221
+  - POTENTIAL_REPEATED_QUESTION: Prop contains start of question.
+    Q: "Les quatre chiffres qui suivent la mention DOT sur le flanc d’un pneu indiquent la date de fabricati..."

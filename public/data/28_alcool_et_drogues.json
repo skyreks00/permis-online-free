@@ -408,12 +408,8 @@
     {
       "id": 26,
       "type": "multiple_choice",
-      "question": "Le résultat du test de l’haleine n’est pas SAF",
+      "question": "Le résultat du test de l’haleine n’est pas SAF. Quelles sont les conséquences?",
       "propositions": [
-        {
-          "letter": "E",
-          "text": "Quelles sont les conséquences?"
-        },
         {
           "letter": "A",
           "text": "Vous pouvez continuer votre route"
