@@ -334,7 +334,7 @@
     {
       "id": 24,
       "type": "multiple_choice",
-      "question": "Quels véhicules ne peux-tu pas dépasser avec ta voiture après ce signal routier ?",
+      "question": "Quels véhicules ne pouvez-vous pas dépasser avec votre voiture après ce signal routier ?",
       "propositions": [
         {
           "letter": "A",
@@ -342,15 +342,15 @@
         },
         {
           "letter": "B",
-          "text": "Uniquement un cycliste et un cyclomoteur classe"
+          "text": "Uniquement un cycliste et un cyclomoteur"
         },
         {
           "letter": "C",
           "text": "Un cycliste, un cyclomoteur classe A et une motocyclette"
         }
       ],
-      "correctAnswer": "A",
-      "explanation": "Ce signal routier indique le début d’une zone cyclable.Dans une zone cyclable, les véhicules à moteur (donc aussi les cyclomoteurs) ne peuvent pas dépasser les cyclistes, speed pedelecs et cycles de moins d’1 m de large.Les autres véhicules peuvent être dépassés s’ils roulent trop lentement.La vitesse maximale autorisée dans une zone cyclable est de 30 km/h.",
+      "correctAnswer": "C",
+      "explanation": "Ce signal routier indique le début d'une zone cyclable. Dans une zone cyclable, les véhicules à moteur (donc aussi les cyclomoteurs) ne peuvent pas dépasser les cyclistes, speed pedelecs et cycles de moins d'1 m de large. Les autres véhicules peuvent être dépassés s'ils roulent trop lentement. La vitesse maximale autorisée dans une zone cyclable est de 30 km/h.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/67/28.jpg"
     },
     {
