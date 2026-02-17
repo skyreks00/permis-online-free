@@ -1010,15 +1010,15 @@
       "propositions": [
         {
           "letter": "A",
-          "text": "Voiture"
+          "text": "La voiture A"
         },
         {
           "letter": "B",
-          "text": "Voiture"
+          "text": "La voiture B"
         }
       ],
-      "correctAnswer": "B",
-      "explanation": "Voiture A est à côté d'un signal d'arrêt.",
+      "correctAnswer": "A",
+      "explanation": "La voiture A est à côté d'un signal d'arrêt, donc elle doit s'arrêter et laisser passer les autres véhicules.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/40.jpg"
     }
   ]
