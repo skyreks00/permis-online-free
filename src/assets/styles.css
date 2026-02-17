@@ -140,6 +140,12 @@ body {
   padding: var(--space-5) 0 var(--space-6);
 }
 
+@media (max-width: 600px) {
+  .container {
+    padding: var(--space-3) 0 var(--space-4);
+  }
+}
+
 /* 4) Typography */
 h1,
 h2,
@@ -348,6 +354,12 @@ input[type="checkbox"] {
   padding: var(--space-5);
 }
 
+@media (max-width: 600px) {
+  .question-card {
+    padding: var(--space-3);
+  }
+}
+
 .question-header {
   display: flex;
   align-items: center;
@@ -387,6 +399,12 @@ input[type="checkbox"] {
   place-items: center;
 }
 
+@media (max-width: 600px) {
+  .question-image {
+    min-height: 140px;
+  }
+}
+
 .question-image img {
   width: 100%;
   height: 100%;
@@ -415,6 +433,12 @@ input[type="checkbox"] {
   line-height: 1.4;
 }
 
+@media (max-width: 600px) {
+  .question-text-inner {
+    font-size: 1.1rem;
+  }
+}
+
 .answers {
   display: grid;
   gap: 10px;
@@ -432,6 +456,14 @@ input[type="checkbox"] {
   border: 2px solid var(--border);
   color: var(--text);
   transition: all 0.2s ease;
+}
+
+@media (max-width: 600px) {
+  .answer-btn {
+    padding: 10px 14px;
+    gap: 12px;
+    border-radius: 10px;
+  }
 }
 
 .answer-btn:hover {
@@ -737,6 +769,13 @@ input[type="checkbox"] {
   .quiz-nav-buttons {
     grid-column: 1;
     justify-content: space-between;
+  }
+}
+
+@media (max-width: 600px) {
+  .quiz-nav-buttons {
+    margin-top: 12px;
+    gap: 10px;
   }
 }
 
