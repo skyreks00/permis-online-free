@@ -82,19 +82,19 @@
       "propositions": [
         {
           "letter": "A",
-          "text": "Voiture"
+          "text": "La voiture A"
         },
         {
           "letter": "B",
-          "text": "Voiture"
+          "text": "La voiture B"
         },
         {
           "letter": "C",
-          "text": "Voiture"
+          "text": "La voiture C"
         }
       ],
       "correctAnswer": "A",
-      "explanation": "La voiture 'C' est à côté d'un signal d'arrêt.La voiture 'A' a la priorité de droite.",
+      "explanation": "La voiture C est à côté d'un signal d'arrêt. La voiture A a la priorité de droite.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/83/37.jpg"
     },
     {
