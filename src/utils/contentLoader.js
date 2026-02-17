@@ -7,14 +7,28 @@
 const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/skyreks00/permis-online-free/main/public/data';
 
 /**
- * Loads JSON content from GitHub or local data as fallback
+ * Loads JSON content from local data with GitHub as fallback
  * @param {string} filename - The filename to load (e.g., 'themes.json')
  * @param {object|null} fallbackData - Optional fallback data if fetch fails
  * @returns {Promise<object>} - The loaded JSON data
  */
 export const loadFromGitHub = async (filename, fallbackData = null) => {
-    const cacheBuster = Date.now();
-    const url = `${GITHUB_RAW_BASE}/${filename}?_=${cacheBuster}`;
+    // 1. Try local data first (the data folder in public/dist)
+    try {
+        console.log(`[ContentLoader] Fetching ${filename} from local data...`);
+        // Use an absolute path or relative to origin to ensure it works on subpaths
+        const response = await fetch(`${import.meta.env.BASE_URL}data/${filename}?_=${Date.now()}`);
+        if (response.ok) {
+            const data = await response.json();
+            console.log(`[ContentLoader] Successfully loaded ${filename} from local data`);
+            return data;
+        }
+    } catch (e) {
+        console.warn(`[ContentLoader] Local fetch failed for ${filename}`, e.message);
+    }
+
+    // 2. Fallback to GitHub Raw
+    const url = `${GITHUB_RAW_BASE}/${filename}?_=${Date.now()}`;
 
     try {
         console.log(`[ContentLoader] Fetching ${filename} from GitHub...`);
