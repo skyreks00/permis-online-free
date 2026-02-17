@@ -10,6 +10,17 @@ const Quiz = ({ questions, themeName, onFinish, onExit, instantFeedback, autoPla
   const scoreRef = useRef(0);
   const answersRef = useRef([]);
 
+  // Keyboard shortcut: Enter to go to next question
+  React.useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Enter' && hasAnswered) {
+        handleNext();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [hasAnswered, currentQuestionIndex]); // Depend on hasAnswered to know when it's safe to skip
+
   const currentQuestion = questionsData[currentQuestionIndex];
 
   const handleAnswer = ({ isCorrect, userAnswer, correctAnswer, questionId }) => {
