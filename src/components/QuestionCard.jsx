@@ -587,14 +587,14 @@ const QuestionCard = ({
                     key={`${prop.letter}-${idx}`}
                     className={`answer-btn transition-all duration-300 ${getButtonClass(prop.letter)} 
                       ${isCorrectionMode ? "!bg-transparent border-none shadow-none opacity-80 hover:opacity-100" : ""}
-                      ${isCorrectionMode && prop.letter === fixedQuestion.correctAnswer ? "scale-[1.02] !opacity-100" : ""}`}
+                      ${isCorrectionMode && prop.letter === fixedQuestion.correctAnswer ? "scale-[1.02] !opacity-100 border-success text-success bg-success/10" : ""}`}
                     onClick={() => isCorrectionMode ? toggleCorrectAnswer(prop.letter) : handleAnswer(prop.letter)}
                     disabled={savingState === "saving" || (savingState === "success" && isCorrectionMode)}
                   >
                     <div 
                       className={`answer-key shrink-0 transition-all !bg-transparent border border-white/10
-                        ${isCorrectionMode ? "hover:border-warning/50 hover:text-warning" : ""}
-                        ${isCorrectionMode && prop.letter === fixedQuestion.correctAnswer ? "border-warning text-warning bg-warning/10" : ""}`}
+                        ${isCorrectionMode ? "hover:border-success/50 hover:text-success" : ""}
+                        ${isCorrectionMode && prop.letter === fixedQuestion.correctAnswer ? "border-success text-success bg-success/10" : ""}`}
                       onClick={(e) => {
                         if(isCorrectionMode) {
                           e.stopPropagation();
@@ -620,7 +620,7 @@ const QuestionCard = ({
                       <div className="answer-text">{prop.text}</div>
                     )}
                     {(showCheck || (isCorrectionMode && prop.letter === fixedQuestion.correctAnswer)) && (
-                      <CheckCircle size={18} className={`answer-check transition-all ${isCorrectionMode ? "text-warning" : "text-success"}`} />
+                      <CheckCircle size={18} className={`answer-check transition-all text-success`} />
                     )}
                   </button>
                 );
@@ -628,25 +628,25 @@ const QuestionCard = ({
             ) : displayQuestion.type === "yes_no" ? (
               <>
                 <button
-                  className={`answer-btn ${getButtonClass("OUI")} ${isCorrectionMode && fixedQuestion.correctAnswer === "OUI" ? "border-warning border-2" : ""}`}
+                  className={`answer-btn ${getButtonClass("OUI")} ${isCorrectionMode && fixedQuestion.correctAnswer === "OUI" ? "border-success border-2" : ""}`}
                   onClick={() => isCorrectionMode ? toggleCorrectAnswer("OUI") : handleAnswer("OUI")}
                   disabled={savingState === "saving"}
                 >
-                  <div className={`answer-key ${isCorrectionMode ? "cursor-pointer hover:bg-warning hover:text-black transition-colors" : ""}`}>A</div>
+                  <div className={`answer-key ${isCorrectionMode ? "cursor-pointer hover:bg-success hover:text-black transition-colors" : ""}`}>A</div>
                   <div className="answer-text">Oui</div>
                   {(hasAnswered && instantFeedback && displayQuestion.correctAnswer === "OUI") || (isCorrectionMode && fixedQuestion.correctAnswer === "OUI") ? (
-                      <CheckCircle size={20} className="answer-check text-warning" />
+                      <CheckCircle size={20} className="answer-check text-success" />
                   ) : null}
                 </button>
                 <button
-                  className={`answer-btn ${getButtonClass("NON")} ${isCorrectionMode && fixedQuestion.correctAnswer === "NON" ? "border-warning border-2" : ""}`}
+                  className={`answer-btn ${getButtonClass("NON")} ${isCorrectionMode && fixedQuestion.correctAnswer === "NON" ? "border-success border-2" : ""}`}
                   onClick={() => isCorrectionMode ? toggleCorrectAnswer("NON") : handleAnswer("NON")}
                   disabled={savingState === "saving"}
                 >
-                  <div className={`answer-key ${isCorrectionMode ? "cursor-pointer hover:bg-warning hover:text-black transition-colors" : ""}`}>B</div>
+                  <div className={`answer-key ${isCorrectionMode ? "cursor-pointer hover:bg-success hover:text-black transition-colors" : ""}`}>B</div>
                   <div className="answer-text">Non</div>
                   {(hasAnswered && instantFeedback && displayQuestion.correctAnswer === "NON") || (isCorrectionMode && fixedQuestion.correctAnswer === "NON") ? (
-                      <CheckCircle size={20} className="answer-check text-warning" />
+                      <CheckCircle size={20} className="answer-check text-success" />
                   ) : null}
                 </button>
               </>
