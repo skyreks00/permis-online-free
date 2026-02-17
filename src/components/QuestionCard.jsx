@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { BookOpen, X, CheckCircle } from "lucide-react";
+import { BookOpen, X, CheckCircle, ArrowLeftRight } from "lucide-react";
 
 const QuestionCard = ({
   question,
@@ -234,15 +234,22 @@ const QuestionCard = ({
     return answer === selectedAnswer ? "selected" : "dimmed";
   };
 
-  // --- FIX LOGIC IMPORTS ---
-  // Ideally these would be at top, but we are inside function for tool simplicity.
-  // We will assume imports are added at top of file (I cannot inject imports easily with replace_file_content if I don't target top).
-  // Wait, I am replacing the whole component logic, so I NEED imports.
-  // Since I can't edit top of file in same tool call easily without context, I will ASSUME the user adds imports or I use dynamic imports.
-  // Actually, I should use `multi_replace` to add imports at top if I want to be clean.
-  // For now, I'll rely on global scope or assume `src/utils` are available.
-  // NO, I must fix imports. I'll do a separate tool call for imports or use `replace_file_content` carefully.
-  // I will add the imports to the TOP of the file in a separate step.
+  const handleSwapProps = () => {
+    if (!fixedQuestion || !fixedQuestion.propositions || fixedQuestion.propositions.length < 2) return;
+    
+    setFixedQuestion(prev => {
+      const newProps = [...prev.propositions];
+      const tempText = newProps[0].text;
+      newProps[0] = { ...newProps[0], text: newProps[1].text };
+      newProps[1] = { ...newProps[1], text: tempText };
+      
+      let newCorrect = prev.correctAnswer;
+      if (newCorrect === prev.propositions[0].letter) newCorrect = prev.propositions[1].letter;
+      else if (newCorrect === prev.propositions[1].letter) newCorrect = prev.propositions[0].letter;
+      
+      return { ...prev, propositions: newProps, correctAnswer: newCorrect };
+    });
+  };
 
   const handleFixQuestion = async () => {
     const apiKey = localStorage.getItem("groq_api_key");
@@ -405,6 +412,15 @@ const QuestionCard = ({
                 <span>MASTER</span>
               </div>
               <div className="correction-actions">
+                <button
+                  onClick={handleSwapProps}
+                  className="btn-cancel"
+                  title="Inverser les réponses"
+                  disabled={savingState === "saving"}
+                  style={{ padding: '4px 8px' }}
+                >
+                  <ArrowLeftRight size={16} />
+                </button>
                 <button
                   onClick={() => setFixedQuestion(null)}
                   className="btn-cancel"
