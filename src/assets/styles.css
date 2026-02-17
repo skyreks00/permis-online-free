@@ -24,10 +24,10 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-html,
 body,
 #root {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -143,6 +143,7 @@ body {
 @media (max-width: 600px) {
   .container {
     padding: var(--space-3) 0 var(--space-4);
+    width: min(1250px, calc(100% - 16px));
   }
 }
 
@@ -315,6 +316,13 @@ input[type="checkbox"] {
 .quiz {
   width: min(1250px, calc(100% - 32px));
   margin: 24px auto;
+}
+
+@media (max-width: 600px) {
+  .quiz {
+    width: min(1250px, calc(100% - 16px));
+    margin: 16px auto;
+  }
 }
 
 .quiz-topbar {
@@ -768,6 +776,7 @@ input[type="checkbox"] {
   .quiz-nav-buttons {
     grid-column: 1;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
