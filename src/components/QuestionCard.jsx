@@ -437,7 +437,22 @@ const QuestionCard = ({
                <div className="correction-input-wrapper animate-in slide-in-from-bottom-2 fade-in duration-300">
                   <div className="flex justify-between items-center px-4 py-2 border-b border-white/10">
                     <span className="text-xs font-semibold text-white/50">Explication / Commit Message</span>
-                    <button onClick={() => setShowExplanationInput(false)} style={{ color: 'rgba(255,255,255,0.5)' }} className="hover:text-white"><X size={16}/></button>
+                    <button 
+                      onClick={() => setShowExplanationInput(false)} 
+                      style={{ 
+                        background: 'transparent', 
+                        border: 'none', 
+                        color: 'rgba(255,255,255,0.5)', 
+                        cursor: 'pointer',
+                        padding: '4px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                      }} 
+                      className="hover:text-white"
+                    >
+                      <X size={16}/>
+                    </button>
                   </div>
                   <textarea
                     className="correction-explanation-input"
