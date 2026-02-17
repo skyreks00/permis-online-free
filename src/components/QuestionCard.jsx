@@ -466,9 +466,9 @@ const QuestionCard = ({
         </div>
       )}
 
-      {/* Navigation Buttons placed ABOVE the question on Mobile/Compact layout */}
+      {/* Navigation Buttons placed conditionally via CSS (Haut sur Mobile / Bas sur PC) */}
       {hasAnswered && (
-        <div className="quiz-nav-buttons" style={{ marginBottom: '16px', marginTop: '0' }}>
+        <div className="quiz-nav-buttons">
           {instantFeedback && question?.explanation && (
             <button
               onClick={() => setShowExplanation(true)}

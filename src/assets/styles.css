@@ -360,6 +360,8 @@ input[type="checkbox"] {
 /* 11) Question Card */
 .question-card {
   padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
 }
 
 @media (max-width: 600px) {
@@ -373,6 +375,7 @@ input[type="checkbox"] {
   align-items: center;
   justify-content: space-between;
   margin-bottom: var(--space-3);
+  order: 1;
 }
 
 .question-title {
@@ -389,11 +392,13 @@ input[type="checkbox"] {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 18px;
+  order: 2;
 }
 
 @media (max-width: 880px) {
   .question-main {
     grid-template-columns: 1fr;
+    order: 3; /* Move down on mobile */
   }
 }
 
@@ -770,13 +775,16 @@ input[type="checkbox"] {
   gap: 16px;
   align-items: center;
   margin-top: 20px;
+  order: 3;
 }
 
 @media (max-width: 880px) {
   .quiz-nav-buttons {
-    grid-column: 1;
     justify-content: space-between;
     flex-wrap: wrap;
+    order: 2; /* Move up on mobile */
+    margin-top: 0;
+    margin-bottom: 20px;
   }
 }
 
