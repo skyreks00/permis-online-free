@@ -762,7 +762,6 @@ input[type="checkbox"] {
   gap: 16px;
   align-items: center;
   margin-top: 20px;
-  grid-column: 2;
 }
 
 @media (max-width: 880px) {

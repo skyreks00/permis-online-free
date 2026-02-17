@@ -466,6 +466,24 @@ const QuestionCard = ({
         </div>
       )}
 
+      {/* Navigation Buttons placed ABOVE the question on Mobile/Compact layout */}
+      {hasAnswered && (
+        <div className="quiz-nav-buttons" style={{ marginBottom: '16px', marginTop: '0' }}>
+          {instantFeedback && question?.explanation && (
+            <button
+              onClick={() => setShowExplanation(true)}
+              className="btn-explanation"
+            >
+              <BookOpen size={20} />
+              Explication
+            </button>
+          )}
+          <button type="button" onClick={onNext} className="btn-next">
+            {isLastQuestion ? "Terminer" : "Suivant"}
+          </button>
+        </div>
+      )}
+
       <div
         className="question-main"
         style={{
@@ -644,23 +662,6 @@ const QuestionCard = ({
         </div>
       </div>
 
-      {/* Navigation Buttons inside the right column */}
-      {hasAnswered && (
-        <div className="quiz-nav-buttons">
-          {instantFeedback && question?.explanation && (
-            <button
-              onClick={() => setShowExplanation(true)}
-              className="btn-explanation"
-            >
-              <BookOpen size={20} />
-              Explication
-            </button>
-          )}
-          <button type="button" onClick={onNext} className="btn-next">
-            {isLastQuestion ? "Terminer" : "Suivant"}
-          </button>
-        </div>
-      )}
 
       {/* Popup Modal */}
       {showExplanation && (
