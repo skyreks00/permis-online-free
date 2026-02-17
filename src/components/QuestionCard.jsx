@@ -30,6 +30,7 @@ const QuestionCard = ({
   const [fixedQuestion, setFixedQuestion] = useState(null);
   const [savingState, setSavingState] = useState(null); // 'saving', 'success', 'error'
   const [saveMessage, setSaveMessage] = useState("");
+  const [showExplanationInput, setShowExplanationInput] = useState(false);
 
   // Audio effect
   const [voice, setVoice] = useState(null);
@@ -357,7 +358,7 @@ const QuestionCard = ({
 
   return (
     <div
-      className={`question-card ${timedOut ? "timed-out" : ""} ${isCorrectionMode ? "correction-mode" : ""}`}
+      className={`question-card relative ${timedOut ? "timed-out" : ""} ${isCorrectionMode ? "correction-mode" : ""}`}
       style={
         isCorrectionMode
           ? {
@@ -398,7 +399,7 @@ const QuestionCard = ({
       </div>
 
       {isCorrectionMode && (
-        <div className="correction-toolbar">
+        <div className="correction-toolbar" style={{ top: 'auto', bottom: '100%', right: 0, marginBottom: '8px' }}>
           {/* Status Badge */}
           <div className="correction-badge">
             <div className="correction-badge-dot" />
@@ -427,23 +428,35 @@ const QuestionCard = ({
 
       {isCorrectionMode && (
         <div className="correction-floating-bar">
-           <div className="correction-input-wrapper">
-              <textarea
-                className="correction-explanation-input"
-                rows={1} 
-                placeholder="Message de commit / explication..."
-                value={fixedQuestion.explanation || ""}
-                onChange={(e) => updateFixedField("explanation", e.target.value)}
-                onFocus={(e) => e.target.rows = 3} 
-                onBlur={(e) => !e.target.value && (e.target.rows = 1)}
-                disabled={!!savingState}
-              />
-               {savingState === "error" && (
-                <div className="correction-error-msg">
-                   <X size={12} /> {saveMessage}
-                </div>
-              )}
-           </div>
+           {!fixedQuestion.explanation && !showExplanationInput ? (
+               <button 
+                className="correction-edit-expl-btn"
+                onClick={() => setShowExplanationInput(true)}
+               >
+                 📝 Modifier l'explication
+               </button>
+           ) : (
+               <div className="correction-input-wrapper animate-in slide-in-from-bottom-2 fade-in duration-300">
+                  <div className="flex justify-between items-center px-4 py-2 border-b border-white/10">
+                    <span className="text-xs font-semibold text-white/50">Explication / Commit Message</span>
+                    <button onClick={() => setShowExplanationInput(false)} className="text-white/50 hover:text-white"><X size={14}/></button>
+                  </div>
+                  <textarea
+                    className="correction-explanation-input"
+                    rows={3}
+                    autoFocus
+                    placeholder="Pourquoi cette correction est-elle nécessaire ?"
+                    value={fixedQuestion.explanation || ""}
+                    onChange={(e) => updateFixedField("explanation", e.target.value)}
+                    disabled={!!savingState}
+                  />
+                   {savingState === "error" && (
+                    <div className="correction-error-msg">
+                       <X size={12} /> {saveMessage}
+                    </div>
+                  )}
+               </div>
+           )}
         </div>
       )}
 
