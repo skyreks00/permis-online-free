@@ -136,15 +136,15 @@
         },
         {
           "letter": "B",
-          "text": "Seulement la voiture"
+          "text": "Tous les usagers de la route"
         },
         {
           "letter": "C",
-          "text": "La voiture A et la voiture"
+          "text": "La voiture et les piétons"
         }
       ],
-      "correctAnswer": "C",
-      "explanation": "Lorsqu’un officier lève un bras verticalement, tous les usagers de la route, y compris les piétons, doivent s’arrêter.",
+      "correctAnswer": "B",
+      "explanation": "Lorsqu'un officier lève un bras verticalement, tous les usagers de la route, y compris les piétons, doivent s'arrêter.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/81/8.jpg"
     },
     {
