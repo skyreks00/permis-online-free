@@ -656,19 +656,19 @@
       "propositions": [
         {
           "letter": "A",
-          "text": "Seulement au-delà du signal"
+          "text": "Seulement au-delà du panneau A"
         },
         {
           "letter": "B",
-          "text": "Seulement au-delà du signal"
+          "text": "Seulement au-delà du panneau B"
         },
         {
           "letter": "C",
-          "text": "Au-delà du signal A et du signal"
+          "text": "Au-delà du panneau A et B"
         }
       ],
       "correctAnswer": "C",
-      "explanation": "C27. Accès interdit aux conducteurs de véhicules dont la largeur, chargement compris, dépasse celle indiquée.C29. Accès interdit aux conducteurs de véhicules dont la hauteur, chargement compris, dépasse celle indiquée.",
+      "explanation": "Le panneau C27 interdit l'accès aux véhicules dont la largeur dépasse celle indiquée. Le panneau C29 interdit l'accès aux véhicules dont la hauteur dépasse celle indiquée. Pour une voiture de 7 mètres de long, il faut considérer les limitations de hauteur et de largeur.",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/74/37.jpg"
     },
     {
