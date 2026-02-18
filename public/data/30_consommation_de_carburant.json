@@ -42,7 +42,7 @@
     {
       "id": 3,
       "type": "multiple_choice",
-      "question": "Quel est le carburant qui pollue le moins?",
+      "question": "Quel est le carburant qui pollue le moins ?",
       "propositions": [
         {
           "letter": "A",
@@ -51,11 +51,17 @@
         {
           "letter": "B",
           "text": "Diesel"
+        },
+        {
+          "letter": "C",
+          "text": "GPL"
         }
       ],
       "correctAnswer": "C",
-      "explanation": "GPL est le carburant qui pollue le moins.",
-      "image": "https: //examen.gratisrijbewijsonline.be/afbeeldingen/94/3.jpg"
+      "explanation": "Le GPL est le carburant qui pollue le moins.",
+      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/94/3.jpg",
+      "originalThemeId": "30_consommation_de_carburant",
+      "sourceFile": "30_consommation_de_carburant.json"
     },
     {
       "id": 4,
