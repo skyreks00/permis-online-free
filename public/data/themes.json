@@ -242,6 +242,12 @@
           "name": "La technique",
           "totalQuestions": 63,
           "file": "31_technique.json"
+        },
+        {
+          "id": "infractions",
+          "name": "Infractions",
+          "lessonFile": "infractions.pdf",
+          "icon": "⚖️"
         }
       ]
     },
@@ -253,7 +259,10 @@
           "name": "Examen B",
           "totalQuestions": 50,
           "file": "examen_B.json",
-          "icon": "🎓"
+          "icon": "🎓",
+          "lessons": [
+             { "name": "Synthèse", "file": "syntheseB.pdf" }
+          ]
         }
       ]
     },

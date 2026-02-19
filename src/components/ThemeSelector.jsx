@@ -125,6 +125,7 @@ const ThemeSelector = ({ sections, progress, onSelectTheme, onSelectLesson }) =>
                       </button>
                     )}
 
+
                     {!isExam && (
                       <button
                         type="button"
@@ -142,7 +143,6 @@ const ThemeSelector = ({ sections, progress, onSelectTheme, onSelectLesson }) =>
                         disabled={!hasLesson}
                         onClick={() => {
                           if (!hasLesson) return;
-                          // Use explicit lessonFile if present, otherwise derive from json file
                           const lesson = item.lessonFile || (item.file ? item.file.replace('.json', '.html') : null);
                           if (lesson) onSelectLesson(lesson);
                         }}
@@ -150,6 +150,28 @@ const ThemeSelector = ({ sections, progress, onSelectTheme, onSelectLesson }) =>
                         <BookOpen size={16} /> Leçon
                       </button>
                     )}
+
+                    {/* Show lessons for Exam items (or any item with multiple lessons) */}
+                    {item.lessons && item.lessons.map((lesson, lIdx) => (
+                         <button
+                            key={lIdx}
+                            type="button"
+                            className="btn-ghost"
+                            style={{
+                              flex: 1,
+                              padding: '8px',
+                              border: '1px solid var(--border)',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              gap: '6px',
+                              ...(isExam ? { borderColor: 'var(--warning)', color: 'var(--warning)' } : {})
+                            }}
+                            onClick={() => onSelectLesson(lesson.file)}
+                          >
+                           <BookOpen size={16} /> {lesson.name}
+                        </button>
+                    ))}
                   </div>
                 </div>
               )

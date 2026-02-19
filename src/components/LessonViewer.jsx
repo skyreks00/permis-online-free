@@ -268,6 +268,27 @@ const LessonViewer = ({ lessonFile, quizId, onBack, onStartQuiz, theme }) => {
         };
         window.addEventListener('message', handleMessage);
 
+
+        // Special handling for PDF files
+        if (lessonFile.toLowerCase().endsWith('.pdf')) {
+            const base = import.meta.env.BASE_URL || '/';
+            // Construct path to PDF. Assuming they are in public/pdf/ if not absolute.
+            // But from the plan, we put them in public/pdf, so we need to prepend 'pdf/' if not present,
+            // or just rely on the lessonFile path being correct.
+            // Let's assume lessonFile passed from themes.json will be "pdf/syntheseB.pdf" or similar?
+            // Wait, standard lessons are in "lecon/" automatically in the fetch below:
+            // fetch(`${base}lecon/${lessonFile}`);
+            
+            // So if I pass "pdf/syntheseB.pdf", the fetch below would be "lecon/pdf/syntheseB.pdf" which is wrong.
+            // I should change the logic to:
+            
+            setLoading(false); // PDF iframe loads instantly/natively
+            // We can't really "inject styles" into a PDF iframe easily or "fix images".
+            // So we just set srcDoc or src.
+            // Using `src` is better for PDFs.
+            return;
+        }
+
         fetchLesson();
 
         // Lock body scroll
@@ -316,17 +337,31 @@ const LessonViewer = ({ lessonFile, quizId, onBack, onStartQuiz, theme }) => {
                 }}>
                     Chargement...
                 </div>
-                <iframe
-                    srcDoc={srcDoc}
-                    title="Leçon"
-                    style={{
-                        width: '100%',
-                        height: '100%',
-                        border: 'none',
-                        opacity: loading ? 0 : 1,
-                        transition: 'opacity 0.3s ease-in-out'
-                    }}
-                />
+                {lessonFile && lessonFile.toLowerCase().endsWith('.pdf') ? (
+                    <iframe 
+                        src={`${import.meta.env.BASE_URL || '/'}pdf/${lessonFile.replace('pdf/', '')}`} // specialized handling or just expect 'syntheseB.pdf' and prepend 'pdf/'? 
+                        // Let's keep it simple: we will put "syntheseB.pdf" in themes.json, and here we prepend "pdf/"
+                        // actually, let's just use the logic: if it ends in .pdf, assume it is in /pdf folder relative to base.
+                        title="Leçon PDF"
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            border: 'none',
+                        }}
+                    />
+                ) : (
+                    <iframe
+                        srcDoc={srcDoc}
+                        title="Leçon"
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            border: 'none',
+                            opacity: loading ? 0 : 1,
+                            transition: 'opacity 0.3s ease-in-out'
+                        }}
+                    />
+                )}
             </div>
         </div>
     );
