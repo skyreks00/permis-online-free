@@ -27,6 +27,7 @@ const LessonPage = ({ themeMode, sections }) => {
             quizId={matchingTheme?.file ? matchingTheme.id : null}
             onBack={() => navigate('/')}
             onStartQuiz={(id) => navigate(`/quiz/${id}`)}
+            onOpenLesson={(file) => navigate(`/lecon/${encodeURIComponent(file)}`)}
             theme={themeMode}
         />
     );
