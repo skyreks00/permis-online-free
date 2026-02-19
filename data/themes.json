@@ -246,7 +246,7 @@
         {
           "id": "infractions",
           "name": "Infractions",
-          "lessonFile": "infractions.pdf",
+          "lessonFile": "infractions/infractions.html",
           "icon": "⚖️"
         }
       ]
