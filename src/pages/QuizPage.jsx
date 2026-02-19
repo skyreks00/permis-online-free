@@ -89,8 +89,11 @@ const QuizPage = ({
                     loaded = json.questions || [];
                 }
 
-                // Shuffle
-                const shuffled = [...loaded].sort(() => Math.random() - 0.5);
+                const shuffled = [...loaded];
+                for (let i = shuffled.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+                }
 
                 if (foundTheme.id.includes('examen')) {
                     setQuestions(shuffled.slice(0, 50));
