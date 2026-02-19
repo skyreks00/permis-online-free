@@ -363,6 +363,11 @@ const QuestionCard = ({
       <div className="question-header">
         <div className="question-progress" aria-live="polite">
           Question {Math.min(currentIndex + 1, total)} / {total}
+          {displayQuestion.points === 5 && (
+            <span className="badge badge-error ml-2 font-bold animate-pulse text-white">
+              ⚠️ FAUTE GRAVE (5 POINTS)
+            </span>
+          )}
           {isCorrectionMode && (
             <span className="text-warning font-bold ml-2">
               ✨ CORRECTION SUGGÉRÉE
