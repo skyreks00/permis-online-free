@@ -33,12 +33,12 @@ const QuestionCard = ({
   const [showExplanationInput, setShowExplanationInput] = useState(false);
 
   // Audio effect
-  const [voice, setVoice] = useState(null);
-
+  // Removed local voice loading, delegated to textToSpeech utility
+  
   // Determine what to display: The Fixed version (if any) or the Original
   const displayQuestion = fixedQuestion || question;
   const isCorrectionMode = !!fixedQuestion;
-
+  
   useEffect(() => {
     // Reset Fix UI when question changes
     setIsFixing(false);
@@ -48,60 +48,41 @@ const QuestionCard = ({
   }, [question?.id]);
 
   useEffect(() => {
-    const loadVoices = () => {
-      const voices = window.speechSynthesis.getVoices();
-      // Try to find a good French voice
-      // Priority: Google -> Microsoft -> any FR
-      const frVoices = voices.filter((v) => v.lang.startsWith("fr"));
-      const best =
-        frVoices.find((v) => v.name.includes("Google")) ||
-        frVoices.find((v) => v.name.includes("Microsoft")) ||
-        frVoices.find((v) => v.name.includes("Natural")) || // Edge 'Natural' voices
-        frVoices[0];
-      setVoice(best);
+    const playAudio = async () => {
+        if (autoPlayAudio && displayQuestion) {
+            const { playText, stopAudio } = await import("../utils/textToSpeech");
+            
+            // Cancel previous speech
+            stopAudio();
+
+            // Construct text: Question ... Propositions
+            let textToRead = displayQuestion.question || "";
+            if (
+                displayQuestion.propositions &&
+                Array.isArray(displayQuestion.propositions)
+            ) {
+                const propsText = displayQuestion.propositions
+                .map((p) => `${p.letter}... ${p.text}`)
+                .join(". ");
+                textToRead += `. ${propsText}`;
+            } else if (displayQuestion.type === "yes_no") {
+                textToRead += ". A... Oui. B... Non.";
+            }
+            
+            playText(textToRead);
+        } else {
+             const { stopAudio } = await import("../utils/textToSpeech");
+             stopAudio();
+        }
     };
 
-    loadVoices();
-    window.speechSynthesis.onvoiceschanged = loadVoices;
-
-    return () => {
-      window.speechSynthesis.onvoiceschanged = null;
-    };
-  }, []);
-
-  useEffect(() => {
-    if (autoPlayAudio && displayQuestion) {
-      // Cancel previous speech
-      window.speechSynthesis.cancel();
-
-      // Construct text: Question ... Propositions
-      let textToRead = displayQuestion.question || "";
-      if (
-        displayQuestion.propositions &&
-        Array.isArray(displayQuestion.propositions)
-      ) {
-        const propsText = displayQuestion.propositions
-          .map((p) => `${p.letter}... ${p.text}`)
-          .join(". ");
-        textToRead += `. ${propsText}`;
-      } else if (displayQuestion.type === "yes_no") {
-        textToRead += ". A... Oui. B... Non.";
-      }
-
-      const utterance = new SpeechSynthesisUtterance(textToRead);
-      if (voice) utterance.voice = voice;
-      utterance.lang = "fr-FR";
-      utterance.rate = 1.0;
-      window.speechSynthesis.speak(utterance);
-    } else {
-      window.speechSynthesis.cancel();
-    }
+    playAudio();
 
     // Cleanup on unmount or question change
     return () => {
-      window.speechSynthesis.cancel();
+       import("../utils/textToSpeech").then(({ stopAudio }) => stopAudio());
     };
-  }, [displayQuestion, autoPlayAudio, voice]); // Depend on displayQuestion
+  }, [displayQuestion, autoPlayAudio]); // Depend on displayQuestion
 
   useEffect(() => {
     // Reset interaction states when the DISPLAYED question changes (ID or content update)

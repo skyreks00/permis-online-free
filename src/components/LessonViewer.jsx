@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import globalStyles from '../assets/styles.css?inline';
 import { ArrowLeft } from 'lucide-react';
 
-const LessonViewer = ({ lessonFile, quizId, onBack, onStartQuiz, onOpenLesson, theme }) => {
+const LessonViewer = ({ lessonFile, quizId, onBack, onStartQuiz, onOpenLesson, onMarkRead, theme, isRead, quizDone }) => {
     const [srcDoc, setSrcDoc] = React.useState('');
     const [loading, setLoading] = React.useState(true);
 
@@ -364,9 +364,86 @@ const LessonViewer = ({ lessonFile, quizId, onBack, onStartQuiz, onOpenLesson, t
                     quizContainer.style.borderTop = '1px solid var(--border)';
                     quizContainer.style.textAlign = 'center';
                     quizContainer.style.marginBottom = '60px';
+                    quizContainer.style.display = 'flex';
+                    quizContainer.style.flexDirection = 'column';
+                    quizContainer.style.alignItems = 'center';
+                    quizContainer.style.gap = '20px';
 
+                    // Bouton Terminer
+                    const finishBtn = doc.createElement('button');
+                    finishBtn.id = 'finish-lesson-btn';
+                    finishBtn.textContent = isRead ? '🎉 Leçon déjà terminée' : '✅ J\'ai terminé cette leçon';
+                    finishBtn.style.backgroundColor = isRead ? 'var(--success-dim, rgba(34,197,94,0.15))' : 'var(--surface-2)';
+                    finishBtn.style.color = isRead ? 'var(--success, #22c55e)' : 'var(--text)';
+                    finishBtn.style.border = isRead ? '1px solid var(--success, #22c55e)' : '1px solid var(--border)';
+                    if (isRead) finishBtn.style.pointerEvents = 'none';
+                    finishBtn.style.padding = '12px 24px';
+                    finishBtn.style.borderRadius = '8px';
+                    finishBtn.style.fontSize = '1rem';
+                    finishBtn.style.fontWeight = '600';
+                    finishBtn.style.cursor = 'pointer';
+                    finishBtn.style.transition = 'all 0.2s ease';
+
+                    finishBtn.onmouseover = () => {
+                        finishBtn.style.transform = 'translateY(-2px)';
+                        finishBtn.style.backgroundColor = 'var(--bg-elev)';
+                    };
+                    finishBtn.onmouseout = () => {
+                        finishBtn.style.transform = 'translateY(0)';
+                        finishBtn.style.backgroundColor = 'var(--surface-2)';
+                    };
+
+                    finishBtn.setAttribute('onclick', `
+                        this.textContent = '🎉 Leçon terminée !';
+                        this.style.backgroundColor = 'var(--success-dim)';
+                        this.style.borderColor = 'var(--success)';
+                        this.style.color = 'var(--success)';
+                        this.style.pointerEvents = 'none';
+                        window.parent.postMessage({ type: 'MARK_READ', quizId: '${quizId}' }, '*');
+                        
+                        const qSection = document.getElementById('quiz-confirm-section');
+                        if(qSection) {
+                            qSection.style.display = 'flex';
+                            qSection.style.animation = 'fadeIn 0.5s ease-out forwards';
+                        }
+                    `);
+
+                    quizContainer.appendChild(finishBtn);
+
+                    if (isRead && quizId) {
+                        const quizShortcutBtn = doc.createElement('button');
+                        quizShortcutBtn.textContent = quizDone ? '🔁 Recommencer le quiz' : '🚀 Faire le quiz';
+                        quizShortcutBtn.style.backgroundColor = 'var(--primary)';
+                        quizShortcutBtn.style.color = 'white';
+                        quizShortcutBtn.style.border = 'none';
+                        quizShortcutBtn.style.padding = '12px 28px';
+                        quizShortcutBtn.style.borderRadius = '8px';
+                        quizShortcutBtn.style.fontSize = '1rem';
+                        quizShortcutBtn.style.fontWeight = '600';
+                        quizShortcutBtn.style.cursor = 'pointer';
+                        quizShortcutBtn.style.marginTop = '8px';
+                        quizShortcutBtn.setAttribute('onclick', `window.parent.postMessage({ type: 'START_QUIZ', quizId: '${quizId}' }, '*');`);
+                        quizContainer.appendChild(quizShortcutBtn);
+                    }
+
+                    // Section Confirmation Quiz (Initialement cachée)
+                    const quizConfirmSection = doc.createElement('div');
+                    quizConfirmSection.id = 'quiz-confirm-section';
+                    quizConfirmSection.style.display = 'none';
+                    quizConfirmSection.style.flexDirection = 'column';
+                    quizConfirmSection.style.alignItems = 'center';
+                    quizConfirmSection.style.gap = '15px';
+                    quizConfirmSection.style.marginTop = '10px';
+                    quizConfirmSection.style.opacity = '0';
+
+                    const confirmText = doc.createElement('p');
+                    confirmText.textContent = 'Voulez-vous passer au quiz maintenant ?';
+                    confirmText.style.color = 'var(--muted)';
+                    confirmText.style.marginBottom = '0';
+
+                     // Bouton Quiz
                     const quizBtn = doc.createElement('button');
-                    quizBtn.textContent = 'Démarrer le Quiz sur ce thème';
+                    quizBtn.textContent = '🚀 Lancer le Quiz';
                     quizBtn.style.backgroundColor = 'var(--primary)';
                     quizBtn.style.color = 'white';
                     quizBtn.style.border = 'none';
@@ -376,10 +453,23 @@ const LessonViewer = ({ lessonFile, quizId, onBack, onStartQuiz, onOpenLesson, t
                     quizBtn.style.fontWeight = '600';
                     quizBtn.style.cursor = 'pointer';
                     quizBtn.style.boxShadow = '0 4px 12px rgba(var(--primary-rgb), 0.3)';
-                    
-                    quizBtn.setAttribute('onclick', `window.parent.postMessage({ type: 'START_QUIZ', quizId: '${quizId}' }, '*')`);
+                    quizBtn.setAttribute('onclick', `window.parent.postMessage({ type: 'START_QUIZ', quizId: '${quizId}' }, '*');`);
 
-                    quizContainer.appendChild(quizBtn);
+                    quizConfirmSection.appendChild(confirmText);
+                    quizConfirmSection.appendChild(quizBtn);
+
+                    quizContainer.appendChild(quizConfirmSection);
+                    
+                    // Add keyframes for fadeIn if not present
+                    const styleSheet = doc.createElement("style");
+                    styleSheet.textContent = `
+                        @keyframes fadeIn {
+                            from { opacity: 0; transform: translateY(10px); }
+                            to { opacity: 1; transform: translateY(0); }
+                        }
+                    `;
+                    doc.head.appendChild(styleSheet);
+
                     doc.body.appendChild(quizContainer);
                 }
 
@@ -411,7 +501,8 @@ const LessonViewer = ({ lessonFile, quizId, onBack, onStartQuiz, onOpenLesson, t
         };
 
         const handleMessage = (event) => {
-            if (event.data && event.data.type === 'START_QUIZ' && event.data.quizId === quizId) {
+            if (!event.data) return;
+            if (event.data.type === 'START_QUIZ' && event.data.quizId === quizId) {
                 onStartQuiz(quizId);
             }
         };
@@ -457,11 +548,18 @@ const LessonViewer = ({ lessonFile, quizId, onBack, onStartQuiz, onOpenLesson, t
             if (event.data?.type === 'OPEN_LESSON' && onOpenLesson) {
                 onOpenLesson(event.data.file);
             }
+            if (event.data?.type === 'MARK_READ' && onMarkRead) {
+                onMarkRead(event.data.quizId); // quizId is actually themeId in this context
+            }
+            if (event.data?.type === 'FINISH_AND_START_QUIZ') {
+                if (onMarkRead) onMarkRead(event.data.quizId);
+                if (onStartQuiz) onStartQuiz(event.data.quizId);
+            }
         };
 
         window.addEventListener('message', handleMessage);
         return () => window.removeEventListener('message', handleMessage);
-    }, [onStartQuiz, onOpenLesson]);
+    }, [onStartQuiz, onOpenLesson, onMarkRead]);
 
     return (
         <div className="lesson-viewer" style={{
@@ -476,17 +574,16 @@ const LessonViewer = ({ lessonFile, quizId, onBack, onStartQuiz, onOpenLesson, t
             flexDirection: 'column'
         }}>
             <div className="actions" style={{
-                padding: '12px 20px',
-                borderBottom: '1px solid var(--border)',
+                padding: '10px 20px',
                 display: 'flex',
                 alignItems: 'center',
-                backgroundColor: 'var(--surface)',
-                gap: '16px'
+                gap: '16px',
+                marginTop: '64px' // Push below fixed header
             }}>
                 <button className="btn-ghost" onClick={onBack} style={{ border: '1px solid var(--border)', display: 'flex', alignItems: 'center', gap: '6px' }}>
                     <ArrowLeft size={16} /> Retour
                 </button>
-                <span style={{ fontWeight: 600, fontSize: '1.1rem', flex: 1 }}>Leçon</span>
+
             </div>
             <div style={{ flex: 1, display: 'flex', overflow: 'hidden', position: 'relative' }}>
                 <div style={{

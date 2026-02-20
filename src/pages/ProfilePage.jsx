@@ -18,11 +18,6 @@ const ProfilePage = ({
 
     return (
         <>
-            <TopControls
-                showProfileButton={false}
-                toggleTheme={toggleTheme}
-                isDarkMode={isDarkMode}
-            />
             <Profile
                 progress={progress}
                 themesData={themesData}

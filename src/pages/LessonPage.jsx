@@ -2,13 +2,11 @@ import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import LessonViewer from '../components/LessonViewer';
 
-const LessonPage = ({ themeMode, sections }) => {
+const LessonPage = ({ themeMode, sections, onMarkRead, progress }) => {
     const { lessonId } = useParams();
     const navigate = useNavigate();
-    // Decode the lesson ID if it was encoded
     const lessonFile = decodeURIComponent(lessonId);
 
-    // Find the thumb/item that matches this lesson file
     const matchingTheme = React.useMemo(() => {
         if (!sections) return null;
         for (const section of sections) {
@@ -21,13 +19,19 @@ const LessonPage = ({ themeMode, sections }) => {
         return null;
     }, [sections, lessonFile]);
 
+    const isRead = matchingTheme ? progress?.[matchingTheme.id]?.read === true : false;
+    const quizDone = matchingTheme?.file ? progress?.[matchingTheme.id]?.score !== undefined : false;
+
     return (
         <LessonViewer
             lessonFile={lessonFile}
             quizId={matchingTheme?.file ? matchingTheme.id : null}
-            onBack={() => navigate('/')}
+            isRead={isRead}
+            quizDone={quizDone}
+            onBack={() => navigate(-1)}
             onStartQuiz={(id) => navigate(`/quiz/${id}`)}
-            onOpenLesson={(file) => navigate(`/lecon/${encodeURIComponent(file)}`)}
+            onOpenLesson={(file) => navigate(`/cours/${encodeURIComponent(file)}`)}
+            onMarkRead={(id) => { if(onMarkRead) onMarkRead(id); }}
             theme={themeMode}
         />
     );

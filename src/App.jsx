@@ -1,15 +1,19 @@
 import { useState, useEffect, useRef } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import QuizDashboardPage from './pages/QuizDashboardPage';
+import LessonsPage from './pages/LessonsPage';
 import QuizPage from './pages/QuizPage';
 import ResultsPage from './pages/ResultsPage';
 import ProfilePage from './pages/ProfilePage';
+import HomePage from './pages/HomePage';
 import LessonPage from './pages/LessonPage';
+import ExamenBPage from './pages/ExamenBPage';
 import TopControls from './components/TopControls';
+import BottomNav from './components/BottomNav';
 import { loadThemeQuestions, loadThemesIndex } from './utils/contentLoader';
 
-import { auth, db } from './utils/firebase';
-import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { auth, app } from './utils/firebase';
+import { doc, getDoc, setDoc, getFirestore } from 'firebase/firestore';
 
 function App() {
   useEffect(() => {
@@ -22,6 +26,7 @@ function App() {
   const [instantFeedback, setInstantFeedback] = useState(false);
   const [autoPlayAudio, setAutoPlayAudio] = useState(false);
   const [syncStatus, setSyncStatus] = useState(null); // 'syncing', 'success', 'error', 'pending'
+  const [user, setUser] = useState(null);
   
   const isLocalUpdate = useRef(false);
   const debounceTimer = useRef(null);
@@ -42,16 +47,16 @@ function App() {
 
   // Dynamic Page Title
   useEffect(() => {
-    const path = window.location.hash.replace('#', '') || '/';
+    const path = window.location.pathname;
     let title = 'Permis Online Free';
 
-    if (path.startsWith('/quiz')) title = 'Quiz - Permis Online Free';
-    else if (path.startsWith('/resultats')) title = 'Résultats - Permis Online Free';
-    else if (path === '/profil') title = 'Mon Profil - Permis Online Free';
-    else if (path.startsWith('/lecon')) title = 'Leçon - Permis Online Free';
+    if (path.includes('/quiz')) title = 'Quiz - Permis Online Free';
+    else if (path.includes('/resultats')) title = 'Résultats - Permis Online Free';
+    else if (path.includes('/profil')) title = 'Mon Profil - Permis Online Free';
+    else if (path.includes('/cours') || path.includes('/lecon')) title = 'Leçon - Permis Online Free';
 
     document.title = title;
-  }, []); // Note: With BrowserRouter this effect needs to listen to location changes, but for now purely static title or simple hook is fine.
+  }, []); 
 
   const toggleTheme = () => {
     const newTheme = colorTheme === 'light' ? 'dark' : 'light';
@@ -105,9 +110,10 @@ function App() {
     }
 
     // AUTH & AUTO-SYNC PULL
-    const unsubscribe = auth.onAuthStateChanged(async (user) => {
-        if (user) {
-            console.log("👤 User logged in:", user.displayName || user.email);
+    const unsubscribe = auth.onAuthStateChanged(async (currentUser) => {
+        setUser(currentUser);
+        if (currentUser) {
+            console.log("👤 User logged in:", currentUser.displayName || currentUser.email);
             // Trigger auto-pull from Firestore
             pullFromCloud();
         }
@@ -200,15 +206,38 @@ function App() {
     });
   };
 
-  const syncToCloud = async (data) => {
+  const syncToCloud = async (progressData) => {
        try {
            const user = auth.currentUser;
            if (!user) return;
+           
+           // Ensure we get a valid DB instance from the authenticated app
+           let db;
+           try {
+                db = getFirestore(app);
+           } catch (dbError) {
+                console.error("❌ Fatal: Failed to get Firestore instance.", dbError);
+                return;
+           }
 
            setSyncStatus('syncing');
            console.log(`☁️ Firestore Sync: Saving to users/${user.uid}...`);
            
-           await setDoc(doc(db, 'users', user.uid), data);
+           // Inject API Keys into the payload
+           const groqKey = localStorage.getItem('groq_api_key');
+           const elevenKey = localStorage.getItem('elevenlabs_api_key');
+           const preferredVoice = localStorage.getItem('preferred_voice_uri');
+           
+           const payload = {
+               ...progressData,
+               apiKeys: {
+                   groq: groqKey,
+                   elevenLabs: elevenKey,
+                   preferredVoice: preferredVoice
+               }
+           };
+
+           await setDoc(doc(db, 'users', user.uid), payload);
            
            console.log("☁️ Firestore Sync: Success!");
            setSyncStatus('success');
@@ -220,6 +249,8 @@ function App() {
                console.warn("⚠️ ACTION REQUIRED: Check Firestore Rules in Firebase Console!");
            } else if (e.code === 'not-found') {
                console.warn("⚠️ ACTION REQUIRED: Create 'Cloud Firestore' database in Firebase Console!");
+           } else if (e.message && e.message.includes("Expected first argument to doc")) {
+               console.error("❌ CRITICAL: Firestore DB instance is invalid. Check firebaseConfig.");
            }
 
            setSyncStatus('error');
@@ -231,6 +262,14 @@ function App() {
       try {
           const user = auth.currentUser;
           if (!user) return;
+          
+          let db;
+           try {
+                db = getFirestore(app);
+           } catch (dbError) {
+                console.error("❌ Fatal: Failed to get Firestore instance.", dbError);
+                return;
+           }
 
           setSyncStatus('syncing');
           console.log(`☁️ Firestore Pull: Fetching users/${user.uid}...`);
@@ -243,7 +282,21 @@ function App() {
               return;
           }
 
-          const remoteProgress = docSnap.data();
+          const remoteData = docSnap.data();
+          
+          // --- EXTRACT AND SAVE KEYS ---
+          if (remoteData.apiKeys) {
+             console.log("🔑 Syncing API Keys from Cloud...");
+             if (remoteData.apiKeys.groq) localStorage.setItem('groq_api_key', remoteData.apiKeys.groq);
+             if (remoteData.apiKeys.elevenLabs) localStorage.setItem('elevenlabs_api_key', remoteData.apiKeys.elevenLabs);
+             if (remoteData.apiKeys.preferredVoice) localStorage.setItem('preferred_voice_uri', remoteData.apiKeys.preferredVoice);
+          }
+          
+          // Separate progress from keys for state
+          const { apiKeys, variables_if_any, ...remoteProgress } = remoteData;
+          
+          // --- NORMAL PROGRESS SYNC LOGIC ---
+
           const savedProgress = JSON.parse(localStorage.getItem('quizProgress') || '{}');
           
           // 1. Check for Cross-Device Reset
@@ -337,6 +390,21 @@ function App() {
 
   const isDarkMode = colorTheme === 'dark';
 
+  const markLessonRead = (themeId) => {
+    isLocalUpdate.current = true;
+    setProgress(prev => {
+        const current = prev[themeId] || {};
+        return {
+            ...prev,
+            [themeId]: {
+                ...current,
+                read: true,
+                date: new Date().toISOString()
+            }
+        };
+    });
+  };
+
   return (
     <BrowserRouter basename="/permis-online-free/">
       {/* GLOBAL SYNC TOAST */}
@@ -365,15 +433,38 @@ function App() {
         </div>
       )}
 
+      <TopControls
+        toggleTheme={toggleTheme}
+        isDarkMode={isDarkMode}
+        user={user}
+      />
+      
+      {/* <BottomNav /> - Replaced by Mobile Burger Menu in TopControls */}
+
       <Routes>
         <Route
           path="/"
+          element={<HomePage progress={progress} />}
+        />
+        <Route
+          path="/lecons"
           element={
-            <HomePage
+            <LessonsPage
+              sections={sections}
+              progress={progress}
+              onSelectLesson={(lessonFile) => window.location.hash = `#/lecon/${encodeURIComponent(lessonFile)}`}
+            />
+          }
+        />
+        <Route
+          path="/quiz"
+          element={
+            <QuizDashboardPage
               sections={sections}
               progress={progress}
               toggleTheme={toggleTheme}
               isDarkMode={isDarkMode}
+              onSelectTheme={(theme) => window.location.hash = `#/quiz/${theme.id}`}
             />
           }
         />
@@ -394,8 +485,19 @@ function App() {
           }
         />
         <Route
-          path="/lecon/:lessonId"
-          element={<LessonPage themeMode={colorTheme} sections={sections} />}
+          path="/cours/:lessonId"
+          element={<LessonPage themeMode={colorTheme} sections={sections} onMarkRead={markLessonRead} progress={progress} />}
+        />
+        <Route
+          path="/examen-b"
+          element={
+            <ExamenBPage
+              instantFeedback={instantFeedback}
+              autoPlayAudio={autoPlayAudio}
+              toggleTheme={toggleTheme}
+              isDarkMode={isDarkMode}
+            />
+          }
         />
         <Route
           path="/quiz/:themeId"
