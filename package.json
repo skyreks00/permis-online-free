@@ -8,7 +8,7 @@
     "dev": "vite",
     "generate:sitemap": "node scripts/generate-sitemap.mjs",
     "prebuild": "npm run generate:sitemap",
-    "build": "vite build && node scripts/copy-404.mjs",
+    "build": "vite build && node scripts/copy-404.mjs && node scripts/generate-static-pages.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
