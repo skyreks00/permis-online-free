@@ -74,10 +74,7 @@ async function main() {
       const items = section.items || [];
 
       for (const item of items) {
-        // Lesson Route
-        // If lessonFile is explicit, use it. 
-        // Otherwise, if it has a quiz file (e.g. 1_la_chaussee.json), 
-        // the lesson is 1_la_chaussee.html
+        // Lesson Route ONLY (Exclude quizzes)
         let lessonPath = item.lessonFile;
         if (!lessonPath && item.file) {
            lessonPath = item.file.replace('.json', '.html');
@@ -88,15 +85,6 @@ async function main() {
             lastmod: today,
             changefreq: 'weekly',
             priority: '0.8'
-          }));
-        }
-
-        // Quiz Route
-        if (item.file) {
-          urls.push(buildUrl(`${siteUrl}quiz/${item.id}`, {
-            lastmod: today,
-            changefreq: 'weekly',
-            priority: '0.7'
           }));
         }
       }
