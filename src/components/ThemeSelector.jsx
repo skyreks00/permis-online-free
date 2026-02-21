@@ -315,8 +315,8 @@ const ThemeSelector = ({ sections, progress, onSelectTheme, onSelectLesson, mode
                 lineHeight: '1.6',
                 opacity: 0.9
             }}>
-                Félicitations ! Oui, vous avez fini toutes les {mode === 'lessons' ? 'leçons' : 'quiz'}. 
-                <strong> Vous êtes maintenant fin prêt pour l'examen final.</strong>
+                Félicitations ! Vous avez fini toutes les {mode === 'lessons' ? 'leçons' : 'quiz'}.<br />
+                <strong>Vous êtes maintenant fin prêt pour l'examen final.</strong>
             </p>
 
             <button 
