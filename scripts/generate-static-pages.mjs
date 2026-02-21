@@ -28,17 +28,31 @@ async function main() {
 
     // 3. Generate physical files
     for (const subPath of pathsToGenerate) {
-      // Create folder path in dist
-      const targetDir = path.join(DIST_DIR, subPath);
-      const targetFile = path.join(targetDir, 'index.html');
-
-      // Ensure directory exists
-      await fs.mkdir(targetDir, { recursive: true });
-
-      // Copy index.html
-      await fs.copyFile(INDEX_SOURCE, targetFile);
+      const isHtml = subPath.toLowerCase().endsWith('.html');
       
-      console.log(`✅ Generated: ${subPath}/index.html`);
+      if (isHtml) {
+        // For paths like /cours/lesson.html -> create dist/cours/lesson.html as a file
+        const targetFile = path.join(DIST_DIR, subPath);
+        const targetDir = path.dirname(targetFile);
+
+        // Ensure parent directory exists
+        await fs.mkdir(targetDir, { recursive: true });
+
+        // Copy index.html to the .html file
+        await fs.copyFile(INDEX_SOURCE, targetFile);
+        console.log(`✅ Generated File: ${subPath}`);
+      } else {
+        // For clean URLs like /examen-b -> create dist/examen-b/index.html
+        const targetDir = path.join(DIST_DIR, subPath);
+        const targetFile = path.join(targetDir, 'index.html');
+
+        // Ensure directory exists
+        await fs.mkdir(targetDir, { recursive: true });
+
+        // Copy index.html
+        await fs.copyFile(INDEX_SOURCE, targetFile);
+        console.log(`✅ Generated Folder: ${subPath}/index.html`);
+      }
     }
 
     console.log('✨ All static pages generated successfully for SEO!');
