@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-const SITE_URL = process.env.SITE_URL || 'https://skyreks00.github.io/permis-online-free/';
+const SITE_URL = process.env.SITE_URL || 'https://permisfree.be/';
 const PUBLIC_DIR = path.resolve(process.cwd(), 'public');
 const SITEMAP_PATH = path.join(PUBLIC_DIR, 'sitemap.xml');
 const THEMES_PATH = path.join(PUBLIC_DIR, 'data', 'themes.json');
