@@ -447,7 +447,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter basename="/permis-online-free/">
+    <BrowserRouter basename="/">
       {/* GLOBAL SYNC TOAST */}
       {syncStatus && (
         <div
