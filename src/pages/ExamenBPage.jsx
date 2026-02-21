@@ -118,7 +118,7 @@ const ExamenBPage = ({ autoPlayAudio }) => {
                     if (themesIndex && themesIndex.sections) {
                         const allTheoryItems = [];
                         themesIndex.sections.forEach(section => {
-                            if (section.title.toLowerCase().includes('examen')) return;
+                            if (section.title.toLowerCase().includes('examen') || section.title.toLowerCase() === 'debug') return;
                             if (section.items) {
                                 section.items.forEach(item => {
                                     if (item.file) {
