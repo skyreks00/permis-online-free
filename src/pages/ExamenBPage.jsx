@@ -559,86 +559,88 @@ const ExamenBPage = ({ autoPlayAudio }) => {
                         )}
                     </div>
 
-                    <div className="eb-liquid-slider-container">
-                        <div className="eb-liquid-header">
-                            <label className="eb-liquid-label">Volume de questions</label>
-                        </div>
-
-                        <div className="eb-liquid-wrapper" style={{ 
-                            '--progress': pool.length > 1 ? ((quizSize === 9999 ? pool.length : Math.min(quizSize, pool.length)) - 1) / (pool.length - 1) : 1
-                        }}>
-                            {/* The Floating Bubble */}
-                            <div className="eb-liquid-bubble">
-                                <input 
-                                    type="text" 
-                                    inputMode="numeric"
-                                    pattern="[0-9]*"
-                                    className="eb-liquid-bubble-input"
-                                    value={manualInput}
-                                    onChange={(e) => {
-                                        setManualInput(e.target.value);
-                                    }}
-                                    onBlur={() => {
-                                        let val = parseInt(manualInput, 10);
-                                        if (isNaN(val) || val < 1) val = 1;
-                                        setQuizSize(val >= pool.length ? 9999 : val);
-                                        setManualInput(val >= pool.length ? pool.length.toString() : val.toString());
-                                    }}
-                                    onKeyDown={(e) => {
-                                        if (e.key === 'Enter') {
-                                            e.target.blur();
-                                        }
-                                    }}
-                                    aria-label="Nombre de questions"
-                                />
-                                <div className="eb-liquid-bubble-tail" />
+                    {pool.length > 0 && (
+                        <div className="eb-liquid-slider-container">
+                            <div className="eb-liquid-header">
+                                <label className="eb-liquid-label">Volume de questions</label>
                             </div>
 
-                            {/* The Liquid Track */}
-                            <div className="eb-liquid-track">
-                                <div className="eb-liquid-fill">
-                                    <div className="eb-liquid-waves" />
-                                    <div className="eb-liquid-glow" />
+                            <div className="eb-liquid-wrapper" style={{ 
+                                '--progress': pool.length > 1 ? ((quizSize === 9999 ? pool.length : Math.min(quizSize, pool.length)) - 1) / (pool.length - 1) : 1
+                            }}>
+                                {/* The Floating Bubble */}
+                                <div className="eb-liquid-bubble">
+                                    <input 
+                                        type="text" 
+                                        inputMode="numeric"
+                                        pattern="[0-9]*"
+                                        className="eb-liquid-bubble-input"
+                                        value={manualInput}
+                                        onChange={(e) => {
+                                            setManualInput(e.target.value);
+                                        }}
+                                        onBlur={() => {
+                                            let val = parseInt(manualInput, 10);
+                                            if (isNaN(val) || val < 1) val = 1;
+                                            setQuizSize(val >= pool.length ? 9999 : val);
+                                            setManualInput(val >= pool.length ? pool.length.toString() : val.toString());
+                                        }}
+                                        onKeyDown={(e) => {
+                                            if (e.key === 'Enter') {
+                                                e.target.blur();
+                                            }
+                                        }}
+                                        aria-label="Nombre de questions"
+                                    />
+                                    <div className="eb-liquid-bubble-tail" />
                                 </div>
-                                
-                                <input
-                                    type="range"
-                                    min="1"
-                                    max={pool.length || 1}
-                                    step="1"
-                                    value={quizSize === 9999 ? pool.length : Math.min(quizSize, pool.length)}
-                                    onChange={e => {
-                                        const val = parseInt(e.target.value, 10);
-                                        setQuizSize(val >= pool.length ? 9999 : val);
-                                    }}
-                                    className="eb-liquid-input"
-                                    aria-label="Nombre de questions"
-                                />
 
-                                {/* The Magnetic Cursor (Visual only) */}
-                                <div className="eb-liquid-thumb">
-                                    <div className="eb-liquid-thumb-core" />
-                                    <div className="eb-liquid-thumb-aura" />
+                                {/* The Liquid Track */}
+                                <div className="eb-liquid-track">
+                                    <div className="eb-liquid-fill">
+                                        <div className="eb-liquid-waves" />
+                                        <div className="eb-liquid-glow" />
+                                    </div>
+                                    
+                                    <input
+                                        type="range"
+                                        min="1"
+                                        max={pool.length || 1}
+                                        step="1"
+                                        value={quizSize === 9999 ? pool.length : Math.min(quizSize, pool.length)}
+                                        onChange={e => {
+                                            const val = parseInt(e.target.value, 10);
+                                            setQuizSize(val >= pool.length ? 9999 : val);
+                                        }}
+                                        className="eb-liquid-input"
+                                        aria-label="Nombre de questions"
+                                    />
+
+                                    {/* The Magnetic Cursor (Visual only) */}
+                                    <div className="eb-liquid-thumb">
+                                        <div className="eb-liquid-thumb-core" />
+                                        <div className="eb-liquid-thumb-aura" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        {/* Scale indicators moved outside flex wrapper */}
-                        <div className="eb-liquid-scale">
-                            <span>1</span>
-                            <span>{pool.length}</span>
-                        </div>
-
-                        {pool.length > 0 && quizSize !== 9999 && quizSize > pool.length && (
-                            <div className="eb-size-warning" style={{ marginTop: '30px' }}>
-                                ⚠️ Seulement <strong>{pool.length}</strong> questions disponibles.
+                            {/* Scale indicators moved outside flex wrapper */}
+                            <div className="eb-liquid-scale">
+                                <span>1</span>
+                                <span>{pool.length}</span>
                             </div>
-                        )}
-                    </div>
+
+                            {quizSize !== 9999 && quizSize > pool.length && (
+                                <div className="eb-size-warning" style={{ marginTop: '30px' }}>
+                                    ⚠️ Seulement <strong>{pool.length}</strong> questions disponibles.
+                                </div>
+                            )}
+                        </div>
+                    )}
 
                     {pool.length === 0 && !isLoading && (
                         <div className="eb-empty-warn">
-                            ⚠️ Active au moins un type de questions pour lancer le quiz.
+                            ⚠️ Active au moins un thème de questions pour lancer le quiz.
                         </div>
                     )}
 
