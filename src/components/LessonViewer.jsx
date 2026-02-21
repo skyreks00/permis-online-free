@@ -551,7 +551,7 @@ const LessonViewer = ({ lessonFile, lessonId, quizId, onBack, onStartQuiz, onOpe
                 onOpenLesson(event.data.file);
             }
             if (event.data?.type === 'MARK_READ' && onMarkRead) {
-                onMarkRead(event.data.quizId); // quizId is actually themeId in this context
+                onMarkRead(event.data.lessonId || event.data.quizId); // Handle both for compatibility
             }
             if (event.data?.type === 'FINISH_AND_START_QUIZ') {
                 if (onMarkRead) onMarkRead(event.data.quizId);
