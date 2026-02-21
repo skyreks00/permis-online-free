@@ -31,22 +31,10 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://permisfree.be/quiz/1_la_chaussee</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://permisfree.be/cours/2_bandes_de_circulation.html</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://permisfree.be/quiz/2_bandes_de_circulation</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://permisfree.be/cours/3_la_piste_cyclable.html</loc>
@@ -55,22 +43,10 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://permisfree.be/quiz/3_la_piste_cyclable</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://permisfree.be/cours/4_lautoroute.html</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://permisfree.be/quiz/4_lautoroute</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://permisfree.be/cours/5_route_pour_automobiles.html</loc>
@@ -79,22 +55,10 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://permisfree.be/quiz/5_route_pour_automobiles</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://permisfree.be/cours/6_endroits_particliers.html</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://permisfree.be/quiz/6_endroits_particliers</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://permisfree.be/cours/7_les_pietons.html</loc>
@@ -103,22 +67,10 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://permisfree.be/quiz/7_les_pietons</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://permisfree.be/cours/8_les_conducteurs.html</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://permisfree.be/quiz/8_les_conducteurs</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://permisfree.be/cours/9_la_voiture.html</loc>
@@ -127,22 +79,10 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://permisfree.be/quiz/9_la_voiture</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://permisfree.be/cours/10_chargement_des_vehicules.html</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://permisfree.be/quiz/10_chargement_des_vehicules</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://permisfree.be/cours/11_les_feux.html</loc>
@@ -151,22 +91,10 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://permisfree.be/quiz/11_les_feux</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://permisfree.be/cours/12_la_vitesse_maximale.html</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://permisfree.be/quiz/12_la_vitesse_maximale</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://permisfree.be/cours/13_la_distance_darret.html</loc>
@@ -175,34 +103,16 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://permisfree.be/quiz/13_la_distance_darret</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://permisfree.be/cours/14_le_croisement.html</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://permisfree.be/quiz/14_le_croisement</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://permisfree.be/cours/16_depassement.html</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://permisfree.be/quiz/16_depassement</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://permisfree.be/cours/15_depassement.html</loc>
@@ -217,22 +127,10 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://permisfree.be/quiz/17_les_personnes_quaifiees</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://permisfree.be/cours/18_les_signaux_lumineux.html</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://permisfree.be/quiz/18_les_signaux_lumineux</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://permisfree.be/cours/19_les_panneaux.html</loc>
@@ -241,22 +139,10 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://permisfree.be/quiz/19_les_panneaux</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://permisfree.be/cours/20_la_priorite_de_droite.html</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://permisfree.be/quiz/20_la_priorite_de_droite</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://permisfree.be/cours/21_les_maneuvres.html</loc>
@@ -265,22 +151,10 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://permisfree.be/quiz/21_les_maneuvres</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://permisfree.be/cours/22_train_-_tram_-_autobus.html</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://permisfree.be/quiz/22_train_-_tram_-_autobus</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://permisfree.be/cours/23_sens_interdit.html</loc>
@@ -289,22 +163,10 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://permisfree.be/quiz/23_sens_interdit</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://permisfree.be/cours/24_direction_obligatoire.html</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://permisfree.be/quiz/24_direction_obligatoire</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://permisfree.be/cours/25_arrt_et_stationnement_1.html</loc>
@@ -313,22 +175,10 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://permisfree.be/quiz/25_arrt_et_stationnement_1</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://permisfree.be/cours/26_arrt_et_stationnement_2.html</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://permisfree.be/quiz/26_arrt_et_stationnement_2</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://permisfree.be/cours/27_arrt_et_stationnement_3.html</loc>
@@ -337,22 +187,10 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://permisfree.be/quiz/27_arrt_et_stationnement_3</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://permisfree.be/cours/28_alcool_et_drogues.html</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://permisfree.be/quiz/28_alcool_et_drogues</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://permisfree.be/cours/29_un_accident.html</loc>
@@ -361,34 +199,16 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://permisfree.be/quiz/29_un_accident</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://permisfree.be/cours/30_consommation_de_carburant.html</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://permisfree.be/quiz/30_consommation_de_carburant</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://permisfree.be/cours/31_technique.html</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://permisfree.be/quiz/31_technique</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://permisfree.be/cours/infractions%2Finfractions.html</loc>
@@ -401,11 +221,5 @@
     <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://permisfree.be/quiz/examen_B</loc>
-    <lastmod>2026-02-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
 </urlset>
