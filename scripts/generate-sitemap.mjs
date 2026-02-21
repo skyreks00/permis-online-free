@@ -52,6 +52,7 @@ async function main() {
   // 1. Static Routes (Clean URLs)
   const staticRoutes = [
     { path: '', priority: '1.0', changefreq: 'daily' },
+    { path: 'examen-b', priority: '0.9', changefreq: 'daily' },
     { path: 'profil', priority: '0.3', changefreq: 'monthly' },
   ];
 
