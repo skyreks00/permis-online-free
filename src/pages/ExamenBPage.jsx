@@ -138,7 +138,7 @@ const ExamenBPage = ({ autoPlayAudio }) => {
                                     const themeData = await loadThemeQuestions(item.file);
                                     if (themeData && themeData.questions) {
                                         themeData.questions.forEach(q => {
-                                            const cleanText = q.question.trim().toLowerCase();
+                                            const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
                                             if (!mapping[cleanText]) mapping[cleanText] = new Set();
                                             mapping[cleanText].add(item.id);
                                         });
@@ -174,10 +174,14 @@ const ExamenBPage = ({ autoPlayAudio }) => {
             if (selectedThemes.size === 0) return [];
             
             result = result.filter(q => {
-                const cleanText = q.question.trim().toLowerCase();
+                const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
                 const themesForThisQuestion = questionToThemeMap[cleanText];
-                // If question is unknown, we still show it (it's from Examen B pool after all)
-                if (!themesForThisQuestion) return true; 
+                
+                // If no themes mapped for this question, and we have selected themes, 
+                // we EXCLUDE it (it doesn't belong to any specific category).
+                // It only shows up if "All" themes are selected (selectedThemes.size === themes.length)
+                if (!themesForThisQuestion) return false;
+                
                 return [...themesForThisQuestion].some(tid => selectedThemes.has(tid));
             });
         }
