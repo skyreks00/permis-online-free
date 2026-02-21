@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import globalStyles from '../assets/styles.css?inline';
 import { ArrowLeft } from 'lucide-react';
 
-const LessonViewer = ({ lessonFile, quizId, onBack, onStartQuiz, onOpenLesson, onMarkRead, theme, isRead, quizDone }) => {
+const LessonViewer = ({ lessonFile, lessonId, quizId, onBack, onStartQuiz, onOpenLesson, onMarkRead, theme, isRead, quizDone }) => {
     const [srcDoc, setSrcDoc] = React.useState('');
     const [loading, setLoading] = React.useState(true);
 
@@ -356,8 +356,8 @@ const LessonViewer = ({ lessonFile, quizId, onBack, onStartQuiz, onOpenLesson, o
                     container.remove();
                 }
 
-                // 5. Inject "Start Quiz" button at the bottom if quizId is present
-                if (quizId) {
+                // 5. Inject "Start Quiz" / "Finish" button at the bottom
+                if (lessonId) {
                     const quizContainer = doc.createElement('div');
                     quizContainer.style.marginTop = '40px';
                     quizContainer.style.paddingTop = '20px';
@@ -399,7 +399,7 @@ const LessonViewer = ({ lessonFile, quizId, onBack, onStartQuiz, onOpenLesson, o
                         this.style.borderColor = 'var(--success)';
                         this.style.color = 'var(--success)';
                         this.style.pointerEvents = 'none';
-                        window.parent.postMessage({ type: 'MARK_READ', quizId: '${quizId}' }, '*');
+                        window.parent.postMessage({ type: 'MARK_READ', lessonId: '${lessonId}' }, '*');
                         
                         const qSection = document.getElementById('quiz-confirm-section');
                         if(qSection) {
@@ -426,39 +426,41 @@ const LessonViewer = ({ lessonFile, quizId, onBack, onStartQuiz, onOpenLesson, o
                         quizContainer.appendChild(quizShortcutBtn);
                     }
 
-                    // Section Confirmation Quiz (Initialement cachée)
-                    const quizConfirmSection = doc.createElement('div');
-                    quizConfirmSection.id = 'quiz-confirm-section';
-                    quizConfirmSection.style.display = 'none';
-                    quizConfirmSection.style.flexDirection = 'column';
-                    quizConfirmSection.style.alignItems = 'center';
-                    quizConfirmSection.style.gap = '15px';
-                    quizConfirmSection.style.marginTop = '10px';
-                    quizConfirmSection.style.opacity = '0';
+                    // Section Confirmation Quiz (Initialement cachée, seulement si quizId existe)
+                    if (quizId) {
+                        const quizConfirmSection = doc.createElement('div');
+                        quizConfirmSection.id = 'quiz-confirm-section';
+                        quizConfirmSection.style.display = 'none';
+                        quizConfirmSection.style.flexDirection = 'column';
+                        quizConfirmSection.style.alignItems = 'center';
+                        quizConfirmSection.style.gap = '15px';
+                        quizConfirmSection.style.marginTop = '10px';
+                        quizConfirmSection.style.opacity = '0';
 
-                    const confirmText = doc.createElement('p');
-                    confirmText.textContent = 'Voulez-vous passer au quiz maintenant ?';
-                    confirmText.style.color = 'var(--muted)';
-                    confirmText.style.marginBottom = '0';
+                        const confirmText = doc.createElement('p');
+                        confirmText.textContent = 'Voulez-vous passer au quiz maintenant ?';
+                        confirmText.style.color = 'var(--muted)';
+                        confirmText.style.marginBottom = '0';
 
-                     // Bouton Quiz
-                    const quizBtn = doc.createElement('button');
-                    quizBtn.textContent = '🚀 Lancer le Quiz';
-                    quizBtn.style.backgroundColor = 'var(--primary)';
-                    quizBtn.style.color = 'white';
-                    quizBtn.style.border = 'none';
-                    quizBtn.style.padding = '14px 28px';
-                    quizBtn.style.borderRadius = '8px';
-                    quizBtn.style.fontSize = '1.1rem';
-                    quizBtn.style.fontWeight = '600';
-                    quizBtn.style.cursor = 'pointer';
-                    quizBtn.style.boxShadow = '0 4px 12px rgba(var(--primary-rgb), 0.3)';
-                    quizBtn.setAttribute('onclick', `window.parent.postMessage({ type: 'START_QUIZ', quizId: '${quizId}' }, '*');`);
+                        // Bouton Quiz
+                        const quizBtn = doc.createElement('button');
+                        quizBtn.textContent = '🚀 Lancer le Quiz';
+                        quizBtn.style.backgroundColor = 'var(--primary)';
+                        quizBtn.style.color = 'white';
+                        quizBtn.style.border = 'none';
+                        quizBtn.style.padding = '14px 28px';
+                        quizBtn.style.borderRadius = '8px';
+                        quizBtn.style.fontSize = '1.1rem';
+                        quizBtn.style.fontWeight = '600';
+                        quizBtn.style.cursor = 'pointer';
+                        quizBtn.style.boxShadow = '0 4px 12px rgba(var(--primary-rgb), 0.3)';
+                        quizBtn.setAttribute('onclick', `window.parent.postMessage({ type: 'START_QUIZ', quizId: '${quizId}' }, '*');`);
 
-                    quizConfirmSection.appendChild(confirmText);
-                    quizConfirmSection.appendChild(quizBtn);
+                        quizConfirmSection.appendChild(confirmText);
+                        quizConfirmSection.appendChild(quizBtn);
 
-                    quizContainer.appendChild(quizConfirmSection);
+                        quizContainer.appendChild(quizConfirmSection);
+                    }
                     
                     // Add keyframes for fadeIn if not present
                     const styleSheet = doc.createElement("style");

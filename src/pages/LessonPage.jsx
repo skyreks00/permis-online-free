@@ -25,6 +25,7 @@ const LessonPage = ({ themeMode, sections, onMarkRead, progress }) => {
     return (
         <LessonViewer
             lessonFile={lessonFile}
+            lessonId={matchingTheme?.id}
             quizId={matchingTheme?.file ? matchingTheme.id : null}
             isRead={isRead}
             quizDone={quizDone}
