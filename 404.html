@@ -2,21 +2,27 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/permis-online-free/logo.svg" />
-    <link rel="manifest" href="/permis-online-free/manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="manifest" href="/manifest.json" />
 
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
-      (function(l) {
-        if (l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(function(s) { 
-            return s.replace(/~and~/g, '&')
-          }).join('?');
-          window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + decoded + l.hash
+      (function (l) {
+        if (l.search[1] === "/") {
+          var decoded = l.search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            })
+            .join("?");
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash,
           );
         }
-      }(window.location))
+      })(window.location);
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
     <meta
@@ -25,10 +31,7 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0ea5e9" />
-    <link
-      rel="canonical"
-      href="https://skyreks00.github.io/permis-online-free/"
-    />
+    <link rel="canonical" href="https://permisfree.be/" />
     <meta
       name="robots"
       content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
@@ -46,39 +49,45 @@
     <title>Permis Online Free – Code de la Route Gratuit</title>
     <!-- GLOBAL ERROR HANDLER FOR MOBILE DEBUGGING -->
     <script>
-      window.onerror = function(msg, url, line, col, error) {
+      window.onerror = function (msg, url, line, col, error) {
         // Ignore ResizeObserver errors
-        if(msg && msg.includes && msg.includes('ResizeObserver')) return;
+        if (msg && msg.includes && msg.includes("ResizeObserver")) return;
 
-        const div = document.createElement('div');
-        div.style.position = 'fixed';
-        div.style.top = '0';
-        div.style.left = '0';
-        div.style.width = '100%';
-        div.style.background = 'red';
-        div.style.color = 'white';
-        div.style.zIndex = '999999';
-        div.style.padding = '20px';
-        div.style.fontSize = '14px';
-        div.style.wordBreak = 'break-word';
-        div.innerHTML = '<strong>ERREUR FATALE:</strong><br/>' + msg + '<br/>' + url + ':' + line;
+        const div = document.createElement("div");
+        div.style.position = "fixed";
+        div.style.top = "0";
+        div.style.left = "0";
+        div.style.width = "100%";
+        div.style.background = "red";
+        div.style.color = "white";
+        div.style.zIndex = "999999";
+        div.style.padding = "20px";
+        div.style.fontSize = "14px";
+        div.style.wordBreak = "break-word";
+        div.innerHTML =
+          "<strong>ERREUR FATALE:</strong><br/>" +
+          msg +
+          "<br/>" +
+          url +
+          ":" +
+          line;
         document.body.appendChild(div);
       };
-      
+
       // Handle Promise Rejections
-      window.addEventListener('unhandledrejection', function(event) {
-        const div = document.createElement('div');
-        div.style.position = 'fixed';
-        div.style.bottom = '0';
-        div.style.left = '0';
-        div.style.width = '100%';
-        div.style.background = 'darkred';
-        div.style.color = 'white';
-        div.style.zIndex = '999999';
-        div.style.padding = '10px';
-        div.style.fontSize = '12px';
-         div.style.wordBreak = 'break-word';
-        div.innerHTML = 'Promise Error: ' + event.reason;
+      window.addEventListener("unhandledrejection", function (event) {
+        const div = document.createElement("div");
+        div.style.position = "fixed";
+        div.style.bottom = "0";
+        div.style.left = "0";
+        div.style.width = "100%";
+        div.style.background = "darkred";
+        div.style.color = "white";
+        div.style.zIndex = "999999";
+        div.style.padding = "10px";
+        div.style.fontSize = "12px";
+        div.style.wordBreak = "break-word";
+        div.innerHTML = "Promise Error: " + event.reason;
         document.body.appendChild(div);
       });
     </script>
@@ -94,10 +103,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://skyreks00.github.io/permis-online-free/"
-    />
+    <meta property="og:url" content="https://permisfree.be/" />
     <meta
       property="og:title"
       content="Permis Online Free – Code de la Route Gratuit"
@@ -107,17 +113,11 @@
       content="Révisez votre code de la route gratuitement. Quiz illimités, mode examen et leçons complètes."
     />
     <meta property="og:locale" content="fr_BE" />
-    <meta
-      property="og:image"
-      content="https://skyreks00.github.io/permis-online-free/logo.svg"
-    />
+    <meta property="og:image" content="https://permisfree.be/logo.svg" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta
-      property="twitter:url"
-      content="https://skyreks00.github.io/permis-online-free/"
-    />
+    <meta property="twitter:url" content="https://permisfree.be/" />
     <meta
       property="twitter:title"
       content="Permis Online Free – Code de la Route Gratuit"
@@ -126,27 +126,24 @@
       property="twitter:description"
       content="Révisez votre code de la route gratuitement. Quiz illimités et cours."
     />
-    <meta
-      property="twitter:image"
-      content="https://skyreks00.github.io/permis-online-free/logo.svg"
-    />
+    <meta property="twitter:image" content="https://permisfree.be/logo.svg" />
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Permis Online Free",
-        "url": "https://skyreks00.github.io/permis-online-free/",
+        "url": "https://permisfree.be/",
         "inLanguage": "fr",
         "publisher": {
           "@type": "Organization",
           "name": "Permis Online Free",
-          "url": "https://skyreks00.github.io/permis-online-free/"
+          "url": "https://permisfree.be/"
         }
       }
     </script>
-    <script type="module" crossorigin src="/assets/index-BqLOQwie-1771706750752.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DyDlpQJW-1771706750752.css">
+    <script type="module" crossorigin src="/assets/index-DQc28YED-1771706883576.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DyDlpQJW-1771706883576.css">
   </head>
 
   <body>
@@ -155,7 +152,7 @@
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
           navigator.serviceWorker
-            .register("/permis-online-free/sw.js")
+            .register("/sw.js")
             .then((registration) => {
               console.log("SW registered: ", registration);
             })
