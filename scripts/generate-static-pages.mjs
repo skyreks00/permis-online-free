@@ -33,7 +33,9 @@ async function main() {
     // 4. Generate physical files
     for (const subPath of pathsToGenerate) {
       const isHtml = subPath.toLowerCase().endsWith('.html');
-      const fullUrl = `${SITE_URL}${subPath}`;
+      // For directory paths, add a trailing slash to match server behavior and avoid redirects
+      const normalizedPath = isHtml ? subPath : (subPath.endsWith('/') ? subPath : `${subPath}/`);
+      const fullUrl = `${SITE_URL}${normalizedPath}`;
       
       // Update metadata to avoid "Redirect Error" (fixed canonical tag issues)
       let pageContent = template
