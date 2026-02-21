@@ -4,7 +4,7 @@ import ThemeSelector from '../components/ThemeSelector';
 import GlobalStats from '../components/GlobalStats';
 import { loadThemeQuestions } from '../utils/contentLoader';
 
-const QuizDashboardPage = ({ sections, progress, toggleTheme, isDarkMode, onSelectTheme }) => {
+const QuizDashboardPage = ({ sections, progress, toggleTheme, isDarkMode, onSelectTheme, showCompleted, onToggleShowCompleted }) => {
     const navigate = useNavigate();
     const [isLoadingReview, setIsLoadingReview] = useState(false);
 
@@ -141,6 +141,8 @@ const QuizDashboardPage = ({ sections, progress, toggleTheme, isDarkMode, onSele
                 onSelectTheme={handleThemeSelect}
                 onSelectLesson={(lessonFile) => navigate(`/cours/${encodeURIComponent(lessonFile)}`)}
                 mode="quiz"
+                showCompleted={showCompleted}
+                onToggleShowCompleted={onToggleShowCompleted}
             />
 
             {/* CUSTOM WARNING MODAL */}

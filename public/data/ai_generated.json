@@ -1,0 +1,144 @@
+{
+  "questions": [
+    {
+      "id": "ai_1",
+      "question": "À un carrefour sans signalisation, une voiture arrive de votre droite. Qui a la priorité ?",
+      "propositions": {
+        "A": "Vous, car vous allez tout droit.",
+        "B": "Le véhicule venant de la droite.",
+        "C": "Le véhicule le plus rapide."
+      },
+      "reponse": "B",
+      "explication": "En l'absence de signaux (B1, B5, B11 ou B15) et de feux, la priorité de droite s'applique de manière absolue.",
+      "image": "https://img.freepik.com/vecteurs-premium/carrefour-sans-signalisation-priorite-droite_1029473-124.jpg",
+      "type": "multiple_choice",
+      "themes": ["11_priorite_de_droite", "13_les_carrefours_et_la_priorite"]
+    },
+    {
+      "id": "ai_2",
+      "question": "Vous circulez sur une route prioritaire (signal B15). Un cycliste débouche de votre droite d'un sentier. Qui a la priorité ?",
+      "propositions": {
+        "A": "Le cycliste, car il vient de droite.",
+        "B": "Vous, car vous circulez sur une route prioritaire.",
+        "C": "Le cycliste, car c'est un usager faible."
+      },
+      "reponse": "B",
+      "explication": "Le signal B15 indique que vous avez la priorité au prochain carrefour. De plus, un conducteur débouchant d'un sentier ou d'un chemin de terre doit toujours céder le passage.",
+      "image": "",
+      "type": "multiple_choice",
+      "themes": ["13_les_carrefours_et_la_priorite"]
+    },
+    {
+      "id": "ai_3",
+      "question": "Un véhicule de police utilise ses gyrophares bleus et sa sirène. Devez-vous lui céder le passage ?",
+      "propositions": {
+        "A": "Seulement s'il vient de droite.",
+        "B": "Oui, c'est un véhicule prioritaire en mission.",
+        "C": "Non, sauf s'il y a un danger immédiat."
+      },
+      "reponse": "B",
+      "explication": "Les véhicules de secours utilisant simultanément leurs avertisseurs sonores et lumineux sont prioritaires dès que cela est nécessaire.",
+      "image": "",
+      "type": "multiple_choice",
+      "themes": ["13_les_carrefours_et_la_priorite"]
+    },
+    {
+      "id": "ai_4",
+      "question": "Peut-on dépasser par la droite un véhicule qui a indiqué son intention de tourner à gauche ?",
+      "propositions": {
+        "A": "Non, c'est strictement interdit.",
+        "B": "Oui, si l'espace est suffisant et qu'il a déjà amorcé sa manoeuvre.",
+        "C": "Seulement si vous circulez à moto."
+      },
+      "reponse": "B",
+      "explication": "Le dépassement par la droite est autorisé lorsque le conducteur à dépasser a indiqué son intention de tourner à gauche et s'est porté vers la gauche.",
+      "image": "",
+      "type": "multiple_choice",
+      "themes": ["12_croisement_et_depassement"]
+    },
+    {
+      "id": "ai_5",
+      "question": "Sur une autoroute, un véhicule circule sur la bande centrale alors que la bande de droite est libre. Pouvez-vous le dépasser par la droite ?",
+      "propositions": {
+        "A": "Oui, s'il roule trop lentement.",
+        "B": "Non, c'est un dépassement par la droite interdit.",
+        "C": "Oui, car il commet une infraction."
+      },
+      "reponse": "B",
+      "explication": "Même si le conducteur devant vous commet l'infraction de rester au milieu, dépasser par la droite reste formellement interdit sur autoroute.",
+      "image": "",
+      "type": "multiple_choice",
+      "themes": ["12_croisement_et_depassement", "4_lautoroute"]
+    },
+    {
+      "id": "ai_6",
+      "question": "Vous voulez dépasser un cycliste. Quel est l'écart latéral minimum à respecter en agglomération ?",
+      "propositions": {
+        "A": "0,5 mètre.",
+        "B": "1 mètre.",
+        "C": "1,5 mètre."
+      },
+      "reponse": "B",
+      "explication": "En ville (agglomération), la distance minimale est de 1m. Hors agglomération, elle passe à 1,5m.",
+      "image": "",
+      "type": "multiple_choice",
+      "themes": ["12_croisement_et_depassement"]
+    },
+    {
+      "id": "ai_7",
+      "question": "Un tram s'arrête en pleine rue sans refuge pour laisser descendre des passagers. Pouvez-vous le dépasser ?",
+      "propositions": {
+        "A": "Oui, par la droite avec prudence.",
+        "B": "Non, vous devez vous arrêter pour laisser les passagers rejoindre le trottoir.",
+        "C": "Oui, par la gauche obligatoirement."
+      },
+      "reponse": "B",
+      "explication": "Il est interdit de dépasser un tram (ou un autobus) à l'arrêt du côté de la descente si aucun refuge n'existe.",
+      "image": "",
+      "type": "multiple_choice",
+      "themes": ["12_croisement_et_depassement"]
+    },
+    {
+      "id": "ai_8",
+      "question": "Est-il autorisé de dépasser dans un virage sur une route à deux bandes sans marquage au sol ?",
+      "propositions": {
+        "A": "Oui, si la visibilité est bonne.",
+        "B": "Non, c'est interdit par manque de visibilité.",
+        "C": "Seulement si le véhicule devant roule à moins de 30 km/h."
+      },
+      "reponse": "B",
+      "explication": "Le dépassement est interdit dans les virages et à l'approche du sommet des côtes lorsque la visibilité est insuffisante.",
+      "image": "",
+      "type": "multiple_choice",
+      "themes": ["12_croisement_et_depassement"]
+    },
+    {
+      "id": "ai_9",
+      "question": "A quelle distance minimale d'un passage pour piétons le dépassement est-il interdit si vous n'avez pas une vue dégagée ?",
+      "propositions": {
+        "A": "Juste devant.",
+        "B": "15 mètres.",
+        "C": "Il est interdit de dépasser sur le passage et juste avant si on ne peut pas voir tout le passage."
+      },
+      "reponse": "C",
+      "explication": "On ne peut pas dépasser sur un passage pour piétons ou juste avant si la visibilité est réduite.",
+      "image": "",
+      "type": "multiple_choice",
+      "themes": ["12_croisement_et_depassement", "7_les_pietons"]
+    },
+    {
+      "id": "ai_10",
+      "question": "Une ligne blanche continue sépare les deux sens de circulation. Pouvez-vous la franchir pour dépasser un tracteur ?",
+      "propositions": {
+        "A": "Oui, s'il roule très lentement.",
+        "B": "Non, une ligne blanche continue ne peut jamais être franchie.",
+        "C": "Seulement si vous avez une excellente visibilité."
+      },
+      "reponse": "B",
+      "explication": "La ligne blanche continue est un mur virtuel. Aucun dépassement nécessitant son franchissement n'est autorisé.",
+      "image": "",
+      "type": "multiple_choice",
+      "themes": ["12_croisement_et_depassement", "1_la_chaussee"]
+    }
+  ]
+}

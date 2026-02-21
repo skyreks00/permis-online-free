@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ThemeSelector from '../components/ThemeSelector';
 
-const LessonsPage = ({ sections, progress }) => {
+const LessonsPage = ({ sections, progress, showCompleted, onToggleShowCompleted }) => {
     const navigate = useNavigate();
     
     const handleSelectLesson = (lessonFile) => {
@@ -16,6 +16,8 @@ const LessonsPage = ({ sections, progress }) => {
                 progress={progress}
                 onSelectLesson={handleSelectLesson}
                 mode="lessons"
+                showCompleted={showCompleted}
+                onToggleShowCompleted={onToggleShowCompleted}
             />
         </div>
     );

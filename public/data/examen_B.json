@@ -1,7 +1,7 @@
 {
   "id": "examen_B",
   "name": "examen B",
-  "totalQuestions": 1501,
+  "totalQuestions": 1500,
   "questions": [
     {
       "id": 1,
@@ -26885,29 +26885,6 @@
       "correctAnswer": "A",
       "explanation": "En agglomération sur l’accotement de plain-pied.Hors agglomération sur tous les accotements",
       "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/729.jpg",
-      "points": 1
-    },
-    {
-      "id": 1501,
-      "type": "multiple_choice",
-      "question": "Où pouvez-vous stationner sur cet accotement de plain-pied ?",
-      "propositions": [
-        {
-          "letter": "A",
-          "text": "Seulement en agglomération"
-        },
-        {
-          "letter": "B",
-          "text": "Seulement hors agglomération"
-        },
-        {
-          "letter": "C",
-          "text": "Autant en agglomération que hors agglomération"
-        }
-      ],
-      "correctAnswer": "C",
-      "explanation": "En agglomération sur l’accotement de plain-pied.Hors agglomération sur tous les accotements.",
-      "image": "https://examen.gratisrijbewijsonline.be/afbeeldingen/197/720.jpg",
       "points": 1
     }
   ]

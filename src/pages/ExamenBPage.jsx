@@ -1,10 +1,10 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { BookOpen, RotateCcw, PlayCircle, FileText, Sparkles, Settings2 } from 'lucide-react';
+import { BookOpen, RotateCcw, PlayCircle, FileText, Sparkles, Settings2, ArrowLeft, CheckCircle, ChevronDown, ChevronUp, Filter, Search, BrainCircuit, Zap, ChevronRight } from 'lucide-react';
 import Quiz from '../components/Quiz';
 import CountUp from '../components/CountUp';
 import ShinyText from '../components/ShinyText';
 import Hyperspeed from '../components/Hyperspeed';
-import { loadThemeQuestions } from '../utils/contentLoader';
+import { loadThemeQuestions, loadThemesIndex } from '../utils/contentLoader';
 
 const STORAGE_MASTERED = 'examen_b_mastered';
 const STORAGE_TO_REVIEW = 'examen_b_to_review';
@@ -82,12 +82,25 @@ const ExamenBPage = ({ autoPlayAudio }) => {
     const [includeErrors, setIncludeErrors] = useState(false);
     const [includeMastered, setIncludeMastered] = useState(false);
     const [quizSize, setQuizSize] = useState(50);
+    const [manualInput, setManualInput] = useState(''); // Pour l'input libre de la bulle
+    const [viewMode, setViewMode] = useState('config'); // 'config' | 'quiz' | 'list'
+    const [listTitle, setListTitle] = useState('');
+    const [visibleCount, setVisibleCount] = useState(100);
+
+    // New theme filtering states
+    const [themes, setThemes] = useState([]);
+    const [selectedThemes, setSelectedThemes] = useState(new Set());
+    const [questionToThemeMap, setQuestionToThemeMap] = useState({});
+    const [isThemesExpanded, setIsThemesExpanded] = useState(false);
+    const [themeSearch, setThemeSearch] = useState('');
+    const [aiQuestions, setAiQuestions] = useState([]);
 
     const BASE = import.meta.env.BASE_URL || '/';
 
     useEffect(() => {
         const load = async () => {
             try {
+                // Load Examen B Questions
                 const data = await loadThemeQuestions('examen_B.json');
                 let loaded = data.questions || [];
                 if (loaded.length === 0) {
@@ -96,9 +109,46 @@ const ExamenBPage = ({ autoPlayAudio }) => {
                     loaded = json.questions || [];
                 }
                 setAllQuestions(loaded);
+                setIsLoading(false); // Enable counts immediately
+
+                // Load Theory Themes for filtering asynchronously
+                loadThemesIndex().then(async (themesIndex) => {
+                    if (themesIndex && themesIndex.sections) {
+                        const allTheoryItems = [];
+                        themesIndex.sections.forEach(section => {
+                            if (section.title.toLowerCase().includes('examen')) return;
+                            if (section.items) {
+                                section.items.forEach(item => {
+                                    if (item.file) {
+                                      allTheoryItems.push(item);
+                                    }
+                                });
+                            }
+                        });
+                        
+                        if (allTheoryItems.length > 0) {
+                            setThemes(allTheoryItems);
+                            setSelectedThemes(new Set(allTheoryItems.map(i => i.id)));
+
+                            const mapping = {};
+                            await Promise.all(allTheoryItems.map(async (item) => {
+                                try {
+                                    const themeData = await loadThemeQuestions(item.file);
+                                    if (themeData && themeData.questions) {
+                                        themeData.questions.forEach(q => {
+                                            const cleanText = q.question.trim().toLowerCase();
+                                            if (!mapping[cleanText]) mapping[cleanText] = new Set();
+                                            mapping[cleanText].add(item.id);
+                                        });
+                                    }
+                                } catch (err) {}
+                            }));
+                            setQuestionToThemeMap(mapping);
+                        }
+                    }
+                });
             } catch (e) {
                 console.error(e);
-            } finally {
                 setIsLoading(false);
             }
         };
@@ -113,19 +163,63 @@ const ExamenBPage = ({ autoPlayAudio }) => {
         return { total, masteredCount, toReviewCount, newCount };
     }, [allQuestions, mastered, toReview]);
 
+    // Combine standard and AI questions based on settings
     const pool = useMemo(() => {
-        let result = [];
-        if (includeNew) result.push(...allQuestions.filter(q => !mastered.has(q.id) && !toReview.has(q.id)));
-        if (includeErrors) result.push(...allQuestions.filter(q => toReview.has(q.id)));
-        if (includeMastered) result.push(...allQuestions.filter(q => mastered.has(q.id)));
-        return result;
-    }, [allQuestions, mastered, toReview, includeNew, includeErrors, includeMastered]);
+        let result = allQuestions;
+
+        // Apply theme filter only if themes are loaded and we are not in "All" mode
+        if (themes.length > 0 && selectedThemes.size < themes.length) {
+            if (selectedThemes.size === 0) return [];
+            
+            result = result.filter(q => {
+                const cleanText = q.question.trim().toLowerCase();
+                const themesForThisQuestion = questionToThemeMap[cleanText];
+                // If question is unknown, we still show it (it's from Examen B pool after all)
+                if (!themesForThisQuestion) return true; 
+                return [...themesForThisQuestion].some(tid => selectedThemes.has(tid));
+            });
+        }
+
+        let filtered = [];
+        if (includeNew) filtered.push(...result.filter(q => !mastered.has(q.id) && !toReview.has(q.id)));
+        if (includeErrors) filtered.push(...result.filter(q => toReview.has(q.id)));
+        if (includeMastered) filtered.push(...result.filter(q => mastered.has(q.id)));
+        
+        return filtered;
+    }, [allQuestions, mastered, toReview, includeNew, includeErrors, includeMastered, selectedThemes, questionToThemeMap, themes]);
+
+    // Sync manual input with quizSize when it changes externally
+    useEffect(() => {
+        setManualInput((quizSize >= pool.length || quizSize === 9999) ? pool.length.toString() : quizSize.toString());
+    }, [quizSize, pool.length]);
 
     const handleLaunch = useCallback(() => {
         const shuffled = shuffle(pool);
         setQuizQuestions(shuffled.slice(0, quizSize));
-        setQuizMode('custom');
+        setViewMode('quiz');
     }, [pool, quizSize]);
+
+    const handleLaunchSpecial = useCallback((type) => {
+        let filtered = [];
+        let title = '';
+        if (type === 'new') {
+            filtered = allQuestions.filter(q => !mastered.has(q.id) && !toReview.has(q.id));
+            title = 'Nouvelles questions';
+        } else if (type === 'review') {
+            filtered = allQuestions.filter(q => toReview.has(q.id));
+            title = 'Questions à revoir';
+        } else if (type === 'mastered') {
+            filtered = allQuestions.filter(q => mastered.has(q.id));
+            title = 'Questions maîtrisées';
+        }
+        
+        if (filtered.length === 0) return;
+        
+        setQuizQuestions(filtered);
+        setListTitle(title);
+        setVisibleCount(100);
+        setViewMode('list');
+    }, [allQuestions, mastered, toReview]);
 
     const handleFinish = useCallback(({ answers }) => {
         const newMastered = new Set(mastered);
@@ -143,7 +237,7 @@ const ExamenBPage = ({ autoPlayAudio }) => {
         saveSet(STORAGE_TO_REVIEW, newToReview);
         setMastered(newMastered);
         setToReview(newToReview);
-        setQuizMode(null);
+        setViewMode('config');
         setQuizQuestions([]);
     }, [mastered, toReview]);
 
@@ -156,18 +250,133 @@ const ExamenBPage = ({ autoPlayAudio }) => {
         setToReview(empty);
     }, []);
 
-    if (quizMode) {
+    if (viewMode === 'quiz') {
         return (
             <div style={{ paddingTop: '70px' }}>
                 <Quiz
                     questions={quizQuestions}
                     themeName="Examen Blanc B"
                     onFinish={handleFinish}
-                    onExit={() => setQuizMode(null)}
+                    onExit={() => setViewMode('config')}
                     instantFeedback={false}
                     autoPlayAudio={autoPlayAudio}
                     fileName="examen_B.json"
                 />
+            </div>
+        );
+    }
+
+    if (viewMode === 'list') {
+        return (
+            <div className="eb-page eb-list-page">
+                <div className="eb-list-header">
+                    <button className="eb-back-btn" onClick={() => setViewMode('config')}>
+                        <ArrowLeft size={18} /> Retour
+                    </button>
+                    <div className="eb-list-title-wrap">
+                        <h1 className="eb-list-title">{listTitle}</h1>
+                        <div className="eb-list-meta">
+                            <span className="eb-list-count">{quizQuestions.length} question{quizQuestions.length > 1 ? 's' : ''}</span>
+                            <div className="eb-list-limit-selector">
+                                <span className="eb-limit-label">Afficher :</span>
+                                {[50, 100, 500, 'Tout'].map(limit => {
+                                    const isToutActive = limit === 'Tout' && visibleCount >= quizQuestions.length && visibleCount !== 50 && visibleCount !== 100 && visibleCount !== 500;
+                                    const isNumActive = typeof limit === 'number' && visibleCount === limit;
+                                    
+                                    return (
+                                        <button 
+                                            key={limit}
+                                            className={`eb-limit-btn ${isNumActive || isToutActive ? 'active' : ''}`}
+                                            onClick={() => setVisibleCount(limit === 'Tout' ? quizQuestions.length : limit)}
+                                        >
+                                            {limit}
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="eb-question-list">
+                    {quizQuestions.slice(0, visibleCount).map((q, idx) => (
+                        <div className="eb-list-card" key={q.id}>
+                            <div className="eb-list-card-header">
+                                <span className="eb-card-num">Question {idx + 1}</span>
+                                <span className="eb-card-id">#{q.id}</span>
+                            </div>
+                            <div className="eb-list-card-body">
+                                <div className="eb-card-img">
+                                    {q.image ? <img src={q.image} alt="" /> : <div className="eb-img-placeholder" />}
+                                </div>
+                                <div className="eb-card-content">
+                                    <div className="eb-card-question">{q.question}</div>
+                                    
+                                    {q.propositions && Array.isArray(q.propositions) && (
+                                        <div className="eb-card-props">
+                                            {q.propositions.map(p => (
+                                                <div 
+                                                    key={p.letter} 
+                                                    className={`eb-prop-item ${p.letter === q.correctAnswer ? 'is-correct' : ''}`}
+                                                >
+                                                    <span className="eb-prop-letter">{p.letter}</span>
+                                                    <span className="eb-prop-text">{p.text}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+
+                                    {q.type === 'yes_no' && (
+                                        <div className="eb-card-props">
+                                            <div className={`eb-prop-item ${q.correctAnswer === 'OUI' ? 'is-correct' : ''}`}>
+                                                <span className="eb-prop-letter">A</span>
+                                                <span className="eb-prop-text">Oui</span>
+                                            </div>
+                                            <div className={`eb-prop-item ${q.correctAnswer === 'NON' ? 'is-correct' : ''}`}>
+                                                <span className="eb-prop-letter">B</span>
+                                                <span className="eb-prop-text">Non</span>
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    <div className="eb-card-answer">
+                                        <CheckCircle size={16} className="text-success" />
+                                        <strong>Réponse attendue :</strong> {
+                                            q.type === 'yes_no' 
+                                                ? (q.correctAnswer === 'OUI' ? 'Oui (A)' : 'Non (B)')
+                                                : q.correctAnswer
+                                        }
+                                    </div>
+                                    {q.explanation && (
+                                        <div className="eb-card-explanation">
+                                            <div className="eb-expl-tag">ASTUCE</div>
+                                            {q.explanation
+                                                .replace(/^\s*INFO\W*PERMIS\W*DE\W*CONDUIRE\W*/i, "")
+                                                .replace(/^\s*Signification\W*/i, "")
+                                                .replace(/^\s*Explication\W*/i, "")
+                                                .replace(/^\s*LE(?:Ç|C)ON\s*\d+(?:\s*[–\-:]\s*[^.\n]*)?(?:[.\n]\s*)?/i, "")
+                                                .trim()}
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {visibleCount < quizQuestions.length && (
+                    <div className="eb-load-more-wrap">
+                        <button 
+                            className="eb-load-more-btn" 
+                            onClick={() => setVisibleCount(prev => prev + 100)}
+                        >
+                            Charger 100 questions supplémentaires
+                        </button>
+                        <p className="eb-load-more-info">
+                            Affichage : {visibleCount} sur {quizQuestions.length}
+                        </p>
+                    </div>
+                )}
             </div>
         );
     }
@@ -189,7 +398,7 @@ const ExamenBPage = ({ autoPlayAudio }) => {
                     <h1 className="eb-hero-title">
                         Maîtrise les{' '}
                         <ShinyText
-                            text="1 501 questions"
+                            text="1 500 questions"
                             color="#f59e0b"
                             shineColor="#fde68a"
                             speed={4}
@@ -200,22 +409,34 @@ const ExamenBPage = ({ autoPlayAudio }) => {
                         Les bonnes réponses disparaissent. Les erreurs reviennent jusqu'à maîtrise totale.
                     </p>
                     <div className="eb-resources-row">
-                        <a href={`${BASE}lecon/syntheseB.pdf`} target="_blank" rel="noreferrer" className="eb-resource-pill">
+                        <a href={`${BASE}pdf/syntheseB.pdf`} target="_blank" rel="noreferrer" className="eb-resource-pill">
                             <FileText size={14} /> Synthèse B
                         </a>
                     </div>
                 </header>
 
                 <div className="eb-stats-row">
-                    <div className="eb-stat eb-stat--new">
+                    <div 
+                        className="eb-stat eb-stat--new clickable" 
+                        onClick={() => handleLaunchSpecial('new')}
+                        title="Réviser les nouvelles questions"
+                    >
                         <GradientNum value={isLoading ? 0 : stats.newCount} gradient="linear-gradient(135deg, #38bdf8, #0ea5e9)" />
                         <div className="eb-stat-lbl">Nouvelles</div>
                     </div>
-                    <div className="eb-stat eb-stat--review">
+                    <div 
+                        className="eb-stat eb-stat--review clickable" 
+                        onClick={() => handleLaunchSpecial('review')}
+                        title="Réviser les fautes"
+                    >
                         <GradientNum value={stats.toReviewCount} gradient="linear-gradient(135deg, #fbbf24, #f59e0b)" />
                         <div className="eb-stat-lbl">À revoir</div>
                     </div>
-                    <div className="eb-stat eb-stat--mastered">
+                    <div 
+                        className="eb-stat eb-stat--mastered clickable" 
+                        onClick={() => handleLaunchSpecial('mastered')}
+                        title="Revoir les questions maîtrisées"
+                    >
                         <GradientNum value={stats.masteredCount} gradient="linear-gradient(135deg, #4ade80, #22c55e)" />
                         <div className="eb-stat-lbl">Maîtrisées</div>
                     </div>
@@ -254,45 +475,143 @@ const ExamenBPage = ({ autoPlayAudio }) => {
                         <Toggle
                             checked={includeMastered}
                             onChange={setIncludeMastered}
-                            label={`🏆 Questions maîtrisées — ${stats.masteredCount} dispo`}
-                            colorOn="#22c55e"
+                                    label={`🏆 Questions maîtrisées — ${stats.masteredCount} dispo`}
+                                    colorOn="#22c55e"
                         />
+                        <div 
+                            className="eb-toggle-row" 
+                            onClick={() => setIsThemesExpanded(!isThemesExpanded)}
+                        >
+                            <span className="eb-toggle-label" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                <Filter size={18} />
+                                Filtrer par thèmes ({selectedThemes.size}/{themes.length})
+                            </span>
+                            <div style={{ color: 'var(--muted)' }}>
+                                {isThemesExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="eb-size-row" style={{ padding: '20px 24px' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', width: '100%' }}>
-                            <label className="eb-size-label" style={{ margin: 0, opacity: 0.8, whiteSpace: 'nowrap', minWidth: 'fit-content' }}>
-                                Nombre de questions
-                            </label>
-                            
-                            <div className="eb-slider-container" style={{ flex: 1, margin: 0 }}>
-                                <div className="eb-slider-wrapper" style={{ height: '24px' }}>
-                                    <input
-                                        type="range"
-                                        min="1"
-                                        max={pool.length || 1}
-                                        step="1"
-                                        value={quizSize === 9999 ? pool.length : Math.min(quizSize, pool.length)}
-                                        onChange={e => {
-                                            const val = parseInt(e.target.value, 10);
-                                            setQuizSize(val >= pool.length ? 9999 : val);
-                                        }}
-                                        className="eb-range-input"
-                                        style={{
-                                            background: `linear-gradient(to right, var(--primary) ${((quizSize === 9999 ? pool.length : Math.min(quizSize, pool.length)) / pool.length) * 100}%, rgba(255, 255, 255, 0.05) ${((quizSize === 9999 ? pool.length : Math.min(quizSize, pool.length)) / pool.length) * 100}%)`,
-                                            margin: 0
-                                        }}
-                                    />
+                    <div className="eb-theme-filter-section" style={{ margin: 0, border: 'none', borderRadius: 0, background: 'transparent' }}>
+                        {isThemesExpanded && themes.length > 0 && (
+                            <div className="eb-theme-grid-wrap anim-slide-down">
+                                <div className="eb-theme-actions">
+                                    <div className="eb-theme-search">
+                                        <Search size={14} />
+                                        <input 
+                                            type="text" 
+                                            placeholder="Rechercher un thème..." 
+                                            value={themeSearch}
+                                            onChange={(e) => setThemeSearch(e.target.value)}
+                                        />
+                                    </div>
+                                    <div style={{ display: 'flex', gap: '8px' }}>
+                                        <button onClick={() => setSelectedThemes(new Set(themes.map(t => t.id)))}>Tout cocher</button>
+                                        <button onClick={() => setSelectedThemes(new Set())}>Tout décocher</button>
+                                    </div>
+                                </div>
+                                <div className="eb-theme-grid">
+                                    {themes
+                                        .filter(t => t.name.toLowerCase().includes(themeSearch.toLowerCase()))
+                                        .map(theme => {
+                                            const isActive = selectedThemes.has(theme.id);
+                                            return (
+                                                <button
+                                                    key={theme.id}
+                                                    className={`eb-theme-pill ${isActive ? 'active' : ''}`}
+                                                    onClick={() => {
+                                                        const next = new Set(selectedThemes);
+                                                        if (isActive) next.delete(theme.id);
+                                                        else next.add(theme.id);
+                                                        setSelectedThemes(next);
+                                                    }}
+                                                >
+                                                    {theme.name}
+                                                </button>
+                                            );
+                                        })}
                                 </div>
                             </div>
+                        )}
+                        {isThemesExpanded && themes.length === 0 && (
+                            <div className="eb-theme-loading">
+                                <span>Chargement des catégories...</span>
+                            </div>
+                        )}
+                    </div>
 
-                            <div className="eb-slider-value-badge" style={{ minWidth: '70px', height: '36px' }}>
-                                {quizSize >= pool.length || quizSize === 9999 ? 'Toutes' : quizSize}
+                    <div className="eb-liquid-slider-container">
+                        <div className="eb-liquid-header">
+                            <label className="eb-liquid-label">Volume de questions</label>
+                        </div>
+
+                        <div className="eb-liquid-wrapper" style={{ 
+                            '--progress': pool.length > 1 ? ((quizSize === 9999 ? pool.length : Math.min(quizSize, pool.length)) - 1) / (pool.length - 1) : 1
+                        }}>
+                            {/* The Floating Bubble */}
+                            <div className="eb-liquid-bubble">
+                                <input 
+                                    type="text" 
+                                    inputMode="numeric"
+                                    pattern="[0-9]*"
+                                    className="eb-liquid-bubble-input"
+                                    value={manualInput}
+                                    onChange={(e) => {
+                                        setManualInput(e.target.value);
+                                    }}
+                                    onBlur={() => {
+                                        let val = parseInt(manualInput, 10);
+                                        if (isNaN(val) || val < 1) val = 1;
+                                        setQuizSize(val >= pool.length ? 9999 : val);
+                                        setManualInput(val >= pool.length ? pool.length.toString() : val.toString());
+                                    }}
+                                    onKeyDown={(e) => {
+                                        if (e.key === 'Enter') {
+                                            e.target.blur();
+                                        }
+                                    }}
+                                    aria-label="Nombre de questions"
+                                />
+                                <div className="eb-liquid-bubble-tail" />
+                            </div>
+
+                            {/* The Liquid Track */}
+                            <div className="eb-liquid-track">
+                                <div className="eb-liquid-fill">
+                                    <div className="eb-liquid-waves" />
+                                    <div className="eb-liquid-glow" />
+                                </div>
+                                
+                                <input
+                                    type="range"
+                                    min="1"
+                                    max={pool.length || 1}
+                                    step="1"
+                                    value={quizSize === 9999 ? pool.length : Math.min(quizSize, pool.length)}
+                                    onChange={e => {
+                                        const val = parseInt(e.target.value, 10);
+                                        setQuizSize(val >= pool.length ? 9999 : val);
+                                    }}
+                                    className="eb-liquid-input"
+                                    aria-label="Nombre de questions"
+                                />
+
+                                {/* The Magnetic Cursor (Visual only) */}
+                                <div className="eb-liquid-thumb">
+                                    <div className="eb-liquid-thumb-core" />
+                                    <div className="eb-liquid-thumb-aura" />
+                                </div>
                             </div>
                         </div>
 
+                        {/* Scale indicators moved outside flex wrapper */}
+                        <div className="eb-liquid-scale">
+                            <span>1</span>
+                            <span>{pool.length}</span>
+                        </div>
+
                         {pool.length > 0 && quizSize !== 9999 && quizSize > pool.length && (
-                            <div style={{ marginTop: '16px', fontSize: '0.8rem', color: '#f59e0b', padding: '10px', background: 'rgba(245, 158, 11, 0.05)', borderRadius: '10px', border: '1px solid rgba(245, 158, 11, 0.1)' }}>
+                            <div className="eb-size-warning" style={{ marginTop: '30px' }}>
                                 ⚠️ Seulement <strong>{pool.length}</strong> questions disponibles.
                             </div>
                         )}

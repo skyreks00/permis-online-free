@@ -1,9 +1,9 @@
 import React, { useMemo, useState } from 'react';
-import { BookOpen, Search, CheckCircle2, Circle } from 'lucide-react';
+import { BookOpen, Search, CheckCircle2, Circle, CircleCheck, Eye, EyeOff } from 'lucide-react';
 
-const ThemeSelector = ({ sections, progress, onSelectTheme, onSelectLesson, mode = 'all' }) => {
+const ThemeSelector = ({ sections, progress, onSelectTheme, onSelectLesson, mode = 'all', showCompleted, onToggleShowCompleted }) => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [hideCompleted, setHideCompleted] = useState(false);
+  const hideCompleted = !showCompleted;
 
   const filteredSections = useMemo(() => {
     const q = searchTerm.trim().toLowerCase();
@@ -79,22 +79,18 @@ const ThemeSelector = ({ sections, progress, onSelectTheme, onSelectLesson, mode
             />
         </div>
         
-        <label className="eb-toggle-row" style={{ padding: 0, border: 'none', background: 'none', gap: '12px' }}>
-             <button
-                role="switch"
-                aria-checked={hideCompleted}
-                className={`eb-toggle ${hideCompleted ? 'eb-toggle--on' : ''}`}
-                onClick={() => setHideCompleted(!hideCompleted)}
-                title="Masquer les éléments terminés"
-            >
-                <span className="eb-toggle-thumb" />
-            </button>
-            <span className="eb-toggle-label" style={{ fontSize: '13px', fontWeight: 500, color: 'var(--muted)' }}>
-                {mode === 'lessons' ? 'Masquer les leçons déjà étudiées' : 
-                 mode === 'quiz' ? 'Masquer les quiz déjà réalisés' : 
-                 'Masquer les éléments terminés'}
+        <div style={{ flex: 1, minWidth: '240px' }} />
+        
+        <div className="eb-toggle-row" 
+             onClick={onToggleShowCompleted}
+             style={{ padding: '6px 12px', borderRadius: '10px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', gap: '10px', cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
+             <span className="eb-toggle-label" style={{ fontSize: '13px', fontWeight: 600, color: showCompleted ? 'var(--text)' : 'var(--muted)' }}>
+                {showCompleted ? "Masquer les éléments terminés" : "Afficher les éléments terminés"}
             </span>
-        </label>
+             <div style={{ color: showCompleted ? 'var(--primary)' : 'var(--muted)', display: 'flex' }}>
+                {showCompleted ? <Eye size={18} /> : <EyeOff size={18} />}
+            </div>
+        </div>
       </div>
 
       {filteredSections.map((section, idx) => (
@@ -152,9 +148,13 @@ const ThemeSelector = ({ sections, progress, onSelectTheme, onSelectLesson, mode
                       fontWeight: 600,
                       marginBottom: 4,
                       paddingRight: (isCompleted && showQuizBtn) ? '40px' : '0',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '8px',
                       ...(isExam ? { color: 'var(--warning)', fontSize: '1.1rem' } : {})
                     }}>
                       {item.name}
+                      {itemProgress?.read && <CircleCheck size={16} style={{ color: 'var(--success)' }} />}
                     </div>
                     {item.totalQuestions > 0 && showQuizBtn && (
                       <div className="theme-meta" style={{ color: 'var(--muted)', fontSize: '13px' }}>

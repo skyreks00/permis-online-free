@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { User, BookOpen, GraduationCap, Layers, Menu, X, ArrowRight, Sparkles } from 'lucide-react';
+import { User, BookOpen, GraduationCap, Layers, Menu, X, ArrowRight, Sparkles, BrainCircuit } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import ThemeToggleButton from './ThemeChanger';
 
 const NAV_ITEMS = [
     { label: 'Leçons', icon: BookOpen, path: '/lecons', match: (p) => p.startsWith('/lecon') || p.startsWith('/cours') },
     { label: 'Quiz', icon: Layers, path: '/quiz', match: (p) => p.startsWith('/quiz') },
-    { label: 'Examen B', icon: GraduationCap, path: '/examen-b', match: (p) => p === '/examen-b', accent: true },
+    { label: 'Examen B', icon: GraduationCap, path: '/examen-b', match: (p) => p === '/examen-b' },
 ];
 
 const TopControls = ({ toggleTheme, isDarkMode, user }) => {

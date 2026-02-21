@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GithubAuthProvider, signInWithPopup, signOut } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -20,5 +20,6 @@ export const githubProvider = new GithubAuthProvider();
 // Scopes optionnels
 // githubProvider.addScope('repo');
 
+export { doc, getDoc, setDoc };
 export const loginWithGitHub = () => signInWithPopup(auth, githubProvider);
 export const logout = () => signOut(auth);
