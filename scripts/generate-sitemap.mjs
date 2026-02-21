@@ -82,7 +82,7 @@ async function main() {
         }
 
         if (lessonPath) {
-          urls.push(buildUrl(`${siteUrl}cours/${encodeURIComponent(lessonPath)}`, {
+          urls.push(buildUrl(`${siteUrl}cours/${lessonPath}`, {
             lastmod: today,
             changefreq: 'weekly',
             priority: '0.8'

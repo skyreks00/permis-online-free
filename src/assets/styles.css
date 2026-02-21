@@ -3316,10 +3316,8 @@ input.eb-size-chip {
   left: 0;
   right: 0;
   bottom: 0;
-  /* Rich dark blue-grey with transparency for glass effect */
-  background: rgba(11, 13, 20, 0.96);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  /* Opaque background matching the current theme */
+  background: var(--bg);
   z-index: 9999;
   display: flex;
   flex-direction: column;

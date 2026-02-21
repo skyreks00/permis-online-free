@@ -3,7 +3,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import LessonViewer from '../components/LessonViewer';
 
 const LessonPage = ({ themeMode, sections, onMarkRead, progress }) => {
-    const { lessonId } = useParams();
+    const params = useParams();
+    const lessonId = params["*"];
     const navigate = useNavigate();
     const lessonFile = decodeURIComponent(lessonId);
 

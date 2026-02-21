@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import globalStyles from '../assets/styles.css?inline';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, PartyPopper, CheckCircle2 } from 'lucide-react';
 
 const LessonViewer = ({ lessonFile, lessonId, quizId, onBack, onStartQuiz, onOpenLesson, onMarkRead, theme, isRead, quizDone }) => {
     const [srcDoc, setSrcDoc] = React.useState('');
@@ -372,7 +372,7 @@ const LessonViewer = ({ lessonFile, lessonId, quizId, onBack, onStartQuiz, onOpe
                     // Bouton Terminer
                     const finishBtn = doc.createElement('button');
                     finishBtn.id = 'finish-lesson-btn';
-                    finishBtn.textContent = isRead ? '🎉 Leçon déjà terminée' : '✅ J\'ai terminé cette leçon';
+                    finishBtn.textContent = isRead ? 'Leçon déjà terminée' : 'J\'ai terminé cette leçon';
                     finishBtn.style.backgroundColor = isRead ? 'var(--success-dim, rgba(34,197,94,0.15))' : 'var(--surface-2)';
                     finishBtn.style.color = isRead ? 'var(--success, #22c55e)' : 'var(--text)';
                     finishBtn.style.border = isRead ? '1px solid var(--success, #22c55e)' : '1px solid var(--border)';
@@ -394,7 +394,7 @@ const LessonViewer = ({ lessonFile, lessonId, quizId, onBack, onStartQuiz, onOpe
                     };
 
                     finishBtn.setAttribute('onclick', `
-                        this.textContent = '🎉 Leçon terminée !';
+                        this.textContent = 'Leçon terminée !';
                         this.style.backgroundColor = 'var(--success-dim)';
                         this.style.borderColor = 'var(--success)';
                         this.style.color = 'var(--success)';

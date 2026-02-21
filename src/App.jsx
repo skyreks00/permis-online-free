@@ -538,7 +538,7 @@ function App() {
           }
         />
         <Route
-          path="/cours/:lessonId"
+          path="/cours/*"
           element={
             <LessonPage
               themeMode={colorTheme}

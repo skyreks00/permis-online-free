@@ -2,25 +2,26 @@ import React, { useState, useEffect } from 'react';
 import { 
     Trophy, Target, AlertTriangle, Clock, Settings, ArrowLeft, 
     CheckCircle2, Circle, Volume2, User, LogOut, Key, Github, 
-    Save, Filter, RefreshCcw, Sparkles, Lock, PlayCircle 
+    Save, Filter, RefreshCcw, Sparkles, Lock, PlayCircle, Mic 
 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { loadThemeQuestions } from '../utils/contentLoader';
 import { loginWithGitHub, logout, auth } from '../utils/firebase';
 import { GithubAuthProvider, onAuthStateChanged } from 'firebase/auth';
 import { playText, stopAudio } from '../utils/textToSpeech';
 
 const PRESET_VOICES = [
-    { id: 'pNInz6obpgDQGcFmaJgB', name: 'Adam', icon: '👨', desc: 'Américain profond' },
-    { id: '21m00Tcm4TlvDq8ikWAM', name: 'Rachel', icon: '👩', desc: 'Américaine calme' },
-    { id: 'ErXwobaYiN019PkySvjV', name: 'Antoni', icon: '🧔', desc: 'Américain posé' },
-    { id: 'TxGEqnHWrfWFTfGW9XjX', name: 'Josh', icon: '👴', desc: 'Grave & profond' },
-    { id: 'EXAVITQu4vr4xnSDxMaL', name: 'Bella', icon: '👧', desc: 'Douce & claire' },
+    { id: 'pNInz6obpgDQGcFmaJgB', name: 'Adam', icon: User, desc: 'Américain profond' },
+    { id: '21m00Tcm4TlvDq8ikWAM', name: 'Rachel', icon: User, desc: 'Américaine calme' },
+    { id: 'ErXwobaYiN019PkySvjV', name: 'Antoni', icon: User, desc: 'Américain posé' },
+    { id: 'TxGEqnHWrfWFTfGW9XjX', name: 'Josh', icon: User, desc: 'Grave & profond' },
+    { id: 'EXAVITQu4vr4xnSDxMaL', name: 'Bella', icon: User, desc: 'Douce & claire' },
 ];
 
 const CustomVoiceSelect = ({ voices, selectedId, onSelect, onPreview }) => {
     const [isOpen, setIsOpen] = useState(false);
     const selectedVoice = voices.find(v => v.id === selectedId);
+    const SelectedIcon = selectedVoice?.icon || Mic;
 
     return (
         <div className="relative">
@@ -31,7 +32,7 @@ const CustomVoiceSelect = ({ voices, selectedId, onSelect, onPreview }) => {
             >
                 <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-full bg-surface-1 flex items-center justify-center text-lg shadow-sm border border-border">
-                        {selectedVoice?.icon || '🎙️'}
+                        <SelectedIcon size={16} />
                     </div>
                     <div className="text-left">
                         <div className="font-semibold text-sm leading-tight group-hover:text-primary transition-colors">
@@ -67,7 +68,7 @@ const CustomVoiceSelect = ({ voices, selectedId, onSelect, onPreview }) => {
                                 >
                                     <div className="flex items-center gap-3">
                                         <div className="w-8 h-8 rounded-full bg-surface-2 flex items-center justify-center text-sm">
-                                            {v.icon}
+                                            <v.icon size={14} />
                                         </div>
                                         <div>
                                             <div className={`text-sm font-medium ${selectedId === v.id ? 'text-primary' : 'text-text'}`}>

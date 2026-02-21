@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { BookOpen, X, CheckCircle } from "lucide-react";
+import { BookOpen, X, CheckCircle, AlertTriangle, Sparkles, Edit3 } from "lucide-react";
 
 const QuestionCard = ({
   question,
@@ -345,13 +345,13 @@ const QuestionCard = ({
         <div className="question-progress" aria-live="polite">
           Question {Math.min(currentIndex + 1, total)} / {total}
           {displayQuestion.points === 5 && (
-            <span className="badge badge-error ml-2 font-bold animate-pulse text-white">
-              ⚠️ FAUTE GRAVE (5 POINTS)
+            <span className="badge badge-error ml-2 font-bold animate-pulse text-white flex items-center gap-1">
+              <AlertTriangle size={14} /> FAUTE GRAVE (5 POINTS)
             </span>
           )}
           {isCorrectionMode && (
-            <span className="text-warning font-bold ml-2">
-              ✨ CORRECTION SUGGÉRÉE
+            <span className="text-warning font-bold ml-2 flex items-center gap-1">
+              <Sparkles size={14} /> CORRECTION SUGGÉRÉE
             </span>
           )}
         </div>
@@ -371,7 +371,7 @@ const QuestionCard = ({
             }}
             title="Suggérer une correction"
           >
-            {isFixing ? "..." : "✨ Corriger"}
+            {isFixing ? "..." : <><Sparkles size={12} /> Corriger</>}
           </button>
         )}
 
@@ -409,7 +409,7 @@ const QuestionCard = ({
                 className="correction-edit-expl-btn"
                 onClick={() => setShowExplanationInput(true)}
                >
-                 📝 Modifier l'explication
+                 <Edit3 size={14} /> Modifier l'explication
                </button>
            ) : (
                <div className="correction-input-wrapper animate-in slide-in-from-bottom-2 fade-in duration-300">
