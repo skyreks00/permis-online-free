@@ -51,19 +51,12 @@ async function main() {
 
   // 1. Static Routes (Clean URLs)
   const staticRoutes = [
-    { path: '', priority: '1.0', changefreq: 'weekly' },
-    { path: 'profil', priority: '0.8', changefreq: 'monthly' },
-    { path: 'resultats', priority: '0.5', changefreq: 'monthly' },
+    { path: '', priority: '1.0', changefreq: 'daily' },
+    { path: 'profil', priority: '0.3', changefreq: 'monthly' },
   ];
 
   for (const route of staticRoutes) {
-    let fullPath;
-    if (route.path === '') {
-      fullPath = siteUrl;
-    } else {
-      fullPath = `${siteUrl}${route.path}`;
-    }
-
+    const fullPath = route.path === '' ? siteUrl : `${siteUrl}${route.path}`;
     urls.push(buildUrl(fullPath, {
       lastmod: today,
       changefreq: route.changefreq,
@@ -71,23 +64,39 @@ async function main() {
     }));
   }
 
-  // 2. Dynamic Content from Themes (Clean URLs)
-  // Quizzes Excluded per user request
+  // 2. Dynamic Content from Themes
   const data = await loadThemes();
 
   if (data.sections) {
     for (const section of data.sections) {
-      const items = section.items || section.themes || [];
+      if (section.title === 'Debug') continue;
+      
+      const items = section.items || [];
 
       for (const item of items) {
-        // Quiz Route - EXCLUDED
-
         // Lesson Route
-        if (item.lessonFile) {
-          urls.push(buildUrl(`${siteUrl}lecon/${item.lessonFile}`, {
+        // If lessonFile is explicit, use it. 
+        // Otherwise, if it has a quiz file (e.g. 1_la_chaussee.json), 
+        // the lesson is 1_la_chaussee.html
+        let lessonPath = item.lessonFile;
+        if (!lessonPath && item.file) {
+           lessonPath = item.file.replace('.json', '.html');
+        }
+
+        if (lessonPath) {
+          urls.push(buildUrl(`${siteUrl}cours/${encodeURIComponent(lessonPath)}`, {
             lastmod: today,
-            changefreq: 'monthly',
-            priority: '0.6'
+            changefreq: 'weekly',
+            priority: '0.8'
+          }));
+        }
+
+        // Quiz Route
+        if (item.file) {
+          urls.push(buildUrl(`${siteUrl}quiz/${item.id}`, {
+            lastmod: today,
+            changefreq: 'weekly',
+            priority: '0.7'
           }));
         }
       }
