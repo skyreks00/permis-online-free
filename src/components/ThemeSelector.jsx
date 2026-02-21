@@ -1,7 +1,9 @@
 import React, { useMemo, useState } from 'react';
-import { BookOpen, Search, CheckCircle2, Circle, CircleCheck, Eye, EyeOff } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { BookOpen, Search, CheckCircle2, Circle, CircleCheck, Eye, EyeOff, GraduationCap } from 'lucide-react';
 
 const ThemeSelector = ({ sections, progress, onSelectTheme, onSelectLesson, mode = 'all', showCompleted, onToggleShowCompleted }) => {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const hideCompleted = !showCompleted;
 
@@ -51,6 +53,31 @@ const ThemeSelector = ({ sections, progress, onSelectTheme, onSelectLesson, mode
     }).filter(section => section.items.length > 0);
 
   }, [sections, searchTerm, mode, hideCompleted, progress]);
+
+  const isAllFinished = useMemo(() => {
+    // Check if everything in this mode is completed
+    const baseSections = (sections || []).filter(s => s.title !== 'Debug');
+    
+    let allItems = baseSections.flatMap(s => s.items);
+    
+    if (mode === 'lessons') {
+        allItems = allItems.filter(item => item.lessonFile || (item.file && item.id !== 'examen_B'));
+    } else if (mode === 'quiz') {
+        const excludedIds = ['examen_B', 'infractions', '15_depassement_interdit', '0_intro', '0_permis'];
+        allItems = allItems.filter(item => !excludedIds.includes(item.id));
+    }
+
+    if (allItems.length === 0) return false;
+
+    return allItems.every(item => {
+        const itemProgress = progress && progress[item.id];
+        if (!itemProgress) return false;
+        if (mode === 'lessons') {
+            return itemProgress.read === true;
+        }
+        return itemProgress.score !== undefined;
+    });
+  }, [sections, mode, progress]);
 
   return (
     <div className="page container">
@@ -247,8 +274,72 @@ const ThemeSelector = ({ sections, progress, onSelectTheme, onSelectLesson, mode
         </div>
       ))}
 
-      {filteredSections.length === 0 && (
+      {filteredSections.length === 0 && !isAllFinished && (
         <p className="muted text-center mt-5">Aucun résultat trouvé.</p>
+      )}
+
+      {hideCompleted && isAllFinished && (
+        <div style={{
+            marginTop: '40px',
+            padding: '40px 20px',
+            textAlign: 'center',
+            background: 'linear-gradient(135deg, rgba(var(--primary-rgb), 0.1) 0%, rgba(var(--primary-rgb), 0.05) 100%)',
+            borderRadius: '24px',
+            border: '2px dashed rgba(var(--primary-rgb), 0.2)',
+            animation: 'fadeInUp 0.6s ease-out'
+        }}>
+            <div style={{
+                width: '80px',
+                height: '80px',
+                backgroundColor: 'var(--primary)',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 24px',
+                boxShadow: '0 10px 20px rgba(var(--primary-rgb), 0.3)',
+                color: 'white'
+            }}>
+                <GraduationCap size={40} />
+            </div>
+            
+            <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', fontWeight: 700 }}>
+                {mode === 'lessons' ? 'Toutes les leçons terminées !' : 'Tous les quiz terminés !'}
+            </h2>
+            
+            <p style={{ 
+                fontSize: '1.1rem', 
+                color: 'var(--text)', 
+                maxWidth: '500px', 
+                margin: '0 auto 32px',
+                lineHeight: '1.6',
+                opacity: 0.9
+            }}>
+                Félicitations ! Oui, vous avez fini toutes les {mode === 'lessons' ? 'leçons' : 'quiz'}. 
+                <strong> Vous êtes maintenant fin prêt pour l'examen final.</strong>
+            </p>
+
+            <button 
+                onClick={() => navigate('/examen-b')}
+                className="btn-primary"
+                style={{ 
+                    padding: '14px 32px', 
+                    fontSize: '1.1rem', 
+                    borderRadius: '12px',
+                    boxShadow: '0 4px 15px rgba(var(--primary-rgb), 0.4)',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '12px',
+                    fontWeight: 600,
+                    transition: 'transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
+                }}
+                onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+            >
+                <GraduationCap size={20} />
+                Passer l'Examen B
+            </button>
+        </div>
       )}
     </div>
   );
