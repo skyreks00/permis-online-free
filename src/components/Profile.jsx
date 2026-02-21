@@ -173,6 +173,7 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
         }
     };
 
+<<<<<<< Updated upstream
     const handleSavePendingKey = () => {
         if (!pendingKey.trim()) return;
         const key = pendingKey.trim();
@@ -182,6 +183,13 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
         setPendingKey('');
         if (!autoPlayAudio) onToggleAutoPlayAudio();
     };
+=======
+    const handleReview = async (theme) => {
+        const p = progress[theme.id];
+        // Use bestAnswers if available, otherwise fallback to answers
+        const answersToReview = p?.bestAnswers || p?.answers;
+        if (!p || !answersToReview) return;
+>>>>>>> Stashed changes
 
     const handlePreviewVoice = (voice) => {
         if (!elevenLabsKey) return;
@@ -192,7 +200,64 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
 
     const handleLogin = async () => {
         try {
+<<<<<<< Updated upstream
             await loginWithGitHub();
+=======
+            // Load questions
+            // We use the same loader as QuizPage
+            const data = await loadThemeQuestions(theme.file);
+            let loadedQuestions = data.questions || [];
+
+            if (loadedQuestions.length === 0) {
+                // Fallback fetch if needed
+                const base = import.meta.env.BASE_URL || '/';
+                const res = await fetch(`${base}data/${theme.file}`);
+                const json = await res.json();
+                loadedQuestions = json.questions || [];
+            }
+
+            // Map answers to questions
+            // We need to reconstruct the "questions" array that was used
+            // Logic: Filter loadedQuestions to find those present in p.answers
+            // If p.answers has questionId, we use it. 
+            // Note: If the quiz was random subset, we only want those 50 questions.
+            // But usually p.answers contains all answered questions. 
+
+            // Create a map for fast lookup
+            const questionMap = new Map(loadedQuestions.map(q => [q.id, q]));
+
+            const answersToReview = p.bestAnswers || p.answers;
+            const reviewQuestions = answersToReview.map(ans => questionMap.get(ans.questionId)).filter(Boolean);
+
+            // If for some reason we can't find questions (e.g. content changed), we might have issues.
+            // But assuming IDs are stable:
+
+            if (reviewQuestions.length > 0) {
+                navigate('/resultats', {
+                    state: {
+                        results: {
+                            score: p.score, // Use the score from that specific run (or bestScore? likely bestScore if we clicked on the item representing best score)
+                            // Actually progress stores "score" (last) and "bestScore". 
+                            // "answers" usually corresponds to the LAST run. 
+                            // If we want to review the BEST run, we would need to save bestRunAnswers.
+                            // For now, let's assume "answers" corresponds to the run we want to review.
+                            // Limitation: If user retries and gets a worse score, "answers" might be overwritten?
+                            // Let's check App.jsx: yes, "answers" is overwritten on every save.
+                            // So we are reviewing the LATEST attempt.
+                            answers: p.answers,
+                            correct: p.score,
+                            incorrect: p.total - p.score
+                        },
+                        questions: reviewQuestions,
+                        total: p.total,
+                        isExamMode: theme.id.includes('examen')
+                    }
+                });
+            } else {
+                alert("Impossible de charger le détail de ce quiz (questions non trouvées).");
+            }
+
+>>>>>>> Stashed changes
         } catch (error) {
             console.error("Login failed:", error);
             alert("Erreur de connexion GitHub");
@@ -201,15 +266,133 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
 
     const handleLogout = async () => {
         try {
+<<<<<<< Updated upstream
             await logout();
+=======
+            // 1. Identify all incorrect questions across all themes
+            const mistakePromises = Object.entries(progress).map(async ([themeId, p]) => {
+                // Use bestAnswers if available
+                const answersToReview = p.bestAnswers || p.answers;
+                if (!answersToReview || answersToReview.length === 0) return [];
+
+                // Filter incorrect answers
+                const mistakes = answersToReview.filter(a => !a.isCorrect);
+                if (mistakes.length === 0) return [];
+
+                // We need to fetch the theme file to get the actual question objects
+                // Find theme file using themesData
+                const allThemes = (themesData.sections || []).flatMap(s => s.items);
+                const themeInfo = allThemes.find(t => t.id === themeId);
+
+                if (!themeInfo) return [];
+
+                // Load questions
+                const data = await loadThemeQuestions(themeInfo.file);
+                let loadedQuestions = data.questions || [];
+
+                if (loadedQuestions.length === 0) {
+                    const base = import.meta.env.BASE_URL || '/';
+                    const res = await fetch(`${base}data/${themeInfo.file}`);
+                    const json = await res.json();
+                    loadedQuestions = json.questions || [];
+                }
+
+                const questionMap = new Map(loadedQuestions.map(q => [q.id, q]));
+                return mistakes.map(m => {
+                    const q = questionMap.get(m.questionId);
+                    return q ? { ...q, sourceThemeId: themeId } : null;
+                }).filter(Boolean);
+            });
+
+            const results = await Promise.all(mistakePromises);
+            const allMistakeQuestions = results.flat();
+
+            if (allMistakeQuestions.length === 0) {
+                alert("Aucune erreur trouvée disponible pour la révision.");
+                return;
+            }
+
+            // 2. Navigate to QuizPage with these questions
+            // We use a dummy themeId 'erreurs' but pass data via state
+            // QuizPage needs to be updated to inspect location.state
+            navigate('/quiz/erreurs', {
+                state: {
+                    questions: allMistakeQuestions,
+                    theme: {
+                        id: 'erreurs',
+                        name: 'Révision des Erreurs',
+                        file: null
+                    }
+                }
+            });
+
+>>>>>>> Stashed changes
         } catch (error) {
             console.error("Logout failed:", error);
         }
     };
 
+<<<<<<< Updated upstream
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+=======
+    const handleReviewThemeMistakes = async (theme, e) => {
+        if (e) e.stopPropagation();
+
+        const p = progress[theme.id];
+        const answersToReview = p?.bestAnswers || p?.answers;
+
+        if (!p || !answersToReview) return;
+
+        const mistakes = answersToReview.filter(a => !a.isCorrect);
+        if (mistakes.length === 0) {
+            alert("Bravo ! Aucune faute à réviser résiduelle pour ce thème.");
+            return;
+        }
+
+        setIsLoadingReview(true);
+        try {
+            // Load questions
+            const data = await loadThemeQuestions(theme.file);
+            let loadedQuestions = data.questions || [];
+
+            if (loadedQuestions.length === 0) {
+                const base = import.meta.env.BASE_URL || '/';
+                const res = await fetch(`${base}data/${theme.file}`);
+                const json = await res.json();
+                loadedQuestions = json.questions || [];
+            }
+
+            const questionMap = new Map(loadedQuestions.map(q => [q.id, q]));
+            const reviewQuestions = mistakes.map(m => {
+                const q = questionMap.get(m.questionId);
+                return q ? { ...q, sourceThemeId: theme.id } : null;
+            }).filter(Boolean);
+
+            if (reviewQuestions.length > 0) {
+                navigate('/quiz/erreurs', {
+                    state: {
+                        questions: reviewQuestions,
+                        theme: {
+                            id: `erreurs_${theme.id}`,
+                            name: `Révision: ${theme.name}`,
+                            file: null
+                        }
+                    }
+                });
+            } else {
+                alert("Impossible de charger les questions.");
+            }
+
+        } catch (error) {
+            console.error("Failed to load theme review", error);
+            alert("Erreur lors du chargement.");
+        } finally {
+            setIsLoadingReview(false);
+        }
+    };
+>>>>>>> Stashed changes
 
     // Force styles to ensure padding is applied regardless of Tailwind/CSS issues
     return (

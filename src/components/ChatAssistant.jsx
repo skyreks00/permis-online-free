@@ -53,6 +53,7 @@ const ChatAssistant = ({ mistakes }) => {
             Contexte des erreurs (Question | Réponse Utilisateur | Bonne réponse | Explication):
             ${mistakes.map((m) => `
                 Question ${m.questionIndex + 1} (ID: ${m.q.id}): ${m.q.question}
+                Propositions: ${m.q.propositions ? m.q.propositions.map(p => `${p.letter}: ${p.text}`).join(', ') : 'Aucune (Vrai/Faux ou Nombre)'}
                 Il a répondu: ${m.a.userAnswer || 'Rien'}
                 Il fallait répondre: ${m.q.correctAnswer}
                 Pourquoi: ${m.q.explanation}
