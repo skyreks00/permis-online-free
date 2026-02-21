@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { BookOpen, RotateCcw, PlayCircle, FileText, Sparkles, Settings2, ArrowLeft, CheckCircle, ChevronDown, ChevronUp, Filter, Search, BrainCircuit, Zap, ChevronRight } from 'lucide-react';
 import Quiz from '../components/Quiz';
 import CountUp from '../components/CountUp';
@@ -71,6 +72,7 @@ const Toggle = ({ checked, onChange, label, colorOn = '#22c55e' }) => (
 );
 
 const ExamenBPage = ({ autoPlayAudio }) => {
+    const navigate = useNavigate();
     const [allQuestions, setAllQuestions] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [mastered, setMastered] = useState(() => loadSet(STORAGE_MASTERED));
@@ -221,7 +223,7 @@ const ExamenBPage = ({ autoPlayAudio }) => {
         setViewMode('list');
     }, [allQuestions, mastered, toReview]);
 
-    const handleFinish = useCallback(({ answers }) => {
+    const handleFinish = useCallback(({ score, answers }) => {
         const newMastered = new Set(mastered);
         const newToReview = new Set(toReview);
         (answers || []).forEach(ans => {
@@ -237,9 +239,22 @@ const ExamenBPage = ({ autoPlayAudio }) => {
         saveSet(STORAGE_TO_REVIEW, newToReview);
         setMastered(newMastered);
         setToReview(newToReview);
+        
+        // Navigate to results
+        navigate('/resultats', {
+            state: {
+                score,
+                total: quizQuestions.length,
+                questions: quizQuestions,
+                answers: answers,
+                isExamMode: true,
+                themeId: 'examen_B'
+            }
+        });
+
         setViewMode('config');
         setQuizQuestions([]);
-    }, [mastered, toReview]);
+    }, [mastered, toReview, quizQuestions, navigate]);
 
     const handleReset = useCallback(() => {
         if (!window.confirm('Remettre toute la progression à zéro ?')) return;

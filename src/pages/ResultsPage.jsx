@@ -44,13 +44,19 @@ const ResultsPage = ({ toggleTheme, isDarkMode }) => {
         // If it was a theme quiz, we might have the themeId
         const firstQ = resultsData.questions[0];
         const themeId = firstQ.originalThemeId || resultsData.themeId;
-        if (themeId) {
+        if (themeId === 'examen_B') {
+            navigate('/examen-b');
+        } else if (themeId) {
             navigate(`/quiz/${themeId}`);
         } else {
             navigate('/');
         }
     } else {
-        navigate('/');
+        if (resultsData.themeId === 'examen_B') {
+            navigate('/examen-b');
+        } else {
+            navigate('/');
+        }
     }
   };
 
