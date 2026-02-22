@@ -8,12 +8,24 @@ import ProfilePage from "./pages/ProfilePage";
 import HomePage from "./pages/HomePage";
 import LessonPage from "./pages/LessonPage";
 import ExamenBPage from "./pages/ExamenBPage";
+import PrivacyPage from "./pages/PrivacyPage";
+import TermsPage from "./pages/TermsPage";
 import TopControls from "./components/TopControls";
 import BottomNav from "./components/BottomNav";
+import Footer from "./components/Footer";
 import { loadThemeQuestions, loadThemesIndex } from "./utils/contentLoader";
+import { useLocation } from "react-router-dom";
 
 import { auth, db } from './utils/firebase';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
 
 function App() {
   useEffect(() => {
@@ -586,7 +598,17 @@ function App() {
             <ResultsPage toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
           }
         />
+        <Route
+          path="/confidentialite"
+          element={<PrivacyPage />}
+        />
+        <Route
+          path="/conditions"
+          element={<TermsPage />}
+        />
       </Routes>
+      <Footer />
+      <ScrollToTop />
     </BrowserRouter>
   );
 }
