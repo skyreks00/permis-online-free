@@ -517,9 +517,6 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                     </div>
                 </div>
                 
-                <div className="text-center text-[10px] text-muted opacity-50 pt-4">
-                    Permis Online Free v2.1
-                </div>
             </div>
         </div>
     );
