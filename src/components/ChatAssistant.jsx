@@ -126,7 +126,7 @@ const ChatAssistant = ({ mistakes }) => {
                             right: '24px',
                             width: '320px',
                             height: '450px',
-                            maxWidth: 'calc(100vw - 3rem)',
+                            maxWidth: 'calc(100% - 3rem)',
                             backgroundColor: 'var(--surface)',
                             border: '1px solid var(--border)',
                             borderRadius: '12px',

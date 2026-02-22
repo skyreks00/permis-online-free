@@ -104,11 +104,6 @@ const HomePage = () => {
                         </div>
                     ))}
                 </div>
-
-                <div className="home-footer-note animate-fade-in" style={{ animationDelay: '1s' }}>
-                    <Shield size={14} />
-                    <span>Contenu 100% conforme au recyclage officiel belge 2026</span>
-                </div>
             </div>
         </div>
     );

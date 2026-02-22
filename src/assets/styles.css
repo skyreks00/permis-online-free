@@ -20,39 +20,41 @@
   box-sizing: border-box;
 }
 
+html {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
 html:focus-within {
   scroll-behavior: smooth;
 }
 
 body,
 #root {
-  height: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
+  position: relative;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-/* Custom Scrollbar */
+body::-webkit-scrollbar,
+#root::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom Scrollbar - Disabled as per user request */
+/*
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--primary);
-  border-radius: 10px;
-  border: 2px solid transparent;
-  background-clip: content-box;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-700);
-  border-radius: 10px;
-  border: 2px solid transparent;
-  background-clip: content-box;
-}
+...
+*/
 
 body {
   margin: 0;
