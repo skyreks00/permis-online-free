@@ -11,7 +11,7 @@ Ce projet propose une application web moderne pour réviser le code de la route 
 - Suivi de la progression
 - Mode sombre/clair
 
-Accès en ligne : [permisfree.be](permisfree.be)
+Accès en ligne : [permisfree.be](www.permisfree.be)
 
 ## 🙏 Remerciements
 
