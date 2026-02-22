@@ -263,18 +263,14 @@
           "lessons": [
              { "name": "Synthèse", "file": "syntheseB.pdf" }
           ]
-        }
-      ]
-    },
-    {
-      "title": "Debug",
-      "items": [
+        },
         {
-          "id": "debug_quiz",
-          "name": "Quiz de Debug",
-          "totalQuestions": 3,
-          "file": "debug_quiz.json",
-          "icon": "🐛"
+          "id": "permis_B_complet",
+          "name": "Permis B - Tous les thèmes",
+          "totalQuestions": 1500,
+          "file": "examen_B.json",
+          "icon": "📚",
+          "description": "Toutes les 1500 questions du code de la route"
         }
       ]
     }

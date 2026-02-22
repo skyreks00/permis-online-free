@@ -1,25 +1,30 @@
 <!doctype html>
 <html lang="fr">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VR4ZG3FL6X"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-VR4ZG3FL6X');
-    </script>
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "vl7p4wmydp");
-    </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <link rel="manifest" href="/manifest.json" />
+
+    <!-- Prevent flash of unstyled content: synchronous inline style + script -->
+    <style>
+      html { background: #0b1020; }
+      html[data-theme="light"] { background: #f7f8fb; }
+      .no-transition * { transition: none !important; }
+    </style>
+    <script>
+      (function() {
+        var saved = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', saved);
+        document.documentElement.classList.add('no-transition');
+        window.addEventListener('load', function() {
+          requestAnimationFrame(function() {
+            requestAnimationFrame(function() {
+              document.documentElement.classList.remove('no-transition');
+            });
+          });
+        });
+      })();
+    </script>
 
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
@@ -47,7 +52,7 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0ea5e9" />
-    <link rel="canonical" href="https://permisfree.be/cours/24_direction_obligatoire.html" />
+    <link rel="canonical" href="https://permisfree.be/" />
     <meta
       name="robots"
       content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
@@ -119,7 +124,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://permisfree.be/cours/24_direction_obligatoire.html" />
+    <meta property="og:url" content="https://permisfree.be/" />
     <meta
       property="og:title"
       content="Permis Online Free – Code de la Route Gratuit"
@@ -133,7 +138,7 @@
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://permisfree.be/cours/24_direction_obligatoire.html" />
+    <meta property="twitter:url" content="https://permisfree.be/" />
     <meta
       property="twitter:title"
       content="Permis Online Free – Code de la Route Gratuit"
@@ -158,8 +163,8 @@
         }
       }
     </script>
-    <script type="module" crossorigin src="/assets/index-CgM7YNle-1771739275982.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CUlFk2MP-1771739275982.css">
+    <script type="module" crossorigin src="/assets/index-bErSsV0B-1771755573810.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DW_3a5xH-1771755573810.css">
   </head>
 
   <body>
