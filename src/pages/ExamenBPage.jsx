@@ -372,28 +372,43 @@ const ExamenBPage = ({ autoPlayAudio }) => {
         load();
     }, []);
 
-    // Base pool filtered BY THEME or EXCLUSIVE (used for counts and final selection)
-    const baseSelectionPool = useMemo(() => {
-        let result = allQuestions;
+    // 1. Separate questions by type (Themed vs Exclusive) for more clarity
+    const themedQuestionsPool = useMemo(() => {
+        return allQuestions.filter(q => {
+            const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
+            return !!questionToThemeMap[cleanText];
+        });
+    }, [allQuestions, questionToThemeMap]);
 
-        if (includeExclusive) {
-            result = result.filter(q => {
+    const exclusiveQuestionsPool = useMemo(() => {
+        return allQuestions.filter(q => {
+            const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
+            return !questionToThemeMap[cleanText];
+        });
+    }, [allQuestions, questionToThemeMap]);
+
+    // 2. Base selection pool (Additive: Themed Selection + Exclusive Selection)
+    const baseSelectionPool = useMemo(() => {
+        let pool = [];
+
+        // Apply theme filter to themed portion
+        if (themes.length === 0 || selectedThemes.size === themes.length) {
+            pool.push(...themedQuestionsPool);
+        } else if (selectedThemes.size > 0) {
+            pool.push(...themedQuestionsPool.filter(q => {
                 const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
-                return !questionToThemeMap[cleanText];
-            });
-        } else if (themes.length > 0 && selectedThemes.size < themes.length) {
-            // If no themes selected and NOT in exclusive mode, the selection is empty
-            if (selectedThemes.size === 0) return [];
-            
-            result = result.filter(q => {
-                const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
-                const themesForThisQuestion = questionToThemeMap[cleanText];
-                if (!themesForThisQuestion) return false;
-                return [...themesForThisQuestion].some(tid => selectedThemes.has(tid));
-            });
+                const tids = questionToThemeMap[cleanText];
+                return tids && [...tids].some(tid => selectedThemes.has(tid));
+            }));
         }
-        return result;
-    }, [allQuestions, includeExclusive, selectedThemes, questionToThemeMap, themes]);
+
+        // Add exclusive portion IF active
+        if (includeExclusive) {
+            pool.push(...exclusiveQuestionsPool);
+        }
+
+        return pool;
+    }, [themedQuestionsPool, exclusiveQuestionsPool, themes, selectedThemes, includeExclusive, questionToThemeMap]);
 
     const stats = useMemo(() => {
         const total = allQuestions.length;
@@ -401,20 +416,20 @@ const ExamenBPage = ({ autoPlayAudio }) => {
         const toReviewCount = toReview.size;
         const newCount = allQuestions.filter(q => !mastered.has(q.id) && !toReview.has(q.id)).length;
         
-        // Counts WITHIN THE SELECTION
+        // Counts WITHIN THE SELECTION (for Nouvelles/Erreurs)
         const selectionNewCount = baseSelectionPool.filter(q => !mastered.has(q.id) && !toReview.has(q.id)).length;
         const selectionToReviewCount = baseSelectionPool.filter(q => toReview.has(q.id)).length;
         const selectionMasteredCount = baseSelectionPool.filter(q => mastered.has(q.id)).length;
-        const selectionExclusiveCount = baseSelectionPool.filter(q => {
-            const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
-            return !questionToThemeMap[cleanText];
-        }).length;
+        
+        // Total count of exclusive questions (independent of theme filter)
+        const totalByExclusive = exclusiveQuestionsPool.length;
 
         return { 
             total, masteredCount, toReviewCount, newCount,
-            selectionNewCount, selectionToReviewCount, selectionMasteredCount, selectionExclusiveCount
+            selectionNewCount, selectionToReviewCount, selectionMasteredCount,
+            totalByExclusive
         };
-    }, [allQuestions, mastered, toReview, questionToThemeMap, baseSelectionPool]);
+    }, [allQuestions, mastered, toReview, baseSelectionPool, exclusiveQuestionsPool]);
 
     // Final filtered pool for the quiz
     const pool = useMemo(() => {
@@ -659,7 +674,7 @@ const ExamenBPage = ({ autoPlayAudio }) => {
                         <Toggle
                             checked={includeExclusive}
                             onChange={setIncludeExclusive}
-                                    label={`Questions exclusives — ${isLoading ? '…' : stats.selectionExclusiveCount} dispo`}
+                                    label={`Questions exclusives — ${isLoading ? '…' : stats.totalByExclusive} dispo`}
                             colorOn="#a855f7"
                         />
                         <div className="eb-toggle-divider" />
