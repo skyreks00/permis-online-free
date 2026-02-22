@@ -286,13 +286,21 @@ const ThemeFilter = React.memo(({ themes, selectedThemes, setSelectedThemes, isT
     </>
 ));
 
-const ExamenBPage = ({ autoPlayAudio }) => {
+const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
     const navigate = useNavigate();
     const [allQuestions, setAllQuestions] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [isMappingLoading, setIsMappingLoading] = useState(true);
-    const [mastered, setMastered] = useState(() => loadSet(STORAGE_MASTERED));
-    const [toReview, setToReview] = useState(() => loadSet(STORAGE_TO_REVIEW));
+
+    // Initialize from props.progress if available, else fallback to localStorage
+    const [mastered, setMastered] = useState(() => {
+        if (progress?.examen_B?.mastered) return new Set(progress.examen_B.mastered);
+        return loadSet(STORAGE_MASTERED);
+    });
+    const [toReview, setToReview] = useState(() => {
+        if (progress?.examen_B?.toReview) return new Set(progress.examen_B.toReview);
+        return loadSet(STORAGE_TO_REVIEW);
+    });
     const [quizMode, setQuizMode] = useState(null);
     const [quizQuestions, setQuizQuestions] = useState([]);
 
@@ -382,6 +390,14 @@ const ExamenBPage = ({ autoPlayAudio }) => {
         };
         load();
     }, []);
+
+    // Sync state when global progress (from cloud) changes
+    useEffect(() => {
+        if (progress?.examen_B) {
+            if (progress.examen_B.mastered) setMastered(new Set(progress.examen_B.mastered));
+            if (progress.examen_B.toReview) setToReview(new Set(progress.examen_B.toReview));
+        }
+    }, [progress?.examen_B]);
 
     // 1. Separate questions by type (Themed vs Exclusive) for more clarity
     const themedQuestionsPool = useMemo(() => {
@@ -534,6 +550,11 @@ const ExamenBPage = ({ autoPlayAudio }) => {
         setMastered(newMastered);
         setToReview(newToReview);
         
+        // Cloud Sync
+        if (onSaveProgress) {
+            onSaveProgress(newMastered, newToReview);
+        }
+        
         // Navigate to results
         navigate('/resultats', {
             state: {
@@ -557,7 +578,10 @@ const ExamenBPage = ({ autoPlayAudio }) => {
         saveSet(STORAGE_TO_REVIEW, empty);
         setMastered(empty);
         setToReview(empty);
-    }, []);
+        if (onSaveProgress) {
+            onSaveProgress(empty, empty);
+        }
+    }, [onSaveProgress]);
 
     if (viewMode === 'quiz') {
         return (

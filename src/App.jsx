@@ -200,6 +200,22 @@ function App() {
     });
   };
 
+  const saveExamenBProgress = (mastered, toReview) => {
+    isLocalUpdate.current = true;
+    setProgress((prev) => {
+      const { metadata, ...rest } = prev;
+      return {
+        ...rest,
+        metadata: metadata || {},
+        examen_B: {
+          mastered: Array.from(mastered),
+          toReview: Array.from(toReview),
+          date: new Date().toISOString(),
+        },
+      };
+    });
+  };
+
   /**
    * Patches existing progress with new answers (e.g. from review mode)
    * This allows correcting specific mistakes without overwriting the original score/date
@@ -589,6 +605,8 @@ function App() {
               autoPlayAudio={autoPlayAudio}
               toggleTheme={toggleTheme}
               isDarkMode={isDarkMode}
+              progress={progress}
+              onSaveProgress={saveExamenBProgress}
             />
           }
         />
