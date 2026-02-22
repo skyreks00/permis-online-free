@@ -91,7 +91,9 @@ const Footer = () => {
                 {/* Branding & Mission */}
                 <motion.div className="footer-section branding" variants={sectionVariants}>
                     <div className="footer-logo">
-                        <span className="logo-text">Permis<span>Free</span>.be</span>
+                        <Link to="/" onClick={() => window.scrollTo(0, 0)} className="footer-logo-link">
+                            <span className="logo-text">Permis<span>Free</span>.be</span>
+                        </Link>
                     </div>
                     <p className="footer-tagline">
                         Votre succès au code de la route commence ici. 
@@ -163,9 +165,12 @@ const Footer = () => {
                             whileHover={{ scale: 1.05, x: 5 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            <Github size={16} />
-                            <span className="shiny-pseudo">stotwo</span>
-                            <Crown size={11} style={{ color: '#fbbf24', marginLeft: '4px' }} />
+                            <Github size={16} style={{ color: '#ff69b4' }} />
+                            <span className="shiny-stotwo">stotwo</span>
+                            <div style={{ display: 'flex', gap: '2px', marginLeft: '4px' }}>
+                                <Crown size={11} className="shiny-crown" style={{ color: '#ff69b4' }} />
+                                <Crown size={11} className="shiny-crown" style={{ color: '#ff69b4' }} />
+                            </div>
                         </motion.a>
                         <motion.a 
                             href="https://github.com/skyreks00/" 
@@ -176,7 +181,8 @@ const Footer = () => {
                             whileTap={{ scale: 0.95 }}
                         >
                             <Github size={16} />
-                            <span>skyreks</span>
+                            <span className="shiny-skyreks">skyreks</span>
+                            <Crown size={11} className="shiny-crown" style={{ color: '#facc15', marginLeft: '4px' }} />
                         </motion.a>
                     </div>
                 </motion.div>

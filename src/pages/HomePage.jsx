@@ -48,7 +48,6 @@ const HomePage = () => {
             
             <div className="home-content">
                 {/* HERO SECTION */}
-                <div className="home-badge animate-fade-in">Version 2026 • Officiel</div>
                 
                 <h1 className="home-title animate-slide-up">
                     Réussissez votre permis <br />

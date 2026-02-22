@@ -41,7 +41,18 @@ const TopControls = ({ toggleTheme, isDarkMode, user }) => {
     return (
         <>
             <nav className="top-nav">
-                <div className="top-nav-logo-wrap" onClick={() => navigate('/')} role="button" tabIndex={0}>
+                <div 
+                    className="top-nav-logo-wrap" 
+                    onClick={() => {
+                        if (location.pathname === '/' || location.pathname === '/permisfree.be/') {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        } else {
+                            navigate('/');
+                        }
+                    }} 
+                    role="button" 
+                    tabIndex={0}
+                >
                     <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="Permis Logo" style={{ height: '32px', width: 'auto' }} />
                 </div>
 

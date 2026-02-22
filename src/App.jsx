@@ -457,6 +457,16 @@ function App() {
       };
     });
   };
+  const MarkRead = markLessonRead;
+
+  const FooterWrapper = () => {
+    const location = useLocation();
+    const hideFooterPaths = ['/quiz/', '/examen-b', '/resultats', '/revision'];
+    const shouldHide = hideFooterPaths.some(path => location.pathname.includes(path));
+    
+    if (shouldHide) return null;
+    return <Footer />;
+  };
 
   return (
     <BrowserRouter basename="/">
@@ -607,7 +617,7 @@ function App() {
           element={<TermsPage />}
         />
       </Routes>
-      <Footer />
+      <FooterWrapper />
       <ScrollToTop />
     </BrowserRouter>
   );
