@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BookOpen, RotateCcw, PlayCircle, FileText, Sparkles, Settings2, ArrowLeft, CheckCircle, ChevronDown, ChevronUp, Filter, Search, BrainCircuit, Zap, ChevronRight } from 'lucide-react';
 import Quiz from '../components/Quiz';
