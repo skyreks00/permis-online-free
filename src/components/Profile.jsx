@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { 
     Trophy, Target, AlertTriangle, Clock, Settings, ArrowLeft, 
     CheckCircle2, Circle, Volume2, User, LogOut, Key, Github, 
-    Save, Filter, RefreshCcw, Sparkles, Lock, PlayCircle, Mic, ExternalLink 
+    Save, Filter, RefreshCcw, Sparkles, Lock, PlayCircle, Mic, ExternalLink, HelpCircle
 } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { loadThemeQuestions } from '../utils/contentLoader';
@@ -454,17 +454,32 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                     </div>
 
                     <div>
-                        <div className="flex items-center justify-between mb-1.5">
-                            <label className="text-[10px] font-bold uppercase tracking-wider text-muted flex items-center gap-2">
+                        <div className="flex items-center justify-between mb-2">
+                            <label className="text-[10px] font-bold uppercase tracking-widest text-muted flex items-center gap-2">
                                 <Key size={12} className="text-primary" /> Clé API Groq (Optionnel)
                             </label>
+                            
+                            {/* PREMIUM HELP LINK */}
                             <a 
                                 href="https://console.groq.com/keys" 
                                 target="_blank" 
                                 rel="noreferrer" 
-                                className="text-[10px] text-primary hover:text-primary-700 flex items-center gap-1 transition-colors"
+                                className="
+                                    group relative flex items-center gap-2 px-3 py-1.5 
+                                    text-[10px] font-bold uppercase tracking-wider
+                                    bg-surface-2 hover:bg-surface-3
+                                    text-primary hover:text-text
+                                    border border-primary/20 hover:border-primary/50
+                                    rounded-lg transition-all duration-300
+                                    shadow-lg shadow-primary/5 hover:shadow-primary/20
+                                    active:scale-95 overflow-hidden no-underline
+                                "
+                                style={{ textDecoration: 'none' }}
                             >
-                                <ExternalLink size={10} /> Comment créer une clé ?
+                                {/* Glow Effect Background */}
+                                <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/5 to-primary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+                                
+                                <span>Créer ma clé gratuite</span>
                             </a>
                         </div>
                         <input 
