@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { 
     Trophy, Target, AlertTriangle, Clock, Settings, ArrowLeft, 
     CheckCircle2, Circle, Volume2, User, LogOut, Key, Github, 
-    Save, Filter, RefreshCcw, Sparkles, Lock, PlayCircle, Mic 
+    Save, Filter, RefreshCcw, Sparkles, Lock, PlayCircle, Mic, ExternalLink 
 } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { loadThemeQuestions } from '../utils/contentLoader';
@@ -453,11 +453,20 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                         <p className="text-[10px] text-muted mt-2">Nécessaire pour sauvegarder votre progression en ligne.</p>
                     </div>
 
-                    {/* Groq API */}
                     <div>
-                        <label className="text-[10px] font-bold uppercase tracking-wider text-muted mb-1.5 block flex items-center gap-2">
-                            <Key size={10} /> Clé API Groq (Optionnel)
-                        </label>
+                        <div className="flex items-center justify-between mb-1.5">
+                            <label className="text-[10px] font-bold uppercase tracking-wider text-muted flex items-center gap-2">
+                                <Key size={12} className="text-primary" /> Clé API Groq (Optionnel)
+                            </label>
+                            <a 
+                                href="https://console.groq.com/keys" 
+                                target="_blank" 
+                                rel="noreferrer" 
+                                className="text-[10px] text-primary hover:text-primary-700 flex items-center gap-1 transition-colors"
+                            >
+                                <ExternalLink size={10} /> Comment créer une clé ?
+                            </a>
+                        </div>
                         <input 
                             type="password" 
                             className="input text-sm w-full mb-2 bg-surface-2"
