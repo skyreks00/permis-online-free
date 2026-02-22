@@ -15,5 +15,5 @@ Ce projet propose une application web moderne pour réviser le code de la route 
 
 ## 🙏 Remerciements
 
-- **[![stotwo](https://img.shields.io/badge/stotwo-ff69b4?style=flat-square&logo=github&logoColor=white)](https://github.com/stotwo)** : Développement et maintenance.
+- **[![stotwo](https://img.shields.io/badge/stotwo-ff69b4?style=flat-square&logo=github&logoColor=pink)](https://github.com/stotwo)**
 - Inspiré par les ressources libres du code de la route. Projet open source, contributions bienvenues !
