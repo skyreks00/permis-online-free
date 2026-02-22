@@ -71,17 +71,15 @@ const Toggle = React.memo(({ checked, onChange, label, colorOn = '#22c55e' }) =>
     </label>
 ));
 
-const LiquidSlider = React.memo(({ poolLength, quizSize, setQuizSize, manualInput, setManualInput }) => {
+const LiquidSlider = React.memo(({ poolLength, quizSize, setQuizSize }) => {
     const [localVal, setLocalVal] = useState(quizSize === 9999 ? poolLength : Math.min(quizSize, poolLength));
-    const [localInput, setLocalInput] = useState(manualInput);
+    const [localInput, setLocalInput] = useState((quizSize === 9999 ? poolLength : Math.min(quizSize, poolLength)).toString());
     const debounceRef = useRef(null);
 
     useEffect(() => {
         const targetVal = quizSize === 9999 ? poolLength : Math.min(quizSize, poolLength);
-        if (targetVal !== localVal) {
-            setLocalVal(targetVal);
-            setLocalInput(targetVal.toString());
-        }
+        setLocalVal(targetVal);
+        setLocalInput(targetVal.toString());
     }, [quizSize, poolLength]);
 
     const handleSliderChange = (e) => {
@@ -105,9 +103,9 @@ const LiquidSlider = React.memo(({ poolLength, quizSize, setQuizSize, manualInpu
         if (isNaN(val) || val < 1) val = 1;
         const finalVal = val >= poolLength ? 9999 : val;
         setQuizSize(finalVal);
-        setLocalVal(finalVal === 9999 ? poolLength : finalVal);
-        setLocalInput(finalVal === 9999 ? poolLength.toString() : val.toString());
-        setManualInput(finalVal === 9999 ? poolLength.toString() : val.toString());
+        const displayVal = finalVal === 9999 ? poolLength : finalVal;
+        setLocalVal(displayVal);
+        setLocalInput(displayVal.toString());
     };
 
     return (
@@ -302,7 +300,6 @@ const ExamenBPage = ({ autoPlayAudio }) => {
     const [includeErrors, setIncludeErrors] = useState(false);
     const [includeMastered, setIncludeMastered] = useState(false);
     const [quizSize, setQuizSize] = useState(50);
-    const [manualInput, setManualInput] = useState(''); // Pour l'input libre de la bulle
     const [viewMode, setViewMode] = useState('config'); // 'config' | 'quiz' | 'list'
     const [listTitle, setListTitle] = useState('');
     const [visibleCount, setVisibleCount] = useState(100);
@@ -412,10 +409,6 @@ const ExamenBPage = ({ autoPlayAudio }) => {
         return filtered;
     }, [allQuestions, mastered, toReview, includeNew, includeErrors, includeMastered, selectedThemes, questionToThemeMap, themes]);
 
-    // Sync manual input with quizSize when it changes externally
-    useEffect(() => {
-        setManualInput((quizSize >= pool.length || quizSize === 9999) ? pool.length.toString() : quizSize.toString());
-    }, [quizSize, pool.length]);
 
     const handleLaunch = useCallback(() => {
         const shuffled = shuffle(pool);
@@ -677,8 +670,6 @@ const ExamenBPage = ({ autoPlayAudio }) => {
                             poolLength={pool.length}
                             quizSize={quizSize}
                             setQuizSize={setQuizSize}
-                            manualInput={manualInput}
-                            setManualInput={setManualInput}
                         />
                     )}
 
