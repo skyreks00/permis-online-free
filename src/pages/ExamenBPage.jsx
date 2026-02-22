@@ -53,7 +53,7 @@ const hexToRgb = (hex) => {
     return result ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}` : '34, 197, 94';
 }
 
-const Toggle = ({ checked, onChange, label, colorOn = '#22c55e' }) => (
+const Toggle = React.memo(({ checked, onChange, label, colorOn = '#22c55e' }) => (
     <label className="eb-toggle-row">
         <span className="eb-toggle-label">{label}</span>
         <button
@@ -69,7 +69,225 @@ const Toggle = ({ checked, onChange, label, colorOn = '#22c55e' }) => (
             <span className="eb-toggle-thumb" />
         </button>
     </label>
-);
+));
+
+const LiquidSlider = React.memo(({ poolLength, quizSize, setQuizSize, manualInput, setManualInput }) => {
+    const [localVal, setLocalVal] = useState(quizSize === 9999 ? poolLength : Math.min(quizSize, poolLength));
+    const [localInput, setLocalInput] = useState(manualInput);
+    const debounceRef = useRef(null);
+
+    useEffect(() => {
+        const targetVal = quizSize === 9999 ? poolLength : Math.min(quizSize, poolLength);
+        if (targetVal !== localVal) {
+            setLocalVal(targetVal);
+            setLocalInput(targetVal.toString());
+        }
+    }, [quizSize, poolLength]);
+
+    const handleSliderChange = (e) => {
+        const val = parseInt(e.target.value, 10);
+        setLocalVal(val);
+        setLocalInput(val.toString());
+        
+        // Debounce update to parent to avoid lag during drag
+        if (debounceRef.current) clearTimeout(debounceRef.current);
+        debounceRef.current = setTimeout(() => {
+            setQuizSize(val >= poolLength ? 9999 : val);
+        }, 16); // ~60fps
+    };
+
+    const handleInputChange = (e) => {
+        setLocalInput(e.target.value);
+    };
+
+    const handleInputBlur = () => {
+        let val = parseInt(localInput, 10);
+        if (isNaN(val) || val < 1) val = 1;
+        const finalVal = val >= poolLength ? 9999 : val;
+        setQuizSize(finalVal);
+        setLocalVal(finalVal === 9999 ? poolLength : finalVal);
+        setLocalInput(finalVal === 9999 ? poolLength.toString() : val.toString());
+        setManualInput(finalVal === 9999 ? poolLength.toString() : val.toString());
+    };
+
+    return (
+        <div className="eb-liquid-slider-container">
+            <div className="eb-liquid-header">
+                <label className="eb-liquid-label">Volume de questions</label>
+            </div>
+
+            <div className="eb-liquid-wrapper" style={{ 
+                '--progress': poolLength > 1 ? (localVal - 1) / (poolLength - 1) : 1
+            }}>
+                <div className="eb-liquid-bubble">
+                    <input 
+                        type="text" 
+                        inputMode="numeric"
+                        pattern="[0-9]*"
+                        className="eb-liquid-bubble-input"
+                        value={localInput}
+                        onChange={handleInputChange}
+                        onBlur={handleInputBlur}
+                        onKeyDown={(e) => e.key === 'Enter' && e.target.blur()}
+                        aria-label="Nombre de questions"
+                    />
+                    <div className="eb-liquid-bubble-tail" />
+                </div>
+
+                <div className="eb-liquid-track">
+                    <div className="eb-liquid-fill">
+                        <div className="eb-liquid-waves" />
+                        <div className="eb-liquid-glow" />
+                    </div>
+                    
+                    <input
+                        type="range"
+                        min="1"
+                        max={poolLength || 1}
+                        step="1"
+                        value={localVal}
+                        onChange={handleSliderChange}
+                        className="eb-liquid-input"
+                        aria-label="Nombre de questions"
+                    />
+
+                    <div className="eb-liquid-thumb">
+                        <div className="eb-liquid-thumb-core" />
+                        <div className="eb-liquid-thumb-aura" />
+                    </div>
+                </div>
+            </div>
+
+            <div className="eb-liquid-scale">
+                <span>1</span>
+                <span>{poolLength}</span>
+            </div>
+
+            {quizSize !== 9999 && quizSize > poolLength && poolLength > 0 && (
+                <div className="eb-size-warning" style={{ marginTop: '30px' }}>
+                    ⚠️ Seulement <strong>{poolLength}</strong> questions disponibles.
+                </div>
+            )}
+        </div>
+    );
+});
+const StatsHeader = React.memo(({ pctMastered, stats, isLoading }) => (
+    <>
+        <header className="eb-hero">
+            <div className="eb-hero-badge">
+                <Sparkles size={13} />
+                Examen Blanc B
+            </div>
+            <h1 className="eb-hero-title">
+                Maîtrise les{' '}
+                <ShinyText
+                    text="1 500 questions"
+                    color="#f59e0b"
+                    shineColor="#fde68a"
+                    speed={4}
+                    spread={70}
+                />
+            </h1>
+            <p className="eb-hero-sub">
+                Les bonnes réponses disparaissent. Les erreurs reviennent jusqu'à maîtrise totale.
+            </p>
+            <div className="eb-resources-row">
+                <a href={`${import.meta.env.BASE_URL || '/'}pdf/syntheseB.pdf`} target="_blank" rel="noreferrer" className="eb-resource-pill">
+                    <FileText size={14} /> Synthèse B
+                </a>
+            </div>
+        </header>
+
+        <div className="eb-stats-row">
+            <div className="eb-stat eb-stat--new">
+                <GradientNum value={isLoading ? 0 : stats.newCount} gradient="linear-gradient(135deg, #38bdf8, #0ea5e9)" />
+                <div className="eb-stat-lbl">Nouvelles</div>
+            </div>
+            <div className="eb-stat eb-stat--review">
+                <GradientNum value={stats.toReviewCount} gradient="linear-gradient(135deg, #fbbf24, #f59e0b)" />
+                <div className="eb-stat-lbl">À revoir</div>
+            </div>
+            <div className="eb-stat eb-stat--mastered">
+                <GradientNum value={stats.masteredCount} gradient="linear-gradient(135deg, #4ade80, #22c55e)" />
+                <div className="eb-stat-lbl">Maîtrisées</div>
+            </div>
+            <div className="eb-stat eb-stat--total">
+                <GradientNum value={isLoading ? 0 : stats.total} gradient="linear-gradient(135deg, #c084fc, #a855f7)" />
+                <div className="eb-stat-lbl">Total</div>
+            </div>
+        </div>
+
+        <div className="eb-progress-track">
+            <div className="eb-progress-fill" style={{ width: `${pctMastered}%` }} />
+            <span className="eb-progress-txt">{pctMastered}% maîtrisé</span>
+        </div>
+    </>
+));
+
+const ThemeFilter = React.memo(({ themes, selectedThemes, setSelectedThemes, isThemesExpanded, setIsThemesExpanded, themeSearch, setThemeSearch }) => (
+    <>
+        <div 
+            className="eb-toggle-row" 
+            onClick={() => setIsThemesExpanded(!isThemesExpanded)}
+        >
+            <span className="eb-toggle-label" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <Filter size={18} />
+                Filtrer par thèmes ({selectedThemes.size}/{themes.length})
+            </span>
+            <div style={{ color: 'var(--muted)' }}>
+                {isThemesExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+            </div>
+        </div>
+
+        <div className="eb-theme-filter-section" style={{ margin: 0, border: 'none', borderRadius: 0, background: 'transparent' }}>
+            {isThemesExpanded && themes.length > 0 && (
+                <div className="eb-theme-grid-wrap anim-slide-down">
+                    <div className="eb-theme-actions">
+                        <div className="eb-theme-search">
+                            <Search size={14} />
+                            <input 
+                                type="text" 
+                                placeholder="Rechercher un thème..." 
+                                value={themeSearch}
+                                onChange={(e) => setThemeSearch(e.target.value)}
+                            />
+                        </div>
+                        <div style={{ display: 'flex', gap: '8px' }}>
+                            <button onClick={() => setSelectedThemes(new Set(themes.map(t => t.id)))}>Tout cocher</button>
+                            <button onClick={() => setSelectedThemes(new Set())}>Tout décocher</button>
+                        </div>
+                    </div>
+                    <div className="eb-theme-grid">
+                        {themes
+                            .filter(t => t.name.toLowerCase().includes(themeSearch.toLowerCase()))
+                            .map(theme => {
+                                const isActive = selectedThemes.has(theme.id);
+                                return (
+                                    <button
+                                        key={theme.id}
+                                        className={`eb-theme-pill ${isActive ? 'active' : ''}`}
+                                        onClick={() => {
+                                            const next = new Set(selectedThemes);
+                                            if (isActive) next.delete(theme.id);
+                                            else next.add(theme.id);
+                                            setSelectedThemes(next);
+                                        }}
+                                    >
+                                        {theme.name}
+                                    </button>
+                                );
+                            })}
+                    </div>
+                </div>
+            )}
+            {isThemesExpanded && themes.length === 0 && (
+                <div className="eb-theme-loading">
+                    <span>Chargement des catégories...</span>
+                </div>
+            )}
+        </div>
+    </>
+));
 
 const ExamenBPage = ({ autoPlayAudio }) => {
     const navigate = useNavigate();
@@ -409,66 +627,11 @@ const ExamenBPage = ({ autoPlayAudio }) => {
             <Hyperspeed />
             <div className="eb-page">
 
-                <header className="eb-hero">
-                    <div className="eb-hero-badge">
-                        <Sparkles size={13} />
-                        Examen Blanc B
-                    </div>
-                    <h1 className="eb-hero-title">
-                        Maîtrise les{' '}
-                        <ShinyText
-                            text="1 500 questions"
-                            color="#f59e0b"
-                            shineColor="#fde68a"
-                            speed={4}
-                            spread={70}
-                        />
-                    </h1>
-                    <p className="eb-hero-sub">
-                        Les bonnes réponses disparaissent. Les erreurs reviennent jusqu'à maîtrise totale.
-                    </p>
-                    <div className="eb-resources-row">
-                        <a href={`${BASE}pdf/syntheseB.pdf`} target="_blank" rel="noreferrer" className="eb-resource-pill">
-                            <FileText size={14} /> Synthèse B
-                        </a>
-                    </div>
-                </header>
-
-                <div className="eb-stats-row">
-                    <div 
-                        className="eb-stat eb-stat--new clickable" 
-                        onClick={() => handleLaunchSpecial('new')}
-                        title="Réviser les nouvelles questions"
-                    >
-                        <GradientNum value={isLoading ? 0 : stats.newCount} gradient="linear-gradient(135deg, #38bdf8, #0ea5e9)" />
-                        <div className="eb-stat-lbl">Nouvelles</div>
-                    </div>
-                    <div 
-                        className="eb-stat eb-stat--review clickable" 
-                        onClick={() => handleLaunchSpecial('review')}
-                        title="Réviser les fautes"
-                    >
-                        <GradientNum value={stats.toReviewCount} gradient="linear-gradient(135deg, #fbbf24, #f59e0b)" />
-                        <div className="eb-stat-lbl">À revoir</div>
-                    </div>
-                    <div 
-                        className="eb-stat eb-stat--mastered clickable" 
-                        onClick={() => handleLaunchSpecial('mastered')}
-                        title="Revoir les questions maîtrisées"
-                    >
-                        <GradientNum value={stats.masteredCount} gradient="linear-gradient(135deg, #4ade80, #22c55e)" />
-                        <div className="eb-stat-lbl">Maîtrisées</div>
-                    </div>
-                    <div className="eb-stat eb-stat--total">
-                        <GradientNum value={isLoading ? 0 : stats.total} gradient="linear-gradient(135deg, #c084fc, #a855f7)" />
-                        <div className="eb-stat-lbl">Total</div>
-                    </div>
-                </div>
-
-                <div className="eb-progress-track">
-                    <div className="eb-progress-fill" style={{ width: `${pctMastered}%` }} />
-                    <span className="eb-progress-txt">{pctMastered}% maîtrisé</span>
-                </div>
+                <StatsHeader 
+                    pctMastered={pctMastered}
+                    stats={stats}
+                    isLoading={isLoading}
+                />
 
                 <section className="eb-card">
                     <div className="eb-card-header">
@@ -497,145 +660,26 @@ const ExamenBPage = ({ autoPlayAudio }) => {
                                     label={`🏆 Questions maîtrisées — ${stats.masteredCount} dispo`}
                                     colorOn="#22c55e"
                         />
-                        <div 
-                            className="eb-toggle-row" 
-                            onClick={() => setIsThemesExpanded(!isThemesExpanded)}
-                        >
-                            <span className="eb-toggle-label" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                                <Filter size={18} />
-                                Filtrer par thèmes ({selectedThemes.size}/{themes.length})
-                            </span>
-                            <div style={{ color: 'var(--muted)' }}>
-                                {isThemesExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-                            </div>
-                        </div>
+                        <ThemeFilter 
+                            themes={themes}
+                            selectedThemes={selectedThemes}
+                            setSelectedThemes={setSelectedThemes}
+                            isThemesExpanded={isThemesExpanded}
+                            setIsThemesExpanded={setIsThemesExpanded}
+                            themeSearch={themeSearch}
+                            setThemeSearch={setThemeSearch}
+                        />
                     </div>
 
-                    <div className="eb-theme-filter-section" style={{ margin: 0, border: 'none', borderRadius: 0, background: 'transparent' }}>
-                        {isThemesExpanded && themes.length > 0 && (
-                            <div className="eb-theme-grid-wrap anim-slide-down">
-                                <div className="eb-theme-actions">
-                                    <div className="eb-theme-search">
-                                        <Search size={14} />
-                                        <input 
-                                            type="text" 
-                                            placeholder="Rechercher un thème..." 
-                                            value={themeSearch}
-                                            onChange={(e) => setThemeSearch(e.target.value)}
-                                        />
-                                    </div>
-                                    <div style={{ display: 'flex', gap: '8px' }}>
-                                        <button onClick={() => setSelectedThemes(new Set(themes.map(t => t.id)))}>Tout cocher</button>
-                                        <button onClick={() => setSelectedThemes(new Set())}>Tout décocher</button>
-                                    </div>
-                                </div>
-                                <div className="eb-theme-grid">
-                                    {themes
-                                        .filter(t => t.name.toLowerCase().includes(themeSearch.toLowerCase()))
-                                        .map(theme => {
-                                            const isActive = selectedThemes.has(theme.id);
-                                            return (
-                                                <button
-                                                    key={theme.id}
-                                                    className={`eb-theme-pill ${isActive ? 'active' : ''}`}
-                                                    onClick={() => {
-                                                        const next = new Set(selectedThemes);
-                                                        if (isActive) next.delete(theme.id);
-                                                        else next.add(theme.id);
-                                                        setSelectedThemes(next);
-                                                    }}
-                                                >
-                                                    {theme.name}
-                                                </button>
-                                            );
-                                        })}
-                                </div>
-                            </div>
-                        )}
-                        {isThemesExpanded && themes.length === 0 && (
-                            <div className="eb-theme-loading">
-                                <span>Chargement des catégories...</span>
-                            </div>
-                        )}
-                    </div>
 
                     {pool.length > 0 && (
-                        <div className="eb-liquid-slider-container">
-                            <div className="eb-liquid-header">
-                                <label className="eb-liquid-label">Volume de questions</label>
-                            </div>
-
-                            <div className="eb-liquid-wrapper" style={{ 
-                                '--progress': pool.length > 1 ? ((quizSize === 9999 ? pool.length : Math.min(quizSize, pool.length)) - 1) / (pool.length - 1) : 1
-                            }}>
-                                {/* The Floating Bubble */}
-                                <div className="eb-liquid-bubble">
-                                    <input 
-                                        type="text" 
-                                        inputMode="numeric"
-                                        pattern="[0-9]*"
-                                        className="eb-liquid-bubble-input"
-                                        value={manualInput}
-                                        onChange={(e) => {
-                                            setManualInput(e.target.value);
-                                        }}
-                                        onBlur={() => {
-                                            let val = parseInt(manualInput, 10);
-                                            if (isNaN(val) || val < 1) val = 1;
-                                            setQuizSize(val >= pool.length ? 9999 : val);
-                                            setManualInput(val >= pool.length ? pool.length.toString() : val.toString());
-                                        }}
-                                        onKeyDown={(e) => {
-                                            if (e.key === 'Enter') {
-                                                e.target.blur();
-                                            }
-                                        }}
-                                        aria-label="Nombre de questions"
-                                    />
-                                    <div className="eb-liquid-bubble-tail" />
-                                </div>
-
-                                {/* The Liquid Track */}
-                                <div className="eb-liquid-track">
-                                    <div className="eb-liquid-fill">
-                                        <div className="eb-liquid-waves" />
-                                        <div className="eb-liquid-glow" />
-                                    </div>
-                                    
-                                    <input
-                                        type="range"
-                                        min="1"
-                                        max={pool.length || 1}
-                                        step="1"
-                                        value={quizSize === 9999 ? pool.length : Math.min(quizSize, pool.length)}
-                                        onChange={e => {
-                                            const val = parseInt(e.target.value, 10);
-                                            setQuizSize(val >= pool.length ? 9999 : val);
-                                        }}
-                                        className="eb-liquid-input"
-                                        aria-label="Nombre de questions"
-                                    />
-
-                                    {/* The Magnetic Cursor (Visual only) */}
-                                    <div className="eb-liquid-thumb">
-                                        <div className="eb-liquid-thumb-core" />
-                                        <div className="eb-liquid-thumb-aura" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Scale indicators moved outside flex wrapper */}
-                            <div className="eb-liquid-scale">
-                                <span>1</span>
-                                <span>{pool.length}</span>
-                            </div>
-
-                            {quizSize !== 9999 && quizSize > pool.length && (
-                                <div className="eb-size-warning" style={{ marginTop: '30px' }}>
-                                    ⚠️ Seulement <strong>{pool.length}</strong> questions disponibles.
-                                </div>
-                            )}
-                        </div>
+                        <LiquidSlider 
+                            poolLength={pool.length}
+                            quizSize={quizSize}
+                            setQuizSize={setQuizSize}
+                            manualInput={manualInput}
+                            setManualInput={setManualInput}
+                        />
                     )}
 
                     {pool.length === 0 && !isLoading && (
