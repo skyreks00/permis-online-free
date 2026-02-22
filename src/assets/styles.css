@@ -4188,19 +4188,50 @@ input.eb-size-chip {
 
 /* --- PREMIUM FOOTER --- */
 .footer-premium {
-    background: var(--surface);
+    background: linear-gradient(135deg, var(--surface), color-mix(in srgb, var(--surface), var(--primary) 5%), var(--surface));
+    background-size: 400% 400%;
+    animation: gradient-shift 12s ease infinite;
     border-top: 1px solid var(--border);
     padding: 60px 0 0 0;
     margin-top: 40px;
     color: var(--text);
     position: relative;
     z-index: 10;
+    overflow: hidden;
 }
+
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.footer-bg-blobs {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0.8; /* Increased */
+}
+
+.footer-blob {
+    position: absolute;
+    width: 400px; /* Larger */
+    height: 400px;
+    background: var(--primary);
+    filter: blur(100px); /* More blur */
+    border-radius: 50%;
+    opacity: 0.25; /* More visible */
+}
+
+.footer-blob-1 { top: -100px; right: -50px; background: var(--primary); }
+.footer-blob-2 { bottom: -100px; left: -50px; background: #6366f1; }
 
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 32px 48px 32px;
+    padding: 0 32px 0px 32px;
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1fr;
     gap: 40px;
@@ -4278,7 +4309,6 @@ input.eb-size-chip {
     color: var(--text);
     background: var(--primary);
     border-color: var(--primary);
-    transform: translateY(-3px);
     box-shadow: 0 8px 16px rgba(14, 165, 233, 0.2);
 }
 
@@ -4352,33 +4382,18 @@ input.eb-size-chip {
     border-color: var(--primary);
     background: var(--primary);
     color: white;
-    transform: translateX(4px);
 }
 
 /* Bottom Bar */
-.footer-bottom {
-    border-top: 1px solid var(--border);
-    padding: 24px 0;
-    background: color-mix(in srgb, var(--surface), black 5%);
-}
-
-.footer-bottom-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.85rem;
-    color: var(--muted);
-}
-
-@media (max-width: 600px) {
-    .footer-bottom-inner {
-        flex-direction: column;
-        gap: 12px;
-        text-align: center;
-    }
+.footer-copyright {
+    grid-column: 1 / -1;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted);
+    opacity: 0.6;
 }
 
 .made-with {
@@ -4392,3 +4407,80 @@ input.eb-size-chip {
     fill: var(--danger);
 }
 
+
+/* --- ANIMATED FOOTER ENHANCEMENTS --- */
+.footer-section h3 {
+    position: relative;
+    display: inline-block;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background: var(--primary);
+    border-radius: 2px;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-section h3:hover::after {
+    width: 100%;
+}
+
+.social-link {
+    position: relative;
+    z-index: 1;
+}
+
+.social-link::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 12px;
+    background: var(--primary);
+    opacity: 0;
+    filter: blur(8px);
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.social-link:hover::after {
+    opacity: 0.3;
+}
+
+.social-link.insta:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    border-color: transparent;
+}
+
+.social-link.tiktok:hover {
+    background: #000;
+    color: #fff;
+    box-shadow: 2px 2px #ff0050, -2px -2px #00f2ea;
+    border-color: transparent;
+}
+
+.creator-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.creator-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.creator-card:hover::before {
+    transform: translateX(100%);
+}
+
+.footer-bottom {
+    overflow: hidden;
+}
