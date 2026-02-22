@@ -30,7 +30,7 @@ const ThemeSelector = ({ sections, progress, onSelectTheme, onSelectLesson, mode
 
       // Filter items based on MODE
       if (mode === 'lessons') {
-         const excludedIds = ['examen_B', 'permis_B_complet'];
+         const excludedIds = ['examen_B', 'permis_B_complet', 'infractions'];
          items = items.filter(item => !excludedIds.includes(item.id) && (item.lessonFile || item.file));
       } else if (mode === 'quiz') {
          // Filter out specific items requested by user
@@ -61,9 +61,10 @@ const ThemeSelector = ({ sections, progress, onSelectTheme, onSelectLesson, mode
     let allItems = baseSections.flatMap(s => s.items);
     
     if (mode === 'lessons') {
-        allItems = allItems.filter(item => item.lessonFile || (item.file && item.id !== 'examen_B'));
+        const excludedIds = ['examen_B', 'permis_B_complet', 'infractions'];
+        allItems = allItems.filter(item => !excludedIds.includes(item.id) && (item.lessonFile || item.file));
     } else if (mode === 'quiz') {
-        const excludedIds = ['examen_B', 'infractions', '15_depassement_interdit', '0_intro', '0_permis'];
+        const excludedIds = ['examen_B', 'permis_B_complet', 'infractions', '15_depassement_interdit', '0_intro', '0_permis'];
         allItems = allItems.filter(item => !excludedIds.includes(item.id));
     }
 
