@@ -95,9 +95,15 @@ const QuizPage = ({
                     [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
                 }
 
-                if (foundTheme.id.includes('examen')) {
+                // Determine how many questions to use
+                if (foundTheme.id === 'examen_B') {
+                    // Examen B: use 50 random questions
                     setQuestions(shuffled.slice(0, 50));
+                } else if (foundTheme.id === 'permis_B_complet') {
+                    // Permis B Complet: use ALL questions
+                    setQuestions(shuffled);
                 } else {
+                    // Regular themes: use all questions
                     setQuestions(shuffled);
                 }
             } catch (err) {
@@ -172,7 +178,7 @@ const QuizPage = ({
                 total: questions.length,
                 questions: questions,
                 answers: answers,
-                isExamMode: theme.id.includes('examen'),
+                isExamMode: theme.id === 'examen_B' || theme.id === 'permis_B_complet',
                 isReviewSession: isReviewMode
             }
         });
@@ -200,7 +206,7 @@ const QuizPage = ({
                     themeName={theme.name}
                     onFinish={handleFinish}
                     onExit={() => navigate('/')}
-                    instantFeedback={instantFeedback && !theme.id.includes('examen')}
+                    instantFeedback={instantFeedback && !(theme.id === 'examen_B' || theme.id === 'permis_B_complet')}
                     autoPlayAudio={autoPlayAudio}
                     fileName={theme.file}
                 />

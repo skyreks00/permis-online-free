@@ -2158,6 +2158,50 @@ input:checked + .slider:before {
   border-color: rgba(0, 0, 0, 0.08);
 }
 
+[data-theme="light"] .eb-stat--new {
+  background: rgba(14, 165, 233, 0.1);
+  border-color: rgba(14, 165, 233, 0.3);
+}
+[data-theme="light"] .eb-stat--review {
+  background: rgba(245, 158, 11, 0.1);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+[data-theme="light"] .eb-stat--mastered {
+  background: rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+[data-theme="light"] .eb-stat--total {
+  background: rgba(168, 85, 247, 0.1);
+  border-color: rgba(168, 85, 247, 0.3);
+}
+
+[data-theme="light"] .eb-progress-track {
+  background: rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .eb-hero-badge {
+  background: rgba(245, 158, 11, 0.1);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+[data-theme="light"] .eb-mode-card {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .eb-size-chip {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: var(--muted);
+}
+
+[data-theme="light"] input.eb-size-chip {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: var(--text);
+}
+
 .eb-card-header {
   display: flex;
   align-items: center;
@@ -4186,4 +4230,17 @@ input.eb-size-chip {
 
 [data-theme="light"] .eb-liquid-bubble {
   box-shadow: 0 8px 20px rgba(14, 165, 233, 0.2);
+}
+
+[data-theme="light"] .eb-slider-labels {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="light"] .eb-range-input {
+  background: rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .hyperspeed-bg {
+  display: none;
 }

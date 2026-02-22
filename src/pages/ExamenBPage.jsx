@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { BookOpen, RotateCcw, PlayCircle, FileText, Sparkles, Settings2, ArrowLeft, CheckCircle, ChevronDown, ChevronUp, Filter, Search, BrainCircuit, Zap, ChevronRight } from 'lucide-react';
+import { BookOpen, RotateCcw, PlayCircle, FileText, Sparkles, Settings2, ArrowLeft, CheckCircle, ChevronDown, ChevronUp, Filter, Search, BrainCircuit, Zap, ChevronRight, Star, RotateCw, Trophy } from 'lucide-react';
 import Quiz from '../components/Quiz';
 import CountUp from '../components/CountUp';
 import ShinyText from '../components/ShinyText';
@@ -55,7 +55,7 @@ const hexToRgb = (hex) => {
 
 const Toggle = ({ checked, onChange, label, colorOn = '#22c55e' }) => (
     <label className="eb-toggle-row">
-        <span className="eb-toggle-label">{label}</span>
+        <span className="eb-toggle-label" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>{label}</span>
         <button
             role="switch"
             aria-checked={checked}
@@ -129,8 +129,16 @@ const ExamenBPage = ({ autoPlayAudio }) => {
                         });
                         
                         if (allTheoryItems.length > 0) {
-                            setThemes(allTheoryItems);
-                            setSelectedThemes(new Set(allTheoryItems.map(i => i.id)));
+                            // Add pseudo-theme for orphaned questions
+                            const orphansTheme = {
+                                id: 'permis_B_orphelines',
+                                name: 'Permis B - Questions Non Classées',
+                                file: 'permis_B_orphelines.json',
+                                totalQuestions: 638
+                            };
+                            const allThemesWithOrphans = [...allTheoryItems, orphansTheme];
+                            setThemes(allThemesWithOrphans);
+                            setSelectedThemes(new Set([...allTheoryItems.map(i => i.id), 'permis_B_orphelines']));
 
                             const mapping = {};
                             await Promise.all(allTheoryItems.map(async (item) => {
@@ -162,28 +170,59 @@ const ExamenBPage = ({ autoPlayAudio }) => {
         const masteredCount = mastered.size;
         const toReviewCount = toReview.size;
         const newCount = allQuestions.filter(q => !mastered.has(q.id) && !toReview.has(q.id)).length;
-        return { total, masteredCount, toReviewCount, newCount };
-    }, [allQuestions, mastered, toReview]);
+        
+        // Count orphaned questions (those not mapped to any theme)
+        const orphanCount = allQuestions.filter(q => {
+            const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
+            return !questionToThemeMap[cleanText];
+        }).length;
+        
+        return { total, masteredCount, toReviewCount, newCount, orphanCount };
+    }, [allQuestions, mastered, toReview, questionToThemeMap]);
+
+    // Count questions per theme - ONLY questions that exist in examen_B
+    const questionCountPerTheme = useMemo(() => {
+        const counts = {};
+        themes.forEach(theme => {
+            counts[theme.id] = 0;
+        });
+        
+        // Only count questions from examen_B that are mapped to each theme
+        allQuestions.forEach(q => {
+            const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
+            const themeIdSet = questionToThemeMap[cleanText];
+            if (themeIdSet instanceof Set) {
+                themeIdSet.forEach(themeId => {
+                    if (counts.hasOwnProperty(themeId)) {
+                        counts[themeId]++;
+                    }
+                });
+            }
+        });
+        
+        return counts;
+    }, [themes, questionToThemeMap, allQuestions]);
 
     // Combine standard and AI questions based on settings
     const pool = useMemo(() => {
         let result = allQuestions;
 
-        // Apply theme filter only if themes are loaded and we are not in "All" mode
-        if (themes.length > 0 && selectedThemes.size < themes.length) {
-            if (selectedThemes.size === 0) return [];
+        // Apply theme filter
+        if (themes.length > 0) {
+            const includeOrphans = selectedThemes.has('permis_B_orphelines');
             
-            result = result.filter(q => {
+            const withThemes = result.filter(q => {
                 const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
                 const themesForThisQuestion = questionToThemeMap[cleanText];
                 
-                // If no themes mapped for this question, and we have selected themes, 
-                // we EXCLUDE it (it doesn't belong to any specific category).
-                // It only shows up if "All" themes are selected (selectedThemes.size === themes.length)
-                if (!themesForThisQuestion) return false;
+                // If question not mapped to any theme, exclude it unless permis_B_orphelines is selected
+                if (!themesForThisQuestion) return includeOrphans;
                 
+                // If question is mapped to themes, include only if selected theme is active
                 return [...themesForThisQuestion].some(tid => selectedThemes.has(tid));
             });
+            
+            result = withThemes;
         }
 
         let filtered = [];
@@ -480,22 +519,22 @@ const ExamenBPage = ({ autoPlayAudio }) => {
                         <Toggle
                             checked={includeNew}
                             onChange={setIncludeNew}
-                            label={`✨ Nouvelles questions — ${isLoading ? '…' : stats.newCount} dispo`}
+                            label={<><Sparkles size={16} /> Nouvelles questions — {isLoading ? '…' : stats.newCount} dispo</>}
                             colorOn="#0ea5e9"
                         />
                         <div className="eb-toggle-divider" />
                         <Toggle
                             checked={includeErrors}
                             onChange={setIncludeErrors}
-                            label={`🔁 Erreurs à réviser — ${stats.toReviewCount} dispo`}
+                            label={<><RotateCw size={16} /> Erreurs à réviser — {stats.toReviewCount} dispo</>}
                             colorOn="#f59e0b"
                         />
                         <div className="eb-toggle-divider" />
                         <Toggle
                             checked={includeMastered}
                             onChange={setIncludeMastered}
-                                    label={`🏆 Questions maîtrisées — ${stats.masteredCount} dispo`}
-                                    colorOn="#22c55e"
+                            label={<><Trophy size={16} /> Questions maîtrisées — {stats.masteredCount} dispo</>}
+                            colorOn="#22c55e"
                         />
                         <div 
                             className="eb-toggle-row" 
@@ -534,6 +573,12 @@ const ExamenBPage = ({ autoPlayAudio }) => {
                                         .filter(t => t.name.toLowerCase().includes(themeSearch.toLowerCase()))
                                         .map(theme => {
                                             const isActive = selectedThemes.has(theme.id);
+                                            let questionCount = 0;
+                                            if (theme.id === 'permis_B_orphelines') {
+                                                questionCount = stats.orphanCount;
+                                            } else {
+                                                questionCount = questionCountPerTheme[theme.id] || 0;
+                                            }
                                             return (
                                                 <button
                                                     key={theme.id}
@@ -544,8 +589,9 @@ const ExamenBPage = ({ autoPlayAudio }) => {
                                                         else next.add(theme.id);
                                                         setSelectedThemes(next);
                                                     }}
+                                                    title={`${questionCount} question${questionCount > 1 ? 's' : ''}`}
                                                 >
-                                                    {theme.name}
+                                                    {theme.name} <span style={{opacity: 0.6, fontSize: '0.85em'}}>({questionCount})</span>
                                                 </button>
                                             );
                                         })}

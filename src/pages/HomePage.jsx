@@ -48,7 +48,7 @@ const HomePage = () => {
             
             <div className="home-content">
                 {/* HERO SECTION */}
-                <div className="home-badge animate-fade-in">Version 2025 • Officiel</div>
+                <div className="home-badge animate-fade-in">Version {new Date().getFullYear()} • Officiel</div>
                 
                 <h1 className="home-title animate-slide-up">
                     Réussissez votre permis <br />
@@ -107,7 +107,7 @@ const HomePage = () => {
 
                 <div className="home-footer-note animate-fade-in" style={{ animationDelay: '1s' }}>
                     <Shield size={14} />
-                    <span>Contenu 100% conforme au recyclage officiel belge 2025</span>
+                    <span>Contenu 100% conforme au recyclage officiel belge {new Date().getFullYear()}</span>
                 </div>
             </div>
         </div>

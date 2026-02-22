@@ -24,7 +24,7 @@ function App() {
 
   const [sections, setSections] = useState([]);
   const [progress, setProgress] = useState({});
-  const [colorTheme, setColorTheme] = useState("light");
+  const [colorTheme, setColorTheme] = useState("dark");
   const [instantFeedback, setInstantFeedback] = useState(false);
   const [autoPlayAudio, setAutoPlayAudio] = useState(false);
   const [showCompleted, setShowCompleted] = useState(true);
@@ -34,7 +34,7 @@ function App() {
   const isLocalUpdate = useRef(false);
   const debounceTimer = useRef(null);
 
-  // Initialize theme from localStorage or system preference
+  // Initialize theme from localStorage or default to dark
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
@@ -43,12 +43,9 @@ function App() {
       return;
     }
 
-    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-      .matches
-      ? "dark"
-      : "light";
-    setColorTheme(systemTheme);
-    document.documentElement.setAttribute("data-theme", systemTheme);
+    // Default to dark mode
+    setColorTheme("dark");
+    document.documentElement.setAttribute("data-theme", "dark");
   }, []);
 
   // Dynamic Page Title
@@ -123,13 +120,18 @@ function App() {
       setAutoPlayAudio(JSON.parse(savedAudio));
     }
 
-<<<<<<< Updated upstream
     const savedShowCompleted = localStorage.getItem("showCompleted");
     if (savedShowCompleted !== null) {
       setShowCompleted(JSON.parse(savedShowCompleted));
     }
 
     // AUTH & AUTO-SYNC PULL
+    // Only set up auth listener if Firebase is configured
+    if (!auth) {
+      console.log("ℹ️ Firebase is not configured - Cloud sync disabled");
+      return;
+    }
+
     const unsubscribe = auth.onAuthStateChanged(async (currentUser) => {
       setUser(currentUser);
       if (currentUser) {
@@ -139,74 +141,6 @@ function App() {
         );
         // Trigger auto-pull from Firestore
         pullFromCloud();
-=======
-  const saveProgress = (themeId, score, total, answers) => {
-    const previousBest = progress[themeId]?.bestScore || 0;
-    const isNewBest = score >= previousBest;
-    const newBestScore = Math.max(score, previousBest);
-
-    const newProgress = {
-      ...progress,
-      [themeId]: {
-        score, // Last score
-        bestScore: newBestScore, // Best score ever
-        total,
-        date: new Date().toISOString(),
-        answers, // Last answers
-        bestAnswers: isNewBest ? answers : (progress[themeId]?.bestAnswers || answers) // Keep best answers or update if new best (fallback to current if none)
-      }
-    };
-    setProgress(newProgress);
-    localStorage.setItem('quizProgress', JSON.stringify(newProgress));
-  };
-
-  const handleMistakeCorrection = (corrections) => {
-    console.log("App: handleMistakeCorrection called", corrections); // DEBUG LOG
-    // corrections: [{ themeId, questionId }]
-    const newProgress = { ...progress };
-    let hasChanges = false;
-
-    corrections.forEach(({ themeId, questionId }) => {
-      console.log(`App: Processing correction for theme ${themeId}, question ${questionId}`); // DEBUG LOG
-      if (!newProgress[themeId]) {
-        console.log(`App: Theme ${themeId} not found in progress`);
-        return;
-      }
-
-      const themeProgress = newProgress[themeId];
-      if (!themeProgress.answers) {
-        console.log(`App: No answers found for theme ${themeId}`);
-        return;
-      }
-
-      const answerIndex = themeProgress.answers.findIndex(a => a.questionId === questionId);
-      if (answerIndex !== -1) {
-        if (!themeProgress.answers[answerIndex].isCorrect) {
-          // Update answer
-          console.log(`App: Marking question ${questionId} as correct for theme ${themeId}`); // DEBUG LOG
-          const newAnswers = [...themeProgress.answers];
-          newAnswers[answerIndex] = {
-            ...newAnswers[answerIndex],
-            isCorrect: true
-          };
-
-          // Recalculate score
-          const newScore = newAnswers.filter(a => a.isCorrect).length;
-          const newBestScore = Math.max(themeProgress.bestScore, newScore);
-
-          newProgress[themeId] = {
-            ...themeProgress,
-            answers: newAnswers,
-            score: newScore,
-            bestScore: newBestScore
-          };
-          hasChanges = true;
-        } else {
-          console.log(`App: Question ${questionId} was already correct`);
-        }
-      } else {
-        console.log(`App: Question ${questionId} not found in theme answers`);
->>>>>>> Stashed changes
       }
     });
 
@@ -301,6 +235,10 @@ function App() {
 
   const syncToCloud = async (progressData) => {
     try {
+      if (!auth) {
+        console.log("ℹ️ Firebase not configured - skipping cloud sync");
+        return;
+      }
       const user = auth.currentUser;
       if (!user) return;
 
@@ -353,6 +291,10 @@ function App() {
 
   const pullFromCloud = async () => {
     try {
+      if (!auth) {
+        console.log("ℹ️ Firebase not configured - skipping cloud pull");
+        return;
+      }
       const user = auth.currentUser;
       if (!user) return;
 

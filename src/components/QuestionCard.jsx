@@ -318,27 +318,16 @@ const QuestionCard = ({
         user,
       );
 
-<<<<<<< Updated upstream
       setSavingState("success");
       if (result.type === "pr") {
         setSaveMessage(<a href={result.url} target="_blank" rel="noreferrer">PR créée !</a>);
       } else if (result.type === "commit") {
         setSaveMessage(<a href={result.url} target="_blank" rel="noreferrer">Commit effectué !</a>);
+      } else if (result.type === 'unchanged') {
+        setSaveMessage('Aucun changement détecté');
       } else {
         setSaveMessage("Sauvegardé !");
       }
-=======
-      if (result.type === 'unchanged') {
-        setSavingState('success');
-        setSaveMessage('Aucun changement détecté');
-        return;
-      }
-
-      setSavingState('success');
-
-      setSavingState('success');
-      setSaveMessage('Erreur signalée');
->>>>>>> Stashed changes
 
       if (onQuestionUpdated) onQuestionUpdated(fixedQuestion);
 
@@ -416,9 +405,8 @@ const QuestionCard = ({
           </button>
         )}
 
-<<<<<<< Updated upstream
         {/* Correction Toolbar - Moved INSIDE Header for consistent visibility */}
-        {isCorrectionMode && (
+        {isCorrectionMode && savingState !== 'saving' && (
             <div className="correction-toolbar-inline">
               <div className="correction-badge">
                 <div className="correction-badge-dot" />
@@ -441,43 +429,6 @@ const QuestionCard = ({
                 </button>
               </div>
             </div>
-=======
-        {/* Correction Actions */}
-        {isCorrectionMode && !saveMessage && savingState !== 'saving' && (
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', justifyContent: 'flex-end', marginTop: '8px' }}>
-            <button
-              onClick={() => setFixedQuestion(null)}
-              disabled={savingState === 'saving'}
-              className="btn-ghost"
-              style={{
-                fontSize: '14px',
-                padding: '8px 16px',
-                color: 'var(--muted)',
-                fontWeight: '500'
-              }}
-            >
-              Annuler
-            </button>
-            <button
-              onClick={handleConfirmFix}
-              disabled={savingState === 'saving'}
-              className="btn-primary"
-              style={{
-                fontSize: '14px',
-                padding: '8px 24px',
-                backgroundColor: '#0ea5e9', // Sky blue similar to screenshot
-                borderColor: '#0ea5e9',
-                color: 'white',
-                borderRadius: '8px',
-                fontWeight: '600',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}
-            >
-              Valider
-            </button>
-          </div>
         )}
 
         {/* Toast Notification (Success/Error) */}
@@ -489,7 +440,7 @@ const QuestionCard = ({
               bottom: '24px',
               right: '24px',
               zIndex: 2000,
-              backgroundColor: '#0ea5e9', // Blue
+              backgroundColor: savingState === 'error' ? '#ef4444' : '#0ea5e9',
               color: 'white',
               padding: '12px 24px',
               borderRadius: '8px',
@@ -505,7 +456,6 @@ const QuestionCard = ({
             {savingState === 'error' ? <X size={20} /> : <CheckCircle size={20} />}
             <span>{saveMessage}</span>
           </div>
->>>>>>> Stashed changes
         )}
       </div>
 
