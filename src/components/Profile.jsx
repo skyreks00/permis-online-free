@@ -110,7 +110,7 @@ const CustomVoiceSelect = ({ voices, selectedId, onSelect, onPreview }) => {
 
 const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onToggleInstantFeedback, autoPlayAudio, onToggleAutoPlayAudio }) => {
     const navigate = useNavigate();
-    const [user, setUser] = useState(auth.currentUser);
+    const [user, setUser] = useState(auth ? auth.currentUser : null);
     const [apiKey, setApiKey] = useState(() => localStorage.getItem('groq_api_key') || '');
     const [elevenLabsKey, setElevenLabsKey] = useState(() => localStorage.getItem('elevenlabs_api_key') || '');
     const [voiceId, setVoiceId] = useState(() => localStorage.getItem('elevenlabs_voice_id') || PRESET_VOICES[0].id);
@@ -140,6 +140,10 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
     const progressPercent = totalQuestions > 0 ? Math.round((totalAnswered / totalQuestions) * 100) : 0;
 
     useEffect(() => {
+        if (!auth) {
+            console.log("ℹ️ Firebase not configured - skipping auth listener");
+            return;
+        }
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser);
         });

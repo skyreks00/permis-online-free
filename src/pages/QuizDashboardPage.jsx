@@ -7,6 +7,8 @@ import { loadThemeQuestions } from '../utils/contentLoader';
 const QuizDashboardPage = ({ sections, progress, toggleTheme, isDarkMode, onSelectTheme, showCompleted, onToggleShowCompleted }) => {
     const navigate = useNavigate();
     const [isLoadingReview, setIsLoadingReview] = useState(false);
+    const [showWarningModal, setShowWarningModal] = useState(false);
+    const [pendingQuizItem, setPendingQuizItem] = useState(null);
 
     // --- Review Logic (Moved from Profile) ---
     const getNormalizedProgress = (p) => {
@@ -90,17 +92,12 @@ const QuizDashboardPage = ({ sections, progress, toggleTheme, isDarkMode, onSele
         return <div className="page container flex items-center justify-center h-screen">Chargement de la révision...</div>;
     }
 
-
-    // --- Modal State ---
-    const [showWarningModal, setShowWarningModal] = useState(false);
-    const [pendingQuizItem, setPendingQuizItem] = useState(null);
-
     const handleThemeSelect = (item) => {
         // Check if lesson is read
         const isRead = progress[item.id]?.read;
         const hasLesson = item.lessonFile || (item.file && item.file.replace('.json', '.html')); 
         
-        if (hasLesson && !isRead && !item.id.includes('examen')) {
+        if (hasLesson && !isRead && !(item.id === 'examen_B' || item.id === 'permis_B_complet')) {
              setPendingQuizItem(item);
              setShowWarningModal(true);
              return;

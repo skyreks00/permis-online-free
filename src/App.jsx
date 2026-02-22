@@ -36,7 +36,7 @@ function App() {
 
   const [sections, setSections] = useState([]);
   const [progress, setProgress] = useState({});
-  const [colorTheme, setColorTheme] = useState("light");
+  const [colorTheme, setColorTheme] = useState("dark");
   const [instantFeedback, setInstantFeedback] = useState(false);
   const [autoPlayAudio, setAutoPlayAudio] = useState(false);
   const [showCompleted, setShowCompleted] = useState(true);
@@ -46,7 +46,7 @@ function App() {
   const isLocalUpdate = useRef(false);
   const debounceTimer = useRef(null);
 
-  // Initialize theme from localStorage or system preference
+  // Initialize theme from localStorage or default to dark
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
@@ -55,12 +55,9 @@ function App() {
       return;
     }
 
-    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-      .matches
-      ? "dark"
-      : "light";
-    setColorTheme(systemTheme);
-    document.documentElement.setAttribute("data-theme", systemTheme);
+    // Default to dark mode
+    setColorTheme("dark");
+    document.documentElement.setAttribute("data-theme", "dark");
   }, []);
 
   // Dynamic Page Title
@@ -141,6 +138,12 @@ function App() {
     }
 
     // AUTH & AUTO-SYNC PULL
+    // Only set up auth listener if Firebase is configured
+    if (!auth) {
+      console.log("ℹ️ Firebase is not configured - Cloud sync disabled");
+      return;
+    }
+
     const unsubscribe = auth.onAuthStateChanged(async (currentUser) => {
       setUser(currentUser);
       if (currentUser) {
@@ -244,6 +247,10 @@ function App() {
 
   const syncToCloud = async (progressData) => {
     try {
+      if (!auth) {
+        console.log("ℹ️ Firebase not configured - skipping cloud sync");
+        return;
+      }
       const user = auth.currentUser;
       if (!user) return;
 
@@ -296,6 +303,10 @@ function App() {
 
   const pullFromCloud = async () => {
     try {
+      if (!auth) {
+        console.log("ℹ️ Firebase not configured - skipping cloud pull");
+        return;
+      }
       const user = auth.currentUser;
       if (!user) return;
 

@@ -12,7 +12,10 @@
       "explication": "En l'absence de signaux (B1, B5, B11 ou B15) et de feux, la priorité de droite s'applique de manière absolue.",
       "image": "https://img.freepik.com/vecteurs-premium/carrefour-sans-signalisation-priorite-droite_1029473-124.jpg",
       "type": "multiple_choice",
-      "themes": ["11_priorite_de_droite", "13_les_carrefours_et_la_priorite"]
+      "themes": [
+        "11_priorite_de_droite",
+        "13_les_carrefours_et_la_priorite"
+      ]
     },
     {
       "id": "ai_2",
@@ -26,7 +29,9 @@
       "explication": "Le signal B15 indique que vous avez la priorité au prochain carrefour. De plus, un conducteur débouchant d'un sentier ou d'un chemin de terre doit toujours céder le passage.",
       "image": "",
       "type": "multiple_choice",
-      "themes": ["13_les_carrefours_et_la_priorite"]
+      "themes": [
+        "13_les_carrefours_et_la_priorite"
+      ]
     },
     {
       "id": "ai_3",
@@ -40,7 +45,9 @@
       "explication": "Les véhicules de secours utilisant simultanément leurs avertisseurs sonores et lumineux sont prioritaires dès que cela est nécessaire.",
       "image": "",
       "type": "multiple_choice",
-      "themes": ["13_les_carrefours_et_la_priorite"]
+      "themes": [
+        "13_les_carrefours_et_la_priorite"
+      ]
     },
     {
       "id": "ai_4",
@@ -54,7 +61,9 @@
       "explication": "Le dépassement par la droite est autorisé lorsque le conducteur à dépasser a indiqué son intention de tourner à gauche et s'est porté vers la gauche.",
       "image": "",
       "type": "multiple_choice",
-      "themes": ["12_croisement_et_depassement"]
+      "themes": [
+        "12_croisement_et_depassement"
+      ]
     },
     {
       "id": "ai_5",
@@ -68,7 +77,10 @@
       "explication": "Même si le conducteur devant vous commet l'infraction de rester au milieu, dépasser par la droite reste formellement interdit sur autoroute.",
       "image": "",
       "type": "multiple_choice",
-      "themes": ["12_croisement_et_depassement", "4_lautoroute"]
+      "themes": [
+        "12_croisement_et_depassement",
+        "4_lautoroute"
+      ]
     },
     {
       "id": "ai_6",
@@ -82,7 +94,9 @@
       "explication": "En ville (agglomération), la distance minimale est de 1m. Hors agglomération, elle passe à 1,5m.",
       "image": "",
       "type": "multiple_choice",
-      "themes": ["12_croisement_et_depassement"]
+      "themes": [
+        "12_croisement_et_depassement"
+      ]
     },
     {
       "id": "ai_7",
@@ -96,7 +110,9 @@
       "explication": "Il est interdit de dépasser un tram (ou un autobus) à l'arrêt du côté de la descente si aucun refuge n'existe.",
       "image": "",
       "type": "multiple_choice",
-      "themes": ["12_croisement_et_depassement"]
+      "themes": [
+        "12_croisement_et_depassement"
+      ]
     },
     {
       "id": "ai_8",
@@ -110,7 +126,9 @@
       "explication": "Le dépassement est interdit dans les virages et à l'approche du sommet des côtes lorsque la visibilité est insuffisante.",
       "image": "",
       "type": "multiple_choice",
-      "themes": ["12_croisement_et_depassement"]
+      "themes": [
+        "12_croisement_et_depassement"
+      ]
     },
     {
       "id": "ai_9",
@@ -124,7 +142,10 @@
       "explication": "On ne peut pas dépasser sur un passage pour piétons ou juste avant si la visibilité est réduite.",
       "image": "",
       "type": "multiple_choice",
-      "themes": ["12_croisement_et_depassement", "7_les_pietons"]
+      "themes": [
+        "12_croisement_et_depassement",
+        "7_les_pietons"
+      ]
     },
     {
       "id": "ai_10",
@@ -138,7 +159,11 @@
       "explication": "La ligne blanche continue est un mur virtuel. Aucun dépassement nécessitant son franchissement n'est autorisé.",
       "image": "",
       "type": "multiple_choice",
-      "themes": ["12_croisement_et_depassement", "1_la_chaussee"]
+      "themes": [
+        "12_croisement_et_depassement",
+        "1_la_chaussee"
+      ]
     }
-  ]
+  ],
+  "totalQuestions": 10
 }

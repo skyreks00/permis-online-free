@@ -16,8 +16,8 @@ export const fixQuestionWithGroq = async (question, apiKey) => {
     RULES:
     1. **LANGUAGE: IMPERATIVELY FRENCH**. All text (question, propositions, explanation) MUST be in correct French.
     2. **Fix Typos & Grammar**: Correct any spelling or grammatical errors in 'question', 'propositions', and 'explanation'.
-    2. **Start** with a valid JSON structure.
-    3. **Three Supported Question Types**:
+    3. **Start** with a valid JSON structure.
+    4. **Three Supported Question Types**:
        - "multiple_choice" (Standard question with options A, B, C... used for BOTH single and multiple valid answers)
        - "true_false" (Binary question, Oui/Non)
        - "number" (Open numeric field, NO propositions)
@@ -27,11 +27,12 @@ export const fixQuestionWithGroq = async (question, apiKey) => {
        - NEVER use "single_choice" (it does not exist in the system).
        - NEVER use "number" type if there are possibilities/propositions.
        - ONLY use "number" type if the user must type a value and 'correctAnswer' is a raw number (e.g. "50", "0.5").
-    4. **Propositions Structure**:
        - Must be an array of objects: [{ "letter": "A", "text": "..." }, { "letter": "B", "text": "..." }]
        - Do NOT merge propositions into the question text.
        - Ensure "answer" field matches the letters (e.g., "A" or "AC").
     5. **JSON Only**: Output ONLY valid JSON, no markdown formatting (no \`\`\`json).
+    6. **IMMUTABLE ANSWER**: The 'answer' field MUST remain exactly the same as the original (e.g., if it was "A", it MUST remain "A"). Do NOT change which option is the correct one.
+    7. **AMBIGUITY FIX**: If multiple propositions have the EXACT SAME text (e.g. both are "Signal"), you MUST append the proposition letter to the text to differentiate them (e.g., "Signal" -> "Signal A", "Signal" -> "Signal B"). This is important for clarity.
 
     Original Question to Fix:
     ${JSON.stringify(question, null, 2)}

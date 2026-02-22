@@ -85,6 +85,34 @@ const QuestionCard = ({
   }, [displayQuestion, autoPlayAudio]); // Depend on displayQuestion
 
   useEffect(() => {
+    let timer;
+    if (saveMessage) {
+      timer = setTimeout(() => {
+        setSaveMessage('');
+        setFixedQuestion(null); // Optional: close correction mode too? User said "buttons hide", maybe stay in read mode? 
+        // Logic: If message clears, renders nothing? 
+        // Actually, logic above: !saveMessage shows buttons. 
+        // If we clear saveMessage, buttons reappear?
+        // User asked: "cache les boutons meme si c'est réussi des qu'on appuie" -> we did savingState checks.
+        // If we clear saveMessage, isCorrectionMode is still true. 
+        // savingState depends... we set it to 'success' in handleConfirmFix.
+        // If savingState is 'success', buttons are hidden? No, generic check `savingState !== 'saving'`.
+        // Wait.
+        // If saveMessage clears, `!saveMessage` becomes true.
+        // savingState is 'success'.
+        // `savingState !== 'saving'` is true.
+        // So buttons REAPPEAR if we clear message but don't exit correction mode or change savingState.
+
+        // We should explicitly EXIT correction mode (setFixedQuestion(null)) when toast disappears?
+        // Or keep it simple: Just clear message. If buttons reappear, that's bad.
+        // Let's setFixedQuestion(null) to close the whole correction UI.
+        setFixedQuestion(null);
+      }, 3000);
+    }
+    return () => clearTimeout(timer);
+  }, [saveMessage]);
+
+  useEffect(() => {
     // Reset interaction states when the DISPLAYED question changes (ID or content update)
     setSelectedAnswer(null);
     setHasAnswered(false);
@@ -295,6 +323,8 @@ const QuestionCard = ({
         setSaveMessage(<a href={result.url} target="_blank" rel="noreferrer">PR créée !</a>);
       } else if (result.type === "commit") {
         setSaveMessage(<a href={result.url} target="_blank" rel="noreferrer">Commit effectué !</a>);
+      } else if (result.type === 'unchanged') {
+        setSaveMessage('Aucun changement détecté');
       } else {
         setSaveMessage("Sauvegardé !");
       }
@@ -376,7 +406,7 @@ const QuestionCard = ({
         )}
 
         {/* Correction Toolbar - Moved INSIDE Header for consistent visibility */}
-        {isCorrectionMode && (
+        {isCorrectionMode && savingState !== 'saving' && (
             <div className="correction-toolbar-inline">
               <div className="correction-badge">
                 <div className="correction-badge-dot" />
@@ -399,6 +429,33 @@ const QuestionCard = ({
                 </button>
               </div>
             </div>
+        )}
+
+        {/* Toast Notification (Success/Error) */}
+        {saveMessage && (
+          <div
+            className="animate-fade-in-up"
+            style={{
+              position: 'fixed',
+              bottom: '24px',
+              right: '24px',
+              zIndex: 2000,
+              backgroundColor: savingState === 'error' ? '#ef4444' : '#0ea5e9',
+              color: 'white',
+              padding: '12px 24px',
+              borderRadius: '8px',
+              boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '12px',
+              fontSize: '15px',
+              fontWeight: '600',
+              maxWidth: '300px'
+            }}
+          >
+            {savingState === 'error' ? <X size={20} /> : <CheckCircle size={20} />}
+            <span>{saveMessage}</span>
+          </div>
         )}
       </div>
 

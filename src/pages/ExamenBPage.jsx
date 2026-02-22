@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { BookOpen, RotateCcw, PlayCircle, FileText, Sparkles, Settings2, ArrowLeft, CheckCircle, ChevronDown, ChevronUp, Filter, Search, BrainCircuit, Zap, ChevronRight } from 'lucide-react';
+import { BookOpen, RotateCcw, PlayCircle, FileText, Sparkles, Settings2, ArrowLeft, CheckCircle, ChevronDown, ChevronUp, Filter, Search, BrainCircuit, Zap, ChevronRight, Star, RotateCw, Trophy } from 'lucide-react';
 import Quiz from '../components/Quiz';
 import CountUp from '../components/CountUp';
 import ShinyText from '../components/ShinyText';
@@ -55,7 +55,7 @@ const hexToRgb = (hex) => {
 
 const Toggle = React.memo(({ checked, onChange, label, colorOn = '#22c55e' }) => (
     <label className="eb-toggle-row">
-        <span className="eb-toggle-label">{label}</span>
+        <span className="eb-toggle-label" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>{label}</span>
         <button
             role="switch"
             aria-checked={checked}
@@ -345,8 +345,16 @@ const ExamenBPage = ({ autoPlayAudio }) => {
                         });
                         
                         if (allTheoryItems.length > 0) {
-                            setThemes(allTheoryItems);
-                            setSelectedThemes(new Set(allTheoryItems.map(i => i.id)));
+                            // Add pseudo-theme for orphaned questions
+                            const orphansTheme = {
+                                id: 'permis_B_orphelines',
+                                name: 'Permis B - Questions Non Classées',
+                                file: 'permis_B_orphelines.json',
+                                totalQuestions: 638
+                            };
+                            const allThemesWithOrphans = [...allTheoryItems, orphansTheme];
+                            setThemes(allThemesWithOrphans);
+                            setSelectedThemes(new Set([...allTheoryItems.map(i => i.id), 'permis_B_orphelines']));
 
                             const mapping = {};
                             await Promise.all(allTheoryItems.map(async (item) => {
@@ -390,28 +398,17 @@ const ExamenBPage = ({ autoPlayAudio }) => {
         });
     }, [allQuestions, questionToThemeMap]);
 
-    // 2. Base selection pool (Additive: Themed Selection + Exclusive Selection)
-    const baseSelectionPool = useMemo(() => {
-        let pool = [];
-
-        // Apply theme filter to themed portion
+    // 2. Base selection pool for THEMED questions only (Stat calculations will use this)
+    const themedSelectionPool = useMemo(() => {
         if (themes.length === 0 || selectedThemes.size === themes.length) {
-            pool.push(...themedQuestionsPool);
-        } else if (selectedThemes.size > 0) {
-            pool.push(...themedQuestionsPool.filter(q => {
-                const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
-                const tids = questionToThemeMap[cleanText];
-                return tids && [...tids].some(tid => selectedThemes.has(tid));
-            }));
+            return themedQuestionsPool;
         }
-
-        // Add exclusive portion IF active
-        if (includeExclusive) {
-            pool.push(...exclusiveQuestionsPool);
-        }
-
-        return pool;
-    }, [themedQuestionsPool, exclusiveQuestionsPool, themes, selectedThemes, includeExclusive, questionToThemeMap]);
+        return themedQuestionsPool.filter(q => {
+            const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
+            const tids = questionToThemeMap[cleanText];
+            return tids && [...tids].some(tid => selectedThemes.has(tid));
+        });
+    }, [themedQuestionsPool, themes, selectedThemes, questionToThemeMap]);
 
     const stats = useMemo(() => {
         const total = allQuestions.length;
@@ -419,29 +416,77 @@ const ExamenBPage = ({ autoPlayAudio }) => {
         const toReviewCount = toReview.size;
         const newCount = allQuestions.filter(q => !mastered.has(q.id) && !toReview.has(q.id)).length;
         
-        // Counts WITHIN THE SELECTION (for Nouvelles/Erreurs)
-        const selectionNewCount = baseSelectionPool.filter(q => !mastered.has(q.id) && !toReview.has(q.id)).length;
-        const selectionToReviewCount = baseSelectionPool.filter(q => toReview.has(q.id)).length;
-        const selectionMasteredCount = baseSelectionPool.filter(q => mastered.has(q.id)).length;
+        // Count orphaned questions (those not mapped to any theme)
+        const orphanCount = allQuestions.filter(q => {
+            const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
+            return !questionToThemeMap[cleanText];
+        }).length;
+        
+        // Counts WITHIN THE THEME SELECTION ONLY
+        const selectionNewCount = themedSelectionPool.filter(q => !mastered.has(q.id) && !toReview.has(q.id)).length;
+        const selectionToReviewCount = themedSelectionPool.filter(q => toReview.has(q.id)).length;
+        const selectionMasteredCount = themedSelectionPool.filter(q => mastered.has(q.id)).length;
         
         // Total count of exclusive questions (independent of theme filter)
         const totalByExclusive = exclusiveQuestionsPool.length;
 
         return { 
-            total, masteredCount, toReviewCount, newCount,
+            total, masteredCount, toReviewCount, newCount, orphanCount,
             selectionNewCount, selectionToReviewCount, selectionMasteredCount,
             totalByExclusive
         };
-    }, [allQuestions, mastered, toReview, baseSelectionPool, exclusiveQuestionsPool]);
+    }, [allQuestions, mastered, toReview, questionToThemeMap, themedSelectionPool, exclusiveQuestionsPool]);
+
+    // Count questions per theme - ONLY questions that exist in examen_B
+    const questionCountPerTheme = useMemo(() => {
+        const counts = {};
+        themes.forEach(theme => {
+            counts[theme.id] = 0;
+        });
+        
+        // Only count questions from examen_B that are mapped to each theme
+        allQuestions.forEach(q => {
+            const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
+            const themeIdSet = questionToThemeMap[cleanText];
+            if (themeIdSet instanceof Set) {
+                themeIdSet.forEach(themeId => {
+                    if (counts.hasOwnProperty(themeId)) {
+                        counts[themeId]++;
+                    }
+                });
+            }
+        });
+        
+        return counts;
+    }, [themes, questionToThemeMap, allQuestions]);
+
 
     // Final filtered pool for the quiz
     const pool = useMemo(() => {
         let filtered = [];
-        if (includeNew) filtered.push(...baseSelectionPool.filter(q => !mastered.has(q.id) && !toReview.has(q.id)));
-        if (includeErrors) filtered.push(...baseSelectionPool.filter(q => toReview.has(q.id)));
-        if (includeMastered) filtered.push(...baseSelectionPool.filter(q => mastered.has(q.id)));
+        
+        // 1. Add Themed questions based on status filters
+        if (includeNew) filtered.push(...themedSelectionPool.filter(q => !mastered.has(q.id) && !toReview.has(q.id)));
+        if (includeErrors) filtered.push(...themedSelectionPool.filter(q => toReview.has(q.id)));
+        if (includeMastered) filtered.push(...themedSelectionPool.filter(q => mastered.has(q.id)));
+
+        // 2. Add Exclusive questions if toggled ON
+        if (includeExclusive) {
+            // Include ALL exclusive questions that are not mastered, 
+            // OR include them even if mastered if the mastered filter is ON
+            const exclusivePool = exclusiveQuestionsPool.filter(q => {
+                const isNew = !mastered.has(q.id) && !toReview.has(q.id);
+                const isError = toReview.has(q.id);
+                const isMastered = mastered.size > 0 && mastered.has(q.id);
+                
+                if (isMastered) return includeMastered;
+                return true; // Include new and errors automatically
+            });
+            filtered.push(...exclusivePool);
+        }
+
         return filtered;
-    }, [baseSelectionPool, includeNew, includeErrors, includeMastered, mastered, toReview]);
+    }, [themedSelectionPool, exclusiveQuestionsPool, includeNew, includeErrors, includeMastered, includeExclusive, mastered, toReview]);
 
 
     const handleLaunch = useCallback(() => {
@@ -670,7 +715,8 @@ const ExamenBPage = ({ autoPlayAudio }) => {
                         <Toggle
                             checked={includeNew}
                             onChange={setIncludeNew}
-                            label={`Nouvelles questions — ${isLoading ? '…' : stats.selectionNewCount} dispo`}
+                            label={<><Sparkles size={16} /> Nouvelles questions — {isLoading ? '…' : stats.selectionNewCount} dispo</>}
+
                             colorOn="#0ea5e9"
                         />
                         <div className="eb-toggle-divider" />
@@ -684,15 +730,17 @@ const ExamenBPage = ({ autoPlayAudio }) => {
                         <Toggle
                             checked={includeErrors}
                             onChange={setIncludeErrors}
-                            label={`Erreurs à réviser — ${stats.selectionToReviewCount} dispo`}
+                            label={<><RotateCw size={16} /> Erreurs à réviser — {stats.selectionToReviewCount} dispo</>}
+
                             colorOn="#f59e0b"
                         />
                         <div className="eb-toggle-divider" />
                         <Toggle
                             checked={includeMastered}
                             onChange={setIncludeMastered}
-                                    label={`Questions maîtrisées — ${stats.selectionMasteredCount} dispo`}
-                                    colorOn="#22c55e"
+                            label={<><Trophy size={16} /> Questions maîtrisées — {stats.selectionMasteredCount} dispo</>}
+                            colorOn="#22c55e"
+
                         />
                         <ThemeFilter 
                             themes={themes}
@@ -706,6 +754,61 @@ const ExamenBPage = ({ autoPlayAudio }) => {
                     </div>
 
 
+                    <div className="eb-theme-filter-section" style={{ margin: 0, border: 'none', borderRadius: 0, background: 'transparent' }}>
+                        {isThemesExpanded && themes.length > 0 && (
+                            <div className="eb-theme-grid-wrap anim-slide-down">
+                                <div className="eb-theme-actions">
+                                    <div className="eb-theme-search">
+                                        <Search size={14} />
+                                        <input 
+                                            type="text" 
+                                            placeholder="Rechercher un thème..." 
+                                            value={themeSearch}
+                                            onChange={(e) => setThemeSearch(e.target.value)}
+                                        />
+                                    </div>
+                                    <div style={{ display: 'flex', gap: '8px' }}>
+                                        <button onClick={() => setSelectedThemes(new Set(themes.map(t => t.id)))}>Tout cocher</button>
+                                        <button onClick={() => setSelectedThemes(new Set())}>Tout décocher</button>
+                                    </div>
+                                </div>
+                                <div className="eb-theme-grid">
+                                    {themes
+                                        .filter(t => t.name.toLowerCase().includes(themeSearch.toLowerCase()))
+                                        .map(theme => {
+                                            const isActive = selectedThemes.has(theme.id);
+                                            let questionCount = 0;
+                                            if (theme.id === 'permis_B_orphelines') {
+                                                questionCount = stats.orphanCount;
+                                            } else {
+                                                questionCount = questionCountPerTheme[theme.id] || 0;
+                                            }
+                                            return (
+                                                <button
+                                                    key={theme.id}
+                                                    className={`eb-theme-pill ${isActive ? 'active' : ''}`}
+                                                    onClick={() => {
+                                                        const next = new Set(selectedThemes);
+                                                        if (isActive) next.delete(theme.id);
+                                                        else next.add(theme.id);
+                                                        setSelectedThemes(next);
+                                                    }}
+                                                    title={`${questionCount} question${questionCount > 1 ? 's' : ''}`}
+                                                >
+                                                    {theme.name} <span style={{opacity: 0.6, fontSize: '0.85em'}}>({questionCount})</span>
+                                                </button>
+                                            );
+                                        })}
+                                </div>
+                            </div>
+                        )}
+                        {isThemesExpanded && themes.length === 0 && (
+                            <div className="eb-theme-loading">
+                                <span>Chargement des catégories...</span>
+                            </div>
+                        )}
+                    </div>
+
                     {pool.length > 0 && (
                         <LiquidSlider 
                             poolLength={pool.length}
@@ -714,12 +817,12 @@ const ExamenBPage = ({ autoPlayAudio }) => {
                         />
                     )}
 
-                    {!isMappingLoading && baseSelectionPool.length === 0 && !isLoading && (
+                    {!isMappingLoading && (themedSelectionPool.length === 0 && !includeExclusive) && !isLoading && (
                         <div className="eb-empty-warn">
                             Sélectionne au moins un thème ou le mode exclusif pour continuer.
                         </div>
                     )}
-                    {!isMappingLoading && baseSelectionPool.length > 0 && pool.length === 0 && !isLoading && (
+                    {!isMappingLoading && (themedSelectionPool.length > 0 || includeExclusive) && pool.length === 0 && !isLoading && (
                         <div className="eb-empty-warn">
                             Aucune question ne correspond aux filtres sélectionnés (Nouvelles/Erreurs/Maîtrisées).
                         </div>

@@ -21,6 +21,27 @@
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <link rel="manifest" href="/manifest.json" />
 
+    <!-- Prevent flash of unstyled content: synchronous inline style + script -->
+    <style>
+      html { background: #0b1020; }
+      html[data-theme="light"] { background: #f7f8fb; }
+      .no-transition * { transition: none !important; }
+    </style>
+    <script>
+      (function() {
+        var saved = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', saved);
+        document.documentElement.classList.add('no-transition');
+        window.addEventListener('load', function() {
+          requestAnimationFrame(function() {
+            requestAnimationFrame(function() {
+              document.documentElement.classList.remove('no-transition');
+            });
+          });
+        });
+      })();
+    </script>
+
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
       (function (l) {

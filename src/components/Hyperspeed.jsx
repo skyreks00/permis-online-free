@@ -266,6 +266,7 @@ const Hyperspeed = ({ effectOptions = {} }) => {
     return (
         <div
             ref={containerRef}
+            className="hyperspeed-bg"
             style={{
                 position: 'fixed',
                 inset: 0,

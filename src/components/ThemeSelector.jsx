@@ -30,11 +30,11 @@ const ThemeSelector = ({ sections, progress, onSelectTheme, onSelectLesson, mode
 
       // Filter items based on MODE
       if (mode === 'lessons') {
-         // Keep only items that have a lessonFile OR a file (assuming file implies lesson capability if not explicit check fails later)
-         items = items.filter(item => item.lessonFile || (item.file && item.id !== 'examen_B')); 
+         const excludedIds = ['examen_B', 'permis_B_complet'];
+         items = items.filter(item => !excludedIds.includes(item.id) && (item.lessonFile || item.file));
       } else if (mode === 'quiz') {
          // Filter out specific items requested by user
-         const excludedIds = ['examen_B', 'infractions', '15_depassement_interdit', '0_intro', '0_permis'];
+         const excludedIds = ['examen_B', 'permis_B_complet', 'infractions', '15_depassement_interdit', '0_intro', '0_permis'];
          items = items.filter(item => !excludedIds.includes(item.id));
       }
 
@@ -165,23 +165,44 @@ const ThemeSelector = ({ sections, progress, onSelectTheme, onSelectLesson, mode
                       color: 'white',
                       fontSize: '10px',
                       padding: '2px 8px',
-                      borderBottomLeftRadius: '8px'
+                      borderBottomLeftRadius: '8px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '4px'
                     }}>
+                      <CircleCheck size={11} />
                       {score}/{item.totalQuestions}
+                    </div>
+                  )}
+                  {itemProgress?.read && !(isCompleted && showQuizBtn) && (
+                    <div style={{
+                      position: 'absolute',
+                      top: 0,
+                      right: 0,
+                      background: 'var(--primary)',
+                      color: 'white',
+                      fontSize: '10px',
+                      padding: '2px 8px',
+                      borderBottomLeftRadius: '8px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '4px'
+                    }}>
+                      <CircleCheck size={11} />
+                      Lu
                     </div>
                   )}
                   <div style={{ flex: 1 }}>
                     <div className="theme-name" style={{
                       fontWeight: 600,
                       marginBottom: 4,
-                      paddingRight: (isCompleted && showQuizBtn) ? '40px' : '0',
+                      paddingRight: (isCompleted || itemProgress?.read) ? '40px' : '0',
                       display: 'flex',
                       alignItems: 'center',
                       gap: '8px',
                       ...(isExam ? { color: 'var(--warning)', fontSize: '1.1rem' } : {})
                     }}>
                       {item.name}
-                      {itemProgress?.read && <CircleCheck size={16} style={{ color: 'var(--success)' }} />}
                     </div>
                     {item.totalQuestions > 0 && showQuizBtn && (
                       <div className="theme-meta" style={{ color: 'var(--muted)', fontSize: '13px' }}>
