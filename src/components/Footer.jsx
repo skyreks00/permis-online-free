@@ -8,7 +8,8 @@ import {
     MessageCircle,
     Info,
     Shield,
-    FileText
+    FileText,
+    Crown
 } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
 import { motion } from 'motion/react';
@@ -163,7 +164,8 @@ const Footer = () => {
                             whileTap={{ scale: 0.95 }}
                         >
                             <Github size={16} />
-                            <span>stotwo</span>
+                            <span className="shiny-pseudo">stotwo</span>
+                            <Crown size={11} style={{ color: '#fbbf24', marginLeft: '4px' }} />
                         </motion.a>
                         <motion.a 
                             href="https://github.com/skyreks00/" 
@@ -186,7 +188,7 @@ const Footer = () => {
                     whileInView={{ opacity: 0.6 }}
                     transition={{ delay: 0.8 }}
                 >
-                    <p>© 2026 Permis Online Free. Tous droits réservés.</p>
+                    <p>© {currentYear} Permis Online Free. Tous droits réservés.</p>
                 </motion.div>
             </motion.div>
         </motion.footer>

@@ -4386,6 +4386,21 @@ input.eb-size-chip {
     color: white;
 }
 
+.shiny-pseudo {
+    background: linear-gradient(90deg, #fff, #fbbf24, #fff);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shiny-text 3s linear infinite;
+    font-weight: 800;
+}
+
+@keyframes shiny-text {
+    0% { background-position: 200% center; }
+    100% { background-position: -200% center; }
+}
+
 /* Bottom Bar */
 .footer-copyright {
     grid-column: 1 / -1;
