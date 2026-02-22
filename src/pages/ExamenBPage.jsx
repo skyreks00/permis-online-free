@@ -297,6 +297,7 @@ const ExamenBPage = ({ autoPlayAudio }) => {
     const [quizQuestions, setQuizQuestions] = useState([]);
 
     const [includeNew, setIncludeNew] = useState(true);
+    const [includeExclusive, setIncludeExclusive] = useState(false);
     const [includeErrors, setIncludeErrors] = useState(false);
     const [includeMastered, setIncludeMastered] = useState(false);
     const [quizSize, setQuizSize] = useState(50);
@@ -377,24 +378,32 @@ const ExamenBPage = ({ autoPlayAudio }) => {
         const masteredCount = mastered.size;
         const toReviewCount = toReview.size;
         const newCount = allQuestions.filter(q => !mastered.has(q.id) && !toReview.has(q.id)).length;
-        return { total, masteredCount, toReviewCount, newCount };
-    }, [allQuestions, mastered, toReview]);
+        
+        const exclusiveCount = allQuestions.filter(q => {
+            const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
+            return !questionToThemeMap[cleanText];
+        }).length;
+
+        return { total, masteredCount, toReviewCount, newCount, exclusiveCount };
+    }, [allQuestions, mastered, toReview, questionToThemeMap]);
 
     // Combine standard and AI questions based on settings
     const pool = useMemo(() => {
         let result = allQuestions;
 
-        // Apply theme filter only if themes are loaded and we are not in "All" mode
-        if (themes.length > 0 && selectedThemes.size < themes.length) {
+        // Exclusive filter (if active, we ignore other theme selections)
+        if (includeExclusive) {
+            result = result.filter(q => {
+                const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
+                return !questionToThemeMap[cleanText];
+            });
+        } else if (themes.length > 0 && selectedThemes.size < themes.length) {
             if (selectedThemes.size === 0) return [];
             
             result = result.filter(q => {
                 const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
                 const themesForThisQuestion = questionToThemeMap[cleanText];
                 
-                // If no themes mapped for this question, and we have selected themes, 
-                // we EXCLUDE it (it doesn't belong to any specific category).
-                // It only shows up if "All" themes are selected (selectedThemes.size === themes.length)
                 if (!themesForThisQuestion) return false;
                 
                 return [...themesForThisQuestion].some(tid => selectedThemes.has(tid));
@@ -407,7 +416,7 @@ const ExamenBPage = ({ autoPlayAudio }) => {
         if (includeMastered) filtered.push(...result.filter(q => mastered.has(q.id)));
         
         return filtered;
-    }, [allQuestions, mastered, toReview, includeNew, includeErrors, includeMastered, selectedThemes, questionToThemeMap, themes]);
+    }, [allQuestions, mastered, toReview, includeNew, includeErrors, includeMastered, selectedThemes, questionToThemeMap, themes, includeExclusive]);
 
 
     const handleLaunch = useCallback(() => {
@@ -638,6 +647,13 @@ const ExamenBPage = ({ autoPlayAudio }) => {
                             onChange={setIncludeNew}
                             label={`✨ Nouvelles questions — ${isLoading ? '…' : stats.newCount} dispo`}
                             colorOn="#0ea5e9"
+                        />
+                        <div className="eb-toggle-divider" />
+                        <Toggle
+                            checked={includeExclusive}
+                            onChange={setIncludeExclusive}
+                            label={`💎 Questions exclusives — ${isLoading ? '…' : stats.exclusiveCount} dispo`}
+                            colorOn="#a855f7"
                         />
                         <div className="eb-toggle-divider" />
                         <Toggle
