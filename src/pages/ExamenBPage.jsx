@@ -163,7 +163,7 @@ const LiquidSlider = React.memo(({ poolLength, quizSize, setQuizSize }) => {
 
             {quizSize !== 9999 && quizSize > poolLength && poolLength > 0 && (
                 <div className="eb-size-warning" style={{ marginTop: '30px' }}>
-                    ⚠️ Seulement <strong>{poolLength}</strong> questions disponibles.
+                    Seulement <strong>{poolLength}</strong> questions disponibles.
                 </div>
             )}
         </div>
@@ -173,7 +173,6 @@ const StatsHeader = React.memo(({ pctMastered, stats, isLoading }) => (
     <>
         <header className="eb-hero">
             <div className="eb-hero-badge">
-                <Sparkles size={13} />
                 Examen Blanc B
             </div>
             <h1 className="eb-hero-title">
@@ -373,50 +372,58 @@ const ExamenBPage = ({ autoPlayAudio }) => {
         load();
     }, []);
 
-    const stats = useMemo(() => {
-        const total = allQuestions.length;
-        const masteredCount = mastered.size;
-        const toReviewCount = toReview.size;
-        const newCount = allQuestions.filter(q => !mastered.has(q.id) && !toReview.has(q.id)).length;
-        
-        const exclusiveCount = allQuestions.filter(q => {
-            const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
-            return !questionToThemeMap[cleanText];
-        }).length;
-
-        return { total, masteredCount, toReviewCount, newCount, exclusiveCount };
-    }, [allQuestions, mastered, toReview, questionToThemeMap]);
-
-    // Combine standard and AI questions based on settings
-    const pool = useMemo(() => {
+    // Base pool filtered BY THEME or EXCLUSIVE (used for counts and final selection)
+    const baseSelectionPool = useMemo(() => {
         let result = allQuestions;
 
-        // Exclusive filter (if active, we ignore other theme selections)
         if (includeExclusive) {
             result = result.filter(q => {
                 const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
                 return !questionToThemeMap[cleanText];
             });
         } else if (themes.length > 0 && selectedThemes.size < themes.length) {
+            // If no themes selected and NOT in exclusive mode, the selection is empty
             if (selectedThemes.size === 0) return [];
             
             result = result.filter(q => {
                 const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
                 const themesForThisQuestion = questionToThemeMap[cleanText];
-                
                 if (!themesForThisQuestion) return false;
-                
                 return [...themesForThisQuestion].some(tid => selectedThemes.has(tid));
             });
         }
+        return result;
+    }, [allQuestions, includeExclusive, selectedThemes, questionToThemeMap, themes]);
 
-        let filtered = [];
-        if (includeNew) filtered.push(...result.filter(q => !mastered.has(q.id) && !toReview.has(q.id)));
-        if (includeErrors) filtered.push(...result.filter(q => toReview.has(q.id)));
-        if (includeMastered) filtered.push(...result.filter(q => mastered.has(q.id)));
+    const stats = useMemo(() => {
+        const total = allQuestions.length;
+        const masteredCount = mastered.size;
+        const toReviewCount = toReview.size;
+        const newCount = allQuestions.filter(q => !mastered.has(q.id) && !toReview.has(q.id)).length;
         
+        // Counts WITHIN THE SELECTION
+        const selectionNewCount = baseSelectionPool.filter(q => !mastered.has(q.id) && !toReview.has(q.id)).length;
+        const selectionToReviewCount = baseSelectionPool.filter(q => toReview.has(q.id)).length;
+        const selectionMasteredCount = baseSelectionPool.filter(q => mastered.has(q.id)).length;
+        const selectionExclusiveCount = baseSelectionPool.filter(q => {
+            const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
+            return !questionToThemeMap[cleanText];
+        }).length;
+
+        return { 
+            total, masteredCount, toReviewCount, newCount,
+            selectionNewCount, selectionToReviewCount, selectionMasteredCount, selectionExclusiveCount
+        };
+    }, [allQuestions, mastered, toReview, questionToThemeMap, baseSelectionPool]);
+
+    // Final filtered pool for the quiz
+    const pool = useMemo(() => {
+        let filtered = [];
+        if (includeNew) filtered.push(...baseSelectionPool.filter(q => !mastered.has(q.id) && !toReview.has(q.id)));
+        if (includeErrors) filtered.push(...baseSelectionPool.filter(q => toReview.has(q.id)));
+        if (includeMastered) filtered.push(...baseSelectionPool.filter(q => mastered.has(q.id)));
         return filtered;
-    }, [allQuestions, mastered, toReview, includeNew, includeErrors, includeMastered, selectedThemes, questionToThemeMap, themes, includeExclusive]);
+    }, [baseSelectionPool, includeNew, includeErrors, includeMastered, mastered, toReview]);
 
 
     const handleLaunch = useCallback(() => {
@@ -645,28 +652,28 @@ const ExamenBPage = ({ autoPlayAudio }) => {
                         <Toggle
                             checked={includeNew}
                             onChange={setIncludeNew}
-                            label={`✨ Nouvelles questions — ${isLoading ? '…' : stats.newCount} dispo`}
+                            label={`Nouvelles questions — ${isLoading ? '…' : stats.selectionNewCount} dispo`}
                             colorOn="#0ea5e9"
                         />
                         <div className="eb-toggle-divider" />
                         <Toggle
                             checked={includeExclusive}
                             onChange={setIncludeExclusive}
-                            label={`💎 Questions exclusives — ${isLoading ? '…' : stats.exclusiveCount} dispo`}
+                                    label={`Questions exclusives — ${isLoading ? '…' : stats.selectionExclusiveCount} dispo`}
                             colorOn="#a855f7"
                         />
                         <div className="eb-toggle-divider" />
                         <Toggle
                             checked={includeErrors}
                             onChange={setIncludeErrors}
-                            label={`🔁 Erreurs à réviser — ${stats.toReviewCount} dispo`}
+                            label={`Erreurs à réviser — ${stats.selectionToReviewCount} dispo`}
                             colorOn="#f59e0b"
                         />
                         <div className="eb-toggle-divider" />
                         <Toggle
                             checked={includeMastered}
                             onChange={setIncludeMastered}
-                                    label={`🏆 Questions maîtrisées — ${stats.masteredCount} dispo`}
+                                    label={`Questions maîtrisées — ${stats.selectionMasteredCount} dispo`}
                                     colorOn="#22c55e"
                         />
                         <ThemeFilter 
@@ -689,9 +696,14 @@ const ExamenBPage = ({ autoPlayAudio }) => {
                         />
                     )}
 
-                    {pool.length === 0 && !isLoading && (
+                    {baseSelectionPool.length === 0 && !isLoading && (
                         <div className="eb-empty-warn">
-                            ⚠️ Active au moins un thème de questions pour lancer le quiz.
+                            Sélectionne au moins un thème ou le mode exclusif pour continuer.
+                        </div>
+                    )}
+                    {baseSelectionPool.length > 0 && pool.length === 0 && !isLoading && (
+                        <div className="eb-empty-warn">
+                            Aucune question ne correspond aux filtres sélectionnés (Nouvelles/Erreurs/Maîtrisées).
                         </div>
                     )}
 
@@ -704,7 +716,7 @@ const ExamenBPage = ({ autoPlayAudio }) => {
 
                 {stats.masteredCount === stats.total && stats.total > 0 && (
                     <div className="eb-congrats">
-                        🏆 Félicitations ! Tu as maîtrisé toutes les questions de l'Examen B !
+                        Félicitations ! Tu as maîtrisé toutes les questions de l'Examen B !
                     </div>
                 )}
 
