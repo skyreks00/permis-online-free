@@ -747,7 +747,7 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
                         <Toggle
                             checked={includeExclusive}
                             onChange={setIncludeExclusive}
-                                    label={`Questions exclusives — ${isLoading ? '…' : stats.totalByExclusive} dispo`}
+                            label={<><Zap size={16} /> Questions exclusives — {isLoading ? '…' : stats.totalByExclusive} dispo</>}
                             colorOn="#a855f7"
                         />
                         <div className="eb-toggle-divider" />
