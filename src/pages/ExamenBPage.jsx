@@ -290,6 +290,7 @@ const ExamenBPage = ({ autoPlayAudio }) => {
     const navigate = useNavigate();
     const [allQuestions, setAllQuestions] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [isMappingLoading, setIsMappingLoading] = useState(true);
     const [mastered, setMastered] = useState(() => loadSet(STORAGE_MASTERED));
     const [toReview, setToReview] = useState(() => loadSet(STORAGE_TO_REVIEW));
     const [quizMode, setQuizMode] = useState(null);
@@ -361,12 +362,14 @@ const ExamenBPage = ({ autoPlayAudio }) => {
                                 } catch (err) {}
                             }));
                             setQuestionToThemeMap(mapping);
+                            setIsMappingLoading(false);
                         }
                     }
                 });
             } catch (e) {
                 console.error(e);
                 setIsLoading(false);
+                setIsMappingLoading(false);
             }
         };
         load();
@@ -711,12 +714,12 @@ const ExamenBPage = ({ autoPlayAudio }) => {
                         />
                     )}
 
-                    {baseSelectionPool.length === 0 && !isLoading && (
+                    {!isMappingLoading && baseSelectionPool.length === 0 && !isLoading && (
                         <div className="eb-empty-warn">
                             Sélectionne au moins un thème ou le mode exclusif pour continuer.
                         </div>
                     )}
-                    {baseSelectionPool.length > 0 && pool.length === 0 && !isLoading && (
+                    {!isMappingLoading && baseSelectionPool.length > 0 && pool.length === 0 && !isLoading && (
                         <div className="eb-empty-warn">
                             Aucune question ne correspond aux filtres sélectionnés (Nouvelles/Erreurs/Maîtrisées).
                         </div>
