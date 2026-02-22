@@ -42,7 +42,14 @@ const GlobalStats = ({ progress, themesData, onReviewAll, onReset }) => {
     const totalBestScore = globalStats.bestScore;
     const totalMaxPossible = globalStats.totalQuestions;
     const averageAccuracy = totalMaxPossible > 0 ? Math.round((totalBestScore / totalMaxPossible) * 100) : 0;
-    const totalMistakes = totalMaxPossible - totalBestScore;
+    
+    // Mistakes from regular themes
+    let totalMistakes = totalMaxPossible - totalBestScore;
+    
+    // Add mistakes from Examen B
+    if (progress.examen_B?.toReview) {
+        totalMistakes += progress.examen_B.toReview.length;
+    }
 
     return (
         <div className="profile-stats-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '8px', marginBottom: 0 }}>

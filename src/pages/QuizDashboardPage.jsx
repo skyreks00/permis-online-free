@@ -67,6 +67,27 @@ const QuizDashboardPage = ({ sections, progress, toggleTheme, isDarkMode, onSele
                 }
             }
 
+            // --- Examen B Errors Integration ---
+            if (progress.examen_B?.toReview && progress.examen_B.toReview.length > 0) {
+                try {
+                    const data = await loadThemeQuestions('examen_B.json');
+                    const questionsPool = data.questions || [];
+                    
+                    progress.examen_B.toReview.forEach(qId => {
+                        const q = questionsPool.find(item => item.id == qId);
+                        if (q) {
+                            allErrors.push({
+                                ...q,
+                                originalThemeId: 'examen_B',
+                                sourceFile: 'examen_B.json'
+                            });
+                        }
+                    });
+                } catch (e) {
+                    console.error("Failed to load Examen B questions for review", e);
+                }
+            }
+
             if (allErrors.length === 0) {
                 alert("Aucune erreur trouvée dans les sauvegardes.");
                 return;

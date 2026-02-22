@@ -48,7 +48,9 @@ const HomePage = () => {
             
             <div className="home-content">
                 {/* HERO SECTION */}
-                <div className="home-badge animate-fade-in">Version {new Date().getFullYear()} • Officiel</div>
+                <div className="home-badge animate-fade-in">
+                    Mise à jour {new Intl.DateTimeFormat('fr-BE', { month: 'long', year: 'numeric' }).format(new Date())} • Officiel
+                </div>
 
                 
                 <h1 className="home-title animate-slide-up">
@@ -108,7 +110,7 @@ const HomePage = () => {
 
                 <div className="home-footer-note animate-fade-in" style={{ animationDelay: '1s' }}>
                     <Shield size={14} />
-                    <span>Contenu 100% conforme au recyclage officiel belge {new Date().getFullYear()}</span>
+                    <span>Contenu 100% conforme au recyclage officiel belge {new Date().getFullYear()} • v1.6.0</span>
                 </div>
 
             </div>
