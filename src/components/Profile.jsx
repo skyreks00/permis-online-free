@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { 
     Trophy, Target, AlertTriangle, Clock, Settings, ArrowLeft, 
     CheckCircle2, Circle, Volume2, User, LogOut, Key, Github, 
-    Save, Filter, RefreshCcw, Sparkles, Lock, PlayCircle, Mic, ExternalLink, HelpCircle
+    Save, Filter, RefreshCcw, Sparkles, Lock, PlayCircle, Mic, ExternalLink, HelpCircle, Eye, EyeOff
 } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { loadThemeQuestions } from '../utils/contentLoader';
@@ -112,6 +112,7 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
     const navigate = useNavigate();
     const [user, setUser] = useState(auth ? auth.currentUser : null);
     const [apiKey, setApiKey] = useState(() => localStorage.getItem('groq_api_key') || '');
+    const [showApiKey, setShowApiKey] = useState(false);
     const [elevenLabsKey, setElevenLabsKey] = useState(() => localStorage.getItem('elevenlabs_api_key') || '');
     const [voiceId, setVoiceId] = useState(() => localStorage.getItem('elevenlabs_voice_id') || PRESET_VOICES[0].id);
     const [showApiKeyPrompt, setShowApiKeyPrompt] = useState(false);
@@ -486,13 +487,24 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                                 <span>Créer ma clé gratuite</span>
                             </a>
                         </div>
-                        <input 
-                            type="password" 
-                            className="input text-sm w-full mb-2 bg-surface-2"
-                            value={apiKey}
-                            onChange={e => setApiKey(e.target.value)}
-                            placeholder="gsk_..."
-                        />
+                        <div className="relative">
+                            <input 
+                                type={showApiKey ? "text" : "password"}
+                                className="input text-sm w-full mb-2 bg-surface-2 pr-10"
+                                value={apiKey}
+                                onChange={e => setApiKey(e.target.value)}
+                                placeholder="gsk_..."
+                                autoComplete="off"
+                                name="groq_api_token_field"
+                            />
+                            <button 
+                                type="button"
+                                onClick={() => setShowApiKey(!showApiKey)}
+                                className="absolute right-3 top-2.5 text-muted hover:text-text transition-colors"
+                            >
+                                {showApiKey ? <EyeOff size={16} /> : <Eye size={16} />}
+                            </button>
+                        </div>
                         <p className="text-xs text-muted">Laissez vide pour utiliser la clé par défaut (limitée).</p>
                     </div>
 
