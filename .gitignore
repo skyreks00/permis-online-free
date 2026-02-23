@@ -25,3 +25,7 @@ dist-ssr
 
 # Environment variables
 .env*
+
+# Agents
+.github/agents/
+*.agent.md

@@ -6,7 +6,7 @@ import CountUp from '../components/CountUp';
 import ShinyText from '../components/ShinyText';
 import Hyperspeed from '../components/Hyperspeed';
 import { loadThemeQuestions, loadThemesIndex } from '../utils/contentLoader';
-import { analyzeMistakesWithGroq } from '../utils/groq';
+import { analyzeMistakes } from '../utils/groq';
 import ReactMarkdown from 'react-markdown';
 
 
@@ -629,7 +629,7 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
                 };
             });
 
-            const report = await analyzeMistakesWithGroq(dataToAnalyze, apiKey);
+            const report = await analyzeMistakes(dataToAnalyze, apiKey);
             setAiReport(report);
             
             // Scroll to report

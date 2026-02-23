@@ -101,6 +101,7 @@ export const getChatResponse = async (apiKey, messages) => {
         throw new Error("Impossible de discuter avec l'IA : " + error.message);
     }
 };
+
 export const analyzeMistakesWithGroq = async (mistakes, apiKey) => {
     const groq = new Groq({ apiKey, dangerouslyAllowBrowser: true });
 
@@ -144,3 +145,5 @@ export const analyzeMistakesWithGroq = async (mistakes, apiKey) => {
         throw new Error("Impossible de générer l'analyse avec l'IA : " + error.message);
     }
 };
+
+export const analyzeMistakes = analyzeMistakesWithGroq;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Results from '../components/Results';
-import { analyzeMistakesWithGroq } from '../utils/groq';
+import { analyzeMistakes } from '../utils/groq';
 import { loadThemesIndex, loadThemeQuestions } from '../utils/contentLoader';
 
 const ResultsPage = ({ toggleTheme, isDarkMode }) => {
@@ -93,7 +93,7 @@ const ResultsPage = ({ toggleTheme, isDarkMode }) => {
             };
         });
 
-        const report = await analyzeMistakesWithGroq(dataToAnalyze, apiKey);
+        const report = await analyzeMistakes(dataToAnalyze, apiKey);
         setAiReport(report);
         
         // Scroll to report

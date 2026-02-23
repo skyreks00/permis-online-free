@@ -88,8 +88,8 @@ const Footer = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
             >
-                {/* Branding & Mission */}
-                <motion.div className="footer-section branding" variants={sectionVariants}>
+                {/* Brand & Mission */}
+                <motion.div className="footer-section brand-section" variants={sectionVariants}>
                     <div className="footer-logo">
                         <Link to="/" onClick={() => window.scrollTo(0, 0)} className="footer-logo-link">
                             <span className="logo-text">Permis<span>Free</span>.be</span>
@@ -99,7 +99,7 @@ const Footer = () => {
                         Votre succès au code de la route commence ici. 
                         Entraînement gratuit, moderne et efficace.
                     </p>
-                    <div className="footer-socials">
+                    <div className="footer-social-links">
                         <motion.a 
                             href="https://www.instagram.com/permisfree.be/" 
                             target="_blank" 
