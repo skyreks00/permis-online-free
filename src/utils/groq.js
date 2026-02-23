@@ -101,3 +101,46 @@ export const getChatResponse = async (apiKey, messages) => {
         throw new Error("Impossible de discuter avec l'IA : " + error.message);
     }
 };
+export const analyzeMistakesWithGroq = async (mistakes, apiKey) => {
+    const groq = new Groq({ apiKey, dangerouslyAllowBrowser: true });
+
+    const prompt = `
+    Tu es un expert pédagogique pour le permis de conduire belge (catégorie B).
+    On va te donner une liste de questions que l'utilisateur a ratées, avec leurs thèmes associés.
+    Ton but est de faire une analyse synthétique et encourageante pour aider l'utilisateur à savoir sur quoi s'entraîner.
+
+    Données (questions ratées) :
+    ${JSON.stringify(mistakes.map(m => ({ question: m.question, themes: m.themes })), null, 2)}
+
+    CONSIGNES :
+    1. **LANGUE : FRANÇAIS UNIQUEMENT**.
+    2. Analyse les thèmes récurrents dans les erreurs.
+    3. Identifie les points forts (si certains thèmes majeurs ne sont PAS dans la liste d'erreurs, ou si peu d'erreurs sont présentes).
+    4. Donne des conseils concrets de révision.
+    5. Utilise un ton motivant et professionnel.
+    6. Formate ta réponse en **Markdown**.
+    7. Sois concis : environ 200-300 mots maximum.
+    8. Ne mentionne pas de numéros d'ID de questions, parle de concepts.
+    `;
+
+    try {
+        const chatCompletion = await groq.chat.completions.create({
+            messages: [
+                {
+                    role: "user",
+                    content: prompt
+                }
+            ],
+            model: "meta-llama/llama-4-scout-17b-16e-instruct",
+            temperature: 0.7,
+            max_completion_tokens: 1024,
+            top_p: 1,
+            stream: false
+        });
+
+        return chatCompletion.choices[0]?.message?.content || "Désolé, je n'ai pas pu générer l'analyse.";
+    } catch (error) {
+        console.error("Groq Analysis Error:", error);
+        throw new Error("Impossible de générer l'analyse avec l'IA : " + error.message);
+    }
+};

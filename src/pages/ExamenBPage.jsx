@@ -1,11 +1,14 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { BookOpen, RotateCcw, PlayCircle, FileText, Sparkles, Settings2, ArrowLeft, CheckCircle, ChevronDown, ChevronUp, Filter, Search, BrainCircuit, Zap, ChevronRight, Star, RotateCw, Trophy } from 'lucide-react';
+import { BookOpen, RotateCcw, PlayCircle, FileText, Sparkles, Settings2, ArrowLeft, CheckCircle, ChevronDown, ChevronUp, Filter, Search, BrainCircuit, Zap, ChevronRight, Star, RotateCw, Trophy, Info } from 'lucide-react';
 import Quiz from '../components/Quiz';
 import CountUp from '../components/CountUp';
 import ShinyText from '../components/ShinyText';
 import Hyperspeed from '../components/Hyperspeed';
 import { loadThemeQuestions, loadThemesIndex } from '../utils/contentLoader';
+import { analyzeMistakesWithGroq } from '../utils/groq';
+import ReactMarkdown from 'react-markdown';
+
 
 const STORAGE_MASTERED = 'examen_b_mastered';
 const STORAGE_TO_REVIEW = 'examen_b_to_review';
@@ -53,20 +56,23 @@ const hexToRgb = (hex) => {
     return result ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}` : '34, 197, 94';
 }
 
-const Toggle = React.memo(({ checked, onChange, label, colorOn = '#22c55e' }) => (
-    <label className="eb-toggle-row">
-        <span className="eb-toggle-label" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>{label}</span>
+const Toggle = React.memo(({ checked, onChange, label, colorOn = '#22c55e', disabled = false }) => (
+    <label className={`eb-toggle-row ${disabled ? 'eb-toggle-row--disabled' : ''}`}>
+        <span className="eb-toggle-label" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', opacity: disabled ? 0.5 : 1 }}>{label}</span>
         <button
             role="switch"
-            aria-checked={checked}
-            className={`eb-toggle ${checked ? 'eb-toggle--on' : ''}`}
+            aria-checked={disabled ? false : checked}
+            disabled={disabled}
+            className={`eb-toggle ${(checked && !disabled) ? 'eb-toggle--on' : ''}`}
             style={{ 
                 '--on-color': colorOn,
-                '--on-color-rgb': hexToRgb(colorOn)
+                '--on-color-rgb': hexToRgb(colorOn),
+                cursor: disabled ? 'not-allowed' : 'pointer',
+                opacity: disabled ? 0.3 : 1
             }}
-            onClick={() => onChange(!checked)}
+            onClick={() => !disabled && onChange(!checked)}
         >
-            <span className="eb-toggle-thumb" />
+            <span className="eb-toggle-thumb" style={{ transform: (checked && !disabled) ? 'translateX(18px)' : 'translateX(0)' }} />
         </button>
     </label>
 ));
@@ -169,7 +175,7 @@ const LiquidSlider = React.memo(({ poolLength, quizSize, setQuizSize }) => {
         </div>
     );
 });
-const StatsHeader = React.memo(({ pctMastered, stats, isLoading }) => (
+const StatsHeader = React.memo(({ pctMastered, stats, isLoading, onLaunchSpecial, onAiAnalysis, isAnalyzing }) => (
     <>
         <header className="eb-hero">
             <div className="eb-hero-badge">
@@ -196,15 +202,15 @@ const StatsHeader = React.memo(({ pctMastered, stats, isLoading }) => (
         </header>
 
         <div className="eb-stats-row">
-            <div className="eb-stat eb-stat--new">
+            <div className="eb-stat eb-stat--new" onClick={() => onLaunchSpecial('new')} style={{ cursor: 'pointer' }}>
                 <GradientNum value={isLoading ? 0 : stats.newCount} gradient="linear-gradient(135deg, #38bdf8, #0ea5e9)" />
                 <div className="eb-stat-lbl">Nouvelles</div>
             </div>
-            <div className="eb-stat eb-stat--review">
+            <div className="eb-stat eb-stat--review" onClick={() => onLaunchSpecial('review')} style={{ cursor: 'pointer', position: 'relative' }}>
                 <GradientNum value={stats.toReviewCount} gradient="linear-gradient(135deg, #fbbf24, #f59e0b)" />
                 <div className="eb-stat-lbl">À revoir</div>
             </div>
-            <div className="eb-stat eb-stat--mastered">
+            <div className="eb-stat eb-stat--mastered" onClick={() => onLaunchSpecial('mastered')} style={{ cursor: 'pointer' }}>
                 <GradientNum value={stats.masteredCount} gradient="linear-gradient(135deg, #4ade80, #22c55e)" />
                 <div className="eb-stat-lbl">Maîtrisées</div>
             </div>
@@ -221,11 +227,21 @@ const StatsHeader = React.memo(({ pctMastered, stats, isLoading }) => (
     </>
 ));
 
-const ThemeFilter = React.memo(({ themes, selectedThemes, setSelectedThemes, isThemesExpanded, setIsThemesExpanded, themeSearch, setThemeSearch }) => (
+const ThemeFilter = React.memo(({ 
+    themes, 
+    selectedThemes, 
+    setSelectedThemes, 
+    isThemesExpanded, 
+    setIsThemesExpanded, 
+    themeSearch, 
+    setThemeSearch,
+    questionCountPerTheme
+}) => (
     <>
         <div 
             className="eb-toggle-row" 
             onClick={() => setIsThemesExpanded(!isThemesExpanded)}
+            style={{ cursor: 'pointer' }}
         >
             <span className="eb-toggle-label" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                 <Filter size={18} />
@@ -236,53 +252,56 @@ const ThemeFilter = React.memo(({ themes, selectedThemes, setSelectedThemes, isT
             </div>
         </div>
 
-        <div className="eb-theme-filter-section" style={{ margin: 0, border: 'none', borderRadius: 0, background: 'transparent' }}>
-            {isThemesExpanded && themes.length > 0 && (
-                <div className="eb-theme-grid-wrap anim-slide-down">
-                    <div className="eb-theme-actions">
-                        <div className="eb-theme-search">
-                            <Search size={14} />
-                            <input 
-                                type="text" 
-                                placeholder="Rechercher un thème..." 
-                                value={themeSearch}
-                                onChange={(e) => setThemeSearch(e.target.value)}
-                            />
+        {isThemesExpanded && (
+            <div className="eb-theme-filter-section anim-slide-down" style={{ margin: '10px 0 0 0', border: 'none', borderRadius: 0, background: 'transparent' }}>
+                {themes.length > 0 ? (
+                    <div className="eb-theme-grid-wrap">
+                        <div className="eb-theme-actions">
+                            <div className="eb-theme-search">
+                                <Search size={14} />
+                                <input 
+                                    type="text" 
+                                    placeholder="Rechercher un thème..." 
+                                    value={themeSearch}
+                                    onChange={(e) => setThemeSearch(e.target.value)}
+                                />
+                            </div>
+                            <div style={{ display: 'flex', gap: '8px' }}>
+                                <button onClick={() => setSelectedThemes(new Set(themes.map(t => t.id)))}>Tout cocher</button>
+                                <button onClick={() => setSelectedThemes(new Set())}>Tout décocher</button>
+                            </div>
                         </div>
-                        <div style={{ display: 'flex', gap: '8px' }}>
-                            <button onClick={() => setSelectedThemes(new Set(themes.map(t => t.id)))}>Tout cocher</button>
-                            <button onClick={() => setSelectedThemes(new Set())}>Tout décocher</button>
+                        <div className="eb-theme-grid">
+                            {themes
+                                .filter(t => t.name.toLowerCase().includes(themeSearch.toLowerCase()) && !t.id.includes('orphelines') && !t.name.toLowerCase().includes('non classées'))
+                                .map(theme => {
+                                    const isActive = selectedThemes.has(theme.id);
+                                    const questionCount = questionCountPerTheme[theme.id] || 0;
+                                    return (
+                                        <button
+                                            key={theme.id}
+                                            className={`eb-theme-pill ${isActive ? 'active' : ''}`}
+                                            onClick={() => {
+                                                const next = new Set(selectedThemes);
+                                                if (isActive) next.delete(theme.id);
+                                                else next.add(theme.id);
+                                                setSelectedThemes(next);
+                                            }}
+                                            title={`${questionCount} question${questionCount > 1 ? 's' : ''}`}
+                                        >
+                                            {theme.name} <span style={{opacity: 0.6, fontSize: '0.85em'}}>({questionCount})</span>
+                                        </button>
+                                    );
+                                })}
                         </div>
                     </div>
-                    <div className="eb-theme-grid">
-                        {themes
-                            .filter(t => t.name.toLowerCase().includes(themeSearch.toLowerCase()))
-                            .map(theme => {
-                                const isActive = selectedThemes.has(theme.id);
-                                return (
-                                    <button
-                                        key={theme.id}
-                                        className={`eb-theme-pill ${isActive ? 'active' : ''}`}
-                                        onClick={() => {
-                                            const next = new Set(selectedThemes);
-                                            if (isActive) next.delete(theme.id);
-                                            else next.add(theme.id);
-                                            setSelectedThemes(next);
-                                        }}
-                                    >
-                                        {theme.name}
-                                    </button>
-                                );
-                            })}
+                ) : (
+                    <div className="eb-theme-loading">
+                        <span>Chargement des catégories...</span>
                     </div>
-                </div>
-            )}
-            {isThemesExpanded && themes.length === 0 && (
-                <div className="eb-theme-loading">
-                    <span>Chargement des catégories...</span>
-                </div>
-            )}
-        </div>
+                )}
+            </div>
+        )}
     </>
 ));
 
@@ -320,6 +339,10 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
     const [isThemesExpanded, setIsThemesExpanded] = useState(false);
     const [themeSearch, setThemeSearch] = useState('');
     const [aiQuestions, setAiQuestions] = useState([]);
+    const [aiReport, setAiReport] = useState(null);
+    const [isAnalyzing, setIsAnalyzing] = useState(false);
+    const [exclusiveIds, setExclusiveIds] = useState(new Set());
+
 
     const BASE = import.meta.env.BASE_URL || '/';
 
@@ -337,6 +360,16 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
                 setAllQuestions(loaded);
                 setIsLoading(false); // Enable counts immediately
 
+                // Load Exclusive Questions IDs
+                try {
+                  const exclusiveData = await loadThemeQuestions('permis_B_orphelines.json');
+                  if (exclusiveData && exclusiveData.questions) {
+                    setExclusiveIds(new Set(exclusiveData.questions.map(q => q.id)));
+                  }
+                } catch (err) {
+                  console.error("Failed to load exclusive IDs", err);
+                }
+
                 // Load Theory Themes for filtering asynchronously
                 loadThemesIndex().then(async (themesIndex) => {
                     if (themesIndex && themesIndex.sections) {
@@ -345,7 +378,7 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
                             if (section.title.toLowerCase().includes('examen') || section.title.toLowerCase() === 'debug') return;
                             if (section.items) {
                                 section.items.forEach(item => {
-                                    if (item.file) {
+                                    if (item.file && !item.id.includes('orphelines')) {
                                       allTheoryItems.push(item);
                                     }
                                 });
@@ -353,16 +386,8 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
                         });
                         
                         if (allTheoryItems.length > 0) {
-                            // Add pseudo-theme for orphaned questions
-                            const orphansTheme = {
-                                id: 'permis_B_orphelines',
-                                name: 'Permis B - Questions Non Classées',
-                                file: 'permis_B_orphelines.json',
-                                totalQuestions: 638
-                            };
-                            const allThemesWithOrphans = [...allTheoryItems, orphansTheme];
-                            setThemes(allThemesWithOrphans);
-                            setSelectedThemes(new Set([...allTheoryItems.map(i => i.id), 'permis_B_orphelines']));
+                            setThemes(allTheoryItems);
+                            setSelectedThemes(new Set(allTheoryItems.map(i => i.id)));
 
                             const mapping = {};
                             await Promise.all(allTheoryItems.map(async (item) => {
@@ -399,32 +424,42 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
         }
     }, [progress?.examen_B]);
 
-    // 1. Separate questions by type (Themed vs Exclusive) for more clarity
+    // 1. Separate questions by type
     const themedQuestionsPool = useMemo(() => {
-        return allQuestions.filter(q => {
-            const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
-            return !!questionToThemeMap[cleanText];
-        });
-    }, [allQuestions, questionToThemeMap]);
+        // By default, ALL questions are themed (they might be in a theory theme)
+        return allQuestions;
+    }, [allQuestions]);
 
     const exclusiveQuestionsPool = useMemo(() => {
-        return allQuestions.filter(q => {
-            const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
-            return !questionToThemeMap[cleanText];
-        });
-    }, [allQuestions, questionToThemeMap]);
+        // Only questions from the explicit orphan file
+        return allQuestions.filter(q => exclusiveIds.has(q.id));
+    }, [allQuestions, exclusiveIds]);
 
-    // 2. Base selection pool for THEMED questions only (Stat calculations will use this)
-    const themedSelectionPool = useMemo(() => {
-        if (themes.length === 0 || selectedThemes.size === themes.length) {
-            return themedQuestionsPool;
+    // 2. Base selection pool: (Themed questions in selected themes) + (Exclusive questions IF toggled ON)
+    const activeSelectionPool = useMemo(() => {
+        // Calculate THEMED subset based on current theme selection
+        let themedFiltered = [];
+        if (themes.length > 0) {
+            if (selectedThemes.size === themes.length) {
+                themedFiltered = allQuestions; 
+            } else if (selectedThemes.size > 0) {
+                themedFiltered = allQuestions.filter(q => {
+                    const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
+                    const tids = questionToThemeMap[cleanText];
+                    return tids && [...tids].some(tid => selectedThemes.has(tid));
+                });
+            }
         }
-        return themedQuestionsPool.filter(q => {
-            const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
-            const tids = questionToThemeMap[cleanText];
-            return tids && [...tids].some(tid => selectedThemes.has(tid));
-        });
-    }, [themedQuestionsPool, themes, selectedThemes, questionToThemeMap]);
+            
+        const poolSet = new Set(themedFiltered.map(q => q.id));
+        if (includeExclusive) {
+            exclusiveQuestionsPool.forEach(q => poolSet.add(q.id));
+        }
+        
+        // Return original objects to preserve properties
+        const idToQuestion = new Map(allQuestions.map(q => [q.id, q]));
+        return [...poolSet].map(id => idToQuestion.get(id)).filter(Boolean);
+    }, [allQuestions, exclusiveQuestionsPool, themes, selectedThemes, questionToThemeMap, includeExclusive]);
 
     const stats = useMemo(() => {
         const total = allQuestions.length;
@@ -432,26 +467,36 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
         const toReviewCount = toReview.size;
         const newCount = allQuestions.filter(q => !mastered.has(q.id) && !toReview.has(q.id)).length;
         
-        // Count orphaned questions (those not mapped to any theme)
-        const orphanCount = allQuestions.filter(q => {
-            const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
-            return !questionToThemeMap[cleanText];
+        // Category counts
+        const orphanCount = exclusiveQuestionsPool.length;
+        
+        // Counts WITHIN THE CURRENT SELECTION (respecting theme filter + exclusive toggle)
+        const selectionNewCount = activeSelectionPool.filter(q => !mastered.has(q.id) && !toReview.has(q.id)).length;
+        const selectionToReviewCount = activeSelectionPool.filter(q => toReview.has(q.id)).length;
+        const selectionMasteredCount = activeSelectionPool.filter(q => mastered.has(q.id)).length;
+        
+        // Count matching exclusive questions independently of their selection status
+        // so the label shows the potential contribution to the "activeSelectionPool".
+        const anyStatusFilter = includeNew || includeErrors || includeMastered;
+        const exclusiveMatchingStatusCount = exclusiveQuestionsPool.filter(q => {
+            const isNew = !mastered.has(q.id) && !toReview.has(q.id);
+            const isError = toReview.has(q.id);
+            const isMast = mastered.has(q.id);
+            
+            if (!anyStatusFilter) return true;
+            return (includeNew && isNew) || (includeErrors && isError) || (includeMastered && isMast);
         }).length;
-        
-        // Counts WITHIN THE THEME SELECTION ONLY
-        const selectionNewCount = themedSelectionPool.filter(q => !mastered.has(q.id) && !toReview.has(q.id)).length;
-        const selectionToReviewCount = themedSelectionPool.filter(q => toReview.has(q.id)).length;
-        const selectionMasteredCount = themedSelectionPool.filter(q => mastered.has(q.id)).length;
-        
-        // Total count of exclusive questions (independent of theme filter)
-        const totalByExclusive = exclusiveQuestionsPool.length;
+
+        // If Category is OFF, we follow user request and show 0 dispo? 
+        // No, let's keep showing potential so they know what turning it ON adds.
+        // BUT for the statuses, if themes are 0 and exclusive is OFF, show 0.
 
         return { 
             total, masteredCount, toReviewCount, newCount, orphanCount,
             selectionNewCount, selectionToReviewCount, selectionMasteredCount,
-            totalByExclusive
+            totalByExclusive: exclusiveMatchingStatusCount
         };
-    }, [allQuestions, mastered, toReview, questionToThemeMap, themedSelectionPool, exclusiveQuestionsPool]);
+    }, [allQuestions, mastered, toReview, activeSelectionPool, exclusiveQuestionsPool, includeNew, includeErrors, includeMastered]);
 
     // Count questions per theme - ONLY questions that exist in examen_B
     const questionCountPerTheme = useMemo(() => {
@@ -481,28 +526,13 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
     const pool = useMemo(() => {
         let filtered = [];
         
-        // 1. Add Themed questions based on status filters
-        if (includeNew) filtered.push(...themedSelectionPool.filter(q => !mastered.has(q.id) && !toReview.has(q.id)));
-        if (includeErrors) filtered.push(...themedSelectionPool.filter(q => toReview.has(q.id)));
-        if (includeMastered) filtered.push(...themedSelectionPool.filter(q => mastered.has(q.id)));
-
-        // 2. Add Exclusive questions if toggled ON
-        if (includeExclusive) {
-            // Include ALL exclusive questions that are not mastered, 
-            // OR include them even if mastered if the mastered filter is ON
-            const exclusivePool = exclusiveQuestionsPool.filter(q => {
-                const isNew = !mastered.has(q.id) && !toReview.has(q.id);
-                const isError = toReview.has(q.id);
-                const isMastered = mastered.size > 0 && mastered.has(q.id);
-                
-                if (isMastered) return includeMastered;
-                return true; // Include new and errors automatically
-            });
-            filtered.push(...exclusivePool);
-        }
+        // We use activeSelectionPool which already includes exclusive if toggled
+        if (includeNew) filtered.push(...activeSelectionPool.filter(q => !mastered.has(q.id) && !toReview.has(q.id)));
+        if (includeErrors) filtered.push(...activeSelectionPool.filter(q => toReview.has(q.id)));
+        if (includeMastered) filtered.push(...activeSelectionPool.filter(q => mastered.has(q.id)));
 
         return filtered;
-    }, [themedSelectionPool, exclusiveQuestionsPool, includeNew, includeErrors, includeMastered, includeExclusive, mastered, toReview]);
+    }, [activeSelectionPool, includeNew, includeErrors, includeMastered, mastered, toReview]);
 
 
     const handleLaunch = useCallback(() => {
@@ -567,9 +597,53 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
             }
         });
 
-        setViewMode('config');
         setQuizQuestions([]);
     }, [mastered, toReview, quizQuestions, navigate]);
+
+    const handleAiAnalysis = async (customQuestions = null) => {
+        const apiKey = localStorage.getItem('groq_api_key');
+        if (!apiKey) {
+            alert("Veuillez d'abord configurer votre clé API Groq dans les paramètres.");
+            return;
+        }
+
+        const mistakesQuestions = customQuestions || allQuestions.filter(q => toReview.has(q.id));
+        if (mistakesQuestions.length === 0) {
+            alert("Aucune erreur à analyser !");
+            return;
+        }
+
+        setIsAnalyzing(true);
+        setAiReport(null);
+
+        try {
+            const dataToAnalyze = mistakesQuestions.map(q => {
+                const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
+                const themeIds = questionToThemeMap[cleanText];
+                const themeNames = themeIds 
+                    ? [...themeIds].map(id => themes.find(t => t.id === id)?.name).filter(Boolean)
+                    : ["Non classé"];
+                return {
+                    question: q.question,
+                    themes: themeNames
+                };
+            });
+
+            const report = await analyzeMistakesWithGroq(dataToAnalyze, apiKey);
+            setAiReport(report);
+            
+            // Scroll to report
+            setTimeout(() => {
+                const reportEl = document.querySelector('.eb-ai-report');
+                if (reportEl) reportEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+
+        } catch (err) {
+            alert("Erreur lors de l'analyse : " + err.message);
+        } finally {
+            setIsAnalyzing(false);
+        }
+    };
 
     const handleReset = useCallback(() => {
         if (!window.confirm('Remettre toute la progression à zéro ?')) return;
@@ -607,7 +681,21 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
                         <ArrowLeft size={18} /> Retour
                     </button>
                     <div className="eb-list-title-wrap">
-                        <h1 className="eb-list-title">{listTitle}</h1>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap' }}>
+                            <h1 className="eb-list-title">{listTitle}</h1>
+                            {listTitle === 'Questions à revoir' && (
+                                <button 
+                                    className={`eb-ai-premium-btn ${isAnalyzing ? 'is-analyzing' : ''}`}
+                                    onClick={() => handleAiAnalysis()}
+                                    disabled={isAnalyzing}
+                                >
+                                    <div className="eb-ai-btn-glow" />
+                                    <BrainCircuit size={18} />
+                                    <span>{isAnalyzing ? "Analyse en cours..." : "Analyse Pédagogique IA"}</span>
+                                    {!isAnalyzing && <Sparkles size={14} className="eb-ai-sparkle" />}
+                                </button>
+                            )}
+                        </div>
                         <div className="eb-list-meta">
                             <span className="eb-list-count">{quizQuestions.length} question{quizQuestions.length > 1 ? 's' : ''}</span>
                             <div className="eb-list-limit-selector">
@@ -630,6 +718,33 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
                         </div>
                     </div>
                 </div>
+
+                {listTitle === 'Questions à revoir' && aiReport && (
+                    <div className="eb-ai-report-global-wrap anim-slide-down" style={{ marginBottom: '20px', padding: '0 20px' }}>
+                         <div className="eb-ai-report" style={{ 
+                            background: 'rgba(255, 255, 255, 0.03)', 
+                            padding: '20px', 
+                            borderRadius: '12px',
+                            border: '1px solid rgba(168, 85, 247, 0.2)',
+                            lineHeight: '1.6',
+                            fontSize: '15px',
+                            color: 'var(--text)',
+                            position: 'relative'
+                        }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '15px', color: '#a855f7' }}>
+                                <BrainCircuit size={20} />
+                                <span style={{ fontWeight: 700 }}>Analyse Pédagogique IA</span>
+                            </div>
+                            <ReactMarkdown>{aiReport}</ReactMarkdown>
+                            <button 
+                                onClick={() => setAiReport(null)}
+                                style={{ marginTop: '15px', fontSize: '12px', color: 'var(--muted)', background: 'none', border: 'none', cursor: 'pointer', textDecoration: 'underline' }}
+                            >
+                                Masquer l'analyse
+                            </button>
+                        </div>
+                    </div>
+                )}
 
                 <div className="eb-question-list">
                     {quizQuestions.slice(0, visibleCount).map((q, idx) => (
@@ -727,7 +842,36 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
                     pctMastered={pctMastered}
                     stats={stats}
                     isLoading={isLoading}
+                    onLaunchSpecial={handleLaunchSpecial}
+                    isAnalyzing={isAnalyzing}
                 />
+
+                {aiReport && (
+                    <div className="eb-ai-report-global-wrap anim-slide-down" style={{ marginBottom: '20px' }}>
+                         <div className="eb-ai-report" style={{ 
+                            background: 'rgba(255, 255, 255, 0.03)', 
+                            padding: '20px', 
+                            borderRadius: '12px',
+                            border: '1px solid rgba(168, 85, 247, 0.2)',
+                            lineHeight: '1.6',
+                            fontSize: '15px',
+                            color: 'var(--text)',
+                            position: 'relative'
+                        }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '15px', color: '#a855f7' }}>
+                                <BrainCircuit size={20} />
+                                <span style={{ fontWeight: 700 }}>Analyse Pédagogique IA</span>
+                            </div>
+                            <ReactMarkdown>{aiReport}</ReactMarkdown>
+                            <button 
+                                onClick={() => setAiReport(null)}
+                                style={{ marginTop: '15px', fontSize: '12px', color: 'var(--muted)', background: 'none', border: 'none', cursor: 'pointer', textDecoration: 'underline' }}
+                            >
+                                Fermer le rapport
+                            </button>
+                        </div>
+                    </div>
+                )}
 
                 <section className="eb-card">
                     <div className="eb-card-header">
@@ -736,18 +880,25 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
                     </div>
 
                     <div className="eb-toggles">
+                        {selectedThemes.size === 0 && (
+                            <div className="eb-config-hint">
+                                <Info size={14} /> Sélectionnez au moins un thème pour configurer le quiz
+                            </div>
+                        )}
+                        
                         <Toggle
                             checked={includeNew}
                             onChange={setIncludeNew}
                             label={<><Sparkles size={16} /> Nouvelles questions — {isLoading ? '…' : stats.selectionNewCount} dispo</>}
-
+                            disabled={selectedThemes.size === 0}
                             colorOn="#0ea5e9"
                         />
                         <div className="eb-toggle-divider" />
                         <Toggle
                             checked={includeExclusive}
                             onChange={setIncludeExclusive}
-                            label={<><Zap size={16} /> Questions exclusives — {isLoading ? '…' : stats.totalByExclusive} dispo</>}
+                            label={<><Zap size={16} /> Questions exclusives — {isLoading ? '…' : (selectedThemes.size > 0 ? stats.totalByExclusive : 0)} dispo</>}
+                            disabled={selectedThemes.size === 0}
                             colorOn="#a855f7"
                         />
                         <div className="eb-toggle-divider" />
@@ -755,7 +906,7 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
                             checked={includeErrors}
                             onChange={setIncludeErrors}
                             label={<><RotateCw size={16} /> Erreurs à réviser — {stats.selectionToReviewCount} dispo</>}
-
+                            disabled={selectedThemes.size === 0}
                             colorOn="#f59e0b"
                         />
                         <div className="eb-toggle-divider" />
@@ -763,8 +914,8 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
                             checked={includeMastered}
                             onChange={setIncludeMastered}
                             label={<><Trophy size={16} /> Questions maîtrisées — {stats.selectionMasteredCount} dispo</>}
+                            disabled={selectedThemes.size === 0}
                             colorOn="#22c55e"
-
                         />
                         <ThemeFilter 
                             themes={themes}
@@ -774,63 +925,8 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
                             setIsThemesExpanded={setIsThemesExpanded}
                             themeSearch={themeSearch}
                             setThemeSearch={setThemeSearch}
+                            questionCountPerTheme={questionCountPerTheme}
                         />
-                    </div>
-
-
-                    <div className="eb-theme-filter-section" style={{ margin: 0, border: 'none', borderRadius: 0, background: 'transparent' }}>
-                        {isThemesExpanded && themes.length > 0 && (
-                            <div className="eb-theme-grid-wrap anim-slide-down">
-                                <div className="eb-theme-actions">
-                                    <div className="eb-theme-search">
-                                        <Search size={14} />
-                                        <input 
-                                            type="text" 
-                                            placeholder="Rechercher un thème..." 
-                                            value={themeSearch}
-                                            onChange={(e) => setThemeSearch(e.target.value)}
-                                        />
-                                    </div>
-                                    <div style={{ display: 'flex', gap: '8px' }}>
-                                        <button onClick={() => setSelectedThemes(new Set(themes.map(t => t.id)))}>Tout cocher</button>
-                                        <button onClick={() => setSelectedThemes(new Set())}>Tout décocher</button>
-                                    </div>
-                                </div>
-                                <div className="eb-theme-grid">
-                                    {themes
-                                        .filter(t => t.name.toLowerCase().includes(themeSearch.toLowerCase()))
-                                        .map(theme => {
-                                            const isActive = selectedThemes.has(theme.id);
-                                            let questionCount = 0;
-                                            if (theme.id === 'permis_B_orphelines') {
-                                                questionCount = stats.orphanCount;
-                                            } else {
-                                                questionCount = questionCountPerTheme[theme.id] || 0;
-                                            }
-                                            return (
-                                                <button
-                                                    key={theme.id}
-                                                    className={`eb-theme-pill ${isActive ? 'active' : ''}`}
-                                                    onClick={() => {
-                                                        const next = new Set(selectedThemes);
-                                                        if (isActive) next.delete(theme.id);
-                                                        else next.add(theme.id);
-                                                        setSelectedThemes(next);
-                                                    }}
-                                                    title={`${questionCount} question${questionCount > 1 ? 's' : ''}`}
-                                                >
-                                                    {theme.name} <span style={{opacity: 0.6, fontSize: '0.85em'}}>({questionCount})</span>
-                                                </button>
-                                            );
-                                        })}
-                                </div>
-                            </div>
-                        )}
-                        {isThemesExpanded && themes.length === 0 && (
-                            <div className="eb-theme-loading">
-                                <span>Chargement des catégories...</span>
-                            </div>
-                        )}
                     </div>
 
                     {pool.length > 0 && (
@@ -841,18 +937,21 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
                         />
                     )}
 
-                    {!isMappingLoading && (themedSelectionPool.length === 0 && !includeExclusive) && !isLoading && (
+                    {!isMappingLoading && (activeSelectionPool.length === 0) && !isLoading && (
                         <div className="eb-empty-warn">
                             Sélectionne au moins un thème ou le mode exclusif pour continuer.
                         </div>
                     )}
-                    {!isMappingLoading && (themedSelectionPool.length > 0 || includeExclusive) && pool.length === 0 && !isLoading && (
+                    {!isMappingLoading && (activeSelectionPool.length > 0) && pool.length === 0 && !isLoading && (
                         <div className="eb-empty-warn">
                             Aucune question ne correspond aux filtres sélectionnés (Nouvelles/Erreurs/Maîtrisées).
                         </div>
                     )}
 
+
+
                     <button className="eb-launch-btn" onClick={handleLaunch} disabled={!canLaunch}>
+
                         {isLoading ? 'Chargement…' : canLaunch ? (
                             <><PlayCircle size={20} /> Lancer · {launchCount} question{launchCount > 1 ? 's' : ''}</>
                         ) : 'Aucune question sélectionnée'}

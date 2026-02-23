@@ -1,21 +1,113 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Results from '../components/Results';
+import { analyzeMistakesWithGroq } from '../utils/groq';
+import { loadThemesIndex, loadThemeQuestions } from '../utils/contentLoader';
 
 const ResultsPage = ({ toggleTheme, isDarkMode }) => {
   const location = useLocation();
   const navigate = useNavigate();
   const state = location.state || {};
+  
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [aiReport, setAiReport] = useState(null);
+  const [questionToThemeMap, setQuestionToThemeMap] = useState({});
+  const [themes, setThemes] = useState([]);
+  const [mappingsLoaded, setMappingsLoaded] = useState(false);
 
   // If no state exists (e.g. direct access or refresh), redirect or show error?
   // Usually, if they refresh on results, we might want to redirect to home.
   useEffect(() => {
     if (!location.state) {
       console.warn("No state found in ResultsPage, redirecting to home.");
-      // For now, let's NOT redirect automatically to allow debugging, 
-      // but in production, we should probably go back to themes.
     }
+
+    // Load theme mappings for AI context
+    const initMappings = async () => {
+        try {
+            const themesIndex = await loadThemesIndex();
+            if (themesIndex && themesIndex.sections) {
+                const allThemes = [];
+                themesIndex.sections.forEach(s => {
+                    if (s.items) s.items.forEach(i => allThemes.push(i));
+                });
+                setThemes(allThemes);
+
+                const mapping = {};
+                await Promise.all(allThemes.map(async (item) => {
+                    try {
+                        const themeData = await loadThemeQuestions(item.file);
+                        if (themeData && themeData.questions) {
+                            themeData.questions.forEach(q => {
+                                const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
+                                if (!mapping[cleanText]) mapping[cleanText] = new Set();
+                                mapping[cleanText].add(item.id);
+                            });
+                        }
+                    } catch (err) {}
+                }));
+                setQuestionToThemeMap(mapping);
+                setMappingsLoaded(true);
+            }
+        } catch (e) {
+            console.error("Failed to load mappings for Results AI", e);
+        }
+    };
+    initMappings();
   }, [location.state]);
+
+  const handleAiAnalysis = async () => {
+    const apiKey = localStorage.getItem('groq_api_key');
+    if (!apiKey) {
+        alert("Veuillez d'abord configurer votre clé API Groq dans les paramètres.");
+        return;
+    }
+
+    // Identify mistakes from current session
+    const resultsData = state.results ? { ...state, ...state.results } : state;
+    const questions = resultsData.questions || [];
+    const answers = resultsData.answers || [];
+    const mistakeQuestions = questions.filter((q, idx) => {
+        const ans = answers[idx];
+        return ans && ans.isCorrect === false;
+    });
+
+    if (mistakeQuestions.length === 0) {
+        alert("Félicitations, vous n'avez fait aucune erreur ! Pas d'analyse nécessaire.");
+        return;
+    }
+
+    setIsAnalyzing(true);
+    setAiReport(null);
+
+    try {
+        const dataToAnalyze = mistakeQuestions.map(q => {
+            const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
+            const themeIds = questionToThemeMap[cleanText];
+            const themeNames = themeIds 
+                ? [...themeIds].map(id => themes.find(t => t.id === id)?.name).filter(Boolean)
+                : ["Non classé"];
+            return {
+                question: q.question,
+                themes: themeNames
+            };
+        });
+
+        const report = await analyzeMistakesWithGroq(dataToAnalyze, apiKey);
+        setAiReport(report);
+        
+        // Scroll to report
+        setTimeout(() => {
+            const reportEl = document.querySelector('.eb-ai-report');
+            if (reportEl) reportEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100);
+
+    } catch (err) {
+        alert("Erreur lors de l'analyse : " + err.message);
+    } finally {
+        setIsAnalyzing(false);
+    }
+  };
 
   const handleRestart = () => {
     // Flatten the results object if it exists (legacy/robustness)
@@ -80,7 +172,10 @@ const ResultsPage = ({ toggleTheme, isDarkMode }) => {
         onBackToProfile={handleBackToProfile}
         toggleTheme={toggleTheme}
         isDarkMode={isDarkMode}
-        showReview={true} 
+        showReview={true}
+        onAiAnalysis={handleAiAnalysis}
+        isAnalyzing={isAnalyzing}
+        aiReport={aiReport}
       />
     </div>
   );

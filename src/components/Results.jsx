@@ -1,7 +1,8 @@
 import React from 'react';
-import { Trophy, ThumbsUp, Award, Target, PartyPopper, CheckCircle, ArrowLeft } from 'lucide-react';
+import { Trophy, ThumbsUp, Award, Target, PartyPopper, CheckCircle, ArrowLeft, BrainCircuit } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 
-const Results = ({ score, total, questions = [], answers = [], showReview = false, onRestart, onBackToThemes, isExamMode, isReviewOnly = false, customErrorItems = null, onBackToProfile }) => {
+const Results = ({ score, total, questions = [], answers = [], showReview = false, onRestart, onBackToThemes, isExamMode, isReviewOnly = false, customErrorItems = null, onBackToProfile, onAiAnalysis, isAnalyzing, aiReport }) => {
   const percentage = total > 0 ? Math.round((score / total) * 100) : 0;
 
   const getResultMessage = () => {
@@ -74,6 +75,25 @@ const Results = ({ score, total, questions = [], answers = [], showReview = fals
                 <button type="button" className="btn-primary" onClick={onRestart}>
                 Recommencer
                 </button>
+                {questions.length > 0 && total - score > 0 && (
+                    <button 
+                        type="button" 
+                        className={`btn-ai ${isAnalyzing ? 'is-loading' : ''}`}
+                        onClick={onAiAnalysis}
+                        disabled={isAnalyzing}
+                        style={{
+                            background: 'linear-gradient(135deg, #a855f7, #3b82f6)',
+                            color: 'white',
+                            border: 'none',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '8px'
+                        }}
+                    >
+                        <BrainCircuit size={18} />
+                        {isAnalyzing ? 'Analyse...' : 'Analyser mes erreurs'}
+                    </button>
+                )}
                 <button type="button" onClick={onBackToThemes}>
                 Choisir un autre thème
                 </button>
@@ -81,6 +101,29 @@ const Results = ({ score, total, questions = [], answers = [], showReview = fals
                 Retour au profil
                 </button>
             </div>
+
+            {aiReport && (
+                <div className="eb-ai-report anim-slide-down" style={{ 
+                    marginTop: '30px',
+                    textAlign: 'left',
+                    background: 'rgba(255, 255, 255, 0.03)', 
+                    padding: '24px', 
+                    borderRadius: '16px',
+                    border: '1px solid rgba(168, 85, 247, 0.2)',
+                    lineHeight: '1.6',
+                    fontSize: '15px',
+                    color: 'var(--text)',
+                    position: 'relative',
+                    maxWidth: '800px',
+                    margin: '30px auto'
+                }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '15px', color: '#a855f7' }}>
+                        <BrainCircuit size={20} />
+                        <span style={{ fontWeight: 700 }}>Analyse Pédagogique de vos erreurs</span>
+                    </div>
+                    <ReactMarkdown>{aiReport}</ReactMarkdown>
+                </div>
+            )}
         </>
       ) : (
         <div style={{ margin: '20px 0', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px' }}>
