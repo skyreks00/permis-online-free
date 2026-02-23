@@ -681,23 +681,24 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
                         <ArrowLeft size={18} /> Retour
                     </button>
                     <div className="eb-list-title-wrap">
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap' }}>
-                            <h1 className="eb-list-title">{listTitle}</h1>
-                            {listTitle === 'Questions à revoir' && (
-                                <button 
-                                    className={`eb-ai-premium-btn ${isAnalyzing ? 'is-analyzing' : ''}`}
-                                    onClick={() => handleAiAnalysis()}
-                                    disabled={isAnalyzing}
-                                >
-                                    <div className="eb-ai-btn-glow" />
-                                    <BrainCircuit size={18} />
-                                    <span>{isAnalyzing ? "Analyse en cours..." : "Analyse Pédagogique IA"}</span>
-                                    {!isAnalyzing && <Sparkles size={14} className="eb-ai-sparkle" />}
-                                </button>
-                            )}
-                        </div>
+                        <h1 className="eb-list-title">{listTitle}</h1>
+                        
                         <div className="eb-list-meta">
                             <span className="eb-list-count">{quizQuestions.length} question{quizQuestions.length > 1 ? 's' : ''}</span>
+
+                            {listTitle === 'Questions à revoir' && (
+                                <button 
+                                    className={`eb-ai-mini-btn ${isAnalyzing ? 'is-analyzing' : ''}`}
+                                    onClick={() => handleAiAnalysis()}
+                                    disabled={isAnalyzing}
+                                    title="Lancer l'analyse pédagogique IA"
+                                >
+                                    <BrainCircuit size={16} />
+                                    <span>{isAnalyzing ? "..." : "Analyser"}</span>
+                                    {!isAnalyzing && <Sparkles size={12} className="eb-ai-sparkle" />}
+                                </button>
+                            )}
+                            
                             <div className="eb-list-limit-selector">
                                 <span className="eb-limit-label">Afficher :</span>
                                 {[50, 100, 500, 'Tout'].map(limit => {

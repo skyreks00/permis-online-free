@@ -860,7 +860,76 @@ input[type="checkbox"] {
   border-color: var(--muted);
 }
 
-/* --- PREMIUM FOOTER --- */
+/* Mini AI Button */
+.eb-ai-mini-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(59, 130, 246, 0.15));
+  color: #a855f7;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+[data-theme="dark"] .eb-ai-mini-btn {
+    color: #d8b4fe;
+    border-color: rgba(168, 85, 247, 0.5);
+}
+
+.eb-ai-mini-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(59, 130, 246, 0.25));
+  transform: translateY(-1px);
+  border-color: #a855f7;
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.15);
+}
+
+.eb-ai-mini-btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.eb-ai-mini-btn.is-analyzing svg {
+  animation: spin 2s linear infinite;
+}
+
+/* Make list meta align better with new button */
+.eb-list-meta {
+  display: flex !important;
+  justify-content: flex-end !important; /* Push everything to right */
+  align-items: center !important; /* Center vertically */
+  gap: 16px !important;
+  margin-top: 10px;
+}
+
+.eb-list-count {
+    margin-right: auto; /* Push count to left, keeping button and limit on right if order allows */
+}
+
+/* Ensure title wrap flows correctly */
+.eb-list-title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    .eb-list-title-wrap {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .eb-list-meta {
+        margin-top: 0;
+    }
+}
+
 .footer-premium {
     background: linear-gradient(135deg, var(--surface), color-mix(in srgb, var(--surface), var(--primary) 5%), var(--surface));
     background-size: 400% 400%;
