@@ -9,6 +9,12 @@ const Results = ({ score, total, questions = [], answers = [], showReview = fals
     if (isReviewOnly) return { icon: <Target size={48} className="text-primary" />, text: 'Mode Révision', tone: 'info' };
 
     if (isExamMode) {
+      // If total questions is too small (e.g. testing), use percentage
+      if (total < 10) {
+           if (percentage >= 80) return { icon: <Trophy size={48} className="text-success" />, text: 'RÉUSSI !', tone: 'success' };
+           return { icon: <Target size={48} className="text-danger" />, text: 'ÉCHEC', tone: 'danger' };
+      }
+
       const incorrect = total - score;
       if (incorrect >= 9) {
         return { icon: <Target size={48} className="text-danger" />, text: 'ÉCHEC - 9 fautes ou plus', tone: 'danger' };
@@ -54,7 +60,121 @@ const Results = ({ score, total, questions = [], answers = [], showReview = fals
   };
 
   return (
-    <div className="results container" style={{ textAlign: 'center' }}>
+    <div className="results container" style={{ textAlign: 'center', paddingBottom: '40px' }}>
+      <style>{`
+        .results-actions {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          margin: 0 auto;
+          width: 100%;
+          max-width: 400px;
+        }
+        
+        button {
+          width: 100%;
+          justify-content: center;
+        }
+
+        .question-card.card {
+            padding: 20px;
+            margin-bottom: 24px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+        }
+        
+        .question-main {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+           .question-main {
+               flex-direction: row;
+               align-items: flex-start;
+           }
+           .question-left {
+               flex: 1;
+               max-width: 50%;
+           }
+           .question-right {
+               flex: 1;
+           }
+        }
+
+        .question-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            max-height: 300px;
+            object-fit: contain;
+            background: #000;
+        }
+
+        .answer-btn {
+            width: 100%;
+            text-align: left;
+            margin-bottom: 8px;
+            padding: 12px 16px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: var(--surface-2);
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+        }
+        
+        .answer-btn.correct {
+            border-color: var(--success);
+            background: rgba(34, 197, 94, 0.1);
+        }
+        
+        .answer-btn.incorrect {
+            border-color: var(--danger);
+            background: rgba(239, 68, 68, 0.1);
+        }
+
+        .answer-btn.dimmed {
+            opacity: 0.6;
+        }
+        
+        .answer-key {
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: var(--surface-3);
+            border-radius: 6px;
+            font-size: 0.85rem;
+        }
+
+        
+        /* Fix button widths in actions for mobile */
+        .results-actions button {
+            width: 100%;
+        }
+
+        /* Desktop: Buttons side by side again */
+        @media (min-width: 768px) {
+            .results-actions {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                max-width: none;
+            }
+            
+            .results-actions button {
+                width: auto;
+                min-width: 160px;
+            }
+        }
+      `}</style>
         
       {!isReviewOnly ? (
         <>
@@ -71,7 +191,7 @@ const Results = ({ score, total, questions = [], answers = [], showReview = fals
                 Correctes: <strong>{score}</strong> | Incorrectes: <strong>{total - score}</strong>
             </p>
 
-            <div className="results-actions" style={{ justifyContent: 'center' }}>
+            <div className="results-actions">
                 <button type="button" className="btn-primary" onClick={onRestart}>
                 Recommencer
                 </button>
@@ -85,13 +205,17 @@ const Results = ({ score, total, questions = [], answers = [], showReview = fals
                             background: 'linear-gradient(135deg, #a855f7, #3b82f6)',
                             color: 'white',
                             border: 'none',
+                            padding: '10px 14px',
                             display: 'flex',
                             alignItems: 'center',
-                            gap: '8px'
+                            justifyContent: 'center',
+                            gap: '8px',
+                            borderRadius: '8px',
+                            cursor: 'pointer'
                         }}
                     >
                         <BrainCircuit size={18} />
-                        {isAnalyzing ? 'Analyse...' : 'Analyser mes erreurs'}
+                        {isAnalyzing ? 'Analyse en cours...' : 'Analyser mes erreurs'}
                     </button>
                 )}
                 <button type="button" onClick={onBackToThemes}>

@@ -487,25 +487,27 @@ const Profile = ({ progress, themesData, onBack, onReset, instantFeedback, onTog
                                 <span>Créer ma clé gratuite</span>
                             </a>
                         </div>
-                        <div className="relative">
+                        <div className="flex gap-2">
                             <input 
                                 type={showApiKey ? "text" : "password"}
-                                className="input text-sm w-full mb-2 bg-surface-2 pr-10"
+                                className="input text-sm w-full bg-surface-2"
                                 value={apiKey}
                                 onChange={e => setApiKey(e.target.value)}
                                 placeholder="gsk_..."
                                 autoComplete="off"
                                 name="groq_api_token_field"
                             />
+                            
                             <button 
                                 type="button"
                                 onClick={() => setShowApiKey(!showApiKey)}
-                                className="absolute right-3 top-2.5 text-muted hover:text-text transition-colors"
+                                className="p-2.5 bg-surface-2 border border-border rounded-xl text-muted hover:text-text hover:border-primary/50 transition-all active:scale-95 flex items-center justify-center shrink-0"
+                                title={showApiKey ? "Masquer" : "Afficher"}
                             >
-                                {showApiKey ? <EyeOff size={16} /> : <Eye size={16} />}
+                                {showApiKey ? <EyeOff size={18} /> : <Eye size={18} />}
                             </button>
                         </div>
-                        <p className="text-xs text-muted">Laissez vide pour utiliser la clé par défaut (limitée).</p>
+                        <p className="text-xs text-muted mt-2">Laissez vide pour utiliser la clé par défaut.</p>
                     </div>
 
                     <div className="mt-6 flex justify-end">

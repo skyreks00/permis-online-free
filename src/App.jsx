@@ -16,8 +16,8 @@ import Footer from "./components/Footer";
 import { loadThemeQuestions, loadThemesIndex } from "./utils/contentLoader";
 import { useLocation } from "react-router-dom";
 
-import { auth, db } from './utils/firebase';
-import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { auth, db, doc, getDoc, setDoc } from './utils/firebase';
+// import { doc, getDoc, setDoc } from 'firebase/firestore';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -267,6 +267,12 @@ function App() {
         console.log("ℹ️ Firebase not configured - skipping cloud sync");
         return;
       }
+      // Ensure db is available
+      if (!db) {
+        console.warn("⚠️ Firebase DB not initialized - skipping cloud sync");
+        return;
+      }
+
       const user = auth.currentUser;
       if (!user) return;
 
@@ -278,16 +284,30 @@ function App() {
       const elevenKey = localStorage.getItem("elevenlabs_api_key");
       const preferredVoice = localStorage.getItem("preferred_voice_uri");
 
+      // Validate keys
+      const apiKeysPayload = {};
+      
+      // Allow keys starting with gsk_ OR if they are reasonably long (e.g. proxy keys or enterprise keys)
+      if (groqKey && groqKey.length > 20) {
+        apiKeysPayload.groq = groqKey;
+      }
+      
+      // Only sync ElevenLabs key if present (format varies, but simple check avoids empty)
+      if (elevenKey && elevenKey.trim().length > 10) {
+        apiKeysPayload.elevenLabs = elevenKey;
+      }
+      
+      if (preferredVoice) {
+        apiKeysPayload.preferredVoice = preferredVoice;
+      }
+
       const payload = {
         ...progressData,
-        apiKeys: {
-          groq: groqKey,
-          elevenLabs: elevenKey,
-          preferredVoice: preferredVoice,
-        },
+        apiKeys: apiKeysPayload,
       };
 
-      await setDoc(doc(db, "users", user.uid), payload);
+      // Use merge: true so we don't delete keys if we omitted them above
+      await setDoc(doc(db, "users", user.uid), payload, { merge: true });
 
       console.log("☁️ Firestore Sync: Success!");
       setSyncStatus("success");
@@ -323,13 +343,27 @@ function App() {
         console.log("ℹ️ Firebase not configured - skipping cloud pull");
         return;
       }
+      
+      // Ensure db is available and valid
+      if (!db) {
+        console.warn("⚠️ Firebase DB not initialized - skipping cloud pull");
+        return;
+      }
+
+      // Check if db is a valid Firestore instance (basic check)
+      if (db.type !== "firestore" && !db.app) {
+         console.error("❌ CRITICAL: 'db' object is not a valid Firestore instance:", db);
+         return;
+      }
+
       const user = auth.currentUser;
       if (!user) return;
 
       setSyncStatus("syncing");
       console.log(`☁️ Firestore Pull: Fetching users/${user.uid}...`);
 
-      const docSnap = await getDoc(doc(db, "users", user.uid));
+      const docRef = doc(db, "users", user.uid);
+      const docSnap = await getDoc(docRef);
 
       if (!docSnap.exists()) {
         console.log("☁️ Firestore Pull: No remote data found.");
@@ -342,18 +376,28 @@ function App() {
       // --- EXTRACT AND SAVE KEYS ---
       if (remoteData.apiKeys) {
         console.log("🔑 Syncing API Keys from Cloud...");
-        if (remoteData.apiKeys.groq)
+        
+        // Only overwrite local keys if remote keys look valid (prevent pulling masked/hashed keys)
+        // Allow keys that might not start with gsk_ if users have custom setups, but ensure reasonable length
+        if (remoteData.apiKeys.groq && remoteData.apiKeys.groq.length > 20) {
           localStorage.setItem("groq_api_key", remoteData.apiKeys.groq);
-        if (remoteData.apiKeys.elevenLabs)
+        } else {
+          console.warn("⚠️ Skipping cloud Groq key (invalid format/too short):", remoteData.apiKeys.groq ? "masked/invalid" : "empty");
+        }
+
+        if (remoteData.apiKeys.elevenLabs && remoteData.apiKeys.elevenLabs.length > 10) {
           localStorage.setItem(
             "elevenlabs_api_key",
             remoteData.apiKeys.elevenLabs,
           );
-        if (remoteData.apiKeys.preferredVoice)
+        }
+        
+        if (remoteData.apiKeys.preferredVoice) {
           localStorage.setItem(
             "preferred_voice_uri",
             remoteData.apiKeys.preferredVoice,
           );
+        }
       }
 
       // Separate progress from keys for state

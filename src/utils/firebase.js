@@ -31,6 +31,12 @@ if (isFirebaseConfigured) {
     app = initializeApp(firebaseConfig);
     auth = getAuth(app);
     db = getFirestore(app);
+    
+    // Ensure db is a valid object
+    if (!db || typeof db !== 'object') {
+        throw new Error("Firestore init returned invalid object: " + db);
+    }
+
     console.log("✅ Firebase initialized successfully");
   } catch (error) {
     console.error("❌ Failed to initialize Firebase:", error.message);

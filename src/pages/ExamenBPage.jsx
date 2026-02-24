@@ -330,7 +330,8 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
     const [quizSize, setQuizSize] = useState(50);
     const [viewMode, setViewMode] = useState('config'); // 'config' | 'quiz' | 'list'
     const [listTitle, setListTitle] = useState('');
-    const [visibleCount, setVisibleCount] = useState(100);
+    const [page, setPage] = useState(1);
+    const ITEMS_PER_PAGE = 10;
 
     // New theme filtering states
     const [themes, setThemes] = useState([]);
@@ -559,7 +560,7 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
         
         setQuizQuestions(filtered);
         setListTitle(title);
-        setVisibleCount(100);
+        setPage(1);
         setViewMode('list');
     }, [allQuestions, mastered, toReview]);
 
@@ -674,49 +675,63 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
     }
 
     if (viewMode === 'list') {
+        const totalPages = Math.ceil(quizQuestions.length / ITEMS_PER_PAGE);
+        const startIndex = (page - 1) * ITEMS_PER_PAGE;
+        const currentQuestions = quizQuestions.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
         return (
             <div className="eb-page eb-list-page">
                 <div className="eb-list-header">
                     <button className="eb-back-btn" onClick={() => setViewMode('config')}>
                         <ArrowLeft size={18} /> Retour
                     </button>
-                    <div className="eb-list-title-wrap">
-                        <h1 className="eb-list-title">{listTitle}</h1>
+                    <div className="eb-list-title-wrap" style={{ gap: '0' }}>
+                        <h1 className="eb-list-title" style={{ marginBottom: '5px' }}>{listTitle}</h1>
                         
-                        <div className="eb-list-meta">
-                            <span className="eb-list-count">{quizQuestions.length} question{quizQuestions.length > 1 ? 's' : ''}</span>
-
-                            {listTitle === 'Questions à revoir' && (
-                                <button 
-                                    className={`eb-ai-mini-btn ${isAnalyzing ? 'is-analyzing' : ''}`}
-                                    onClick={() => handleAiAnalysis()}
-                                    disabled={isAnalyzing}
-                                    title="Lancer l'analyse pédagogique IA"
-                                >
-                                    <BrainCircuit size={16} />
-                                    <span>{isAnalyzing ? "..." : "Analyser"}</span>
-                                    {!isAnalyzing && <Sparkles size={12} className="eb-ai-sparkle" />}
-                                </button>
-                            )}
+                        <div className="eb-list-meta-group" style={{ display: 'flex', flexDirection: 'column', gap: '0', alignItems: 'center', width: '100%' }}>
                             
-                            <div className="eb-list-limit-selector">
-                                <span className="eb-limit-label">Afficher :</span>
-                                {[50, 100, 500, 'Tout'].map(limit => {
-                                    const isToutActive = limit === 'Tout' && visibleCount >= quizQuestions.length && visibleCount !== 50 && visibleCount !== 100 && visibleCount !== 500;
-                                    const isNumActive = typeof limit === 'number' && visibleCount === limit;
-                                    
-                                    return (
+                            {totalPages > 1 && (
+                                <div className="eb-list-meta" style={{ width: '100%', justifyContent: 'flex-end', display: 'flex', alignItems: 'center', marginBottom: '5px' }}>
+                                    <div className="eb-pagination-controls" style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
                                         <button 
-                                            key={limit}
-                                            className={`eb-limit-btn ${isNumActive || isToutActive ? 'active' : ''}`}
-                                            onClick={() => setVisibleCount(limit === 'Tout' ? quizQuestions.length : limit)}
+                                            className="eb-limit-btn" 
+                                            disabled={page === 1}
+                                            onClick={() => { setPage(p => Math.max(1, p - 1)); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                                            style={{ opacity: page === 1 ? 0.5 : 1, display: 'flex', alignItems: 'center', gap: '4px', padding: '6px 12px' }}
                                         >
-                                            {limit}
+                                            <ChevronDown style={{ transform: 'rotate(90deg)' }} size={14} /> 
                                         </button>
-                                    );
-                                })}
+                                        <span style={{ fontSize: '13px', margin: '0 4px', minWidth: '70px', textAlign: 'center' }}>Page {page} / {totalPages}</span>
+                                        <button 
+                                            className="eb-limit-btn"
+                                            disabled={page === totalPages}
+                                            onClick={() => { setPage(p => Math.min(totalPages, p + 1)); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                                            style={{ opacity: page === totalPages ? 0.5 : 1, display: 'flex', alignItems: 'center', gap: '4px', padding: '6px 12px' }}
+                                        >
+                                             <ChevronDown style={{ transform: 'rotate(-90deg)' }} size={14} />
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
+
+                            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px', marginTop: totalPages > 1 ? '0' : '0' }}>
+                                <span className="eb-list-count" style={{ margin: 0, fontSize: '0.9em', opacity: 0.8 }}>{quizQuestions.length} question{quizQuestions.length > 1 ? 's' : ''}</span>
+                            
+                                {listTitle === 'Questions à revoir' && (
+                                    <button 
+                                        className={`eb-ai-mini-btn ${isAnalyzing ? 'is-analyzing' : ''}`}
+                                        onClick={() => handleAiAnalysis()}
+                                        disabled={isAnalyzing}
+                                        title="Lancer l'analyse pédagogique IA"
+                                    >
+                                        <BrainCircuit size={16} />
+                                        <span>{isAnalyzing ? "..." : "Analyser"}</span>
+                                        {!isAnalyzing && <Sparkles size={12} className="eb-ai-sparkle" />}
+                                    </button>
+                                )}
                             </div>
                         </div>
+
                     </div>
                 </div>
 
@@ -748,10 +763,10 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
                 )}
 
                 <div className="eb-question-list">
-                    {quizQuestions.slice(0, visibleCount).map((q, idx) => (
+                    {currentQuestions.map((q, idx) => (
                         <div className="eb-list-card" key={q.id}>
                             <div className="eb-list-card-header">
-                                <span className="eb-card-num">Question {idx + 1}</span>
+                                <span className="eb-card-num">Question {startIndex + idx + 1}</span>
                                 <span className="eb-card-id">#{q.id}</span>
                             </div>
                             <div className="eb-list-card-body">
@@ -813,17 +828,27 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
                     ))}
                 </div>
 
-                {visibleCount < quizQuestions.length && (
-                    <div className="eb-load-more-wrap">
+                {totalPages > 1 && (
+                    <div className="eb-pagination-bottom">
                         <button 
-                            className="eb-load-more-btn" 
-                            onClick={() => setVisibleCount(prev => prev + 100)}
+                            className="eb-pagination-btn" 
+                            disabled={page === 1}
+                            onClick={() => { setPage(p => Math.max(1, p - 1)); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                         >
-                            Charger 100 questions supplémentaires
+                            <ChevronDown style={{ transform: 'rotate(90deg)' }} size={16} /> Précédent
                         </button>
-                        <p className="eb-load-more-info">
-                            Affichage : {visibleCount} sur {quizQuestions.length}
-                        </p>
+
+                        <span className="eb-pagination-info">
+                            Page {page} / {totalPages}
+                        </span>
+
+                        <button 
+                            className="eb-pagination-btn" 
+                            disabled={page === totalPages}
+                            onClick={() => { setPage(p => Math.min(totalPages, p + 1)); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                        >
+                            Suivant <ChevronDown style={{ transform: 'rotate(-90deg)' }} size={16} />
+                        </button>
                     </div>
                 )}
             </div>

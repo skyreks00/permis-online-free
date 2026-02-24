@@ -102,7 +102,7 @@ export const getChatResponse = async (apiKey, messages) => {
     }
 };
 
-export const analyzeMistakesWithGroq = async (mistakes, apiKey) => {
+export const analyzeMistakes = async (mistakes, apiKey) => {
     const groq = new Groq({ apiKey, dangerouslyAllowBrowser: true });
 
     const prompt = `
@@ -146,4 +146,3 @@ export const analyzeMistakesWithGroq = async (mistakes, apiKey) => {
     }
 };
 
-export const analyzeMistakes = analyzeMistakesWithGroq;
