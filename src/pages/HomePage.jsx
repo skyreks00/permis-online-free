@@ -54,12 +54,12 @@ const HomePage = () => {
 
                 
                 <h1 className="home-title animate-slide-up">
-                    Réussissez votre permis <br />
+                    Réussissez votre permis online <br />
                     <span className="home-title-accent">du premier coup.</span>
                 </h1>
                 
                 <p className="home-sub animate-slide-up" style={{ animationDelay: '0.1s' }}>
-                    La plateforme n°1 en Belgique pour s'entraîner gratuitement aux examens théoriques du permis de conduire.
+                    La plateforme n°1 en Belgique pour s'entraîner online gratuitement aux examens théoriques du permis de conduire.
                 </p>
 
                 <div className="home-actions animate-slide-up" style={{ animationDelay: '0.2s' }}>
