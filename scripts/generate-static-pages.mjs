@@ -30,6 +30,34 @@ async function main() {
     const template = await fs.readFile(INDEX_SOURCE, 'utf-8');
     const SITE_URL = 'https://permisfree.be';
 
+    // Definition of specific metadata
+    const PAGE_METADATA = {
+      '/lecons': {
+        title: 'Leçons de Code de la Route Gratuit - Permis Online',
+        description: 'Apprenez le code de la route belge gratuitement. Leçons complètes, illustrées et à jour pour le permis B.'
+      },
+      '/quiz': {
+        title: 'Quiz Code de la Route Gratuit - Séries par Thèmes',
+        description: 'Entraînez-vous avec nos quiz de code de la route gratuits. Des centaines de questions classées par thèmes pour réussir votre examen.'
+      },
+      '/examen-b': {
+        title: 'Examen Blanc Permis de Conduire B - Simulation Gratuite',
+        description: 'Passez un examen blanc du code de la route (Permis B) dans les conditions réelles. 50 questions, chronomètre et correction détaillée.'
+      },
+      '/profil': {
+        title: 'Mon Profil - Suivi de Progression Permis Online',
+        description: 'Suivez votre progression, analysez vos résultats et identifiez vos points faibles pour obtenir votre permis de conduire.'
+      },
+      '/revision': {
+        title: 'Révision Code de la Route - Permis Online',
+        description: 'Révisez vos erreurs et approfondissez vos connaissances du code de la route.'
+      },
+      '/resultats': {
+        title: 'Mes Résultats - Permis Online Free',
+        description: 'Consultez l\'historique de vos scores aux examens blancs et quiz.'
+      }
+    };
+
     // 4. Generate physical files
     for (const subPath of pathsToGenerate) {
       const isHtml = subPath.toLowerCase().endsWith('.html');
@@ -37,11 +65,32 @@ async function main() {
       const normalizedPath = isHtml ? subPath : (subPath.endsWith('/') ? subPath : `${subPath}/`);
       const fullUrl = `${SITE_URL}${normalizedPath}`;
       
+      // Get specific metadata or default
+      // Remove trailing slash for matching if needed
+      const lookupPath = subPath.endsWith('/') && subPath.length > 1 ? subPath.slice(0, -1) : subPath;
+      const meta = PAGE_METADATA[lookupPath] || {};
+      
       // Update metadata to avoid "Redirect Error" (fixed canonical tag issues)
       let pageContent = template
         .replaceAll('<link rel="canonical" href="https://permisfree.be/"', `<link rel="canonical" href="${fullUrl}"`)
         .replaceAll('<meta property="og:url" content="https://permisfree.be/"', `<meta property="og:url" content="${fullUrl}"`)
         .replaceAll('<meta property="twitter:url" content="https://permisfree.be/"', `<meta property="twitter:url" content="${fullUrl}"`);
+
+      // Inject specific Title
+      if (meta.title) {
+        pageContent = pageContent
+          .replace(/<title>.*?<\/title>/, `<title>${meta.title}</title>`)
+          .replace(/<meta property="og:title" content=".*?" \/>/, `<meta property="og:title" content="${meta.title}" />`)
+          .replace(/<meta property="twitter:title" content=".*?" \/>/, `<meta property="twitter:title" content="${meta.title}" />`);
+      }
+
+      // Inject specific Description
+      if (meta.description) {
+        pageContent = pageContent
+          .replace(/<meta name="description" content=".*?" \/>/, `<meta name="description" content="${meta.description}" />`)
+          .replace(/<meta property="og:description" content=".*?" \/>/, `<meta property="og:description" content="${meta.description}" />`)
+          .replace(/<meta property="twitter:description" content=".*?" \/>/, `<meta property="twitter:description" content="${meta.description}" />`);
+      }
 
       if (isHtml) {
         // For paths like /cours/lesson.html -> create dist/cours/lesson.html as a file
