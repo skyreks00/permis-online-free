@@ -67,6 +67,10 @@ export const playText = async (text, onEnd, voiceIdOverride = null) => {
     if (mySpeechId !== currentSpeechId) return;
 
     // 2. BROWSER TTS (Fallback)
+    if (!('speechSynthesis' in window)) {
+        console.warn("Speech synthesis not supported.");
+        return;
+    }
     const ut = new SpeechSynthesisUtterance(text);
     ut.lang = 'fr-FR';
 
@@ -98,5 +102,7 @@ export const stopAudio = () => {
         window.currentAudio = null;
     }
     // Stop Browser TTS
-    window.speechSynthesis.cancel();
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+    }
 };

@@ -245,7 +245,7 @@
         },
         {
           "id": "infractions",
-          "name": "Infractions",
+          "name": "Infractions (Degrés)",
           "lessonFile": "infractions/infractions.html",
           "icon": "⚖️"
         }

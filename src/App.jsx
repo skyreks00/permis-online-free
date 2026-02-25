@@ -187,10 +187,12 @@ function App() {
     isLocalUpdate.current = true;
     setProgress((prev) => {
       const { metadata, ...rest } = prev;
+      const current = prev[themeId] || {};
       return {
         ...rest,
         metadata: metadata || {},
         [themeId]: {
+          ...current,
           score,
           total,
           date: new Date().toISOString(),
@@ -518,7 +520,7 @@ function App() {
     isLocalUpdate.current = true;
     setProgress((prev) => {
       const current = prev[themeId] || {};
-      return {
+      const updated = {
         ...prev,
         [themeId]: {
           ...current,
@@ -526,6 +528,8 @@ function App() {
           date: new Date().toISOString(),
         },
       };
+      localStorage.setItem("quizProgress", JSON.stringify(updated));
+      return updated;
     });
   };
   const MarkRead = markLessonRead;

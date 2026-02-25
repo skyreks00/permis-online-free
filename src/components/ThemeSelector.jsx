@@ -30,7 +30,7 @@ const ThemeSelector = ({ sections, progress, onSelectTheme, onSelectLesson, mode
 
       // Filter items based on MODE
       if (mode === 'lessons') {
-         const excludedIds = ['examen_B', 'permis_B_complet', 'infractions'];
+         const excludedIds = ['examen_B', 'permis_B_complet'];
          items = items.filter(item => !excludedIds.includes(item.id) && (item.lessonFile || item.file));
       } else if (mode === 'quiz') {
          // Filter out specific items requested by user
