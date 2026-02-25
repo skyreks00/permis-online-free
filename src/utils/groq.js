@@ -105,13 +105,17 @@ export const getChatResponse = async (apiKey, messages) => {
 export const analyzeMistakes = async (mistakes, apiKey) => {
     const groq = new Groq({ apiKey, dangerouslyAllowBrowser: true });
 
+    // Limit mistakes to avoid token overflow
+    const limitedMistakes = mistakes.slice(0, 10); 
+    
+    // Construct prompt carefully
     const prompt = `
     Tu es un expert pédagogique pour le permis de conduire belge (catégorie B).
     On va te donner une liste de questions que l'utilisateur a ratées, avec leurs thèmes associés.
     Ton but est de faire une analyse synthétique et encourageante pour aider l'utilisateur à savoir sur quoi s'entraîner.
 
-    Données (questions ratées) :
-    ${JSON.stringify(mistakes.map(m => ({ question: m.question, themes: m.themes })), null, 2)}
+    Données (échantillon des questions ratées) :
+    ${JSON.stringify(limitedMistakes.map(m => ({ question: m.question, themes: m.themes })), null, 2)}
 
     CONSIGNES :
     1. **LANGUE : FRANÇAIS UNIQUEMENT**.
