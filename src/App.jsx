@@ -289,9 +289,9 @@ function App() {
       // Validate keys
       const apiKeysPayload = {};
       
-      // Allow keys starting with gsk_ OR if they are reasonably long (e.g. proxy keys or enterprise keys)
-      if (groqKey && groqKey.length > 20) {
-        apiKeysPayload.groq = groqKey;
+      // Only sync Groq keys if they start with gsk_ (avoids syncing hashed values)
+      if (groqKey && groqKey.trim().startsWith('gsk_')) {
+        apiKeysPayload.groq = groqKey.trim();
       }
       
       // Only sync ElevenLabs key if present (format varies, but simple check avoids empty)
@@ -379,9 +379,8 @@ function App() {
       if (remoteData.apiKeys) {
         console.log("🔑 Syncing API Keys from Cloud...");
         
-        // Only overwrite local keys if remote keys look valid (prevent pulling masked/hashed keys)
-        // Allow keys that might not start with gsk_ if users have custom setups, but ensure reasonable length
-        if (remoteData.apiKeys.groq && remoteData.apiKeys.groq.length > 20) {
+        // Only overwrite local keys if remote keys look valid and start with gsk_
+        if (remoteData.apiKeys.groq && typeof remoteData.apiKeys.groq === 'string' && remoteData.apiKeys.groq.startsWith('gsk_')) {
           localStorage.setItem("groq_api_key", remoteData.apiKeys.groq);
         } else {
           console.warn("⚠️ Skipping cloud Groq key (invalid format/too short):", remoteData.apiKeys.groq ? "masked/invalid" : "empty");
