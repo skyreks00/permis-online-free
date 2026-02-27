@@ -204,6 +204,13 @@ const QuestionCard = ({
       correctAnswer: displayQuestion.correctAnswer,
       questionId: displayQuestion.id,
     });
+    
+    // Auto-advance to next question
+    if (onNext) {
+      setTimeout(() => {
+        onNext();
+      }, 500); // Small 500ms delay for visual feedback
+    }
   };
 
   const handleFreeformSubmit = () => {
@@ -223,6 +230,13 @@ const QuestionCard = ({
       correctAnswer: displayQuestion.correctAnswer,
       questionId: displayQuestion.id,
     });
+
+    // Auto-advance to next question
+    if (onNext) {
+      setTimeout(() => {
+        onNext();
+      }, 500); // Small 500ms delay for visual feedback
+    }
   };
 
   const getButtonClass = (answer) => {
