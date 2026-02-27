@@ -269,14 +269,16 @@ const QuestionCard = ({
     setIsFixing(true);
     setSavingState(null);
     try {
-      const { fixQuestionWithGroq } = await import("../utils/groq");
+      const groqModule = await import("../utils/llm");
+      const fixQuestionWithGroq = groqModule.fixQuestionWithGroq;
+
       // Always fix the ORIGINAL question, not the already fixed one (unless we want iterative fixes?)
       // Let's stick to fixing the original 'question' prop.
       const fixed = await fixQuestionWithGroq(question, apiKey);
       setFixedQuestion(fixed);
     } catch (e) {
       console.error(e);
-      alert("Erreur lors de la correction : " + e.message);
+      alert("Erreur lors de la correction : " + (e.message || "Echec importation module IA"));
     } finally {
       setIsFixing(false);
     }
@@ -284,9 +286,20 @@ const QuestionCard = ({
 
   const handleConfirmFix = async () => {
     if (!fixedQuestion) return;
-    const { saveQuestionLocally } = await import("../utils/api");
-    const { saveQuestionToGitHub, getUser } =
-      await import("../utils/githubClient");
+
+    // 0. Immediate clipboard copy if no token provided (to avoid NotAllowedError due to losing user activation context)
+    const token = localStorage.getItem("github_token");
+    if (!token) {
+        try {
+            await navigator.clipboard.writeText(JSON.stringify(fixedQuestion, null, 2));
+            setSaveMessage("Copié dans le presse-papier ! (Pas de token)");
+            setSavingState("success");
+        } catch (err) {
+            console.error("Clipboard failed", err);
+            setSaveMessage("Erreur copie : " + err.message);
+            setSavingState("error");
+        }
+    }
 
     setSavingState("saving"); // UI Unblocks HERE
 
@@ -298,6 +311,41 @@ const QuestionCard = ({
         return;
     }
 
+    // Only load modules if we have a token or need local save (though inconsistent if we skip local save for no-token users, let's keep it simple)
+    // If we already copied to clipboard, we can arguably stop here or try local save.
+    // But original logic tried local save then fell back to clipboard if no token.
+    
+    // Let's proceed with imports but handle errors gracefully
+    let saveQuestionLocally, saveQuestionToGitHub, getUser;
+
+    try {
+      const apiModule = await import("../utils/api");
+      saveQuestionLocally = apiModule.saveQuestionLocally;
+      
+      const githubModule = await import("../utils/githubClient");
+      saveQuestionToGitHub = githubModule.saveQuestionToGitHub;
+      getUser = githubModule.getUser;
+    } catch (importError) {
+      console.error("Failed to import modules:", importError);
+      
+      // If we didn't copy earlier (because we had a token but module failed), try copy now
+      if (token) {
+           try {
+                await navigator.clipboard.writeText(JSON.stringify(fixedQuestion, null, 2));
+                setSaveMessage("Modules HS -> Copié !");
+                setSavingState("success");
+            } catch (clipboardErr) {
+                setSaveMessage("Erreur critique (Import + Copy failed)");
+                setSavingState("error");
+            }
+      } else {
+        // We already copied
+         setSaveMessage("Copié (Mode hors ligne)");
+         setSavingState("success");
+      }
+      return;
+    }
+
     // 1. Try Local Save
     try {
       await saveQuestionLocally(effectiveFileName, question.id, fixedQuestion);
@@ -306,11 +354,9 @@ const QuestionCard = ({
     }
 
     // 2. Try GitHub Save
-    const token = localStorage.getItem("github_token");
     if (!token) {
-      navigator.clipboard.writeText(JSON.stringify(fixedQuestion, null, 2));
-      setSavingState("success");
-      setSaveMessage("Copié (Pas de token GitHub)");
+      // Already handled at the start of the function (clipboard copy)
+      // Just ensure we don't proceed to GitHub save
       return;
     }
 

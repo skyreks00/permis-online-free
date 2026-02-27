@@ -6,7 +6,7 @@ import CountUp from '../components/CountUp';
 import ShinyText from '../components/ShinyText';
 import Hyperspeed from '../components/Hyperspeed';
 import { loadThemeQuestions, loadThemesIndex } from '../utils/contentLoader';
-import { analyzeMistakes } from '../utils/groq';
+import { analyzeMistakes } from '../utils/llm';
 import ReactMarkdown from 'react-markdown';
 
 

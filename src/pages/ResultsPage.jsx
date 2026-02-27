@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Results from '../components/Results';
-import { analyzeMistakes } from '../utils/groq';
+import { analyzeMistakes } from '../utils/llm';
 import { loadThemesIndex, loadThemeQuestions } from '../utils/contentLoader';
 
 const ResultsPage = ({ toggleTheme, isDarkMode }) => {

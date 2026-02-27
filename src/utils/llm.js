@@ -102,7 +102,9 @@ export const getChatResponse = async (apiKey, messages) => {
     }
 };
 
+
 export const analyzeMistakes = async (mistakes, apiKey) => {
+    console.log("analyzeMistakes called");
     const groq = new Groq({ apiKey, dangerouslyAllowBrowser: true });
 
     // Limit mistakes to avoid token overflow

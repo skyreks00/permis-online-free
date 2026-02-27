@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { MessageCircle, X, Send, Bot, User } from 'lucide-react';
-import { getChatResponse } from '../utils/groq';
+import { getChatResponse } from '../utils/llm';
 
 const ChatAssistant = ({ mistakes }) => {
     const [isOpen, setIsOpen] = useState(false);
