@@ -13,6 +13,7 @@ import TermsPage from "./pages/TermsPage";
 import TopControls from "./components/TopControls";
 import BottomNav from "./components/BottomNav";
 import Footer from "./components/Footer";
+import TipeeePopup from "./components/TipeeePopup";
 import { loadThemeQuestions, loadThemesIndex } from "./utils/contentLoader";
 import { useLocation } from "react-router-dom";
 
@@ -25,6 +26,15 @@ const ScrollToTop = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
   return null;
+};
+
+const FooterWrapper = ({ setIsTipeeeOpen }) => {
+  const location = useLocation();
+  const hideFooterPaths = ['/quiz/', '/examen-b', '/resultats', '/revision'];
+  const shouldHide = hideFooterPaths.some(path => location.pathname.includes(path));
+
+  if (shouldHide) return null;
+  return <Footer setIsTipeeeOpen={setIsTipeeeOpen} />;
 };
 
 function App() {
@@ -42,9 +52,12 @@ function App() {
   const [showCompleted, setShowCompleted] = useState(true);
   const [syncStatus, setSyncStatus] = useState(null); // 'syncing', 'success', 'error', 'pending'
   const [user, setUser] = useState(null);
+  const [isTipeeeOpen, setIsTipeeeOpen] = useState(false);
 
   const isLocalUpdate = useRef(false);
   const debounceTimer = useRef(null);
+  const localSaveHandle = useRef(null);
+  const localSaveHandleType = useRef(null); // 'idle' | 'timeout' | null
 
   // Initialize theme from localStorage or default to dark
   useEffect(() => {
@@ -161,26 +174,70 @@ function App() {
 
   // DEBOUNCED CLOUD SYNC & LOCAL STORAGE SYNC
   useEffect(() => {
-    // Always save to local storage
-    localStorage.setItem("quizProgress", JSON.stringify(progress));
+    // Always save to local storage, but do it when the browser is idle.
+    // This avoids scroll jank/freezes on mobile when progress grows large.
+    const cancelPendingLocalSave = () => {
+      if (localSaveHandle.current == null) return;
+      if (localSaveHandleType.current === "idle" && "cancelIdleCallback" in window) {
+        window.cancelIdleCallback(localSaveHandle.current);
+      } else {
+        clearTimeout(localSaveHandle.current);
+      }
+      localSaveHandle.current = null;
+      localSaveHandleType.current = null;
+    };
+
+    cancelPendingLocalSave();
+
+    const doLocalSave = () => {
+      try {
+        localStorage.setItem("quizProgress", JSON.stringify(progress));
+      } catch (e) {
+        console.warn("Failed to persist quizProgress to localStorage", e);
+      } finally {
+        localSaveHandle.current = null;
+        localSaveHandleType.current = null;
+      }
+    };
+
+    if ("requestIdleCallback" in window) {
+      localSaveHandleType.current = "idle";
+      localSaveHandle.current = window.requestIdleCallback(doLocalSave, {
+        timeout: 2000,
+      });
+    } else {
+      localSaveHandleType.current = "timeout";
+      localSaveHandle.current = setTimeout(doLocalSave, 0);
+    }
 
     if (isLocalUpdate.current) {
       isLocalUpdate.current = false;
 
-      // Use an observer to wait for current user if needed
-      const unsubscribe = auth.onAuthStateChanged((user) => {
-        if (user) {
-          if (debounceTimer.current) clearTimeout(debounceTimer.current);
-          setSyncStatus("pending");
+      if (!auth) return;
 
-          debounceTimer.current = setTimeout(() => {
-            syncToCloud(progress);
-          }, 2500);
-        }
-        // Only run once per update
-        unsubscribe();
-      });
+      const scheduleCloudSync = () => {
+        if (debounceTimer.current) clearTimeout(debounceTimer.current);
+        setSyncStatus("pending");
+
+        debounceTimer.current = setTimeout(() => {
+          syncToCloud(progress);
+        }, 2500);
+      };
+
+      // Prefer currentUser (cheap) and only fall back to an auth observer when needed.
+      if (auth.currentUser) {
+        scheduleCloudSync();
+      } else {
+        const unsubscribe = auth.onAuthStateChanged((user) => {
+          if (user) scheduleCloudSync();
+          unsubscribe();
+        });
+      }
     }
+
+    return () => {
+      cancelPendingLocalSave();
+    };
   }, [progress]);
 
   const saveProgress = (themeId, score, total, answers) => {
@@ -288,17 +345,17 @@ function App() {
 
       // Validate keys
       const apiKeysPayload = {};
-      
+
       // Only sync Groq keys if they start with gsk_ (avoids syncing hashed values)
       if (groqKey && groqKey.trim().startsWith('gsk_')) {
         apiKeysPayload.groq = groqKey.trim();
       }
-      
+
       // Only sync ElevenLabs key if present (format varies, but simple check avoids empty)
       if (elevenKey && elevenKey.trim().length > 10) {
         apiKeysPayload.elevenLabs = elevenKey;
       }
-      
+
       if (preferredVoice) {
         apiKeysPayload.preferredVoice = preferredVoice;
       }
@@ -345,7 +402,7 @@ function App() {
         console.log("ℹ️ Firebase not configured - skipping cloud pull");
         return;
       }
-      
+
       // Ensure db is available and valid
       if (!db) {
         console.warn("⚠️ Firebase DB not initialized - skipping cloud pull");
@@ -354,8 +411,8 @@ function App() {
 
       // Check if db is a valid Firestore instance (basic check)
       if (db.type !== "firestore" && !db.app) {
-         console.error("❌ CRITICAL: 'db' object is not a valid Firestore instance:", db);
-         return;
+        console.error("❌ CRITICAL: 'db' object is not a valid Firestore instance:", db);
+        return;
       }
 
       const user = auth.currentUser;
@@ -378,7 +435,7 @@ function App() {
       // --- EXTRACT AND SAVE KEYS ---
       if (remoteData.apiKeys) {
         console.log("🔑 Syncing API Keys from Cloud...");
-        
+
         // Only overwrite local keys if remote keys look valid and start with gsk_
         if (remoteData.apiKeys.groq && typeof remoteData.apiKeys.groq === 'string' && remoteData.apiKeys.groq.startsWith('gsk_')) {
           localStorage.setItem("groq_api_key", remoteData.apiKeys.groq);
@@ -392,7 +449,7 @@ function App() {
             remoteData.apiKeys.elevenLabs,
           );
         }
-        
+
         if (remoteData.apiKeys.preferredVoice) {
           localStorage.setItem(
             "preferred_voice_uri",
@@ -533,15 +590,6 @@ function App() {
   };
   const MarkRead = markLessonRead;
 
-  const FooterWrapper = () => {
-    const location = useLocation();
-    const hideFooterPaths = ['/quiz/', '/examen-b', '/resultats', '/revision'];
-    const shouldHide = hideFooterPaths.some(path => location.pathname.includes(path));
-    
-    if (shouldHide) return null;
-    return <Footer />;
-  };
-
   return (
     <BrowserRouter basename="/">
       {/* GLOBAL SYNC TOAST */}
@@ -586,7 +634,7 @@ function App() {
       {/* <BottomNav /> - Replaced by Mobile Burger Menu in TopControls */}
 
       <Routes>
-        <Route path="/" element={<HomePage progress={progress} />} />
+        <Route path="/" element={<HomePage progress={progress} setIsTipeeeOpen={setIsTipeeeOpen} />} />
         <Route
           path="/lecons"
           element={
@@ -693,7 +741,8 @@ function App() {
           element={<TermsPage />}
         />
       </Routes>
-      <FooterWrapper />
+      <TipeeePopup isOpen={isTipeeeOpen} setIsOpen={setIsTipeeeOpen} />
+      <FooterWrapper setIsTipeeeOpen={setIsTipeeeOpen} />
       <ScrollToTop />
     </BrowserRouter>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { BookOpen, Layers, GraduationCap, Zap, Shield, ArrowRight, ChevronRight } from 'lucide-react';
+import { BookOpen, Layers, GraduationCap, Zap, Shield, ArrowRight, ChevronRight, Heart } from 'lucide-react';
 
 const FEATURES = [
     {
@@ -39,25 +39,25 @@ const STATS = [
     { value: 'Belge', label: 'Examen' },
 ];
 
-const HomePage = () => {
+const HomePage = ({ setIsTipeeeOpen }) => {
     const navigate = useNavigate();
 
     return (
         <div className="home-page">
             <div className="home-glow" />
-            
+
             <div className="home-content">
                 {/* HERO SECTION */}
                 <div className="home-badge animate-fade-in">
                     Mise à jour {new Intl.DateTimeFormat('fr-BE', { month: 'long', year: 'numeric' }).format(new Date())} • Officiel
                 </div>
 
-                
+
                 <h1 className="home-title animate-slide-up">
                     Réussissez votre permis online <br />
                     <span className="home-title-accent">du premier coup.</span>
                 </h1>
-                
+
                 <p className="home-sub animate-slide-up" style={{ animationDelay: '0.1s' }}>
                     La plateforme n°1 en Belgique pour s'entraîner online gratuitement aux examens théoriques du permis de conduire.
                 </p>
@@ -69,6 +69,14 @@ const HomePage = () => {
                     </button>
                     <button className="home-cta-secondary" onClick={() => navigate('/lecons')}>
                         Voir les leçons
+                    </button>
+                    <button className="home-cta-tipeee" onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        setIsTipeeeOpen(true);
+                    }}>
+                        <Heart size={18} fill="currentColor" />
+                        Soutenir
                     </button>
                 </div>
 
@@ -85,11 +93,11 @@ const HomePage = () => {
                 <h2 className="home-features-title">Tout pour votre réussite</h2>
                 <div className="home-features">
                     {FEATURES.map((feature, idx) => (
-                        <div 
-                            key={idx} 
-                            className="home-feature-card animate-slide-up" 
+                        <div
+                            key={idx}
+                            className="home-feature-card animate-slide-up"
                             onClick={() => navigate(feature.path)}
-                            style={{ 
+                            style={{
                                 '--card-color': feature.color,
                                 '--card-bg': feature.bg,
                                 '--card-border': feature.border,
@@ -112,7 +120,6 @@ const HomePage = () => {
                     <Shield size={14} />
                     <span>Contenu 100% conforme au recyclage officiel belge {new Date().getFullYear()} • v1.6.0</span>
                 </div>
-
             </div>
         </div>
     );

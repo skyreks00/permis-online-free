@@ -67,27 +67,6 @@ const QuizDashboardPage = ({ sections, progress, toggleTheme, isDarkMode, onSele
                 }
             }
 
-            // --- Examen B Errors Integration ---
-            if (progress.examen_B?.toReview && progress.examen_B.toReview.length > 0) {
-                try {
-                    const data = await loadThemeQuestions('examen_B.json');
-                    const questionsPool = data.questions || [];
-                    
-                    progress.examen_B.toReview.forEach(qId => {
-                        const q = questionsPool.find(item => item.id == qId);
-                        if (q) {
-                            allErrors.push({
-                                ...q,
-                                originalThemeId: 'examen_B',
-                                sourceFile: 'examen_B.json'
-                            });
-                        }
-                    });
-                } catch (e) {
-                    console.error("Failed to load Examen B questions for review", e);
-                }
-            }
-
             if (allErrors.length === 0) {
                 alert("Aucune erreur trouvée dans les sauvegardes.");
                 return;
@@ -114,6 +93,12 @@ const QuizDashboardPage = ({ sections, progress, toggleTheme, isDarkMode, onSele
     }
 
     const handleThemeSelect = (item) => {
+        // Examen B is handled on its own dedicated page (do not run it inside Quiz routes).
+        if (item?.id === 'examen_B') {
+            navigate('/examen-b');
+            return;
+        }
+
         // Check if lesson is read
         const isRead = progress[item.id]?.read;
         const hasLesson = item.lessonFile || (item.file && item.file.replace('.json', '.html')); 
@@ -149,7 +134,8 @@ const QuizDashboardPage = ({ sections, progress, toggleTheme, isDarkMode, onSele
                 <GlobalStats 
                     progress={progress} 
                     themesData={{ sections }} 
-                    onReviewAll={handleReviewAll} 
+                    onReviewAll={handleReviewAll}
+                    includeExamenBMistakes={false}
                 />
             </div>
             

@@ -1,9 +1,9 @@
 import React from 'react';
-import { 
-    Instagram, 
-    Mail, 
-    Github, 
-    ExternalLink, 
+import {
+    Instagram,
+    Mail,
+    Github,
+    ExternalLink,
     Heart,
     MessageCircle,
     Info,
@@ -14,7 +14,7 @@ import {
 import { useNavigate, Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 
-const Footer = () => {
+const Footer = ({ setIsTipeeeOpen }) => {
     const currentYear = new Date().getFullYear();
 
     const containerVariants = {
@@ -30,10 +30,10 @@ const Footer = () => {
 
     const sectionVariants = {
         hidden: { opacity: 0, scale: 0.98 },
-        visible: { 
-            opacity: 1, 
+        visible: {
+            opacity: 1,
             scale: 1,
-            transition: { duration: 0.5, ease: "easeOut" } 
+            transition: { duration: 0.5, ease: "easeOut" }
         }
     };
 
@@ -44,7 +44,7 @@ const Footer = () => {
     };
 
     return (
-        <motion.footer 
+        <motion.footer
             className="footer-premium"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -53,7 +53,7 @@ const Footer = () => {
         >
             {/* Animated Background Blobs */}
             <div className="footer-bg-blobs">
-                <motion.div 
+                <motion.div
                     className="footer-blob footer-blob-1"
                     animate={{
                         x: [-100, 100, -100],
@@ -66,7 +66,7 @@ const Footer = () => {
                         ease: "linear"
                     }}
                 />
-                <motion.div 
+                <motion.div
                     className="footer-blob footer-blob-2"
                     animate={{
                         x: [100, -100, 100],
@@ -81,7 +81,7 @@ const Footer = () => {
                 />
             </div>
 
-            <motion.div 
+            <motion.div
                 className="footer-content"
                 variants={containerVariants}
                 initial="hidden"
@@ -96,25 +96,25 @@ const Footer = () => {
                         </Link>
                     </div>
                     <p className="footer-tagline">
-                        Votre succès au code de la route commence ici. 
+                        Votre succès au code de la route commence ici.
                         Entraînement gratuit, moderne et efficace.
                     </p>
                     <div className="footer-social-links">
-                        <motion.a 
-                            href="https://www.instagram.com/permisfree.be/" 
-                            target="_blank" 
-                            rel="noreferrer" 
-                            className="social-link insta" 
+                        <motion.a
+                            href="https://www.instagram.com/permisfree.be/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="social-link insta"
                             whileHover={{ scale: 1.05, rotate: 3 }}
                             whileTap={{ scale: 0.95 }}
                         >
                             <Instagram size={20} />
                         </motion.a>
-                        <motion.a 
-                            href="https://www.tiktok.com/@permisfree.be" 
-                            target="_blank" 
-                            rel="noreferrer" 
-                            className="social-link tiktok" 
+                        <motion.a
+                            href="https://www.tiktok.com/@permisfree.be"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="social-link tiktok"
                             whileHover={{ scale: 1.05, rotate: -3 }}
                             whileTap={{ scale: 0.95 }}
                         >
@@ -122,6 +122,26 @@ const Footer = () => {
                                 <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
                             </svg>
                         </motion.a>
+                    </div>
+
+                    {/* Custom Tipeee Support Banner */}
+                    <div className="footer-tipeee-banner mt-6">
+                        <button
+                            className="tipeee-footer-btn"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                setIsTipeeeOpen(true);
+                            }}
+                            aria-label="Soutenez Permisfree sur Tipeee"
+                        >
+                            <div className="tipeee-footer-logo">
+                                <span>tip!</span>
+                            </div>
+                            <div className="tipeee-footer-text">
+                                <span>Soutenez <strong>permisfree</strong> sur Tipeee</span>
+                            </div>
+                        </button>
                     </div>
                 </motion.div>
 
@@ -151,16 +171,17 @@ const Footer = () => {
                             <li><motion.div whileHover={linkHover}><Link to="/conditions" onClick={() => window.scrollTo(0, 0)}><FileText size={14} /> Conditions</Link></motion.div></li>
                         </ul>
                     </div>
+
                 </motion.div>
 
                 {/* Credits */}
                 <motion.div className="footer-section credits" variants={sectionVariants}>
                     <h3>Créateurs</h3>
                     <div className="creators-group">
-                        <motion.a 
-                            href="https://github.com/stotwo" 
-                            target="_blank" 
-                            rel="noreferrer" 
+                        <motion.a
+                            href="https://github.com/stotwo"
+                            target="_blank"
+                            rel="noreferrer"
                             className="creator-card"
                             whileHover={{ scale: 1.05, x: 5 }}
                             whileTap={{ scale: 0.95 }}
@@ -172,10 +193,10 @@ const Footer = () => {
                                 <Crown size={11} className="shiny-crown" style={{ color: '#ff69b4' }} />
                             </div>
                         </motion.a>
-                        <motion.a 
-                            href="https://github.com/skyreks00/" 
-                            target="_blank" 
-                            rel="noreferrer" 
+                        <motion.a
+                            href="https://github.com/skyreks00/"
+                            target="_blank"
+                            rel="noreferrer"
                             className="creator-card"
                             whileHover={{ scale: 1.05, x: 5 }}
                             whileTap={{ scale: 0.95 }}
@@ -188,7 +209,7 @@ const Footer = () => {
                 </motion.div>
 
                 {/* Copyright Integrated */}
-                <motion.div 
+                <motion.div
                     className="footer-copyright"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 0.6 }}
@@ -197,7 +218,7 @@ const Footer = () => {
                     <p>© {currentYear} Permis Online Free. Tous droits réservés.</p>
                 </motion.div>
             </motion.div>
-        </motion.footer>
+        </motion.footer >
     );
 };
 

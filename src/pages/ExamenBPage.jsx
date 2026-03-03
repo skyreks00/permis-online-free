@@ -235,7 +235,10 @@ const ThemeFilter = React.memo(({
     setIsThemesExpanded, 
     themeSearch, 
     setThemeSearch,
-    questionCountPerTheme
+    questionCountPerTheme,
+    includeExclusive,
+    setIncludeExclusive,
+    exclusiveCount
 }) => (
     <>
         <div 
@@ -245,7 +248,7 @@ const ThemeFilter = React.memo(({
         >
             <span className="eb-toggle-label" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                 <Filter size={18} />
-                Filtrer par thèmes ({selectedThemes.size}/{themes.length})
+                Filtrer par thèmes ({selectedThemes.size + (includeExclusive ? 1 : 0)}/{themes.length + 1})
             </span>
             <div style={{ color: 'var(--muted)' }}>
                 {isThemesExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
@@ -293,6 +296,15 @@ const ThemeFilter = React.memo(({
                                         </button>
                                     );
                                 })}
+                            <button
+                                className={`eb-theme-pill ${includeExclusive ? 'active' : ''}`}
+                                onClick={() => setIncludeExclusive(!includeExclusive)}
+                                style={includeExclusive ? { background: '#a855f7', borderColor: '#a855f7', color: '#fff' } : { borderColor: '#a855f7', color: '#a855f7' }}
+                                title={`${exclusiveCount} question${exclusiveCount !== 1 ? 's' : ''} exclusives`}
+                            >
+                                <Zap size={13} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '4px' }} />
+                                Exclusives <span style={{opacity: 0.7, fontSize: '0.85em'}}>({exclusiveCount})</span>
+                            </button>
                         </div>
                     </div>
                 ) : (
@@ -324,7 +336,7 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
     const [quizQuestions, setQuizQuestions] = useState([]);
 
     const [includeNew, setIncludeNew] = useState(true);
-    const [includeExclusive, setIncludeExclusive] = useState(false);
+    const [includeExclusive, setIncludeExclusive] = useState(true);
     const [includeErrors, setIncludeErrors] = useState(false);
     const [includeMastered, setIncludeMastered] = useState(false);
     const [quizSize, setQuizSize] = useState(50);
@@ -442,7 +454,9 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
         let themedFiltered = [];
         if (themes.length > 0) {
             if (selectedThemes.size === themes.length) {
-                themedFiltered = allQuestions; 
+                // All themes selected → still exclude exclusive/orphan questions:
+                // they are handled separately by the includeExclusive toggle below.
+                themedFiltered = allQuestions.filter(q => !exclusiveIds.has(q.id));
             } else if (selectedThemes.size > 0) {
                 themedFiltered = allQuestions.filter(q => {
                     const cleanText = q.question.trim().toLowerCase().replace(/\s+/g, ' ');
@@ -460,7 +474,7 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
         // Return original objects to preserve properties
         const idToQuestion = new Map(allQuestions.map(q => [q.id, q]));
         return [...poolSet].map(id => idToQuestion.get(id)).filter(Boolean);
-    }, [allQuestions, exclusiveQuestionsPool, themes, selectedThemes, questionToThemeMap, includeExclusive]);
+    }, [allQuestions, exclusiveQuestionsPool, exclusiveIds, themes, selectedThemes, questionToThemeMap, includeExclusive]);
 
     const stats = useMemo(() => {
         const total = allQuestions.length;
@@ -665,7 +679,7 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
                     questions={quizQuestions}
                     themeName="Examen Blanc B"
                     onFinish={handleFinish}
-                    onExit={() => setViewMode('config')}
+                    onExit={() => { setViewMode('config'); setAiReport(null); }}
                     instantFeedback={false}
                     autoPlayAudio={autoPlayAudio}
                     fileName="examen_B.json"
@@ -682,7 +696,7 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
         return (
             <div className="eb-page eb-list-page">
                 <div className="eb-list-header">
-                    <button className="eb-back-btn" onClick={() => setViewMode('config')}>
+                    <button className="eb-back-btn" onClick={() => { setViewMode('config'); setAiReport(null); }}>
                         <ArrowLeft size={18} /> Retour
                     </button>
                     <div className="eb-list-title-wrap" style={{ gap: '0' }}>
@@ -921,14 +935,6 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
                         />
                         <div className="eb-toggle-divider" />
                         <Toggle
-                            checked={includeExclusive}
-                            onChange={setIncludeExclusive}
-                            label={<><Zap size={16} /> Questions exclusives — {isLoading ? '…' : (selectedThemes.size > 0 ? stats.totalByExclusive : 0)} dispo</>}
-                            disabled={selectedThemes.size === 0}
-                            colorOn="#a855f7"
-                        />
-                        <div className="eb-toggle-divider" />
-                        <Toggle
                             checked={includeErrors}
                             onChange={setIncludeErrors}
                             label={<><RotateCw size={16} /> Erreurs à réviser — {stats.selectionToReviewCount} dispo</>}
@@ -952,6 +958,9 @@ const ExamenBPage = ({ autoPlayAudio, progress, onSaveProgress }) => {
                             themeSearch={themeSearch}
                             setThemeSearch={setThemeSearch}
                             questionCountPerTheme={questionCountPerTheme}
+                            includeExclusive={includeExclusive}
+                            setIncludeExclusive={setIncludeExclusive}
+                            exclusiveCount={isLoading ? 0 : stats.totalByExclusive}
                         />
                     </div>
 

@@ -24,6 +24,13 @@ const QuizPage = ({
 
     useEffect(() => {
         const loadData = async () => {
+            // Examen B must be handled on its dedicated page.
+            // Prevent mixing Examen B (and its errors) inside the Quiz flow.
+            if (themeId === 'examen_B') {
+                navigate('/examen-b', { replace: true });
+                return;
+            }
+
             // Check if questions are passed via state (e.g. for Mistake Quiz)
             if (location.state?.questions && location.state?.theme) {
                 setTheme(location.state.theme);
@@ -55,16 +62,12 @@ const QuizPage = ({
 
             // Find theme in sections
             let foundTheme = null;
-            if (themeId === 'examen_B') {
-                foundTheme = { id: 'examen_B', name: 'Examen Blanc', file: 'examen_B.json' };
-            } else {
-                for (const section of sections) {
-                    const items = section.items || section.themes || [];
-                    const t = items.find(t => t.id === themeId);
-                    if (t) {
-                        foundTheme = t;
-                        break;
-                    }
+            for (const section of sections) {
+                const items = section.items || section.themes || [];
+                const t = items.find(t => t.id === themeId);
+                if (t) {
+                    foundTheme = t;
+                    break;
                 }
             }
 
@@ -117,7 +120,7 @@ const QuizPage = ({
         if (sections.length > 0 || (location.state && location.state.questions)) {
             loadData();
         }
-    }, [themeId, sections, location.state]);
+    }, [themeId, sections, location.state, navigate]);
 
     const handleFinish = (payload) => {
         // Notify App to save progress

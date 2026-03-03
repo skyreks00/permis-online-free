@@ -27,12 +27,14 @@ const TopControls = ({ toggleTheme, isDarkMode, user }) => {
             document.body.style.overflow = 'hidden';
             document.documentElement.style.overflow = 'hidden';
         } else {
-            document.body.style.overflow = 'unset';
-            document.documentElement.style.overflow = 'unset';
+            // Use '' (empty string) to *remove* the inline style entirely,
+            // restoring the CSS cascade instead of forcing CSS keyword 'unset'.
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
         }
         return () => { 
-            document.body.style.overflow = 'unset'; 
-            document.documentElement.style.overflow = 'unset';
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
         };
     }, [isMobileMenuOpen]);
 

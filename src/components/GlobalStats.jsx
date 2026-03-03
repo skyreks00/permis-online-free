@@ -1,7 +1,7 @@
 import React from 'react';
 import { Trophy, Target, AlertTriangle, RefreshCcw } from 'lucide-react';
 
-const GlobalStats = ({ progress, themesData, onReviewAll, onReset }) => {
+const GlobalStats = ({ progress, themesData, onReviewAll, onReset, includeExamenBMistakes = true }) => {
     // --- Stats Calculation ---
     const getNormalizedProgress = (p) => {
         const score = p.bestScore !== undefined ? p.bestScore : (p.score || 0);
@@ -47,7 +47,7 @@ const GlobalStats = ({ progress, themesData, onReviewAll, onReset }) => {
     let totalMistakes = totalMaxPossible - totalBestScore;
     
     // Add mistakes from Examen B
-    if (progress.examen_B?.toReview) {
+    if (includeExamenBMistakes && progress.examen_B?.toReview) {
         totalMistakes += progress.examen_B.toReview.length;
     }
 
