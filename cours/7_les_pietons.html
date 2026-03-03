@@ -1,170 +1,153 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VR4ZG3FL6X"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'G-VR4ZG3FL6X');
-    </script>
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "vl7p4wmydp");
-    </script>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VR4ZG3FL6X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-    <!-- Prevent flash of unstyled content: synchronous inline style + script -->
-    <style>
-      html { background: #0b1020; }
-      html[data-theme="light"] { background: #f7f8fb; }
-      .no-transition * { transition: none !important; }
-    </style>
-    <script>
-      (function() {
-        var saved = localStorage.getItem('theme') || 'dark';
-        document.documentElement.setAttribute('data-theme', saved);
-        document.documentElement.classList.add('no-transition');
-        window.addEventListener('load', function() {
-          requestAnimationFrame(function() {
-            requestAnimationFrame(function() {
-              document.documentElement.classList.remove('no-transition');
-            });
+    gtag('config', 'G-VR4ZG3FL6X');
+  </script>
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "vl7p4wmydp");
+  </script>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+
+  <!-- Prevent flash of unstyled content: synchronous inline style + script -->
+  <style>
+    html {
+      background: #0b1020;
+    }
+
+    html[data-theme="light"] {
+      background: #f7f8fb;
+    }
+
+    .no-transition * {
+      transition: none !important;
+    }
+  </style>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', saved);
+      document.documentElement.classList.add('no-transition');
+      window.addEventListener('load', function () {
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            document.documentElement.classList.remove('no-transition');
           });
         });
-      })();
-    </script>
-
-    <!-- Start Single Page Apps for GitHub Pages -->
-    <script type="text/javascript">
-      (function (l) {
-        if (l.search[1] === "/") {
-          var decoded = l.search
-            .slice(1)
-            .split("&")
-            .map(function (s) {
-              return s.replace(/~and~/g, "&");
-            })
-            .join("?");
-          window.history.replaceState(
-            null,
-            null,
-            l.pathname.slice(0, -1) + decoded + l.hash,
-          );
-        }
-      })(window.location);
-    </script>
-    <!-- End Single Page Apps for GitHub Pages -->
-    <meta
-      name="google-site-verification"
-      content="fyj6pdJ_GzqzgiD7ZRPsVwygU05iFBogoGlDblUuYGA"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0ea5e9" />
-    <link rel="canonical" href="https://permisfree.be/cours/7_les_pietons.html" />
-    <meta
-      name="robots"
-      content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
-    />
-    <meta
-      name="googlebot"
-      content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Permis Online - Code de la Route Gratuit & Examen Théorique</title>
-    <!-- GLOBAL ERROR HANDLER FOR MOBILE DEBUGGING -->
-    <script>
-      window.onerror = function (msg, url, line, col, error) {
-        // Ignore ResizeObserver errors
-        if (msg && msg.includes && msg.includes("ResizeObserver")) return;
-
-        const div = document.createElement("div");
-        div.style.position = "fixed";
-        div.style.top = "0";
-        div.style.left = "0";
-        div.style.width = "100%";
-        div.style.background = "red";
-        div.style.color = "white";
-        div.style.zIndex = "999999";
-        div.style.padding = "20px";
-        div.style.fontSize = "14px";
-        div.style.wordBreak = "break-word";
-        div.innerHTML =
-          "<strong>ERREUR FATALE:</strong><br/>" +
-          msg +
-          "<br/>" +
-          url +
-          ":" +
-          line;
-        document.body.appendChild(div);
-      };
-
-      // Handle Promise Rejections
-      window.addEventListener("unhandledrejection", function (event) {
-        const div = document.createElement("div");
-        div.style.position = "fixed";
-        div.style.bottom = "0";
-        div.style.left = "0";
-        div.style.width = "100%";
-        div.style.background = "darkred";
-        div.style.color = "white";
-        div.style.zIndex = "999999";
-        div.style.padding = "10px";
-        div.style.fontSize = "12px";
-        div.style.wordBreak = "break-word";
-        div.innerHTML = "Promise Error: " + event.reason;
-        document.body.appendChild(div);
       });
-    </script>
-    <meta
-      name="description"
-      content="Révisez votre Permis de Conduire Online. Cours théoriques, examens blancs, tests de code et panneaux de signalisation. 100% gratuit, sans inscription."
-    />
-    <meta
-      name="keywords"
-      content="permis online, permis online free, permis de conduire, code de la route gratuit, examen théorique, permis b, belgique, france, test permis online"
-    />
-    <meta name="author" content="Skyreks00" />
+    })();
+  </script>
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://permisfree.be/cours/7_les_pietons.html" />
-    <meta
-      property="og:title"
-      content="Permis Online - Code de la Route Gratuit & Examen Théorique"
-    />
-    <meta
-      property="og:description"
-      content="Révisez votre Permis de Conduire Online. Cours théoriques, examens blancs, tests de code et panneaux de signalisation. 100% gratuit, sans inscription."
-    />
-    <meta property="og:locale" content="fr_BE" />
-    <meta property="og:image" content="https://permisfree.be/logo.svg" />
+  <!-- Start Single Page Apps for GitHub Pages -->
+  <script type="text/javascript">
+    (function (l) {
+      if (l.search[1] === "/") {
+        var decoded = l.search
+          .slice(1)
+          .split("&")
+          .map(function (s) {
+            return s.replace(/~and~/g, "&");
+          })
+          .join("?");
+        window.history.replaceState(
+          null,
+          null,
+          l.pathname.slice(0, -1) + decoded + l.hash,
+        );
+      }
+    })(window.location);
+  </script>
+  <!-- End Single Page Apps for GitHub Pages -->
+  <meta name="google-site-verification" content="fyj6pdJ_GzqzgiD7ZRPsVwygU05iFBogoGlDblUuYGA" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="canonical" href="https://permisfree.be/cours/7_les_pietons.html" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <title>Permis Online - Code de la Route Gratuit & Examen Théorique</title>
+  <!-- GLOBAL ERROR HANDLER FOR MOBILE DEBUGGING -->
+  <script>
+    window.onerror = function (msg, url, line, col, error) {
+      // Ignore ResizeObserver errors
+      if (msg && msg.includes && msg.includes("ResizeObserver")) return;
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://permisfree.be/cours/7_les_pietons.html" />
-    <meta
-      property="twitter:title"
-      content="Permis Online - Code de la Route Gratuit & Examen Théorique"
-    />
-    <meta
-      property="twitter:description"
-      content="Révisez votre Permis de Conduire Online. Cours théoriques, examens blancs, tests de code et panneaux de signalisation. 100% gratuit, sans inscription."
-    />
-    <meta property="twitter:image" content="https://permisfree.be/logo.svg" />
+      const div = document.createElement("div");
+      div.style.position = "fixed";
+      div.style.top = "0";
+      div.style.left = "0";
+      div.style.width = "100%";
+      div.style.background = "red";
+      div.style.color = "white";
+      div.style.zIndex = "999999";
+      div.style.padding = "20px";
+      div.style.fontSize = "14px";
+      div.style.wordBreak = "break-word";
+      div.innerHTML =
+        "<strong>ERREUR FATALE:</strong><br/>" +
+        msg +
+        "<br/>" +
+        url +
+        ":" +
+        line;
+      document.body.appendChild(div);
+    };
 
-    <script type="application/ld+json">
+    // Handle Promise Rejections
+    window.addEventListener("unhandledrejection", function (event) {
+      const div = document.createElement("div");
+      div.style.position = "fixed";
+      div.style.bottom = "0";
+      div.style.left = "0";
+      div.style.width = "100%";
+      div.style.background = "darkred";
+      div.style.color = "white";
+      div.style.zIndex = "999999";
+      div.style.padding = "10px";
+      div.style.fontSize = "12px";
+      div.style.wordBreak = "break-word";
+      div.innerHTML = "Promise Error: " + event.reason;
+      document.body.appendChild(div);
+    });
+  </script>
+  <meta name="description"
+    content="Révisez votre Permis de Conduire Online. Cours théoriques, examens blancs, tests de code et panneaux de signalisation. 100% gratuit, sans inscription." />
+  <meta name="keywords"
+    content="permis online, permis online free, permis de conduire, code de la route gratuit, examen théorique, permis b, belgique, france, test permis online" />
+  <meta name="author" content="Skyreks00" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://permisfree.be/cours/7_les_pietons.html" />
+  <meta property="og:title" content="Permis Online - Code de la Route Gratuit & Examen Théorique" />
+  <meta property="og:description"
+    content="Révisez votre Permis de Conduire Online. Cours théoriques, examens blancs, tests de code et panneaux de signalisation. 100% gratuit, sans inscription." />
+  <meta property="og:locale" content="fr_BE" />
+  <meta property="og:image" content="https://permisfree.be/logo.svg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://permisfree.be/cours/7_les_pietons.html" />
+  <meta property="twitter:title" content="Permis Online - Code de la Route Gratuit & Examen Théorique" />
+  <meta property="twitter:description"
+    content="Révisez votre Permis de Conduire Online. Cours théoriques, examens blancs, tests de code et panneaux de signalisation. 100% gratuit, sans inscription." />
+  <meta property="twitter:image" content="https://permisfree.be/logo.svg" />
+
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
@@ -180,11 +163,13 @@
         }
       }
     </script>
-    <script type="module" crossorigin src="/assets/index-DClVn8Ap-1772184199045.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CvzJsScG-1772184199045.css">
-  <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
+  <script type="module" crossorigin src="/assets/index-DCTIa5qw-1772569302990.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-C8l8GruP-1772569302990.css">
+<link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
 
-  <body>
-    <div id="root"></div>
-  </body>
+<body>
+  <div id="root"></div>
+
+</body>
+
 </html>
